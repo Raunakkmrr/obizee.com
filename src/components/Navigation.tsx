@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown, Zap } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -24,11 +24,15 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center transition-transform hover:scale-105">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-3">
-                <Zap className="h-6 w-6 text-white" />
+              <div className="w-12 h-12 mr-3">
+                <img 
+                  src="/lovable-uploads/2941a262-6754-4343-a36c-43a56c320d5d.png" 
+                  alt="Obizee Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
-                StreamFlow
+                Obizee
               </span>
             </Link>
           </div>
@@ -44,7 +48,7 @@ const Navigation = () => {
                     : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
                 }`}
               >
-                Templates
+                Website Templates
               </Link>
               
               <div 
@@ -157,7 +161,7 @@ const Navigation = () => {
                   : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
               }`}
             >
-              Templates
+              Website Templates
             </Link>
             <Link 
               to="/solutions" 

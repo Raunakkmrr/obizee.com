@@ -1,39 +1,38 @@
 
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, Zap } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerLinks = {
     product: [
-      { name: 'Website Templates', href: '#' },
-      { name: 'Instagram Integration', href: '#' },
-      { name: 'Order Management', href: '#' },
-      { name: 'Payment Processing', href: '#' },
-      { name: 'Delivery Partners', href: '#' },
-      { name: 'Business Analytics', href: '#' }
+      { name: 'Website Templates', href: '/templates' },
+      { name: 'Mobile Apps', href: '/solutions#mobile' },
+      { name: 'Web Dashboard', href: '/solutions#dashboard' },
+      { name: 'E-commerce Tools', href: '/solutions' },
+      { name: 'Payment Processing', href: '/solutions' },
+      { name: 'Business Analytics', href: '/solutions' }
     ],
     solutions: [
-      { name: 'For Instagram Sellers', href: '#' },
-      { name: 'For Startups', href: '#' },
-      { name: 'For Small Business', href: '#' },
-      { name: 'For E-commerce', href: '#' },
-      { name: 'Enterprise Solutions', href: '#' }
+      { name: 'For Small Business', href: '/solutions' },
+      { name: 'For E-commerce', href: '/solutions' },
+      { name: 'For Restaurants', href: '/templates' },
+      { name: 'For Service Providers', href: '/templates' },
+      { name: 'For Retailers', href: '/templates' }
     ],
     resources: [
-      { name: 'Success Stories', href: '#' },
-      { name: 'Instagram Business Guide', href: '#' },
-      { name: 'Template Gallery', href: '#' },
-      { name: 'Video Tutorials', href: '#' },
-      { name: 'Help Center', href: '#' },
-      { name: 'Community', href: '#' }
+      { name: 'Success Stories', href: '/success-stories' },
+      { name: 'Help Center', href: '/help' },
+      { name: 'Video Tutorials', href: '/help' },
+      { name: 'Template Gallery', href: '/templates' },
+      { name: 'Contact Support', href: '/help' }
     ],
     company: [
-      { name: 'About StreamFlow', href: '#' },
-      { name: 'Careers', href: '#' },
-      { name: 'Press Kit', href: '#' },
-      { name: 'Contact Us', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'Terms of Service', href: '#' }
+      { name: 'About Obizee', href: '/help' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Contact Us', href: '/help' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Terms of Service', href: '/terms-conditions' }
     ]
   };
 
@@ -53,21 +52,25 @@ const Footer = () => {
             {/* Company info */}
             <div className="lg:col-span-2">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-3">
-                  <Zap className="h-7 w-7 text-white" />
+                <div className="w-12 h-12 mr-3">
+                  <img 
+                    src="/lovable-uploads/2941a262-6754-4343-a36c-43a56c320d5d.png" 
+                    alt="Obizee Logo" 
+                    className="w-full h-full object-contain filter brightness-0 invert"
+                  />
                 </div>
                 <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent">
-                  StreamFlow
+                  Obizee
                 </span>
               </div>
               <p className="text-gray-300 mb-8 leading-relaxed text-lg">
-                Empowering Instagram businesses and entrepreneurs to transform their social media presence into thriving online enterprises. 
-                From first post to business empire.
+                Empowering businesses to build professional websites, manage operations, and grow their online presence. 
+                From startup to success story - we've got you covered.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center text-gray-300 hover:text-orange-400 transition-colors">
                   <Mail className="h-5 w-5 mr-4 text-orange-400" />
-                  <span className="text-lg">hello@streamflow.com</span>
+                  <span className="text-lg">hello@obizee.com</span>
                 </div>
                 <div className="flex items-center text-gray-300 hover:text-orange-400 transition-colors">
                   <Phone className="h-5 w-5 mr-4 text-orange-400" />
@@ -86,9 +89,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.product.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
+                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -100,9 +103,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.solutions.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
+                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -114,9 +117,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
+                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -128,9 +131,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
+                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -142,7 +145,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 py-12">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-lg mb-6 md:mb-0">
-              © 2025 StreamFlow. All rights reserved. Built for Instagram entrepreneurs with ❤️
+              © 2025 Obizee. All rights reserved. Built for business owners with ❤️
             </div>
             <div className="flex space-x-8">
               {socialLinks.map((social) => (

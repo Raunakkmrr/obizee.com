@@ -3,99 +3,106 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Button } from '@/components/ui/button';
-import { Search, Filter, FileText, BarChart3, Users, DollarSign, Package, TrendingUp, Calendar, Mail } from 'lucide-react';
+import { Search, Filter, Eye, Download, Star } from 'lucide-react';
 
 const Templates = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Sales', 'Inventory', 'Finance', 'Marketing', 'HR'];
+  const categories = ['All', 'E-commerce', 'Restaurant', 'Portfolio', 'Service Business', 'Health & Beauty'];
 
-  const templates = [
+  const websiteTemplates = [
     {
       id: 1,
-      name: 'Invoice Template',
-      category: 'Sales',
-      description: 'Professional invoice template with automatic calculations and payment tracking',
-      icon: FileText,
-      features: ['Auto calculations', 'Payment tracking', 'Customizable branding'],
+      name: 'Fashion Store Pro',
+      category: 'E-commerce',
+      description: 'Modern e-commerce template perfect for fashion and apparel businesses',
+      image: '/placeholder.svg',
+      features: ['Mobile Responsive', 'Payment Gateway', 'Product Catalog', 'Shopping Cart'],
+      rating: 4.8,
+      downloads: 2400,
       popular: true
     },
     {
       id: 2,
-      name: 'Inventory Management',
-      category: 'Inventory',
-      description: 'Track stock levels, manage suppliers, and automate reorder points',
-      icon: Package,
-      features: ['Stock alerts', 'Supplier management', 'Reorder automation'],
+      name: 'Restaurant Deluxe',
+      category: 'Restaurant',
+      description: 'Elegant restaurant template with online ordering and reservation system',
+      image: '/placeholder.svg',
+      features: ['Online Menu', 'Reservation System', 'Gallery', 'Contact Forms'],
+      rating: 4.9,
+      downloads: 1850,
       popular: true
     },
     {
       id: 3,
-      name: 'Sales Dashboard',
-      category: 'Sales',
-      description: 'Comprehensive sales analytics with revenue tracking and forecasting',
-      icon: BarChart3,
-      features: ['Revenue analytics', 'Sales forecasting', 'Team performance'],
+      name: 'Creative Portfolio',
+      category: 'Portfolio',
+      description: 'Showcase your work with this stunning portfolio template',
+      image: '/placeholder.svg',
+      features: ['Gallery', 'About Section', 'Contact Form', 'Blog'],
+      rating: 4.7,
+      downloads: 1200,
       popular: false
     },
     {
       id: 4,
-      name: 'CRM Template',
-      category: 'Sales',
-      description: 'Customer relationship management with lead tracking and follow-ups',
-      icon: Users,
-      features: ['Lead management', 'Follow-up automation', 'Customer insights'],
-      popular: true
-    },
-    {
-      id: 5,
-      name: 'Financial Reports',
-      category: 'Finance',
-      description: 'P&L statements, balance sheets, and cash flow reports',
-      icon: DollarSign,
-      features: ['P&L reports', 'Balance sheets', 'Cash flow tracking'],
+      name: 'Electronics Hub',
+      category: 'E-commerce',
+      description: 'Professional electronics and gadgets online store template',
+      image: '/placeholder.svg',
+      features: ['Product Reviews', 'Wishlist', 'Compare Products', 'Multi-vendor'],
+      rating: 4.6,
+      downloads: 980,
       popular: false
     },
     {
+      id: 5,
+      name: 'Consulting Pro',
+      category: 'Service Business',
+      description: 'Professional template for consulting and service-based businesses',
+      image: '/placeholder.svg',
+      features: ['Service Pages', 'Team Section', 'Testimonials', 'Contact Forms'],
+      rating: 4.8,
+      downloads: 1500,
+      popular: true
+    },
+    {
       id: 6,
-      name: 'Marketing Campaign',
-      category: 'Marketing',
-      description: 'Plan, execute, and track marketing campaigns across channels',
-      icon: TrendingUp,
-      features: ['Campaign planning', 'ROI tracking', 'Multi-channel support'],
+      name: 'Beauty Salon Elite',
+      category: 'Health & Beauty',
+      description: 'Elegant beauty salon template with booking functionality',
+      image: '/placeholder.svg',
+      features: ['Appointment Booking', 'Service Menu', 'Staff Profiles', 'Gallery'],
+      rating: 4.9,
+      downloads: 1100,
       popular: false
     },
     {
       id: 7,
-      name: 'Employee Management',
-      category: 'HR',
-      description: 'Manage employee records, attendance, and performance reviews',
-      icon: Users,
-      features: ['Employee records', 'Attendance tracking', 'Performance reviews'],
+      name: 'Fitness Studio',
+      category: 'Health & Beauty',
+      description: 'Dynamic fitness and gym template with class scheduling',
+      image: '/placeholder.svg',
+      features: ['Class Schedule', 'Membership Plans', 'Trainer Profiles', 'Nutrition Blog'],
+      rating: 4.7,
+      downloads: 890,
       popular: false
     },
     {
       id: 8,
-      name: 'Event Planning',
-      category: 'Marketing',
-      description: 'Organize events, manage vendors, and track attendees',
-      icon: Calendar,
-      features: ['Vendor management', 'Attendee tracking', 'Budget planning'],
-      popular: false
-    },
-    {
-      id: 9,
-      name: 'Email Marketing',
-      category: 'Marketing',
-      description: 'Create, send, and track email campaigns with automation',
-      icon: Mail,
-      features: ['Email automation', 'Campaign analytics', 'List management'],
+      name: 'Coffee Shop',
+      category: 'Restaurant',
+      description: 'Cozy coffee shop template with online ordering',
+      image: '/placeholder.svg',
+      features: ['Online Ordering', 'Menu Display', 'Location Map', 'Events Calendar'],
+      rating: 4.8,
+      downloads: 750,
       popular: true
     }
   ];
 
-  const filteredTemplates = templates.filter(template => {
+  const filteredTemplates = websiteTemplates.filter(template => {
     const matchesSearch = template.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          template.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || template.category === selectedCategory;
@@ -111,14 +118,14 @@ const Templates = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Business Templates
+              Website Templates
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-                Ready to Use
+                For Your Business
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our collection of professionally designed templates to streamline your business operations. 
-              Each template is fully customizable and ready to deploy.
+              Choose from our collection of professionally designed website templates. 
+              Each template is fully responsive, customizable, and ready to launch your online presence.
             </p>
           </div>
 
@@ -160,44 +167,77 @@ const Templates = () => {
             {filteredTemplates.map((template) => (
               <div 
                 key={template.id}
-                className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-gray-100 hover:border-orange-200 transition-all duration-300 group relative"
+                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 hover:border-orange-200 transition-all duration-300 group relative"
               >
                 {template.popular && (
-                  <div className="absolute -top-3 left-6">
-                    <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
+                      <Star className="w-3 h-3 mr-1" />
                       Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-50 rounded-2xl flex items-center justify-center group-hover:from-orange-200 group-hover:to-orange-100 transition-colors">
-                    <template.icon className="h-8 w-8 text-orange-600" />
+                {/* Template Preview Image */}
+                <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                  <img 
+                    src={template.image} 
+                    alt={template.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-2">
+                      <Button size="sm" className="bg-white text-gray-900 hover:bg-gray-100">
+                        <Eye className="w-4 h-4 mr-1" />
+                        Preview
+                      </Button>
+                    </div>
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{template.name}</h3>
-                <p className="text-gray-600 mb-6">{template.description}</p>
-                
-                <div className="mb-8">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {template.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="flex gap-3">
-                  <Button className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-xl">
-                    Use Template
-                  </Button>
-                  <Button variant="outline" className="px-6 border-orange-200 hover:border-orange-300 hover:bg-orange-50 rounded-xl">
-                    Preview
-                  </Button>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-bold text-gray-900">{template.name}</h3>
+                    <div className="flex items-center text-yellow-500">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="text-sm text-gray-600 ml-1">{template.rating}</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4">{template.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {template.features.map((feature, index) => (
+                        <span 
+                          key={index} 
+                          className="text-xs bg-orange-50 text-orange-600 px-2 py-1 rounded-full"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <Download className="w-4 h-4 mr-1" />
+                      {template.downloads} downloads
+                    </div>
+                    <span className="text-sm bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                      {template.category}
+                    </span>
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <Button className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-xl">
+                      Use Template
+                    </Button>
+                    <Button variant="outline" className="px-6 border-orange-200 hover:border-orange-300 hover:bg-orange-50 rounded-xl">
+                      Preview
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}
