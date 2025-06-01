@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, Zap, Instagram } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, Building } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
   return (
@@ -16,39 +17,43 @@ const CTA = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-8">
-          <Instagram className="w-5 h-5 text-white mr-2" />
-          <span className="text-white font-medium">Join 50K+ Instagram Businesses</span>
+          <Building className="w-5 h-5 text-white mr-2" />
+          <span className="text-white font-medium">Join 50K+ Growing Businesses</span>
           <Zap className="w-4 h-4 text-yellow-300 ml-2" />
         </div>
 
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
           Ready to Transform Your
-          <span className="block">Instagram Business?</span>
+          <span className="block">Business Operations?</span>
         </h2>
         
         <p className="text-xl md:text-2xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Join thousands of entrepreneurs who turned their Instagram accounts into profitable businesses. 
-          Start your transformation today with our 14-day free trial.
+          Join thousands of entrepreneurs who streamlined their business operations and achieved remarkable growth. 
+          Start your transformation today with our generous bonus offer.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-          <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300">
-            Start Your Free Trial
-            <ArrowRight className="ml-3 h-6 w-6" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-12 py-4 text-xl font-bold rounded-2xl backdrop-blur-sm transition-all duration-300"
-          >
-            See Success Stories
-          </Button>
+          <Link to="/signup">
+            <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300">
+              Claim Your ₹500 Bonus
+              <ArrowRight className="ml-3 h-6 w-6" />
+            </Button>
+          </Link>
+          <Link to="/success-stories">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-12 py-4 text-xl font-bold rounded-2xl backdrop-blur-sm transition-all duration-300"
+            >
+              See Success Stories
+            </Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="flex items-center justify-center bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
             <CheckCircle className="h-6 w-6 text-green-300 mr-3 flex-shrink-0" />
-            <span className="text-lg font-semibold text-white">14-day free trial</span>
+            <span className="text-lg font-semibold text-white">₹500 bonus OR 2 months free</span>
           </div>
           <div className="flex items-center justify-center bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
             <CheckCircle className="h-6 w-6 text-green-300 mr-3 flex-shrink-0" />
@@ -62,7 +67,7 @@ const CTA = () => {
 
         {/* Trust indicators */}
         <div className="mt-16 pt-8 border-t border-white/20">
-          <p className="text-orange-100 mb-6">Trusted by leading Instagram businesses</p>
+          <p className="text-orange-100 mb-6">Trusted by leading businesses across India</p>
           <div className="flex justify-center items-center space-x-12 opacity-70">
             <div className="text-white font-bold text-lg">50K+ Users</div>
             <div className="text-white font-bold text-lg">99.9% Uptime</div>

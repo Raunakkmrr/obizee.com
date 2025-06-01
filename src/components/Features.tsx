@@ -1,32 +1,34 @@
 
 import React from 'react';
-import { Instagram, Zap, Globe, Smartphone, CreditCard, TrendingUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Building, Zap, Globe, Smartphone, CreditCard, TrendingUp, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Features = () => {
   const features = [
     {
-      icon: Instagram,
-      title: "Instagram Business Ready",
-      description: "Convert your Instagram followers instantly. Share product links in stories, posts, and DMs. Your followers become customers in seconds.",
-      highlight: "For Instagram Sellers"
+      icon: Building,
+      title: "Business Management Ready",
+      description: "Complete business operations in one platform. Manage inventory, track sales, handle finances, and grow your business efficiently.",
+      highlight: "All-in-One Platform"
     },
     {
       icon: Globe,
-      title: "Stunning Website Templates",
-      description: "Choose from 50+ professionally designed templates. Mobile-optimized, conversion-focused, and ready to launch in minutes.",
+      title: "Professional Templates",
+      description: "Choose from 50+ professionally designed templates for invoices, reports, and business documents. Mobile-optimized and ready to use.",
       highlight: "50+ Templates"
     },
     {
       icon: Zap,
-      title: "One-Click Product Sharing",
-      description: "Generate beautiful product links with custom order forms. Share anywhere - WhatsApp, Facebook, Instagram, or your website.",
-      highlight: "Share Everywhere"
+      title: "Automated Workflows",
+      description: "Automate repetitive tasks like inventory alerts, payment reminders, and report generation. Save hours every day.",
+      highlight: "Save 80% Time"
     },
     {
       icon: Smartphone,
-      title: "Mobile-First Experience",
-      description: "Your customers order seamlessly on mobile. Optimized checkout flows reduce cart abandonment by 60%.",
-      highlight: "60% Better Conversion"
+      title: "Mobile-First Design",
+      description: "Access your business dashboard anywhere. Optimized mobile experience ensures you stay connected to your business 24/7.",
+      highlight: "100% Mobile Ready"
     },
     {
       icon: CreditCard,
@@ -37,7 +39,7 @@ const Features = () => {
     {
       icon: TrendingUp,
       title: "Business Analytics",
-      description: "Track your growth with detailed insights. See which products sell best, where your traffic comes from, and optimize for success.",
+      description: "Track your growth with detailed insights. See which products sell best, where your revenue comes from, and optimize for success.",
       highlight: "Data-Driven Growth"
     }
   ];
@@ -51,11 +53,17 @@ const Features = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Built for Modern
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600"> Instagram Businesses</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600"> Business Operations</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From your first Instagram sale to a thriving online business. Every feature designed to help you grow faster and serve customers better.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            From your first business process to a thriving operation. Every feature designed to help you streamline operations and grow faster.
           </p>
+          <Link to="/templates">
+            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all">
+              View All Templates
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
