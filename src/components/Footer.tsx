@@ -32,6 +32,7 @@ const Footer = () => {
       { name: "Contact Us", href: "/help" },
       { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Terms of Service", href: "/terms-conditions" },
+      { name: "Refund Policy", href: "/refund-policy" },
     ],
   };
 
