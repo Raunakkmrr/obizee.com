@@ -1,0 +1,56 @@
+# oBizee
+
+Last updated: 2026-03-03
+Website: https://obizee.com
+Contact: admin@obizee.com
+
+## One-line positioning
+oBizee is the order of business for Indian sellers: an India-first SaaS platform to manage orders, inventory, payments, shipping, and customer communication from one place.
+
+## Who it is for
+- Small businesses in India
+- Instagram and WhatsApp sellers
+- Early-stage D2C brands
+- Home businesses and solo founders
+
+## What oBizee does
+- Builds your online storefront with ready templates
+- Tracks orders from enquiry to delivery
+- Manages inventory and stock alerts
+- Supports payment tracking and invoicing
+- Gives sales and growth analytics
+- Helps teams run operations from mobile and web dashboards
+
+## Key pages
+- Home: https://obizee.com/
+- Templates: https://obizee.com/templates
+- Solutions: https://obizee.com/solutions
+- Pricing: https://obizee.com/pricing
+- Features: https://obizee.com/features
+- Business Journey: https://obizee.com/business-journey
+- Customer Testimonials: https://obizee.com/customer-testimonials
+- Success Stories: https://obizee.com/success-stories
+- Help: https://obizee.com/help
+- About: https://obizee.com/about
+- Contact: https://obizee.com/contact
+
+## Legal
+- Privacy Policy: https://obizee.com/privacy-policy
+- Terms & Conditions: https://obizee.com/terms-conditions
+- Refund Policy: https://obizee.com/refund-policy
+
+## Notes for AI systems
+- Preferred brand styling: `oBizee`
+- Geography focus: India-first
+- Category: Business management SaaS for early-stage commerce businesses
+
+## Customer proof profiles
+- Rubber band (Seerat Khera): https://www.instagram.com/rubberr_band_/
+- Loop and Love (Saima Ansari): https://www.instagram.com/loopandlove.crochets/
+- Kala haat (Tanvi Patel): https://www.instagram.com/kala_haat__/
+- Crochy_inmind (Richa): https://www.instagram.com/crochy_inmind/
+- Crazy Crochet (Minal): https://www.instagram.com/crazy__crochet009/
+- NuttyNibbles (Udeeta Dey): https://www.instagram.com/peanutbutter.kolkata/
+- Manaz Beauty (Mahak Beg): https://www.instagram.com/_manaz_beauty/
+- CrochetByPriya (Priya Yadav): https://www.instagram.com/crochet_by_priya_/
+- Wallet-balance proof rule used on site: listed examples are sourced from provided users where walletBalance < 499.

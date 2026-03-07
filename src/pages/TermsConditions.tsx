@@ -12,7 +12,7 @@ const TermsConditions = () => {
       content: [
         {
           subtitle: "Agreement to Terms",
-          text: "By accessing and using StreamFlow's business management platform, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions and our Privacy Policy.",
+          text: "By accessing and using oBizee's business management platform, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions and our Privacy Policy.",
         },
         {
           subtitle: "Eligibility",
@@ -48,7 +48,7 @@ const TermsConditions = () => {
       content: [
         {
           subtitle: "Platform Features",
-          text: "StreamFlow provides a comprehensive business management platform including templates, inventory management, invoicing, analytics, and related tools to help businesses streamline their operations.",
+          text: "oBizee provides a comprehensive business management platform including templates, inventory management, invoicing, analytics, and related tools to help businesses streamline their operations.",
         },
         {
           subtitle: "Service Availability",
@@ -66,7 +66,7 @@ const TermsConditions = () => {
       content: [
         {
           subtitle: "Our Intellectual Property",
-          text: "All content, features, and functionality of our platform, including but not limited to text, graphics, logos, icons, images, audio clips, and software, are owned by StreamFlow or our licensors and are protected by copyright and other intellectual property laws.",
+          text: "All content, features, and functionality of our platform, including but not limited to text, graphics, logos, icons, images, audio clips, and software, are owned by oBizee or our licensors and are protected by copyright and other intellectual property laws.",
         },
         {
           subtitle: "User Content",
@@ -117,12 +117,12 @@ const TermsConditions = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Terms and Conditions | Obizee",
+    name: "Terms and Conditions | oBizee",
     description:
-      "Legal agreement between you and Obizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform.",
+      "Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform.",
     publisher: {
       "@type": "Organization",
-      name: "Obizee",
+      name: "oBizee",
       url: "https://obizee.com",
     },
     mainEntity: {
@@ -132,11 +132,11 @@ const TermsConditions = () => {
       dateModified: new Date().toISOString(),
       author: {
         "@type": "Organization",
-        name: "Obizee",
+        name: "oBizee",
       },
       publisher: {
         "@type": "Organization",
-        name: "Obizee",
+        name: "oBizee",
         url: "https://obizee.com",
       },
     },
@@ -145,29 +145,29 @@ const TermsConditions = () => {
   return (
     <>
       <Helmet>
-        <title>Terms and Conditions | Legal Agreement | Obizee</title>
+        <title>Terms and Conditions | Legal Agreement | oBizee</title>
         <meta
           name="description"
-          content="Legal agreement between you and Obizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
+          content="Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
         />
         <meta
           name="keywords"
           content="terms and conditions, legal agreement, user agreement, terms of service, legal terms, business terms"
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Terms and Conditions | Legal Agreement | Obizee" />
+        <meta property="og:title" content="Terms and Conditions | Legal Agreement | oBizee" />
         <meta
           property="og:description"
-          content="Legal agreement between you and Obizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
+          content="Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com/terms-conditions" />
         <meta property="og:image" content="https://obizee.com/terms-conditions-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms and Conditions | Legal Agreement | Obizee" />
+        <meta name="twitter:title" content="Terms and Conditions | Legal Agreement | oBizee" />
         <meta
           name="twitter:description"
-          content="Legal agreement between you and Obizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
+          content="Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
         />
         <meta name="twitter:image" content="https://obizee.com/terms-conditions-twitter.jpg" />
         <link rel="canonical" href="https://obizee.com/terms-conditions" />
@@ -189,7 +189,7 @@ const TermsConditions = () => {
             <h1 id="terms-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Terms & Conditions
             </h1>
-            <p className="text-xl text-gray-600 mb-4">Legal agreement between you and StreamFlow</p>
+            <p className="text-xl text-gray-600 mb-4">Legal agreement between you and oBizee</p>
             <p className="text-gray-500">
               Last updated: {new Date().toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}
             </p>
@@ -201,11 +201,11 @@ const TermsConditions = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Introduction */}
             <div className="bg-orange-50 rounded-2xl p-8 mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Welcome to StreamFlow</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Welcome to oBizee</h2>
               <p className="text-gray-700 leading-relaxed">
-                These Terms and Conditions ("Terms") govern your use of StreamFlow's business management platform and services. Please read
+                These Terms and Conditions ("Terms") govern your use of oBizee's business management platform and services. Please read
                 these Terms carefully before using our services. These Terms constitute a legally binding agreement between you and
-                StreamFlow Technologies Pvt. Ltd.
+                oBizee Technologies Pvt. Ltd.
               </p>
             </div>
 
@@ -257,7 +257,7 @@ const TermsConditions = () => {
               <div className="bg-gray-50 rounded-2xl p-8" role="listitem">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Indemnification</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  You agree to indemnify, defend, and hold harmless StreamFlow, its officers, directors, employees, and agents from and
+                  You agree to indemnify, defend, and hold harmless oBizee, its officers, directors, employees, and agents from and
                   against any claims, liabilities, damages, losses, and expenses arising out of or in any way connected with your use of our
                   services or violation of these Terms.
                 </p>
@@ -291,17 +291,17 @@ const TermsConditions = () => {
               <address className="space-y-2 text-orange-100 not-italic">
                 <p>
                   Email:{" "}
-                  <a href="mailto:legal@streamflow.com" className="underline hover:text-white">
-                    legal@streamflow.com
+                  <a href="mailto:raunakkumar1225@gmail.com" className="underline hover:text-white">
+                    raunakkumar1225@gmail.com
                   </a>
                 </p>
                 <p>
                   Phone:{" "}
-                  <a href="tel:+918001234567" className="underline hover:text-white">
-                    +91-800-123-4567
+                  <a href="tel:+917011571373" className="underline hover:text-white">
+                    +91 70115 71373
                   </a>
                 </p>
-                <p>Address: StreamFlow Technologies Pvt. Ltd., Bangalore, Karnataka, India</p>
+                <p>Address: SRN TECHNO, G-11, Hemkunt Chamber, Nehru Place, New Delhi, Delhi 110019, India</p>
               </address>
             </div>
           </div>

@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Users, Target, Award, Heart, Globe, Zap, Shield } from "lucide-react";
 
@@ -11,12 +11,12 @@ const About = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About StreamFlow - Our Story and Mission",
+    name: "About oBizee - Our Story and Mission",
     description:
-      "Learn about StreamFlow's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success.",
+      "Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success.",
     publisher: {
       "@type": "Organization",
-      name: "Obizee",
+      name: "oBizee",
       url: "https://obizee.com",
       logo: {
         "@type": "ImageObject",
@@ -33,9 +33,9 @@ const About = () => {
     },
     mainEntity: {
       "@type": "Organization",
-      name: "StreamFlow",
+      name: "oBizee",
       description:
-        "StreamFlow is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base.",
+        "oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base.",
       foundingDate: "2023",
       location: {
         "@type": "Place",
@@ -46,35 +46,35 @@ const About = () => {
           addressCountry: "IN",
         },
       },
-      sameAs: ["https://facebook.com/streamflow", "https://twitter.com/streamflow", "https://linkedin.com/company/streamflow"],
+      sameAs: ["https://facebook.com/obizee", "https://twitter.com/obizee", "https://linkedin.com/company/obizee"],
     },
   };
 
   return (
     <>
       <Helmet>
-        <title>About StreamFlow - Our Story and Mission | Business Management Platform</title>
+        <title>About oBizee - Our Story and Mission | Business Management Platform</title>
         <meta
           name="description"
-          content="Learn about StreamFlow's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
+          content="Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
         />
         <meta
           name="keywords"
-          content="about StreamFlow, business management platform, company mission, business values, customer success, business technology"
+          content="about oBizee, business management platform, company mission, business values, customer success, business technology"
         />
-        <meta property="og:title" content="About StreamFlow - Our Story and Mission | Business Management Platform" />
+        <meta property="og:title" content="About oBizee - Our Story and Mission | Business Management Platform" />
         <meta
           property="og:description"
-          content="Learn about StreamFlow's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
+          content="Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com/about" />
         <meta property="og:image" content="https://obizee.com/about-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About StreamFlow - Our Story and Mission | Business Management Platform" />
+        <meta name="twitter:title" content="About oBizee - Our Story and Mission | Business Management Platform" />
         <meta
           name="twitter:description"
-          content="Learn about StreamFlow's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
+          content="Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
         />
         <meta name="twitter:image" content="https://obizee.com/about-twitter.jpg" />
         <link rel="canonical" href="https://obizee.com/about" />
@@ -158,7 +158,7 @@ const About = () => {
               <h2 id="team-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Team
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Meet the passionate people behind StreamFlow</p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Meet the passionate people behind oBizee</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
@@ -204,15 +204,15 @@ const About = () => {
             <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
               Be part of our mission to transform businesses through technology
             </p>
-            <Button
-              asChild
-              className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
-            >
-              <Link to="/signup" aria-label="Start your free trial now">
-                Start Free Trial
+            <AppDownloadTrigger>
+              <Button
+                className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                aria-label="Download oBizee app"
+              >
+                Download App
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-              </Link>
-            </Button>
+              </Button>
+            </AppDownloadTrigger>
           </div>
         </section>
 

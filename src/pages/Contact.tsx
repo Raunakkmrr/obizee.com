@@ -11,12 +11,12 @@ const Contact = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    name: "Contact StreamFlow - Get in Touch",
+    name: "Contact oBizee - Get in Touch",
     description:
-      "Get in touch with StreamFlow's support team. We're here to help you with any questions about our business management platform.",
+      "Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform.",
     publisher: {
       "@type": "Organization",
-      name: "Obizee",
+      name: "oBizee",
       url: "https://obizee.com",
       logo: {
         "@type": "ImageObject",
@@ -25,7 +25,7 @@ const Contact = () => {
     },
     mainEntity: {
       "@type": "Organization",
-      name: "StreamFlow",
+      name: "oBizee",
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -60,25 +60,25 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact StreamFlow - Get in Touch | Business Management Platform</title>
+        <title>Contact oBizee - Get in Touch | Business Management Platform</title>
         <meta
           name="description"
-          content="Get in touch with StreamFlow's support team. We're here to help you with any questions about our business management platform."
+          content="Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform."
         />
-        <meta name="keywords" content="contact StreamFlow, customer support, technical support, business management platform, help desk" />
-        <meta property="og:title" content="Contact StreamFlow - Get in Touch | Business Management Platform" />
+        <meta name="keywords" content="contact oBizee, customer support, technical support, business management platform, help desk" />
+        <meta property="og:title" content="Contact oBizee - Get in Touch | Business Management Platform" />
         <meta
           property="og:description"
-          content="Get in touch with StreamFlow's support team. We're here to help you with any questions about our business management platform."
+          content="Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com/contact" />
         <meta property="og:image" content="https://obizee.com/contact-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact StreamFlow - Get in Touch | Business Management Platform" />
+        <meta name="twitter:title" content="Contact oBizee - Get in Touch | Business Management Platform" />
         <meta
           name="twitter:description"
-          content="Get in touch with StreamFlow's support team. We're here to help you with any questions about our business management platform."
+          content="Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform."
         />
         <meta name="twitter:image" content="https://obizee.com/contact-twitter.jpg" />
         <link rel="canonical" href="https://obizee.com/contact" />

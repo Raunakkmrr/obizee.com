@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Peanut Butter Kolkata logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="64" fill="#ffffff" opacity="0.9"/>
+  <text x="100" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#ca8a04">PB</text>
+  <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#78350f">Peanut Butter Kolkata</text>
+</svg>

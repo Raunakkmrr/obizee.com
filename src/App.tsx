@@ -2,19 +2,23 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Templates from "./pages/Templates";
 import Solutions from "./pages/Solutions";
 import Pricing from "./pages/Pricing";
 import Help from "./pages/Help";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
 import SuccessStories from "./pages/SuccessStories";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import RefundPolicy from "./pages/RefundPolicy";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import FeaturesPage from "./pages/FeaturesPage";
+import BusinessJourneyPage from "./pages/BusinessJourneyPage";
+import CustomerTestimonialsPage from "./pages/CustomerTestimonialsPage";
+import Compliance from "./pages/Compliance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,9 +36,15 @@ const App = () => (
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/help" element={<Help />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
+            <Route path="/signin" element={<Navigate to="/?download_app=1" replace />} />
+            <Route path="/signup" element={<Navigate to="/?download_app=1" replace />} />
             <Route path="/success-stories" element={<SuccessStories />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/business-journey" element={<BusinessJourneyPage />} />
+            <Route path="/customer-testimonials" element={<CustomerTestimonialsPage />} />
+            <Route path="/compliance" element={<Compliance />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />

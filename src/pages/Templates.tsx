@@ -144,7 +144,7 @@ const Templates = () => {
   return (
     <>
       <Helmet>
-        <title>Website Templates | Professional Business Templates | Obizee</title>
+        <title>Website Templates | Professional Business Templates | oBizee</title>
         <meta
           name="description"
           content="Choose from our collection of professionally designed website templates for e-commerce, restaurants, portfolios, and more. Fully responsive, customizable, and ready to launch."
@@ -154,7 +154,7 @@ const Templates = () => {
           content="website templates, e-commerce templates, restaurant templates, portfolio templates, business templates, responsive templates, customizable templates"
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Website Templates | Professional Business Templates | Obizee" />
+        <meta property="og:title" content="Website Templates | Professional Business Templates | oBizee" />
         <meta
           property="og:description"
           content="Choose from our collection of professionally designed website templates for e-commerce, restaurants, portfolios, and more. Fully responsive, customizable, and ready to launch."
@@ -163,7 +163,7 @@ const Templates = () => {
         <meta property="og:url" content="https://obizee.com/templates" />
         <meta property="og:image" content="https://obizee.com/templates-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Website Templates | Professional Business Templates | Obizee" />
+        <meta name="twitter:title" content="Website Templates | Professional Business Templates | oBizee" />
         <meta
           name="twitter:description"
           content="Choose from our collection of professionally designed website templates for e-commerce, restaurants, portfolios, and more. Fully responsive, customizable, and ready to launch."

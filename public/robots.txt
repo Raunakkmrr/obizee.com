@@ -10,5 +10,21 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: *
 Allow: /
+
+Sitemap: https://obizee.com/sitemap.xml
+Sitemap: https://obizee.com/sitemap-core.xml
+Sitemap: https://obizee.com/sitemap-company.xml
+Sitemap: https://obizee.com/sitemap-legal.xml
+Sitemap: https://obizee.com/sitemap-auth.xml
+
+# LLM context file
+# https://obizee.com/llms.txt
+# https://obizee.com/.well-known/llms.txt

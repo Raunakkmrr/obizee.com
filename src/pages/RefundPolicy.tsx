@@ -70,12 +70,12 @@ const RefundPolicy = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Refund & Cancellation Policy | Obizee",
+    name: "Refund & Cancellation Policy | oBizee",
     description:
-      "Learn about Obizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing.",
+      "Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing.",
     publisher: {
       "@type": "Organization",
-      name: "Obizee",
+      name: "oBizee",
       url: "https://obizee.com",
     },
     mainEntity: {
@@ -85,11 +85,11 @@ const RefundPolicy = () => {
       dateModified: new Date().toISOString(),
       author: {
         "@type": "Organization",
-        name: "Obizee",
+        name: "oBizee",
       },
       publisher: {
         "@type": "Organization",
-        name: "Obizee",
+        name: "oBizee",
         url: "https://obizee.com",
       },
     },
@@ -98,29 +98,29 @@ const RefundPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Refund & Cancellation Policy | Obizee</title>
+        <title>Refund & Cancellation Policy | oBizee</title>
         <meta
           name="description"
-          content="Learn about Obizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
+          content="Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
         />
         <meta
           name="keywords"
           content="refund policy, cancellation policy, returns, refund processing, product returns, money-back guarantee"
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Refund & Cancellation Policy | Obizee" />
+        <meta property="og:title" content="Refund & Cancellation Policy | oBizee" />
         <meta
           property="og:description"
-          content="Learn about Obizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
+          content="Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com/refund-policy" />
         <meta property="og:image" content="https://obizee.com/refund-policy-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Refund & Cancellation Policy | Obizee" />
+        <meta name="twitter:title" content="Refund & Cancellation Policy | oBizee" />
         <meta
           name="twitter:description"
-          content="Learn about Obizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
+          content="Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
         />
         <meta name="twitter:image" content="https://obizee.com/refund-policy-twitter.jpg" />
         <link rel="canonical" href="https://obizee.com/refund-policy" />
@@ -224,7 +224,7 @@ const RefundPolicy = () => {
                     +91-7011571373
                   </a>
                 </p>
-                <p>Address: Obizee, Gurgaon, Haryana, India</p>
+                <p>Address: oBizee, Gurgaon, Haryana, India</p>
               </address>
             </div>
           </div>

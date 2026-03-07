@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,30 +12,31 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const solutionsItems = [
-    { name: "Website Templates", href: "/templates", description: "Professional website templates" },
-    { name: "Mobile Apps", href: "/solutions#mobile", description: "iOS and Android apps" },
-    { name: "Web Dashboard", href: "/solutions#dashboard", description: "Business management dashboard" },
+    { name: "Add Categories & Products", href: "/business-journey#step-01", description: "Set up catalog, pricing, and stock in one place" },
+    { name: "Custom Forms & Order Flow", href: "/business-journey#step-02", description: "Capture exact order data and manage order status" },
+    { name: "Logistics & AWB Operations", href: "/business-journey#step-04", description: "Integrate shipping partners and run dispatch operations" },
+    { name: "Financial Overview", href: "/business-journey#step-06", description: "Track revenue, expenses, and net profit with clarity" },
   ];
 
   return (
     <nav className="bg-white/80 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center transition-transform hover:scale-105" aria-label="Obizee Home">
+            <Link to="/" className="flex items-center transition-transform hover:scale-105" aria-label="oBizee Home">
               <div className="w-12 h-12 mr-3">
                 <img
                   src="/lovable-uploads/2941a262-6754-4343-a36c-43a56c320d5d.png"
-                  alt="Obizee Logo"
+                  alt="oBizee Logo"
                   className="w-full h-full object-contain"
                   width="48"
                   height="48"
                   loading="eager"
                 />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
-                Obizee
+              <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
+                oBizee
               </span>
             </Link>
           </div>
@@ -43,15 +45,15 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <Link
-                to="/templates"
+                to="/business-journey"
                 className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
-                  isActive("/templates")
+                  isActive("/business-journey")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
                     : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
                 }`}
-                aria-current={isActive("/templates") ? "page" : undefined}
+                aria-current={isActive("/business-journey") ? "page" : undefined}
               >
-                Website Templates
+                Platform Services
               </Link>
 
               <div className="relative group" onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)}>
@@ -133,30 +135,21 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/signin">
-              <Button
-                variant="ghost"
-                className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-all"
-                aria-label="Sign in to your account"
-              >
-                Sign In
-              </Button>
-            </Link>
-            <Link to="/signup">
+            <AppDownloadTrigger>
               <Button
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                aria-label="Start your free trial"
+                aria-label="Download oBizee mobile app"
               >
-                Start Free Trial
+                Download App
               </Button>
-            </Link>
+            </AppDownloadTrigger>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-orange-600 p-2 rounded-lg hover:bg-orange-50 transition-all"
+              className="text-gray-700 hover:text-orange-600 p-1.5 sm:p-2 rounded-lg hover:bg-orange-50 transition-all"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
               aria-label="Toggle mobile menu"
@@ -170,20 +163,20 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden animate-fade-in" id="mobile-menu" role="menu" aria-label="Mobile navigation menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-sm border-t border-gray-100">
+          <div className="px-2 pt-1.5 pb-2.5 space-y-1 sm:px-3 bg-white/95 backdrop-blur-sm border-t border-gray-100">
             <Link
-              to="/templates"
-              className={`block px-3 py-2 text-base font-medium rounded-lg transition-all ${
-                isActive("/templates") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+              to="/business-journey"
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+                isActive("/business-journey") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
-              aria-current={isActive("/templates") ? "page" : undefined}
+              aria-current={isActive("/business-journey") ? "page" : undefined}
             >
-              Website Templates
+              Platform Services
             </Link>
             <Link
               to="/solutions"
-              className={`block px-3 py-2 text-base font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/solutions") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -193,7 +186,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/pricing"
-              className={`block px-3 py-2 text-base font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/pricing") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -203,7 +196,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/success-stories"
-              className={`block px-3 py-2 text-base font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/success-stories") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -213,7 +206,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/help"
-              className={`block px-3 py-2 text-base font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/help") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -221,27 +214,18 @@ const Navigation = () => {
             >
               Help
             </Link>
-            <div className="pt-4 pb-3 border-t border-gray-200">
+            <div className="pt-3 pb-2 border-t border-gray-200">
               <div className="flex flex-col space-y-2 px-3">
-                <Link to="/signin">
-                  <Button
-                    variant="ghost"
-                    className="justify-start hover:bg-orange-50 w-full transition-all"
-                    role="menuitem"
-                    aria-label="Sign in to your account"
-                  >
-                    Sign In
-                  </Button>
-                </Link>
-                <Link to="/signup">
+                <AppDownloadTrigger>
                   <Button
                     className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white justify-start rounded-xl w-full transition-all"
                     role="menuitem"
-                    aria-label="Start your free trial"
+                    aria-label="Download oBizee mobile app"
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    Start Free Trial
+                    Download App
                   </Button>
-                </Link>
+                </AppDownloadTrigger>
               </div>
             </div>
           </div>

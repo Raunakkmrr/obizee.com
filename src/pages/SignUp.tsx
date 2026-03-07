@@ -25,17 +25,17 @@ const SignUp = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Sign Up | Obizee",
+    name: "Sign Up | oBizee",
     description:
-      "Create your Obizee business account and get started with our business management platform. Get ₹500 bonus or 2 months free!",
+      "Create your oBizee business account and get started with a 3-month free trial, then 1% per successful order capped at ₹10.",
     publisher: {
       "@type": "Organization",
-      name: "Obizee",
+      name: "oBizee",
       url: "https://obizee.com",
     },
     mainEntity: {
       "@type": "WebApplication",
-      name: "Obizee Business Platform",
+      name: "oBizee Business Platform",
       applicationCategory: "BusinessApplication",
       browserRequirements: "Requires JavaScript. Requires HTML5.",
       offers: {
@@ -53,26 +53,26 @@ const SignUp = () => {
   return (
     <>
       <Helmet>
-        <title>Sign Up | Create Your Business Account | Obizee</title>
+        <title>Sign Up | Create Your Business Account | oBizee</title>
         <meta
           name="description"
-          content="Create your Obizee business account and get started with our business management platform. Get ₹500 bonus or 2 months free!"
+          content="Create your oBizee business account and get started with a 3-month free trial. After trial, pay 1% per successful order capped at ₹10."
         />
-        <meta name="keywords" content="sign up, create account, business account, free trial, business management platform, bonus offer" />
+        <meta name="keywords" content="sign up, create account, business account, 3 month free trial, 1% per order, business management platform" />
         <meta name="robots" content="noindex, follow" />
-        <meta property="og:title" content="Sign Up | Create Your Business Account | Obizee" />
+        <meta property="og:title" content="Sign Up | Create Your Business Account | oBizee" />
         <meta
           property="og:description"
-          content="Create your Obizee business account and get started with our business management platform. Get ₹500 bonus or 2 months free!"
+          content="Create your oBizee business account with a 3-month free trial. Post-trial fee is 1% per successful order, capped at ₹10."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com/signup" />
         <meta property="og:image" content="https://obizee.com/signup-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sign Up | Create Your Business Account | Obizee" />
+        <meta name="twitter:title" content="Sign Up | Create Your Business Account | oBizee" />
         <meta
           name="twitter:description"
-          content="Create your Obizee business account and get started with our business management platform. Get ₹500 bonus or 2 months free!"
+          content="Create your oBizee business account with a 3-month free trial. Post-trial fee is 1% per successful order, capped at ₹10."
         />
         <meta name="twitter:image" content="https://obizee.com/signup-twitter.jpg" />
         <link rel="canonical" href="https://obizee.com/signup" />
@@ -91,15 +91,15 @@ const SignUp = () => {
                 <Zap className="h-7 w-7 text-white" aria-hidden="true" />
               </div>
               <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
-                StreamFlow
+                oBizee
               </span>
             </Link>
 
-            {/* Bonus Offer Banner */}
+            {/* Free Trial Banner */}
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-4 mb-6" role="alert" aria-label="Special offer">
               <div className="flex items-center justify-center text-white">
                 <Gift className="h-6 w-6 mr-2" aria-hidden="true" />
-                <span className="font-bold">Get ₹500 Bonus OR 2 Months Free!</span>
+                <span className="font-bold">3-Month Free Trial • Then 1% Fee (Max ₹10 per order)</span>
               </div>
             </div>
 
@@ -244,9 +244,9 @@ const SignUp = () => {
               type="submit"
               disabled={!formData.agreeToTerms}
               className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-              aria-label="Create account and claim bonus"
+              aria-label="Create account and start free trial"
             >
-              Create Account & Claim Bonus
+              Create Account & Start Free Trial
             </Button>
 
             {/* Divider */}

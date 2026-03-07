@@ -115,12 +115,12 @@ const PrivacyPolicy = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Privacy Policy | Obizee",
+    name: "Privacy Policy | oBizee",
     description:
-      "Learn how Obizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security.",
+      "Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security.",
     publisher: {
       "@type": "Organization",
-      name: "Obizee",
+      name: "oBizee",
       url: "https://obizee.com",
     },
     mainEntity: {
@@ -130,11 +130,11 @@ const PrivacyPolicy = () => {
       dateModified: new Date().toISOString(),
       author: {
         "@type": "Organization",
-        name: "Obizee",
+        name: "oBizee",
       },
       publisher: {
         "@type": "Organization",
-        name: "Obizee",
+        name: "oBizee",
         url: "https://obizee.com",
       },
     },
@@ -143,29 +143,29 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | How We Protect Your Data | Obizee</title>
+        <title>Privacy Policy | How We Protect Your Data | oBizee</title>
         <meta
           name="description"
-          content="Learn how Obizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
+          content="Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
         />
         <meta
           name="keywords"
           content="privacy policy, data protection, information security, user privacy, data collection, data usage, privacy rights"
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Privacy Policy | How We Protect Your Data | Obizee" />
+        <meta property="og:title" content="Privacy Policy | How We Protect Your Data | oBizee" />
         <meta
           property="og:description"
-          content="Learn how Obizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
+          content="Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com/privacy-policy" />
         <meta property="og:image" content="https://obizee.com/privacy-policy-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privacy Policy | How We Protect Your Data | Obizee" />
+        <meta name="twitter:title" content="Privacy Policy | How We Protect Your Data | oBizee" />
         <meta
           name="twitter:description"
-          content="Learn how Obizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
+          content="Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
         />
         <meta name="twitter:image" content="https://obizee.com/privacy-policy-twitter.jpg" />
         <link rel="canonical" href="https://obizee.com/privacy-policy" />
@@ -201,7 +201,7 @@ const PrivacyPolicy = () => {
             <div className="bg-orange-50 rounded-2xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Commitment to Your Privacy</h2>
               <p className="text-gray-700 leading-relaxed">
-                At StreamFlow, we are committed to protecting your privacy and ensuring the security of your personal information. This
+                At oBizee, we are committed to protecting your privacy and ensuring the security of your personal information. This
                 Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our business management
                 platform. By using our services, you consent to the practices described in this policy.
               </p>
@@ -272,8 +272,8 @@ const PrivacyPolicy = () => {
               <address className="space-y-2 text-orange-100 not-italic">
                 <p>
                   Email:{" "}
-                  <a href="mailto:privacy@streamflow.com" className="underline hover:text-white">
-                    admin@obizee.com
+                  <a href="mailto:privacy@obizee.com" className="underline hover:text-white">
+                    privacy@obizee.com
                   </a>
                 </p>
                 <p>
@@ -282,7 +282,7 @@ const PrivacyPolicy = () => {
                     +91-7011571373
                   </a>
                 </p>
-                <p>Address: Obizee, Gurgaon, Haryana, India</p>
+                <p>Address: oBizee, Gurgaon, Haryana, India</p>
               </address>
             </div>
           </div>

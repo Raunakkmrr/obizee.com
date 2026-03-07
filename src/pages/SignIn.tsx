@@ -22,16 +22,16 @@ const SignIn = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Sign In | Obizee",
-    description: "Sign in to your Obizee business account to access your business management platform.",
+    name: "Sign In | oBizee",
+    description: "Sign in to your oBizee business account to access your business management platform.",
     publisher: {
       "@type": "Organization",
-      name: "Obizee",
+      name: "oBizee",
       url: "https://obizee.com",
     },
     mainEntity: {
       "@type": "WebApplication",
-      name: "Obizee Business Platform",
+      name: "oBizee Business Platform",
       applicationCategory: "BusinessApplication",
       browserRequirements: "Requires JavaScript. Requires HTML5.",
       offers: {
@@ -44,26 +44,26 @@ const SignIn = () => {
   return (
     <>
       <Helmet>
-        <title>Sign In | Access Your Business Account | Obizee</title>
+        <title>Sign In | Access Your Business Account | oBizee</title>
         <meta
           name="description"
-          content="Sign in to your Obizee business account to access your business management platform. Secure login with email and password."
+          content="Sign in to your oBizee business account to access your business management platform. Secure login with email and password."
         />
         <meta name="keywords" content="sign in, login, business account, secure login, business management platform" />
         <meta name="robots" content="noindex, follow" />
-        <meta property="og:title" content="Sign In | Access Your Business Account | Obizee" />
+        <meta property="og:title" content="Sign In | Access Your Business Account | oBizee" />
         <meta
           property="og:description"
-          content="Sign in to your Obizee business account to access your business management platform. Secure login with email and password."
+          content="Sign in to your oBizee business account to access your business management platform. Secure login with email and password."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com/signin" />
         <meta property="og:image" content="https://obizee.com/signin-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sign In | Access Your Business Account | Obizee" />
+        <meta name="twitter:title" content="Sign In | Access Your Business Account | oBizee" />
         <meta
           name="twitter:description"
-          content="Sign in to your Obizee business account to access your business management platform. Secure login with email and password."
+          content="Sign in to your oBizee business account to access your business management platform. Secure login with email and password."
         />
         <meta name="twitter:image" content="https://obizee.com/signin-twitter.jpg" />
         <link rel="canonical" href="https://obizee.com/signin" />
@@ -82,7 +82,7 @@ const SignIn = () => {
                 <Zap className="h-7 w-7 text-white" aria-hidden="true" />
               </div>
               <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
-                StreamFlow
+                oBizee
               </span>
             </Link>
             <h1 className="text-3xl font-bold text-gray-900">Welcome back</h1>

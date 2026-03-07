@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
@@ -24,10 +25,10 @@ const Home = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "StreamFlow - Business Management Platform",
+    name: "oBizee - Business Management Platform",
     url: "https://obizee.com",
     description:
-      "StreamFlow is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base.",
+      "oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base.",
     potentialAction: {
       "@type": "SearchAction",
       target: "https://obizee.com/search?q={search_term_string}",
@@ -35,11 +36,11 @@ const Home = () => {
     },
     publisher: {
       "@type": "Organization",
-      name: "Obizee",
+      name: "oBizee",
       url: "https://obizee.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://obizee.com/logo.png",
+        url: "https://obizee.com/Obizee.png",
       },
       contactPoint: {
         "@type": "ContactPoint",
@@ -51,64 +52,42 @@ const Home = () => {
       },
     },
     offers: {
-      "@type": "AggregateOffer",
+      "@type": "Offer",
+      name: "oBizee Single Plan",
+      price: "0",
       priceCurrency: "INR",
-      lowPrice: "0",
-      highPrice: "999",
-      offerCount: "3",
-      offers: [
-        {
-          "@type": "Offer",
-          name: "Starter Plan",
-          price: "0",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-        },
-        {
-          "@type": "Offer",
-          name: "Growth Plan",
-          price: "499",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-        },
-        {
-          "@type": "Offer",
-          name: "Pro Plan",
-          price: "999",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-        },
-      ],
+      availability: "https://schema.org/InStock",
+      description: "3-month free trial. After trial, 1% per successful order with a maximum cap of ₹10 per order.",
     },
   };
 
   return (
     <>
       <Helmet>
-        <title>StreamFlow - Business Management Platform | Streamline Your Business Operations</title>
+        <title>oBizee - Business Management Platform | Streamline Your Business Operations</title>
         <meta
           name="description"
-          content="StreamFlow is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Start your free trial today!"
+          content="oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Download the app to get started."
         />
         <meta
           name="keywords"
           content="business management, inventory management, payment processing, customer management, business software, business tools, business platform, business solutions"
         />
-        <meta property="og:title" content="StreamFlow - Business Management Platform | Streamline Your Business Operations" />
+        <meta property="og:title" content="oBizee - Business Management Platform | Streamline Your Business Operations" />
         <meta
           property="og:description"
-          content="StreamFlow is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Start your free trial today!"
+          content="oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Download the app to get started."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com" />
-        <meta property="og:image" content="https://obizee.com/og-image.jpg" />
+        <meta property="og:image" content="https://obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="StreamFlow - Business Management Platform | Streamline Your Business Operations" />
+        <meta name="twitter:title" content="oBizee - Business Management Platform | Streamline Your Business Operations" />
         <meta
           name="twitter:description"
-          content="StreamFlow is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Start your free trial today!"
+          content="oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Download the app to get started."
         />
-        <meta name="twitter:image" content="https://obizee.com/twitter-image.jpg" />
+        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
         <link rel="canonical" href="https://obizee.com" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
@@ -123,22 +102,22 @@ const Home = () => {
             <div className="text-center">
               <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 Streamline Your Business with{" "}
-                <span className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">StreamFlow</span>
+                <span className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">oBizee</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                All-in-one platform for inventory management, payments, and customer engagement. Start your free trial today and get ₹500
-                bonus or 2 months free!
+                All-in-one platform for inventory management, payments, and customer engagement. Download the app and start your 3-month
+                free trial. After trial, pay 1% per successful order with a ₹10 maximum cap.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  asChild
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
-                >
-                  <Link to="/signup" aria-label="Start your free trial">
-                    Start Free Trial
+                <AppDownloadTrigger>
+                  <Button
+                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                    aria-label="Download oBizee app"
+                  >
+                    Download App
                     <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-                  </Link>
-                </Button>
+                  </Button>
+                </AppDownloadTrigger>
                 <Button
                   asChild
                   variant="outline"
@@ -228,7 +207,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                How StreamFlow Works
+                How oBizee Works
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Get started in three simple steps</p>
             </div>
@@ -239,8 +218,8 @@ const Home = () => {
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-orange-600">1</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Sign Up</h3>
-                <p className="text-gray-600">Create your account and choose your plan</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Download the App</h3>
+                <p className="text-gray-600">Install oBizee on iOS or Android and activate your 3-month free trial</p>
               </div>
 
               {/* Step 2 */}
@@ -258,7 +237,7 @@ const Home = () => {
                   <span className="text-2xl font-bold text-orange-600">3</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Start Growing</h3>
-                <p className="text-gray-600">Begin managing your business with StreamFlow</p>
+                <p className="text-gray-600">Begin managing your business with oBizee</p>
               </div>
             </div>
           </div>
@@ -271,17 +250,17 @@ const Home = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using StreamFlow to grow their operations
+              Join thousands of businesses already using oBizee to grow their operations
             </p>
-            <Button
-              asChild
-              className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
-            >
-              <Link to="/signup" aria-label="Start your free trial now">
-                Start Free Trial
+            <AppDownloadTrigger>
+              <Button
+                className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-6 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                aria-label="Download oBizee app"
+              >
+                Download App
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-              </Link>
-            </Button>
+              </Button>
+            </AppDownloadTrigger>
           </div>
         </section>
 

@@ -5,31 +5,33 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const footerLinks = {
     product: [
-      { name: "Website Templates", href: "/templates" },
-      { name: "Mobile Apps", href: "/solutions#mobile" },
-      { name: "Web Dashboard", href: "/solutions#dashboard" },
-      { name: "E-commerce Tools", href: "/solutions" },
-      { name: "Payment Processing", href: "/solutions" },
-      { name: "Business Analytics", href: "/solutions" },
+      { name: "Add Categories & Products", href: "/business-journey#step-01" },
+      { name: "Custom Order Forms", href: "/business-journey#step-02" },
+      { name: "Share Form & Manage Orders", href: "/business-journey#step-03" },
+      { name: "Logistics Integrations", href: "/business-journey#step-04" },
+      { name: "AWB, Pickup & Cancellation", href: "/business-journey#step-05" },
+      { name: "Financial Overview", href: "/business-journey#step-06" },
+      { name: "Employees & Vendors", href: "/business-journey#step-07" },
     ],
     solutions: [
-      { name: "For Small Business", href: "/solutions" },
-      { name: "For E-commerce", href: "/solutions" },
+      { name: "For Small Business", href: "/business-journey" },
+      { name: "For E-commerce", href: "/business-journey" },
       { name: "For Restaurants", href: "/templates" },
       { name: "For Service Providers", href: "/templates" },
       { name: "For Retailers", href: "/templates" },
     ],
     resources: [
-      { name: "Success Stories", href: "/success-stories" },
+      { name: "Success Stories", href: "/customer-testimonials" },
       { name: "Help Center", href: "/help" },
-      { name: "Video Tutorials", href: "/help" },
+      { name: "Video Tutorials", href: "/help#video-tutorials" },
       { name: "Template Gallery", href: "/templates" },
       { name: "Contact Support", href: "/help" },
     ],
     company: [
-      { name: "About Obizee", href: "/help" },
+      { name: "About oBizee", href: "/about" },
       { name: "Pricing", href: "/pricing" },
-      { name: "Contact Us", href: "/help" },
+      { name: "Contact Us", href: "/contact" },
+      { name: "Compliance", href: "/compliance" },
       { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Terms of Service", href: "/terms-conditions" },
       { name: "Refund Policy", href: "/refund-policy" },
@@ -45,60 +47,71 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Main footer content */}
-        <div className="py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="py-12 sm:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-12">
             {/* Company info */}
             <div className="lg:col-span-2">
-              <div className="flex items-center mb-6">
+              <div className="flex items-center mb-5 sm:mb-6">
                 <div className="w-12 h-12 mr-3">
                   <img
                     src="/lovable-uploads/2941a262-6754-4343-a36c-43a56c320d5d.png"
-                    alt="Obizee Logo"
-                    className="w-full h-full object-contain filter brightness-0 invert"
+                    alt="oBizee Logo"
+                    className="w-full h-full object-contain"
                     width="48"
                     height="48"
                     loading="lazy"
                   />
                 </div>
-                <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent">
-                  Obizee
+                <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent">
+                  oBizee
                 </span>
               </div>
-              <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+              <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-lg">
                 Empowering businesses to build professional websites, manage operations, and grow their online presence. From startup to
                 success story - we've got you covered.
               </p>
-              <address className="space-y-4 not-italic">
+              <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-3 sm:p-4 mb-5 sm:mb-7">
+                <p className="text-xs sm:text-sm text-gray-300">
+                  <span className="font-semibold text-white">Legal Name:</span> Raunak Kumar (Proprietor)
+                </p>
+                <p className="text-xs sm:text-sm text-gray-300 mt-1">
+                  <span className="font-semibold text-white">Trade Name:</span> SRN TECHNO
+                </p>
+                <p className="text-xs sm:text-sm text-gray-300 mt-1">
+                  <span className="font-semibold text-white">Registered Address:</span> G-11, Hemkunt Chamber, Nehru Place, New Delhi, Delhi 110019, India
+                </p>
+              </div>
+              <address className="space-y-3 sm:space-y-4 not-italic">
                 <div className="flex items-center text-gray-300 hover:text-orange-400 transition-colors">
-                  <Mail className="h-5 w-5 mr-4 text-orange-400" aria-hidden="true" />
-                  <a href="mailto:hello@obizee.com" className="text-lg">
-                    hello@obizee.com
+                  <Mail className="h-5 w-5 mr-3 sm:mr-4 text-orange-400 shrink-0" aria-hidden="true" />
+                  <a href="mailto:raunakkumar1225@gmail.com" className="text-sm sm:text-lg break-all">
+                    raunakkumar1225@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center text-gray-300 hover:text-orange-400 transition-colors">
-                  <Phone className="h-5 w-5 mr-4 text-orange-400" aria-hidden="true" />
-                  <a href="tel:+919876543210" className="text-lg">
-                    +91 98765 43210
+                  <Phone className="h-5 w-5 mr-3 sm:mr-4 text-orange-400 shrink-0" aria-hidden="true" />
+                  <a href="tel:+917011571373" className="text-sm sm:text-lg">
+                    +91 70115 71373
                   </a>
                 </div>
                 <div className="flex items-center text-gray-300 hover:text-orange-400 transition-colors">
-                  <MapPin className="h-5 w-5 mr-4 text-orange-400" aria-hidden="true" />
-                  <span className="text-lg">Mumbai, India</span>
+                  <MapPin className="h-5 w-5 mr-3 sm:mr-4 text-orange-400 shrink-0" aria-hidden="true" />
+                  <span className="text-sm sm:text-lg">Nehru Place, New Delhi, India</span>
                 </div>
               </address>
             </div>
 
             {/* Product links */}
             <nav aria-labelledby="footer-features">
-              <h3 id="footer-features" className="text-xl font-bold mb-8 text-white">
+              <h3 id="footer-features" className="text-lg sm:text-xl font-bold mb-4 sm:mb-8 text-white">
                 Features
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.product.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
+                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
                       {link.name}
                     </Link>
                   </li>
@@ -108,13 +121,13 @@ const Footer = () => {
 
             {/* Solutions links */}
             <nav aria-labelledby="footer-solutions">
-              <h3 id="footer-solutions" className="text-xl font-bold mb-8 text-white">
+              <h3 id="footer-solutions" className="text-lg sm:text-xl font-bold mb-4 sm:mb-8 text-white">
                 Solutions
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.solutions.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
+                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
                       {link.name}
                     </Link>
                   </li>
@@ -124,13 +137,13 @@ const Footer = () => {
 
             {/* Resources links */}
             <nav aria-labelledby="footer-resources">
-              <h3 id="footer-resources" className="text-xl font-bold mb-8 text-white">
+              <h3 id="footer-resources" className="text-lg sm:text-xl font-bold mb-4 sm:mb-8 text-white">
                 Resources
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
+                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
                       {link.name}
                     </Link>
                   </li>
@@ -140,13 +153,13 @@ const Footer = () => {
 
             {/* Company links */}
             <nav aria-labelledby="footer-company">
-              <h3 id="footer-company" className="text-xl font-bold mb-8 text-white">
+              <h3 id="footer-company" className="text-lg sm:text-xl font-bold mb-4 sm:mb-8 text-white">
                 Company
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-lg">
+                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
                       {link.name}
                     </Link>
                   </li>
@@ -157,13 +170,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom footer */}
-        <div className="border-t border-gray-800 py-12">
+        <div className="border-t border-gray-800 py-8 sm:py-12">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-lg mb-6 md:mb-0">
-              © 2025 Obizee. All rights reserved. Built for business owners with <span aria-label="love">❤️</span>
+            <div className="text-gray-400 text-sm sm:text-lg text-center md:text-left mb-5 sm:mb-6 md:mb-0">
+              © 2025 oBizee. All rights reserved. Built for business owners with <span aria-label="love">❤️</span>
             </div>
             <nav aria-label="Social media links">
-              <ul className="flex space-x-8">
+              <ul className="flex space-x-4 sm:space-x-8">
                 {socialLinks.map((social) => (
                   <li key={social.name}>
                     <a
@@ -173,7 +186,7 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <social.icon className="h-7 w-7" aria-hidden="true" />
+                      <social.icon className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden="true" />
                     </a>
                   </li>
                 ))}
