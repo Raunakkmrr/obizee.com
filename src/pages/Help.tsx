@@ -8,6 +8,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Help = () => {
   const location = useLocation();
+  const tutorialVideoPath = "/Tutorial_video.mp4";
 
   useEffect(() => {
     if (!location.hash) return;
@@ -117,7 +118,8 @@ const Help = () => {
       icon: Video,
       title: "Video Tutorials",
       description: "Step-by-step video guides",
-      link: "/help#video-tutorials",
+      link: tutorialVideoPath,
+      external: true,
     },
     {
       icon: Users,
@@ -248,24 +250,81 @@ const Help = () => {
             <h2 id="resources-heading" className="text-3xl font-bold text-center text-gray-900 mb-12">
               Additional Resources
             </h2>
+            <div className="mb-10 overflow-hidden rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50 to-white shadow-sm">
+              <div className="grid grid-cols-1 gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+                <div className="p-6 sm:p-8">
+                  <div className="mb-4 inline-flex items-center rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700">
+                    Tutorial Video
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                    Watch the oBizee walkthrough
+                  </h3>
+                  <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
+                    A guided product walkthrough to help merchants understand the app flow, business setup, and daily usage in one place.
+                  </p>
+                  <div className="mt-6">
+                    <Button asChild className="rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700">
+                      <a href={tutorialVideoPath} target="_blank" rel="noopener noreferrer" aria-label="Open tutorial video in a new tab">
+                        Open Tutorial in New Tab
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+                <div className="p-4 sm:p-6">
+                  <div className="overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm">
+                    <video
+                      className="aspect-video w-full bg-black"
+                      controls
+                      preload="metadata"
+                      playsInline
+                      aria-label="oBizee tutorial video"
+                    >
+                      <source src={tutorialVideoPath} type="video/mp4" />
+                      Your browser does not support the tutorial video.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list" aria-label="Additional resources">
               {resources.map((resource, index) => (
-                <Link
-                  key={index}
-                  to={resource.link}
-                  className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 group"
-                  role="listitem"
-                  aria-label={`Access ${resource.title}`}
-                >
-                  <div
-                    className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:from-orange-200 group-hover:to-orange-100 transition-colors"
-                    aria-hidden="true"
+                resource.external ? (
+                  <a
+                    key={index}
+                    href={resource.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 group"
+                    role="listitem"
+                    aria-label={`Access ${resource.title}`}
                   >
-                    <resource.icon className="h-8 w-8 text-orange-600" aria-hidden="true" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
-                  <p className="text-gray-600">{resource.description}</p>
-                </Link>
+                    <div
+                      className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:from-orange-200 group-hover:to-orange-100 transition-colors"
+                      aria-hidden="true"
+                    >
+                      <resource.icon className="h-8 w-8 text-orange-600" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
+                    <p className="text-gray-600">{resource.description}</p>
+                  </a>
+                ) : (
+                  <Link
+                    key={index}
+                    to={resource.link}
+                    className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 group"
+                    role="listitem"
+                    aria-label={`Access ${resource.title}`}
+                  >
+                    <div
+                      className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:from-orange-200 group-hover:to-orange-100 transition-colors"
+                      aria-hidden="true"
+                    >
+                      <resource.icon className="h-8 w-8 text-orange-600" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
+                    <p className="text-gray-600">{resource.description}</p>
+                  </Link>
+                )
               ))}
             </div>
           </div>
