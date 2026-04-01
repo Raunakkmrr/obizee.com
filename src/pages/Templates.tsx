@@ -1,114 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { Search, Filter, Eye, Download, Star } from "lucide-react";
+import { ArrowUpRight, Eye, Smartphone, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const Templates = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const categories = ["All", "E-commerce", "Restaurant", "Portfolio", "Service Business", "Health & Beauty"];
+  const templateBaseUrl = "https://testing.obizee.com";
 
   const websiteTemplates = [
     {
-      id: 1,
-      name: "Fashion Store Pro",
-      category: "E-commerce",
-      description: "Modern e-commerce template perfect for fashion and apparel businesses",
-      image: "/placeholder.svg",
-      features: ["Mobile Responsive", "Payment Gateway", "Product Catalog", "Shopping Cart"],
-      rating: 4.8,
-      downloads: 2400,
+      id: "template-modern-v1",
+      name: "Modern V1",
+      category: "Modern Commerce",
+      description: "A clean storefront-first layout for brands that want a polished website with fast product discovery and a premium feel.",
+      image: "/modern-template.png",
+      features: ["Premium landing layout", "Hero-led product showcase", "Mobile responsive", "Fast catalog browsing"],
+      rating: 5.0,
+      previewUrl: `${templateBaseUrl}/?subdomain=testing&template=template-modern-v1`,
       popular: true,
+      accent: "from-orange-500 to-amber-500",
+      icon: Sparkles,
     },
     {
-      id: 2,
-      name: "Restaurant Deluxe",
-      category: "Restaurant",
-      description: "Elegant restaurant template with online ordering and reservation system",
-      image: "/placeholder.svg",
-      features: ["Online Menu", "Reservation System", "Gallery", "Contact Forms"],
-      rating: 4.9,
-      downloads: 1850,
+      id: "template-trust-v1",
+      name: "Trust V1",
+      category: "Trust-Led Brand",
+      description: "Built for businesses that need stronger credibility, cleaner messaging, and a more confidence-driven customer journey.",
+      image: "/trust-template.png",
+      features: ["Trust-focused sections", "Clear brand messaging", "Conversion-oriented layout", "Responsive design"],
+      rating: 5.0,
+      previewUrl: `${templateBaseUrl}/?subdomain=testing&template=template-trust-v1`,
       popular: true,
+      accent: "from-emerald-500 to-teal-500",
+      icon: ShieldCheck,
     },
     {
-      id: 3,
-      name: "Creative Portfolio",
-      category: "Portfolio",
-      description: "Showcase your work with this stunning portfolio template",
-      image: "/placeholder.svg",
-      features: ["Gallery", "About Section", "Contact Form", "Blog"],
-      rating: 4.7,
-      downloads: 1200,
-      popular: false,
-    },
-    {
-      id: 4,
-      name: "Electronics Hub",
-      category: "E-commerce",
-      description: "Professional electronics and gadgets online store template",
-      image: "/placeholder.svg",
-      features: ["Product Reviews", "Wishlist", "Compare Products", "Multi-vendor"],
-      rating: 4.6,
-      downloads: 980,
-      popular: false,
-    },
-    {
-      id: 5,
-      name: "Consulting Pro",
-      category: "Service Business",
-      description: "Professional template for consulting and service-based businesses",
-      image: "/placeholder.svg",
-      features: ["Service Pages", "Team Section", "Testimonials", "Contact Forms"],
-      rating: 4.8,
-      downloads: 1500,
+      id: "template-mobile-social-v1",
+      name: "Mobile Social V1",
+      category: "Mobile-First Social",
+      description: "A sharper mobile-first template made for Instagram and WhatsApp-led brands that sell through social traffic first.",
+      image: "/mobile-template.png",
+      features: ["Mobile-first structure", "Social traffic friendly", "Quick buy flow", "Compact product presentation"],
+      rating: 5.0,
+      previewUrl: `${templateBaseUrl}/?subdomain=testing&template=template-mobile-social-v1`,
       popular: true,
-    },
-    {
-      id: 6,
-      name: "Beauty Salon Elite",
-      category: "Health & Beauty",
-      description: "Elegant beauty salon template with booking functionality",
-      image: "/placeholder.svg",
-      features: ["Appointment Booking", "Service Menu", "Staff Profiles", "Gallery"],
-      rating: 4.9,
-      downloads: 1100,
-      popular: false,
-    },
-    {
-      id: 7,
-      name: "Fitness Studio",
-      category: "Health & Beauty",
-      description: "Dynamic fitness and gym template with class scheduling",
-      image: "/placeholder.svg",
-      features: ["Class Schedule", "Membership Plans", "Trainer Profiles", "Nutrition Blog"],
-      rating: 4.7,
-      downloads: 890,
-      popular: false,
-    },
-    {
-      id: 8,
-      name: "Coffee Shop",
-      category: "Restaurant",
-      description: "Cozy coffee shop template with online ordering",
-      image: "/placeholder.svg",
-      features: ["Online Ordering", "Menu Display", "Location Map", "Events Calendar"],
-      rating: 4.8,
-      downloads: 750,
-      popular: true,
+      accent: "from-sky-500 to-blue-500",
+      icon: Smartphone,
     },
   ];
-
-  const filteredTemplates = websiteTemplates.filter((template) => {
-    const matchesSearch =
-      template.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      template.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "All" || template.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
 
   // JSON-LD structured data for templates
   const jsonLd = {
@@ -125,11 +65,11 @@ const Templates = () => {
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: template.rating,
-          ratingCount: template.downloads,
+          ratingCount: "1",
           bestRating: "5",
           worstRating: "1",
         },
-        downloadUrl: `https://obizee.com/templates/${template.id}`,
+        url: template.previewUrl,
         featureList: template.features.join(", "),
         offers: {
           "@type": "Offer",
@@ -147,17 +87,17 @@ const Templates = () => {
         <title>Website Templates | Professional Business Templates | oBizee</title>
         <meta
           name="description"
-          content="Choose from our collection of professionally designed website templates for e-commerce, restaurants, portfolios, and more. Fully responsive, customizable, and ready to launch."
+          content="Explore the three live oBizee website templates available for merchants: Modern V1, Trust V1, and Mobile Social V1."
         />
         <meta
           name="keywords"
-          content="website templates, e-commerce templates, restaurant templates, portfolio templates, business templates, responsive templates, customizable templates"
+          content="oBizee templates, template-modern-v1, template-trust-v1, template-mobile-social-v1, merchant website templates"
         />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Website Templates | Professional Business Templates | oBizee" />
         <meta
           property="og:description"
-          content="Choose from our collection of professionally designed website templates for e-commerce, restaurants, portfolios, and more. Fully responsive, customizable, and ready to launch."
+          content="Browse the three live oBizee templates and preview the exact storefront experience for each one."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://obizee.com/templates" />
@@ -166,7 +106,7 @@ const Templates = () => {
         <meta name="twitter:title" content="Website Templates | Professional Business Templates | oBizee" />
         <meta
           name="twitter:description"
-          content="Choose from our collection of professionally designed website templates for e-commerce, restaurants, portfolios, and more. Fully responsive, customizable, and ready to launch."
+          content="Browse the three live oBizee templates and preview the exact storefront experience for each one."
         />
         <meta name="twitter:image" content="https://obizee.com/templates-twitter.jpg" />
         <link rel="canonical" href="https://obizee.com/templates" />
@@ -183,43 +123,22 @@ const Templates = () => {
               <h1 id="templates-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Website Templates
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-                  For Your Business
+                  Ready Right Now
                 </span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose from our collection of professionally designed website templates. Each template is fully responsive, customizable,
-                and ready to launch your online presence.
+                These are the only live website templates currently available on oBizee. Each one uses a different visual direction and can
+                be previewed with the real template URL.
               </p>
             </div>
-
-            {/* Search and Filter */}
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" aria-hidden="true" />
-                <input
-                  type="text"
-                  placeholder="Search templates..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  aria-label="Search templates"
-                />
-              </div>
-              <div className="flex gap-2 flex-wrap" role="list" aria-label="Template categories">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-6 py-3 rounded-xl transition-all ${
-                      selectedCategory === category
-                        ? "bg-orange-500 text-white shadow-lg"
-                        : "bg-white text-gray-600 border border-gray-200 hover:border-orange-300"
-                    }`}
-                    role="listitem"
-                    aria-pressed={selectedCategory === category}
-                  >
-                    {category}
-                  </button>
+            <div className="mx-auto max-w-5xl rounded-3xl border border-orange-100 bg-gradient-to-r from-orange-50 via-white to-orange-50 p-5 sm:p-6">
+              <div className="grid gap-4 md:grid-cols-3" role="list" aria-label="Live template summary">
+                {websiteTemplates.map((template) => (
+                  <div key={template.id} className="rounded-2xl bg-white p-4 text-left shadow-sm" role="listitem">
+                    <p className="text-sm font-semibold text-orange-600">{template.category}</p>
+                    <p className="mt-1 text-lg font-bold text-gray-900">{template.name}</p>
+                    <p className="mt-2 text-sm text-gray-600">{template.id}</p>
+                  </div>
                 ))}
               </div>
             </div>
@@ -233,7 +152,7 @@ const Templates = () => {
               Available Templates
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Template list">
-              {filteredTemplates.map((template) => (
+              {websiteTemplates.map((template) => (
                 <article
                   key={template.id}
                   className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 hover:border-orange-200 transition-all duration-300 group relative"
@@ -252,7 +171,7 @@ const Templates = () => {
                   )}
 
                   {/* Template Preview Image */}
-                  <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden bg-gray-100">
                     <img
                       src={template.image}
                       alt={`Preview of ${template.name} template`}
@@ -261,13 +180,16 @@ const Templates = () => {
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-2">
-                        <Button
-                          size="sm"
-                          className="bg-white text-gray-900 hover:bg-gray-100"
-                          aria-label={`Preview ${template.name} template`}
-                        >
-                          <Eye className="w-4 h-4 mr-1" aria-hidden="true" />
-                          Preview
+                        <Button asChild size="sm" className="bg-white text-gray-900 hover:bg-gray-100">
+                          <a
+                            href={template.previewUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Preview ${template.name} template`}
+                          >
+                            <Eye className="w-4 h-4 mr-1" aria-hidden="true" />
+                            Preview
+                          </a>
                         </Button>
                       </div>
                     </div>
@@ -284,6 +206,16 @@ const Templates = () => {
 
                     <p className="text-gray-600 mb-4">{template.description}</p>
 
+                    <div className="mb-4 flex items-center gap-2">
+                      <div className={`flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br ${template.accent} text-white`}>
+                        <template.icon className="h-5 w-5" aria-hidden="true" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-gray-900">Template ID</p>
+                        <p className="text-sm text-gray-500">{template.id}</p>
+                      </div>
+                    </div>
+
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                       <div className="flex flex-wrap gap-2" role="list" aria-label="Template features">
@@ -296,50 +228,39 @@ const Templates = () => {
                     </div>
 
                     <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center text-gray-500 text-sm">
-                        <Download className="w-4 h-4 mr-1" aria-hidden="true" />
-                        {template.downloads} downloads
-                      </div>
                       <span className="text-sm bg-gray-100 text-gray-600 px-2 py-1 rounded" role="status">
                         {template.category}
                       </span>
+                      <div className="text-sm font-medium text-green-600">Live preview available</div>
                     </div>
 
                     <div className="flex gap-3">
-                      <Button
-                        className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-xl"
-                        aria-label={`Use ${template.name} template`}
-                      >
-                        Use Template
+                      <Button asChild className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-xl">
+                        <a
+                          href={template.previewUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Use ${template.name} template`}
+                        >
+                          Open Template
+                          <ArrowUpRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                        </a>
                       </Button>
-                      <Button
-                        variant="outline"
-                        className="px-6 border-orange-200 hover:border-orange-300 hover:bg-orange-50 rounded-xl"
-                        aria-label={`Preview ${template.name} template`}
-                      >
-                        Preview
+                      <Button asChild variant="outline" className="px-6 border-orange-200 hover:border-orange-300 hover:bg-orange-50 rounded-xl">
+                        <a
+                          href={template.previewUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Preview ${template.name} template`}
+                        >
+                          Preview
+                        </a>
                       </Button>
                     </div>
                   </div>
                 </article>
               ))}
             </div>
-
-            {filteredTemplates.length === 0 && (
-              <div className="text-center py-16" role="status" aria-live="polite">
-                <p className="text-xl text-gray-500">No templates found matching your criteria.</p>
-                <Button
-                  onClick={() => {
-                    setSearchTerm("");
-                    setSelectedCategory("All");
-                  }}
-                  className="mt-4 bg-orange-500 hover:bg-orange-600 text-white"
-                  aria-label="Clear search and filters"
-                >
-                  Clear Filters
-                </Button>
-              </div>
-            )}
           </div>
         </section>
 

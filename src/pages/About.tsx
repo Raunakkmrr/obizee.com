@@ -4,9 +4,26 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Users, Target, Award, Heart, Globe, Zap, Shield } from "lucide-react";
+import { ArrowRight, Target, Heart, Globe, Shield } from "lucide-react";
 
 const About = () => {
+  const leadershipTeam = [
+    {
+      name: "Raunak Kumar",
+      role: "Founder",
+      image: "/CEO.jpg",
+      description:
+        "An 8+ year operator building oBizee with the belief that small businesses deserve powerful systems, clear direction, and products that truly move them forward.",
+    },
+    {
+      name: "Pushkar Malhotra",
+      role: "CMO",
+      image: "/CMO.jpeg",
+      description:
+        "A 7+ year marketing leader focused on building trust, creating momentum, and helping the brand connect with merchants in a way that feels real, ambitious, and lasting.",
+    },
+  ];
+
   // JSON-LD structured data for the about page
   const jsonLd = {
     "@context": "https://schema.org",
@@ -156,41 +173,34 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 id="team-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Team
+                Leadership
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Meet the passionate people behind oBizee</p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Built by people who believe every strong company begins with courage, consistency, and the willingness to start before the
+                world understands the vision.
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
-              {/* Team Member 1 */}
-              <div className="text-center" role="listitem">
-                <div className="w-32 h-32 rounded-full bg-orange-100 mx-auto mb-6 flex items-center justify-center">
-                  <Users className="h-16 w-16 text-orange-600" aria-hidden="true" />
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2" role="list">
+              {leadershipTeam.map((member) => (
+                <div
+                  key={member.name}
+                  className="rounded-3xl border border-orange-100 bg-white p-8 text-center shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
+                  role="listitem"
+                >
+                  <div className="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-orange-100 shadow-sm">
+                    <img
+                      src={member.image}
+                      alt={`${member.name} portrait`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 className="mb-2 text-xl font-semibold text-gray-900">{member.name}</h3>
+                  <p className="mb-4 font-medium text-orange-600">{member.role}</p>
+                  <p className="text-gray-600">{member.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">John Doe</h3>
-                <p className="text-orange-600 mb-4">CEO & Founder</p>
-                <p className="text-gray-600">Visionary leader with 15+ years of experience in business technology</p>
-              </div>
-
-              {/* Team Member 2 */}
-              <div className="text-center" role="listitem">
-                <div className="w-32 h-32 rounded-full bg-orange-100 mx-auto mb-6 flex items-center justify-center">
-                  <Users className="h-16 w-16 text-orange-600" aria-hidden="true" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Jane Smith</h3>
-                <p className="text-orange-600 mb-4">CTO</p>
-                <p className="text-gray-600">Tech innovator driving our platform's development</p>
-              </div>
-
-              {/* Team Member 3 */}
-              <div className="text-center" role="listitem">
-                <div className="w-32 h-32 rounded-full bg-orange-100 mx-auto mb-6 flex items-center justify-center">
-                  <Users className="h-16 w-16 text-orange-600" aria-hidden="true" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Mike Johnson</h3>
-                <p className="text-orange-600 mb-4">Head of Customer Success</p>
-                <p className="text-gray-600">Dedicated to ensuring our customers achieve their goals</p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
