@@ -161,16 +161,16 @@ const Help = () => {
           content="Find answers to your questions, get support, or learn how to make the most of our platform. Access our knowledge base, video tutorials, and community forum."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/help" />
-        <meta property="og:image" content="https://obizee.com/og-image.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/help" />
+        <meta property="og:image" content="https://www.obizee.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Help Center & Support | oBizee" />
         <meta
           name="twitter:description"
           content="Find answers to your questions, get support, or learn how to make the most of our platform. Access our knowledge base, video tutorials, and community forum."
         />
-        <meta name="twitter:image" content="https://obizee.com/twitter-image.jpg" />
-        <link rel="canonical" href="https://obizee.com/help" />
+        <meta name="twitter:image" content="https://www.obizee.com/twitter-image.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/help" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

@@ -16,7 +16,7 @@ const CustomerTestimonialsPage = () => {
         name: "oBizee Customer Testimonials",
         description:
           "Read customer testimonials from Indian businesses using oBizee for order management, inventory control, and online growth.",
-        url: "https://obizee.com/customer-testimonials",
+        url: "https://www.obizee.com/customer-testimonials",
       },
       {
         "@type": "ItemList",
@@ -60,16 +60,16 @@ const CustomerTestimonialsPage = () => {
           content="See how real Indian businesses use oBizee to streamline day-to-day operations and grow online."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/customer-testimonials" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com/customer-testimonials" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="oBizee Customer Testimonials | Real Business Growth Stories" />
         <meta
           name="twitter:description"
           content="Real testimonials from Indian sellers and founders using oBizee to run business operations."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com/customer-testimonials" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com/customer-testimonials" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

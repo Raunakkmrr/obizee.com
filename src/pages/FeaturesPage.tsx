@@ -23,7 +23,7 @@ const FeaturesPage = () => {
     name: "oBizee Features",
     description:
       "Explore oBizee features for Indian sellers: order management, inventory tracking, payment workflows, analytics, and business operations in one place.",
-    url: "https://obizee.com/features",
+    url: "https://www.obizee.com/features",
   };
 
   return (
@@ -41,16 +41,16 @@ const FeaturesPage = () => {
           content="One platform for Indian businesses to manage core operations: orders, stock, payments, and growth analytics."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/features" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com/features" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="oBizee Features | Orders, Inventory, Payments, Analytics" />
         <meta
           name="twitter:description"
           content="Manage your business operations in one place with oBizee's India-first feature set."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com/features" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com/features" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

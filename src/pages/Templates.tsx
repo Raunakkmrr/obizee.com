@@ -100,16 +100,16 @@ const Templates = () => {
           content="Browse the three live oBizee templates and preview the exact storefront experience for each one."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/templates" />
-        <meta property="og:image" content="https://obizee.com/templates-og.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/templates" />
+        <meta property="og:image" content="https://www.obizee.com/templates-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Website Templates | Professional Business Templates | oBizee" />
         <meta
           name="twitter:description"
           content="Browse the three live oBizee templates and preview the exact storefront experience for each one."
         />
-        <meta name="twitter:image" content="https://obizee.com/templates-twitter.jpg" />
-        <link rel="canonical" href="https://obizee.com/templates" />
+        <meta name="twitter:image" content="https://www.obizee.com/templates-twitter.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/templates" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

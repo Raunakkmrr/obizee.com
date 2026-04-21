@@ -25,7 +25,7 @@ const BusinessJourneyPage = () => {
     name: "oBizee Business Journey",
     description:
       "See the step-by-step oBizee business journey for Indian sellers, from Instagram orders to full operations management.",
-    url: "https://obizee.com/business-journey",
+    url: "https://www.obizee.com/business-journey",
   };
 
   return (
@@ -43,16 +43,16 @@ const BusinessJourneyPage = () => {
           content="A clear workflow for Indian businesses to move from manual order handling to structured growth with oBizee."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/business-journey" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com/business-journey" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="oBizee Business Journey | From Instagram Orders to Managed Operations" />
         <meta
           name="twitter:description"
           content="Understand how oBizee helps sellers in India set up systems and scale business operations."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com/business-journey" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com/business-journey" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

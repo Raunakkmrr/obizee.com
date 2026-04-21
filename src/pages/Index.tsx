@@ -29,7 +29,7 @@ const Index = () => {
     name: "oBizee - Order and Business Management for Indian Sellers",
     description:
       "oBizee helps Indian small businesses manage orders, inventory, payments, shipping, and customer communication from one platform.",
-    url: "https://obizee.com",
+    url: "https://www.obizee.com",
     inLanguage: "en-IN",
   };
 
@@ -52,16 +52,16 @@ const Index = () => {
           content="Run your business from one place: orders, inventory, payments, shipping, and customer communication."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="oBizee - Order & Business Management for Indian Sellers" />
         <meta
           name="twitter:description"
           content="India-first SaaS for small businesses selling online. Manage orders, inventory, payments, and shipping."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

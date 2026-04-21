@@ -121,7 +121,7 @@ const PrivacyPolicy = () => {
     publisher: {
       "@type": "Organization",
       name: "oBizee",
-      url: "https://obizee.com",
+      url: "https://www.obizee.com",
     },
     mainEntity: {
       "@type": "Article",
@@ -135,7 +135,7 @@ const PrivacyPolicy = () => {
       publisher: {
         "@type": "Organization",
         name: "oBizee",
-        url: "https://obizee.com",
+        url: "https://www.obizee.com",
       },
     },
   };
@@ -159,16 +159,16 @@ const PrivacyPolicy = () => {
           content="Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/privacy-policy" />
-        <meta property="og:image" content="https://obizee.com/privacy-policy-og.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/privacy-policy" />
+        <meta property="og:image" content="https://www.obizee.com/privacy-policy-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Privacy Policy | How We Protect Your Data | oBizee" />
         <meta
           name="twitter:description"
           content="Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
         />
-        <meta name="twitter:image" content="https://obizee.com/privacy-policy-twitter.jpg" />
-        <link rel="canonical" href="https://obizee.com/privacy-policy" />
+        <meta name="twitter:image" content="https://www.obizee.com/privacy-policy-twitter.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/privacy-policy" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

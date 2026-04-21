@@ -58,7 +58,7 @@ const SuccessStories = () => {
         articleBody: `${story.challenge} ${story.solution}`,
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": `https://obizee.com/success-stories/${story.businessName.toLowerCase().replace(/\s+/g, "-")}`,
+          "@id": `https://www.obizee.com/success-stories/${story.businessName.toLowerCase().replace(/\s+/g, "-")}`,
         },
       },
     })),
@@ -83,16 +83,16 @@ const SuccessStories = () => {
           content="Real stories from early-stage Indian brands using oBizee for day-to-day business operations."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/success-stories" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com/success-stories" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Success Stories | How Businesses Thrive with oBizee" />
         <meta
           name="twitter:description"
           content="Real stories from early-stage Indian brands using oBizee for order, stock, and customer workflows."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com/success-stories" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com/success-stories" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

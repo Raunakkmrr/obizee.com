@@ -37,7 +37,7 @@ const Compliance = () => {
     "@type": "Organization",
     name: "oBizee",
     legalName: "SRN TECHNO (Proprietor: Raunak Kumar)",
-    url: "https://obizee.com/compliance",
+    url: "https://www.obizee.com/compliance",
     address: {
       "@type": "PostalAddress",
       streetAddress: "G-11, Hemkunt Chamber, Nehru Place",
@@ -68,16 +68,16 @@ const Compliance = () => {
           content="Review oBizee merchant compliance details including legal name, address, payment process flow, and PCI DSS checklist."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/compliance" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com/compliance" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="oBizee Compliance | Legal Details, Payment Flow, PCI Checklist" />
         <meta
           name="twitter:description"
           content="Merchant compliance details for oBizee payment integration and onboarding."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com/compliance" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com/compliance" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

@@ -31,7 +31,7 @@ const SignUp = () => {
     publisher: {
       "@type": "Organization",
       name: "oBizee",
-      url: "https://obizee.com",
+      url: "https://www.obizee.com",
     },
     mainEntity: {
       "@type": "WebApplication",
@@ -45,7 +45,7 @@ const SignUp = () => {
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",
         validFrom: new Date().toISOString(),
-        url: "https://obizee.com/signup",
+        url: "https://www.obizee.com/signup",
       },
     },
   };
@@ -66,16 +66,16 @@ const SignUp = () => {
           content="Create your oBizee business account with a 3-month free trial. Post-trial fee is 1% per successful order, capped at ₹10."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/signup" />
-        <meta property="og:image" content="https://obizee.com/signup-og.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/signup" />
+        <meta property="og:image" content="https://www.obizee.com/signup-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sign Up | Create Your Business Account | oBizee" />
         <meta
           name="twitter:description"
           content="Create your oBizee business account with a 3-month free trial. Post-trial fee is 1% per successful order, capped at ₹10."
         />
-        <meta name="twitter:image" content="https://obizee.com/signup-twitter.jpg" />
-        <link rel="canonical" href="https://obizee.com/signup" />
+        <meta name="twitter:image" content="https://www.obizee.com/signup-twitter.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/signup" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

@@ -73,11 +73,11 @@ const Solutions = () => {
     },
     description: "Complete business solution suite including website templates, mobile apps, and comprehensive business management tools.",
     applicationSubCategory: "BusinessManagement",
-    downloadUrl: "https://obizee.com/download",
-    screenshot: "https://obizee.com/screenshots/dashboard.png",
+    downloadUrl: "https://www.obizee.com/download",
+    screenshot: "https://www.obizee.com/screenshots/dashboard.png",
     softwareVersion: "2.0",
-    softwareHelp: "https://obizee.com/help",
-    releaseNotes: "https://obizee.com/release-notes",
+    softwareHelp: "https://www.obizee.com/help",
+    releaseNotes: "https://www.obizee.com/release-notes",
   };
 
   return (
@@ -99,16 +99,16 @@ const Solutions = () => {
           content="Transform your business with oBizee's complete solution suite. Get professional website templates, powerful mobile apps, and comprehensive business management tools."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/solutions" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com/solutions" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Complete Business Solution Suite | oBizee" />
         <meta
           name="twitter:description"
           content="Transform your business with oBizee's complete solution suite. Get professional website templates, powerful mobile apps, and comprehensive business management tools."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com/solutions" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com/solutions" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

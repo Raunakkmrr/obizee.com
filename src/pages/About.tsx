@@ -34,10 +34,10 @@ const About = () => {
     publisher: {
       "@type": "Organization",
       name: "oBizee",
-      url: "https://obizee.com",
+      url: "https://www.obizee.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://obizee.com/logo.png",
+        url: "https://www.obizee.com/logo.png",
       },
       contactPoint: {
         "@type": "ContactPoint",
@@ -85,16 +85,16 @@ const About = () => {
           content="Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/about" />
-        <meta property="og:image" content="https://obizee.com/about-og.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/about" />
+        <meta property="og:image" content="https://www.obizee.com/about-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About oBizee - Our Story and Mission | Business Management Platform" />
         <meta
           name="twitter:description"
           content="Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
         />
-        <meta name="twitter:image" content="https://obizee.com/about-twitter.jpg" />
-        <link rel="canonical" href="https://obizee.com/about" />
+        <meta name="twitter:image" content="https://www.obizee.com/about-twitter.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/about" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

@@ -17,10 +17,10 @@ const Contact = () => {
     publisher: {
       "@type": "Organization",
       name: "oBizee",
-      url: "https://obizee.com",
+      url: "https://www.obizee.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://obizee.com/logo.png",
+        url: "https://www.obizee.com/logo.png",
       },
     },
     mainEntity: {
@@ -72,16 +72,16 @@ const Contact = () => {
           content="Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/contact" />
-        <meta property="og:image" content="https://obizee.com/contact-og.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/contact" />
+        <meta property="og:image" content="https://www.obizee.com/contact-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact oBizee - Get in Touch | Business Management Platform" />
         <meta
           name="twitter:description"
           content="Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform."
         />
-        <meta name="twitter:image" content="https://obizee.com/contact-twitter.jpg" />
-        <link rel="canonical" href="https://obizee.com/contact" />
+        <meta name="twitter:image" content="https://www.obizee.com/contact-twitter.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/contact" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

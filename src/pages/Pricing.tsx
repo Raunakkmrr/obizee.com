@@ -61,7 +61,7 @@ const Pricing = () => {
       price: "0",
       priceCurrency: "INR",
       availability: "https://schema.org/InStock",
-      url: "https://obizee.com/pricing",
+      url: "https://www.obizee.com/pricing",
       description: "3-month free trial. After trial, 1% per successful order with a maximum fee cap of ₹10 per order.",
     },
   };
@@ -82,16 +82,16 @@ const Pricing = () => {
           content="Simple single-plan pricing: 3-month free trial, then 1% per successful order capped at ₹10."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/pricing" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com/pricing" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="oBizee Pricing | 3-Month Free Trial + 1% Per Order (Max ₹10)" />
         <meta
           name="twitter:description"
           content="Simple single-plan pricing: 3-month free trial, then 1% per successful order capped at ₹10."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com/pricing" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com/pricing" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

@@ -27,7 +27,7 @@ const SignIn = () => {
     publisher: {
       "@type": "Organization",
       name: "oBizee",
-      url: "https://obizee.com",
+      url: "https://www.obizee.com",
     },
     mainEntity: {
       "@type": "WebApplication",
@@ -57,16 +57,16 @@ const SignIn = () => {
           content="Sign in to your oBizee business account to access your business management platform. Secure login with email and password."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/signin" />
-        <meta property="og:image" content="https://obizee.com/signin-og.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/signin" />
+        <meta property="og:image" content="https://www.obizee.com/signin-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sign In | Access Your Business Account | oBizee" />
         <meta
           name="twitter:description"
           content="Sign in to your oBizee business account to access your business management platform. Secure login with email and password."
         />
-        <meta name="twitter:image" content="https://obizee.com/signin-twitter.jpg" />
-        <link rel="canonical" href="https://obizee.com/signin" />
+        <meta name="twitter:image" content="https://www.obizee.com/signin-twitter.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/signin" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

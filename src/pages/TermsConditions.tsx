@@ -123,7 +123,7 @@ const TermsConditions = () => {
     publisher: {
       "@type": "Organization",
       name: "oBizee",
-      url: "https://obizee.com",
+      url: "https://www.obizee.com",
     },
     mainEntity: {
       "@type": "Article",
@@ -137,7 +137,7 @@ const TermsConditions = () => {
       publisher: {
         "@type": "Organization",
         name: "oBizee",
-        url: "https://obizee.com",
+        url: "https://www.obizee.com",
       },
     },
   };
@@ -161,16 +161,16 @@ const TermsConditions = () => {
           content="Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/terms-conditions" />
-        <meta property="og:image" content="https://obizee.com/terms-conditions-og.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/terms-conditions" />
+        <meta property="og:image" content="https://www.obizee.com/terms-conditions-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Terms and Conditions | Legal Agreement | oBizee" />
         <meta
           name="twitter:description"
           content="Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
         />
-        <meta name="twitter:image" content="https://obizee.com/terms-conditions-twitter.jpg" />
-        <link rel="canonical" href="https://obizee.com/terms-conditions" />
+        <meta name="twitter:image" content="https://www.obizee.com/terms-conditions-twitter.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/terms-conditions" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

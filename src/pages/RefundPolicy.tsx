@@ -76,7 +76,7 @@ const RefundPolicy = () => {
     publisher: {
       "@type": "Organization",
       name: "oBizee",
-      url: "https://obizee.com",
+      url: "https://www.obizee.com",
     },
     mainEntity: {
       "@type": "Article",
@@ -90,7 +90,7 @@ const RefundPolicy = () => {
       publisher: {
         "@type": "Organization",
         name: "oBizee",
-        url: "https://obizee.com",
+        url: "https://www.obizee.com",
       },
     },
   };
@@ -114,16 +114,16 @@ const RefundPolicy = () => {
           content="Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com/refund-policy" />
-        <meta property="og:image" content="https://obizee.com/refund-policy-og.jpg" />
+        <meta property="og:url" content="https://www.obizee.com/refund-policy" />
+        <meta property="og:image" content="https://www.obizee.com/refund-policy-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Refund & Cancellation Policy | oBizee" />
         <meta
           name="twitter:description"
           content="Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
         />
-        <meta name="twitter:image" content="https://obizee.com/refund-policy-twitter.jpg" />
-        <link rel="canonical" href="https://obizee.com/refund-policy" />
+        <meta name="twitter:image" content="https://www.obizee.com/refund-policy-twitter.jpg" />
+        <link rel="canonical" href="https://www.obizee.com/refund-policy" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

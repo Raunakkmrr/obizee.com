@@ -26,21 +26,21 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "oBizee - Business Management Platform",
-    url: "https://obizee.com",
+    url: "https://www.obizee.com",
     description:
       "oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base.",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://obizee.com/search?q={search_term_string}",
+      target: "https://www.obizee.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
     publisher: {
       "@type": "Organization",
       name: "oBizee",
-      url: "https://obizee.com",
+      url: "https://www.obizee.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://obizee.com/Obizee.png",
+        url: "https://www.obizee.com/Obizee.png",
       },
       contactPoint: {
         "@type": "ContactPoint",
@@ -79,16 +79,16 @@ const Home = () => {
           content="oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Download the app to get started."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://obizee.com" />
-        <meta property="og:image" content="https://obizee.com/Obizee.png" />
+        <meta property="og:url" content="https://www.obizee.com" />
+        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="oBizee - Business Management Platform | Streamline Your Business Operations" />
         <meta
           name="twitter:description"
           content="oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Download the app to get started."
         />
-        <meta name="twitter:image" content="https://obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://obizee.com" />
+        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
+        <link rel="canonical" href="https://www.obizee.com" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
