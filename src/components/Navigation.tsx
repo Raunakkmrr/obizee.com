@@ -22,7 +22,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white/80 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+    <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
@@ -170,7 +170,7 @@ const Navigation = () => {
             <Link
               href="/business-journey"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
-                isActive("/business-journey") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+                isActive("/business-journey") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
               aria-current={isActive("/business-journey") ? "page" : undefined}
@@ -180,7 +180,7 @@ const Navigation = () => {
             <Link
               href="/solutions"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
-                isActive("/solutions") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+                isActive("/solutions") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
               aria-current={isActive("/solutions") ? "page" : undefined}
@@ -190,7 +190,7 @@ const Navigation = () => {
             <Link
               href="/pricing"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
-                isActive("/pricing") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+                isActive("/pricing") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
               aria-current={isActive("/pricing") ? "page" : undefined}
@@ -200,7 +200,7 @@ const Navigation = () => {
             <Link
               href="/success-stories"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
-                isActive("/success-stories") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+                isActive("/success-stories") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
               aria-current={isActive("/success-stories") ? "page" : undefined}
@@ -210,7 +210,7 @@ const Navigation = () => {
             <Link
               href="/help"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
-                isActive("/help") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+                isActive("/help") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
               aria-current={isActive("/help") ? "page" : undefined}

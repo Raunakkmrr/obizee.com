@@ -41,7 +41,7 @@ export default function HomePageClient() {
       <Testimonials />
       <CTA />
       <Footer />
-      <AppDownloadModal isOpen={isDownloadModalOpen} onClose={() => setIsDownloadModalOpen(false)} />
+      <AppDownloadModal open={isDownloadModalOpen} onOpenChange={setIsDownloadModalOpen} />
     </div>
   );
 }

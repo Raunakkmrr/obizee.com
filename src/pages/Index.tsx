@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
+import SocialProofBar from "../components/SocialProofBar";
+import HowItWorks from "../components/HowItWorks";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import CTA from "../components/CTA";
@@ -43,7 +45,9 @@ const Index = () => {
         <Navigation />
         <main id="main-content" role="main">
           <Hero />
+          <SocialProofBar />
           <Features />
+          <HowItWorks />
           <Services />
           <Testimonials />
           <CTA />
