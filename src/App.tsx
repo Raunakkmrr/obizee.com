@@ -20,6 +20,13 @@ import BusinessJourneyPage from "./pages/BusinessJourneyPage";
 import CustomerTestimonialsPage from "./pages/CustomerTestimonialsPage";
 import Compliance from "./pages/Compliance";
 import NotFound from "./pages/NotFound";
+import CompareShopify from "./pages/CompareShopify";
+import CompareDM2buy from "./pages/CompareDM2buy";
+import CompareDukaan from "./pages/CompareDukaan";
+import CompareBikayi from "./pages/CompareBikayi";
+import CompareInstamojo from "./pages/CompareInstamojo";
+import CompareWoocommerce from "./pages/CompareWoocommerce";
+import BestPlatforms2026 from "./pages/BestPlatforms2026";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +55,13 @@ const App = () => (
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/compare/obizee-vs-shopify" element={<CompareShopify />} />
+            <Route path="/compare/obizee-vs-dm2buy" element={<CompareDM2buy />} />
+            <Route path="/compare/obizee-vs-dukaan" element={<CompareDukaan />} />
+            <Route path="/compare/obizee-vs-bikayi" element={<CompareBikayi />} />
+            <Route path="/compare/obizee-vs-instamojo" element={<CompareInstamojo />} />
+            <Route path="/compare/obizee-vs-woocommerce" element={<CompareWoocommerce />} />
+            <Route path="/compare/best-ecommerce-platforms-india-2026" element={<BestPlatforms2026 />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
