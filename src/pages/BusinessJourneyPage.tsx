@@ -5,21 +5,18 @@ import Services from "@/components/Services";
 import JourneyStepDetails from "@/components/JourneyStepDetails";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import { usePathname } from "next/navigation";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
 
 const BusinessJourneyPage = () => {
-  const location = usePathname();
-
   useEffect(() => {
-    if (!location.hash) return;
-    const targetId = location.hash.replace("#", "");
+    if (typeof window === "undefined" || !window.location.hash) return;
+    const targetId = window.location.hash.replace("#", "");
     const section = document.getElementById(targetId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [location.hash]);
+  }, []);
 
   const jsonLd = {
     "@context": "https://schema.org",

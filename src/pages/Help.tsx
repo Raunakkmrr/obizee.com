@@ -5,20 +5,18 @@ import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Mail, Phone, Book, Video, Users } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
 
 const Help = () => {
-  const location = usePathname();
   const tutorialVideoPath = "/Tutorial_video.mp4";
 
   useEffect(() => {
-    if (!location.hash) return;
-    const targetId = location.hash.replace("#", "");
+    if (typeof window === "undefined" || !window.location.hash) return;
+    const targetId = window.location.hash.replace("#", "");
     const section = document.getElementById(targetId);
     if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [location.hash]);
+  }, []);
 
   const faqCategories = [
     {
