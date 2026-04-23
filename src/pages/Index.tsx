@@ -9,13 +9,12 @@ import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 import AppDownloadModal from "@/components/AppDownloadModal";
 
 const Index = () => {
   const searchParams = useSearchParams();
-  const router = useRouter();
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
   useEffect(() => {
