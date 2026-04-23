@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet-async";
 import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const Contact = () => {
   // JSON-LD structured data for the contact page
@@ -59,31 +61,11 @@ const Contact = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact oBizee - Get in Touch | Business Management Platform</title>
-        <meta
-          name="description"
-          content="Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform."
-        />
-        <meta name="keywords" content="contact oBizee, customer support, technical support, business management platform, help desk" />
-        <meta property="og:title" content="Contact oBizee - Get in Touch | Business Management Platform" />
-        <meta
-          property="og:description"
-          content="Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/contact" />
-        <meta property="og:image" content="https://www.obizee.com/contact-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact oBizee - Get in Touch | Business Management Platform" />
-        <meta
-          name="twitter:description"
-          content="Get in touch with oBizee's support team. We're here to help you with any questions about our business management platform."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/contact-twitter.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/contact" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Contact", url: "https://www.obizee.com/contact" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50">
         <Navigation />

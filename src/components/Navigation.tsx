@@ -1,15 +1,18 @@
+"use client";
+
 import React, { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
 
   const solutionsItems = [
     { name: "Add Categories & Products", href: "/business-journey#step-01", description: "Set up catalog, pricing, and stock in one place" },
@@ -24,7 +27,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center transition-transform hover:scale-105" aria-label="oBizee Home">
+            <Link href="/" className="flex items-center transition-transform hover:scale-105" aria-label="oBizee Home">
               <div className="w-12 h-12 mr-3">
                 <img
                   src="/lovable-uploads/2941a262-6754-4343-a36c-43a56c320d5d.png"
@@ -45,7 +48,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <Link
-                to="/business-journey"
+                href="/business-journey"
                 className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
                   isActive("/business-journey")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
@@ -58,7 +61,7 @@ const Navigation = () => {
 
               <div className="relative group" onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)}>
                 <Link
-                  to="/solutions"
+                  href="/solutions"
                   className={`px-4 py-2 text-sm font-medium flex items-center transition-all rounded-lg ${
                     isActive("/solutions")
                       ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
@@ -83,7 +86,7 @@ const Navigation = () => {
                     {solutionsItems.map((item, index) => (
                       <Link
                         key={index}
-                        to={item.href}
+                        href={item.href}
                         className="block p-3 rounded-lg hover:bg-orange-50 transition-colors group"
                         role="menuitem"
                       >
@@ -96,7 +99,7 @@ const Navigation = () => {
               </div>
 
               <Link
-                to="/pricing"
+                href="/pricing"
                 className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
                   isActive("/pricing")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
@@ -108,7 +111,7 @@ const Navigation = () => {
               </Link>
 
               <Link
-                to="/success-stories"
+                href="/success-stories"
                 className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
                   isActive("/success-stories")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
@@ -120,7 +123,7 @@ const Navigation = () => {
               </Link>
 
               <Link
-                to="/help"
+                href="/help"
                 className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
                   isActive("/help")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
@@ -165,7 +168,7 @@ const Navigation = () => {
         <div className="md:hidden animate-fade-in" id="mobile-menu" role="menu" aria-label="Mobile navigation menu">
           <div className="px-2 pt-1.5 pb-2.5 space-y-1 sm:px-3 bg-white/95 backdrop-blur-sm border-t border-gray-100">
             <Link
-              to="/business-journey"
+              href="/business-journey"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/business-journey") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
@@ -175,7 +178,7 @@ const Navigation = () => {
               Platform Services
             </Link>
             <Link
-              to="/solutions"
+              href="/solutions"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/solutions") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
@@ -185,7 +188,7 @@ const Navigation = () => {
               Solutions
             </Link>
             <Link
-              to="/pricing"
+              href="/pricing"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/pricing") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
@@ -195,7 +198,7 @@ const Navigation = () => {
               Pricing
             </Link>
             <Link
-              to="/success-stories"
+              href="/success-stories"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/success-stories") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
@@ -205,7 +208,7 @@ const Navigation = () => {
               Success Stories
             </Link>
             <Link
-              to="/help"
+              href="/help"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive("/help") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}

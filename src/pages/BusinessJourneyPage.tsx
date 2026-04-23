@@ -1,14 +1,16 @@
+"use client";
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Services from "@/components/Services";
 import JourneyStepDetails from "@/components/JourneyStepDetails";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const BusinessJourneyPage = () => {
-  const location = useLocation();
+  const location = usePathname();
 
   useEffect(() => {
     if (!location.hash) return;
@@ -30,31 +32,11 @@ const BusinessJourneyPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee Business Journey | From Instagram Orders to Managed Operations</title>
-        <meta
-          name="description"
-          content="Follow oBizee's business journey: connect sales channels, manage orders, set up payments, track deliveries, and scale operations in one platform."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee Business Journey | From Instagram Orders to Managed Operations" />
-        <meta
-          property="og:description"
-          content="A clear workflow for Indian businesses to move from manual order handling to structured growth with oBizee."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/business-journey" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee Business Journey | From Instagram Orders to Managed Operations" />
-        <meta
-          name="twitter:description"
-          content="Understand how oBizee helps sellers in India set up systems and scale business operations."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://www.obizee.com/business-journey" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Business Journey", url: "https://www.obizee.com/business-journey" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

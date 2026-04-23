@@ -1,0 +1,122 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Left: Kitchen items -->
+  <!-- Cake stand -->
+  <rect x="60" y="230" width="80" height="6" rx="3" fill="#9CA3AF" opacity="0.5"/>
+  <rect x="90" y="236" width="20" height="20" rx="2" fill="#9CA3AF" opacity="0.4"/>
+  <rect x="80" y="256" width="40" height="4" rx="2" fill="#9CA3AF" opacity="0.5"/>
+  <!-- Cake on stand -->
+  <rect x="70" y="190" width="60" height="40" rx="8" fill="#F97316" opacity="0.7"/>
+  <rect x="70" y="190" width="60" height="12" rx="6" fill="#FBBF24" opacity="0.5"/>
+  <!-- Cake layers -->
+  <line x1="70" y1="210" x2="130" y2="210" stroke="#EA580C" stroke-width="1" opacity="0.4"/>
+  <!-- Cherry on top -->
+  <circle cx="100" cy="187" r="5" fill="#EF4444"/>
+  <line x1="100" y1="182" x2="100" y2="178" stroke="#16A34A" stroke-width="1.5"/>
+
+  <!-- Tiffin box stack -->
+  <rect x="155" y="180" width="50" height="18" rx="6" fill="#EF4444" opacity="0.6"/>
+  <rect x="155" y="202" width="50" height="18" rx="6" fill="#3B82F6" opacity="0.6"/>
+  <rect x="155" y="224" width="50" height="18" rx="6" fill="#16A34A" opacity="0.6"/>
+  <!-- Tiffin handle -->
+  <path d="M175 180 L175 170 Q180 164 185 170 L185 180" stroke="#9CA3AF" stroke-width="2" fill="none"/>
+  <!-- Tiffin clasps -->
+  <rect x="148" y="198" width="8" height="6" rx="2" fill="#9CA3AF" opacity="0.5"/>
+  <rect x="148" y="220" width="8" height="6" rx="2" fill="#9CA3AF" opacity="0.5"/>
+
+  <!-- Cookies/Snacks -->
+  <circle cx="80" cy="300" r="10" fill="#FBBF24" opacity="0.7"/>
+  <circle cx="80" cy="300" r="6" fill="#D4A574" opacity="0.3"/>
+  <circle cx="105" cy="305" r="8" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="105" cy="305" r="4" fill="#D4A574" opacity="0.3"/>
+  <circle cx="60" cy="310" r="9" fill="#FBBF24" opacity="0.5"/>
+  <circle cx="130" cy="300" r="7" fill="#F97316" opacity="0.4"/>
+  <!-- Chip details on cookies -->
+  <circle cx="77" cy="297" r="1.5" fill="#92400E" opacity="0.5"/>
+  <circle cx="83" cy="303" r="1.5" fill="#92400E" opacity="0.5"/>
+  <circle cx="78" cy="305" r="1" fill="#92400E" opacity="0.5"/>
+
+  <!-- Steam/Aroma lines from food -->
+  <path d="M100 180 Q95 170 100 160 Q105 150 100 140" stroke="#9CA3AF" stroke-width="1.5" opacity="0.3" fill="none" stroke-linecap="round"/>
+  <path d="M115 175 Q110 165 115 155 Q120 145 115 135" stroke="#9CA3AF" stroke-width="1.5" opacity="0.25" fill="none" stroke-linecap="round"/>
+  <path d="M85 178 Q80 168 85 158 Q90 148 85 138" stroke="#9CA3AF" stroke-width="1.5" opacity="0.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Transition: Steam to wifi/digital waves -->
+  <path d="M180 140 Q220 100 280 120" stroke="#F97316" stroke-width="1.5" opacity="0.3" fill="none" stroke-dasharray="4 3"/>
+  <path d="M200 130 Q240 90 290 110" stroke="#F97316" stroke-width="1.5" opacity="0.25" fill="none" stroke-dasharray="4 3"/>
+  <path d="M220 125 Q255 85 300 105" stroke="#F97316" stroke-width="1.5" opacity="0.2" fill="none" stroke-dasharray="4 3"/>
+
+  <!-- WiFi signal icon in transition zone -->
+  <path d="M260 100 Q270 90 280 100" stroke="#F97316" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M254 108 Q270 92 286 108" stroke="#F97316" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M248 116 Q270 95 292 116" stroke="#F97316" stroke-width="1.5" fill="none" opacity="0.2"/>
+
+  <!-- Right: Smartphone -->
+  <rect x="350" y="50" width="200" height="320" rx="22" fill="#1F2937"/>
+  <rect x="358" y="68" width="184" height="286" rx="14" fill="#FFFFFF"/>
+  <!-- Notch -->
+  <rect x="415" y="54" width="60" height="8" rx="4" fill="#374151"/>
+
+  <!-- Phone header -->
+  <rect x="358" y="68" width="184" height="38" rx="14" fill="#F97316"/>
+  <rect x="358" y="84" width="184" height="22" fill="#F97316"/>
+  <text x="400" y="92" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Home Kitchen</text>
+  <!-- Search icon -->
+  <circle cx="528" cy="88" r="7" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.7"/>
+  <line x1="533" y1="93" x2="537" y2="97" stroke="#FFFFFF" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Category tabs -->
+  <rect x="365" y="112" width="50" height="22" rx="11" fill="#F97316"/>
+  <text x="376" y="127" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" font-weight="600">Cakes</text>
+  <rect x="420" y="112" width="50" height="22" rx="11" fill="#FFF7ED" stroke="#F97316" stroke-width="1"/>
+  <text x="432" y="127" font-family="Arial, sans-serif" font-size="8" fill="#F97316">Tiffin</text>
+  <rect x="475" y="112" width="55" height="22" rx="11" fill="#FFF7ED" stroke="#F97316" stroke-width="1"/>
+  <text x="486" y="127" font-family="Arial, sans-serif" font-size="8" fill="#F97316">Snacks</text>
+
+  <!-- Menu items -->
+  <!-- Item 1 -->
+  <rect x="368" y="142" width="164" height="56" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="375" y="148" width="40" height="40" rx="8" fill="#FEF3C7"/>
+  <!-- Cake icon -->
+  <rect x="382" y="160" width="26" height="18" rx="4" fill="#F97316" opacity="0.6"/>
+  <rect x="382" y="160" width="26" height="6" rx="3" fill="#FBBF24" opacity="0.5"/>
+  <circle cx="395" cy="157" r="3" fill="#EF4444" opacity="0.7"/>
+  <text x="422" y="162" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Chocolate Cake</text>
+  <text x="422" y="175" font-family="Arial, sans-serif" font-size="8" fill="#9CA3AF">1 kg - Eggless</text>
+  <text x="422" y="188" font-family="Arial, sans-serif" font-size="10" fill="#F97316" font-weight="bold">Rs 800</text>
+
+  <!-- Item 2 -->
+  <rect x="368" y="206" width="164" height="56" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="375" y="212" width="40" height="40" rx="8" fill="#DCFCE7"/>
+  <!-- Tiffin icon -->
+  <rect x="384" y="222" width="22" height="8" rx="3" fill="#16A34A" opacity="0.5"/>
+  <rect x="384" y="232" width="22" height="8" rx="3" fill="#16A34A" opacity="0.4"/>
+  <text x="422" y="226" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Daily Tiffin</text>
+  <text x="422" y="239" font-family="Arial, sans-serif" font-size="8" fill="#9CA3AF">Veg - 2 Roti + Sabzi</text>
+  <text x="422" y="252" font-family="Arial, sans-serif" font-size="10" fill="#F97316" font-weight="bold">Rs 120</text>
+
+  <!-- Item 3 -->
+  <rect x="368" y="270" width="164" height="56" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="375" y="276" width="40" height="40" rx="8" fill="#FEF3C7"/>
+  <!-- Cookie icon -->
+  <circle cx="395" cy="296" r="12" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="391" cy="293" r="1.5" fill="#92400E" opacity="0.5"/>
+  <circle cx="398" cy="298" r="1.5" fill="#92400E" opacity="0.5"/>
+  <text x="422" y="290" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Cookies Box</text>
+  <text x="422" y="303" font-family="Arial, sans-serif" font-size="8" fill="#9CA3AF">12 pcs - Assorted</text>
+  <text x="422" y="316" font-family="Arial, sans-serif" font-size="10" fill="#F97316" font-weight="bold">Rs 350</text>
+
+  <!-- Bottom nav dots -->
+  <rect x="398" y="340" width="104" height="8" rx="4" fill="#F3F4F6"/>
+  <rect x="398" y="340" width="35" height="8" rx="4" fill="#F97316" opacity="0.6"/>
+
+  <!-- Labels -->
+  <text x="58" y="348" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Your Kitchen</text>
+  <text x="400" y="388" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Your Online Menu</text>
+
+  <!-- Decorative -->
+  <circle cx="300" cy="370" r="20" fill="#F97316" opacity="0.06"/>
+  <circle cx="40" cy="120" r="18" fill="#F97316" opacity="0.08"/>
+</svg>

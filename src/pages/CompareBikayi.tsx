@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, X, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const CompareBikayi = () => {
   const features = [
@@ -75,35 +77,13 @@ const CompareBikayi = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee vs Bikayi — Best Bikayi Alternative in India [2026 Comparison]</title>
-        <meta
-          name="description"
-          content="Compare oBizee vs Bikayi for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery & DTDC shipping. Bikayi: free tier + paid plans from ₹999/month."
-        />
-        <meta
-          name="keywords"
-          content="oBizee vs Bikayi, Bikayi alternative, Bikayi app review, cheapest online store India, Bikayi pricing"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee vs Bikayi — Best Bikayi Alternative in India [2026 Comparison]" />
-        <meta
-          property="og:description"
-          content="Side-by-side comparison: ₹0/month vs ₹999+/month. Built-in Delhivery/DTDC vs no logistics. See why Indian sellers choose oBizee over Bikayi."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.obizee.com/compare/obizee-vs-bikayi" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee vs Bikayi — Best Bikayi Alternative in India [2026 Comparison]" />
-        <meta
-          name="twitter:description"
-          content="₹0/month vs ₹999+/month. Built-in Delhivery/DTDC vs no logistics. Compare oBizee and Bikayi for Indian sellers."
-        />
-        <link rel="canonical" href="https://www.obizee.com/compare/obizee-vs-bikayi" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Compare", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
+        { name: "oBizee vs Bikayi", url: "https://www.obizee.com/compare/obizee-vs-bikayi" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

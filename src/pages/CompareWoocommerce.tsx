@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, X, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const CompareWoocommerce = () => {
   const features = [
@@ -75,35 +77,13 @@ const CompareWoocommerce = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee vs WooCommerce — Easiest WooCommerce Alternative for India [2026]</title>
-        <meta
-          name="description"
-          content="Compare oBizee vs WooCommerce for Indian sellers. oBizee: 2-minute setup, ₹0/month, built-in Delhivery & DTDC. WooCommerce: requires WordPress, hosting, plugins, and technical knowledge."
-        />
-        <meta
-          name="keywords"
-          content="oBizee vs WooCommerce, WooCommerce alternative India, easiest online store India, no coding ecommerce India, WooCommerce too complicated"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee vs WooCommerce — Easiest WooCommerce Alternative for India [2026]" />
-        <meta
-          property="og:description"
-          content="2-minute setup vs 2-5 hours. Zero technical knowledge vs WordPress/PHP. See why Indian sellers choose oBizee over WooCommerce."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.obizee.com/compare/obizee-vs-woocommerce" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee vs WooCommerce — Easiest WooCommerce Alternative for India [2026]" />
-        <meta
-          name="twitter:description"
-          content="2-minute setup vs 2-5 hours. No coding vs WordPress/PHP. Compare oBizee and WooCommerce for Indian sellers."
-        />
-        <link rel="canonical" href="https://www.obizee.com/compare/obizee-vs-woocommerce" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Compare", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
+        { name: "oBizee vs WooCommerce", url: "https://www.obizee.com/compare/obizee-vs-woocommerce" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

@@ -1,21 +1,43 @@
+"use client";
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Features from "@/components/Features";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { CheckCircle2, CreditCard, LineChart } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const FeaturesPage = () => {
-  const location = useLocation();
-
   useEffect(() => {
-    if (!location.hash) return;
-    const targetId = location.hash.replace("#", "");
+    if (typeof window === "undefined" || !window.location.hash) return;
+    const targetId = window.location.hash.replace("#", "");
     const section = document.getElementById(targetId);
     if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [location.hash]);
+  }, []);
+
+  const faqs = [
+    {
+      question: "What features does oBizee offer?",
+      answer: "oBizee offers auto-generated merchant websites, order management dashboard, inventory tracking, custom order form builder, Delhivery & DTDC logistics integration, fare calculator, employee & vendor management, payment tracking, and sales analytics — all from a single mobile app.",
+    },
+    {
+      question: "Does oBizee have shipping and logistics features?",
+      answer: "Yes. oBizee has native integration with Delhivery and DTDC. You can generate AWB numbers, schedule courier pickups, and provide live order tracking to your customers — all directly from the app.",
+    },
+    {
+      question: "Can I manage inventory on oBizee?",
+      answer: "Yes. oBizee includes full inventory management with stock tracking, product categories, and real-time updates across all your sales channels.",
+    },
+    {
+      question: "Does oBizee support payment processing?",
+      answer: "Yes. oBizee supports hosted payment processing with UPI, cards, net banking, and wallet options via integrated payment gateway. Transaction visibility is available in the dashboard.",
+    },
+    {
+      question: "Can I track my business performance on oBizee?",
+      answer: "Yes. oBizee provides business analytics including order funnel visibility, revenue and expense snapshots, product-level insights, and custom date range reports to help you make data-driven decisions.",
+    },
+  ];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -26,33 +48,24 @@ const FeaturesPage = () => {
     url: "https://www.obizee.com/features",
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <>
-      <Helmet>
-        <title>oBizee Features | Orders, Inventory, Payments, Analytics</title>
-        <meta
-          name="description"
-          content="Explore oBizee features for Indian sellers and small businesses. Manage orders, inventory, payments, customer updates, and analytics from one dashboard."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee Features | Orders, Inventory, Payments, Analytics" />
-        <meta
-          property="og:description"
-          content="One platform for Indian businesses to manage core operations: orders, stock, payments, and growth analytics."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/features" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee Features | Orders, Inventory, Payments, Analytics" />
-        <meta
-          name="twitter:description"
-          content="Manage your business operations in one place with oBizee's India-first feature set."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://www.obizee.com/features" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Features", url: "https://www.obizee.com/features" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -107,6 +120,21 @@ const FeaturesPage = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </section>
+          <section className="py-12 sm:py-16 bg-gray-50" aria-labelledby="features-faq-heading">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 id="features-faq-heading" className="text-3xl font-bold text-center text-gray-900 mb-10">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-5">
+                {faqs.map((faq) => (
+                  <article key={faq.question} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </article>
+                ))}
               </div>
             </div>
           </section>

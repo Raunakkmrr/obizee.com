@@ -1,0 +1,115 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Left: Elegant jewellery box -->
+  <rect x="50" y="140" width="100" height="70" rx="8" fill="#D4A574" opacity="0.3"/>
+  <rect x="55" y="145" width="90" height="60" rx="6" fill="#FFFFFF" stroke="#D4A574" stroke-width="1.5"/>
+  <!-- Box lid (open) -->
+  <path d="M55 145 L60 110 Q100 100 140 110 L145 145" fill="#D4A574" opacity="0.2" stroke="#D4A574" stroke-width="1"/>
+  <!-- Tissue paper -->
+  <path d="M62 152 Q75 145 88 152 Q101 145 115 152 Q128 145 138 152" stroke="#FBBF24" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- Ring inside box -->
+  <circle cx="100" cy="170" r="12" fill="none" stroke="#D4A574" stroke-width="2.5"/>
+  <circle cx="100" cy="158" r="4" fill="#D4A574"/>
+  <!-- Sparkle -->
+  <path d="M115 155 L117 151 L119 155 L117 159 Z" fill="#F97316" opacity="0.5"/>
+  <circle cx="80" cy="158" r="1.5" fill="#D4A574" opacity="0.6"/>
+  <!-- Ribbon on box -->
+  <rect x="95" y="140" width="10" height="70" rx="2" fill="#F97316" opacity="0.2"/>
+  <path d="M88 140 L100 130 L112 140" stroke="#F97316" stroke-width="1.5" fill="none"/>
+
+  <!-- Center: Tracking timeline -->
+  <!-- Timeline line -->
+  <rect x="190" y="168" width="220" height="4" rx="2" fill="#E5E7EB"/>
+  <!-- Filled portion -->
+  <rect x="190" y="168" width="150" height="4" rx="2" fill="#16A34A"/>
+
+  <!-- Stage 1: Packed -->
+  <circle cx="210" cy="170" r="16" fill="#16A34A"/>
+  <path d="M203 170 L208 175 L217 165" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Box icon above -->
+  <rect x="200" y="120" width="20" height="16" rx="3" fill="#16A34A" opacity="0.2"/>
+  <line x1="200" y1="128" x2="220" y2="128" stroke="#16A34A" stroke-width="0.8"/>
+  <rect x="207" y="113" width="6" height="7" rx="1" fill="#16A34A" opacity="0.3"/>
+  <text x="190" y="206" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Packed</text>
+
+  <!-- Stage 2: In Transit -->
+  <circle cx="310" cy="170" r="16" fill="#16A34A"/>
+  <path d="M303 170 L308 175 L317 165" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Truck icon above -->
+  <rect x="298" y="120" width="18" height="12" rx="2" fill="#16A34A" opacity="0.2"/>
+  <rect x="316" y="116" width="8" height="16" rx="2" fill="#16A34A" opacity="0.3"/>
+  <circle cx="303" cy="134" r="3" fill="#16A34A" opacity="0.4"/>
+  <circle cx="318" cy="134" r="3" fill="#16A34A" opacity="0.4"/>
+  <text x="285" y="206" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">In Transit</text>
+
+  <!-- Stage 3: Delivered -->
+  <circle cx="390" cy="170" r="16" fill="#FFFFFF" stroke="#F97316" stroke-width="2.5"/>
+  <circle cx="390" cy="170" r="6" fill="#F97316"/>
+  <!-- House icon above -->
+  <path d="M380 130 L390 118 L400 130 L400 140 L380 140 Z" fill="#F97316" opacity="0.15" stroke="#F97316" stroke-width="0.8"/>
+  <rect x="387" y="134" width="6" height="6" rx="1" fill="#F97316" opacity="0.3"/>
+  <text x="370" y="206" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Delivered</text>
+
+  <!-- Right: Happy customer -->
+  <!-- Person silhouette -->
+  <circle cx="500" cy="130" r="22" fill="#F97316" opacity="0.15"/>
+  <circle cx="500" cy="130" r="18" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.5"/>
+  <!-- Face -->
+  <circle cx="494" cy="127" r="2" fill="#1F2937"/>
+  <circle cx="506" cy="127" r="2" fill="#1F2937"/>
+  <!-- Smile -->
+  <path d="M493 135 Q500 142 507 135" stroke="#1F2937" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Body -->
+  <path d="M480 165 Q490 155 500 152 Q510 155 520 165" fill="#F97316" opacity="0.2" stroke="#1F2937" stroke-width="1.2"/>
+  <rect x="478" y="165" width="44" height="50" rx="8" fill="#F97316" opacity="0.15"/>
+
+  <!-- Package in hand -->
+  <rect x="510" y="175" width="28" height="22" rx="4" fill="#D4A574" opacity="0.4" stroke="#D4A574" stroke-width="1"/>
+  <rect x="520" y="172" width="8" height="5" rx="1" fill="#D4A574" opacity="0.3"/>
+  <!-- Ribbon on package -->
+  <line x1="524" y1="175" x2="524" y2="197" stroke="#F97316" stroke-width="1" opacity="0.5"/>
+
+  <!-- Star/heart reaction -->
+  <path d="M540 160 L543 154 L546 160 L543 166 Z" fill="#F97316" opacity="0.5"/>
+  <path d="M530 150 L532 146 L534 150 L532 154 Z" fill="#D4A574" opacity="0.5"/>
+  <path d="M550 145 L551 142 L553 145 L551 148 Z" fill="#16A34A" opacity="0.4"/>
+
+  <!-- Bottom: Phone notification popup -->
+  <rect x="140" y="260" width="320" height="80" rx="16" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5">
+  </rect>
+  <!-- Shadow effect -->
+  <rect x="145" y="265" width="310" height="70" rx="14" fill="#FFFFFF" opacity="0"/>
+
+  <!-- Notification icon -->
+  <circle cx="180" cy="300" r="20" fill="#F97316" opacity="0.1"/>
+  <rect x="170" y="290" width="20" height="26" rx="4" fill="none" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="174" y="294" width="12" height="16" rx="1" fill="#F97316" opacity="0.15"/>
+  <!-- Phone icon detail -->
+  <circle cx="180" cy="310" r="2" fill="#F97316" opacity="0.4"/>
+
+  <!-- Notification text -->
+  <rect x="210" y="272" width="60" height="14" rx="7" fill="#16A34A" opacity="0.15"/>
+  <text x="220" y="283" font-family="Arial, sans-serif" font-size="7" fill="#16A34A" font-weight="bold">oBizee</text>
+  <text x="335" y="282" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">just now</text>
+
+  <text x="210" y="300" font-family="Arial, sans-serif" font-size="11" fill="#1F2937" font-weight="600">Your order is out for delivery!</text>
+  <text x="210" y="315" font-family="Arial, sans-serif" font-size="9" fill="#9CA3AF">Gold Ring - Order #1247</text>
+  <text x="210" y="328" font-family="Arial, sans-serif" font-size="8" fill="#9CA3AF">Arriving by 5:00 PM today</text>
+
+  <!-- Bell icon on notification -->
+  <path d="M435 278 Q440 268 445 278 L445 284 L435 284 Z" fill="#F97316" opacity="0.6"/>
+  <circle cx="440" cy="286" r="2" fill="#F97316" opacity="0.6"/>
+  <!-- Notification badge -->
+  <circle cx="446" cy="272" r="5" fill="#EF4444"/>
+  <text x="444" y="275" font-family="Arial, sans-serif" font-size="6" fill="#FFFFFF" font-weight="bold">1</text>
+
+  <!-- Decorative -->
+  <circle cx="60" cy="60" r="25" fill="#D4A574" opacity="0.06"/>
+  <circle cx="560" cy="350" r="30" fill="#F97316" opacity="0.05"/>
+  <circle cx="300" cy="50" r="15" fill="#D4A574" opacity="0.08"/>
+
+  <!-- Title -->
+  <text x="180" y="46" font-family="Arial, sans-serif" font-size="12" fill="#9CA3AF">Secure packaging. Live tracking. Happy customers.</text>
+</svg>

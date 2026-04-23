@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, X, Minus, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const CompareDukaan = () => {
   const features = [
@@ -80,35 +82,13 @@ const CompareDukaan = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee vs Dukaan — Best Dukaan Alternative in India [2026 Comparison]</title>
-        <meta
-          name="description"
-          content="Compare oBizee vs Dukaan for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery & DTDC. Dukaan: ₹4,999/year subscription."
-        />
-        <meta
-          name="keywords"
-          content="oBizee vs Dukaan, Dukaan alternative, Dukaan app review, cheapest online store India, Dukaan pricing, best Dukaan alternative 2026"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee vs Dukaan — Best Dukaan Alternative in India [2026 Comparison]" />
-        <meta
-          property="og:description"
-          content="Side-by-side comparison: ₹0/month vs ₹4,999/year. Built-in Delhivery/DTDC vs no shipping integration. See why Indian sellers are switching to oBizee."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.obizee.com/compare/obizee-vs-dukaan" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee vs Dukaan — Best Dukaan Alternative in India [2026 Comparison]" />
-        <meta
-          name="twitter:description"
-          content="₹0/month vs ₹4,999/year. Built-in Delhivery/DTDC vs no shipping. Compare oBizee and Dukaan for Indian sellers."
-        />
-        <link rel="canonical" href="https://www.obizee.com/compare/obizee-vs-dukaan" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Compare", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
+        { name: "oBizee vs Dukaan", url: "https://www.obizee.com/compare/obizee-vs-dukaan" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

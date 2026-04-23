@@ -1,0 +1,154 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Left: Home studio with person packing -->
+  <!-- House -->
+  <path d="M30 180 L80 140 L130 180" fill="#F97316" opacity="0.1" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="40" y="180" width="80" height="80" rx="4" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+  <!-- Window -->
+  <rect x="50" y="190" width="24" height="20" rx="3" fill="#BFDBFE" opacity="0.5" stroke="#9CA3AF" stroke-width="0.8"/>
+  <line x1="62" y1="190" x2="62" y2="210" stroke="#9CA3AF" stroke-width="0.5"/>
+  <line x1="50" y1="200" x2="74" y2="200" stroke="#9CA3AF" stroke-width="0.5"/>
+  <!-- Door -->
+  <rect x="88" y="220" width="22" height="40" rx="3" fill="#D4A574" opacity="0.3" stroke="#D4A574" stroke-width="1"/>
+  <circle cx="106" cy="240" r="2" fill="#D4A574"/>
+
+  <!-- Person packing -->
+  <circle cx="80" cy="145" r="12" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.2"/>
+  <circle cx="76" cy="143" r="1.5" fill="#1F2937"/>
+  <circle cx="84" cy="143" r="1.5" fill="#1F2937"/>
+  <path d="M77 149 Q80 152 83 149" stroke="#1F2937" stroke-width="1" fill="none"/>
+  <!-- Body -->
+  <rect x="70" y="160" width="20" height="20" rx="4" fill="#F97316" opacity="0.2" stroke="#1F2937" stroke-width="0.8"/>
+
+  <!-- Package being packed -->
+  <rect x="100" y="155" width="24" height="18" rx="3" fill="#FBBF24" opacity="0.3" stroke="#D4A574" stroke-width="1"/>
+  <line x1="112" y1="155" x2="112" y2="173" stroke="#F97316" stroke-width="0.8" opacity="0.5"/>
+  <line x1="100" y1="164" x2="124" y2="164" stroke="#F97316" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Craft supplies on table -->
+  <rect x="30" y="270" width="100" height="4" rx="2" fill="#D4A574" opacity="0.4"/>
+  <circle cx="50" cy="265" r="8" fill="#EF4444" opacity="0.3"/>
+  <rect x="65" y="258" width="12" height="12" rx="2" fill="#3B82F6" opacity="0.3"/>
+  <rect x="82" y="256" width="14" height="14" rx="2" fill="#FBBF24" opacity="0.3"/>
+  <circle cx="105" cy="264" r="6" fill="#16A34A" opacity="0.3"/>
+
+  <!-- Center: Map of India outline -->
+  <path d="M260 50 Q270 45 285 48 Q300 42 315 48 Q330 45 340 52
+           Q350 58 355 70 Q360 80 358 95 Q365 105 370 120
+           Q375 135 372 150 Q378 165 380 180
+           Q382 195 378 210 Q375 225 368 235
+           Q360 245 355 260 Q348 275 340 285
+           Q330 298 318 305 Q308 312 300 318
+           Q295 322 290 318 Q280 310 275 300
+           Q268 288 265 275 Q260 260 255 248
+           Q248 235 245 222 Q240 210 238 198
+           Q235 185 237 172 Q235 158 238 145
+           Q240 132 242 120 Q245 108 248 98
+           Q252 85 255 72 Q258 58 260 50 Z"
+           fill="#F97316" opacity="0.06" stroke="#F97316" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- City dots with labels -->
+  <!-- Delhi -->
+  <circle cx="295" cy="100" r="6" fill="#F97316"/>
+  <circle cx="295" cy="100" r="10" fill="#F97316" opacity="0.2"/>
+  <text x="305" y="104" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Delhi</text>
+
+  <!-- Mumbai -->
+  <circle cx="265" cy="200" r="6" fill="#F97316"/>
+  <circle cx="265" cy="200" r="10" fill="#F97316" opacity="0.2"/>
+  <text x="240" y="218" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Mumbai</text>
+
+  <!-- Kolkata -->
+  <circle cx="345" cy="175" r="6" fill="#F97316"/>
+  <circle cx="345" cy="175" r="10" fill="#F97316" opacity="0.2"/>
+  <text x="355" y="179" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Kolkata</text>
+
+  <!-- Bangalore -->
+  <circle cx="300" cy="270" r="6" fill="#F97316"/>
+  <circle cx="300" cy="270" r="10" fill="#F97316" opacity="0.2"/>
+  <text x="310" y="278" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Bangalore</text>
+
+  <!-- Delivery lines from home studio to cities -->
+  <!-- To Delhi -->
+  <path d="M130 170 C180 130 240 100 289 100" stroke="#F97316" stroke-width="1.5" stroke-dasharray="5 3" fill="none" opacity="0.6"/>
+  <!-- To Mumbai -->
+  <path d="M130 200 C170 200 220 200 259 200" stroke="#F97316" stroke-width="1.5" stroke-dasharray="5 3" fill="none" opacity="0.6"/>
+  <!-- To Kolkata -->
+  <path d="M130 180 C200 170 280 172 339 175" stroke="#F97316" stroke-width="1.5" stroke-dasharray="5 3" fill="none" opacity="0.5"/>
+  <!-- To Bangalore -->
+  <path d="M130 220 C180 250 240 268 294 270" stroke="#F97316" stroke-width="1.5" stroke-dasharray="5 3" fill="none" opacity="0.5"/>
+
+  <!-- Small delivery truck icons along paths -->
+  <!-- Truck 1 -->
+  <rect x="195" y="108" width="14" height="8" rx="2" fill="#F97316" opacity="0.6"/>
+  <rect x="209" y="106" width="6" height="10" rx="1" fill="#F97316" opacity="0.4"/>
+  <circle cx="200" cy="118" r="2" fill="#1F2937" opacity="0.4"/>
+  <circle cx="210" cy="118" r="2" fill="#1F2937" opacity="0.4"/>
+
+  <!-- Truck 2 -->
+  <rect x="185" y="194" width="14" height="8" rx="2" fill="#F97316" opacity="0.6"/>
+  <rect x="199" y="192" width="6" height="10" rx="1" fill="#F97316" opacity="0.4"/>
+  <circle cx="190" cy="204" r="2" fill="#1F2937" opacity="0.4"/>
+  <circle cx="200" cy="204" r="2" fill="#1F2937" opacity="0.4"/>
+
+  <!-- Right: Happy customers receiving packages -->
+  <!-- Customer 1 (top) -->
+  <circle cx="480" cy="95" r="14" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.2"/>
+  <circle cx="476" cy="93" r="1.5" fill="#1F2937"/>
+  <circle cx="484" cy="93" r="1.5" fill="#1F2937"/>
+  <path d="M477 99 Q480 103 483 99" stroke="#1F2937" stroke-width="1" fill="none"/>
+  <!-- Package -->
+  <rect x="498" y="88" width="18" height="14" rx="3" fill="#FBBF24" opacity="0.4" stroke="#D4A574" stroke-width="0.8"/>
+  <line x1="507" y1="88" x2="507" y2="102" stroke="#F97316" stroke-width="0.6"/>
+  <!-- Star rating -->
+  <text x="470" y="125" font-family="Arial, sans-serif" font-size="8" fill="#FBBF24">*****</text>
+
+  <!-- Customer 2 (middle) -->
+  <circle cx="510" cy="185" r="14" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.2"/>
+  <circle cx="506" cy="183" r="1.5" fill="#1F2937"/>
+  <circle cx="514" cy="183" r="1.5" fill="#1F2937"/>
+  <path d="M507 189 Q510 193 513 189" stroke="#1F2937" stroke-width="1" fill="none"/>
+  <!-- Package -->
+  <rect x="528" y="178" width="18" height="14" rx="3" fill="#FBBF24" opacity="0.4" stroke="#D4A574" stroke-width="0.8"/>
+  <line x1="537" y1="178" x2="537" y2="192" stroke="#F97316" stroke-width="0.6"/>
+  <!-- Heart reaction -->
+  <path d="M530 170 Q530 166 534 166 Q536 166 536 170 Q536 166 538 166 Q542 166 542 170 Q542 175 536 178 Q530 175 530 170 Z" fill="#EF4444" opacity="0.6"/>
+
+  <!-- Customer 3 (bottom) -->
+  <circle cx="470" cy="270" r="14" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.2"/>
+  <circle cx="466" cy="268" r="1.5" fill="#1F2937"/>
+  <circle cx="474" cy="268" r="1.5" fill="#1F2937"/>
+  <path d="M467 274 Q470 278 473 274" stroke="#1F2937" stroke-width="1" fill="none"/>
+  <!-- Package -->
+  <rect x="488" y="263" width="18" height="14" rx="3" fill="#FBBF24" opacity="0.4" stroke="#D4A574" stroke-width="0.8"/>
+  <line x1="497" y1="263" x2="497" y2="277" stroke="#F97316" stroke-width="0.6"/>
+  <!-- Thumbs up -->
+  <circle cx="510" cy="258" r="6" fill="#16A34A" opacity="0.2"/>
+  <text x="507" y="261" font-family="Arial, sans-serif" font-size="7" fill="#16A34A">+</text>
+
+  <!-- Delivery lines from map to customers -->
+  <path d="M340 100 C380 95 430 92 466 95" stroke="#F97316" stroke-width="1" stroke-dasharray="4 3" fill="none" opacity="0.4"/>
+  <path d="M370 180 C400 182 450 183 496 185" stroke="#F97316" stroke-width="1" stroke-dasharray="4 3" fill="none" opacity="0.4"/>
+  <path d="M340 275 C380 274 420 272 456 270" stroke="#F97316" stroke-width="1" stroke-dasharray="4 3" fill="none" opacity="0.4"/>
+
+  <!-- Bottom text -->
+  <rect x="170" y="340" width="260" height="36" rx="18" fill="#1F2937" opacity="0.05"/>
+  <text x="205" y="363" font-family="Arial, sans-serif" font-size="13" fill="#1F2937" font-weight="600">Ship anywhere in India</text>
+
+  <!-- Truck icons at bottom -->
+  <rect x="170" y="350" width="18" height="10" rx="2" fill="#F97316" opacity="0.3"/>
+  <rect x="188" y="348" width="8" height="12" rx="1" fill="#F97316" opacity="0.2"/>
+  <circle cx="176" cy="362" r="2.5" fill="#1F2937" opacity="0.3"/>
+  <circle cx="188" cy="362" r="2.5" fill="#1F2937" opacity="0.3"/>
+
+  <rect x="438" y="350" width="18" height="10" rx="2" fill="#F97316" opacity="0.3"/>
+  <rect x="456" y="348" width="8" height="12" rx="1" fill="#F97316" opacity="0.2"/>
+  <circle cx="444" cy="362" r="2.5" fill="#1F2937" opacity="0.3"/>
+  <circle cx="456" cy="362" r="2.5" fill="#1F2937" opacity="0.3"/>
+
+  <!-- Decorative -->
+  <circle cx="550" cy="50" r="20" fill="#F97316" opacity="0.06"/>
+  <circle cx="560" cy="330" r="15" fill="#D4A574" opacity="0.06"/>
+</svg>

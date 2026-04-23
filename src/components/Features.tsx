@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Building, Zap, Globe, Smartphone, CreditCard, TrendingUp, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Features = () => {
   const features = [
@@ -61,7 +61,7 @@ const Features = () => {
             From your first online order to repeat customers, oBizee gives India-first businesses the tools to run operations without
             spreadsheets and manual follow-ups.
           </p>
-          <Link to="/templates" aria-label="Browse all website templates">
+          <Link href="/templates" aria-label="Browse all website templates">
             <Button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all">
               View All Templates
               <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />

@@ -1,8 +1,9 @@
+"use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff, User, Mail, Lock, Zap, Gift } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -52,38 +53,13 @@ const SignUp = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Sign Up | Create Your Business Account | oBizee</title>
-        <meta
-          name="description"
-          content="Create your oBizee business account and get started with a 3-month free trial. After trial, pay 1% per successful order capped at ₹10."
-        />
-        <meta name="keywords" content="sign up, create account, business account, 3 month free trial, 1% per order, business management platform" />
-        <meta name="robots" content="noindex, follow" />
-        <meta property="og:title" content="Sign Up | Create Your Business Account | oBizee" />
-        <meta
-          property="og:description"
-          content="Create your oBizee business account with a 3-month free trial. Post-trial fee is 1% per successful order, capped at ₹10."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/signup" />
-        <meta property="og:image" content="https://www.obizee.com/signup-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sign Up | Create Your Business Account | oBizee" />
-        <meta
-          name="twitter:description"
-          content="Create your oBizee business account with a 3-month free trial. Post-trial fee is 1% per successful order, capped at ₹10."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/signup-twitter.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/signup" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           {/* Header */}
           <div className="text-center">
-            <Link to="/" className="flex items-center justify-center mb-8" aria-label="Return to homepage">
+            <Link href="/" className="flex items-center justify-center mb-8" aria-label="Return to homepage">
               <div
                 className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-3"
                 aria-hidden="true"
@@ -229,11 +205,11 @@ const SignUp = () => {
               />
               <label htmlFor="agree-terms" className="ml-3 block text-sm text-gray-700">
                 I agree to the{" "}
-                <Link to="/terms-conditions" className="text-orange-600 hover:text-orange-500">
+                <Link href="/terms-conditions" className="text-orange-600 hover:text-orange-500">
                   Terms & Conditions
                 </Link>{" "}
                 and{" "}
-                <Link to="/privacy-policy" className="text-orange-600 hover:text-orange-500">
+                <Link href="/privacy-policy" className="text-orange-600 hover:text-orange-500">
                   Privacy Policy
                 </Link>
               </label>
@@ -304,7 +280,7 @@ const SignUp = () => {
             <div className="text-center">
               <p className="text-gray-600">
                 Already have an account?{" "}
-                <Link to="/signin" className="text-orange-600 hover:text-orange-500 font-medium">
+                <Link href="/signin" className="text-orange-600 hover:text-orange-500 font-medium">
                   Sign in here
                 </Link>
               </p>

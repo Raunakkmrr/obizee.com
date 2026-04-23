@@ -1,13 +1,16 @@
+"use client";
 import React, { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Mail, Phone, Book, Video, Users } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const Help = () => {
-  const location = useLocation();
+  const location = usePathname();
   const tutorialVideoPath = "/Tutorial_video.mp4";
 
   useEffect(() => {
@@ -147,32 +150,11 @@ const Help = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Help Center & Support | oBizee</title>
-        <meta
-          name="description"
-          content="Find answers to your questions, get support, or learn how to make the most of our platform. Access our knowledge base, video tutorials, and community forum."
-        />
-        <meta name="keywords" content="help center, support, FAQ, knowledge base, video tutorials, community forum, customer support" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Help Center & Support | oBizee" />
-        <meta
-          property="og:description"
-          content="Find answers to your questions, get support, or learn how to make the most of our platform. Access our knowledge base, video tutorials, and community forum."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/help" />
-        <meta property="og:image" content="https://www.obizee.com/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Help Center & Support | oBizee" />
-        <meta
-          name="twitter:description"
-          content="Find answers to your questions, get support, or learn how to make the most of our platform. Access our knowledge base, video tutorials, and community forum."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/twitter-image.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/help" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Help", url: "https://www.obizee.com/help" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -310,7 +292,7 @@ const Help = () => {
                 ) : (
                   <Link
                     key={index}
-                    to={resource.link}
+                    href={resource.link}
                     className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 group"
                     role="listitem"
                     aria-label={`Access ${resource.title}`}

@@ -37,6 +37,7 @@ Sitemap: https://www.obizee.com/sitemap-company.xml
 Sitemap: https://www.obizee.com/sitemap-legal.xml
 Sitemap: https://www.obizee.com/sitemap-auth.xml
 Sitemap: https://www.obizee.com/sitemap-compare.xml
+Sitemap: https://www.obizee.com/sitemap-verticals.xml
 
 # LLM context file
 # https://www.obizee.com/llms.txt

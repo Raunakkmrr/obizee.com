@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Shield, Eye, Lock, FileText } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -142,35 +144,11 @@ const PrivacyPolicy = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy | How We Protect Your Data | oBizee</title>
-        <meta
-          name="description"
-          content="Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
-        />
-        <meta
-          name="keywords"
-          content="privacy policy, data protection, information security, user privacy, data collection, data usage, privacy rights"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Privacy Policy | How We Protect Your Data | oBizee" />
-        <meta
-          property="og:description"
-          content="Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/privacy-policy" />
-        <meta property="og:image" content="https://www.obizee.com/privacy-policy-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privacy Policy | How We Protect Your Data | oBizee" />
-        <meta
-          name="twitter:description"
-          content="Learn how oBizee collects, uses, and protects your information. Our comprehensive privacy policy explains your rights and our commitment to data security."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/privacy-policy-twitter.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/privacy-policy" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Privacy Policy", url: "https://www.obizee.com/privacy-policy" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

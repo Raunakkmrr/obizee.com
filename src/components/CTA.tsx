@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Zap, Building } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 
 const CTA = () => {
@@ -50,7 +50,7 @@ const CTA = () => {
               <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
             </Button>
           </AppDownloadTrigger>
-          <Link to="/success-stories">
+          <Link href="/success-stories">
             <Button
               variant="outline"
               size="lg"

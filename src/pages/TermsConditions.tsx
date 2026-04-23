@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { FileText, Scale, Shield, AlertTriangle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const TermsConditions = () => {
   const sections = [
@@ -144,35 +146,11 @@ const TermsConditions = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Terms and Conditions | Legal Agreement | oBizee</title>
-        <meta
-          name="description"
-          content="Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
-        />
-        <meta
-          name="keywords"
-          content="terms and conditions, legal agreement, user agreement, terms of service, legal terms, business terms"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Terms and Conditions | Legal Agreement | oBizee" />
-        <meta
-          property="og:description"
-          content="Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/terms-conditions" />
-        <meta property="og:image" content="https://www.obizee.com/terms-conditions-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms and Conditions | Legal Agreement | oBizee" />
-        <meta
-          name="twitter:description"
-          content="Legal agreement between you and oBizee. Read our terms and conditions to understand your rights and responsibilities when using our business management platform."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/terms-conditions-twitter.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/terms-conditions" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Terms & Conditions", url: "https://www.obizee.com/terms-conditions" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

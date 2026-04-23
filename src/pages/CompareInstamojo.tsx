@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, X, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const CompareInstamojo = () => {
   const features = [
@@ -75,35 +77,13 @@ const CompareInstamojo = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers [2026]</title>
-        <meta
-          name="description"
-          content="Compare oBizee vs Instamojo for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery & DTDC shipping. Instamojo: 2-5% per transaction, basic storefront."
-        />
-        <meta
-          name="keywords"
-          content="oBizee vs Instamojo, Instamojo alternative, Instamojo review 2026, cheapest payment platform India, online store vs payment links"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers [2026]" />
-        <meta
-          property="og:description"
-          content="Side-by-side comparison: 1% max ₹10 vs 2-5% fees. Full store vs basic storefront. See why Indian sellers choose oBizee over Instamojo."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.obizee.com/compare/obizee-vs-instamojo" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers [2026]" />
-        <meta
-          name="twitter:description"
-          content="1% max ₹10 vs 2-5% fees. Full store vs basic storefront. Compare oBizee and Instamojo for Indian sellers."
-        />
-        <link rel="canonical" href="https://www.obizee.com/compare/obizee-vs-instamojo" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Compare", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
+        { name: "oBizee vs Instamojo", url: "https://www.obizee.com/compare/obizee-vs-instamojo" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

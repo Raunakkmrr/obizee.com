@@ -1,0 +1,103 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Center: Folded Kurti/T-shirt -->
+  <rect x="200" y="130" width="120" height="100" rx="12" fill="#F97316" opacity="0.15"/>
+  <path d="M220 140 L220 220 Q220 226 226 226 L294 226 Q300 226 300 220 L300 140 Z" fill="#F97316" opacity="0.85"/>
+  <!-- Collar -->
+  <path d="M245 140 Q260 158 275 140" stroke="#EA580C" stroke-width="2" fill="none"/>
+  <!-- Fold lines -->
+  <line x1="260" y1="160" x2="260" y2="226" stroke="#EA580C" stroke-width="1" opacity="0.4"/>
+  <line x1="225" y1="180" x2="295" y2="180" stroke="#EA580C" stroke-width="1" opacity="0.3"/>
+  <!-- Sleeves hint -->
+  <path d="M220 140 L208 165 L218 168" fill="#EA580C" opacity="0.7"/>
+  <path d="M300 140 L312 165 L302 168" fill="#EA580C" opacity="0.7"/>
+  <!-- Small oBizee tag -->
+  <rect x="270" y="145" width="20" height="12" rx="2" fill="#FFFFFF"/>
+  <text x="273" y="154" font-family="Arial, sans-serif" font-size="5" fill="#F97316" font-weight="bold">oB</text>
+
+  <!-- Arrow to Instagram (top-right) -->
+  <path d="M310 160 C340 140 370 120 400 110" stroke="#F97316" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+  <polygon points="398,104 406,110 398,116" fill="#F97316"/>
+
+  <!-- Arrow to WhatsApp (right) -->
+  <path d="M320 185 C350 185 380 185 410 185" stroke="#F97316" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+  <polygon points="408,179 416,185 408,191" fill="#F97316"/>
+
+  <!-- Arrow to Website (bottom-right) -->
+  <path d="M310 220 C340 240 370 255 400 265" stroke="#F97316" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+  <polygon points="398,259 406,265 398,271" fill="#F97316"/>
+
+  <!-- Instagram - Top Right -->
+  <rect x="420" y="70" width="80" height="80" rx="16" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+  <!-- Instagram icon -->
+  <rect x="440" y="82" width="40" height="40" rx="10" fill="none" stroke="#E1306C" stroke-width="2.5"/>
+  <circle cx="460" cy="102" r="10" fill="none" stroke="#E1306C" stroke-width="2.5"/>
+  <circle cx="472" cy="90" r="3" fill="#E1306C"/>
+  <!-- Instagram label -->
+  <text x="438" y="138" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Instagram</text>
+  <!-- Order badge -->
+  <rect x="490" y="72" width="36" height="18" rx="9" fill="#16A34A"/>
+  <text x="497" y="84" font-family="Arial, sans-serif" font-size="7" fill="#FFFFFF" font-weight="bold">Order</text>
+  <!-- Green checkmark -->
+  <circle cx="520" cy="81" r="5" fill="#16A34A" opacity="0"/>
+
+  <!-- WhatsApp - Right -->
+  <rect x="420" y="155" width="80" height="80" rx="16" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+  <!-- WhatsApp phone icon -->
+  <rect x="440" y="162" width="40" height="52" rx="8" fill="none" stroke="#25D366" stroke-width="2"/>
+  <rect x="446" y="168" width="28" height="36" rx="2" fill="#25D366" opacity="0.15"/>
+  <!-- Chat bubble -->
+  <rect x="450" y="172" width="20" height="10" rx="5" fill="#25D366" opacity="0.6"/>
+  <rect x="448" y="186" width="16" height="10" rx="5" fill="#25D366" opacity="0.4"/>
+  <!-- WhatsApp label -->
+  <text x="436" y="228" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">WhatsApp</text>
+  <!-- Order badge -->
+  <rect x="490" y="157" width="36" height="18" rx="9" fill="#16A34A"/>
+  <text x="497" y="169" font-family="Arial, sans-serif" font-size="7" fill="#FFFFFF" font-weight="bold">Order</text>
+
+  <!-- Website - Bottom Right -->
+  <rect x="420" y="240" width="80" height="80" rx="16" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+  <!-- Browser/Globe icon -->
+  <circle cx="460" cy="268" r="18" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <ellipse cx="460" cy="268" rx="8" ry="18" fill="none" stroke="#3B82F6" stroke-width="1.5"/>
+  <line x1="442" y1="268" x2="478" y2="268" stroke="#3B82F6" stroke-width="1.5"/>
+  <line x1="445" y1="256" x2="475" y2="256" stroke="#3B82F6" stroke-width="1"/>
+  <line x1="445" y1="280" x2="475" y2="280" stroke="#3B82F6" stroke-width="1"/>
+  <!-- Website label -->
+  <text x="442" y="303" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Website</text>
+  <!-- Order badge -->
+  <rect x="490" y="242" width="36" height="18" rx="9" fill="#16A34A"/>
+  <text x="497" y="254" font-family="Arial, sans-serif" font-size="7" fill="#FFFFFF" font-weight="bold">Order</text>
+
+  <!-- Green checkmarks on badges -->
+  <path d="M524 80 L526 83 L530 77" stroke="#FFFFFF" stroke-width="0" fill="none"/>
+
+  <!-- Left side decorative: multiple small garment icons -->
+  <rect x="60" y="100" width="30" height="40" rx="4" fill="#F97316" opacity="0.2"/>
+  <rect x="100" y="90" width="30" height="45" rx="4" fill="#3B82F6" opacity="0.2"/>
+  <rect x="80" y="160" width="30" height="40" rx="4" fill="#16A34A" opacity="0.2"/>
+  <rect x="45" y="180" width="25" height="35" rx="4" fill="#EF4444" opacity="0.2"/>
+  <rect x="110" y="170" width="28" height="38" rx="4" fill="#F59E0B" opacity="0.2"/>
+
+  <!-- Connecting lines from garments to center -->
+  <line x1="90" y1="130" x2="200" y2="170" stroke="#9CA3AF" stroke-width="0.8" opacity="0.3"/>
+  <line x1="120" y1="120" x2="200" y2="165" stroke="#9CA3AF" stroke-width="0.8" opacity="0.3"/>
+  <line x1="95" y1="190" x2="200" y2="185" stroke="#9CA3AF" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Bottom Label -->
+  <rect x="160" y="310" width="280" height="40" rx="20" fill="#1F2937" opacity="0.05"/>
+  <text x="210" y="335" font-family="Arial, sans-serif" font-size="14" fill="#1F2937" font-weight="600">One Dashboard. All Channels.</text>
+
+  <!-- Dashboard icon hint -->
+  <rect x="170" y="322" width="24" height="16" rx="3" fill="#F97316" opacity="0.3"/>
+  <rect x="171" y="323" width="10" height="6" rx="1" fill="#F97316" opacity="0.6"/>
+  <rect x="183" y="323" width="10" height="6" rx="1" fill="#F97316" opacity="0.4"/>
+  <rect x="171" y="331" width="22" height="5" rx="1" fill="#F97316" opacity="0.3"/>
+
+  <!-- Decorative circles -->
+  <circle cx="540" cy="350" r="30" fill="#F97316" opacity="0.05"/>
+  <circle cx="60" cy="300" r="20" fill="#F97316" opacity="0.08"/>
+  <circle cx="300" cy="40" r="15" fill="#F97316" opacity="0.06"/>
+</svg>

@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
-import { Helmet } from "react-helmet-async";
 import { ArrowRight, Target, Heart, Globe, Shield } from "lucide-react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const About = () => {
   const leadershipTeam = [
@@ -69,34 +71,11 @@ const About = () => {
 
   return (
     <>
-      <Helmet>
-        <title>About oBizee - Our Story and Mission | Business Management Platform</title>
-        <meta
-          name="description"
-          content="Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
-        />
-        <meta
-          name="keywords"
-          content="about oBizee, business management platform, company mission, business values, customer success, business technology"
-        />
-        <meta property="og:title" content="About oBizee - Our Story and Mission | Business Management Platform" />
-        <meta
-          property="og:description"
-          content="Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/about" />
-        <meta property="og:image" content="https://www.obizee.com/about-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About oBizee - Our Story and Mission | Business Management Platform" />
-        <meta
-          name="twitter:description"
-          content="Learn about oBizee's mission to empower businesses with innovative technology solutions. Discover our story, values, and commitment to customer success."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/about-twitter.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/about" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "About", url: "https://www.obizee.com/about" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50">
         <Navigation />

@@ -1,0 +1,142 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Center: Handmade product (crochet earrings) -->
+  <!-- Display platform -->
+  <ellipse cx="300" cy="220" rx="60" ry="15" fill="#D4A574" opacity="0.15"/>
+
+  <!-- Earring 1 -->
+  <circle cx="280" cy="140" r="5" fill="none" stroke="#D4A574" stroke-width="2"/>
+  <line x1="280" y1="145" x2="280" y2="155" stroke="#D4A574" stroke-width="1.5"/>
+  <circle cx="280" cy="165" r="10" fill="#FBBF24" opacity="0.4" stroke="#D4A574" stroke-width="1.5"/>
+  <circle cx="280" cy="165" r="5" fill="#F97316" opacity="0.3"/>
+  <path d="M270 178 L280 195 L290 178" fill="none" stroke="#D4A574" stroke-width="1.5"/>
+  <circle cx="280" cy="198" r="4" fill="#D4A574" opacity="0.5"/>
+
+  <!-- Earring 2 -->
+  <circle cx="320" cy="140" r="5" fill="none" stroke="#D4A574" stroke-width="2"/>
+  <line x1="320" y1="145" x2="320" y2="155" stroke="#D4A574" stroke-width="1.5"/>
+  <circle cx="320" cy="165" r="10" fill="#FBBF24" opacity="0.4" stroke="#D4A574" stroke-width="1.5"/>
+  <circle cx="320" cy="165" r="5" fill="#F97316" opacity="0.3"/>
+  <path d="M310 178 L320 195 L330 178" fill="none" stroke="#D4A574" stroke-width="1.5"/>
+  <circle cx="320" cy="198" r="4" fill="#D4A574" opacity="0.5"/>
+
+  <!-- Sparkles around product -->
+  <path d="M260 130 L262 125 L264 130 L262 135 Z" fill="#F97316" opacity="0.5"/>
+  <path d="M340 130 L342 125 L344 130 L342 135 Z" fill="#D4A574" opacity="0.6"/>
+  <path d="M250 170 L252 166 L254 170 L252 174 Z" fill="#FBBF24" opacity="0.5"/>
+  <path d="M350 175 L352 171 L354 175 L352 179 Z" fill="#F97316" opacity="0.4"/>
+  <circle cx="270" cy="200" r="1.5" fill="#D4A574" opacity="0.5"/>
+  <circle cx="335" cy="195" r="1.5" fill="#F97316" opacity="0.5"/>
+
+  <!-- "Handmade" badge -->
+  <rect x="268" y="108" width="64" height="18" rx="9" fill="#D4A574" opacity="0.15"/>
+  <text x="279" y="121" font-family="Arial, sans-serif" font-size="7" fill="#D4A574" font-weight="600">Handmade</text>
+
+  <!-- Left: Instagram post frame -->
+  <rect x="30" y="60" width="180" height="220" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+  <!-- Instagram header -->
+  <rect x="38" y="68" width="164" height="30" rx="8" fill="#FFFFFF"/>
+  <!-- Profile pic -->
+  <circle cx="54" cy="83" r="10" fill="#E1306C" opacity="0.2" stroke="#E1306C" stroke-width="1.5"/>
+  <text x="49" y="87" font-family="Arial, sans-serif" font-size="7" fill="#E1306C" font-weight="bold">A</text>
+  <text x="70" y="80" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="bold">artisan_studio</text>
+  <text x="70" y="90" font-family="Arial, sans-serif" font-size="6" fill="#9CA3AF">Sponsored</text>
+
+  <!-- Post image area -->
+  <rect x="38" y="100" width="164" height="120" rx="4" fill="#FEF3C7"/>
+  <!-- Mini earring in post -->
+  <circle cx="105" cy="145" r="4" fill="none" stroke="#D4A574" stroke-width="1.5"/>
+  <line x1="105" y1="149" x2="105" y2="157" stroke="#D4A574" stroke-width="1"/>
+  <circle cx="105" cy="164" r="7" fill="#FBBF24" opacity="0.4" stroke="#D4A574" stroke-width="1"/>
+  <path d="M98 173 L105 184 L112 173" fill="none" stroke="#D4A574" stroke-width="1"/>
+  <circle cx="130" cy="145" r="4" fill="none" stroke="#D4A574" stroke-width="1.5"/>
+  <line x1="130" y1="149" x2="130" y2="157" stroke="#D4A574" stroke-width="1"/>
+  <circle cx="130" cy="164" r="7" fill="#FBBF24" opacity="0.4" stroke="#D4A574" stroke-width="1"/>
+  <path d="M123 173 L130 184 L137 173" fill="none" stroke="#D4A574" stroke-width="1"/>
+
+  <!-- Post engagement icons -->
+  <rect x="38" y="222" width="164" height="25" rx="4" fill="#FFFFFF"/>
+  <!-- Heart icon -->
+  <path d="M48 232 Q48 226 54 226 Q58 226 58 232 Q58 226 62 226 Q68 226 68 232 Q68 240 58 246 Q48 240 48 232 Z" fill="#EF4444"/>
+  <!-- Comment icon -->
+  <circle cx="82" cy="234" r="7" fill="none" stroke="#1F2937" stroke-width="1.5"/>
+  <path d="M78 240 L75 245" stroke="#1F2937" stroke-width="1.5"/>
+  <!-- Share icon -->
+  <path d="M98 228 L108 234 L98 240" fill="none" stroke="#1F2937" stroke-width="1.5"/>
+  <line x1="98" y1="234" x2="108" y2="234" stroke="#1F2937" stroke-width="1.5"/>
+  <!-- Like count -->
+  <text x="48" y="260" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="bold">243 likes</text>
+  <text x="48" y="272" font-family="Arial, sans-serif" font-size="6" fill="#1F2937">Beautiful handmade earrings!</text>
+
+  <!-- Arrow from Instagram to center -->
+  <path d="M215 170 C235 165 250 162 265 165" stroke="#E1306C" stroke-width="1.5" stroke-dasharray="5 3" fill="none"/>
+
+  <!-- Right: oBizee website browser -->
+  <rect x="390" y="60" width="190" height="220" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+  <!-- Browser chrome -->
+  <rect x="390" y="60" width="190" height="28" rx="12" fill="#F3F4F6"/>
+  <rect x="390" y="76" width="190" height="12" fill="#F3F4F6"/>
+  <!-- Browser dots -->
+  <circle cx="406" cy="73" r="4" fill="#EF4444" opacity="0.6"/>
+  <circle cx="418" cy="73" r="4" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="430" cy="73" r="4" fill="#16A34A" opacity="0.6"/>
+  <!-- URL bar -->
+  <rect x="445" y="66" width="125" height="14" rx="7" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="0.8"/>
+  <text x="455" y="76" font-family="Arial, sans-serif" font-size="5" fill="#9CA3AF">artisan-studio.obizee.com</text>
+
+  <!-- Website content -->
+  <!-- Store header -->
+  <rect x="398" y="95" width="174" height="24" rx="4" fill="#D4A574"/>
+  <text x="425" y="111" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">Artisan Studio</text>
+
+  <!-- Product on website -->
+  <rect x="405" y="125" width="74" height="90" rx="8" fill="#FFFBEB" stroke="#E5E7EB" stroke-width="0.8"/>
+  <rect x="410" y="130" width="64" height="50" rx="4" fill="#FEF3C7"/>
+  <!-- Mini earring -->
+  <circle cx="430" cy="148" r="3" fill="none" stroke="#D4A574" stroke-width="1"/>
+  <line x1="430" y1="151" x2="430" y2="156" stroke="#D4A574" stroke-width="0.8"/>
+  <circle cx="430" cy="160" r="5" fill="#D4A574" opacity="0.3"/>
+  <circle cx="450" cy="148" r="3" fill="none" stroke="#D4A574" stroke-width="1"/>
+  <line x1="450" y1="151" x2="450" y2="156" stroke="#D4A574" stroke-width="0.8"/>
+  <circle cx="450" cy="160" r="5" fill="#D4A574" opacity="0.3"/>
+  <text x="412" y="193" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Crochet Earrings</text>
+  <text x="412" y="205" font-family="Arial, sans-serif" font-size="8" fill="#D4A574" font-weight="bold">Rs 280</text>
+
+  <!-- Second product -->
+  <rect x="485" y="125" width="74" height="90" rx="8" fill="#FFFBEB" stroke="#E5E7EB" stroke-width="0.8"/>
+  <rect x="490" y="130" width="64" height="50" rx="4" fill="#FEE2E2"/>
+  <rect x="505" y="140" width="18" height="25" rx="3" fill="#FFFFFF" stroke="#EF4444" stroke-width="1"/>
+  <text x="492" y="193" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Painted Mug</text>
+  <text x="492" y="205" font-family="Arial, sans-serif" font-size="8" fill="#D4A574" font-weight="bold">Rs 350</text>
+
+  <!-- Order button on website -->
+  <rect x="430" y="225" width="100" height="22" rx="11" fill="#F97316"/>
+  <text x="454" y="240" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">Order Now</text>
+
+  <!-- Website scroll indicator -->
+  <rect x="405" y="255" width="44" height="16" rx="4" fill="#F3F4F6"/>
+  <rect x="455" y="255" width="44" height="16" rx="4" fill="#F3F4F6"/>
+  <rect x="505" y="255" width="44" height="16" rx="4" fill="#F3F4F6"/>
+
+  <!-- Arrow from center to website -->
+  <path d="M340 170 C360 165 375 162 390 170" stroke="#F97316" stroke-width="1.5" stroke-dasharray="5 3" fill="none"/>
+
+  <!-- Central "Order" button connecting both -->
+  <rect x="255" y="240" width="90" height="32" rx="16" fill="#F97316"/>
+  <text x="275" y="261" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF">Order</text>
+
+  <!-- Arrows pointing to order button -->
+  <path d="M150 260 C180 255 220 250 255 256" stroke="#E1306C" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M450 260 C420 255 380 250 345 256" stroke="#F97316" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+  <!-- Caption text at bottom -->
+  <rect x="140" y="320" width="320" height="35" rx="17" fill="#1F2937" opacity="0.05"/>
+  <text x="170" y="342" font-family="Arial, sans-serif" font-size="12" fill="#1F2937" font-weight="600">From Instagram Post to Paid Order</text>
+
+  <!-- Decorative -->
+  <circle cx="300" cy="40" r="15" fill="#F97316" opacity="0.06"/>
+  <circle cx="560" cy="320" r="20" fill="#D4A574" opacity="0.06"/>
+  <circle cx="40" cy="340" r="18" fill="#E1306C" opacity="0.05"/>
+</svg>

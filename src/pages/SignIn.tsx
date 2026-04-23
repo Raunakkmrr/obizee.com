@@ -1,8 +1,9 @@
+"use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff, Mail, Lock, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -43,38 +44,13 @@ const SignIn = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Sign In | Access Your Business Account | oBizee</title>
-        <meta
-          name="description"
-          content="Sign in to your oBizee business account to access your business management platform. Secure login with email and password."
-        />
-        <meta name="keywords" content="sign in, login, business account, secure login, business management platform" />
-        <meta name="robots" content="noindex, follow" />
-        <meta property="og:title" content="Sign In | Access Your Business Account | oBizee" />
-        <meta
-          property="og:description"
-          content="Sign in to your oBizee business account to access your business management platform. Secure login with email and password."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/signin" />
-        <meta property="og:image" content="https://www.obizee.com/signin-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sign In | Access Your Business Account | oBizee" />
-        <meta
-          name="twitter:description"
-          content="Sign in to your oBizee business account to access your business management platform. Secure login with email and password."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/signin-twitter.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/signin" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           {/* Header */}
           <div className="text-center">
-            <Link to="/" className="flex items-center justify-center mb-8" aria-label="Return to homepage">
+            <Link href="/" className="flex items-center justify-center mb-8" aria-label="Return to homepage">
               <div
                 className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-3"
                 aria-hidden="true"
@@ -159,7 +135,7 @@ const SignIn = () => {
                   Remember me
                 </label>
               </div>
-              <Link to="#" className="text-sm text-orange-600 hover:text-orange-500">
+              <Link href="#" className="text-sm text-orange-600 hover:text-orange-500">
                 Forgot password?
               </Link>
             </div>
@@ -228,7 +204,7 @@ const SignIn = () => {
             <div className="text-center">
               <p className="text-gray-600">
                 Don't have an account?{" "}
-                <Link to="/signup" className="text-orange-600 hover:text-orange-500 font-medium">
+                <Link href="/signup" className="text-orange-600 hover:text-orange-500 font-medium">
                   Sign up now
                 </Link>
               </p>

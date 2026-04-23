@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, X, Minus, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const CompareShopify = () => {
   const features = [
@@ -84,35 +86,13 @@ const CompareShopify = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee vs Shopify — Cheapest Shopify Alternative in India [2026]</title>
-        <meta
-          name="description"
-          content="Compare oBizee vs Shopify for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery & DTDC shipping. Shopify: ₹2,000+/month + extra for Indian logistics."
-        />
-        <meta
-          name="keywords"
-          content="oBizee vs Shopify, Shopify alternative India, cheapest Shopify alternative, Shopify too expensive India, best ecommerce platform India, Shopify India pricing"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee vs Shopify — Is oBizee the Cheapest Shopify Alternative in India?" />
-        <meta
-          property="og:description"
-          content="Side-by-side comparison: ₹0/month vs ₹2,000+/month. Built-in Delhivery/DTDC vs paid third-party apps. See why Indian sellers are switching to oBizee."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.obizee.com/compare/obizee-vs-shopify" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee vs Shopify — Cheapest Shopify Alternative in India [2026]" />
-        <meta
-          name="twitter:description"
-          content="₹0/month vs ₹2,000+/month. Built-in Delhivery/DTDC vs paid apps. Compare oBizee and Shopify for Indian sellers."
-        />
-        <link rel="canonical" href="https://www.obizee.com/compare/obizee-vs-shopify" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Compare", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
+        { name: "oBizee vs Shopify", url: "https://www.obizee.com/compare/obizee-vs-shopify" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Calculator, Shield, Clock3 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const Pricing = () => {
   const planFeatures = [
@@ -66,34 +68,24 @@ const Pricing = () => {
     },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <>
-      <Helmet>
-        <title>oBizee Pricing | 3-Month Free Trial + 1% Per Order (Max ₹10)</title>
-        <meta
-          name="description"
-          content="Start with a 3-month free trial. After trial, pay 1% per successful order with a maximum cap of ₹10 per order."
-        />
-        <meta name="keywords" content="oBizee pricing, 3 month free trial, 1 percent fee, max 10 rupees per order, India SaaS pricing" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee Pricing | 3-Month Free Trial + 1% Per Order (Max ₹10)" />
-        <meta
-          property="og:description"
-          content="Simple single-plan pricing: 3-month free trial, then 1% per successful order capped at ₹10."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/pricing" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee Pricing | 3-Month Free Trial + 1% Per Order (Max ₹10)" />
-        <meta
-          name="twitter:description"
-          content="Simple single-plan pricing: 3-month free trial, then 1% per successful order capped at ₹10."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://www.obizee.com/pricing" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Pricing", url: "https://www.obizee.com/pricing" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

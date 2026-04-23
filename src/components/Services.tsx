@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Globe, FileText, Smartphone, Truck, Zap, BarChart3, Users, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Services = () => {
   const journeySteps = [
@@ -131,7 +131,7 @@ const Services = () => {
                     ))}
                   </ul>
 
-                  <Link to={step.href} aria-label={`Start ${step.title}`}>
+                  <Link href={step.href} aria-label={`Start ${step.title}`}>
                     <Button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-xl">
                       View Service {step.step}
                       <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />

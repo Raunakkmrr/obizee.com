@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Eye, Smartphone, ShieldCheck, Sparkles, Star } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const Templates = () => {
   const templateBaseUrl = "https://testing.obizee.com";
@@ -83,35 +85,11 @@ const Templates = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Website Templates | Professional Business Templates | oBizee</title>
-        <meta
-          name="description"
-          content="Explore the three live oBizee website templates available for merchants: Modern V1, Trust V1, and Mobile Social V1."
-        />
-        <meta
-          name="keywords"
-          content="oBizee templates, template-modern-v1, template-trust-v1, template-mobile-social-v1, merchant website templates"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Website Templates | Professional Business Templates | oBizee" />
-        <meta
-          property="og:description"
-          content="Browse the three live oBizee templates and preview the exact storefront experience for each one."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/templates" />
-        <meta property="og:image" content="https://www.obizee.com/templates-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Website Templates | Professional Business Templates | oBizee" />
-        <meta
-          name="twitter:description"
-          content="Browse the three live oBizee templates and preview the exact storefront experience for each one."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/templates-twitter.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/templates" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Templates", url: "https://www.obizee.com/templates" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

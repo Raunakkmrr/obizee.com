@@ -1,6 +1,6 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Footer = () => {
   const footerLinks = {
@@ -111,7 +111,7 @@ const Footer = () => {
               <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.product.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
+                    <Link href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
                       {link.name}
                     </Link>
                   </li>
@@ -127,7 +127,7 @@ const Footer = () => {
               <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.solutions.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
+                    <Link href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
                       {link.name}
                     </Link>
                   </li>
@@ -143,7 +143,7 @@ const Footer = () => {
               <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
+                    <Link href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
                       {link.name}
                     </Link>
                   </li>
@@ -159,7 +159,7 @@ const Footer = () => {
               <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    <Link to={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
+                    <Link href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
                       {link.name}
                     </Link>
                   </li>

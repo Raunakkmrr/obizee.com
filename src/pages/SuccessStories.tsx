@@ -1,12 +1,14 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { Star, TrendingUp, Users, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import Link from "next/link";
 import { verifiedBrands } from "@/data/verifiedBrands";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const SuccessStories = () => {
   const successStories = verifiedBrands.map((brand) => ({
@@ -66,35 +68,11 @@ const SuccessStories = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Success Stories | How Businesses Thrive with oBizee</title>
-        <meta
-          name="description"
-          content="Read real success stories from early-stage Indian brands using oBizee to run orders, inventory, and customer communication in one place."
-        />
-        <meta
-          name="keywords"
-          content="oBizee success stories, Indian startup brands, customer testimonials, Instagram seller stories, business growth case studies"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Success Stories | How Businesses Thrive with oBizee" />
-        <meta
-          property="og:description"
-          content="Real stories from early-stage Indian brands using oBizee for day-to-day business operations."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/success-stories" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Success Stories | How Businesses Thrive with oBizee" />
-        <meta
-          name="twitter:description"
-          content="Real stories from early-stage Indian brands using oBizee for order, stock, and customer workflows."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://www.obizee.com/success-stories" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Success Stories", url: "https://www.obizee.com/success-stories" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -276,7 +254,7 @@ const SuccessStories = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </AppDownloadTrigger>
-                <Link to="/templates">
+                <Link href="/templates">
                   <Button
                     variant="outline"
                   size="lg"

@@ -1,0 +1,116 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Main progress bar -->
+  <rect x="60" y="160" width="480" height="6" rx="3" fill="#E5E7EB"/>
+  <!-- Green filled portion (up to stage 3) -->
+  <rect x="60" y="160" width="370" height="6" rx="3" fill="#16A34A"/>
+
+  <!-- Stage 1: Order Received -->
+  <circle cx="100" cy="163" r="18" fill="#16A34A"/>
+  <path d="M93 163 L98 168 L107 158" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Bell/notification icon above -->
+  <path d="M90 100 Q90 80 100 75 Q110 80 110 100" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <rect x="86" y="100" width="28" height="4" rx="2" fill="#16A34A"/>
+  <circle cx="100" cy="108" r="3" fill="#16A34A"/>
+  <!-- Bell clapper -->
+  <line x1="100" y1="88" x2="100" y2="95" stroke="#16A34A" stroke-width="1.5"/>
+  <!-- Notification ring effect -->
+  <path d="M80 85 Q75 80 80 75" stroke="#16A34A" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M120 85 Q125 80 120 75" stroke="#16A34A" stroke-width="1" opacity="0.3" fill="none"/>
+  <text x="62" y="200" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Order Received</text>
+  <text x="80" y="214" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">10:30 AM</text>
+
+  <!-- Stage 2: Preparing -->
+  <circle cx="240" cy="163" r="18" fill="#16A34A"/>
+  <path d="M233 163 L238 168 L247 158" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Cooking pot icon above -->
+  <rect x="222" y="92" width="36" height="22" rx="4" fill="none" stroke="#16A34A" stroke-width="2"/>
+  <path d="M222 92 Q230 86 240 84 Q250 86 258 92" stroke="#16A34A" stroke-width="1.5" fill="none"/>
+  <!-- Pot handles -->
+  <line x1="218" y1="100" x2="222" y2="100" stroke="#16A34A" stroke-width="2"/>
+  <line x1="258" y1="100" x2="262" y2="100" stroke="#16A34A" stroke-width="2"/>
+  <!-- Steam from pot -->
+  <path d="M232 84 Q230 78 232 72" stroke="#16A34A" stroke-width="1.2" opacity="0.4" fill="none" stroke-linecap="round"/>
+  <path d="M240 82 Q238 76 240 70" stroke="#16A34A" stroke-width="1.2" opacity="0.4" fill="none" stroke-linecap="round"/>
+  <path d="M248 84 Q246 78 248 72" stroke="#16A34A" stroke-width="1.2" opacity="0.4" fill="none" stroke-linecap="round"/>
+  <text x="210" y="200" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Preparing</text>
+  <text x="220" y="214" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">10:45 AM</text>
+
+  <!-- Stage 3: Out for Delivery -->
+  <circle cx="400" cy="163" r="18" fill="#F97316"/>
+  <!-- Scooter/bike icon -->
+  <circle cx="400" cy="163" r="5" fill="#FFFFFF"/>
+  <!-- Delivery scooter above -->
+  <rect x="384" y="88" width="32" height="18" rx="4" fill="none" stroke="#F97316" stroke-width="2"/>
+  <!-- Scooter body -->
+  <path d="M388 106 L384 118 L416 118 L412 106" fill="none" stroke="#F97316" stroke-width="1.5"/>
+  <!-- Wheels -->
+  <circle cx="388" cy="122" r="5" fill="none" stroke="#F97316" stroke-width="1.5"/>
+  <circle cx="412" cy="122" r="5" fill="none" stroke="#F97316" stroke-width="1.5"/>
+  <!-- Handlebar -->
+  <line x1="410" y1="88" x2="418" y2="80" stroke="#F97316" stroke-width="1.5"/>
+  <line x1="416" y1="80" x2="420" y2="80" stroke="#F97316" stroke-width="2"/>
+  <!-- Speed lines -->
+  <line x1="375" y1="100" x2="365" y2="100" stroke="#F97316" stroke-width="1" opacity="0.3"/>
+  <line x1="378" y1="108" x2="368" y2="108" stroke="#F97316" stroke-width="1" opacity="0.25"/>
+  <line x1="376" y1="116" x2="370" y2="116" stroke="#F97316" stroke-width="1" opacity="0.2"/>
+  <text x="360" y="200" font-family="Arial, sans-serif" font-size="9" fill="#1F2937" font-weight="600">Out for Delivery</text>
+  <text x="380" y="214" font-family="Arial, sans-serif" font-size="7" fill="#F97316" font-weight="600">Now</text>
+
+  <!-- Stage 4: Delivered -->
+  <circle cx="520" cy="163" r="18" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <circle cx="520" cy="163" r="3" fill="#E5E7EB"/>
+  <!-- House/door icon above -->
+  <path d="M508 110 L520 96 L532 110 L532 125 L508 125 Z" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <rect x="516" y="115" width="8" height="10" rx="1" fill="none" stroke="#9CA3AF" stroke-width="1"/>
+  <!-- Checkmark on house -->
+  <circle cx="535" cy="98" r="6" fill="#E5E7EB"/>
+  <path d="M532 98 L534 100 L538 96" stroke="#9CA3AF" stroke-width="1.2" fill="none"/>
+  <!-- Door knob -->
+  <circle cx="522" cy="120" r="1" fill="#9CA3AF"/>
+  <text x="497" y="200" font-family="Arial, sans-serif" font-size="9" fill="#9CA3AF">Delivered</text>
+  <text x="505" y="214" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">~6:00 PM</text>
+
+  <!-- Bottom: Phone showing tracking -->
+  <rect x="190" y="250" width="220" height="130" rx="16" fill="#1F2937"/>
+  <rect x="197" y="260" width="206" height="110" rx="12" fill="#FFFFFF"/>
+
+  <!-- Phone tracking content -->
+  <rect x="205" y="268" width="190" height="28" rx="6" fill="#F97316" opacity="0.1"/>
+  <circle cx="220" cy="282" r="8" fill="#F97316" opacity="0.2"/>
+  <!-- Scooter mini icon -->
+  <rect x="215" y="278" width="10" height="6" rx="2" fill="#F97316" opacity="0.6"/>
+  <circle cx="216" cy="286" r="2" fill="#F97316" opacity="0.4"/>
+  <circle cx="224" cy="286" r="2" fill="#F97316" opacity="0.4"/>
+  <text x="236" y="278" font-family="Arial, sans-serif" font-size="8" fill="#1F2937" font-weight="bold">On the way!</text>
+  <text x="236" y="290" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">Ravi is delivering your order</text>
+
+  <!-- ETA -->
+  <rect x="205" y="302" width="190" height="30" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="215" y="316" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">Estimated arrival</text>
+  <text x="215" y="328" font-family="Arial, sans-serif" font-size="14" fill="#1F2937" font-weight="bold">6:00 PM</text>
+  <!-- Clock icon -->
+  <circle cx="370" cy="318" r="10" fill="none" stroke="#F97316" stroke-width="1.5"/>
+  <line x1="370" y1="318" x2="370" y2="312" stroke="#F97316" stroke-width="1.5"/>
+  <line x1="370" y1="318" x2="375" y2="320" stroke="#F97316" stroke-width="1.5"/>
+
+  <!-- Mini map hint -->
+  <rect x="340" y="302" width="15" height="15" rx="3" fill="#16A34A" opacity="0.15"/>
+
+  <!-- Progress bar on phone -->
+  <rect x="205" y="338" width="190" height="4" rx="2" fill="#E5E7EB"/>
+  <rect x="205" y="338" width="140" height="4" rx="2" fill="#F97316"/>
+
+  <!-- Labels at bottom -->
+  <text x="248" y="395" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Live tracking for your customers</text>
+
+  <!-- Decorative -->
+  <circle cx="30" cy="50" r="20" fill="#F97316" opacity="0.06"/>
+  <circle cx="570" cy="50" r="18" fill="#16A34A" opacity="0.06"/>
+  <circle cx="560" cy="350" r="22" fill="#F97316" opacity="0.05"/>
+
+  <!-- Title -->
+  <text x="175" y="45" font-family="Arial, sans-serif" font-size="12" fill="#1F2937" font-weight="600">Track Every Order in Real-Time</text>
+</svg>

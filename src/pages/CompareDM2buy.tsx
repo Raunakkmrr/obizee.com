@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, X, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const CompareDM2buy = () => {
   const features = [
@@ -79,35 +81,13 @@ const CompareDM2buy = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee vs DM2buy — Best D2C Platform for Indian Sellers [2026 Comparison]</title>
-        <meta
-          name="description"
-          content="Compare oBizee vs DM2buy for Indian sellers. oBizee offers Delhivery/DTDC shipping, WhatsApp + Instagram selling, transparent pricing (1% max ₹10). DM2buy is Instagram-only with no logistics."
-        />
-        <meta
-          name="keywords"
-          content="oBizee vs DM2buy, DM2buy alternative, best D2C platform India, DM2buy review, Instagram selling platform India, dm2buy shipping"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee vs DM2buy — Which D2C Platform Wins for Indian Sellers?" />
-        <meta
-          property="og:description"
-          content="Feature-by-feature comparison: logistics, multi-channel, pricing, and more. See why oBizee wins on 14 of 19 features."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.obizee.com/compare/obizee-vs-dm2buy" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee vs DM2buy — Best D2C Platform for Indian Sellers [2026]" />
-        <meta
-          name="twitter:description"
-          content="Logistics, multi-channel, transparent pricing — oBizee wins on 14 of 19 features vs DM2buy."
-        />
-        <link rel="canonical" href="https://www.obizee.com/compare/obizee-vs-dm2buy" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Compare", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
+        { name: "oBizee vs DM2buy", url: "https://www.obizee.com/compare/obizee-vs-dm2buy" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

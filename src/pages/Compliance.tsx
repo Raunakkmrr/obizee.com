@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle2, FileCheck2, Landmark, ShieldCheck, Workflow } from "lucide-react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const Compliance = () => {
   const paymentFlow = [
@@ -55,31 +57,11 @@ const Compliance = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee Compliance | Legal Details, Payment Flow, PCI Checklist</title>
-        <meta
-          name="description"
-          content="oBizee compliance information for payment gateway onboarding: legal entity details, business model, payment flow, registration certificate support, and PCI DSS checklist."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee Compliance | Legal Details, Payment Flow, PCI Checklist" />
-        <meta
-          property="og:description"
-          content="Review oBizee merchant compliance details including legal name, address, payment process flow, and PCI DSS checklist."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/compliance" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee Compliance | Legal Details, Payment Flow, PCI Checklist" />
-        <meta
-          name="twitter:description"
-          content="Merchant compliance details for oBizee payment integration and onboarding."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://www.obizee.com/compliance" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Compliance", url: "https://www.obizee.com/compliance" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

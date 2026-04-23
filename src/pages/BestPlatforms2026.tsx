@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, X, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const BestPlatforms2026 = () => {
   const platforms = [
@@ -134,36 +136,13 @@ const BestPlatforms2026 = () => {
 
   return (
     <>
-      <Helmet>
-        <title>7 Best Ecommerce Platforms in India [2026] — Cheapest to Most Expensive</title>
-        <meta
-          name="description"
-          content="Ranked list of the 7 best ecommerce platforms for Indian sellers in 2026. Compare pricing, shipping integration, and features. oBizee, Dukaan, Shopify, Bikayi, Instamojo, WooCommerce, DM2buy."
-        />
-        <meta
-          name="keywords"
-          content="best ecommerce platform India 2026, cheapest online store India, D2C platform India, Shopify alternative India, best platform to sell online India"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="7 Best Ecommerce Platforms in India [2026] — Cheapest to Most Expensive" />
-        <meta
-          property="og:description"
-          content="We compared 7 ecommerce platforms for Indian sellers on pricing, shipping, and features. See which one is best for your business."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="7 Best Ecommerce Platforms in India [2026]" />
-        <meta
-          name="twitter:description"
-          content="Ranked list of the best ecommerce platforms for Indian sellers. Compare pricing, shipping, and features."
-        />
-        <link rel="canonical" href="https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Best Ecommerce Platforms India 2026", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
+      ]} />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={faqJsonLd} />
+      <JsonLd data={itemListJsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

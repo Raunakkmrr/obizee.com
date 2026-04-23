@@ -1,11 +1,13 @@
+"use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Testimonials from "@/components/Testimonials";
 import BrandDirectory from "@/components/BrandDirectory";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { verifiedBrands } from "@/data/verifiedBrands";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const CustomerTestimonialsPage = () => {
   const jsonLd = {
@@ -47,31 +49,11 @@ const CustomerTestimonialsPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee Customer Testimonials | Real Business Growth Stories</title>
-        <meta
-          name="description"
-          content="Read customer testimonials from Indian small businesses and Instagram sellers using oBizee to manage orders, stock, and operations."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="oBizee Customer Testimonials | Real Business Growth Stories" />
-        <meta
-          property="og:description"
-          content="See how real Indian businesses use oBizee to streamline day-to-day operations and grow online."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/customer-testimonials" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee Customer Testimonials | Real Business Growth Stories" />
-        <meta
-          name="twitter:description"
-          content="Real testimonials from Indian sellers and founders using oBizee to run business operations."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://www.obizee.com/customer-testimonials" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Customer Testimonials", url: "https://www.obizee.com/customer-testimonials" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

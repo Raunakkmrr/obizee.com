@@ -1,0 +1,136 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Left: Customer's phone with WhatsApp chat -->
+  <rect x="30" y="60" width="150" height="280" rx="18" fill="#1F2937"/>
+  <rect x="37" y="76" width="136" height="250" rx="12" fill="#FFFFFF"/>
+  <!-- Notch -->
+  <rect x="80" y="64" width="45" height="6" rx="3" fill="#374151"/>
+
+  <!-- WhatsApp header -->
+  <rect x="37" y="76" width="136" height="32" rx="12" fill="#25D366"/>
+  <rect x="37" y="90" width="136" height="18" fill="#25D366"/>
+  <!-- WhatsApp icon -->
+  <circle cx="56" cy="92" r="8" fill="#FFFFFF" opacity="0.2"/>
+  <text x="68" y="96" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF" font-weight="bold">Home Kitchen</text>
+
+  <!-- Chat bubbles -->
+  <!-- Customer message -->
+  <rect x="60" y="118" width="100" height="28" rx="8" fill="#DCF8C6"/>
+  <text x="67" y="130" font-family="Arial, sans-serif" font-size="7" fill="#1F2937">Hi! Can I order a</text>
+  <text x="67" y="140" font-family="Arial, sans-serif" font-size="7" fill="#1F2937">chocolate cake?</text>
+
+  <!-- Store reply with link -->
+  <rect x="44" y="154" width="115" height="40" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="0.8"/>
+  <text x="51" y="166" font-family="Arial, sans-serif" font-size="7" fill="#1F2937">Sure! Order here:</text>
+  <rect x="51" y="172" width="98" height="16" rx="4" fill="#F97316" opacity="0.1"/>
+  <text x="55" y="183" font-family="Arial, sans-serif" font-size="6" fill="#F97316">obizee.com/order/cake</text>
+
+  <!-- Customer click message -->
+  <rect x="70" y="202" width="90" height="22" rx="8" fill="#DCF8C6"/>
+  <text x="77" y="217" font-family="Arial, sans-serif" font-size="7" fill="#1F2937">Ordered! Thanks!</text>
+
+  <!-- Time stamps -->
+  <text x="138" y="146" font-family="Arial, sans-serif" font-size="5" fill="#9CA3AF">10:30</text>
+  <text x="138" y="192" font-family="Arial, sans-serif" font-size="5" fill="#9CA3AF">10:31</text>
+  <text x="138" y="222" font-family="Arial, sans-serif" font-size="5" fill="#9CA3AF">10:35</text>
+
+  <!-- Green checkmarks -->
+  <text x="150" y="146" font-family="Arial, sans-serif" font-size="5" fill="#25D366">vv</text>
+
+  <!-- Message input bar -->
+  <rect x="42" y="300" width="126" height="20" rx="10" fill="#F3F4F6"/>
+  <text x="52" y="314" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">Type a message...</text>
+
+  <!-- Arrow 1 to center -->
+  <path d="M185 200 C210 190 225 190 245 200" stroke="#F97316" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+  <polygon points="243,194 251,200 243,206" fill="#F97316"/>
+
+  <!-- Center: Order form on phone -->
+  <rect x="250" y="70" width="150" height="270" rx="18" fill="#1F2937"/>
+  <rect x="257" y="86" width="136" height="240" rx="12" fill="#FFFFFF"/>
+  <!-- Notch -->
+  <rect x="300" y="74" width="45" height="6" rx="3" fill="#374151"/>
+
+  <!-- Form header -->
+  <rect x="257" y="86" width="136" height="30" rx="12" fill="#F97316"/>
+  <rect x="257" y="100" width="136" height="16" fill="#F97316"/>
+  <text x="280" y="104" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">Order Form</text>
+
+  <!-- Order details -->
+  <rect x="265" y="124" width="120" height="24" rx="6" fill="#FFF7ED" stroke="#F97316" stroke-width="0.8"/>
+  <text x="272" y="140" font-family="Arial, sans-serif" font-size="8" fill="#1F2937" font-weight="600">1x Chocolate Cake</text>
+
+  <!-- Size selector -->
+  <text x="265" y="162" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">Size</text>
+  <rect x="265" y="166" width="36" height="18" rx="4" fill="#F3F4F6"/>
+  <text x="272" y="179" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">0.5 kg</text>
+  <rect x="305" y="166" width="36" height="18" rx="4" fill="#F97316"/>
+  <text x="314" y="179" font-family="Arial, sans-serif" font-size="7" fill="#FFFFFF">1 kg</text>
+  <rect x="345" y="166" width="36" height="18" rx="4" fill="#F3F4F6"/>
+  <text x="352" y="179" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">2 kg</text>
+
+  <!-- Price -->
+  <rect x="265" y="194" width="120" height="30" rx="6" fill="#FFFBEB" stroke="#FBBF24" stroke-width="0.8"/>
+  <text x="272" y="208" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">Total</text>
+  <text x="340" y="218" font-family="Arial, sans-serif" font-size="12" fill="#1F2937" font-weight="bold">Rs 800</text>
+
+  <!-- Delivery field -->
+  <text x="265" y="240" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">Delivery Date</text>
+  <rect x="265" y="244" width="120" height="20" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="272" y="258" font-family="Arial, sans-serif" font-size="8" fill="#1F2937">Tomorrow, 4:00 PM</text>
+
+  <!-- Address field -->
+  <text x="265" y="278" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">Address</text>
+  <rect x="265" y="282" width="120" height="20" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="272" y="296" font-family="Arial, sans-serif" font-size="7" fill="#1F2937">123 Main St, Mumbai</text>
+
+  <!-- Pay button -->
+  <rect x="270" y="308" width="110" height="24" rx="12" fill="#16A34A"/>
+  <text x="293" y="324" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">Pay Rs 800</text>
+
+  <!-- Arrow 2 to right -->
+  <path d="M405 200 C425 190 440 190 460 200" stroke="#F97316" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+  <polygon points="458,194 466,200 458,206" fill="#F97316"/>
+
+  <!-- Right: Kitchen/Chef preparing -->
+  <!-- Chef icon -->
+  <circle cx="520" cy="145" r="24" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.5"/>
+  <!-- Chef hat -->
+  <path d="M500 135 Q500 115 520 112 Q540 115 540 135" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.2"/>
+  <rect x="502" y="132" width="36" height="6" rx="3" fill="#FFFFFF" stroke="#1F2937" stroke-width="1"/>
+  <!-- Face -->
+  <circle cx="513" cy="147" r="2" fill="#1F2937"/>
+  <circle cx="527" cy="147" r="2" fill="#1F2937"/>
+  <path d="M515 155 Q520 160 525 155" stroke="#1F2937" stroke-width="1.2" fill="none"/>
+
+  <!-- Chef body/apron -->
+  <rect x="505" y="172" width="30" height="40" rx="6" fill="#FFFFFF" stroke="#1F2937" stroke-width="1"/>
+  <line x1="520" y1="172" x2="520" y2="212" stroke="#1F2937" stroke-width="0.8"/>
+
+  <!-- Cooking items -->
+  <!-- Bowl -->
+  <path d="M480 230 Q490 250 510 252 Q530 250 540 230" stroke="#9CA3AF" stroke-width="2" fill="#FFFFFF"/>
+  <path d="M490 235 Q510 240 530 235" stroke="#F97316" stroke-width="1" opacity="0.4" fill="none"/>
+  <!-- Whisk -->
+  <line x1="545" y1="220" x2="555" y2="200" stroke="#9CA3AF" stroke-width="2"/>
+  <path d="M555 200 Q558 190 555 185 M555 200 Q552 190 555 185" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
+
+  <!-- Checkmark badge -->
+  <circle cx="555" cy="150" r="16" fill="#16A34A"/>
+  <path d="M548 150 L553 155 L562 145" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Order confirmed text -->
+  <text x="483" y="280" font-family="Arial, sans-serif" font-size="8" fill="#16A34A" font-weight="600">Order Confirmed!</text>
+  <text x="490" y="293" font-family="Arial, sans-serif" font-size="7" fill="#9CA3AF">Preparing now...</text>
+
+  <!-- Flow labels -->
+  <text x="50" y="360" font-family="Arial, sans-serif" font-size="9" fill="#9CA3AF">1. Customer chats</text>
+  <text x="265" y="360" font-family="Arial, sans-serif" font-size="9" fill="#9CA3AF">2. Places order</text>
+  <text x="480" y="360" font-family="Arial, sans-serif" font-size="9" fill="#9CA3AF">3. You prepare</text>
+
+  <!-- Decorative -->
+  <circle cx="220" cy="50" r="15" fill="#F97316" opacity="0.06"/>
+  <circle cx="450" cy="60" r="12" fill="#25D366" opacity="0.08"/>
+</svg>

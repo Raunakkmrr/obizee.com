@@ -1,0 +1,127 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Left: Crafting elements -->
+  <!-- Yarn ball -->
+  <circle cx="80" cy="120" r="30" fill="#EF4444" opacity="0.6"/>
+  <circle cx="80" cy="120" r="28" fill="none" stroke="#DC2626" stroke-width="1" opacity="0.3"/>
+  <path d="M55 130 Q65 110 80 108 Q95 110 105 130" stroke="#DC2626" stroke-width="1" opacity="0.4" fill="none"/>
+  <path d="M60 115 Q70 100 80 98 Q90 100 100 115" stroke="#DC2626" stroke-width="1" opacity="0.3" fill="none"/>
+  <!-- Yarn tail -->
+  <path d="M105 135 Q120 140 125 130 Q130 120 145 125" stroke="#EF4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Crochet hook -->
+  <line x1="140" y1="100" x2="190" y2="150" stroke="#9CA3AF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M190 150 Q195 158 190 162" stroke="#9CA3AF" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Hook handle -->
+  <rect x="130" y="88" width="14" height="18" rx="4" fill="#F97316" opacity="0.5" transform="rotate(45, 137, 97)"/>
+
+  <!-- Handmade crochet bag -->
+  <path d="M50 200 L50 270 Q50 290 70 290 L140 290 Q160 290 160 270 L160 200 Z" fill="#FBBF24" opacity="0.3" stroke="#D4A574" stroke-width="1.5"/>
+  <!-- Bag texture pattern (crochet look) -->
+  <path d="M55 210 Q70 205 85 210 Q100 215 115 210 Q130 205 145 210 Q155 215 160 210" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M55 225 Q70 220 85 225 Q100 230 115 225 Q130 220 145 225 Q155 230 160 225" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M55 240 Q70 235 85 240 Q100 245 115 240 Q130 235 145 240 Q155 245 160 240" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M55 255 Q70 250 85 255 Q100 260 115 255 Q130 250 145 255 Q155 260 160 255" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M55 270 Q70 265 85 270 Q100 275 115 270 Q130 265 145 270 Q155 275 160 270" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <!-- Bag handles -->
+  <path d="M70 200 Q70 180 105 180 Q140 180 140 200" stroke="#D4A574" stroke-width="2.5" fill="none"/>
+
+  <!-- Paint brushes -->
+  <line x1="180" y1="200" x2="180" y2="280" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
+  <rect x="174" y="270" width="12" height="20" rx="2" fill="#3B82F6" opacity="0.6"/>
+  <line x1="200" y1="210" x2="200" y2="285" stroke="#D4A574" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="195" y="275" width="10" height="18" rx="2" fill="#EF4444" opacity="0.6"/>
+
+  <!-- Pottery wheel hint -->
+  <ellipse cx="100" cy="340" rx="40" ry="12" fill="#D4A574" opacity="0.2" stroke="#D4A574" stroke-width="1"/>
+  <rect x="85" y="310" width="30" height="30" rx="4" fill="#D4A574" opacity="0.15"/>
+  <path d="M85 325 Q100 318 115 325" stroke="#D4A574" stroke-width="1" opacity="0.4" fill="none"/>
+
+  <!-- Sparkle/star premium elements -->
+  <path d="M30 170 L33 163 L36 170 L33 177 Z" fill="#F97316" opacity="0.5"/>
+  <path d="M170 170 L172 166 L174 170 L172 174 Z" fill="#D4A574" opacity="0.6"/>
+  <path d="M130 310 L132 306 L134 310 L132 314 Z" fill="#F97316" opacity="0.4"/>
+  <circle cx="210" cy="175" r="2" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="45" cy="280" r="2" fill="#F97316" opacity="0.5"/>
+  <path d="M20 240 L22 236 L24 240 L22 244 Z" fill="#D4A574" opacity="0.4"/>
+
+  <!-- Connecting dotted line -->
+  <path d="M230 200 C260 180 290 175 320 190" stroke="#F97316" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+  <polygon points="318,184 326,190 318,196" fill="#F97316"/>
+
+  <!-- Sparkles on path -->
+  <path d="M260 185 L262 181 L264 185 L262 189 Z" fill="#F97316" opacity="0.4"/>
+  <path d="M295 178 L297 174 L299 178 L297 182 Z" fill="#FBBF24" opacity="0.5"/>
+
+  <!-- Right: Smartphone with product gallery -->
+  <rect x="340" y="30" width="220" height="350" rx="22" fill="#1F2937"/>
+  <rect x="348" y="48" width="204" height="316" rx="14" fill="#FFFFFF"/>
+  <!-- Notch -->
+  <rect x="420" y="34" width="60" height="8" rx="4" fill="#374151"/>
+
+  <!-- Phone header -->
+  <rect x="348" y="48" width="204" height="36" rx="14" fill="#D4A574"/>
+  <rect x="348" y="64" width="204" height="20" fill="#D4A574"/>
+  <text x="388" y="72" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF">Artisan Studio</text>
+  <!-- Star icon -->
+  <path d="M370 68 L372 63 L374 68 L372 73 Z" fill="#FFFFFF" opacity="0.6"/>
+
+  <!-- Product card 1 - Crochet Bag -->
+  <rect x="356" y="92" width="92" height="110" rx="10" fill="#FFFBEB" stroke="#E5E7EB" stroke-width="0.8"/>
+  <rect x="362" y="98" width="80" height="60" rx="6" fill="#FEF3C7"/>
+  <!-- Mini bag icon -->
+  <path d="M380 118 L380 148 Q380 152 384 152 L424 152 Q428 152 428 148 L428 118 Z" fill="#FBBF24" opacity="0.4"/>
+  <path d="M388 118 Q388 108 404 108 Q420 108 420 118" stroke="#D4A574" stroke-width="1.5" fill="none"/>
+  <text x="368" y="172" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Crochet Bag</text>
+  <text x="368" y="184" font-family="Arial, sans-serif" font-size="8" fill="#D4A574" font-weight="bold">Rs 650</text>
+  <rect x="416" y="176" width="26" height="14" rx="4" fill="#F97316" opacity="0.15"/>
+  <text x="420" y="186" font-family="Arial, sans-serif" font-size="6" fill="#F97316">New</text>
+
+  <!-- Product card 2 - Painted Mug -->
+  <rect x="454" y="92" width="92" height="110" rx="10" fill="#FFFBEB" stroke="#E5E7EB" stroke-width="0.8"/>
+  <rect x="460" y="98" width="80" height="60" rx="6" fill="#FEE2E2"/>
+  <!-- Mini mug icon -->
+  <rect x="478" y="112" width="26" height="30" rx="4" fill="#FFFFFF" stroke="#EF4444" stroke-width="1.5"/>
+  <path d="M504 118 Q514 118 514 128 Q514 138 504 138" stroke="#EF4444" stroke-width="1.5" fill="none"/>
+  <!-- Pattern on mug -->
+  <circle cx="490" cy="125" r="3" fill="#EF4444" opacity="0.3"/>
+  <circle cx="486" cy="133" r="2" fill="#3B82F6" opacity="0.3"/>
+  <text x="460" y="172" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Painted Mug</text>
+  <text x="460" y="184" font-family="Arial, sans-serif" font-size="8" fill="#D4A574" font-weight="bold">Rs 350</text>
+
+  <!-- Product card 3 - Earrings -->
+  <rect x="356" y="210" width="92" height="110" rx="10" fill="#FFFBEB" stroke="#E5E7EB" stroke-width="0.8"/>
+  <rect x="362" y="216" width="80" height="60" rx="6" fill="#DBEAFE"/>
+  <!-- Mini earring icon -->
+  <line x1="390" y1="232" x2="390" y2="240" stroke="#D4A574" stroke-width="1.5"/>
+  <circle cx="390" cy="248" r="6" fill="#D4A574" opacity="0.6"/>
+  <line x1="412" y1="232" x2="412" y2="240" stroke="#D4A574" stroke-width="1.5"/>
+  <circle cx="412" cy="248" r="6" fill="#D4A574" opacity="0.6"/>
+  <text x="362" y="290" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Macrame Earrings</text>
+  <text x="362" y="302" font-family="Arial, sans-serif" font-size="8" fill="#D4A574" font-weight="bold">Rs 280</text>
+
+  <!-- Product card 4 - Candle -->
+  <rect x="454" y="210" width="92" height="110" rx="10" fill="#FFFBEB" stroke="#E5E7EB" stroke-width="0.8"/>
+  <rect x="460" y="216" width="80" height="60" rx="6" fill="#DCFCE7"/>
+  <!-- Mini candle icon -->
+  <rect x="488" y="240" width="16" height="28" rx="4" fill="#FBBF24" opacity="0.5"/>
+  <path d="M494 240 L496 232 L498 240" fill="#F97316" opacity="0.6"/>
+  <!-- Flame -->
+  <ellipse cx="496" cy="230" rx="4" ry="6" fill="#F97316" opacity="0.4"/>
+  <text x="460" y="290" font-family="Arial, sans-serif" font-size="7" fill="#1F2937" font-weight="600">Soy Candle</text>
+  <text x="460" y="302" font-family="Arial, sans-serif" font-size="8" fill="#D4A574" font-weight="bold">Rs 420</text>
+
+  <!-- Browse all button -->
+  <rect x="380" y="330" width="140" height="26" rx="13" fill="#D4A574"/>
+  <text x="410" y="348" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">View All Products</text>
+
+  <!-- Labels -->
+  <text x="62" y="378" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Your Workshop</text>
+  <text x="400" y="395" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF">Your Online Gallery</text>
+
+  <!-- Decorative -->
+  <circle cx="290" cy="50" r="15" fill="#D4A574" opacity="0.06"/>
+  <circle cx="300" cy="380" r="20" fill="#F97316" opacity="0.05"/>
+</svg>

@@ -1,0 +1,118 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF7ED" rx="0"/>
+
+  <!-- Left: Folded clothes stack -->
+  <rect x="40" y="140" width="80" height="16" rx="4" fill="#3B82F6" opacity="0.7"/>
+  <rect x="44" y="124" width="76" height="16" rx="4" fill="#EF4444" opacity="0.7"/>
+  <rect x="48" y="108" width="72" height="16" rx="4" fill="#16A34A" opacity="0.7"/>
+  <rect x="46" y="96" width="68" height="12" rx="4" fill="#F59E0B" opacity="0.7"/>
+  <!-- Fold lines -->
+  <line x1="60" y1="112" x2="110" y2="112" stroke="#15803D" stroke-width="0.8" opacity="0.4"/>
+  <line x1="56" y1="128" x2="112" y2="128" stroke="#DC2626" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Arrow: clothes to box -->
+  <path d="M130 130 C150 120 160 120 180 130" stroke="#F97316" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+  <polygon points="178,124 186,130 178,136" fill="#F97316"/>
+
+  <!-- Center: Shipping box -->
+  <rect x="195" y="90" width="130" height="110" rx="6" fill="#D4A574" opacity="0.3"/>
+  <rect x="200" y="95" width="120" height="100" rx="4" fill="#FBBF24" opacity="0.2"/>
+  <!-- Box edges -->
+  <rect x="200" y="95" width="120" height="100" rx="4" fill="none" stroke="#92400E" stroke-width="1.5"/>
+  <!-- Box flap lines -->
+  <line x1="200" y1="120" x2="320" y2="120" stroke="#92400E" stroke-width="1"/>
+  <path d="M200 120 L230 95" stroke="#92400E" stroke-width="1"/>
+  <path d="M260 120 L260 95" stroke="#92400E" stroke-width="1"/>
+  <path d="M320 120 L290 95" stroke="#92400E" stroke-width="1"/>
+  <!-- Tape -->
+  <rect x="245" y="85" width="30" height="40" rx="2" fill="#F97316" opacity="0.4"/>
+  <line x1="260" y1="85" x2="260" y2="125" stroke="#F97316" stroke-width="0.8"/>
+
+  <!-- Shipping label on box -->
+  <rect x="210" y="130" width="70" height="50" rx="4" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="218" y="144" font-family="Arial, sans-serif" font-size="6" fill="#1F2937" font-weight="bold">SHIP TO:</text>
+  <text x="218" y="153" font-family="Arial, sans-serif" font-size="5" fill="#9CA3AF">Priya Sharma</text>
+  <text x="218" y="160" font-family="Arial, sans-serif" font-size="5" fill="#9CA3AF">Mumbai, MH</text>
+  <!-- Barcode (AWB) -->
+  <rect x="215" y="164" width="2" height="10" fill="#1F2937"/>
+  <rect x="219" y="164" width="1" height="10" fill="#1F2937"/>
+  <rect x="222" y="164" width="3" height="10" fill="#1F2937"/>
+  <rect x="227" y="164" width="1" height="10" fill="#1F2937"/>
+  <rect x="230" y="164" width="2" height="10" fill="#1F2937"/>
+  <rect x="234" y="164" width="1" height="10" fill="#1F2937"/>
+  <rect x="237" y="164" width="3" height="10" fill="#1F2937"/>
+  <rect x="242" y="164" width="1" height="10" fill="#1F2937"/>
+  <rect x="245" y="164" width="2" height="10" fill="#1F2937"/>
+  <rect x="249" y="164" width="1.5" height="10" fill="#1F2937"/>
+  <rect x="253" y="164" width="2" height="10" fill="#1F2937"/>
+  <rect x="257" y="164" width="1" height="10" fill="#1F2937"/>
+  <rect x="260" y="164" width="3" height="10" fill="#1F2937"/>
+  <rect x="265" y="164" width="1" height="10" fill="#1F2937"/>
+  <rect x="268" y="164" width="2" height="10" fill="#1F2937"/>
+
+  <!-- oBizee tag on box -->
+  <rect x="295" y="130" width="20" height="14" rx="3" fill="#F97316"/>
+  <text x="298" y="140" font-family="Arial, sans-serif" font-size="6" fill="#FFFFFF" font-weight="bold">oB</text>
+
+  <!-- Arrow: box to truck -->
+  <path d="M330 150 C355 145 370 145 395 150" stroke="#F97316" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+  <polygon points="393,144 401,150 393,156" fill="#F97316"/>
+
+  <!-- Right: Delivery truck -->
+  <rect x="410" y="115" width="110" height="65" rx="6" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.5"/>
+  <!-- Truck cabin -->
+  <rect x="490" y="100" width="40" height="80" rx="6" fill="#F97316" opacity="0.2" stroke="#1F2937" stroke-width="1.5"/>
+  <!-- Cabin window -->
+  <rect x="498" y="108" width="24" height="20" rx="4" fill="#BFDBFE"/>
+  <!-- Truck body text -->
+  <text x="435" y="152" font-family="Arial, sans-serif" font-size="10" fill="#9CA3AF" font-weight="600">Delivery</text>
+  <!-- Truck wheels -->
+  <circle cx="440" cy="185" r="12" fill="#1F2937"/>
+  <circle cx="440" cy="185" r="6" fill="#9CA3AF"/>
+  <circle cx="510" cy="185" r="12" fill="#1F2937"/>
+  <circle cx="510" cy="185" r="6" fill="#9CA3AF"/>
+  <!-- Ground line -->
+  <line x1="30" y1="197" x2="550" y2="197" stroke="#E5E7EB" stroke-width="1.5"/>
+
+  <!-- Bottom: Progress bar -->
+  <rect x="60" y="260" width="480" height="4" rx="2" fill="#E5E7EB"/>
+  <!-- Filled progress (2/3) -->
+  <rect x="60" y="260" width="320" height="4" rx="2" fill="#16A34A"/>
+
+  <!-- Stage 1: Packed -->
+  <circle cx="140" cy="262" r="12" fill="#16A34A"/>
+  <path d="M134 262 L138 266 L146 258" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="118" y="290" font-family="Arial, sans-serif" font-size="10" fill="#1F2937" font-weight="600">Packed</text>
+  <!-- Box icon -->
+  <rect x="132" y="300" width="16" height="12" rx="2" fill="#16A34A" opacity="0.2"/>
+  <line x1="132" y1="305" x2="148" y2="305" stroke="#16A34A" stroke-width="0.8"/>
+
+  <!-- Stage 2: Shipped -->
+  <circle cx="300" cy="262" r="12" fill="#16A34A"/>
+  <path d="M294 262 L298 266 L306 258" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="278" y="290" font-family="Arial, sans-serif" font-size="10" fill="#1F2937" font-weight="600">Shipped</text>
+  <!-- Truck mini icon -->
+  <rect x="292" y="300" width="16" height="10" rx="2" fill="#16A34A" opacity="0.2"/>
+  <circle cx="296" cy="312" r="2" fill="#16A34A" opacity="0.4"/>
+  <circle cx="304" cy="312" r="2" fill="#16A34A" opacity="0.4"/>
+
+  <!-- Stage 3: Delivered -->
+  <circle cx="460" cy="262" r="12" fill="#FFFFFF" stroke="#F97316" stroke-width="2.5"/>
+  <circle cx="460" cy="262" r="5" fill="#F97316"/>
+  <text x="434" y="290" font-family="Arial, sans-serif" font-size="10" fill="#1F2937" font-weight="600">Delivered</text>
+  <!-- House mini icon -->
+  <path d="M452 304 L460 296 L468 304 L468 314 L452 314 Z" fill="#F97316" opacity="0.2" stroke="#F97316" stroke-width="0.8"/>
+  <rect x="457" y="308" width="6" height="6" rx="1" fill="#F97316" opacity="0.4"/>
+
+  <!-- Status line connecting stages -->
+  <line x1="152" y1="262" x2="288" y2="262" stroke="#16A34A" stroke-width="0" opacity="0"/>
+  <line x1="312" y1="262" x2="448" y2="262" stroke="#E5E7EB" stroke-width="0" opacity="0"/>
+
+  <!-- Decorative -->
+  <circle cx="560" cy="60" r="25" fill="#F97316" opacity="0.06"/>
+  <circle cx="30" cy="60" r="18" fill="#F97316" opacity="0.08"/>
+
+  <!-- Title area -->
+  <text x="200" y="50" font-family="Arial, sans-serif" font-size="13" fill="#9CA3AF">Track every shipment in real-time</text>
+</svg>

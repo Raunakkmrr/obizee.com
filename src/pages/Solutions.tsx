@@ -1,10 +1,12 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { Globe, Smartphone, Monitor, ArrowRight, Download, ExternalLink } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const Solutions = () => {
   const websiteTemplates = [
@@ -82,35 +84,11 @@ const Solutions = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Complete Business Solution Suite | oBizee</title>
-        <meta
-          name="description"
-          content="Transform your business with oBizee's complete solution suite. Get professional website templates, powerful mobile apps, and comprehensive business management tools. Start growing today!"
-        />
-        <meta
-          name="keywords"
-          content="business solutions, website templates, mobile apps, business management, e-commerce, retail, service business, portfolio website"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Complete Business Solution Suite | oBizee" />
-        <meta
-          property="og:description"
-          content="Transform your business with oBizee's complete solution suite. Get professional website templates, powerful mobile apps, and comprehensive business management tools."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/solutions" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Complete Business Solution Suite | oBizee" />
-        <meta
-          name="twitter:description"
-          content="Transform your business with oBizee's complete solution suite. Get professional website templates, powerful mobile apps, and comprehensive business management tools."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://www.obizee.com/solutions" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Solutions", url: "https://www.obizee.com/solutions" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -147,7 +125,7 @@ const Solutions = () => {
                 Build stunning, mobile-responsive online stores and business websites effortlessly with our diverse collection of
                 customizable templates. Get online faster, showcase your products, and connect with customers globally.
               </p>
-              <Link to="/templates" aria-label="Browse all website templates">
+              <Link href="/templates" aria-label="Browse all website templates">
                 <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all hover-scale">
                   Browse All Website Templates
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
@@ -168,7 +146,7 @@ const Solutions = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{template.title}</h3>
                     <p className="text-gray-600 mb-4">{template.description}</p>
-                    <Link to="/templates" aria-label={`Preview ${template.title} template`}>
+                    <Link href="/templates" aria-label={`Preview ${template.title} template`}>
                       <Button variant="outline" className="w-full group-hover:bg-blue-50 group-hover:border-blue-300">
                         Preview Template
                       </Button>
@@ -272,7 +250,7 @@ const Solutions = () => {
                 and inventory control to customer relationship management and financial reporting, take command of your entire business with
                 ease.
               </p>
-              <Link to="/features" aria-label="Explore dashboard features">
+              <Link href="/features" aria-label="Explore dashboard features">
                 <Button className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all hover-scale">
                   Explore Dashboard Features
                   <ExternalLink className="ml-2 h-5 w-5" aria-hidden="true" />

@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { RefreshCcw, Clock, AlertCircle, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import JsonLd from "@/components/JsonLd";
 
 const RefundPolicy = () => {
   const sections = [
@@ -97,35 +99,11 @@ const RefundPolicy = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Refund & Cancellation Policy | oBizee</title>
-        <meta
-          name="description"
-          content="Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
-        />
-        <meta
-          name="keywords"
-          content="refund policy, cancellation policy, returns, refund processing, product returns, money-back guarantee"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Refund & Cancellation Policy | oBizee" />
-        <meta
-          property="og:description"
-          content="Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com/refund-policy" />
-        <meta property="og:image" content="https://www.obizee.com/refund-policy-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Refund & Cancellation Policy | oBizee" />
-        <meta
-          name="twitter:description"
-          content="Learn about oBizee's refund and cancellation policy. Understand our guidelines for cancellations, returns, and refund processing."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/refund-policy-twitter.jpg" />
-        <link rel="canonical" href="https://www.obizee.com/refund-policy" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://www.obizee.com/" },
+        { name: "Refund Policy", url: "https://www.obizee.com/refund-policy" },
+      ]} />
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-white">
         <Navigation />

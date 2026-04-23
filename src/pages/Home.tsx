@@ -1,10 +1,11 @@
+"use client";
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
-import { Helmet } from "react-helmet-async";
+import JsonLd from "@/components/JsonLd";
 import {
   ArrowRight,
   CheckCircle2,
@@ -63,34 +64,7 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>oBizee - Business Management Platform | Streamline Your Business Operations</title>
-        <meta
-          name="description"
-          content="oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Download the app to get started."
-        />
-        <meta
-          name="keywords"
-          content="business management, inventory management, payment processing, customer management, business software, business tools, business platform, business solutions"
-        />
-        <meta property="og:title" content="oBizee - Business Management Platform | Streamline Your Business Operations" />
-        <meta
-          property="og:description"
-          content="oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Download the app to get started."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.obizee.com" />
-        <meta property="og:image" content="https://www.obizee.com/Obizee.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="oBizee - Business Management Platform | Streamline Your Business Operations" />
-        <meta
-          name="twitter:description"
-          content="oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base. Download the app to get started."
-        />
-        <meta name="twitter:image" content="https://www.obizee.com/Obizee.png" />
-        <link rel="canonical" href="https://www.obizee.com" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <JsonLd data={jsonLd} />
 
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50">
         <Navigation />
@@ -123,7 +97,7 @@ const Home = () => {
                   variant="outline"
                   className="border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-6 rounded-xl text-lg font-semibold"
                 >
-                  <Link to="/solutions" aria-label="View our solutions">
+                  <Link href="/solutions" aria-label="View our solutions">
                     View Solutions
                   </Link>
                 </Button>
