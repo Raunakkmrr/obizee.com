@@ -5,7 +5,6 @@ import { useSearchParams } from "next/navigation";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import JsonLd from "@/components/JsonLd";
 
 // Lazy load below-fold components — they don't need to be in the initial bundle
 const SocialProofBar = lazy(() => import("@/components/SocialProofBar"));
@@ -26,18 +25,8 @@ export default function HomePageClient() {
     }
   }, [searchParams]);
 
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "oBizee - Order and Business Management for Indian Sellers",
-    description: "oBizee helps Indian small businesses manage orders, inventory, payments, shipping, and customer communication from one platform.",
-    url: "https://www.obizee.com",
-    inLanguage: "en-IN",
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      <JsonLd data={webPageJsonLd} />
       <Navigation />
       <Hero />
       <Suspense fallback={null}>

@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const CompareWoocommercePage = dynamic(
-  () => import("@/pages/CompareWoocommerce"),
-  { ssr: false }
+  () => import("@/pages/CompareWoocommerce")
 );
 
 export const metadata: Metadata = {

@@ -17,15 +17,15 @@ const Hero = () => {
       className="relative min-h-[calc(100vh-4rem)] sm:min-h-screen bg-gradient-to-b from-white via-orange-50/30 to-white overflow-hidden"
       aria-label="Hero section"
     >
-      {/* Static gradient orbs — no JS needed */}
+      {/* Static gradient orbs — pure CSS, no animation to avoid repaints */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <div
-          className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full animate-pulse"
+          className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full"
           style={{ background: "radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%)" }}
         />
         <div
-          className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full animate-pulse"
-          style={{ background: "radial-gradient(circle, rgba(249,115,22,0.06) 0%, transparent 70%)", animationDelay: "2s" }}
+          className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(249,115,22,0.06) 0%, transparent 70%)" }}
         />
       </div>
 
@@ -62,7 +62,7 @@ const Hero = () => {
             <AppDownloadTrigger>
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold rounded-2xl shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300"
+                className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold rounded-2xl shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/30 transition-shadow duration-300"
                 aria-label="Download oBizee app"
               >
                 Download App
@@ -73,7 +73,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl border-2 border-gray-300 text-gray-700 hover:border-orange-400 hover:text-orange-600 hover:bg-orange-50 rounded-2xl transition-all duration-300"
+                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl border-2 border-gray-300 text-gray-700 hover:border-orange-400 hover:text-orange-600 hover:bg-orange-50 rounded-2xl transition-colors duration-300"
               >
                 <Play className="mr-3 h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
                 See How It Works

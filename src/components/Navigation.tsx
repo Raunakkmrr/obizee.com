@@ -25,7 +25,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+    <nav className="bg-white border-b border-gray-200/50 sticky top-0 z-50" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
@@ -52,7 +52,7 @@ const Navigation = () => {
             <div className="ml-10 flex items-center space-x-8">
               <Link
                 href="/business-journey"
-                className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   isActive("/business-journey")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
                     : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
@@ -65,7 +65,7 @@ const Navigation = () => {
               <div className="relative group" onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)}>
                 <Link
                   href="/solutions"
-                  className={`px-4 py-2 text-sm font-medium flex items-center transition-all rounded-lg ${
+                  className={`px-4 py-2 text-sm font-medium flex items-center transition-colors rounded-lg ${
                     isActive("/solutions")
                       ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
                       : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
@@ -79,7 +79,7 @@ const Navigation = () => {
 
                 {/* Solutions Dropdown */}
                 <div
-                  className={`absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-lg border border-gray-100 transition-all duration-200 ${
+                  className={`absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-lg border border-gray-100 transition-colors duration-200 ${
                     isSolutionsOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-2"
                   }`}
                   role="menu"
@@ -103,7 +103,7 @@ const Navigation = () => {
 
               <Link
                 href="/pricing"
-                className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   isActive("/pricing")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
                     : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
@@ -115,7 +115,7 @@ const Navigation = () => {
 
               <Link
                 href="/success-stories"
-                className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   isActive("/success-stories")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
                     : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
@@ -127,7 +127,7 @@ const Navigation = () => {
 
               <Link
                 href="/help"
-                className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   isActive("/help")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
                     : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
@@ -139,7 +139,7 @@ const Navigation = () => {
 
               <Link
                 href="/blog"
-                className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
+                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   isActive("/blog")
                     ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
                     : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
@@ -155,7 +155,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <AppDownloadTrigger>
               <Button
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-xl shadow-lg hover:shadow-xl transition-colors hover:scale-105"
                 aria-label="Download oBizee mobile app"
               >
                 Download App
@@ -167,7 +167,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-orange-600 p-1.5 sm:p-2 rounded-lg hover:bg-orange-50 transition-all"
+              className="text-gray-700 hover:text-orange-600 p-1.5 sm:p-2 rounded-lg hover:bg-orange-50 transition-colors"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
               aria-label="Toggle mobile menu"
@@ -184,7 +184,7 @@ const Navigation = () => {
           <div className="px-2 pt-1.5 pb-2.5 space-y-1 sm:px-3 bg-white/95 backdrop-blur-sm border-t border-gray-100">
             <Link
               href="/business-journey"
-              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isActive("/business-journey") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -194,7 +194,7 @@ const Navigation = () => {
             </Link>
             <Link
               href="/solutions"
-              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isActive("/solutions") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -204,7 +204,7 @@ const Navigation = () => {
             </Link>
             <Link
               href="/pricing"
-              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isActive("/pricing") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -214,7 +214,7 @@ const Navigation = () => {
             </Link>
             <Link
               href="/success-stories"
-              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isActive("/success-stories") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -224,7 +224,7 @@ const Navigation = () => {
             </Link>
             <Link
               href="/help"
-              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isActive("/help") ? "text-orange-400 bg-orange-500/10" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -234,7 +234,7 @@ const Navigation = () => {
             </Link>
             <Link
               href="/blog"
-              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isActive("/blog") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
               }`}
               role="menuitem"
@@ -246,7 +246,7 @@ const Navigation = () => {
               <div className="flex flex-col space-y-2 px-3">
                 <AppDownloadTrigger>
                   <Button
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white justify-start rounded-xl w-full transition-all"
+                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white justify-start rounded-xl w-full transition-colors"
                     role="menuitem"
                     aria-label="Download oBizee mobile app"
                     onClick={() => setIsMenuOpen(false)}

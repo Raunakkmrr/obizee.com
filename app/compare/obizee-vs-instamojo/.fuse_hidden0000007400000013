@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 const CompareInstamojoPage = dynamic(
-  () => import("@/pages/CompareInstamojo"),
-  { ssr: false }
+  () => import("@/pages/CompareInstamojo")
 );
 
 export const metadata: Metadata = {
