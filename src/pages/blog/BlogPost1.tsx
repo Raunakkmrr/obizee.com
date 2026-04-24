@@ -55,7 +55,7 @@ const BlogPost1 = () => {
         and search for "oBizee."
       </p>
       <div className="not-prose my-6 flex justify-center">
-        <img src="/how-to/11.PNG" alt="oBizee welcome screen after downloading the app" className="rounded-2xl shadow-lg border border-gray-200 max-w-[240px] w-full" loading="lazy" />
+        <img src="/how-to/11.jpg" alt="oBizee welcome screen after downloading the app" className="rounded-2xl shadow-lg border border-gray-200 max-w-[240px] w-full" loading="lazy" />
       </div>
       <Callout type="info">The app is lightweight and works well even on older phones with limited storage. No laptop needed.</Callout>
 
@@ -70,8 +70,8 @@ const BlogPost1 = () => {
         <li><strong>Instagram or social media link</strong> — optional, but helpful for customers</li>
       </ul>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
-        <img src="/how-to/13.PNG" alt="oBizee business information signup form" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/16.PNG" alt="oBizee account review before creating" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/13.jpg" alt="oBizee business information signup form" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/16.jpg" alt="oBizee account review before creating" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
       <p>
         Once you fill in these details, your account is ready. oBizee automatically generates a
@@ -92,8 +92,8 @@ const BlogPost1 = () => {
         <li>Variants if applicable, such as size or color options</li>
       </ul>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
-        <img src="/how-to/20.PNG" alt="Category created successfully with option to add products" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/22.PNG" alt="Adding a product with images, name, and price on oBizee" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/20.jpg" alt="Category created successfully with option to add products" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/22.jpg" alt="Adding a product with images, name, and price on oBizee" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
       <Callout type="tip">Clear images and honest, detailed descriptions build trust. A well-lit photo from your phone works perfectly — no professional photography needed.</Callout>
 
@@ -103,9 +103,9 @@ const BlogPost1 = () => {
         set your brand colors, add your logo, and arrange how products appear on your storefront.
       </p>
       <div className="not-prose my-6 grid grid-cols-3 gap-3 max-w-lg mx-auto">
-        <img src="/how-to/29.PNG" alt="oBizee settings with website customization options" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/30.PNG" alt="Website settings for template, content, and brand colors" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/31.PNG" alt="Store template selection on oBizee" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/29.jpg" alt="oBizee settings with website customization options" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/30.jpg" alt="Website settings for template, content, and brand colors" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/31.jpg" alt="Store template selection on oBizee" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
       <p>
         Everything happens within the app — no code, no complicated builders. Your store is automatically mobile-friendly. For the full visual walkthrough,
@@ -124,8 +124,8 @@ const BlogPost1 = () => {
         <li>Include it in your <strong>business card or marketing materials</strong></li>
       </ul>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
-        <img src="/how-to/34.PNG" alt="Order link with QR code generated and ready to share" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/35.PNG" alt="What customers see when they open your oBizee store link" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/34.jpg" alt="Order link with QR code generated and ready to share" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/35.jpg" alt="What customers see when they open your oBizee store link" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
 
       {/* Pricing highlight */}
@@ -165,8 +165,8 @@ const BlogPost1 = () => {
         The platform integrates with <strong>Delhivery and DTDC</strong> so you can generate AWB numbers, schedule pickups, and provide live tracking to customers.
       </p>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
-        <img src="/how-to/39.PNG" alt="Orders dashboard showing pending and completed orders" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/41.PNG" alt="Creating a shipment with Delhivery integration" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/39.jpg" alt="Orders dashboard showing pending and completed orders" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/41.jpg" alt="Creating a shipment with Delhivery integration" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
 
       <div className="not-prose my-8 bg-gray-50 rounded-2xl p-6 border border-gray-200 text-center">

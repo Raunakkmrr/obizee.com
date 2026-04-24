@@ -135,7 +135,7 @@ const HinglishPost3 = () => {
         halka hai — purane Android phones mein bhi smooth chalta hai. Download karein aur open karein.
       </p>
       <div className="not-prose my-6 flex justify-center">
-        <img src="/how-to/11.PNG" alt="oBizee app download screen" className="rounded-2xl shadow-lg border border-gray-200 max-w-[240px] w-full" loading="lazy" />
+        <img src="/how-to/11.jpg" alt="oBizee app download screen" className="rounded-2xl shadow-lg border border-gray-200 max-w-[240px] w-full" loading="lazy" />
       </div>
 
       <StepCard icon={Smartphone} number="2" title="Phone Se Account Banayein" />
@@ -145,8 +145,8 @@ const HinglishPost3 = () => {
         link milega — jaise <strong>meristore.obizee.com</strong>.
       </p>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
-        <img src="/how-to/13.PNG" alt="oBizee mobile signup" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/16.PNG" alt="oBizee account review" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/13.jpg" alt="oBizee mobile signup" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/16.jpg" alt="oBizee account review" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
 
       <StepCard icon={Camera} number="3" title="Phone Se Product Photos Lein Aur Upload Karein" />
@@ -162,8 +162,8 @@ const HinglishPost3 = () => {
         <li>Variants add karein — size, color jo bhi applicable ho</li>
       </ul>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
-        <img src="/how-to/20.PNG" alt="Category banana phone se" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/22.PNG" alt="Product add karna mobile se" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/20.jpg" alt="Category banana phone se" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/22.jpg" alt="Product add karna mobile se" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
       <Callout type="tip">
         Photo tip: Natural lighting (window ke paas) mein best photos aate hain. White bedsheet ya

@@ -33,7 +33,7 @@ const Navigation = () => {
             <Link href="/" className="flex items-center transition-transform hover:scale-105" aria-label="oBizee Home">
               <div className="w-12 h-12 mr-3">
                 <img
-                  src="/lovable-uploads/2941a262-6754-4343-a36c-43a56c320d5d.png"
+                  src="/lovable-uploads/logo-96.png"
                   alt="oBizee Logo"
                   className="w-full h-full object-contain"
                   width="48"

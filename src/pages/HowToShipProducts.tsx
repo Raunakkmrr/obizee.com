@@ -193,13 +193,13 @@ const HowToShipProducts = () => {
             </p>
             <div className="grid grid-cols-2 gap-4 max-w-[560px] mx-auto justify-items-center mt-6">
               <img
-                src="/how-to/29.PNG"
+                src="/how-to/29.jpg"
                 alt="oBizee settings menu showing Shipping Settings option"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/17.PNG"
+                src="/how-to/17.jpg"
                 alt="oBizee dashboard with Delhivery integration setup banner"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -222,13 +222,13 @@ const HowToShipProducts = () => {
             </p>
             <div className="grid grid-cols-2 gap-4 max-w-[560px] mx-auto justify-items-center mt-6">
               <img
-                src="/how-to/39.PNG"
+                src="/how-to/39.jpg"
                 alt="oBizee orders dashboard showing new pending orders with details"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/40.PNG"
+                src="/how-to/40.jpg"
                 alt="oBizee order details showing customer info, delivery timeline, and Create Shipment button"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -251,7 +251,7 @@ const HowToShipProducts = () => {
             </p>
             <div className="flex justify-center mt-6">
               <img
-                src="/how-to/41.PNG"
+                src="/how-to/41.jpg"
                 alt="oBizee Create Shipment screen showing pickup address, package dimensions, weight, and shipping mode options with Delhivery pricing"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -274,7 +274,7 @@ const HowToShipProducts = () => {
             </p>
             <div className="flex justify-center mt-6">
               <img
-                src="/how-to/41.PNG"
+                src="/how-to/41.jpg"
                 alt="Delhivery shipping modes on oBizee showing Surface and Express pricing with delivery times"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -320,7 +320,7 @@ const HowToShipProducts = () => {
             </p>
             <div className="flex justify-center mt-6">
               <img
-                src="/how-to/42.PNG"
+                src="/how-to/42.jpg"
                 alt="Customer live order tracking page on oBizee showing order status and expected delivery date"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"

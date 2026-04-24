@@ -163,7 +163,7 @@ const HowToCreateStore = () => {
             </p>
             <div className="flex justify-center mt-6">
               <img
-                src="/how-to/11.PNG"
+                src="/how-to/11.jpg"
                 alt="oBizee welcome onboarding screen"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -186,25 +186,25 @@ const HowToCreateStore = () => {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center mt-6">
               <img
-                src="/how-to/12.PNG"
+                src="/how-to/12.jpg"
                 alt="oBizee login screen with Create Account option"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/13.PNG"
+                src="/how-to/13.jpg"
                 alt="oBizee business information form"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/15.PNG"
+                src="/how-to/15.jpg"
                 alt="oBizee owner information form"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/16.PNG"
+                src="/how-to/16.jpg"
                 alt="oBizee account review screen before creation"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -227,13 +227,13 @@ const HowToCreateStore = () => {
             </p>
             <div className="grid grid-cols-2 gap-4 max-w-[560px] mx-auto justify-items-center mt-6">
               <img
-                src="/how-to/17.PNG"
+                src="/how-to/17.jpg"
                 alt="oBizee dashboard setup prompt for order preparation time"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/18.PNG"
+                src="/how-to/18.jpg"
                 alt="oBizee dashboard with business setup progress and categories"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -256,25 +256,25 @@ const HowToCreateStore = () => {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center mt-6">
               <img
-                src="/how-to/19.PNG"
+                src="/how-to/19.jpg"
                 alt="oBizee add category form"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/20.PNG"
+                src="/how-to/20.jpg"
                 alt="oBizee category created successfully with Add Product option"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/22.PNG"
+                src="/how-to/22.jpg"
                 alt="oBizee add product form with image, name, price fields"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/24.PNG"
+                src="/how-to/24.jpg"
                 alt="oBizee product details with name, price, and description"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -297,19 +297,19 @@ const HowToCreateStore = () => {
             </p>
             <div className="grid grid-cols-3 gap-4 max-w-[840px] mx-auto justify-items-center mt-6">
               <img
-                src="/how-to/29.PNG"
+                src="/how-to/29.jpg"
                 alt="oBizee settings menu with website, shipping, and payment options"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/30.PNG"
+                src="/how-to/30.jpg"
                 alt="oBizee website settings - template, content, and brand colors"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/31.PNG"
+                src="/how-to/31.jpg"
                 alt="oBizee store template selection screen"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -332,25 +332,25 @@ const HowToCreateStore = () => {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center mt-6">
               <img
-                src="/how-to/25.PNG"
+                src="/how-to/25.jpg"
                 alt="oBizee dashboard with Share Form button"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/32.PNG"
+                src="/how-to/32.jpg"
                 alt="oBizee product selection for order form"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/33.PNG"
+                src="/how-to/33.jpg"
                 alt="oBizee generate form link with delivery and total amount"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/34.PNG"
+                src="/how-to/34.jpg"
                 alt="oBizee order link created with QR code and shareable link"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -373,25 +373,25 @@ const HowToCreateStore = () => {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center mt-6">
               <img
-                src="/how-to/35.PNG"
+                src="/how-to/35.jpg"
                 alt="Customer order form showing products and delivery fields on oBizee"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/36.PNG"
+                src="/how-to/36.jpg"
                 alt="Customer filling delivery address and contact details"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/37.PNG"
+                src="/how-to/37.jpg"
                 alt="Customer selecting delivery date on oBizee order form"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/38.PNG"
+                src="/how-to/38.jpg"
                 alt="Order review page with items, delivery charges, and total"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -414,25 +414,25 @@ const HowToCreateStore = () => {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center mt-6">
               <img
-                src="/how-to/39.PNG"
+                src="/how-to/39.jpg"
                 alt="oBizee merchant orders dashboard showing new and pending orders"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/40.PNG"
+                src="/how-to/40.jpg"
                 alt="oBizee order details with customer info and shipment timeline"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/41.PNG"
+                src="/how-to/41.jpg"
                 alt="oBizee create shipment screen with Delhivery integration"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
               />
               <img
-                src="/how-to/42.PNG"
+                src="/how-to/42.jpg"
                 alt="Customer live order tracking page showing order status"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"
@@ -450,7 +450,7 @@ const HowToCreateStore = () => {
             </p>
             <div className="flex justify-center mt-6">
               <img
-                src="/how-to/27.PNG"
+                src="/how-to/27.jpg"
                 alt="oBizee quick actions menu for product, vendor, and finance management"
                 className="rounded-2xl shadow-lg border border-gray-200 max-w-[260px] w-full"
                 loading="lazy"

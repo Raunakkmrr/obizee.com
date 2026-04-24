@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const orders = [
   { name: "Priya Yadav", product: "Crochet Earrings", amount: "₹350", status: "Shipped", statusColor: "text-green-700 bg-green-50 border-green-200" },
   { name: "Seerat K.", product: "Handmade Bag", amount: "₹1,200", status: "In Progress", statusColor: "text-orange-700 bg-orange-50 border-orange-200" },
@@ -13,11 +11,8 @@ export default function DashboardPreview() {
     <div className="relative">
       <div className="absolute inset-0 bg-gradient-to-r from-orange-200/30 via-orange-300/20 to-amber-200/30 rounded-3xl blur-2xl" aria-hidden="true" />
 
-      <motion.div
-        className="relative bg-white rounded-3xl border border-gray-200 p-4 sm:p-6 shadow-2xl shadow-gray-200/50"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+      <div
+        className="relative bg-white rounded-3xl border border-gray-200 p-4 sm:p-6 shadow-2xl shadow-gray-200/50 animate-fade-in-up"
       >
         {/* Browser bar */}
         <div className="flex items-center gap-2 mb-4 sm:mb-5 pb-3 sm:pb-4 border-b border-gray-100">
@@ -55,12 +50,10 @@ export default function DashboardPreview() {
         {/* Order rows */}
         <div className="space-y-2">
           {orders.map((order, i) => (
-            <motion.div
+            <div
               key={order.name}
-              className="flex items-center justify-between p-2.5 sm:p-3 bg-gray-50/50 rounded-xl border border-gray-100"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 + i * 0.15 }}
+              className="flex items-center justify-between p-2.5 sm:p-3 bg-gray-50/50 rounded-xl border border-gray-100 animate-fade-in"
+              style={{ animationDelay: `${0.2 + i * 0.15}s` }}
             >
               <div className="flex items-center gap-3 min-w-0">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
@@ -77,10 +70,10 @@ export default function DashboardPreview() {
                   {order.status}
                 </span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

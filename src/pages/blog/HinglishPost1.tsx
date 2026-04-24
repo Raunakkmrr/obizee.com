@@ -86,7 +86,7 @@ const HinglishPost1 = () => {
         search karein aur install kar lein.
       </p>
       <div className="not-prose my-6 flex justify-center">
-        <img src="/how-to/11.PNG" alt="oBizee app download screen" className="rounded-2xl shadow-lg border border-gray-200 max-w-[240px] w-full" loading="lazy" />
+        <img src="/how-to/11.jpg" alt="oBizee app download screen" className="rounded-2xl shadow-lg border border-gray-200 max-w-[240px] w-full" loading="lazy" />
       </div>
       <Callout type="info">
         App bahut halka hai aur purane phones mein bhi smoothly chalta hai. Aapko sirf phone chahiye — laptop ya computer ki koi zaroorat nahi.
@@ -104,8 +104,8 @@ const HinglishPost1 = () => {
         <li><strong>Instagram ya social media link</strong> — optional hai, lekin dena acha rahega</li>
       </ul>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
-        <img src="/how-to/13.PNG" alt="oBizee signup form" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/16.PNG" alt="oBizee account review" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/13.jpg" alt="oBizee signup form" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/16.jpg" alt="oBizee account review" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
       <p>
         Details bharne ke baad aapka account ready ho jaayega. oBizee automatically aapka ek unique
@@ -126,8 +126,8 @@ const HinglishPost1 = () => {
         <li><strong>Variants</strong> — agar size ya color options hain toh woh bhi add karein</li>
       </ul>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
-        <img src="/how-to/20.PNG" alt="oBizee mein category banana" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
-        <img src="/how-to/22.PNG" alt="Product add karna oBizee mein" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/20.jpg" alt="oBizee mein category banana" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
+        <img src="/how-to/22.jpg" alt="Product add karna oBizee mein" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />
       </div>
       <Callout type="tip">
         Achi photos bahut zaroori hain — lekin professional camera ki zaroorat nahi. Phone se achi
