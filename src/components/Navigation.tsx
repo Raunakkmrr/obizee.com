@@ -181,7 +181,7 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden animate-fade-in" id="mobile-menu" role="menu" aria-label="Mobile navigation menu">
-          <div className="px-2 pt-1.5 pb-2.5 space-y-1 sm:px-3 bg-white/95 backdrop-blur-sm border-t border-gray-100">
+          <div className="px-2 pt-1.5 pb-2.5 space-y-1 sm:px-3 bg-white border-t border-gray-100">
             <Link
               href="/business-journey"
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${

@@ -9,7 +9,7 @@ const orders = [
 export default function DashboardPreview() {
   return (
     <div className="relative">
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-200/30 via-orange-300/20 to-amber-200/30 rounded-3xl blur-2xl" aria-hidden="true" />
+      <div className="absolute -inset-4 bg-gradient-to-r from-orange-100/40 via-orange-200/20 to-amber-100/40 rounded-[2rem]" aria-hidden="true" />
 
       <div
         className="relative bg-white rounded-3xl border border-gray-200 p-4 sm:p-6 shadow-2xl shadow-gray-200/50 animate-fade-in-up"
