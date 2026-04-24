@@ -15,10 +15,13 @@ const Navigation = () => {
   const isActive = (path: string) => pathname === path;
 
   const solutionsItems = [
-    { name: "Add Categories & Products", href: "/business-journey#step-01", description: "Set up catalog, pricing, and stock in one place" },
-    { name: "Custom Forms & Order Flow", href: "/business-journey#step-02", description: "Capture exact order data and manage order status" },
-    { name: "Logistics & AWB Operations", href: "/business-journey#step-04", description: "Integrate shipping partners and run dispatch operations" },
-    { name: "Financial Overview", href: "/business-journey#step-06", description: "Track revenue, expenses, and net profit with clarity" },
+    { name: "How to Create Your Store", href: "/how-to-create-online-store", description: "Step-by-step guide with screenshots" },
+    { name: "How to Ship Products", href: "/how-to-ship-products-online-india", description: "Delhivery & DTDC integration guide" },
+    { name: "For Clothing Sellers", href: "/for/clothing-stores", description: "Online store for fashion & apparel" },
+    { name: "For Food Business", href: "/for/food-business", description: "Tiffin, bakery & homemade food orders" },
+    { name: "For Jewellery Sellers", href: "/for/jewellery-sellers", description: "Handmade & traditional jewellery" },
+    { name: "For Kirana Stores", href: "/for/kirana-stores", description: "Take your local shop online" },
+    { name: "For Handicrafts", href: "/for/handicrafts", description: "Crochet, pottery & handmade items" },
   ];
 
   return (
@@ -133,6 +136,18 @@ const Navigation = () => {
               >
                 Help
               </Link>
+
+              <Link
+                href="/blog"
+                className={`px-4 py-2 text-sm font-medium transition-all rounded-lg ${
+                  isActive("/blog")
+                    ? "text-orange-600 bg-orange-50 border-b-2 border-orange-600"
+                    : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+                }`}
+                aria-current={isActive("/blog") ? "page" : undefined}
+              >
+                Blog
+              </Link>
             </div>
           </div>
 
@@ -216,6 +231,16 @@ const Navigation = () => {
               aria-current={isActive("/help") ? "page" : undefined}
             >
               Help
+            </Link>
+            <Link
+              href="/blog"
+              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+                isActive("/blog") ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+              }`}
+              role="menuitem"
+              aria-current={isActive("/blog") ? "page" : undefined}
+            >
+              Blog
             </Link>
             <div className="pt-3 pb-2 border-t border-gray-200">
               <div className="flex flex-col space-y-2 px-3">
