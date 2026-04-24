@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Mobile Se Online Store Kaise Banaye — Sirf Phone Se [2026]",
   description: "Sirf apne mobile phone se online store banayein. Koi laptop ya computer ki zaroorat nahi. oBizee app se 2 minute mein store ready. Step-by-step guide.",
   keywords: "mobile se online store kaise banaye, phone se online selling, mobile se business kaise kare, smartphone se dukaan",
-  alternates: { languages: { "hi-Latn-IN": "" }, canonical: "https://www.obizee.com/blog/mobile-se-online-store-kaise-banaye" },
+  alternates: { canonical: "https://www.obizee.com/blog/mobile-se-online-store-kaise-banaye" },
   openGraph: {
     title: "Mobile Se Online Store Kaise Banaye — Sirf Phone Se [2026]",
     description: "Sirf apne mobile phone se online store banayein. Koi laptop ya computer ki zaroorat nahi. oBizee app se 2 minute mein store ready.",

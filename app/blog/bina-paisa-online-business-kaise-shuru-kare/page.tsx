@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Bina Paisa Lagaye Online Business Kaise Shuru Kare [2026]",
   description: "Bina koi paisa lagaye online business shuru karne ka tarika. oBizee ke saath bilkul free mein apna online store banayein. 3 mahine free trial, koi setup fees nahi.",
   keywords: "bina paisa online business, free online store India, bina investment online selling, ghar baithe online business kaise kare",
-  alternates: { languages: { "hi-Latn-IN": "" }, canonical: "https://www.obizee.com/blog/bina-paisa-online-business-kaise-shuru-kare" },
+  alternates: { canonical: "https://www.obizee.com/blog/bina-paisa-online-business-kaise-shuru-kare" },
   openGraph: {
     title: "Bina Paisa Lagaye Online Business Kaise Shuru Kare [2026]",
     description: "Bina koi paisa lagaye online business shuru karne ka tarika. oBizee ke saath bilkul free mein apna online store banayein.",
