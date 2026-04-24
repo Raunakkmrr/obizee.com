@@ -1,0 +1,63 @@
+import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const CompliancePage = dynamic(() => import("@/pages/Compliance"), {
+});
+
+export const metadata: Metadata = {
+  title: "oBizee Compliance | Legal Details, Payment Flow, PCI Checklist",
+  description:
+    "oBizee compliance information for payment gateway onboarding: legal entity details, business model, payment flow, registration certificate support, and PCI DSS checklist.",
+  alternates: { canonical: "https://www.obizee.com/compliance" },
+  openGraph: {
+    title: "oBizee Compliance | Legal Details, Payment Flow, PCI Checklist",
+    description:
+      "Review oBizee merchant compliance details including legal name, address, payment process flow, and PCI DSS checklist.",
+    type: "website",
+    url: "https://www.obizee.com/compliance",
+    images: [{ url: "/Obizee.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "oBizee Compliance | Legal Details, Payment Flow, PCI Checklist",
+    description:
+      "Merchant compliance details for oBizee payment integration and onboarding.",
+    images: ["/Obizee.png"],
+  },
+};
+
+export default function Page() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "oBizee",
+    legalName: "SRN TECHNO (Proprietor: Raunak Kumar)",
+    url: "https://www.obizee.com/compliance",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "G-11, Hemkunt Chamber, Nehru Place",
+      addressLocality: "New Delhi",
+      postalCode: "110019",
+      addressRegion: "Delhi",
+      addressCountry: "IN",
+    },
+    contactPoint: { "@type": "ContactPoint", contactType: "legal and compliance", email: "raunakkumar1225@gmail.com" },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
+      { "@type": "ListItem", position: 2, name: "Compliance", item: "https://www.obizee.com/compliance" },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <CompliancePage />
+    </>
+  );
+}

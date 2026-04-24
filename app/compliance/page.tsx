@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const CompliancePage = dynamic(() => import("@/pages/Compliance"), {
-  ssr: false,
-});
+const CompliancePage = dynamic(() => import("@/pages/Compliance"));
 
 export const metadata: Metadata = {
   title: "oBizee Compliance | Legal Details, Payment Flow, PCI Checklist",
@@ -28,5 +26,37 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <CompliancePage />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "oBizee",
+    legalName: "SRN TECHNO (Proprietor: Raunak Kumar)",
+    url: "https://www.obizee.com/compliance",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "G-11, Hemkunt Chamber, Nehru Place",
+      addressLocality: "New Delhi",
+      postalCode: "110019",
+      addressRegion: "Delhi",
+      addressCountry: "IN",
+    },
+    contactPoint: { "@type": "ContactPoint", contactType: "legal and compliance", email: "raunakkumar1225@gmail.com" },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
+      { "@type": "ListItem", position: 2, name: "Compliance", item: "https://www.obizee.com/compliance" },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <CompliancePage />
+    </>
+  );
 }

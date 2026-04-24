@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "find public -name '._*' -delete 2>/dev/null; find public -name '.DS_Store' -delete 2>/dev/null; true",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const TemplatesPage = dynamic(() => import("@/pages/Templates"), {
-  ssr: false,
-});
+const TemplatesPage = dynamic(() => import("@/pages/Templates"));
 
 export const metadata: Metadata = {
   title: "Website Templates | Professional Business Templates | oBizee",
@@ -30,5 +28,46 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <TemplatesPage />;
+  const templateBaseUrl = "https://testing.obizee.com";
+  const templates = [
+    { name: "Modern V1", category: "Modern Commerce", description: "A clean storefront-first layout for brands that want a polished website with fast product discovery and a premium feel.", features: ["Premium landing layout", "Hero-led product showcase", "Mobile responsive", "Fast catalog browsing"], id: "template-modern-v1" },
+    { name: "Trust V1", category: "Trust-Led Brand", description: "Built for businesses that need stronger credibility, cleaner messaging, and a more confidence-driven customer journey.", features: ["Trust-focused sections", "Clear brand messaging", "Conversion-oriented layout", "Responsive design"], id: "template-trust-v1" },
+    { name: "Mobile Social V1", category: "Mobile-First Social", description: "A sharper mobile-first template made for Instagram and WhatsApp-led brands that sell through social traffic first.", features: ["Mobile-first structure", "Social traffic friendly", "Quick buy flow", "Compact product presentation"], id: "template-mobile-social-v1" },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: templates.map((t, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "SoftwareApplication",
+        name: t.name,
+        applicationCategory: t.category,
+        description: t.description,
+        aggregateRating: { "@type": "AggregateRating", ratingValue: 5.0, ratingCount: "1", bestRating: "5", worstRating: "1" },
+        url: `${templateBaseUrl}/?subdomain=testing&template=${t.id}`,
+        featureList: t.features.join(", "),
+        offers: { "@type": "Offer", price: "0", priceCurrency: "INR", availability: "https://schema.org/InStock" },
+      },
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
+      { "@type": "ListItem", position: 2, name: "Templates", item: "https://www.obizee.com/templates" },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <TemplatesPage />
+    </>
+  );
 }

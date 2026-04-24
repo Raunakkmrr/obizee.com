@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const PrivacyPolicyPage = dynamic(() => import("@/pages/PrivacyPolicy"), {
-  ssr: false,
-});
+const PrivacyPolicyPage = dynamic(() => import("@/pages/PrivacyPolicy"));
 
 export const metadata: Metadata = {
   title: "Privacy Policy | How We Protect Your Data | oBizee",

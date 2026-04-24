@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const RefundPolicyPage = dynamic(() => import("@/pages/RefundPolicy"), {
-  ssr: false,
-});
+const RefundPolicyPage = dynamic(() => import("@/pages/RefundPolicy"));
 
 export const metadata: Metadata = {
   title: "Refund & Cancellation Policy | oBizee",

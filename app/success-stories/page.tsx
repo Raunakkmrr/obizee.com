@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const SuccessStoriesPage = dynamic(() => import("@/pages/SuccessStories"), {
-  ssr: false,
-});
+const SuccessStoriesPage = dynamic(() => import("@/pages/SuccessStories"));
 
 export const metadata: Metadata = {
   title: "Success Stories | How Businesses Thrive with oBizee",
@@ -30,5 +28,29 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SuccessStoriesPage />;
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Success Stories | How Businesses Thrive with oBizee",
+    description: "Read real success stories from early-stage Indian brands using oBizee to run orders, inventory, and customer communication in one place.",
+    url: "https://www.obizee.com/success-stories",
+    inLanguage: "en-IN",
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
+      { "@type": "ListItem", position: 2, name: "Success Stories", item: "https://www.obizee.com/success-stories" },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <SuccessStoriesPage />
+    </>
+  );
 }

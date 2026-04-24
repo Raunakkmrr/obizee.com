@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const SolutionsPage = dynamic(() => import("@/pages/Solutions"), {
-  ssr: false,
-});
+const SolutionsPage = dynamic(() => import("@/pages/Solutions"));
 
 export const metadata: Metadata = {
   title: "Complete Business Solution Suite | oBizee",
@@ -30,5 +28,29 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SolutionsPage />;
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Complete Business Solution Suite | oBizee",
+    description: "Transform your business with oBizee's complete solution suite. Get professional website templates, powerful mobile apps, and comprehensive business management tools.",
+    url: "https://www.obizee.com/solutions",
+    inLanguage: "en-IN",
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
+      { "@type": "ListItem", position: 2, name: "Solutions", item: "https://www.obizee.com/solutions" },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <SolutionsPage />
+    </>
+  );
 }

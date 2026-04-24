@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-const TermsConditionsPage = dynamic(() => import("@/pages/TermsConditions"), {
-  ssr: false,
-});
+const TermsConditionsPage = dynamic(() => import("@/pages/TermsConditions"));
 
 export const metadata: Metadata = {
   title: "Terms and Conditions | Legal Agreement | oBizee",

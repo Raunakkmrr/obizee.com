@@ -1,0 +1,56 @@
+import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const SuccessStoriesPage = dynamic(() => import("@/pages/SuccessStories"), );
+
+export const metadata: Metadata = {
+  title: "Success Stories | How Businesses Thrive with oBizee",
+  description:
+    "Read real success stories from early-stage Indian brands using oBizee to run orders, inventory, and customer communication in one place.",
+  keywords:
+    "oBizee success stories, Indian startup brands, customer testimonials, Instagram seller stories, business growth case studies",
+  alternates: { canonical: "https://www.obizee.com/success-stories" },
+  openGraph: {
+    title: "Success Stories | How Businesses Thrive with oBizee",
+    description:
+      "Real stories from early-stage Indian brands using oBizee for day-to-day business operations.",
+    type: "website",
+    url: "https://www.obizee.com/success-stories",
+    images: [{ url: "/Obizee.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Success Stories | How Businesses Thrive with oBizee",
+    description:
+      "Real stories from early-stage Indian brands using oBizee for order, stock, and customer workflows.",
+    images: ["/Obizee.png"],
+  },
+};
+
+export default function Page() {
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Success Stories | How Businesses Thrive with oBizee",
+    description: "Read real success stories from early-stage Indian brands using oBizee to run orders, inventory, and customer communication in one place.",
+    url: "https://www.obizee.com/success-stories",
+    inLanguage: "en-IN",
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
+      { "@type": "ListItem", position: 2, name: "Success Stories", item: "https://www.obizee.com/success-stories" },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <SuccessStoriesPage />
+    </>
+  );
+}
