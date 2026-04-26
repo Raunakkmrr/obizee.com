@@ -64,7 +64,7 @@ const BestPlatforms2026 = () => {
       verdict: "Best for Instagram-only sellers in a community",
       pricing: "Free tier, paid pricing unclear",
       pros: ["Seller collaboration network", "IRL events"],
-      cons: ["Instagram only", "No logistics, opaque pricing, payment delay reports"],
+      cons: ["Instagram only", "No logistics, commission-based pricing (details vary)"],
     },
   ];
 

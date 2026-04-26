@@ -11,7 +11,7 @@ import JsonLd from "@/components/JsonLd";
 const CompareDM2buy = () => {
   const features = [
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Free tier + unclear paid features", winner: "obizee" },
-    { feature: "Transparent pricing", obizee: "1% per order, max ₹10 (published)", competitor: "Opaque — no public pricing page", winner: "obizee" },
+    { feature: "Transparent pricing", obizee: "1% per order, max ₹10 (published)", competitor: "Commission-based (details vary)", winner: "obizee" },
     { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
     { feature: "Instagram selling", obizee: true, competitor: true, winner: "tie" },
     { feature: "WhatsApp selling", obizee: true, competitor: false, winner: "obizee" },
@@ -28,13 +28,13 @@ const CompareDM2buy = () => {
     { feature: "Employee & vendor management", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Seller collaboration network", obizee: false, competitor: true, winner: "competitor" },
     { feature: "IRL pop-up events", obizee: false, competitor: true, winner: "competitor" },
-    { feature: "Reliable payment processing", obizee: "Automated, reliable", competitor: "User complaints of 2+ month delays", winner: "obizee" },
+    { feature: "Payment processing", obizee: "Automated via Cashfree", competitor: "Available", winner: "tie" },
   ];
 
   const faqs = [
     {
       question: "What is the difference between oBizee and DM2buy?",
-      answer: "oBizee is a full D2C commerce platform with multi-channel support (Instagram, WhatsApp, web), built-in Delhivery & DTDC shipping, custom order forms, and transparent pricing (1% per order, max ₹10). DM2buy is primarily an Instagram-focused storefront with no logistics integration, no WhatsApp support, and opaque pricing.",
+      answer: "oBizee is a full D2C commerce platform with multi-channel support (Instagram, WhatsApp, web), built-in Delhivery & DTDC shipping, custom order forms, and transparent pricing (1% per order, max ₹10). DM2buy is primarily an Instagram-focused storefront that excels at converting DMs into orders, but does not include logistics integration or multi-channel selling.",
     },
     {
       question: "Does DM2buy have shipping integration?",
@@ -50,7 +50,7 @@ const CompareDM2buy = () => {
     },
     {
       question: "Which is better for Indian small businesses — oBizee or DM2buy?",
-      answer: "oBizee is the more complete solution for Indian small businesses. It offers everything DM2buy does (online storefront, product listings, order management) plus logistics integration, multi-channel selling, custom order forms, fare calculator, and transparent pricing. oBizee wins on 14 out of 19 features in a direct comparison.",
+      answer: "oBizee is the more complete solution for Indian small businesses. It offers everything DM2buy does (online storefront, product listings, order management) plus logistics integration, multi-channel selling, custom order forms, fare calculator, and transparent pricing — winning on 13 out of 19 features in a direct comparison.",
     },
   ];
 
@@ -102,7 +102,7 @@ const CompareDM2buy = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Both platforms help Indian sellers go online. But oBizee offers built-in logistics, multi-channel selling, and transparent pricing — winning on 14 out of 19 features. Here's the full breakdown.
+              Both platforms help Indian sellers go online. But oBizee offers built-in logistics, multi-channel selling, and transparent pricing — winning on 13 out of 19 features. Here's the full breakdown.
             </p>
           </div>
         </section>
@@ -144,7 +144,7 @@ const CompareDM2buy = () => {
               </div>
             </div>
             <p className="text-center text-gray-500 mt-4 text-sm">
-              oBizee wins on 14 features. DM2buy wins on 2 features (collaboration network & IRL events). 3 are tied.
+              oBizee wins on 13 features. DM2buy wins on 2 features (collaboration network & IRL events). 4 are tied.
             </p>
           </div>
         </section>
@@ -156,8 +156,7 @@ const CompareDM2buy = () => {
               {[
                 { title: "Built-in Shipping", desc: "Delhivery & DTDC integrated natively. AWB generation, pickup scheduling, live tracking — all from the app. DM2buy has no shipping integration." },
                 { title: "Multi-Channel Selling", desc: "Sell on Instagram, WhatsApp, and your own website from one dashboard. DM2buy only supports Instagram." },
-                { title: "Transparent Pricing", desc: "1% per order, max ₹10. Published and clear. DM2buy's pricing is opaque with no public pricing page." },
-                { title: "Reliable Payments", desc: "Automated, reliable payment processing. DM2buy users have reported payment delays of 2+ months on app stores." },
+                { title: "Transparent Pricing", desc: "1% per order, max ₹10. Published and clear. You always know exactly what you'll pay before you start." },
               ].map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>

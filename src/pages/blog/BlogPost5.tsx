@@ -120,7 +120,7 @@ const BlogPost5 = () => {
       </div>
 
       <Callout type="warning">
-        Shopify's app marketplace is both its greatest strength and its biggest cost trap. Many features that are built-in on other platforms (shipping, email, reviews) require paid apps on Shopify. A seller using 3-4 essential apps can easily add ₹2,000-4,000/month to their bill.
+        Shopify's app marketplace is both its greatest strength and its biggest additional expense. Many features that are built-in on other platforms (shipping, email, reviews) require paid apps on Shopify. A seller using 3-4 essential apps can easily add ₹2,000-4,000/month to their bill.
       </Callout>
 
       <h2>Cost at Different Order Volumes</h2>

@@ -92,8 +92,7 @@ const BlogPost7 = () => {
         {[
           { icon: Instagram, title: "Instagram-only focus", desc: "DM2buy is built exclusively around Instagram. If you sell on WhatsApp, have a website, or want to share a standalone store link, DM2buy does not support that. Your business is tied to one platform.", color: "text-red-500" },
           { icon: Truck, title: "No logistics integration", desc: "DM2buy does not offer built-in shipping. You need to arrange your own courier partners, generate labels separately, and manage tracking outside the platform.", color: "text-red-500" },
-          { icon: Eye, title: "Opaque pricing structure", desc: "DM2buy's pricing is not always clearly listed on their website. Commission-based models can be hard to predict, and some sellers have reported confusion about what they are being charged.", color: "text-red-500" },
-          { icon: CreditCard, title: "Payment delay complaints", desc: "Some sellers in the community have reported delays in receiving their payment settlements from DM2buy. While this may not be universal, it is a concern worth researching before committing.", color: "text-red-500" },
+          { icon: Eye, title: "Pricing details not always clear", desc: "DM2buy uses a commission-based model, but the exact fee structure is not always prominently listed. It's worth confirming the pricing details before you commit.", color: "text-red-500" },
         ].map((item) => (
           <div key={item.title} className="flex items-start gap-3 bg-red-50 rounded-xl p-4 border border-red-100">
             <XCircle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
@@ -167,7 +166,7 @@ const BlogPost7 = () => {
           <h3 className="text-xl font-bold text-gray-900">Feature Score</h3>
         </div>
         <p className="text-gray-700 text-sm mb-4">
-          Out of 19 features compared, oBizee leads in <strong>14</strong>, DM2buy leads in <strong>2</strong>, and <strong>3</strong> are tied.
+          Out of 19 features compared, oBizee leads in <strong>14</strong>, DM2buy leads in <strong>2</strong>, and <strong>3</strong> are tied. (Feature counts based on the table above.)
         </p>
         <div className="grid grid-cols-3 gap-3">
           <div className="bg-white rounded-xl p-4 text-center border border-green-100">
@@ -198,9 +197,9 @@ const BlogPost7 = () => {
       </p>
 
       <Callout type="warning">
-        Several sellers have reported that Instagram algorithm changes significantly impacted their
-        DM2buy sales because the platform depends entirely on Instagram's DM system. Having a
-        standalone store link provides a safety net.
+        Any platform built entirely on a single social network carries inherent risk. Instagram
+        algorithm changes can impact reach and discoverability, which directly affects DM-based
+        sales. Having a standalone store link provides a safety net regardless of which platform you use.
       </Callout>
 
       <h2>Our Recommendation</h2>

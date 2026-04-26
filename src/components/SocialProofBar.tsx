@@ -6,9 +6,9 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 import { Users, ShoppingCart, MapPin, Star } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: 50000, suffix: "+", label: "Merchants" },
-  { icon: ShoppingCart, value: 200000, suffix: "+", label: "Orders Processed" },
-  { icon: MapPin, value: 500, suffix: "+", label: "Cities Served" },
+  { icon: Users, value: 35, suffix: "+", label: "Active Merchants" },
+  { icon: ShoppingCart, value: 40, suffix: "L+", label: "Revenue Processed" },
+  { icon: MapPin, value: 12, suffix: "+", label: "Cities Served" },
   { icon: Star, value: 4.8, suffix: "", label: "App Rating" },
 ];
 

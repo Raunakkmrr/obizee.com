@@ -123,7 +123,7 @@ const BlogPost4 = () => {
         monthlyCost="Free to start"
         perOrderFee="Commission-based (varies)"
         strength="Built for Instagram sellers. Strong seller community and IRL events."
-        weakness="Instagram-only focus. Opaque pricing structure. No logistics integration."
+        weakness="Instagram-only focus. Commission-based pricing (details vary). No logistics integration."
       />
 
       <PlatformCard
