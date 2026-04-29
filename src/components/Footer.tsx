@@ -27,6 +27,8 @@ const Footer = () => {
       { name: "Success Stories", href: "/customer-testimonials" },
       { name: "Platform Comparisons", href: "/compare/best-ecommerce-platforms-india-2026" },
       { name: "Help Center", href: "/help" },
+      { name: "Medium Blog", href: "https://medium.com/@obizee.app", external: true },
+      { name: "Product Hunt", href: "https://www.producthunt.com/products/obizee?launch=obizee", external: true },
     ],
     company: [
       { name: "About oBizee", href: "/about" },
@@ -144,9 +146,20 @@ const Footer = () => {
               <ul className="space-y-2 sm:space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
-                      {link.name}
-                    </Link>
+                    {"external" in link && link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 
 // Lazy load below-fold components — they don't need to be in the initial bundle
+const FeaturedOn = lazy(() => import("@/components/FeaturedOn"));
 const SocialProofBar = lazy(() => import("@/components/SocialProofBar"));
 const Features = lazy(() => import("@/components/Features"));
 const HowItWorks = lazy(() => import("@/components/HowItWorks"));
@@ -30,6 +31,7 @@ export default function HomePageClient() {
       <Navigation />
       <Hero />
       <Suspense fallback={null}>
+        <FeaturedOn />
         <SocialProofBar />
         <Features />
         <HowItWorks />
