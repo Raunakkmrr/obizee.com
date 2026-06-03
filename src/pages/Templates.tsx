@@ -19,7 +19,7 @@ const Templates = () => {
       image: "/modern-template.png",
       features: ["Premium landing layout", "Hero-led product showcase", "Mobile responsive", "Fast catalog browsing"],
       rating: 5.0,
-      previewUrl: `${templateBaseUrl}/?subdomain=testing&template=template-modern-v1`,
+      previewUrl: `${templateBaseUrl}/?template=template-modern-v1`,
       popular: true,
       accent: "from-orange-500 to-amber-500",
       icon: Sparkles,
@@ -32,7 +32,7 @@ const Templates = () => {
       image: "/trust-template.png",
       features: ["Trust-focused sections", "Clear brand messaging", "Conversion-oriented layout", "Responsive design"],
       rating: 5.0,
-      previewUrl: `${templateBaseUrl}/?subdomain=testing&template=template-trust-v1`,
+      previewUrl: `${templateBaseUrl}/?template=template-trust-v1`,
       popular: true,
       accent: "from-emerald-500 to-teal-500",
       icon: ShieldCheck,
@@ -45,7 +45,7 @@ const Templates = () => {
       image: "/mobile-template.png",
       features: ["Mobile-first structure", "Social traffic friendly", "Quick buy flow", "Compact product presentation"],
       rating: 5.0,
-      previewUrl: `${templateBaseUrl}/?subdomain=testing&template=template-mobile-social-v1`,
+      previewUrl: `${templateBaseUrl}/?template=template-mobile-social-v1`,
       popular: true,
       accent: "from-sky-500 to-blue-500",
       icon: Smartphone,
@@ -162,7 +162,7 @@ const Templates = () => {
                           <a
                             href={template.previewUrl}
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="noopener noreferrer nofollow"
                             aria-label={`Preview ${template.name} template`}
                           >
                             <Eye className="w-4 h-4 mr-1" aria-hidden="true" />
@@ -217,7 +217,7 @@ const Templates = () => {
                         <a
                           href={template.previewUrl}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noopener noreferrer nofollow"
                           aria-label={`Use ${template.name} template`}
                         >
                           Open Template
@@ -228,7 +228,7 @@ const Templates = () => {
                         <a
                           href={template.previewUrl}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noopener noreferrer nofollow"
                           aria-label={`Preview ${template.name} template`}
                         >
                           Preview

@@ -47,7 +47,7 @@ export default function Page() {
         applicationCategory: t.category,
         description: t.description,
         aggregateRating: { "@type": "AggregateRating", ratingValue: 5.0, ratingCount: "1", bestRating: "5", worstRating: "1" },
-        url: `${templateBaseUrl}/?subdomain=testing&template=${t.id}`,
+        url: `${templateBaseUrl}/?template=${t.id}`,
         featureList: t.features.join(", "),
         offers: { "@type": "Offer", price: "0", priceCurrency: "INR", availability: "https://schema.org/InStock" },
       },

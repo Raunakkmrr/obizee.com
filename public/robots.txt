@@ -31,6 +31,10 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Block merchant subdomain product pages from being indexed
+# These are thin auto-generated pages that hurt crawl budget
+Host: www.obizee.com
+
 Sitemap: https://www.obizee.com/sitemap.xml
 Sitemap: https://www.obizee.com/sitemap-core.xml
 Sitemap: https://www.obizee.com/sitemap-company.xml
