@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import WhatsAppCTA from "@/components/WhatsAppCTA";
+import LeadForm from "@/components/LeadForm";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
@@ -47,25 +47,11 @@ export default function SignUpPage() {
             products and take your first order. No cost to get started.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <WhatsAppCTA
-              source="signup_page"
-              label="Set up my store on WhatsApp"
-              message="Hi oBizee, I want to create my online store. Can you help me get started?"
-            />
-            <AppDownloadTrigger>
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 text-lg font-semibold rounded-2xl border-2 border-gray-300 text-gray-700 hover:border-orange-400 hover:text-orange-600 hover:bg-orange-50 transition-colors duration-300"
-              >
-                Download the app
-                <ArrowRight className="ml-3 h-5 w-5" aria-hidden="true" />
-              </Button>
-            </AppDownloadTrigger>
+          <div className="mb-10">
+            <LeadForm />
           </div>
 
-          <ul className="inline-flex flex-col gap-3 text-left">
+          <ul className="inline-flex flex-col gap-3 text-left mb-10">
             {benefits.map((benefit) => (
               <li key={benefit} className="flex items-start gap-3 text-gray-700">
                 <CheckCircle className="w-5 h-5 text-green-500 shrink-0 mt-0.5" aria-hidden="true" />
@@ -73,6 +59,19 @@ export default function SignUpPage() {
               </li>
             ))}
           </ul>
+
+          <div className="flex justify-center">
+            <AppDownloadTrigger>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 text-lg font-semibold rounded-2xl border-2 border-gray-300 text-gray-700 hover:border-orange-400 hover:text-orange-600 hover:bg-orange-50 transition-colors duration-300"
+              >
+                Or download the app
+                <ArrowRight className="ml-3 h-5 w-5" aria-hidden="true" />
+              </Button>
+            </AppDownloadTrigger>
+          </div>
 
           <p className="mt-12 text-gray-500">
             Already selling with oBizee?{" "}
