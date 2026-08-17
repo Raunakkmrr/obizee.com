@@ -11,10 +11,10 @@
 export const CONTACT_EMAIL = "admin@obizee.com";
 
 /** Display form of the business phone number. */
-export const CONTACT_PHONE_DISPLAY = "+91 70115 71373";
+export const CONTACT_PHONE_DISPLAY = "+91 87969 71046";
 
 /** E.164 without the leading "+", which is the format wa.me expects. */
-export const WHATSAPP_NUMBER = "917011571373";
+export const WHATSAPP_NUMBER = "918796971046";
 
 export const CONTACT_ADDRESS =
   "G-11, Hemkunt Chamber, Nehru Place, New Delhi, Delhi 110019, India";

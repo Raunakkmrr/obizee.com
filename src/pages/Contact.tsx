@@ -31,7 +31,7 @@ const Contact = () => {
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: "+91-7011571373",
+          telephone: "+91-8796971046",
           contactType: "customer service",
           email: "admin@obizee.com",
           areaServed: "IN",
@@ -40,7 +40,7 @@ const Contact = () => {
         },
         {
           "@type": "ContactPoint",
-          telephone: "+91-7011571373",
+          telephone: "+91-8796971046",
           contactType: "technical support",
           email: "support@obizee.com",
           areaServed: "IN",
@@ -115,8 +115,8 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Call Us</h3>
                 <p className="text-gray-600 mb-4">
-                  <a href="tel:+917011571373" className="text-orange-600 hover:text-orange-500">
-                    +91-7011571373
+                  <a href="tel:+918796971046" className="text-orange-600 hover:text-orange-500">
+                    +91-8796971046
                   </a>
                 </p>
                 <p className="text-gray-600">Available Monday to Friday, 9 AM to 6 PM IST</p>

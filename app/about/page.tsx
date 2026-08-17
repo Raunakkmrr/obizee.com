@@ -40,7 +40,7 @@ export default function Page() {
       name: "oBizee",
       url: "https://www.obizee.com",
       logo: { "@type": "ImageObject", url: "https://www.obizee.com/logo.png" },
-      contactPoint: { "@type": "ContactPoint", telephone: "+91-7011571373", contactType: "customer service", email: "admin@obizee.com", areaServed: "IN", availableLanguage: ["English", "Hindi"] },
+      contactPoint: { "@type": "ContactPoint", telephone: "+91-8796971046", contactType: "customer service", email: "admin@obizee.com", areaServed: "IN", availableLanguage: ["English", "Hindi"] },
     },
     mainEntity: {
       "@type": "Organization",

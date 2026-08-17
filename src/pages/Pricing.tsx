@@ -225,12 +225,12 @@ const Pricing = () => {
                 asChild
                 className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-8 py-3 rounded-xl text-lg font-semibold"
               >
-                <a href="tel:+917011571373" aria-label="Call sales at +91 70115 71373">
-                  Contact Sales: 7011571373
+                <a href="tel:+918796971046" aria-label="Call sales at +91 87969 71046">
+                  Contact Sales: 8796971046
                 </a>
               </Button>
             </div>
-            <p className="mt-3 text-orange-100">Call now: 7011571373</p>
+            <p className="mt-3 text-orange-100">Call now: 8796971046</p>
           </div>
         </section>
 

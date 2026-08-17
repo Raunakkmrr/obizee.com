@@ -256,8 +256,8 @@ const PrivacyPolicy = () => {
                 </p>
                 <p>
                   Phone:{" "}
-                  <a href="tel:+917011571373" className="underline hover:text-white">
-                    +91-7011571373
+                  <a href="tel:+918796971046" className="underline hover:text-white">
+                    +91-8796971046
                   </a>
                 </p>
                 <p>Address: oBizee, Gurgaon, Haryana, India</p>

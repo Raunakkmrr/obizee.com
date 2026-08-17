@@ -43,7 +43,7 @@ const About = () => {
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+91-7011571373",
+        telephone: "+91-8796971046",
         contactType: "customer service",
         email: "admin@obizee.com",
         areaServed: "IN",

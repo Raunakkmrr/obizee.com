@@ -275,8 +275,8 @@ const TermsConditions = () => {
                 </p>
                 <p>
                   Phone:{" "}
-                  <a href="tel:+917011571373" className="underline hover:text-white">
-                    +91 70115 71373
+                  <a href="tel:+918796971046" className="underline hover:text-white">
+                    +91 87969 71046
                   </a>
                 </p>
                 <p>Address: SRN TECHNO, G-11, Hemkunt Chamber, Nehru Place, New Delhi, Delhi 110019, India</p>

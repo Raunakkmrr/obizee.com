@@ -108,8 +108,8 @@ const Compliance = () => {
                     </div>
                     <div className="bg-gray-50 rounded-2xl p-4">
                       <p className="text-sm text-gray-500 mb-1">Compliance Contact Phone</p>
-                      <a href="tel:+917011571373" className="font-semibold text-orange-600 underline">
-                        +91 70115 71373
+                      <a href="tel:+918796971046" className="font-semibold text-orange-600 underline">
+                        +91 87969 71046
                       </a>
                     </div>
                   </div>
