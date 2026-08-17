@@ -27,3 +27,7 @@ dist-ssr
 *.sw?
 
 ._*
+
+# exFAT/FUSE artifacts — this repo lives on an external drive, which leaves
+# these behind whenever an open file is replaced. They are not source.
+.fuse_hidden*
