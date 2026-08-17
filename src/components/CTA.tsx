@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const CTA = () => {
@@ -28,7 +29,7 @@ const CTA = () => {
             <span className="text-yellow-200">2 Minutes Away</span>
           </h2>
           <p className="text-lg sm:text-xl text-orange-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of Indian sellers who already run their business on oBizee. Download the app, add your products, and start selling.
+            Join 163 Indian sellers who already run their business on oBizee. Download the app, or message us on WhatsApp and we&apos;ll set you up.
           </p>
         </ScrollReveal>
 
@@ -43,6 +44,12 @@ const CTA = () => {
                 <ArrowRight className="ml-3 h-5 w-5" />
               </Button>
             </AppDownloadTrigger>
+            <WhatsAppCTA
+              source="footer_cta"
+              variant="light"
+              label="Talk to us on WhatsApp"
+              message="Hi oBizee, I'd like to start selling online. Can you help me get set up?"
+            />
             <Link href="/pricing">
               <Button
                 variant="outline"

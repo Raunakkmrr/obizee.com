@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import Link from "next/link";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
 
 // Lazy load heavy components — defer until after initial paint
 const FloatingFeatures = dynamic(() => import("@/components/FloatingFeatures"), { ssr: false });
@@ -57,8 +58,8 @@ const Hero = () => {
             {" "}Pay just 1% per order, max ₹10.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 sm:mb-16">
+          {/* CTA Buttons — two conversion paths: install the app, or talk to a human */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <AppDownloadTrigger>
               <Button
                 size="lg"
@@ -69,15 +70,21 @@ const Hero = () => {
                 <ArrowRight className="ml-3 h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
               </Button>
             </AppDownloadTrigger>
-            <Link href="/how-to-create-online-store" aria-label="See how it works">
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl border-2 border-gray-300 text-gray-700 hover:border-orange-400 hover:text-orange-600 hover:bg-orange-50 rounded-2xl transition-colors duration-300"
-              >
-                <Play className="mr-3 h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
-                See How It Works
-              </Button>
+            <WhatsAppCTA
+              source="hero"
+              label="Talk to us on WhatsApp"
+              message="Hi oBizee, I found you on your website. I sell online and I'd like to understand how oBizee works."
+            />
+          </div>
+
+          <div className="flex justify-center mb-12 sm:mb-16">
+            <Link
+              href="/how-to-create-online-store"
+              aria-label="See how it works"
+              className="inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 font-medium transition-colors duration-200 underline-offset-4 hover:underline"
+            >
+              <Play className="h-4 w-4" aria-hidden="true" />
+              See How It Works
             </Link>
           </div>
 
