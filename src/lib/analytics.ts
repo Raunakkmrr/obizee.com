@@ -13,10 +13,31 @@ declare global {
   }
 }
 
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
+/**
+ * GA4 Measurement ID for the oBizee property (account 404840345, property 550152769).
+ *
+ * Committed deliberately. A Measurement ID is not a credential — it is served in
+ * the page source of every site running GA4 and grants no access to the property.
+ * It lives here as a fallback so analytics works without console access; setting
+ * NEXT_PUBLIC_GA_ID in the hosting environment still overrides it.
+ */
+const GA_ID_FALLBACK = "G-KEY8DDC44L";
+
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || GA_ID_FALLBACK;
+
+/** No fallback yet — set NEXT_PUBLIC_CLARITY_ID once the Clarity project exists. */
 export const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? "";
 
 export const analyticsEnabled = Boolean(GA_MEASUREMENT_ID);
+
+/**
+ * Hosts that must never report into the production property.
+ *
+ * The site is a static export, so one build serves every environment and the
+ * decision has to be made in the browser rather than at build time. Without this
+ * every local `next dev` session would pollute real traffic.
+ */
+export const NON_REPORTING_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0"];
 
 /**
  * Records a conversion-relevant interaction.

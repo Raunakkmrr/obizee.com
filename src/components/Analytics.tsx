@@ -1,5 +1,12 @@
 import Script from "next/script";
-import { GA_MEASUREMENT_ID, CLARITY_PROJECT_ID } from "@/lib/analytics";
+import {
+  GA_MEASUREMENT_ID,
+  CLARITY_PROJECT_ID,
+  NON_REPORTING_HOSTS,
+} from "@/lib/analytics";
+
+/** Inlined into the guard so localhost never reports into the real property. */
+const HOST_GUARD = `${JSON.stringify(NON_REPORTING_HOSTS)}.indexOf(location.hostname) === -1`;
 
 /**
  * GA4 + Microsoft Clarity, both driven by env vars so no ID is ever committed.
@@ -25,8 +32,10 @@ export default function Analytics() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               window.gtag = gtag;
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}');
+              if (${HOST_GUARD}) {
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              }
             `}
           </Script>
         </>
@@ -35,11 +44,13 @@ export default function Analytics() {
       {CLARITY_PROJECT_ID && (
         <Script id="clarity-init" strategy="afterInteractive">
           {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");
+            if (${HOST_GUARD}) {
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");
+            }
           `}
         </Script>
       )}
