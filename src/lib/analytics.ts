@@ -25,8 +25,16 @@ const GA_ID_FALLBACK = "G-KEY8DDC44L";
 
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || GA_ID_FALLBACK;
 
-/** No fallback yet — set NEXT_PUBLIC_CLARITY_ID once the Clarity project exists. */
-export const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? "";
+/**
+ * Microsoft Clarity project ID for obizee.com.
+ *
+ * Public for the same reason as the GA id: Clarity serves it in the tag on every
+ * page and it grants no access to the recordings. Env var still wins if set.
+ */
+const CLARITY_ID_FALLBACK = "y3pn3pmsl3";
+
+export const CLARITY_PROJECT_ID =
+  process.env.NEXT_PUBLIC_CLARITY_ID || CLARITY_ID_FALLBACK;
 
 export const analyticsEnabled = Boolean(GA_MEASUREMENT_ID);
 
