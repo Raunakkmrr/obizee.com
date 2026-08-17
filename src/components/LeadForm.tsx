@@ -17,6 +17,7 @@ import {
   WHATSAPP_NUMBER,
 } from "@/lib/contact";
 import { trackEvent } from "@/lib/analytics";
+import { submitLead } from "@/lib/leads";
 
 /**
  * Qualifying lead form — three taps, no required typing.
@@ -103,6 +104,12 @@ const LeadForm = () => {
   const [volume, setVolume] = useState<string | null>(null);
   const [channel, setChannel] = useState<string | null>(null);
   const [name, setName] = useState("");
+  /**
+   * Honeypot. Positioned off-screen and hidden from assistive tech, so a real
+   * visitor can neither see nor tab into it — anything here means a bot, and the
+   * backend silently discards the submission.
+   */
+  const [honeypot, setHoneypot] = useState("");
 
   /** Only the category is required — the rest sharpens the conversation, not gates it. */
   const ready = Boolean(category);
@@ -182,6 +189,17 @@ const LeadForm = () => {
             />
           </div>
 
+          <input
+            type="text"
+            name="companyWebsite"
+            value={honeypot}
+            onChange={(event) => setHoneypot(event.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-[9999px] h-0 w-0 opacity-0"
+          />
+
           {/* Live preview removes the blank-box hesitation that kills WhatsApp CTAs:
               the visitor sees exactly what they are about to send. */}
           {ready && (
@@ -212,6 +230,14 @@ const LeadForm = () => {
                 volume: volume ?? "",
                 channel: channel ?? "",
                 named: Boolean(name.trim()),
+              });
+              // Not awaited: the WhatsApp hand-off must not wait on our API.
+              submitLead({
+                category: category as string,
+                monthlyOrders: volume ?? undefined,
+                sellingChannel: channel ?? undefined,
+                name: name.trim() || undefined,
+                companyWebsite: honeypot,
               });
             }}
             className={`block ${ready ? "" : "pointer-events-none"}`}
