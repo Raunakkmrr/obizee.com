@@ -40,7 +40,7 @@ export default function Page() {
       addressRegion: "Delhi",
       addressCountry: "IN",
     },
-    contactPoint: { "@type": "ContactPoint", contactType: "legal and compliance", email: "raunakkumar1225@gmail.com" },
+    contactPoint: { "@type": "ContactPoint", contactType: "legal and compliance", email: "admin@obizee.com" },
   };
 
   const breadcrumbJsonLd = {

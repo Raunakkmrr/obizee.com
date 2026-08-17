@@ -5,9 +5,15 @@ import AnimatedCounter from "@/components/motion/AnimatedCounter";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { Users, ShoppingCart, MapPin, Star } from "lucide-react";
 
+/**
+ * Figures are taken from the ops dashboard (lifetime) and must stay true —
+ * these are the only hard proof on the page. Last verified 2026-08-14:
+ * 163 merchants, 3,278 non-refunded orders, ₹51.58L GMV processed.
+ * "Cities Served" is unverified and should be refreshed from real order data.
+ */
 const stats = [
-  { icon: Users, value: 35, suffix: "+", label: "Active Merchants" },
-  { icon: ShoppingCart, value: 40, suffix: "L+", label: "Revenue Processed" },
+  { icon: Users, value: 163, suffix: "+", label: "Active Merchants" },
+  { icon: ShoppingCart, value: 51, suffix: "L+", label: "Revenue Processed" },
   { icon: MapPin, value: 12, suffix: "+", label: "Cities Served" },
   { icon: Star, value: 4.8, suffix: "", label: "App Rating" },
 ];

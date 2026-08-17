@@ -269,8 +269,8 @@ const TermsConditions = () => {
               <address className="space-y-2 text-orange-100 not-italic">
                 <p>
                   Email:{" "}
-                  <a href="mailto:raunakkumar1225@gmail.com" className="underline hover:text-white">
-                    raunakkumar1225@gmail.com
+                  <a href="mailto:admin@obizee.com" className="underline hover:text-white">
+                    admin@obizee.com
                   </a>
                 </p>
                 <p>

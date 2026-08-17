@@ -16,18 +16,10 @@ const featuredLinks = [
     ),
     label: "Launched on Product Hunt",
   },
-  {
-    name: "Medium",
-    href: "https://medium.com/@obizee.app",
-    svg: (
-      <svg viewBox="0 0 40 40" className="w-8 h-8 sm:w-10 sm:h-10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#000000" />
-        <path d="M12.8 14.2L11 12.5V12H17.1L21.8 22.4L25.9 12H31.7V12.5L30.2 14C30.1 14.1 30 14.2 30 14.4V25.6C30 25.8 30.1 25.9 30.2 26L31.7 27.5V28H23.3V27.5L24.8 26C25 25.8 25 25.7 25 25.5V16.2L20.3 27.9H19.7L14.3 16.2V24C14.2 24.3 14.3 24.7 14.5 24.9L16.5 27.4V27.9H10V27.4L12 24.9C12.2 24.7 12.3 24.3 12.2 24V14.2H12.8Z" fill="white" />
-      </svg>
-    ),
-    label: "Read our blog on Medium",
-  },
 ];
+// Medium was removed: anyone can publish there, so listing it as a "Featured On"
+// credential reads as padding and weakens the one genuine placement next to it.
+// It remains linked from the footer under Resources, which is what it actually is.
 
 export default function FeaturedOn() {
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
+import { CONTACT_EMAIL } from "@/lib/contact";
 
 const Footer = () => {
   const footerLinks = {
@@ -89,8 +90,8 @@ const Footer = () => {
               <address className="space-y-3 sm:space-y-4 not-italic">
                 <div className="flex items-center text-gray-300 hover:text-orange-400 transition-colors">
                   <Mail className="h-5 w-5 mr-3 sm:mr-4 text-orange-400 shrink-0" aria-hidden="true" />
-                  <a href="mailto:raunakkumar1225@gmail.com" className="text-sm sm:text-lg break-all">
-                    raunakkumar1225@gmail.com
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-sm sm:text-lg break-all">
+                    {CONTACT_EMAIL}
                   </a>
                 </div>
                 <div className="flex items-center text-gray-300 hover:text-orange-400 transition-colors">
@@ -187,7 +188,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 py-8 sm:py-12">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm sm:text-lg text-center md:text-left mb-5 sm:mb-6 md:mb-0">
-              © 2025 oBizee. All rights reserved. Built for business owners with <span aria-label="love">❤️</span>
+              © {new Date().getFullYear()} oBizee. All rights reserved. Built for business owners with <span aria-label="love">❤️</span>
             </div>
             <nav aria-label="Social media links">
               <ul className="flex space-x-4 sm:space-x-8">

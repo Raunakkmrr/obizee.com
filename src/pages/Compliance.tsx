@@ -51,7 +51,7 @@ const Compliance = () => {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "legal and compliance",
-      email: "raunakkumar1225@gmail.com",
+      email: "admin@obizee.com",
     },
   };
 
@@ -102,8 +102,8 @@ const Compliance = () => {
                     </div>
                     <div className="bg-gray-50 rounded-2xl p-4">
                       <p className="text-sm text-gray-500 mb-1">Compliance Contact Email</p>
-                      <a href="mailto:raunakkumar1225@gmail.com" className="font-semibold text-orange-600 underline">
-                        raunakkumar1225@gmail.com
+                      <a href="mailto:admin@obizee.com" className="font-semibold text-orange-600 underline">
+                        admin@obizee.com
                       </a>
                     </div>
                     <div className="bg-gray-50 rounded-2xl p-4">
@@ -142,8 +142,8 @@ const Compliance = () => {
                   </div>
                   <p className="text-gray-700">
                     For any additional verification document requests, contact{" "}
-                    <a href="mailto:raunakkumar1225@gmail.com" className="text-orange-600 underline font-semibold">
-                      raunakkumar1225@gmail.com
+                    <a href="mailto:admin@obizee.com" className="text-orange-600 underline font-semibold">
+                      admin@obizee.com
                     </a>
                     .
                   </p>
