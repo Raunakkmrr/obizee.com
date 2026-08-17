@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const BlogPost2 = dynamic(() => import("@/pages/blog/BlogPost2"), { ssr: false });
+import BlogPost2 from "@/pages/blog/BlogPost2";
 
 export const metadata: Metadata = {
   title: "Why oBizee Charges Only 1% — And Why That Matters for Small Businesses",

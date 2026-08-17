@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const BlogPost6 = dynamic(() => import("@/pages/blog/BlogPost6"), { ssr: false });
+import BlogPost6 from "@/pages/blog/BlogPost6";
 
 export const metadata: Metadata = {
   title: "Dukaan App Review 2026: Pros, Cons, and Better Alternatives",

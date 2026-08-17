@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const TopFunnelPost3 = dynamic(() => import("@/pages/blog/TopFunnelPost3"), { ssr: false });
+import TopFunnelPost3 from "@/pages/blog/TopFunnelPost3";
 
 export const metadata: Metadata = {
   title: "Ecommerce Shipping in India: Delhivery vs DTDC vs BlueDart [2026 Guide]",

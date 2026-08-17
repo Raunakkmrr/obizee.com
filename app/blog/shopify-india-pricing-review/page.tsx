@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const BlogPost5 = dynamic(() => import("@/pages/blog/BlogPost5"), { ssr: false });
+import BlogPost5 from "@/pages/blog/BlogPost5";
 
 export const metadata: Metadata = {
   title: "Shopify India Pricing: Is It Worth It for Small Businesses?",

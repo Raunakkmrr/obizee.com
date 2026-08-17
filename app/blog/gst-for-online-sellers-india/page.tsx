@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const TopFunnelPost4 = dynamic(() => import("@/pages/blog/TopFunnelPost4"), { ssr: false });
+import TopFunnelPost4 from "@/pages/blog/TopFunnelPost4";
 
 export const metadata: Metadata = {
   title: "GST for Online Sellers in India: Everything You Need to Know [2026]",

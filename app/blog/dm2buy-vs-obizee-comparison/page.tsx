@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const BlogPost7 = dynamic(() => import("@/pages/blog/BlogPost7"), { ssr: false });
+import BlogPost7 from "@/pages/blog/BlogPost7";
 
 export const metadata: Metadata = {
   title: "DM2buy vs oBizee: Which Platform Should Indian Sellers Choose?",

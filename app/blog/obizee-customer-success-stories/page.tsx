@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const BlogPost3 = dynamic(() => import("@/pages/blog/BlogPost3"), { ssr: false });
+import BlogPost3 from "@/pages/blog/BlogPost3";
 
 export const metadata: Metadata = {
   title: "oBizee Customer Success Stories: Real Merchants, Real Growth",

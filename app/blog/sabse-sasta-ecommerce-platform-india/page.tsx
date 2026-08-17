@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const HinglishPost4 = dynamic(() => import("@/pages/blog/HinglishPost4"), { ssr: false });
+import HinglishPost4 from "@/pages/blog/HinglishPost4";
 
 export const metadata: Metadata = {
   title: "India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]",

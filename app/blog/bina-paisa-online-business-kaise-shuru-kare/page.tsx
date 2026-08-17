@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const HinglishPost2 = dynamic(() => import("@/pages/blog/HinglishPost2"), { ssr: false });
+import HinglishPost2 from "@/pages/blog/HinglishPost2";
 
 export const metadata: Metadata = {
   title: "Bina Paisa Lagaye Online Business Kaise Shuru Kare [2026]",

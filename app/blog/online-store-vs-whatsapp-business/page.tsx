@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const BlogPost8 = dynamic(() => import("@/pages/blog/BlogPost8"), { ssr: false });
+import BlogPost8 from "@/pages/blog/BlogPost8";
 
 export const metadata: Metadata = {
   title: "Online Store vs WhatsApp Business: Which Is Better for Selling?",
