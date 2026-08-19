@@ -14,6 +14,9 @@ export interface LeadPayload {
   monthlyOrders?: string;
   sellingChannel?: string;
   name?: string;
+  phone?: string;
+  /** True only when the visitor was handed off to WhatsApp. */
+  whatsappOpened?: boolean;
   /** Honeypot. Must stay empty — only bots fill a hidden field. */
   companyWebsite?: string;
 }
@@ -29,33 +32,53 @@ function readUtm() {
   return { source, medium, campaign };
 }
 
+function buildBody(payload: LeadPayload) {
+  return JSON.stringify({
+    ...payload,
+    sourcePage: window.location.pathname,
+    utm: readUtm(),
+  });
+}
+
 /**
- * Fire-and-forget submit.
+ * Awaited submit. Used where the visitor handed over contact details and is
+ * waiting to be told it worked — they need a real success or failure, because
+ * nothing else confirms the enquiry reached us.
  *
- * Deliberately never awaited by the caller and never throws. The WhatsApp
- * hand-off is the primary conversion path, and a slow or failed API call must
- * not delay it or surface an error to someone who has already done their part.
- * A lead lost from the dashboard is recoverable — the WhatsApp message still
- * arrives. A blocked hand-off is not.
+ * Resolves true on success. Never throws; the caller renders the failure state.
+ */
+export async function postLead(payload: LeadPayload): Promise<boolean> {
+  if (typeof window === "undefined") return false;
+  try {
+    const res = await fetch(`${API_BASE}/website/lead`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: buildBody(payload),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Fire-and-forget submit, for the WhatsApp hand-off path.
+ *
+ * Deliberately never awaited and never throws. WhatsApp is the conversion there,
+ * and a slow or failed API call must not delay it or surface an error to someone
+ * who has already done their part: a lead missing from the dashboard is
+ * recoverable because the message still arrives, a blocked hand-off is not.
  *
  * `keepalive` lets the request outlive the page if the browser navigates away
  * rather than opening WhatsApp in a new tab.
  */
 export function submitLead(payload: LeadPayload): void {
   if (typeof window === "undefined") return;
-
-  const body = JSON.stringify({
-    ...payload,
-    sourcePage: window.location.pathname,
-    utm: readUtm(),
-    whatsappOpened: true,
-  });
-
   try {
     void fetch(`${API_BASE}/website/lead`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body,
+      body: buildBody(payload),
       keepalive: true,
     }).catch(() => {
       // Swallowed on purpose — see the note above.
@@ -63,4 +86,11 @@ export function submitLead(payload: LeadPayload): void {
   } catch {
     // Same.
   }
+}
+
+/** Accepts Indian mobile numbers: 10 digits starting 6-9, with optional +91/0. */
+export function isValidIndianPhone(raw: string): boolean {
+  const digits = raw.replace(/\D/g, "");
+  const local = digits.replace(/^91/, "").replace(/^0/, "");
+  return /^[6-9]\d{9}$/.test(local);
 }

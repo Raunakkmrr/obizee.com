@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "../src/index.css";
 import Providers from "./providers";
 import Analytics from "@/components/Analytics";
+import LeadCapturePrompt from "@/components/LeadCapturePrompt";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <Providers>{children}</Providers>
+        <LeadCapturePrompt />
         <Analytics />
       </body>
     </html>

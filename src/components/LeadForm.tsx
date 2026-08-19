@@ -18,6 +18,11 @@ import {
 } from "@/lib/contact";
 import { trackEvent } from "@/lib/analytics";
 import { submitLead } from "@/lib/leads";
+import {
+  LEAD_CATEGORIES as CATEGORIES,
+  LEAD_VOLUMES as VOLUMES,
+  LEAD_CHANNELS as CHANNELS,
+} from "@/lib/leadOptions";
 
 /**
  * Qualifying lead form — three taps, no required typing.
@@ -32,33 +37,6 @@ import { submitLead } from "@/lib/leads";
  * to type. When the OM-backend lead endpoint lands, this component gains a POST
  * alongside the WhatsApp hand-off; the question set does not change.
  */
-
-const CATEGORIES = [
-  "Crochet & handmade",
-  "Jewellery & accessories",
-  "Clothing & fashion",
-  "Food, snacks & bakery",
-  "Beauty & skincare",
-  "Home decor & gifting",
-  "Art & prints",
-  "Something else",
-] as const;
-
-const VOLUMES = [
-  "Just starting out",
-  "Under 25",
-  "25 – 100",
-  "100 – 500",
-  "500+",
-] as const;
-
-const CHANNELS = [
-  "Instagram",
-  "WhatsApp",
-  "Both",
-  "Offline shop",
-  "Own website",
-] as const;
 
 interface ChipGroupProps {
   legend: string;
@@ -238,6 +216,7 @@ const LeadForm = () => {
                 sellingChannel: channel ?? undefined,
                 name: name.trim() || undefined,
                 companyWebsite: honeypot,
+                whatsappOpened: true,
               });
             }}
             className={`block ${ready ? "" : "pointer-events-none"}`}
