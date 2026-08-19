@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import CompareDM2buyPage from "@/pages/CompareDM2buy";
 
-const CompareDM2buyPage = dynamic(() => import("@/pages/CompareDM2buy"), { ssr: false });
 
 export const metadata: Metadata = {
   title:
