@@ -7,9 +7,41 @@ import { ArrowRight, Check, X, Minus, Phone } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const CompareDukaan = () => {
+  const stages = [
+    {
+      stage: "Day 1",
+      need: "Somewhere for orders to land",
+      pain: "You are taking orders in Instagram DMs and writing them in a notebook. Two get missed in a week.",
+      obizee: "Store live at yourname.obizee.com in under 2 minutes, or on your own custom domain. Custom order forms, QR codes and shareable links, so orders arrive in one dashboard instead of three inboxes.",
+      rival: "Dukaan also gets you a store quickly, and its catalog builder is genuinely simple. Order forms for Instagram and WhatsApp are not part of it.",
+    },
+    {
+      stage: "First 100 orders",
+      need: "Shipping and payments that do not need three more subscriptions",
+      pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      rival: "Dukaan has no built-in courier integration, so shipping means a separate Shiprocket-style subscription and a second dashboard. There is no hyperlocal option.",
+    },
+    {
+      stage: "Scaling",
+      need: "The business behind the shop",
+      pain: "You sold out of the wrong yarn, you cannot remember which vendor was cheaper, and last month's buyers never came back.",
+      obizee: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, plus retention SMS to at-risk and win-back segments at ₹0.25 a message.",
+      rival: "Raw materials, purchase lists and vendor management are not part of Dukaan. Retention marketing needs a third-party tool.",
+    },
+  ];
+
   const features = [
+    { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in, from 1%", competitor: "Supported, configured separately", winner: "obizee" },
+    { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Purchase lists & vendor management", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: "Third-party tool", winner: "obizee" },
+    { feature: "Established user base", obizee: "Growing", competitor: "Large, well known", winner: "competitor" },
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "₹4,999/year (~₹417/month)", winner: "obizee" },
     { feature: "Commission per order", obizee: "1% (max ₹10 cap)", competitor: "2-3% + payment gateway fees", winner: "obizee" },
     { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
@@ -34,24 +66,24 @@ const CompareDukaan = () => {
 
   const faqs = [
     {
+      question: "Which is the best Dukaan alternative in India?",
+      answer: "oBizee is the best Dukaan alternative for sellers who need shipping built in rather than bought separately. There is no annual plan — the platform fee is 1% per order capped at ₹10 — and Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery are included. Dukaan's paid plans start at ₹4,999 a year as of 2026 and it has no native courier integration.",
+    },
+    {
       question: "Is oBizee cheaper than Dukaan?",
-      answer: "Yes. oBizee has no yearly subscription and charges only 1% per order, capped at ₹10 max. Dukaan charges ₹4,999/year plus 2-3% per order. For a merchant doing 100 orders/month at ₹500 average, oBizee costs ₹500/month vs Dukaan's ₹417/month subscription + ₹1,000+ in transaction fees.",
+      answer: "For most sellers, yes. Dukaan charges an annual plan fee whether or not you sell. oBizee charges nothing monthly and caps the platform fee at ₹10 per order, so 100 orders a month costs at most ₹1,000. The gap widens once you add the shipping subscription Dukaan requires and oBizee does not.",
     },
     {
       question: "Does Dukaan have shipping integration?",
-      answer: "No. Dukaan does not have built-in logistics. You need to handle shipping separately or use third-party services. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal integration with AWB generation, pickup scheduling, and live customer tracking.",
+      answer: "Dukaan does not have native courier integration. Sellers arrange shipping through a separate aggregator such as Shiprocket, which means an extra subscription and a second dashboard. oBizee integrates Delhivery directly and reaches DTDC, Blue Dart and India Post through a built-in aggregator, with rate comparison per order.",
     },
     {
-      question: "Can I switch from Dukaan to oBizee?",
-      answer: "Yes. Set up your oBizee store in under 2 minutes, add your products, and start selling immediately. You get an auto-generated website, order management, and shipping — all without paying a yearly subscription.",
+      question: "Can I deliver same-day with Dukaan?",
+      answer: "No. Dukaan has no hyperlocal delivery option. oBizee books Borzo and Shadowfax riders directly from the app for same-day delivery within your city, which matters for food, bakery, flowers and gifting where next-day shipping loses the order.",
     },
     {
-      question: "Does Dukaan have WhatsApp selling?",
-      answer: "Yes, both Dukaan and oBizee support WhatsApp selling. However, oBizee also includes built-in logistics integration, custom order forms, and a fare calculator that Dukaan doesn't offer.",
-    },
-    {
-      question: "Which is the best Dukaan alternative in India?",
-      answer: "oBizee is the best Dukaan alternative for merchants who want lower costs and built-in shipping. With zero monthly fees, 1% per order (max ₹10), and native Delhivery, DTDC & Blue Dart logistics, oBizee offers more value at a fraction of the cost.",
+      question: "When is Dukaan the better choice?",
+      answer: "Dukaan is a reasonable pick if you want a simple catalog and storefront, have shipping already handled, and prefer a large established user base. oBizee is the stronger choice when you want shipping, payments, inventory and customer marketing included rather than assembled from separate tools.",
     },
   ];
 
@@ -88,6 +120,7 @@ const CompareDukaan = () => {
         { name: "oBizee vs Dukaan", url: "https://www.obizee.com/compare/obizee-vs-dukaan" },
       ]} />
       <JsonLd data={jsonLd} />
+        <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
@@ -104,7 +137,7 @@ const CompareDukaan = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee charges ₹0/month with a 1% fee capped at ₹10 per order. Dukaan charges ₹4,999/year plus 2-3% per order. Here's the full comparison.
+              oBizee is a Dukaan alternative for Indian sellers with no annual plan, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Dukaan's paid plans start at ₹4,999 a year as of 2026 and it has no built-in courier integration. Here is the honest comparison.
             </p>
           </div>
         </section>
@@ -171,6 +204,45 @@ const CompareDukaan = () => {
         </section>
 
         {/* FAQ */}
+        <section className="py-10 sm:py-14">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">
+              What You Actually Need, and When
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              Most platforms solve the first stage well and leave you to buy apps for the rest.
+              Here is where each one stops.
+            </p>
+
+            <div className="space-y-6">
+              {stages.map((item) => (
+                <article
+                  key={item.stage}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-7"
+                >
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-sm font-bold text-orange-700">
+                      {item.stage}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-900">{item.need}</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-5">&ldquo;{item.pain}&rdquo;</p>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-xl border-2 border-orange-200 bg-orange-50/60 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-orange-700">oBizee</p>
+                      <p className="text-sm leading-relaxed text-gray-700">{item.obizee}</p>
+                    </div>
+                    <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-gray-500">Dukaan</p>
+                      <p className="text-sm leading-relaxed text-gray-600">{item.rival}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>

@@ -7,9 +7,40 @@ import { ArrowRight, Check, X, Phone } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const CompareInstamojo = () => {
+  const stages = [
+    {
+      stage: "Day 1",
+      need: "Somewhere for orders to land",
+      pain: "You are taking orders in Instagram DMs and writing them in a notebook. Two get missed in a week.",
+      obizee: "Store live at yourname.obizee.com in under 2 minutes, or on your own custom domain. Custom order forms, QR codes and shareable links, so orders arrive in one dashboard instead of three inboxes.",
+      rival: "Instamojo gets you taking payments quickly, and for digital products or one-off payment links it is hard to beat.",
+    },
+    {
+      stage: "First 100 orders",
+      need: "Shipping and payments that do not need three more subscriptions",
+      pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      rival: "Instamojo's storefront is payments-first. Courier booking, rate comparison and same-day hyperlocal delivery are not part of it.",
+    },
+    {
+      stage: "Scaling",
+      need: "The business behind the shop",
+      pain: "You sold out of the wrong yarn, you cannot remember which vendor was cheaper, and last month's buyers never came back.",
+      obizee: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, plus retention SMS to at-risk and win-back segments at ₹0.25 a message.",
+      rival: "Stock, raw materials, vendors and repeat-customer marketing sit outside Instamojo entirely.",
+    },
+  ];
+
   const features = [
+    { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
+    { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Purchase lists & vendor management", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: false, winner: "obizee" },
+    { feature: "Digital products & payment links", obizee: "Not the focus", competitor: "Core strength", winner: "competitor" },
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Free + Premium from ₹999/month", winner: "obizee" },
     { feature: "Commission per order", obizee: "1% (max ₹10)", competitor: "2-5% + payment gateway fees", winner: "obizee" },
     { feature: "Full online store", obizee: true, competitor: "Basic storefront", winner: "obizee" },
@@ -29,24 +60,24 @@ const CompareInstamojo = () => {
 
   const faqs = [
     {
+      question: "What is the best Instamojo alternative for physical products?",
+      answer: "oBizee is the best Instamojo alternative for sellers shipping physical goods. It includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery, inventory with per-combination variants, raw-material and vendor tracking, and retention SMS — none of which are Instamojo's focus.",
+    },
+    {
       question: "Is oBizee better than Instamojo for selling products?",
-      answer: "For physical products, yes. oBizee offers a full store, order management, inventory tracking, and built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping. Instamojo is better for digital products and payment links.",
+      answer: "For physical products, yes. Instamojo is strongest at payments, payment links and digital goods. oBizee is built around the physical order lifecycle: stock, courier booking, AWB generation, tracking, and following up with customers after delivery.",
     },
     {
       question: "Does Instamojo have shipping?",
-      answer: "No. Instamojo is primarily a payment platform with a basic storefront. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal logistics integration.",
+      answer: "Instamojo's shipping support is limited compared with a logistics-first platform. oBizee integrates Delhivery directly, reaches DTDC, Blue Dart and India Post through a built-in aggregator with live rate comparison per order, and books Borzo and Shadowfax riders for same-day delivery.",
     },
     {
-      question: "Which is cheaper — oBizee or Instamojo?",
-      answer: "oBizee charges 1% per order capped at ₹10. Instamojo charges 2-5% per transaction. For a ₹2,000 order, you pay ₹10 on oBizee vs ₹40-100 on Instamojo.",
+      question: "What does oBizee cost compared with Instamojo?",
+      answer: "oBizee has no monthly subscription. After a 3-month free trial the platform fee is 1% per successful order capped at ₹10, plus gateway charges from 1% billed by Razorpay or Paytm. Compare that against Instamojo's plan fee plus its transaction charges for your own order volume.",
     },
     {
-      question: "Can Instamojo replace an online store?",
-      answer: "Instamojo offers basic storefront features, but it's primarily a payment gateway. oBizee is purpose-built as a complete D2C store with order management, inventory, shipping, and multi-channel selling.",
-    },
-    {
-      question: "What is the best Instamojo alternative for physical products?",
-      answer: "oBizee is the best Instamojo alternative for physical product sellers in India. It offers everything Instamojo lacks: full order lifecycle management, Delhivery, DTDC & Blue Dart integration, and custom order forms — all at lower fees.",
+      question: "When is Instamojo the better choice?",
+      answer: "Instamojo is the better choice for digital products, services, course sales or anything that needs a quick payment link without shipping. oBizee is built for sellers moving physical stock.",
     },
   ];
 
@@ -83,6 +114,7 @@ const CompareInstamojo = () => {
         { name: "oBizee vs Instamojo", url: "https://www.obizee.com/compare/obizee-vs-instamojo" },
       ]} />
       <JsonLd data={jsonLd} />
+        <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
@@ -99,7 +131,7 @@ const CompareInstamojo = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a full D2C store builder with integrated logistics. Instamojo started as a payment gateway and now offers basic storefronts. Here's how they compare for Indian sellers.
+              oBizee is an Instamojo alternative for sellers shipping physical products. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, inventory and raw-material tracking, vendor management and retention SMS, with no monthly subscription and a 1% platform fee capped at ₹10 per order. Instamojo began as a payment gateway and its storefront remains lighter on logistics and stock.
             </p>
           </div>
         </section>
@@ -166,6 +198,45 @@ const CompareInstamojo = () => {
         </section>
 
         {/* FAQ */}
+        <section className="py-10 sm:py-14">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">
+              What You Actually Need, and When
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              Most platforms solve the first stage well and leave you to buy apps for the rest.
+              Here is where each one stops.
+            </p>
+
+            <div className="space-y-6">
+              {stages.map((item) => (
+                <article
+                  key={item.stage}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-7"
+                >
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-sm font-bold text-orange-700">
+                      {item.stage}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-900">{item.need}</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-5">&ldquo;{item.pain}&rdquo;</p>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-xl border-2 border-orange-200 bg-orange-50/60 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-orange-700">oBizee</p>
+                      <p className="text-sm leading-relaxed text-gray-700">{item.obizee}</p>
+                    </div>
+                    <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-gray-500">Instamojo</p>
+                      <p className="text-sm leading-relaxed text-gray-600">{item.rival}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>

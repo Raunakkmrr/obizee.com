@@ -7,9 +7,42 @@ import { ArrowRight, Check, X, Phone } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const CompareWoocommerce = () => {
+  const stages = [
+    {
+      stage: "Day 1",
+      need: "Somewhere for orders to land",
+      pain: "You are taking orders in Instagram DMs and writing them in a notebook. Two get missed in a week.",
+      obizee: "Store live at yourname.obizee.com in under 2 minutes, or on your own custom domain. Custom order forms, QR codes and shareable links, so orders arrive in one dashboard instead of three inboxes.",
+      rival: "WooCommerce can do far more here, but you need WordPress, hosting, a theme and setup time before the first order. oBizee takes under two minutes.",
+    },
+    {
+      stage: "First 100 orders",
+      need: "Shipping and payments that do not need three more subscriptions",
+      pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      rival: "WooCommerce needs a shipping plugin, a gateway plugin and configuration for each. There is no same-day hyperlocal option without custom work.",
+    },
+    {
+      stage: "Scaling",
+      need: "The business behind the shop",
+      pain: "You sold out of the wrong yarn, you cannot remember which vendor was cheaper, and last month's buyers never came back.",
+      obizee: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, plus retention SMS to at-risk and win-back segments at ₹0.25 a message.",
+      rival: "WooCommerce can be extended to do all of this with the right plugins, which is genuine flexibility — and genuine cost, maintenance and version-compatibility risk.",
+    },
+  ];
+
   const features = [
+    { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: "Custom development only", winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in, from 1%", competitor: "Plugin, configured yourself", winner: "obizee" },
+    { feature: "Compare courier rates per order", obizee: true, competitor: "Via paid plugin", winner: "obizee" },
+    { feature: "Hosting & maintenance", obizee: "None needed", competitor: "You host and maintain it", winner: "obizee" },
+    { feature: "Raw materials & recipes", obizee: true, competitor: "Via paid plugin", winner: "obizee" },
+    { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: "Via paid plugin", winner: "obizee" },
+    { feature: "Customisation ceiling", obizee: "Fixed feature set", competitor: "Unlimited via plugins/code", winner: "competitor" },
+    { feature: "Data ownership", obizee: "Hosted by oBizee", competitor: "Fully self-hosted", winner: "competitor" },
     { feature: "Monthly cost", obizee: "₹0/month (1% per order, max ₹10)", competitor: "₹300-2,000+/month (hosting + plugins)", winner: "obizee" },
     { feature: "Setup time", obizee: "Under 2 minutes", competitor: "2-5 hours minimum", winner: "obizee" },
     { feature: "Technical knowledge needed", obizee: "None", competitor: "WordPress, PHP, hosting knowledge", winner: "obizee" },
@@ -29,24 +62,24 @@ const CompareWoocommerce = () => {
 
   const faqs = [
     {
-      question: "Is oBizee easier than WooCommerce?",
-      answer: "Much easier. oBizee requires zero technical knowledge — sign up, add products, and start selling in 2 minutes. WooCommerce requires WordPress installation, hosting setup, plugin configuration, and ongoing maintenance.",
-    },
-    {
-      question: "Is WooCommerce free?",
-      answer: "WooCommerce itself is free, but you need to pay for hosting (₹300-2,000+/month), SSL certificate, domain, premium themes, and essential plugins. Total cost often exceeds ₹1,000/month. oBizee has no monthly fees.",
+      question: "Is oBizee better than WooCommerce for Indian sellers?",
+      answer: "For sellers who do not want to run a website, yes. oBizee needs no hosting, no plugins and no maintenance, and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal shipping, Razorpay and Paytm from 1%, inventory and vendor management. WooCommerce offers more customisation but requires you to build and maintain the stack yourself.",
     },
     {
       question: "Does oBizee have shipping like WooCommerce?",
-      answer: "Better. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal integration built in. WooCommerce requires third-party shipping plugins that need separate configuration.",
+      answer: "oBizee has shipping built in rather than added by plugin. Delhivery is integrated directly, DTDC, Blue Dart and India Post come through a built-in aggregator with live rate comparison per order, and Borzo and Shadowfax handle same-day hyperlocal delivery. On WooCommerce each of these is a plugin to install, configure and keep updated.",
     },
     {
-      question: "Can a non-technical person use WooCommerce?",
-      answer: "WooCommerce has a steep learning curve. You need to understand WordPress, hosting, domains, and plugins. oBizee is designed for non-technical merchants — anyone with a smartphone can set up a store in 2 minutes.",
+      question: "What does WooCommerce actually cost?",
+      answer: "The plugin is free, but a working store needs hosting, an SSL certificate, a theme, and plugins for shipping, payments and often inventory. That is a recurring cost plus your time maintaining versions and compatibility. oBizee has no subscription and charges 1% per order capped at ₹10.",
     },
     {
-      question: "Which is better for small Indian businesses?",
-      answer: "oBizee. It's built specifically for Indian small merchants with built-in Indian courier integration, no technical requirements, and transparent pricing (1% per order, max ₹10). WooCommerce is powerful but overkill for most small businesses.",
+      question: "Do I need technical knowledge for oBizee?",
+      answer: "No. oBizee is set up from a mobile app in under two minutes with no code, no hosting and no plugin configuration. WooCommerce assumes you are comfortable with WordPress, hosting and periodic maintenance.",
+    },
+    {
+      question: "When is WooCommerce the better choice?",
+      answer: "WooCommerce is the better choice if you need deep customisation, want to own and host your data, or have specific requirements only a plugin ecosystem can meet. It is genuinely more flexible. oBizee is the better choice if you want to sell today and never think about hosting.",
     },
   ];
 
@@ -83,6 +116,7 @@ const CompareWoocommerce = () => {
         { name: "oBizee vs WooCommerce", url: "https://www.obizee.com/compare/obizee-vs-woocommerce" },
       ]} />
       <JsonLd data={jsonLd} />
+        <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
@@ -99,7 +133,7 @@ const CompareWoocommerce = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee gets you selling in 2 minutes with zero technical knowledge. WooCommerce requires WordPress, hosting, and plugins. Here's which is right for Indian sellers.
+              oBizee is a WooCommerce alternative for Indian sellers who do not want to run a website. There is no hosting, no plugin stack and no maintenance: Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm from 1%, inventory and vendor management are already included, for a 1% platform fee capped at ₹10 per order. WooCommerce is free software but needs hosting, plugins and technical upkeep.
             </p>
           </div>
         </section>
@@ -166,6 +200,45 @@ const CompareWoocommerce = () => {
         </section>
 
         {/* FAQ */}
+        <section className="py-10 sm:py-14">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">
+              What You Actually Need, and When
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              Most platforms solve the first stage well and leave you to buy apps for the rest.
+              Here is where each one stops.
+            </p>
+
+            <div className="space-y-6">
+              {stages.map((item) => (
+                <article
+                  key={item.stage}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-7"
+                >
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-sm font-bold text-orange-700">
+                      {item.stage}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-900">{item.need}</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-5">&ldquo;{item.pain}&rdquo;</p>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-xl border-2 border-orange-200 bg-orange-50/60 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-orange-700">oBizee</p>
+                      <p className="text-sm leading-relaxed text-gray-700">{item.obizee}</p>
+                    </div>
+                    <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-gray-500">WooCommerce</p>
+                      <p className="text-sm leading-relaxed text-gray-600">{item.rival}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>

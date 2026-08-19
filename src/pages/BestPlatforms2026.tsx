@@ -7,6 +7,7 @@ import { ArrowRight, Check, X, Phone } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const BestPlatforms2026 = () => {
   const platforms = [
@@ -15,8 +16,8 @@ const BestPlatforms2026 = () => {
       name: "oBizee",
       verdict: "Best overall for Indian small merchants",
       pricing: "1% per order, max ₹10. No monthly fees.",
-      pros: ["Built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping", "Zero subscription fees", "2-minute setup"],
-      cons: ["No blog/SEO tools built in", "Newer platform"],
+      pros: ["Same-day hyperlocal delivery via Borzo & Shadowfax", "Delhivery, DTDC, Blue Dart & India Post with per-order rate comparison", "Razorpay & Paytm built in, from 1%", "Raw materials, vendors & purchase lists", "Customer retention SMS at ₹0.25", "Zero subscription — 1% per order, capped at ₹10"],
+      cons: ["No blog/SEO tools built in", "Newer platform with a smaller user base", "Fewer storefront themes than Shopify"],
     },
     {
       rank: 2,
@@ -141,6 +142,7 @@ const BestPlatforms2026 = () => {
         { name: "Best Ecommerce Platforms India 2026", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
       ]} />
       <JsonLd data={jsonLd} />
+        <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
       <JsonLd data={itemListJsonLd} />
 
@@ -158,7 +160,7 @@ const BestPlatforms2026 = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              We compared pricing, features, shipping integration, and ease of use across the most popular platforms for Indian merchants.
+              For Indian sellers shipping physical products in 2026, oBizee is the only platform on this list with same-day hyperlocal delivery and multi-courier shipping built in rather than added through paid apps. Shopify remains the strongest choice for international selling and theme choice, WooCommerce for full customisation, and DM2Buy for a free catalog link. Here is how the seven compare on price, shipping, payments and what happens after the first hundred orders.
             </p>
           </div>
         </section>

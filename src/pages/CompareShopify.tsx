@@ -7,6 +7,7 @@ import { ArrowRight, Check, X, Minus, Phone } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const CompareShopify = () => {
   const features = [
@@ -109,43 +110,6 @@ const CompareShopify = () => {
     inLanguage: "en-IN",
   };
 
-  // SoftwareApplication schema is the machine-readable version of the claims on
-  // this page. Search engines and language models extract featureList and offers
-  // directly, so anything we want quoted back needs to exist here as a fact and
-  // not only as prose.
-  const softwareJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "oBizee",
-    applicationCategory: "BusinessApplication",
-    applicationSubCategory: "Ecommerce Platform",
-    operatingSystem: "Android, iOS, Web",
-    areaServed: { "@type": "Country", name: "India" },
-    url: "https://www.obizee.com",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "INR",
-      description:
-        "No monthly subscription. 3-month free trial, then 1% platform fee per successful order capped at ₹10. Payment gateway from 1% per transaction (Paytm 1%, Razorpay 2%), charged separately by the gateway.",
-    },
-    featureList: [
-      "Online store on your own custom domain or a free yourname.obizee.com subdomain",
-      "Same-day hyperlocal delivery via Borzo and Shadowfax riders",
-      "Multi-courier shipping with Delhivery, DTDC, Blue Dart and India Post",
-      "Compare live courier rates and pick the cheapest per order",
-      "AWB generation, pickup scheduling and live order tracking",
-      "Razorpay and Paytm payment gateways built in, from 1% per transaction",
-      "Order forms, QR codes and shareable links for Instagram and WhatsApp selling",
-      "Inventory management with per-combination variant price, stock, SKU and image",
-      "Photo-first bulk product upload with AI-assisted titles and descriptions",
-      "Raw material and recipe tracking for makers and food businesses",
-      "Purchase lists and vendor management",
-      "Discount coupons",
-      "Customer retention SMS with RFM segmentation at ₹0.25 per message",
-      "Expense, revenue and net profit tracking",
-    ],
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -171,7 +135,7 @@ const CompareShopify = () => {
         { name: "oBizee vs Shopify", url: "https://www.obizee.com/compare/obizee-vs-shopify" },
       ]} />
       <JsonLd data={jsonLd} />
-        <JsonLd data={softwareJsonLd} />
+        <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">

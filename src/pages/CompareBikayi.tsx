@@ -7,9 +7,41 @@ import { ArrowRight, Check, X, Phone } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const CompareBikayi = () => {
+  const stages = [
+    {
+      stage: "Day 1",
+      need: "Somewhere for orders to land",
+      pain: "You are taking orders in Instagram DMs and writing them in a notebook. Two get missed in a week.",
+      obizee: "Store live at yourname.obizee.com in under 2 minutes, or on your own custom domain. Custom order forms, QR codes and shareable links, so orders arrive in one dashboard instead of three inboxes.",
+      rival: "Bikayi is strong here, particularly for WhatsApp-led selling, and its store builder is well made.",
+    },
+    {
+      stage: "First 100 orders",
+      need: "Shipping and payments that do not need three more subscriptions",
+      pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      rival: "Bikayi does not include courier integration, so shipping is a separate subscription and dashboard. There is no same-day hyperlocal option.",
+    },
+    {
+      stage: "Scaling",
+      need: "The business behind the shop",
+      pain: "You sold out of the wrong yarn, you cannot remember which vendor was cheaper, and last month's buyers never came back.",
+      obizee: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, plus retention SMS to at-risk and win-back segments at ₹0.25 a message.",
+      rival: "Bikayi covers the storefront well but stops before raw materials, purchase lists, vendor management and RFM retention marketing.",
+    },
+  ];
+
   const features = [
+    { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in, from 1%", competitor: "Supported, configured separately", winner: "obizee" },
+    { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Purchase lists & vendor management", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: "Third-party tool", winner: "obizee" },
+    { feature: "WhatsApp-native selling flows", obizee: "Order forms + links", competitor: "Purpose-built", winner: "competitor" },
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Free tier + paid plans from ₹999/month", winner: "obizee" },
     { feature: "Commission per order", obizee: "1% (max ₹10)", competitor: "Varies by plan", winner: "obizee" },
     { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
@@ -30,23 +62,23 @@ const CompareBikayi = () => {
   const faqs = [
     {
       question: "Is oBizee better than Bikayi?",
-      answer: "For Indian small merchants who need built-in shipping and transparent pricing, yes. oBizee offers Delhivery, DTDC & Blue Dart logistics, custom order forms, and a simple 1% fee capped at ₹10. Bikayi excels with WhatsApp Business API integration.",
+      answer: "For sellers who ship physical products, oBizee covers more ground. It includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery, Razorpay and Paytm from 1%, raw-material and vendor tracking and retention SMS, with no monthly subscription. Bikayi builds a strong WhatsApp-led storefront but leaves shipping and inventory depth to other tools.",
     },
     {
       question: "Does Bikayi have shipping integration?",
-      answer: "No. Bikayi focuses on WhatsApp commerce and store building but doesn't have built-in logistics. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal integration.",
+      answer: "Bikayi does not include native courier integration. Sellers use a separate aggregator, which adds a subscription and a second dashboard. oBizee integrates Delhivery directly, reaches DTDC, Blue Dart and India Post through a built-in aggregator, and books same-day hyperlocal riders through Borzo and Shadowfax.",
     },
     {
-      question: "Is Bikayi free?",
-      answer: "Bikayi has a free tier with limited features. Advanced features require paid plans starting at ₹999/month. oBizee has no monthly fees — just 1% per order, max ₹10.",
+      question: "How much does oBizee cost compared with Bikayi?",
+      answer: "oBizee has no monthly subscription. After a 3-month free trial you pay 1% per successful order capped at ₹10, plus gateway charges from 1%. Bikayi's paid tiers reach ₹999 a month or more as of 2026, charged whether or not you sell that month.",
     },
     {
-      question: "Which is cheaper — oBizee or Bikayi?",
-      answer: "oBizee is cheaper for most merchants. Zero monthly fees and a flat 1% per order (max ₹10) vs Bikayi's paid plans that start at ₹999/month for full features.",
+      question: "Which is better for WhatsApp selling?",
+      answer: "Both handle WhatsApp orders. Bikayi is built around WhatsApp-first flows and does that well. oBizee provides custom order forms, QR codes and shareable links that work across WhatsApp and Instagram, and then carries the order through shipping, payment and stock rather than stopping at checkout.",
     },
     {
-      question: "Can I sell on WhatsApp with oBizee?",
-      answer: "Yes. oBizee supports WhatsApp selling along with Instagram and your own website. While Bikayi offers deeper WhatsApp Business API integration, oBizee provides multi-channel selling with built-in logistics.",
+      question: "When is Bikayi the better choice?",
+      answer: "Bikayi is the better choice if WhatsApp-native selling flows are your priority and shipping is already handled. oBizee is stronger when you want couriers, payments, inventory and retention marketing included in one place.",
     },
   ];
 
@@ -83,6 +115,7 @@ const CompareBikayi = () => {
         { name: "oBizee vs Bikayi", url: "https://www.obizee.com/compare/obizee-vs-bikayi" },
       ]} />
       <JsonLd data={jsonLd} />
+        <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
@@ -99,7 +132,7 @@ const CompareBikayi = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee charges ₹0/month. Bikayi starts free but paid plans go up to ₹999+/month. Both focus on Indian sellers — here's how they compare.
+              oBizee is a Bikayi alternative for Indian sellers with no monthly subscription, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery via Borzo and Shadowfax. Bikayi's paid plans run to ₹999 a month or more as of 2026 and it has no built-in courier integration. Here is the honest comparison.
             </p>
           </div>
         </section>
@@ -166,6 +199,45 @@ const CompareBikayi = () => {
         </section>
 
         {/* FAQ */}
+        <section className="py-10 sm:py-14">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">
+              What You Actually Need, and When
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              Most platforms solve the first stage well and leave you to buy apps for the rest.
+              Here is where each one stops.
+            </p>
+
+            <div className="space-y-6">
+              {stages.map((item) => (
+                <article
+                  key={item.stage}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-7"
+                >
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-sm font-bold text-orange-700">
+                      {item.stage}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-900">{item.need}</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-5">&ldquo;{item.pain}&rdquo;</p>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-xl border-2 border-orange-200 bg-orange-50/60 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-orange-700">oBizee</p>
+                      <p className="text-sm leading-relaxed text-gray-700">{item.obizee}</p>
+                    </div>
+                    <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-gray-500">Bikayi</p>
+                      <p className="text-sm leading-relaxed text-gray-600">{item.rival}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>

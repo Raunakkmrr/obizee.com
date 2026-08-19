@@ -7,9 +7,40 @@ import { ArrowRight, Check, X, Phone } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const CompareDM2buy = () => {
+  const stages = [
+    {
+      stage: "Day 1",
+      need: "Somewhere for orders to land",
+      pain: "You are taking orders in Instagram DMs and writing them in a notebook. Two get missed in a week.",
+      obizee: "Store live at yourname.obizee.com in under 2 minutes, or on your own custom domain. Custom order forms, QR codes and shareable links, so orders arrive in one dashboard instead of three inboxes.",
+      rival: "DM2Buy is genuinely good at this and free. If all you need is a link to share in your bio, it does the job.",
+    },
+    {
+      stage: "First 100 orders",
+      need: "Shipping and payments that do not need three more subscriptions",
+      pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      rival: "DM2Buy has no built-in logistics. You book couriers yourself or pay for a separate aggregator, and there is no same-day option.",
+    },
+    {
+      stage: "Scaling",
+      need: "The business behind the shop",
+      pain: "You sold out of the wrong yarn, you cannot remember which vendor was cheaper, and last month's buyers never came back.",
+      obizee: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, plus retention SMS to at-risk and win-back segments at ₹0.25 a message.",
+      rival: "DM2Buy is a catalog tool, not a business system. Stock, materials, vendors and repeat-customer marketing all live outside it.",
+    },
+  ];
+
   const features = [
+    { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
+    { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Purchase lists & vendor management", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: false, winner: "obizee" },
+    { feature: "Free to start", obizee: "3-month free trial", competitor: "Core catalog free", winner: "competitor" },
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Free tier + unclear paid features", winner: "obizee" },
     { feature: "Transparent pricing", obizee: "1% per order, max ₹10 (published)", competitor: "Commission-based (details vary)", winner: "obizee" },
     { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
@@ -33,24 +64,24 @@ const CompareDM2buy = () => {
 
   const faqs = [
     {
-      question: "What is the difference between oBizee and DM2buy?",
-      answer: "oBizee is a full D2C commerce platform with multi-channel support (Instagram, WhatsApp, web), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping, custom order forms, and transparent pricing (1% per order, max ₹10). DM2buy is primarily an Instagram-focused storefront that excels at converting DMs into orders, but does not include logistics integration or multi-channel selling.",
+      question: "What is the best DM2Buy alternative for Indian sellers?",
+      answer: "oBizee is the best DM2Buy alternative for sellers who need more than a catalog link. It includes Delhivery, DTDC, Blue Dart and same-day hyperlocal shipping, Razorpay and Paytm from 1%, inventory and variant management, and customer retention SMS, with no monthly subscription and a 1% platform fee capped at ₹10 per order.",
     },
     {
-      question: "Does DM2buy have shipping integration?",
-      answer: "No. DM2buy does not have built-in logistics or shipping integration. Merchants need to handle shipping separately. oBizee has native integration with Delhivery, DTDC and Blue Dart — you can generate AWB numbers, schedule courier pickups, and provide live tracking to customers directly from the app.",
+      question: "What is the difference between oBizee and DM2Buy?",
+      answer: "DM2Buy is a catalog and order-link tool: it gives customers somewhere to browse and place an order. oBizee is a full commerce platform that also handles shipping, payments, stock, raw materials, vendors and repeat-customer marketing. If shipping and inventory happen outside your current tool, that is the gap oBizee fills.",
     },
     {
-      question: "Is DM2buy free to use?",
-      answer: "DM2buy offers a free tier for basic features, but their pricing for advanced features is not publicly documented. oBizee has fully transparent pricing: no monthly fees, just 1% per order capped at ₹10 maximum. You always know exactly what you'll pay.",
+      question: "Does DM2Buy have shipping integration?",
+      answer: "No. DM2Buy does not include courier integration, so sellers book shipments themselves or subscribe to a separate aggregator. oBizee integrates Delhivery directly and reaches DTDC, Blue Dart and India Post through a built-in aggregator, with live rate comparison per order and same-day hyperlocal delivery through Borzo and Shadowfax.",
     },
     {
-      question: "Can I sell on WhatsApp with DM2buy?",
-      answer: "No, DM2buy is Instagram-only. oBizee supports selling through Instagram, WhatsApp, and your own auto-generated website — all managed from a single dashboard. This multi-channel approach means you can reach more customers without managing multiple tools.",
+      question: "Is oBizee free like DM2Buy?",
+      answer: "oBizee has a 3-month free trial and no monthly subscription after it. You then pay 1% per successful order, capped at ₹10, plus gateway charges from 1% billed by Razorpay or Paytm. DM2Buy's core catalog is free, so oBizee costs more per order — the trade is that shipping, payments and inventory are included rather than handled separately.",
     },
     {
-      question: "Which is better for Indian small businesses — oBizee or DM2buy?",
-      answer: "oBizee is the more complete solution for Indian small businesses. It offers everything DM2buy does (online storefront, product listings, order management) plus logistics integration, multi-channel selling, custom order forms, fare calculator, and transparent pricing — winning on 13 out of 19 features in a direct comparison.",
+      question: "When is DM2Buy the better choice?",
+      answer: "DM2Buy is the better choice if you want a free catalog link, ship orders yourself, and do not need stock or courier management. It is a good starting point. oBizee makes sense once losing orders, booking couriers or tracking stock starts costing you more time than the fee.",
     },
   ];
 
@@ -87,6 +118,7 @@ const CompareDM2buy = () => {
         { name: "oBizee vs DM2buy", url: "https://www.obizee.com/compare/obizee-vs-dm2buy" },
       ]} />
       <JsonLd data={jsonLd} />
+        <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
@@ -102,7 +134,7 @@ const CompareDM2buy = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Both platforms help Indian sellers go online. But oBizee offers built-in logistics, multi-channel selling, and transparent pricing — winning on 13 out of 19 features. Here's the full breakdown.
+              oBizee is a DM2Buy alternative for Indian sellers who have outgrown a catalog link. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm from 1%, inventory and raw-material tracking, and retention SMS — for no monthly subscription and a 1% platform fee capped at ₹10 per order. DM2Buy is a catalog and order-link tool without built-in logistics.
             </p>
           </div>
         </section>
@@ -162,6 +194,45 @@ const CompareDM2buy = () => {
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 sm:py-14">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">
+              What You Actually Need, and When
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              Most platforms solve the first stage well and leave you to buy apps for the rest.
+              Here is where each one stops.
+            </p>
+
+            <div className="space-y-6">
+              {stages.map((item) => (
+                <article
+                  key={item.stage}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-7"
+                >
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-sm font-bold text-orange-700">
+                      {item.stage}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-900">{item.need}</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-5">&ldquo;{item.pain}&rdquo;</p>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-xl border-2 border-orange-200 bg-orange-50/60 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-orange-700">oBizee</p>
+                      <p className="text-sm leading-relaxed text-gray-700">{item.obizee}</p>
+                    </div>
+                    <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-gray-500">DM2buy</p>
+                      <p className="text-sm leading-relaxed text-gray-600">{item.rival}</p>
+                    </div>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
