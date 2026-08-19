@@ -10,23 +10,52 @@ import JsonLd from "@/components/JsonLd";
 
 const CompareShopify = () => {
   const features = [
-    { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Starts at ₹2,000+/month", winner: "obizee" },
-    { feature: "Commission per order", obizee: "1% (max ₹10 cap)", competitor: "0.5–2% + payment gateway fees", winner: "obizee" },
-    { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
-    { feature: "Custom domain support", obizee: "Subdomain (free)", competitor: "Custom domain (paid)", winner: "tie" },
-    { feature: "Delhivery integration", obizee: true, competitor: "Via third-party apps", winner: "obizee" },
-    { feature: "DTDC integration", obizee: true, competitor: "Via third-party apps", winner: "obizee" },
-    { feature: "Built-in logistics (AWB, pickup)", obizee: true, competitor: false, winner: "obizee" },
-    { feature: "Order management dashboard", obizee: true, competitor: true, winner: "tie" },
-    { feature: "Inventory management", obizee: true, competitor: true, winner: "tie" },
-    { feature: "Custom order form builder", obizee: true, competitor: false, winner: "obizee" },
-    { feature: "Multi-link order forms", obizee: true, competitor: false, winner: "obizee" },
-    { feature: "No coding needed", obizee: true, competitor: "Mostly, but themes need some setup", winner: "obizee" },
-    { feature: "Mobile-first app", obizee: true, competitor: true, winner: "tie" },
-    { feature: "Employee & vendor management", obizee: true, competitor: "Via apps (paid)", winner: "obizee" },
-    { feature: "Fare calculator", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "From ₹1,994/month (Basic, as of 2026)", winner: "obizee" },
+    { feature: "Platform fee per order", obizee: "1%, capped at ₹10", competitor: "Up to 2% if not using Shopify Payments", winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in, from 1%", competitor: "Third-party gateway, set up separately", winner: "obizee" },
+    { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
+    { feature: "Courier partners", obizee: "Delhivery, DTDC, Blue Dart, India Post +", competitor: "Via paid apps like Shiprocket", winner: "obizee" },
+    { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "AWB generation & pickup scheduling", obizee: true, competitor: "Via third-party apps", winner: "obizee" },
+    { feature: "Custom domain", obizee: "Included — your own domain", competitor: "Supported, domain bought separately", winner: "tie" },
+    { feature: "Storefront templates", obizee: "4 India-first templates", competitor: "Large paid theme marketplace", winner: "competitor" },
+    { feature: "Order forms for Instagram & WhatsApp", obizee: "Custom form builder + QR + links", competitor: false, winner: "obizee" },
+    { feature: "Inventory & stock tracking", obizee: true, competitor: true, winner: "tie" },
+    { feature: "Product variants", obizee: "Per-combination price, stock, SKU, image", competitor: true, winner: "tie" },
+    { feature: "Bulk product upload", obizee: "Photo-first, with AI-assisted titles", competitor: "CSV import", winner: "obizee" },
+    { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Purchase lists & vendor management", obizee: true, competitor: "Via paid apps", winner: "obizee" },
+    { feature: "Discount coupons", obizee: true, competitor: true, winner: "tie" },
+    { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: "Via paid apps like Klaviyo", winner: "obizee" },
+    { feature: "Expense & profit tracking", obizee: true, competitor: "Via paid apps", winner: "obizee" },
     { feature: "Setup time", obizee: "Under 2 minutes", competitor: "30–60 minutes", winner: "obizee" },
-    { feature: "Best for", obizee: "Indian small merchants", competitor: "Global businesses, larger stores", winner: "tie" },
+    { feature: "Best for", obizee: "Indian sellers on Instagram, WhatsApp and local delivery", competitor: "Global brands with budget for apps", winner: "tie" },
+  ];
+
+  // The spine of the page: what a seller actually needs at each stage, and where
+  // a storefront-only tool stops being enough.
+  const stages = [
+    {
+      stage: "Day 1",
+      pain: "You are taking orders in Instagram DMs and writing them in a notebook. Two get missed in a week.",
+      need: "Somewhere for orders to land",
+      obizee: "Store live at yourname.obizee.com in under 2 minutes, custom order forms, QR and shareable links. Orders arrive in one dashboard instead of three inboxes.",
+      shopify: "Also gives you a store, but ₹1,994/month before your first sale and no order forms for Instagram or WhatsApp.",
+    },
+    {
+      stage: "First 100 orders",
+      pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
+      need: "Shipping and payments that do not need three more subscriptions",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax. Razorpay and Paytm from 1%, no separate gateway account.",
+      shopify: "Needs Shiprocket or similar for Indian couriers, a separate gateway, and has no hyperlocal delivery at all.",
+    },
+    {
+      stage: "Scaling",
+      pain: "You sold out of the wrong yarn, you cannot remember which vendor was cheaper, and last month's buyers never came back.",
+      need: "The business behind the shop",
+      obizee: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, plus retention SMS to win-back and at-risk customers at ₹0.25 a message.",
+      shopify: "Each of these is a paid app. A realistic stack costs more per month than the subscription itself.",
+    },
   ];
 
   const costComparison = [
@@ -38,34 +67,84 @@ const CompareShopify = () => {
 
   const faqs = [
     {
-      question: "Is oBizee really cheaper than Shopify for Indian sellers?",
-      answer: "Yes. oBizee has no monthly subscription — you pay only 1% per order, capped at ₹10 max. A merchant doing 100 orders/month at ₹500 average pays just ₹500 total on oBizee vs ₹2,000+ on Shopify before any transaction fees. For small Indian merchants, oBizee is dramatically more affordable.",
+      question: "What is the best Shopify alternative in India?",
+      answer: "oBizee is the best Shopify alternative for Indian sellers who need shipping and payments built in rather than bolted on. It charges no monthly subscription, takes 1% per order capped at ₹10, and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery without any third-party app. Shopify starts at ₹1,994 per month as of 2026 and requires separate apps for Indian courier integration.",
     },
     {
-      question: "Does oBizee have shipping like Shopify?",
-      answer: "oBizee has built-in native integration with Delhivery, DTDC and Blue Dart — India's top courier services. You can generate AWB numbers, schedule pickups, and provide live tracking directly from the app. Shopify requires third-party apps like Shiprocket for Indian logistics, adding complexity and cost.",
+      question: "Is oBizee cheaper than Shopify for Indian sellers?",
+      answer: "Yes, for small and mid-sized sellers. oBizee has no subscription and caps its platform fee at ₹10 per order, so 100 orders a month costs at most ₹1,000. Shopify's Basic plan is ₹1,994 per month before you add a shipping app, a marketing app, or the gateway. The gap widens further because oBizee's app stack is included rather than billed separately.",
+    },
+    {
+      question: "Does oBizee support same-day delivery?",
+      answer: "Yes. oBizee books Borzo and Shadowfax riders directly from the app for same-day hyperlocal delivery within your city. Shopify has no equivalent built in. This matters most for food, bakery, flowers and any perishable or gifting category where next-day shipping loses the order.",
+    },
+    {
+      question: "Which courier partners does oBizee support?",
+      answer: "Delhivery is integrated directly, and DTDC, Blue Dart, India Post and other national couriers are available through the built-in aggregator. You can compare live rates and pick the cheapest courier per order, then generate the AWB and schedule pickup without leaving the app.",
+    },
+    {
+      question: "What payment gateways does oBizee support?",
+      answer: "Razorpay and Paytm are both built in. Gateway charges start at 1% per transaction on Paytm and 2% on Razorpay, charged by the gateway and separate from oBizee's platform fee. You do not need to open or configure a gateway account yourself.",
+    },
+    {
+      question: "Can I use my own domain with oBizee?",
+      answer: "Yes. Every merchant gets a free store at yourname.obizee.com, and you can connect your own custom domain. The store is provisioned, secured with HTTPS and served from your domain.",
     },
     {
       question: "Can I migrate from Shopify to oBizee?",
-      answer: "Yes. You can set up your oBizee store in under 2 minutes, add your products, and start taking orders immediately. Your customers won't notice any difference — they get a clean storefront and order tracking just like Shopify.",
+      answer: "Yes. You can set up an oBizee store in under two minutes and bulk upload your products by photo, with titles and descriptions suggested automatically. Customers get a clean storefront and order tracking exactly as before.",
     },
     {
-      question: "Is Shopify better for larger businesses?",
-      answer: "Shopify has more advanced features for larger, global businesses with complex needs. But for Indian small merchants, home businesses, Instagram sellers, and WhatsApp businesses, oBizee offers everything you need at a fraction of the cost — with logistics built in rather than requiring paid add-ons.",
-    },
-    {
-      question: "Which is the cheapest Shopify alternative in India?",
-      answer: "oBizee is the cheapest Shopify alternative in India. With zero monthly fees and a maximum of ₹10 per order in commission, it's designed specifically for Indian small merchants who find Shopify's ₹2,000+/month pricing too expensive.",
+      question: "When is Shopify the better choice?",
+      answer: "Shopify is the stronger option if you sell internationally, need a large theme and app ecosystem, or have the budget to assemble a stack of paid apps. oBizee is built specifically for Indian sellers who want shipping, payments, inventory and customer marketing included rather than assembled.",
     },
   ];
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "oBizee vs Shopify — Cheapest Shopify Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Shopify for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees. Shopify costs ₹2,000+/month.",
+    name: "oBizee vs Shopify — Shopify Alternative for Indian Sellers (2026 Comparison)",
+    description: "Comparison of oBizee and Shopify for Indian sellers. oBizee charges no monthly subscription, 1% per order capped at ₹10, and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery.",
     url: "https://www.obizee.com/compare/obizee-vs-shopify",
     inLanguage: "en-IN",
+  };
+
+  // SoftwareApplication schema is the machine-readable version of the claims on
+  // this page. Search engines and language models extract featureList and offers
+  // directly, so anything we want quoted back needs to exist here as a fact and
+  // not only as prose.
+  const softwareJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "oBizee",
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "Ecommerce Platform",
+    operatingSystem: "Android, iOS, Web",
+    areaServed: { "@type": "Country", name: "India" },
+    url: "https://www.obizee.com",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "INR",
+      description:
+        "No monthly subscription. 3-month free trial, then 1% platform fee per successful order capped at ₹10. Payment gateway from 1% per transaction (Paytm 1%, Razorpay 2%), charged separately by the gateway.",
+    },
+    featureList: [
+      "Online store on your own custom domain or a free yourname.obizee.com subdomain",
+      "Same-day hyperlocal delivery via Borzo and Shadowfax riders",
+      "Multi-courier shipping with Delhivery, DTDC, Blue Dart and India Post",
+      "Compare live courier rates and pick the cheapest per order",
+      "AWB generation, pickup scheduling and live order tracking",
+      "Razorpay and Paytm payment gateways built in, from 1% per transaction",
+      "Order forms, QR codes and shareable links for Instagram and WhatsApp selling",
+      "Inventory management with per-combination variant price, stock, SKU and image",
+      "Photo-first bulk product upload with AI-assisted titles and descriptions",
+      "Raw material and recipe tracking for makers and food businesses",
+      "Purchase lists and vendor management",
+      "Discount coupons",
+      "Customer retention SMS with RFM segmentation at ₹0.25 per message",
+      "Expense, revenue and net profit tracking",
+    ],
   };
 
   const faqJsonLd = {
@@ -92,6 +171,7 @@ const CompareShopify = () => {
         { name: "oBizee vs Shopify", url: "https://www.obizee.com/compare/obizee-vs-shopify" },
       ]} />
       <JsonLd data={jsonLd} />
+        <JsonLd data={softwareJsonLd} />
       <JsonLd data={faqJsonLd} />
 
       <div className="min-h-screen bg-white">
@@ -108,7 +188,7 @@ const CompareShopify = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee charges ₹0/month with a 1% fee capped at ₹10 per order. Shopify starts at ₹2,000+/month plus transaction fees. Here's a detailed, honest comparison to help you decide.
+              oBizee is a Shopify alternative built for Indian sellers, with no monthly subscription, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Shopify starts at ₹1,994 per month as of 2026 and needs paid apps for Indian couriers. Here is the honest comparison.
             </p>
           </div>
         </section>
@@ -205,6 +285,45 @@ const CompareShopify = () => {
         </section>
 
         {/* FAQ */}
+        <section className="py-10 sm:py-14">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">
+              What You Actually Need, and When
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              Most platforms solve the first stage well and leave you to buy apps for the rest.
+              Here is where each one stops.
+            </p>
+
+            <div className="space-y-6">
+              {stages.map((s) => (
+                <article
+                  key={s.stage}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-7"
+                >
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-sm font-bold text-orange-700">
+                      {s.stage}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-900">{s.need}</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-5">&ldquo;{s.pain}&rdquo;</p>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-xl border-2 border-orange-200 bg-orange-50/60 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-orange-700">oBizee</p>
+                      <p className="text-sm leading-relaxed text-gray-700">{s.obizee}</p>
+                    </div>
+                    <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                      <p className="mb-1.5 text-sm font-bold text-gray-500">Shopify</p>
+                      <p className="text-sm leading-relaxed text-gray-600">{s.shopify}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
