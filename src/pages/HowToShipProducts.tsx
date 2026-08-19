@@ -13,7 +13,7 @@ const HowToShipProducts = () => {
     {
       question: "Which courier services does oBizee support?",
       answer:
-        "oBizee has native integration with Delhivery and DTDC \u2014 two of India's largest courier networks. You can connect either or both from the Shipping Settings in the app.",
+        "oBizee has native integration with Delhivery, DTDC and Blue Dart \u2014 two of India's largest courier networks. You can connect either or both from the Shipping Settings in the app.",
     },
     {
       question: "How do I generate an AWB number on oBizee?",
@@ -23,7 +23,7 @@ const HowToShipProducts = () => {
     {
       question: "How much does shipping cost on oBizee?",
       answer:
-        "Shipping costs depend on the courier partner, package dimensions, weight, and destination. oBizee shows you real-time pricing from Delhivery and DTDC before you confirm \u2014 for example, Surface delivery from Delhi might cost \u20B937 while Express costs \u20B938. You always see the price before committing.",
+        "Shipping costs depend on the courier partner, package dimensions, weight, and destination. oBizee shows you real-time pricing from Delhivery, DTDC and Blue Dart before you confirm \u2014 for example, Surface delivery from Delhi might cost \u20B937 while Express costs \u20B938. You always see the price before committing.",
     },
     {
       question: "Do I need a separate Delhivery account?",
@@ -38,7 +38,7 @@ const HowToShipProducts = () => {
     {
       question: "Do I need to use third-party shipping apps like Shiprocket?",
       answer:
-        "No. Unlike Shopify or WooCommerce where you need third-party tools like Shiprocket, oBizee has Delhivery and DTDC built directly into the app. No extra apps, no extra fees, no complex setup.",
+        "No. Unlike Shopify or WooCommerce where you need third-party tools like Shiprocket, oBizee has Delhivery, DTDC and Blue Dart built directly into the app. No extra apps, no extra fees, no complex setup.",
     },
     {
       question: "What information do I need to create a shipment?",
@@ -50,9 +50,9 @@ const HowToShipProducts = () => {
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "How to Ship Products Online in India \u2014 Delhivery & DTDC Integration Guide [2026]",
+    name: "How to Ship Products Online in India \u2014 Delhivery, DTDC, Blue Dart & Hyperlocal Integration Guide [2026]",
     description:
-      "Learn how to ship products online in India using oBizee's built-in Delhivery & DTDC integration. Generate AWB numbers, schedule pickups, track shipments \u2014 all from one app. No third-party tools needed.",
+      "Learn how to ship products online in India using oBizee's built-in Delhivery, DTDC, Blue Dart & hyperlocal integration. Generate AWB numbers, schedule pickups, track shipments \u2014 all from one app. No third-party tools needed.",
     url: "https://www.obizee.com/how-to-ship-products-online-india",
     inLanguage: "en-IN",
   };
@@ -62,7 +62,7 @@ const HowToShipProducts = () => {
     "@type": "HowTo",
     name: "How to Ship Products Online in India with oBizee",
     description:
-      "Step-by-step guide to shipping products in India using oBizee's built-in Delhivery and DTDC integration. Generate AWB numbers, schedule pickups, and provide live tracking to customers.",
+      "Step-by-step guide to shipping products in India using oBizee's built-in Delhivery, DTDC, Blue Dart and same-day hyperlocal integration. Generate AWB numbers, schedule pickups, and provide live tracking to customers.",
     totalTime: "PT5M",
     estimatedCost: { "@type": "MonetaryAmount", currency: "INR", value: "37" },
     tool: [
@@ -141,7 +141,7 @@ const HowToShipProducts = () => {
             <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
               How to Ship Products Online in India
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-                Built-in Delhivery & DTDC — No Third-Party Tools Needed
+                Built-in Delhivery, DTDC, Blue Dart & Same-Day Hyperlocal — No Third-Party Tools Needed
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -158,7 +158,7 @@ const HowToShipProducts = () => {
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                 <Package className="h-10 w-10 text-orange-500 mb-3" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">No Third-Party Apps</h3>
-                <p className="text-gray-600 leading-relaxed">Delhivery & DTDC are built into oBizee. No Shiprocket, no plugins, no extra fees.</p>
+                <p className="text-gray-600 leading-relaxed">Delhivery, DTDC & Blue Dart are built into oBizee. No Shiprocket, no plugins, no extra fees.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                 <Truck className="h-10 w-10 text-orange-500 mb-3" />
@@ -173,7 +173,7 @@ const HowToShipProducts = () => {
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                 <BarChart3 className="h-10 w-10 text-orange-500 mb-3" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Transparent Pricing</h3>
-                <p className="text-gray-600 leading-relaxed">See exact shipping costs from Delhivery and DTDC before you ship. No surprise fees.</p>
+                <p className="text-gray-600 leading-relaxed">See exact shipping costs from Delhivery, DTDC and Blue Dart before you ship. No surprise fees.</p>
               </div>
             </div>
           </div>
@@ -375,7 +375,7 @@ const HowToShipProducts = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-5">Start Shipping Smarter</h2>
             <p className="text-lg text-orange-100 mb-8">
-              Built-in Delhivery & DTDC. No third-party apps. No extra fees.
+              Built-in Delhivery, DTDC & Blue Dart. No third-party apps. No extra fees.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <AppDownloadTrigger>

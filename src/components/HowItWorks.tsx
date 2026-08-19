@@ -9,7 +9,7 @@ const steps = [
   { icon: Download, number: "01", title: "Download & Sign Up", description: "Get the oBizee app. Create your account in 2 minutes with your business details. No coding needed.", color: "from-orange-500 to-orange-600" },
   { icon: ShoppingBag, number: "02", title: "Add Your Products", description: "Upload product photos, set prices, add categories. Your website goes live instantly at yourname.obizee.com.", color: "from-amber-500 to-orange-500" },
   { icon: Share2, number: "03", title: "Share & Sell", description: "Share your store on Instagram, WhatsApp, and social media. Create custom order forms and start taking orders.", color: "from-orange-500 to-red-500" },
-  { icon: Truck, number: "04", title: "Ship & Grow", description: "Ship orders via Delhivery & DTDC. Generate AWB, schedule pickups, give customers live tracking.", color: "from-red-500 to-orange-600" },
+  { icon: Truck, number: "04", title: "Ship & Grow", description: "Ship orders via Delhivery, DTDC & Blue Dart. Generate AWB, schedule pickups, give customers live tracking.", color: "from-red-500 to-orange-600" },
 ];
 
 export default function HowItWorks() {

@@ -23,7 +23,7 @@ const ForClothingStores = () => {
     {
       icon: Truck,
       title: "Built-in Shipping",
-      description: "Ship via Delhivery & DTDC directly from the app. Generate AWB, schedule pickup, provide live tracking.",
+      description: "Ship via Delhivery, DTDC & Blue Dart directly from the app. Generate AWB, schedule pickup, provide live tracking.",
     },
     {
       icon: Palette,
@@ -61,7 +61,7 @@ const ForClothingStores = () => {
     {
       number: "4",
       title: "Ship & Get Paid",
-      description: "Process orders, ship via Delhivery/DTDC, and track everything from your dashboard.",
+      description: "Process orders, ship via Delhivery, DTDC & Blue Dart, and track everything from your dashboard.",
     },
   ];
 
@@ -86,11 +86,11 @@ const ForClothingStores = () => {
     },
     {
       question: "Can I ship clothes all over India?",
-      answer: "Yes. oBizee has built-in Delhivery and DTDC integration. Generate AWB numbers, schedule pickups, and provide live tracking to customers — all from the app.",
+      answer: "Yes. oBizee has built-in Delhivery, DTDC, Blue Dart and same-day hyperlocal integration. Generate AWB numbers, schedule pickups, and provide live tracking to customers — all from the app.",
     },
     {
       question: "Is oBizee better than Shopify for a small clothing business?",
-      answer: "For small Indian clothing sellers, yes. oBizee has no monthly fees (Shopify charges ₹2,000+/month), includes Delhivery/DTDC shipping (Shopify needs third-party apps), and is built specifically for Indian merchants.",
+      answer: "For small Indian clothing sellers, yes. oBizee has no monthly fees (Shopify charges ₹2,000+/month), includes Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping (Shopify needs third-party apps), and is built specifically for Indian merchants.",
     },
   ];
 
@@ -98,7 +98,7 @@ const ForClothingStores = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Online Store for Clothing Business in India — Start Selling in 2 Minutes | oBizee",
-    description: "Create your online clothing store on oBizee. Sell clothes on Instagram, WhatsApp & your own website. Built-in Delhivery & DTDC shipping, custom order forms with size/color options. 1% per order, max ₹10.",
+    description: "Create your online clothing store on oBizee. Sell clothes on Instagram, WhatsApp & your own website. Built-in Delhivery, DTDC & Blue Dart shipping, custom order forms with size/color options. 1% per order, max ₹10.",
     url: "https://www.obizee.com/for/clothing-stores",
     inLanguage: "en-IN",
   };
@@ -136,7 +136,7 @@ const ForClothingStores = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-orange-100 max-w-3xl mx-auto mb-8">
-              Sell sarees, kurtis, western wear, or designer collections online — with your own website, WhatsApp & Instagram integration, and Delhivery/DTDC shipping built in. Set up in 2 minutes.
+              Sell sarees, kurtis, western wear, or designer collections online — with your own website, WhatsApp & Instagram integration, and Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping built in. Set up in 2 minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <AppDownloadTrigger>
@@ -204,7 +204,7 @@ const ForClothingStores = () => {
                 </div>
               </div>
               <div className="flex flex-col md:flex-row items-center gap-8">
-                <img src="/illustrations/clothing-shipping.svg" alt="Shipping clothing orders via Delhivery and DTDC with live tracking" className="w-full md:w-1/2 max-w-[480px]" loading="lazy" />
+                <img src="/illustrations/clothing-shipping.svg" alt="Shipping clothing orders via Delhivery, DTDC and Blue Dart with live tracking" className="w-full md:w-1/2 max-w-[480px]" loading="lazy" />
                 <div className="md:w-1/2">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Ship Anywhere in India</h3>
                   <p className="text-gray-600 leading-relaxed">Pack your clothes, generate an AWB number with Delhivery or DTDC, schedule pickup — all from the app. Your customers get live tracking automatically.</p>

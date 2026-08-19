@@ -43,7 +43,7 @@ const CompareShopify = () => {
     },
     {
       question: "Does oBizee have shipping like Shopify?",
-      answer: "oBizee has built-in native integration with Delhivery and DTDC — India's top courier services. You can generate AWB numbers, schedule pickups, and provide live tracking directly from the app. Shopify requires third-party apps like Shiprocket for Indian logistics, adding complexity and cost.",
+      answer: "oBizee has built-in native integration with Delhivery, DTDC and Blue Dart — India's top courier services. You can generate AWB numbers, schedule pickups, and provide live tracking directly from the app. Shopify requires third-party apps like Shiprocket for Indian logistics, adding complexity and cost.",
     },
     {
       question: "Can I migrate from Shopify to oBizee?",
@@ -119,7 +119,7 @@ const CompareShopify = () => {
             <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Verdict</h2>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                <strong>Choose oBizee</strong> if you're a small Indian merchant, Instagram seller, or home business looking for the most affordable way to sell online with built-in Delhivery/DTDC shipping. <strong>Choose Shopify</strong> if you're a larger business with complex needs, selling internationally, and have a budget of ₹2,000+/month for your platform.
+                <strong>Choose oBizee</strong> if you're a small Indian merchant, Instagram seller, or home business looking for the most affordable way to sell online with built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping. <strong>Choose Shopify</strong> if you're a larger business with complex needs, selling internationally, and have a budget of ₹2,000+/month for your platform.
               </p>
             </div>
           </div>
@@ -191,7 +191,7 @@ const CompareShopify = () => {
             <div className="grid sm:grid-cols-2 gap-5">
               {[
                 { title: "Zero Monthly Fees", desc: "No subscription. Pay only when you make a sale — 1% per order, max ₹10." },
-                { title: "Built-in Indian Logistics", desc: "Delhivery & DTDC integrated natively. Generate AWB, schedule pickups, live tracking — all from the app." },
+                { title: "Built-in Indian Logistics", desc: "Delhivery, DTDC & Blue Dart integrated natively. Generate AWB, schedule pickups, live tracking — all from the app." },
                 { title: "2-Minute Setup", desc: "Sign up, add products, get your website. No themes to configure, no apps to install." },
                 { title: "Made for Indian Merchants", desc: "Built specifically for Instagram sellers, WhatsApp businesses, and home entrepreneurs in India." },
               ].map((item) => (

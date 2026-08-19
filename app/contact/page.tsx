@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import ContactPage from "@/pages/Contact";
 
-const ContactPage = dynamic(() => import("@/pages/Contact"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Contact oBizee - Get in Touch | Business Management Platform",

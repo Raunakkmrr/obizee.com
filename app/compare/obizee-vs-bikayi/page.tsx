@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs Bikayi — Best Bikayi Alternative in India [2026 Comparison]",
   description:
-    "Compare oBizee vs Bikayi for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery & DTDC shipping. Bikayi: free tier + paid plans from ₹999/month.",
+    "Compare oBizee vs Bikayi for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Bikayi: free tier + paid plans from ₹999/month.",
   keywords:
     "oBizee vs Bikayi, Bikayi alternative, Bikayi app review, cheapest online store India, Bikayi pricing",
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title:
       "oBizee vs Bikayi — Best Bikayi Alternative in India [2026 Comparison]",
     description:
-      "Side-by-side comparison: ₹0/month vs ₹999+/month. Built-in Delhivery/DTDC vs no logistics. See why Indian sellers choose oBizee over Bikayi.",
+      "Side-by-side comparison: ₹0/month vs ₹999+/month. Built-in Delhivery, DTDC & Blue Dart vs no logistics. See why Indian sellers choose oBizee over Bikayi.",
     type: "article",
     url: "https://www.obizee.com/compare/obizee-vs-bikayi",
     images: [{ url: "/Obizee.png" }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title:
       "oBizee vs Bikayi — Best Bikayi Alternative in India [2026 Comparison]",
     description:
-      "₹0/month vs ₹999+/month. Built-in Delhivery/DTDC vs no logistics. Compare oBizee and Bikayi for Indian sellers.",
+      "₹0/month vs ₹999+/month. Built-in Delhivery, DTDC & Blue Dart vs no logistics. Compare oBizee and Bikayi for Indian sellers.",
     images: ["/Obizee.png"],
   },
 };
@@ -45,8 +45,8 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Is oBizee better than Bikayi?", acceptedAnswer: { "@type": "Answer", text: "For Indian small merchants who need built-in shipping and transparent pricing, yes. oBizee offers Delhivery/DTDC logistics, custom order forms, and a simple 1% fee capped at \u20B910. Bikayi excels with WhatsApp Business API integration." } },
-      { "@type": "Question", name: "Does Bikayi have shipping integration?", acceptedAnswer: { "@type": "Answer", text: "No. Bikayi focuses on WhatsApp commerce and store building but doesn\u2019t have built-in logistics. oBizee has native Delhivery and DTDC integration." } },
+      { "@type": "Question", name: "Is oBizee better than Bikayi?", acceptedAnswer: { "@type": "Answer", text: "For Indian small merchants who need built-in shipping and transparent pricing, yes. oBizee offers Delhivery, DTDC & Blue Dart logistics, custom order forms, and a simple 1% fee capped at \u20B910. Bikayi excels with WhatsApp Business API integration." } },
+      { "@type": "Question", name: "Does Bikayi have shipping integration?", acceptedAnswer: { "@type": "Answer", text: "No. Bikayi focuses on WhatsApp commerce and store building but doesn\u2019t have built-in logistics. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal integration." } },
       { "@type": "Question", name: "Is Bikayi free?", acceptedAnswer: { "@type": "Answer", text: "Bikayi has a free tier with limited features. Advanced features require paid plans starting at \u20B9999/month. oBizee has no monthly fees \u2014 just 1% per order, max \u20B910." } },
       { "@type": "Question", name: "Which is cheaper \u2014 oBizee or Bikayi?", acceptedAnswer: { "@type": "Answer", text: "oBizee is cheaper for most merchants. Zero monthly fees and a flat 1% per order (max \u20B910) vs Bikayi\u2019s paid plans that start at \u20B9999/month for full features." } },
       { "@type": "Question", name: "Can I sell on WhatsApp with oBizee?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee supports WhatsApp selling along with Instagram and your own website. While Bikayi offers deeper WhatsApp Business API integration, oBizee provides multi-channel selling with built-in logistics." } },

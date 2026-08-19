@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const benefits = [
   "Your own store at yourname.obizee.com",
-  "Delhivery & DTDC shipping built in",
+  "Delhivery, DTDC & Blue Dart shipping built in",
   "Take orders from Instagram and WhatsApp",
   "1% per order, capped at ₹10",
 ];

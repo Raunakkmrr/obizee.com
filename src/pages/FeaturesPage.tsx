@@ -19,11 +19,11 @@ const FeaturesPage = () => {
   const faqs = [
     {
       question: "What features does oBizee offer?",
-      answer: "oBizee offers auto-generated merchant websites, order management dashboard, inventory tracking, custom order form builder, Delhivery & DTDC logistics integration, fare calculator, employee & vendor management, payment tracking, and sales analytics — all from a single mobile app.",
+      answer: "oBizee offers auto-generated merchant websites, order management dashboard, inventory tracking, custom order form builder, Delhivery, DTDC & Blue Dart logistics integration, fare calculator, employee & vendor management, payment tracking, and sales analytics — all from a single mobile app.",
     },
     {
       question: "Does oBizee have shipping and logistics features?",
-      answer: "Yes. oBizee has native integration with Delhivery and DTDC. You can generate AWB numbers, schedule courier pickups, and provide live order tracking to your customers — all directly from the app.",
+      answer: "Yes. oBizee has native integration with Delhivery, DTDC and Blue Dart. You can generate AWB numbers, schedule courier pickups, and provide live order tracking to your customers — all directly from the app.",
     },
     {
       question: "Can I manage inventory on oBizee?",

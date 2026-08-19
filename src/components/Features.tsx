@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Package, Globe, Truck, Smartphone, CreditCard, TrendingUp, ArrowRight } from "lucide-react";
+import { Package, Globe, Truck, Smartphone, CreditCard, TrendingUp, ArrowRight, Zap } from "lucide-react";
 import Link from "next/link";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import StaggerChildren, { StaggerItem } from "@/components/motion/StaggerChildren";
@@ -12,9 +12,10 @@ const Features = () => {
   const features = [
     { icon: Package, title: "Order Management", description: "Track orders from pending to delivered. Full lifecycle visibility with real-time status updates for you and your customers.", highlight: "Full Lifecycle" },
     { icon: Globe, title: "Auto-Generated Website", description: "Get your own store at yourname.obizee.com instantly. Choose templates, set brand colors — no coding needed.", highlight: "Instant Store" },
-    { icon: Truck, title: "Delhivery & DTDC Built-in", description: "Generate AWB numbers, schedule courier pickups, and give customers live tracking. Native Indian logistics.", highlight: "Ship Instantly" },
+    { icon: Truck, title: "Multi-Courier Shipping Built-in", description: "Delhivery, DTDC, Blue Dart, India Post and more. Compare live rates, pick the cheapest per order, generate AWB, schedule pickups and share tracking — no Shiprocket subscription needed.", highlight: "Ship Instantly" },
+    { icon: Zap, title: "Same-Day Hyperlocal Delivery", description: "Deliver within your city in hours, not days. Borzo and Shadowfax riders booked straight from the app — the difference between a cake order you can take and one you have to refuse.", highlight: "Same Day" },
     { icon: Smartphone, title: "Sell on WhatsApp & Instagram", description: "Take orders from Instagram DMs and WhatsApp. Share order forms, manage everything from one dashboard.", highlight: "Multi-Channel" },
-    { icon: CreditCard, title: "Payment Processing", description: "Accept UPI, cards, net banking, and wallets. Automatic payment tracking with hosted checkout.", highlight: "UPI + Cards" },
+    { icon: CreditCard, title: "Razorpay & Paytm Built-in", description: "Accept UPI, cards, net banking and wallets from day one. Payment gateway from 1% per transaction, hosted checkout and automatic reconciliation — no separate gateway account to open.", highlight: "From 1%" },
     { icon: TrendingUp, title: "Business Analytics", description: "Revenue, expenses, net profit snapshots. Product-level insights and custom date range reports.", highlight: "Data-Driven" },
   ];
 

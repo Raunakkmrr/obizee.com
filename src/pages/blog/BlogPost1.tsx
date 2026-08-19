@@ -162,7 +162,7 @@ const BlogPost1 = () => {
       <p>
         Once your store is live, oBizee becomes your business dashboard. Track orders,
         manage inventory, communicate with customers, and handle shipping — all from the same app.
-        The platform integrates with <strong>Delhivery and DTDC</strong> so you can generate AWB numbers, schedule pickups, and provide live tracking to customers.
+        The platform integrates with <strong>Delhivery, DTDC and Blue Dart</strong> so you can generate AWB numbers, schedule pickups, and provide live tracking to customers.
       </p>
       <div className="not-prose my-6 grid grid-cols-2 gap-3 max-w-md mx-auto">
         <img src="/how-to/39.jpg" alt="Orders dashboard showing pending and completed orders" className="rounded-2xl shadow-lg border border-gray-200 w-full" loading="lazy" />

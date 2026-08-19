@@ -15,7 +15,7 @@ const BestPlatforms2026 = () => {
       name: "oBizee",
       verdict: "Best overall for Indian small merchants",
       pricing: "1% per order, max ₹10. No monthly fees.",
-      pros: ["Built-in Delhivery/DTDC shipping", "Zero subscription fees", "2-minute setup"],
+      pros: ["Built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping", "Zero subscription fees", "2-minute setup"],
       cons: ["No blog/SEO tools built in", "Newer platform"],
     },
     {
@@ -85,7 +85,7 @@ const BestPlatforms2026 = () => {
     },
     {
       question: "Which platform has built-in shipping in India?",
-      answer: "oBizee is the only platform on this list with native Delhivery and DTDC integration built into the app. Others require third-party shipping solutions.",
+      answer: "oBizee is the only platform on this list with native Delhivery, DTDC, Blue Dart and hyperlocal integration built into the app. Others require third-party shipping solutions.",
     },
     {
       question: "Can I start an online store for free in India?",
@@ -169,7 +169,7 @@ const BestPlatforms2026 = () => {
             <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Verdict</h2>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                For most Indian small merchants, <strong>oBizee</strong> offers the best value: zero monthly fees, built-in Delhivery/DTDC shipping, and the lowest per-order cost at 1% (max ₹10). <strong>Shopify</strong> is better for larger businesses, and <strong>Instamojo</strong> for digital products.
+                For most Indian small merchants, <strong>oBizee</strong> offers the best value: zero monthly fees, built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, and the lowest per-order cost at 1% (max ₹10). <strong>Shopify</strong> is better for larger businesses, and <strong>Instamojo</strong> for digital products.
               </p>
             </div>
           </div>

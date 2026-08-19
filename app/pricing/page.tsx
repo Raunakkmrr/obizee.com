@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import PricingPage from "@/pages/Pricing";
 
-const PricingPage = dynamic(() => import("@/pages/Pricing"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "oBizee Pricing | 3-Month Free Trial + 1% Per Order (Max ₹10)",

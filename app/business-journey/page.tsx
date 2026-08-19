@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import BusinessJourneyPage from "@/pages/BusinessJourneyPage";
 
-const BusinessJourneyPage = dynamic(
-  () => import("@/pages/BusinessJourneyPage"),
-  { ssr: false }
-);
 
 export const metadata: Metadata = {
   title:

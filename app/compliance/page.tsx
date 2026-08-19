@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import CompliancePage from "@/pages/Compliance";
 
-const CompliancePage = dynamic(() => import("@/pages/Compliance"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "oBizee Compliance | Legal Details, Payment Flow, PCI Checklist",

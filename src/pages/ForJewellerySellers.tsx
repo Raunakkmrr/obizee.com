@@ -23,7 +23,7 @@ const ForJewellerySellers = () => {
     {
       icon: Truck,
       title: "Built-in Secure Shipping",
-      description: "Ship jewellery securely via Delhivery & DTDC directly from the app. Generate AWB, schedule pickup, provide live tracking.",
+      description: "Ship jewellery securely via Delhivery, DTDC & Blue Dart directly from the app. Generate AWB, schedule pickup, provide live tracking.",
     },
     {
       icon: Camera,
@@ -61,7 +61,7 @@ const ForJewellerySellers = () => {
     {
       number: "4",
       title: "Ship Securely & Get Paid",
-      description: "Process orders, pack jewellery securely, ship via Delhivery/DTDC, and track everything from your dashboard.",
+      description: "Process orders, pack jewellery securely, ship via Delhivery, DTDC & Blue Dart, and track everything from your dashboard.",
     },
   ];
 
@@ -86,7 +86,7 @@ const ForJewellerySellers = () => {
     },
     {
       question: "Can I ship jewellery safely across India?",
-      answer: "Yes. oBizee has built-in Delhivery and DTDC integration. Generate AWB numbers, schedule pickups, and provide live tracking to customers — all from the app. Ship your jewellery securely anywhere in India.",
+      answer: "Yes. oBizee has built-in Delhivery, DTDC, Blue Dart and same-day hyperlocal integration. Generate AWB numbers, schedule pickups, and provide live tracking to customers — all from the app. Ship your jewellery securely anywhere in India.",
     },
     {
       question: "Is oBizee good for handmade jewellery sellers?",
@@ -98,7 +98,7 @@ const ForJewellerySellers = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Online Store for Jewellery Business in India — Sell Jewellery Online | oBizee",
-    description: "Create your online jewellery store on oBizee. Sell earrings, necklaces, rings on Instagram & WhatsApp. Custom order forms for size/material options. Built-in Delhivery & DTDC. 1% per order, max ₹10.",
+    description: "Create your online jewellery store on oBizee. Sell earrings, necklaces, rings on Instagram & WhatsApp. Custom order forms for size/material options. Built-in Delhivery, DTDC & Blue Dart. 1% per order, max ₹10.",
     url: "https://www.obizee.com/for/jewellery-sellers",
     inLanguage: "en-IN",
   };
@@ -136,7 +136,7 @@ const ForJewellerySellers = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-orange-100 max-w-3xl mx-auto mb-8">
-              Sell earrings, necklaces, rings, bracelets — handmade, traditional, or fashion jewellery — with your own website, WhatsApp & Instagram integration, and Delhivery/DTDC shipping built in. Set up in 2 minutes.
+              Sell earrings, necklaces, rings, bracelets — handmade, traditional, or fashion jewellery — with your own website, WhatsApp & Instagram integration, and Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping built in. Set up in 2 minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <AppDownloadTrigger>

@@ -13,6 +13,8 @@ const Pricing = () => {
     "3 months full platform access at no platform fee",
     "After trial: 1% charged per successful order",
     "Per-order fee is capped at maximum ₹10",
+    "Payment gateway from 1% per transaction (Paytm 1%, Razorpay 2%)",
+    "Razorpay and Paytm built in — no separate gateway account setup",
     "No setup fee and no monthly subscription lock-in",
     "Works for low and high order values with predictable cost",
     "Built for Indian merchants running daily order operations",
@@ -35,6 +37,10 @@ const Pricing = () => {
     {
       question: "What exactly is the platform fee after trial?",
       answer: "After trial, the platform fee is 1% per successful order with a maximum cap of ₹10 for each order.",
+    },
+    {
+      question: "What do payment gateway charges cost?",
+      answer: "Payment gateway charges start at 1% per transaction on Paytm and 2% on Razorpay. This is charged by the gateway and is separate from oBizee's platform fee. Both gateways are built in, so you do not need to set up or pay for a separate account.",
     },
     {
       question: "Do I pay fee on failed or canceled orders?",

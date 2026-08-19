@@ -135,7 +135,7 @@ const BlogPost3 = () => {
       <div className="not-prose my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <ThemeCard icon={Smartphone} title="No Technical Barrier" description="None of these merchants are technologists. They downloaded an app and started selling. Everything runs from the same phone they already use." />
         <ThemeCard icon={IndianRupee} title="Affordable Pricing" description="For businesses doing 30-100 orders/month, paying ₹2,000/month for Shopify doesn't make sense. oBizee's 1% fee capped at ₹10 is a fraction of the cost." />
-        <ThemeCard icon={Truck} title="Built-In Shipping" description="Shipping is the biggest pain point for Indian sellers. oBizee integrates Delhivery & DTDC directly — generate labels, schedule pickups, track deliveries." />
+        <ThemeCard icon={Truck} title="Built-In Shipping" description="Shipping is the biggest pain point for Indian sellers. oBizee integrates Delhivery, DTDC & Blue Dart directly — generate labels, schedule pickups, track deliveries." />
         <ThemeCard icon={Instagram} title="DMs to Storefront" description="All three still use Instagram for marketing. But transactions moved from messy DMs to a proper store link — better for customers and sellers." />
       </div>
 

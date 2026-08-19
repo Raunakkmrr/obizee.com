@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import HowToCreateStorePage from "@/pages/HowToCreateStore";
 
-const HowToCreateStorePage = dynamic(
-  () => import("@/pages/HowToCreateStore"),
-  { ssr: false }
-);
 
 export const metadata: Metadata = {
   title:
     "How to Create Your Online Store on oBizee — Step-by-Step Guide [2026]",
   description:
-    "Learn how to set up your online store on oBizee in minutes. Step-by-step guide with screenshots: create account, add products, share order forms, manage shipping with Delhivery & DTDC.",
+    "Learn how to set up your online store on oBizee in minutes. Step-by-step guide with screenshots: create account, add products, share order forms, manage shipping with Delhivery, DTDC & Blue Dart.",
   keywords:
     "how to create online store India, how to sell online India, oBizee tutorial, online store setup guide, how to start ecommerce India, sell products online India",
   alternates: {
@@ -20,7 +16,7 @@ export const metadata: Metadata = {
     title:
       "How to Create Your Online Store on oBizee — Step-by-Step Guide [2026]",
     description:
-      "Learn how to set up your online store on oBizee in minutes. Step-by-step guide with screenshots: create account, add products, share order forms, manage shipping with Delhivery & DTDC.",
+      "Learn how to set up your online store on oBizee in minutes. Step-by-step guide with screenshots: create account, add products, share order forms, manage shipping with Delhivery, DTDC & Blue Dart.",
     type: "article",
     url: "https://www.obizee.com/how-to-create-online-store",
     images: [{ url: "/Obizee.png" }],
@@ -64,7 +60,7 @@ export default function Page() {
       { "@type": "Question", name: "Do I need technical knowledge to create an online store?", acceptedAnswer: { "@type": "Answer", text: "No. oBizee is designed for non-technical merchants. Everything works through a simple mobile app — no coding, no hosting, no WordPress knowledge required." } },
       { "@type": "Question", name: "How much does it cost to create a store on oBizee?", acceptedAnswer: { "@type": "Answer", text: "Setting up your store is completely free. There are no setup fees and no monthly subscription. After a 3-month free trial, you pay only 1% per order, capped at ₹10 maximum." } },
       { "@type": "Question", name: "How do customers place orders on my oBizee store?", acceptedAnswer: { "@type": "Answer", text: "You share an order form link with customers via WhatsApp, Instagram, or any channel. Customers open the link, select products, fill in delivery details, choose a delivery date, and confirm the order." } },
-      { "@type": "Question", name: "Can I ship orders directly from the oBizee app?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee has built-in integration with Delhivery and DTDC. You can create shipments, generate AWB numbers, choose shipping modes, and your customers get live order tracking — all from the app." } },
+      { "@type": "Question", name: "Can I ship orders directly from the oBizee app?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee has built-in integration with Delhivery, DTDC and Blue Dart. You can create shipments, generate AWB numbers, choose shipping modes, and your customers get live order tracking — all from the app." } },
     ],
   };
 

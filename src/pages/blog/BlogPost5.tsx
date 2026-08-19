@@ -205,7 +205,7 @@ const BlogPost5 = () => {
               ["Shipping integration", "Paid apps needed", "Delhivery + DTDC built-in"],
               ["Free trial", "3 days", "3 months"],
               ["Mobile app management", "Yes", "Yes (mobile-first)"],
-              ["Payment gateway", "Shopify Payments / 3rd party", "Cashfree (built-in)"],
+              ["Payment gateway", "Shopify Payments / 3rd party", "Razorpay + Paytm built in, from 1%"],
               ["Best for", "Large/international businesses", "Small-medium Indian sellers"],
               ["App ecosystem", "Thousands of apps", "Core features built-in"],
             ].map(([feature, shopify, obizee]) => (

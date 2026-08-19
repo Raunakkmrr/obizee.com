@@ -169,7 +169,7 @@ const TopFunnelPost3 = () => {
           {
             icon: Zap,
             title: "How fast do they need it?",
-            desc: "For next-day delivery expectations, BlueDart is the only reliable choice. For standard 3-5 day delivery, Delhivery and DTDC both perform well.",
+            desc: "For next-day delivery expectations, BlueDart is the only reliable choice. For standard 3-5 day delivery, Delhivery, DTDC and Blue Dart both perform well.",
           },
           {
             icon: IndianRupee,
@@ -201,7 +201,7 @@ const TopFunnelPost3 = () => {
       </p>
       <p>
         Some ecommerce platforms solve this by building shipping directly into the seller dashboard. oBizee, for
-        example, integrates Delhivery and DTDC natively — you can book shipments, print labels, and track deliveries
+        example, integrates Delhivery, DTDC and Blue Dart natively — you can book shipments, print labels, and track deliveries
         without leaving your order management screen. No third-party apps, no additional subscriptions, no API setup.
       </p>
       <p>

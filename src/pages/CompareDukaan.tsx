@@ -39,7 +39,7 @@ const CompareDukaan = () => {
     },
     {
       question: "Does Dukaan have shipping integration?",
-      answer: "No. Dukaan does not have built-in logistics. You need to handle shipping separately or use third-party services. oBizee has native Delhivery and DTDC integration with AWB generation, pickup scheduling, and live customer tracking.",
+      answer: "No. Dukaan does not have built-in logistics. You need to handle shipping separately or use third-party services. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal integration with AWB generation, pickup scheduling, and live customer tracking.",
     },
     {
       question: "Can I switch from Dukaan to oBizee?",
@@ -51,7 +51,7 @@ const CompareDukaan = () => {
     },
     {
       question: "Which is the best Dukaan alternative in India?",
-      answer: "oBizee is the best Dukaan alternative for merchants who want lower costs and built-in shipping. With zero monthly fees, 1% per order (max ₹10), and native Delhivery/DTDC logistics, oBizee offers more value at a fraction of the cost.",
+      answer: "oBizee is the best Dukaan alternative for merchants who want lower costs and built-in shipping. With zero monthly fees, 1% per order (max ₹10), and native Delhivery, DTDC & Blue Dart logistics, oBizee offers more value at a fraction of the cost.",
     },
   ];
 
@@ -115,7 +115,7 @@ const CompareDukaan = () => {
             <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Verdict</h2>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                <strong>Choose oBizee</strong> if you want zero monthly fees, built-in Delhivery/DTDC shipping, and the lowest per-order cost. <strong>Choose Dukaan</strong> if you need built-in marketing tools and are willing to pay ₹4,999/year for them.
+                <strong>Choose oBizee</strong> if you want zero monthly fees, built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, and the lowest per-order cost. <strong>Choose Dukaan</strong> if you need built-in marketing tools and are willing to pay ₹4,999/year for them.
               </p>
             </div>
           </div>
@@ -157,7 +157,7 @@ const CompareDukaan = () => {
             <div className="grid sm:grid-cols-2 gap-5">
               {[
                 { title: "Zero Monthly Fees", desc: "No subscription at all. Dukaan charges ₹4,999/year. oBizee: pay only when you sell." },
-                { title: "Built-in Indian Logistics", desc: "Delhivery & DTDC integrated. AWB generation, pickup scheduling, live tracking. Dukaan has no shipping integration." },
+                { title: "Built-in Indian Logistics", desc: "Delhivery, DTDC & Blue Dart integrated. AWB generation, pickup scheduling, live tracking. Dukaan has no shipping integration." },
                 { title: "Lower Per-Order Cost", desc: "1% per order, max ₹10. On a ₹5,000 order, you pay ₹10 on oBizee vs ₹100-150 on Dukaan." },
                 { title: "Custom Order Forms", desc: "Build custom order forms with dynamic fields and multi-link support. Dukaan doesn't offer this." },
               ].map((item) => (

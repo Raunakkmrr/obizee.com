@@ -38,7 +38,7 @@ const CompareWoocommerce = () => {
     },
     {
       question: "Does oBizee have shipping like WooCommerce?",
-      answer: "Better. oBizee has native Delhivery and DTDC integration built in. WooCommerce requires third-party shipping plugins that need separate configuration.",
+      answer: "Better. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal integration built in. WooCommerce requires third-party shipping plugins that need separate configuration.",
     },
     {
       question: "Can a non-technical person use WooCommerce?",

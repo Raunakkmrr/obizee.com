@@ -33,7 +33,7 @@ const HowToCreateStore = () => {
     {
       question: "Can I ship orders directly from the oBizee app?",
       answer:
-        "Yes. oBizee has built-in integration with Delhivery and DTDC. You can create shipments, generate AWB numbers, choose shipping modes, and your customers get live order tracking — all from the app.",
+        "Yes. oBizee has built-in integration with Delhivery, DTDC and Blue Dart. You can create shipments, generate AWB numbers, choose shipping modes, and your customers get live order tracking — all from the app.",
     },
   ];
 
@@ -42,7 +42,7 @@ const HowToCreateStore = () => {
     "@type": "WebPage",
     name: "How to Create Your Online Store on oBizee — Step-by-Step Guide [2026]",
     description:
-      "Learn how to set up your online store on oBizee in minutes. Step-by-step guide with screenshots: create account, add products, share order forms, manage shipping with Delhivery & DTDC.",
+      "Learn how to set up your online store on oBizee in minutes. Step-by-step guide with screenshots: create account, add products, share order forms, manage shipping with Delhivery, DTDC & Blue Dart.",
     url: "https://www.obizee.com/how-to-create-online-store",
     inLanguage: "en-IN",
   };
@@ -144,7 +144,7 @@ const HowToCreateStore = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Follow this visual guide to set up your store, add products, take orders, and ship with Delhivery & DTDC — no coding needed.
+              Follow this visual guide to set up your store, add products, take orders, and ship with Delhivery, DTDC & Blue Dart — no coding needed.
             </p>
           </div>
         </section>

@@ -116,7 +116,7 @@ const HinglishPost4 = () => {
           features={[
             "Koi monthly ya yearly fees nahi",
             "Phone se poora setup aur manage",
-            "Delhivery/DTDC shipping built-in",
+            "Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping built-in",
             "Payment gateway included",
             "Unlimited products",
           ]}

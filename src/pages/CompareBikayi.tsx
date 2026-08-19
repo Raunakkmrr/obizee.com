@@ -30,11 +30,11 @@ const CompareBikayi = () => {
   const faqs = [
     {
       question: "Is oBizee better than Bikayi?",
-      answer: "For Indian small merchants who need built-in shipping and transparent pricing, yes. oBizee offers Delhivery/DTDC logistics, custom order forms, and a simple 1% fee capped at ₹10. Bikayi excels with WhatsApp Business API integration.",
+      answer: "For Indian small merchants who need built-in shipping and transparent pricing, yes. oBizee offers Delhivery, DTDC & Blue Dart logistics, custom order forms, and a simple 1% fee capped at ₹10. Bikayi excels with WhatsApp Business API integration.",
     },
     {
       question: "Does Bikayi have shipping integration?",
-      answer: "No. Bikayi focuses on WhatsApp commerce and store building but doesn't have built-in logistics. oBizee has native Delhivery and DTDC integration.",
+      answer: "No. Bikayi focuses on WhatsApp commerce and store building but doesn't have built-in logistics. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal integration.",
     },
     {
       question: "Is Bikayi free?",
@@ -110,7 +110,7 @@ const CompareBikayi = () => {
             <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Verdict</h2>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                <strong>Choose oBizee</strong> if you want zero monthly fees, built-in Delhivery/DTDC shipping, and transparent pricing. <strong>Choose Bikayi</strong> if you specifically need WhatsApp Business API integration and AI-powered store building features.
+                <strong>Choose oBizee</strong> if you want zero monthly fees, built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, and transparent pricing. <strong>Choose Bikayi</strong> if you specifically need WhatsApp Business API integration and AI-powered store building features.
               </p>
             </div>
           </div>
@@ -152,7 +152,7 @@ const CompareBikayi = () => {
             <div className="grid sm:grid-cols-2 gap-5">
               {[
                 { title: "Zero Subscription", desc: "No monthly or yearly fees. Bikayi's advanced features require paid plans starting at ₹999/month." },
-                { title: "Built-in Shipping", desc: "Native Delhivery & DTDC integration. AWB generation, pickup scheduling, live tracking. Bikayi has no logistics integration." },
+                { title: "Built-in Shipping", desc: "Native Delhivery, DTDC, Blue Dart & hyperlocal integration. AWB generation, pickup scheduling, live tracking. Bikayi has no logistics integration." },
                 { title: "Transparent Pricing", desc: "1% per order, max ₹10. Always know what you'll pay. Bikayi's pricing varies by plan." },
                 { title: "Custom Order Forms", desc: "Build custom order forms with dynamic fields. Bikayi doesn't offer this functionality." },
               ].map((item) => (

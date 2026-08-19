@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import ForClothingStoresPage from "@/pages/ForClothingStores";
 
-const ForClothingStoresPage = dynamic(
-  () => import("@/pages/ForClothingStores"),
-  { ssr: false }
-);
 
 export const metadata: Metadata = {
   title:
     "Online Store for Clothing Business in India — Start Selling in 2 Minutes | oBizee",
   description:
-    "Create your online clothing store on oBizee. Sell clothes on Instagram, WhatsApp & your own website. Built-in Delhivery & DTDC shipping, custom order forms with size/color options. 1% per order, max ₹10.",
+    "Create your online clothing store on oBizee. Sell clothes on Instagram, WhatsApp & your own website. Built-in Delhivery, DTDC & Blue Dart shipping, custom order forms with size/color options. 1% per order, max ₹10.",
   keywords:
     "online store for clothing business India, sell clothes online India, clothing ecommerce platform, fashion online store India, Instagram clothing seller platform, how to sell clothes online",
   alternates: {
@@ -20,7 +16,7 @@ export const metadata: Metadata = {
     title:
       "Online Store for Clothing Business in India — Start Selling in 2 Minutes | oBizee",
     description:
-      "Create your online clothing store on oBizee. Sell clothes on Instagram, WhatsApp & your own website. Built-in Delhivery & DTDC shipping, custom order forms with size/color options. 1% per order, max ₹10.",
+      "Create your online clothing store on oBizee. Sell clothes on Instagram, WhatsApp & your own website. Built-in Delhivery, DTDC & Blue Dart shipping, custom order forms with size/color options. 1% per order, max ₹10.",
     type: "website",
     url: "https://www.obizee.com/for/clothing-stores",
     images: [{ url: "/Obizee.png" }],

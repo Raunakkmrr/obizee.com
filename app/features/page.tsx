@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import FeaturesPage from "@/pages/FeaturesPage";
 
-const FeaturesPage = dynamic(() => import("@/pages/FeaturesPage"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "oBizee Features | Orders, Inventory, Payments, Analytics",
@@ -38,8 +37,8 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "What features does oBizee offer?", acceptedAnswer: { "@type": "Answer", text: "oBizee offers auto-generated merchant websites, order management dashboard, inventory tracking, custom order form builder, Delhivery & DTDC logistics integration, fare calculator, employee & vendor management, payment tracking, and sales analytics — all from a single mobile app." } },
-      { "@type": "Question", name: "Does oBizee have shipping and logistics features?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee has native integration with Delhivery and DTDC. You can generate AWB numbers, schedule courier pickups, and provide live order tracking to your customers — all directly from the app." } },
+      { "@type": "Question", name: "What features does oBizee offer?", acceptedAnswer: { "@type": "Answer", text: "oBizee offers auto-generated merchant websites, order management dashboard, inventory tracking, custom order form builder, Delhivery, DTDC & Blue Dart logistics integration, fare calculator, employee & vendor management, payment tracking, and sales analytics — all from a single mobile app." } },
+      { "@type": "Question", name: "Does oBizee have shipping and logistics features?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee has native integration with Delhivery, DTDC and Blue Dart. You can generate AWB numbers, schedule courier pickups, and provide live order tracking to your customers — all directly from the app." } },
       { "@type": "Question", name: "Can I manage inventory on oBizee?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee includes full inventory management with stock tracking, product categories, and real-time updates across all your sales channels." } },
       { "@type": "Question", name: "Does oBizee support payment processing?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee supports hosted payment processing with UPI, cards, net banking, and wallet options via integrated payment gateway. Transaction visibility is available in the dashboard." } },
       { "@type": "Question", name: "Can I track my business performance on oBizee?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee provides business analytics including order funnel visibility, revenue and expense snapshots, product-level insights, and custom date range reports to help you make data-driven decisions." } },

@@ -54,8 +54,8 @@ const Hero = () => {
           {/* Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-light">
             Manage orders, inventory, payments, and shipping from one dashboard.
-            <span className="text-orange-600 font-normal"> Built-in Delhivery & DTDC.</span>
-            {" "}Pay just 1% per order, max ₹10.
+            <span className="text-orange-600 font-normal"> Delhivery, DTDC, Blue Dart &amp; same-day hyperlocal delivery built in.</span>
+            {" "}Razorpay &amp; Paytm from 1%. Platform fee 1% per order, max ₹10.
           </p>
 
           {/* CTA Buttons — two conversion paths: install the app, or talk to a human */}

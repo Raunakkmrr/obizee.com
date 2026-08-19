@@ -30,11 +30,11 @@ const CompareInstamojo = () => {
   const faqs = [
     {
       question: "Is oBizee better than Instamojo for selling products?",
-      answer: "For physical products, yes. oBizee offers a full store, order management, inventory tracking, and built-in Delhivery/DTDC shipping. Instamojo is better for digital products and payment links.",
+      answer: "For physical products, yes. oBizee offers a full store, order management, inventory tracking, and built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping. Instamojo is better for digital products and payment links.",
     },
     {
       question: "Does Instamojo have shipping?",
-      answer: "No. Instamojo is primarily a payment platform with a basic storefront. oBizee has native Delhivery and DTDC logistics integration.",
+      answer: "No. Instamojo is primarily a payment platform with a basic storefront. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal logistics integration.",
     },
     {
       question: "Which is cheaper — oBizee or Instamojo?",
@@ -46,7 +46,7 @@ const CompareInstamojo = () => {
     },
     {
       question: "What is the best Instamojo alternative for physical products?",
-      answer: "oBizee is the best Instamojo alternative for physical product sellers in India. It offers everything Instamojo lacks: full order lifecycle management, Delhivery/DTDC integration, and custom order forms — all at lower fees.",
+      answer: "oBizee is the best Instamojo alternative for physical product sellers in India. It offers everything Instamojo lacks: full order lifecycle management, Delhivery, DTDC & Blue Dart integration, and custom order forms — all at lower fees.",
     },
   ];
 
@@ -152,7 +152,7 @@ const CompareInstamojo = () => {
             <div className="grid sm:grid-cols-2 gap-5">
               {[
                 { title: "Full-Featured Store", desc: "Complete online store with order management, inventory, and multi-channel selling. Instamojo offers a basic storefront." },
-                { title: "Built-in Shipping", desc: "Native Delhivery & DTDC. AWB generation, pickups, live tracking. Instamojo has no logistics integration." },
+                { title: "Built-in Shipping", desc: "Native Delhivery, DTDC, Blue Dart & hyperlocal. AWB generation, pickups, live tracking. Instamojo has no logistics integration." },
                 { title: "Lower Fees", desc: "1% per order, max ₹10. Instamojo charges 2-5% per transaction plus gateway fees." },
                 { title: "Order Lifecycle", desc: "Track orders from Pending → In Progress → Shipped → Delivered. Instamojo has basic order tracking." },
               ].map((item) => (

@@ -28,17 +28,17 @@ const CompareDM2buy = () => {
     { feature: "Employee & vendor management", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Seller collaboration network", obizee: false, competitor: true, winner: "competitor" },
     { feature: "IRL pop-up events", obizee: false, competitor: true, winner: "competitor" },
-    { feature: "Payment processing", obizee: "Automated via Cashfree", competitor: "Available", winner: "tie" },
+    { feature: "Payment processing", obizee: "Razorpay + Paytm built in, from 1% per transaction", competitor: "Available", winner: "obizee" },
   ];
 
   const faqs = [
     {
       question: "What is the difference between oBizee and DM2buy?",
-      answer: "oBizee is a full D2C commerce platform with multi-channel support (Instagram, WhatsApp, web), built-in Delhivery & DTDC shipping, custom order forms, and transparent pricing (1% per order, max ₹10). DM2buy is primarily an Instagram-focused storefront that excels at converting DMs into orders, but does not include logistics integration or multi-channel selling.",
+      answer: "oBizee is a full D2C commerce platform with multi-channel support (Instagram, WhatsApp, web), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping, custom order forms, and transparent pricing (1% per order, max ₹10). DM2buy is primarily an Instagram-focused storefront that excels at converting DMs into orders, but does not include logistics integration or multi-channel selling.",
     },
     {
       question: "Does DM2buy have shipping integration?",
-      answer: "No. DM2buy does not have built-in logistics or shipping integration. Merchants need to handle shipping separately. oBizee has native integration with Delhivery and DTDC — you can generate AWB numbers, schedule courier pickups, and provide live tracking to customers directly from the app.",
+      answer: "No. DM2buy does not have built-in logistics or shipping integration. Merchants need to handle shipping separately. oBizee has native integration with Delhivery, DTDC and Blue Dart — you can generate AWB numbers, schedule courier pickups, and provide live tracking to customers directly from the app.",
     },
     {
       question: "Is DM2buy free to use?",
@@ -58,7 +58,7 @@ const CompareDM2buy = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs DM2buy — Which D2C Platform is Better for Indian Sellers?",
-    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 14 of 19 features with built-in Delhivery/DTDC logistics.",
+    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 14 of 19 features with built-in Delhivery, DTDC, Blue Dart & hyperlocal logistics.",
     url: "https://www.obizee.com/compare/obizee-vs-dm2buy",
     inLanguage: "en-IN",
   };
@@ -154,7 +154,7 @@ const CompareDM2buy = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Why oBizee Wins for Indian Sellers</h2>
             <div className="grid sm:grid-cols-2 gap-5">
               {[
-                { title: "Built-in Shipping", desc: "Delhivery & DTDC integrated natively. AWB generation, pickup scheduling, live tracking — all from the app. DM2buy has no shipping integration." },
+                { title: "Built-in Shipping", desc: "Delhivery, DTDC & Blue Dart integrated natively. AWB generation, pickup scheduling, live tracking — all from the app. DM2buy has no shipping integration." },
                 { title: "Multi-Channel Selling", desc: "Sell on Instagram, WhatsApp, and your own website from one dashboard. DM2buy only supports Instagram." },
                 { title: "Transparent Pricing", desc: "1% per order, max ₹10. Published and clear. You always know exactly what you'll pay before you start." },
               ].map((item) => (

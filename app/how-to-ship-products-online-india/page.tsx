@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import HowToShipProductsPage from "@/pages/HowToShipProducts";
 
-const HowToShipProductsPage = dynamic(
-  () => import("@/pages/HowToShipProducts"),
-  { ssr: false }
-);
 
 export const metadata: Metadata = {
   title:
-    "How to Ship Products Online in India — Delhivery & DTDC Integration Guide [2026]",
+    "How to Ship Products Online in India — Delhivery, DTDC, Blue Dart & Hyperlocal Integration Guide [2026]",
   description:
-    "Learn how to ship products online in India using oBizee's built-in Delhivery & DTDC integration. Generate AWB numbers, schedule pickups, track shipments — all from one app. No third-party tools needed.",
+    "Learn how to ship products online in India using oBizee's built-in Delhivery, DTDC, Blue Dart & hyperlocal integration. Generate AWB numbers, schedule pickups, track shipments — all from one app. No third-party tools needed.",
   keywords:
     "how to ship products online India, Delhivery integration ecommerce, DTDC shipping small business, ecommerce shipping India, AWB number generation, courier integration online store, cheapest shipping for online sellers India",
   alternates: {
@@ -19,9 +15,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "How to Ship Products Online in India — Delhivery & DTDC Integration Guide [2026]",
+      "How to Ship Products Online in India — Delhivery, DTDC, Blue Dart & Hyperlocal Integration Guide [2026]",
     description:
-      "Learn how to ship products online in India using oBizee's built-in Delhivery & DTDC integration. Generate AWB numbers, schedule pickups, track shipments — all from one app. No third-party tools needed.",
+      "Learn how to ship products online in India using oBizee's built-in Delhivery, DTDC, Blue Dart & hyperlocal integration. Generate AWB numbers, schedule pickups, track shipments — all from one app. No third-party tools needed.",
     type: "article",
     url: "https://www.obizee.com/how-to-ship-products-online-india",
     images: [{ url: "/Obizee.png" }],
@@ -29,9 +25,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "How to Ship Products Online in India — Delhivery & DTDC Integration Guide [2026]",
+      "How to Ship Products Online in India — Delhivery, DTDC, Blue Dart & Hyperlocal Integration Guide [2026]",
     description:
-      "Learn how to ship products online in India using oBizee's built-in Delhivery & DTDC integration. Generate AWB numbers, schedule pickups, track shipments — all from one app.",
+      "Learn how to ship products online in India using oBizee's built-in Delhivery, DTDC, Blue Dart & hyperlocal integration. Generate AWB numbers, schedule pickups, track shipments — all from one app.",
     images: ["/Obizee.png"],
   },
 };
@@ -40,8 +36,8 @@ export default function Page() {
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "How to Ship Products Online in India \u2014 Delhivery & DTDC Integration Guide [2026]",
-    description: "Learn how to ship products online in India using oBizee's built-in Delhivery & DTDC integration. Generate AWB numbers, schedule pickups, track shipments \u2014 all from one app. No third-party tools needed.",
+    name: "How to Ship Products Online in India \u2014 Delhivery, DTDC, Blue Dart & Hyperlocal Integration Guide [2026]",
+    description: "Learn how to ship products online in India using oBizee's built-in Delhivery, DTDC, Blue Dart & hyperlocal integration. Generate AWB numbers, schedule pickups, track shipments \u2014 all from one app. No third-party tools needed.",
     url: "https://www.obizee.com/how-to-ship-products-online-india",
     inLanguage: "en-IN",
   };
@@ -50,7 +46,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: "How to Ship Products Online in India with oBizee",
-    description: "Step-by-step guide to shipping products in India using oBizee's built-in Delhivery and DTDC integration. Generate AWB numbers, schedule pickups, and provide live tracking to customers.",
+    description: "Step-by-step guide to shipping products in India using oBizee's built-in Delhivery, DTDC, Blue Dart and same-day hyperlocal integration. Generate AWB numbers, schedule pickups, and provide live tracking to customers.",
     totalTime: "PT5M",
     estimatedCost: { "@type": "MonetaryAmount", currency: "INR", value: "37" },
     tool: [
@@ -71,12 +67,12 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Which courier services does oBizee support?", acceptedAnswer: { "@type": "Answer", text: "oBizee has native integration with Delhivery and DTDC \u2014 two of India's largest courier networks. You can connect either or both from the Shipping Settings in the app." } },
+      { "@type": "Question", name: "Which courier services does oBizee support?", acceptedAnswer: { "@type": "Answer", text: "oBizee has native integration with Delhivery, DTDC and Blue Dart \u2014 two of India's largest courier networks. You can connect either or both from the Shipping Settings in the app." } },
       { "@type": "Question", name: "How do I generate an AWB number on oBizee?", acceptedAnswer: { "@type": "Answer", text: "Open any order, tap Create Shipment, enter package dimensions and weight, choose your shipping mode (Surface or Express), and tap Get AWB Number. The AWB is generated instantly and the pickup is scheduled automatically." } },
-      { "@type": "Question", name: "How much does shipping cost on oBizee?", acceptedAnswer: { "@type": "Answer", text: "Shipping costs depend on the courier partner, package dimensions, weight, and destination. oBizee shows you real-time pricing from Delhivery and DTDC before you confirm \u2014 for example, Surface delivery from Delhi might cost \u20B937 while Express costs \u20B938. You always see the price before committing." } },
+      { "@type": "Question", name: "How much does shipping cost on oBizee?", acceptedAnswer: { "@type": "Answer", text: "Shipping costs depend on the courier partner, package dimensions, weight, and destination. oBizee shows you real-time pricing from Delhivery, DTDC and Blue Dart before you confirm \u2014 for example, Surface delivery from Delhi might cost \u20B937 while Express costs \u20B938. You always see the price before committing." } },
       { "@type": "Question", name: "Do I need a separate Delhivery account?", acceptedAnswer: { "@type": "Answer", text: "You need a Delhivery or DTDC merchant account, which you can set up directly from the oBizee app under Settings \u2192 Shipping Settings. The integration takes just one step." } },
       { "@type": "Question", name: "Can my customers track their orders?", acceptedAnswer: { "@type": "Answer", text: "Yes. Once you create a shipment, your customer automatically gets a live tracking page showing the order status (In Progress, Shipped, Out for Delivery, Delivered), expected delivery date, and all order details." } },
-      { "@type": "Question", name: "Do I need to use third-party shipping apps like Shiprocket?", acceptedAnswer: { "@type": "Answer", text: "No. Unlike Shopify or WooCommerce where you need third-party tools like Shiprocket, oBizee has Delhivery and DTDC built directly into the app. No extra apps, no extra fees, no complex setup." } },
+      { "@type": "Question", name: "Do I need to use third-party shipping apps like Shiprocket?", acceptedAnswer: { "@type": "Answer", text: "No. Unlike Shopify or WooCommerce where you need third-party tools like Shiprocket, oBizee has Delhivery, DTDC and Blue Dart built directly into the app. No extra apps, no extra fees, no complex setup." } },
       { "@type": "Question", name: "What information do I need to create a shipment?", acceptedAnswer: { "@type": "Answer", text: "You need the pickup address (saved from your settings), package dimensions (length, breadth, height in cm), package weight (minimum 50 grams), and packaging type (Box or Plastic Cover). The customer's delivery address is automatically pulled from their order." } },
     ],
   };

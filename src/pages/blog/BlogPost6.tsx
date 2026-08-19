@@ -236,7 +236,7 @@ const BlogPost6 = () => {
             <ComparisonRow feature="WhatsApp selling" dukaan="Excellent" obizee="Share store/order links" winner="dukaan" />
             <ComparisonRow feature="Marketing tools" dukaan="Discount codes, CRM" obizee="Basic (growing)" winner="dukaan" />
             <ComparisonRow feature="Shipping integration" dukaan="Not built-in" obizee="Delhivery + DTDC" winner="obizee" />
-            <ComparisonRow feature="Payment processing" dukaan="Razorpay + others" obizee="Cashfree (built-in)" winner="tie" />
+            <ComparisonRow feature="Payment processing" dukaan="Razorpay + others" obizee="Razorpay + Paytm, from 1% per transaction" winner="obizee" />
             <ComparisonRow feature="Mobile-first" dukaan="Yes" obizee="Yes" winner="tie" />
           </tbody>
         </table>
@@ -252,7 +252,7 @@ const BlogPost6 = () => {
       <h2>Who Should Choose oBizee Instead?</h2>
       <p>
         oBizee is the better fit if you want zero upfront commitment, need built-in shipping
-        (Delhivery and DTDC), or are just starting out and want to test online selling without
+        (Delhivery, DTDC and Blue Dart), or are just starting out and want to test online selling without
         financial risk. The pay-per-order model means you never pay more than you earn.
       </p>
 

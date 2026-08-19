@@ -16,7 +16,7 @@ const Navigation = () => {
 
   const solutionsItems = [
     { name: "How to Create Your Store", href: "/how-to-create-online-store", description: "Step-by-step guide with screenshots" },
-    { name: "How to Ship Products", href: "/how-to-ship-products-online-india", description: "Delhivery & DTDC integration guide" },
+    { name: "How to Ship Products", href: "/how-to-ship-products-online-india", description: "Delhivery, DTDC & Blue Dart integration guide" },
     { name: "For Clothing Sellers", href: "/for/clothing-stores", description: "Online store for fashion & apparel" },
     { name: "For Food Business", href: "/for/food-business", description: "Tiffin, bakery & homemade food orders" },
     { name: "For Jewellery Sellers", href: "/for/jewellery-sellers", description: "Handmade & traditional jewellery" },

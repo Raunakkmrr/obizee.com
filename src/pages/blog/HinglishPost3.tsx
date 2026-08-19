@@ -125,7 +125,7 @@ const HinglishPost3 = () => {
         <FeatureCard
           icon={Package}
           title="Shipping & Tracking"
-          desc="Delhivery/DTDC se shipping book karein, label print karein, tracking share karein — phone se."
+          desc="Delhivery, DTDC & Blue Dart se shipping book karein, label print karein, tracking share karein — phone se."
         />
       </div>
 

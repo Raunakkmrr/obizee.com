@@ -142,7 +142,7 @@ const BlogPost7 = () => {
             <FeatureRow feature="AWB generation" dm2buy="Manual/external" obizee="In-app" winner="obizee" />
             <FeatureRow feature="Pickup scheduling" dm2buy="Manual/external" obizee="In-app" winner="obizee" />
             <FeatureRow feature="Live tracking" dm2buy="Not available" obizee="Built-in" winner="obizee" />
-            <FeatureRow feature="Payment processing" dm2buy="Available" obizee="Cashfree (built-in)" winner="tie" />
+            <FeatureRow feature="Payment processing" dm2buy="Available" obizee="Razorpay + Paytm, from 1% per transaction" winner="obizee" />
             <FeatureRow feature="Pricing transparency" dm2buy="Commission-based (variable)" obizee="1% capped at ₹10" winner="obizee" />
             <FeatureRow feature="Free trial" dm2buy="Free to start" obizee="3 months free" winner="obizee" />
             <FeatureRow feature="Seller community" dm2buy="Strong (IRL events)" obizee="Growing" winner="dm2buy" />

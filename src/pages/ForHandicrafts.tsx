@@ -22,8 +22,8 @@ const ForHandicrafts = () => {
     },
     {
       icon: Truck,
-      title: "Built-in Delhivery & DTDC Shipping",
-      description: "Ship fragile handicraft items safely via Delhivery & DTDC. Generate AWB, schedule pickup, provide live tracking to customers.",
+      title: "Built-in Delhivery, DTDC, Blue Dart & Hyperlocal Shipping",
+      description: "Ship fragile handicraft items safely via Delhivery, DTDC & Blue Dart. Generate AWB, schedule pickup, provide live tracking to customers.",
     },
     {
       icon: Smartphone,
@@ -60,8 +60,8 @@ const ForHandicrafts = () => {
     },
     {
       number: "4",
-      title: "Ship via Delhivery/DTDC",
-      description: "Pack your crafts securely, ship via built-in Delhivery/DTDC, and track deliveries from your dashboard.",
+      title: "Ship via Delhivery, DTDC & Blue Dart",
+      description: "Pack your crafts securely, ship via built-in Delhivery, DTDC, Blue Dart & hyperlocal, and track deliveries from your dashboard.",
     },
   ];
 
@@ -86,11 +86,11 @@ const ForHandicrafts = () => {
     },
     {
       question: "Can I ship fragile handicraft items?",
-      answer: "Yes. Delhivery and DTDC are built into oBizee. Specify package dimensions and weight for accurate shipping quotes. Customers get live tracking for their orders.",
+      answer: "Yes. Delhivery, DTDC and Blue Dart are built into oBizee. Specify package dimensions and weight for accurate shipping quotes. Customers get live tracking for their orders.",
     },
     {
       question: "Is oBizee better than Etsy for Indian artisans?",
-      answer: "For Indian artisans selling domestically, yes. oBizee has lower fees (1% max ₹10 vs Etsy's 6.5%), built-in Indian shipping via Delhivery/DTDC, and no listing fees. Etsy is better only if you're selling internationally.",
+      answer: "For Indian artisans selling domestically, yes. oBizee has lower fees (1% max ₹10 vs Etsy's 6.5%), built-in Indian shipping via Delhivery, DTDC & Blue Dart, and no listing fees. Etsy is better only if you're selling internationally.",
     },
   ];
 
@@ -98,7 +98,7 @@ const ForHandicrafts = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Sell Handicrafts Online in India — Online Store for Artisans | oBizee",
-    description: "Create your online handicraft store on oBizee. Sell handmade products, crochet, pottery, paintings on Instagram & WhatsApp. Custom order forms, built-in Delhivery & DTDC shipping. 1% per order, max ₹10.",
+    description: "Create your online handicraft store on oBizee. Sell handmade products, crochet, pottery, paintings on Instagram & WhatsApp. Custom order forms, built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. 1% per order, max ₹10.",
     url: "https://www.obizee.com/for/handicrafts",
     inLanguage: "en-IN",
   };
@@ -136,7 +136,7 @@ const ForHandicrafts = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-orange-100 max-w-3xl mx-auto mb-8">
-              Sell crochet, pottery, paintings, handloom, woodwork, and more — with your own website, Instagram & WhatsApp integration, and Delhivery/DTDC shipping built in. Set up in 2 minutes.
+              Sell crochet, pottery, paintings, handloom, woodwork, and more — with your own website, Instagram & WhatsApp integration, and Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping built in. Set up in 2 minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <AppDownloadTrigger>
