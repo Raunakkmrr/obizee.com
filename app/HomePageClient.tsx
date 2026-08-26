@@ -16,6 +16,7 @@ import MoveYourShop from "@/components/MoveYourShop";
 import WhoItIsFor from "@/components/WhoItIsFor";
 import PricingExplained from "@/components/PricingExplained";
 import FAQ from "@/components/FAQ";
+import ShopsWall from "@/components/ShopsWall";
 
 // Only the query-param modal is deferred. See the note in that file: it holds
 // the `useSearchParams` call, which opts its subtree out of prerendering.
@@ -48,6 +49,7 @@ export default function HomePageClient() {
       <Hero />
       <SocialProofBar />
       <Testimonials />
+      <ShopsWall />
       <MoveYourShop />
       <WhatItRuns />
       <Features />
