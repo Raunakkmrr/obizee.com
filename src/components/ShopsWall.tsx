@@ -78,14 +78,16 @@ export default function ShopsWall() {
         </ScrollReveal>
       </div>
 
-      <div className="group space-y-3">
+      <div className="space-y-3">
         {rows.map((row, i) => (
+          // group/row, not a shared group: hovering one row should stop that row
+          // so its cards can be read and clicked, and leave the others moving.
           <div
             key={i}
-            className="relative flex overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]"
+            className="group/row relative flex overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]"
           >
             <div
-              className="flex w-max gap-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none"
+              className="flex w-max gap-3 group-hover/row:[animation-play-state:paused] motion-reduce:animate-none"
               style={{
                 animation: `obz-marquee-${i % 2 === 1 ? "right" : "left"} ${58 + i * 9}s linear infinite`,
               }}

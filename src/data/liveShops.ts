@@ -5,6 +5,10 @@
  * list was generated on 2026-08-27. The set is every merchant with more than two
  * products and a working storefront; the internal testing account is excluded.
  *
+ * CrochetByPriya is deliberately absent. Her storefront was refusing connections
+ * on 2026-08-27 and the captured screenshot was a browser error page. Re-add her
+ * once the store is back up — she is the largest catalogue on the platform.
+ *
  * Screenshots live in public/shops/<subDomain>.jpg. If a merchant closes or
  * redesigns, regenerate rather than editing by hand — a stale screenshot of
  * someone else's shop is worse than no screenshot.
@@ -17,7 +21,6 @@ export interface LiveShop {
 }
 
 export const liveShops: LiveShop[] = [
-  { brandName: "CrochetByPriya", subDomain: "crochetbypriya", category: "Crochet & handmade", state: "Haryana" },
   { brandName: "Shop velnora", subDomain: "shopvelnora", category: "Clothing", state: "Maharashtra" },
   { brandName: "Snazzy Store", subDomain: "snazzystore", category: "Handmade", state: "Maharashtra" },
   { brandName: "Candle_of__midnight", subDomain: "candleofmidnight", category: "Candles & home", state: "Uttar Pradesh" },

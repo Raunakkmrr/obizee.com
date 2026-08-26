@@ -6,6 +6,9 @@ import { Star, Instagram, Quote } from "lucide-react";
 import { verifiedBrands } from "@/data/verifiedBrands";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
+// Laid out as a grid, not a horizontal scroller. A sideways strip hides most of
+// the proof behind a gesture people do not always make, and on a phone it
+// competes with the page scroll. Every quote should be visible by scrolling down.
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -44,7 +47,7 @@ const Testimonials = () => {
 
       <div
         ref={scrollRef}
-        className="flex gap-5 sm:gap-6 overflow-x-auto scrollbar-hide px-4 sm:px-8 pb-4"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 px-4 sm:px-8"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -53,7 +56,7 @@ const Testimonials = () => {
         {[...verifiedBrands, ...verifiedBrands].map((brand, index) => (
           <motion.article
             key={`${brand.brandName}-${index}`}
-            className="flex-shrink-0 w-[300px] sm:w-[360px] bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-300 hover:shadow-lg hover:shadow-orange-100 transition-all duration-300"
+            className="flex h-full flex-col bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-100 transition-all duration-300"
             whileHover={{ y: -4 }}
             role="listitem"
           >
