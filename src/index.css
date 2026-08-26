@@ -86,3 +86,15 @@ html {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* Headings take the display face. Done as one base rule rather than a class on
+   every h1..h3 across the site — the components were written before there was a
+   display face to apply, and this reaches all of them without touching any. */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+}

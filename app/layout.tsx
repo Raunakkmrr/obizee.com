@@ -1,5 +1,30 @@
 import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, Plus_Jakarta_Sans } from "next/font/google";
 import "../src/index.css";
+
+/**
+ * The site previously loaded no web font at all — `font-sans` fell through to
+ * whatever the device happened to have, which is a large part of why it read
+ * cheaper than it should. next/font self-hosts these, so there is no request to
+ * Google on page load and no layout shift while they arrive.
+ *
+ * Bricolage Grotesque carries headings; Plus Jakarta Sans carries everything
+ * else. Deliberately not Inter — it is the default every generated site reaches
+ * for, and looking generic is the thing this is meant to fix.
+ */
+const display = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const body = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-body",
+  display: "swap",
+});
 import Providers from "./providers";
 import Analytics from "@/components/Analytics";
 import LeadCapturePrompt from "@/components/LeadCapturePrompt";
@@ -39,7 +64,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN">
+    <html lang="en-IN" className={`${display.variable} ${body.variable}`}>
       <head>
         <link rel="icon" type="image/png" href="/Obizee.png" />
       </head>

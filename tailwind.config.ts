@@ -18,6 +18,14 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				// Body copy and every Tailwind default. The site previously shipped no
+				// web font at all, so `font-sans` fell through to whatever the device had.
+				sans: ["var(--font-body)", "ui-sans-serif", "system-ui", "sans-serif"],
+				// Headings. Applied through a base rule in src/index.css so every
+				// existing h1/h2/h3 picks it up without touching each component.
+				display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

@@ -43,8 +43,13 @@ const Hero = () => {
             <span className="text-orange-700 text-sm font-medium tracking-wide">0% commission on every sale</span>
           </div>
 
-          {/* Headline — critical for LCP, renders as static HTML */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] mb-6 sm:mb-8 tracking-tight">
+          {/* Headline — critical for LCP, renders as static HTML.
+              One step smaller at every breakpoint than it was: these sizes were
+              set when the site had no web font and `font-sans` fell through to
+              the system stack. Bricolage sets considerably wider, and at the old
+              scale "Run the whole business." broke three ways and orphaned
+              "business." on its own line. */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6 sm:mb-8 tracking-tight">
             <span className="text-gray-900">Keep the whole sale.</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-600 to-red-500">
