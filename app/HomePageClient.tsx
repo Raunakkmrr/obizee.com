@@ -11,6 +11,11 @@ import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import WhatItRuns from "@/components/WhatItRuns";
+import MoveYourShop from "@/components/MoveYourShop";
+import WhoItIsFor from "@/components/WhoItIsFor";
+import PricingExplained from "@/components/PricingExplained";
+import FAQ from "@/components/FAQ";
 
 // Only the query-param modal is deferred. See the note in that file: it holds
 // the `useSearchParams` call, which opts its subtree out of prerendering.
@@ -34,15 +39,25 @@ const DownloadAppFromQuery = lazy(() => import("./DownloadAppFromQuery"));
 export default function HomePageClient() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Order is deliberate: proof and the migration offer come before any
+          feature talk. A visitor who leaves after two screens should have seen
+          sellers vouching and "we move your shop free", not a feature grid.
+          SitesPlaced puts testimonials at position 2 and its import offer at 3;
+          ours used to sit at 7 and nowhere. */}
       <Navigation />
       <Hero />
-      <FeaturedOn />
       <SocialProofBar />
+      <Testimonials />
+      <MoveYourShop />
+      <WhatItRuns />
       <Features />
       <HowItWorks />
+      <WhoItIsFor />
+      <PricingExplained />
       <Services />
-      <Testimonials />
+      <FAQ />
       <CTA />
+      <FeaturedOn />
       <Footer />
       <Suspense fallback={null}>
         <DownloadAppFromQuery />
