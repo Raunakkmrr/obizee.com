@@ -7,10 +7,11 @@ import { ArrowRight, Play, Sparkles } from "lucide-react";
 import Link from "next/link";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
+import HeroComposition from "@/components/HeroComposition";
 
-// Lazy load heavy components — defer until after initial paint
+// Purely decorative, so it may load late. Anything carrying meaning must not
+// be ssr:false — that is how the hero ended up with no imagery in the HTML.
 const FloatingFeatures = dynamic(() => import("@/components/FloatingFeatures"), { ssr: false });
-const DashboardPreview = dynamic(() => import("@/components/DashboardPreview"), { ssr: false });
 
 const Hero = () => {
   return (
@@ -67,15 +68,15 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold rounded-2xl shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/30 transition-shadow duration-300"
-                aria-label="Download oBizee app"
+                aria-label="Start free — no card"
               >
-                Download App
+                Start free
                 <ArrowRight className="ml-3 h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
               </Button>
             </AppDownloadTrigger>
             <WhatsAppCTA
               source="hero"
-              label="Talk to us on WhatsApp"
+              label="Move my shop"
               message="Hi oBizee, I found you on your website. I sell online and I'd like to understand how oBizee works."
             />
           </div>
@@ -95,11 +96,11 @@ const Hero = () => {
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-sm text-gray-500">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span>3-month free trial</span>
+              <span>0% commission</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span>No setup fees</span>
+              <span>No monthly fee</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -108,9 +109,13 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Dashboard Preview — lazy loaded, below the fold on mobile */}
-        <div className="mt-16 sm:mt-20 max-w-4xl mx-auto">
-          <DashboardPreview />
+        {/* Three real app surfaces, fanned and drifting. Replaces the lazy
+            DashboardPreview, which was dynamic({ ssr: false }) and so never
+            reached the server-rendered HTML — the hero carried no imagery at
+            all for a crawler, and one flat screenshot could not stand for a
+            product this wide anyway. */}
+        <div className="mt-14 sm:mt-16">
+          <HeroComposition />
         </div>
       </div>
     </section>
