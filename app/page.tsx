@@ -51,9 +51,11 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }} />
-      <Suspense>
-        <HomePageClient />
-      </Suspense>
+      {/* No Suspense boundary here on purpose. It existed to contain a
+          useSearchParams bailout that has moved into DownloadAppFromQuery,
+          and while it was here the whole homepage prerendered as its empty
+          fallback — 93 characters of HTML for every crawler. */}
+      <HomePageClient />
     </>
   );
 }

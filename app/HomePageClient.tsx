@@ -1,50 +1,52 @@
 "use client";
 
-import React, { useEffect, useState, lazy, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import React, { lazy, Suspense } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import FeaturedOn from "@/components/FeaturedOn";
+import SocialProofBar from "@/components/SocialProofBar";
+import Features from "@/components/Features";
+import HowItWorks from "@/components/HowItWorks";
+import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
+import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
-// Lazy load below-fold components — they don't need to be in the initial bundle
-const FeaturedOn = lazy(() => import("@/components/FeaturedOn"));
-const SocialProofBar = lazy(() => import("@/components/SocialProofBar"));
-const Features = lazy(() => import("@/components/Features"));
-const HowItWorks = lazy(() => import("@/components/HowItWorks"));
-const Services = lazy(() => import("@/components/Services"));
-const Testimonials = lazy(() => import("@/components/Testimonials"));
-const CTA = lazy(() => import("@/components/CTA"));
-const AppDownloadModal = lazy(() => import("@/components/AppDownloadModal"));
+// Only the query-param modal is deferred. See the note in that file: it holds
+// the `useSearchParams` call, which opts its subtree out of prerendering.
+const DownloadAppFromQuery = lazy(() => import("./DownloadAppFromQuery"));
 
+/**
+ * Every section is imported statically and on purpose.
+ *
+ * These were previously `React.lazy()` inside `<Suspense fallback={null}>` to
+ * keep them out of the initial bundle. React.lazy does not server-render — it
+ * suspends and emits the fallback — so all seven sections rendered as nothing
+ * in the exported HTML. Combined with `useSearchParams` at this level, the live
+ * homepage shipped 93 characters of visible text to every crawler while looking
+ * complete in a browser.
+ *
+ * Next already code-splits per route, so lazy() bought very little here and cost
+ * the entire page's readability to search engines and AI assistants. If a real
+ * bundle problem shows up, fix it with a dynamic import that still SSRs
+ * (`next/dynamic` with `ssr: true`), never by removing a section from the HTML.
+ */
 export default function HomePageClient() {
-  const searchParams = useSearchParams();
-  const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
-
-  useEffect(() => {
-    if (searchParams.get("download_app") === "1") {
-      setIsDownloadModalOpen(true);
-    }
-  }, [searchParams]);
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      <Suspense fallback={null}>
-        <FeaturedOn />
-        <SocialProofBar />
-        <Features />
-        <HowItWorks />
-        <Services />
-        <Testimonials />
-        <CTA />
-      </Suspense>
+      <FeaturedOn />
+      <SocialProofBar />
+      <Features />
+      <HowItWorks />
+      <Services />
+      <Testimonials />
+      <CTA />
       <Footer />
-      {isDownloadModalOpen && (
-        <Suspense fallback={null}>
-          <AppDownloadModal open={isDownloadModalOpen} onOpenChange={setIsDownloadModalOpen} />
-        </Suspense>
-      )}
+      <Suspense fallback={null}>
+        <DownloadAppFromQuery />
+      </Suspense>
     </div>
   );
 }
