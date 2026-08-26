@@ -4,14 +4,17 @@
  * Every entry is a real shop that was reachable and rendering products when this
  * list was generated on 2026-08-27. The set is every merchant with more than two
  * products and a working storefront; the internal testing account is excluded.
- *
- * CrochetByPriya is deliberately absent. Her storefront was refusing connections
- * on 2026-08-27 and the captured screenshot was a browser error page. Re-add her
- * once the store is back up — she is the largest catalogue on the platform.
+
  *
  * Screenshots live in public/shops/<subDomain>.jpg. If a merchant closes or
  * redesigns, regenerate rather than editing by hand — a stale screenshot of
  * someone else's shop is worse than no screenshot.
+ *
+ * Capturing gotcha: /etc/hosts on the dev machine maps crochetbypriya.obizee.com
+ * to 127.0.0.1 for local storefront testing, so a headless capture from that
+ * machine screenshots a connection-refused page instead of the shop. Override it
+ * per-capture rather than editing the hosts file:
+ *   chrome --host-resolver-rules="MAP <host> <cloudfront-ip>"
  */
 export interface LiveShop {
   brandName: string;
@@ -21,6 +24,7 @@ export interface LiveShop {
 }
 
 export const liveShops: LiveShop[] = [
+  { brandName: "CrochetByPriya", subDomain: "crochetbypriya", category: "Crochet & handmade", state: "Haryana" },
   { brandName: "Shop velnora", subDomain: "shopvelnora", category: "Clothing", state: "Maharashtra" },
   { brandName: "Snazzy Store", subDomain: "snazzystore", category: "Handmade", state: "Maharashtra" },
   { brandName: "Candle_of__midnight", subDomain: "candleofmidnight", category: "Candles & home", state: "Uttar Pradesh" },
