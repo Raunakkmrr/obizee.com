@@ -39,23 +39,26 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-orange-100 border border-orange-200 mb-8 sm:mb-10 animate-fade-in">
             <Sparkles className="w-4 h-4 text-orange-500 mr-2" aria-hidden="true" />
-            <span className="text-orange-700 text-sm font-medium tracking-wide">India's Most Affordable D2C Platform</span>
+            <span className="text-orange-700 text-sm font-medium tracking-wide">0% commission on every sale</span>
           </div>
 
           {/* Headline — critical for LCP, renders as static HTML */}
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] mb-6 sm:mb-8 tracking-tight">
-            <span className="text-gray-900">Your Business.</span>
+            <span className="text-gray-900">Keep the whole sale.</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-600 to-red-500">
-              One Platform.
+              Run the whole business.
             </span>
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle. "Platform fee 1% per order" used to sit here, which stated
+              the payment gateway's rate as ours — the opposite of the model, on
+              the most-read line of the site. */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-            Manage orders, inventory, payments, and shipping from one dashboard.
-            <span className="text-orange-600 font-normal"> Delhivery, DTDC, Blue Dart &amp; same-day hyperlocal delivery built in.</span>
-            {" "}Razorpay &amp; Paytm from 1%. Platform fee 1% per order, max ₹10.
+            <span className="text-orange-600 font-normal">We take no commission</span> — not a
+            rupee of what your customer pays you. Sell online, track stock and raw materials,
+            ship with Delhivery, message your buyers and see your real profit.
+            {" "}No monthly fee. The only per-order cost is the payment gateway, 1% capped at ₹10.
           </p>
 
           {/* CTA Buttons — two conversion paths: install the app, or talk to a human */}
