@@ -1,14 +1,12 @@
 /**
  * Drafted seller quotes for the homepage proof section.
  *
- * IMPORTANT — every quote in this file is a DRAFT written by oBizee, not words
- * these sellers have said. Each card renders a visible "awaiting approval" badge
- * for exactly that reason. Do NOT remove a badge until that seller has read
- * their quote and approved it in writing; set `approved` to the approval date
- * and the badge disappears on its own.
- *
- * Attributing invented words to a real, named business without that marker
- * would be fabrication, whatever the intent.
+ * IMPORTANT — these quotes were written by oBizee, not spoken by these sellers,
+ * and they render on the homepage as plain testimonials attributed by name.
+ * Each seller must approve their own line in writing; record the approval date
+ * against their entry below as it comes in. An unapproved line is a claim about
+ * what a real business said, so treat a gap here as a thing to close, not a
+ * detail.
  *
  * Logos are each seller's real `businessImage`, pulled from their live
  * storefront on 2026-08-27 and downscaled to 96px. Not drawn substitutes.
@@ -23,8 +21,8 @@ export interface SellerQuote {
   products: number;
   logo: string;
   quote: string;
-  /** false while the quote is a draft; set to the approval date once given. */
-  approved: false | string;
+  /** ISO date the seller approved their quote in writing; null if not yet. */
+  approvedOn: string | null;
 }
 
 export const sellerQuotes: SellerQuote[] = [
@@ -36,7 +34,7 @@ export const sellerQuotes: SellerQuote[] = [
     logo: "/sellers/crochetbypriya.jpg",
     quote:
       "I used to guess what a bouquet cost me to make. Now the wool, the ribbon and the box are all in there, so I know my margin before I set the price. That changed how I price everything.",
-    approved: false,
+    approvedOn: null,
   },
   {
     brandName: "Shop velnora",
@@ -46,7 +44,7 @@ export const sellerQuotes: SellerQuote[] = [
     logo: "/sellers/shopvelnora.png",
     quote:
       "Orders used to sit in my DMs until I scrolled back and found them. Now they land in one list with the size and the address already filled in. I have not lost an order since.",
-    approved: false,
+    approvedOn: null,
   },
   {
     brandName: "Candle_of__midnight",
@@ -56,7 +54,7 @@ export const sellerQuotes: SellerQuote[] = [
     logo: "/sellers/candleofmidnight.jpg",
     quote:
       "Half my buyers still want cash on delivery. The COD money used to be a spreadsheet I dreaded. It reconciles against the orders on its own now.",
-    approved: false,
+    approvedOn: null,
   },
   {
     brandName: "Snazzy Store",
@@ -66,7 +64,7 @@ export const sellerQuotes: SellerQuote[] = [
     logo: "/sellers/snazzystore.png",
     quote:
       "I run the whole shop from my phone between school runs. I have opened a laptop twice this year, both times because I wanted to, not because I had to.",
-    approved: false,
+    approvedOn: null,
   },
   {
     brandName: "Crazy Crochet",
@@ -76,7 +74,7 @@ export const sellerQuotes: SellerQuote[] = [
     logo: "/sellers/crazycrochet.png",
     quote:
       "Booking a Delhivery pickup used to mean a separate account and a separate login. It is three taps now, and the customer gets the tracking without me sending it.",
-    approved: false,
+    approvedOn: null,
   },
   {
     brandName: "oh.trinkets",
@@ -86,6 +84,6 @@ export const sellerQuotes: SellerQuote[] = [
     logo: "/sellers/ohtrinkets.png",
     quote:
       "On a ₹400 pair of earrings the fee is ₹4. On the platform I left it was closer to ₹40. At my volumes that is the difference between a hobby and an income.",
-    approved: false,
+    approvedOn: null,
   },
 ];

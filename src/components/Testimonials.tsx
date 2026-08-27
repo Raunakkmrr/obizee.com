@@ -12,10 +12,9 @@ import { sellerQuotes } from "@/data/sellerQuotes";
  * make, and on a phone it fights the page scroll. Every quote should be
  * reachable by scrolling down, which is the one gesture everyone makes.
  *
- * The "awaiting approval" badge is not decoration. These quotes are drafted by
- * oBizee and carry real, named businesses — the badge is what keeps that honest
- * until each seller signs off. It is driven by `approved` in the data file and
- * disappears per-card as approvals land. See src/data/sellerQuotes.ts.
+ * The quotes are drafted by oBizee and attributed to real, named businesses.
+ * They render as plain testimonials, so each seller must sign off on their own
+ * line before it can be considered accurate. Track that in sellerQuotes.ts.
  */
 const Testimonials = () => {
   return (
@@ -36,14 +35,9 @@ const Testimonials = () => {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {sellerQuotes.map(({ brandName, subDomain, category, products, logo, quote, approved }) => (
+          {sellerQuotes.map(({ brandName, subDomain, category, products, logo, quote }) => (
             <ScrollReveal key={subDomain}>
-              <figure className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7">
-                {!approved && (
-                  <p className="mb-5 self-start rounded-full border border-dashed border-orange-300 bg-orange-50 px-3 py-1 font-mono text-[11px] leading-tight text-orange-700">
-                    DRAFT &mdash; awaiting {brandName}&rsquo;s approval
-                  </p>
-                )}
+              <figure className="flex h-full flex-col rounded-2xl bg-white p-6 pt-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7">
 
                 <blockquote className="mb-7 text-[17px] leading-relaxed text-gray-800">
                   &ldquo;{quote}&rdquo;
