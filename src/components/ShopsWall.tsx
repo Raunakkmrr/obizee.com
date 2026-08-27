@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { liveShops } from "@/data/liveShops";
 
@@ -73,7 +74,11 @@ export default function ShopsWall() {
               className="inline-block h-2 w-2 shrink-0 animate-pulse rounded-full bg-green-500"
             />
             {liveShops.length} shops open right now, run by real sellers. Hover to stop a row
-            and take a look.
+            and take a look, or{" "}
+            <Link href="/shops" className="font-semibold text-orange-600 underline-offset-4 hover:underline">
+              browse every one of them
+            </Link>
+            .
           </p>
         </ScrollReveal>
       </div>

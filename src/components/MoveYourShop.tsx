@@ -84,6 +84,12 @@ export default function MoveYourShop() {
             >
               Send my shop link
             </Link>
+            <Link
+              href="/move-my-store"
+              className="inline-flex items-center justify-center rounded-xl border border-white/25 px-7 py-3.5 font-semibold text-white transition-colors hover:border-white/50 hover:bg-white/10"
+            >
+              How the move works
+            </Link>
             <WhatsAppCTA
               source="move_your_shop"
               label="Ask on WhatsApp"
