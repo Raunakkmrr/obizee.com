@@ -13,6 +13,11 @@ interface WhatsAppCTAProps {
   source: string;
   label?: string;
   variant?: "solid" | "outline" | "light";
+  /** Leading icon. Defaults to the chat bubble; pass null to suppress it. */
+  icon?: React.ReactNode;
+  /** Rendered after the label — the hero uses an arrow, where the button reads
+   *  as a next step rather than as a chat. */
+  trailingIcon?: React.ReactNode;
   className?: string;
 }
 
@@ -39,6 +44,8 @@ const WhatsAppCTA = ({
   source,
   label = "Chat on WhatsApp",
   variant = "solid",
+  icon,
+  trailingIcon,
   className = "",
 }: WhatsAppCTAProps) => {
   const href = whatsappLink(message ?? WHATSAPP_DEFAULT_MESSAGE);
@@ -56,8 +63,9 @@ const WhatsAppCTA = ({
         size="lg"
         className={`w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 text-lg font-semibold rounded-2xl transition-all duration-300 ${variantClasses[variant]} ${className}`}
       >
-        <MessageCircle className="mr-3 h-5 w-5" aria-hidden="true" />
+        {icon === undefined ? <MessageCircle className="mr-3 h-5 w-5" aria-hidden="true" /> : icon}
         {label}
+        {trailingIcon}
       </Button>
     </a>
   );

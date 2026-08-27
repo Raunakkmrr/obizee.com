@@ -24,7 +24,7 @@ const cards = [
     tag: "Stock",
     alt: "oBizee app showing raw material stock, with acrylic wool flagged low at 900g against a 1500g minimum",
     className:
-      "left-0 top-[22%] w-[46%] sm:w-[42%] z-10 -rotate-3 animate-[obz-drift-a_7s_ease-in-out_infinite]",
+      "left-0 top-[22%] w-[46%] z-10 -rotate-[4deg] animate-[obz-drift-a_7s_ease-in-out_infinite]",
   },
   {
     key: "sells",
@@ -32,7 +32,7 @@ const cards = [
     tag: "What sells",
     alt: "oBizee app ranking best selling products, Korean earrings first at 107 units sold",
     className:
-      "right-0 top-[28%] w-[46%] sm:w-[42%] z-10 rotate-3 animate-[obz-drift-b_7s_ease-in-out_0.9s_infinite]",
+      "right-0 top-[28%] w-[46%] z-10 rotate-[5deg] animate-[obz-drift-b_7s_ease-in-out_0.9s_infinite]",
   },
   {
     key: "money",
@@ -40,13 +40,13 @@ const cards = [
     tag: "Your money",
     alt: "oBizee app showing revenue of ₹1,83,487, lifetime profit of ₹1,67,875 and 171 total orders",
     className:
-      "left-1/2 -translate-x-1/2 top-0 w-[62%] sm:w-[58%] z-30 animate-[obz-drift-c_6s_ease-in-out_0.4s_infinite]",
+      "left-[22%] top-0 w-[56%] z-30 animate-[obz-drift-c_6s_ease-in-out_0.4s_infinite]",
   },
 ];
 
 export default function HeroComposition() {
   return (
-    <div className="group relative mx-auto aspect-[4/3] w-full max-w-[560px]">
+    <div className="group relative mx-auto aspect-[4/3.1] w-full max-w-[560px] lg:max-w-none">
       {/* warm bloom behind the stack, kept subtle so the page ground still reads */}
       <div
         aria-hidden="true"
@@ -91,10 +91,10 @@ export default function HeroComposition() {
         @keyframes obz-drift-c {
           0%,
           100% {
-            transform: translate(-50%, 0);
+            transform: translateY(0);
           }
           50% {
-            transform: translate(-50%, -9px);
+            transform: translateY(-9px);
           }
         }
       `}</style>

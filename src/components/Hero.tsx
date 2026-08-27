@@ -1,126 +1,103 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Sparkles } from "lucide-react";
-import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import HeroComposition from "@/components/HeroComposition";
 
-// Purely decorative, so it may load late. Anything carrying meaning must not
-// be ssr:false — that is how the hero ended up with no imagery in the HTML.
-const FloatingFeatures = dynamic(() => import("@/components/FloatingFeatures"), { ssr: false });
-
+/**
+ * Two columns on desktop: the argument on the left, the product on the right.
+ *
+ * This was centred, with the app screens stacked underneath — which pushed the
+ * proof a full screen down and made the hero read as a poster rather than a
+ * product. Side by side, a visitor sees the claim and the thing making the claim
+ * in the same glance. Stacks to one column below lg, where side-by-side would
+ * leave both halves too narrow to read.
+ */
 const Hero = () => {
   return (
     <section
-      className="relative min-h-[calc(100vh-4rem)] sm:min-h-screen bg-gradient-to-b from-white via-orange-50/30 to-white overflow-hidden"
+      className="relative overflow-hidden bg-orange-50"
       aria-label="Hero section"
     >
       {/* Static gradient orbs — pure CSS, no animation to avoid repaints */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <div
-          className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%)" }}
+          className="absolute left-[-10%] top-[-20%] h-[500px] w-[500px] rounded-full sm:h-[700px] sm:w-[700px]"
+          style={{ background: "radial-gradient(circle, rgba(249,115,22,0.10) 0%, transparent 70%)" }}
         />
         <div
-          className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(249,115,22,0.06) 0%, transparent 70%)" }}
+          className="absolute bottom-[-20%] right-[-10%] h-[500px] w-[500px] rounded-full sm:h-[700px] sm:w-[700px]"
+          style={{ background: "radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%)" }}
         />
       </div>
 
-      {/* Floating feature icons — lazy loaded, not needed for LCP */}
-      <FloatingFeatures />
-
-      {/* Content — renders immediately as static HTML */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-16 sm:pb-24">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-orange-100 border border-orange-200 mb-8 sm:mb-10 animate-fade-in">
-            <Sparkles className="w-4 h-4 text-orange-500 mr-2" aria-hidden="true" />
-            <span className="text-orange-700 text-sm font-medium tracking-wide">0% commission on every sale</span>
-          </div>
-
-          {/* Headline — critical for LCP, renders as static HTML.
-              One step smaller at every breakpoint than it was: these sizes were
-              set when the site had no web font and `font-sans` fell through to
-              the system stack. Bricolage sets considerably wider, and at the old
-              scale "Run the whole business." broke three ways and orphaned
-              "business." on its own line. */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6 sm:mb-8 tracking-tight">
-            <span className="text-gray-900">Keep the whole sale.</span>
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-600 to-red-500">
-              Run the whole business.
-            </span>
-          </h1>
-
-          {/* Subtitle. "Platform fee 1% per order" used to sit here, which stated
-              the payment gateway's rate as ours — the opposite of the model, on
-              the most-read line of the site. */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-            <span className="text-orange-600 font-normal">We take no commission</span> — not a
-            rupee of what your customer pays you. Sell online, track stock and raw materials,
-            ship with Delhivery, message your buyers and see your real profit.
-            {" "}No monthly fee. The only per-order cost is the payment gateway, 1% capped at ₹10.
-          </p>
-
-          {/* CTA Buttons — two conversion paths: install the app, or talk to a human */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <AppDownloadTrigger>
-              <Button
-                size="lg"
-                className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold rounded-2xl shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/30 transition-shadow duration-300"
-                aria-label="Start free — no card"
-              >
-                Start free
-                <ArrowRight className="ml-3 h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
-              </Button>
-            </AppDownloadTrigger>
-            <WhatsAppCTA
-              source="hero"
-              label="Move my shop"
-              message="Hi oBizee, I found you on your website. I sell online and I'd like to understand how oBizee works."
-            />
-          </div>
-
-          <div className="flex justify-center mb-12 sm:mb-16">
-            <Link
-              href="/how-to-create-online-store"
-              aria-label="See how it works"
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 font-medium transition-colors duration-200 underline-offset-4 hover:underline"
-            >
-              <Play className="h-4 w-4" aria-hidden="true" />
-              See How It Works
-            </Link>
-          </div>
-
-          {/* Trust line */}
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-sm text-gray-500">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span>0% commission</span>
+      <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-10">
+          {/* ---- the argument ---- */}
+          <div className="text-center lg:text-left">
+            {/* Reads as a spec strip rather than a marketing pill: the monospace
+                and the separators let it list what you actually get without
+                turning into a sentence. */}
+            <div className="mb-8 inline-block rounded-xl bg-orange-100/70 px-4 py-2.5">
+              <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-orange-700 sm:text-xs">
+                0% commission &middot; Store &middot; Orders &middot; Stock &middot; Shipping
+              </span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span>No monthly fee</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span>Launch in 2 minutes</span>
-            </div>
-          </div>
-        </div>
 
-        {/* Three real app surfaces, fanned and drifting. Replaces the lazy
-            DashboardPreview, which was dynamic({ ssr: false }) and so never
-            reached the server-rendered HTML — the hero carried no imagery at
-            all for a crawler, and one flat screenshot could not stand for a
-            product this wide anyway. */}
-        <div className="mt-14 sm:mt-16">
-          <HeroComposition />
+            {/* Two-tone: the brand colour lands on the words carrying the offer,
+                not on a whole line. */}
+            <h1 className="mb-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-[3rem] lg:text-[3.2rem]">
+              <span className="text-gray-900">Keep the </span>
+              <span className="text-orange-600">whole sale.</span>
+              <br />
+              <span className="text-gray-900">Run the </span>
+              <span className="text-orange-600">whole business.</span>
+            </h1>
+
+            {/* "Platform fee 1% per order" used to sit here, which stated the
+                payment gateway's rate as ours — the opposite of the model, on
+                the most-read line of the site. */}
+            <p className="mx-auto mb-9 max-w-xl text-lg leading-relaxed text-gray-700 sm:text-xl lg:mx-0">
+              We take no commission — not a rupee of what your customer pays you. Sell online,
+              track stock, ship with Delhivery and see your real profit.
+            </p>
+
+            <div className="mb-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+              <AppDownloadTrigger>
+                <Button
+                  size="lg"
+                  className="w-full rounded-xl bg-orange-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-orange-600/20 transition-all duration-300 hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/25 sm:w-auto sm:text-lg"
+                  aria-label="Start free — no card"
+                >
+                  Start free — no card
+                </Button>
+              </AppDownloadTrigger>
+              <WhatsAppCTA
+                source="hero"
+                label="Move my shop"
+                variant="outline"
+                icon={null}
+                trailingIcon={<ArrowRight className="ml-3 h-5 w-5" aria-hidden="true" />}
+                className="!rounded-xl !border-gray-300 !bg-white !px-8 !py-4 !text-base !text-gray-900 hover:!border-orange-400 hover:!bg-white hover:!text-orange-700 sm:!text-lg"
+                message="Hi oBizee, I found you on your website. I sell online and I'd like to understand how oBizee works."
+              />
+            </div>
+
+            {/* Monospace, because it is a list of costs — it should read as a
+                figure you can check, not as more marketing copy. */}
+            <p className="font-mono text-[12px] leading-relaxed text-gray-500 sm:text-[13px]">
+              No commission. No monthly fee. Only the payment gateway, 1% capped at ₹10.
+            </p>
+
+          </div>
+
+          {/* ---- the product ---- */}
+          <div className="lg:pl-4">
+            <HeroComposition />
+          </div>
         </div>
       </div>
     </section>
