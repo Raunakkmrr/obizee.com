@@ -22,7 +22,7 @@ const worked = [
 ];
 
 const rows = [
-  { label: "Commission on your sale", us: "0%", dm: "Yes", shopify: "Yes, unless you use theirs" },
+  { label: "Most we take from one order", us: "₹10", dm: "No cap", shopify: "No cap" },
   { label: "Monthly fee", us: "₹0", dm: "₹999", shopify: "₹1,994" },
   { label: "A month with no sales", us: "₹0", dm: "₹999", shopify: "₹1,994" },
   { label: "Same-day hyperlocal delivery", us: "Yes", dm: "No", shopify: "No" },
@@ -40,13 +40,13 @@ export default function PricingExplained() {
           </p>
           <h2 id="pricing-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-              Zero commission
+              ₹10
             </span>
-            . That is the whole pricing page.
+            . That is the most we ever take from one order.
           </h2>
           <p className="text-lg text-gray-600">
-            We never take a share of your sale. You pay the payment gateway, the same as you
-            would anywhere — and ours is among the cheapest in India.
+            1% per order, and it stops at ₹10 however large the order is. No monthly fee, no
+            setup fee, nothing hidden — a month with no sales costs you nothing.
           </p>
         </ScrollReveal>
 

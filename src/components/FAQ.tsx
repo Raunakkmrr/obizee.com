@@ -17,7 +17,7 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 const faqs = [
   {
     q: "Does oBizee take a commission on my sales?",
-    a: "No. oBizee takes 0% commission — you keep the full amount your customer pays you. There is no monthly fee and no setup fee either. The only per-order cost is the payment gateway, which is 1% capped at ₹10, and that is the gateway's charge, not ours.",
+    a: "Yes — 1% of each order, capped at ₹10. On a ₹500 order that is ₹5; on a ₹10,000 order it is still ₹10, which works out at 0.1%. It comes out of your oBizee wallet and appears on a daily invoice, so you can check every rupee. What is zero: the monthly fee, the setup fee, and anything hidden. A month with no sales costs you nothing.",
   },
   {
     q: "What does 1% capped at ₹10 actually mean?",

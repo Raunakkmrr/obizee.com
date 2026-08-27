@@ -43,26 +43,28 @@ const Hero = () => {
                 turning into a sentence. */}
             <div className="mb-8 inline-block rounded-xl bg-orange-100/70 px-4 py-2.5">
               <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-orange-700 sm:text-xs">
-                0% commission &middot; Store &middot; Orders &middot; Stock &middot; Shipping
+                ₹0 monthly &middot; ₹0 setup &middot; ₹0 hidden charges &middot; ₹10 max per order
               </span>
             </div>
 
             {/* Two-tone: the brand colour lands on the words carrying the offer,
                 not on a whole line. */}
             <h1 className="mb-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-[3rem] lg:text-[3.2rem]">
-              <span className="text-gray-900">Keep the </span>
-              <span className="text-orange-600">whole sale.</span>
+              <span className="text-orange-600">₹0 to start. ₹0 a month.</span>
               <br />
-              <span className="text-gray-900">Run the </span>
-              <span className="text-orange-600">whole business.</span>
+              <span className="text-gray-900">Run the whole business.</span>
             </h1>
 
-            {/* "Platform fee 1% per order" used to sit here, which stated the
-                payment gateway's rate as ours — the opposite of the model, on
-                the most-read line of the site. */}
+            {/* Every number here is checkable against the code that actually
+                bills a merchant: TransactionController.addOrderCommission takes
+                1% capped at ₹10 per order, and no path anywhere charges monthly
+                or on signup. An earlier version of this page claimed 0%
+                commission, which the billing code flatly contradicts — the cap
+                is the real story and it does not need overstating. */}
             <p className="mx-auto mb-9 max-w-xl text-lg leading-relaxed text-gray-700 sm:text-xl lg:mx-0">
-              We take no commission — not a rupee of what your customer pays you. Sell online,
-              track stock, ship with Delhivery and see your real profit.
+              No monthly fee, no setup fee, nothing hidden. You pay 1% per order — capped at
+              ₹10, so a ₹10,000 sale still costs you ₹10. Sell online, track stock, ship with
+              Delhivery and see your real profit.
             </p>
 
             <div className="mb-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
@@ -89,7 +91,7 @@ const Hero = () => {
             {/* Monospace, because it is a list of costs — it should read as a
                 figure you can check, not as more marketing copy. */}
             <p className="font-mono text-[12px] leading-relaxed text-gray-500 sm:text-[13px]">
-              No commission. No monthly fee. Only the payment gateway, 1% capped at ₹10.
+              ₹0 monthly. ₹0 setup. ₹0 hidden charges. A month with no sales costs you nothing.
             </p>
 
           </div>

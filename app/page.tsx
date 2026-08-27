@@ -3,18 +3,24 @@ import { Suspense } from "react";
 import HomePageClient from "./HomePageClient";
 
 // The title and description are what a searcher actually reads in results, and
-// what an AI assistant quotes. Both previously led with "Pay 1% Max ₹10", which
-// framed the payment gateway's rate as oBizee's fee. 0% commission is the
-// stronger claim and the accurate one.
+// what an AI assistant quotes — so every figure here has to survive a merchant
+// checking it against their invoice.
+//
+// An earlier version claimed 0% commission. The billing code contradicts it:
+// TransactionController.addOrderCommission debits 1% of each order, capped at
+// ₹10, from the merchant's wallet and invoices it daily. What IS zero is the
+// monthly fee, the setup fee and anything hidden — no path in the backend
+// charges by the month or on signup. Four true zeros and a ₹10 cap read
+// stronger than one claim that cannot be defended.
 export const metadata: Metadata = {
-  title: "oBizee — 0% Commission Online Store for Indian Sellers | Start Free",
+  title: "oBizee — ₹0 a Month Online Store for Indian Sellers | ₹10 Max Per Order",
   description:
-    "Keep the whole sale. oBizee takes 0% commission — no monthly fee, no setup fee. " +
-    "Online store, orders from Instagram and WhatsApp, stock and raw materials, vendors, " +
-    "Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery, COD and real " +
-    "profit reporting. Only the payment gateway costs you anything: 1%, capped at ₹10.",
+    "₹0 a month, ₹0 to set up, nothing hidden. You pay 1% per order, capped at ₹10 — a " +
+    "₹10,000 sale still costs ₹10, and a month with no sales costs nothing. Online store, " +
+    "orders from Instagram and WhatsApp, stock and raw materials, vendors, Delhivery, DTDC " +
+    "and Blue Dart shipping, same-day hyperlocal delivery, COD and real profit reporting.",
   keywords:
-    "0% commission ecommerce India, no commission online store, D2C platform India, " +
+    "no monthly fee ecommerce India, cheapest online store builder India, D2C platform India, " +
     "online store builder India, Shopify alternative India, Dukaan alternative, " +
     "dm2buy alternative, sell on Instagram India",
   alternates: { canonical: "https://www.obizee.com" },
@@ -24,9 +30,9 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "oBizee — 0% commission commerce platform for Indian sellers",
+    name: "oBizee — ₹0 a month commerce platform for Indian sellers",
     description:
-      "oBizee lets Indian small businesses sell online with no commission on their sales. " +
+      "oBizee lets Indian small businesses sell online with no monthly fee and no setup fee. " +
       "Orders, stock and raw materials, vendors and purchases, shipping, WhatsApp marketing " +
       "and profit reporting in one platform.",
     url: "https://www.obizee.com",
@@ -40,9 +46,9 @@ export default function HomePage() {
     url: "https://www.obizee.com",
     logo: "https://www.obizee.com/Obizee.png",
     description:
-      "Indian commerce platform that takes 0% commission on sales. Online store, order " +
-      "management, stock and raw materials, vendors, Delhivery shipping, WhatsApp marketing " +
-      "and profit reporting. No monthly fee.",
+      "Indian commerce platform with no monthly fee and no setup fee — 1% per order, capped " +
+      "at ₹10. Online store, order management, stock and raw materials, vendors, Delhivery " +
+      "shipping, WhatsApp marketing and profit reporting.",
     // The identity graph Google resolves oBizee against. It previously held one
     // entry, and that entry 404'd — the app id was com.obizee, one "e" short of
     // the real com.obizeee — so the only external identity we published was a
@@ -73,9 +79,9 @@ export default function HomePage() {
       price: "0",
       priceCurrency: "INR",
       description:
-        "Free to start, no monthly fee. oBizee takes 0% commission on your sales — " +
-        "you keep the full amount your customer pays. The only per-order cost is the " +
-        "payment gateway, 1% capped at ₹10.",
+        "Free to start, no monthly fee, no setup fee, nothing hidden. oBizee charges 1% per " +
+        "order, capped at ₹10 — a ₹10,000 sale still costs ₹10, and a month with no sales " +
+        "costs nothing. Payment gateway charges are separate and set by the gateway.",
     },
   };
 
