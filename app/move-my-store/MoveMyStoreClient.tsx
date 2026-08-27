@@ -82,7 +82,7 @@ export default function MoveMyStoreClient() {
               />
             </div>
             <p className="mt-5 font-mono text-[12px] text-gray-500">
-              ₹0 for the move. ₹0 monthly. ₹0 setup. 1% per order, capped at ₹10.
+              ₹0 for the move. 0 subscription charges after it — pay only when you get an order.
             </p>
           </div>
         </div>

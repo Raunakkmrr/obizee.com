@@ -35,17 +35,25 @@ export const viewport: Viewport = {
   themeColor: "#f97316",
 };
 
+// The default title and description every page inherits, and the first thing a
+// search engine or an assistant reads about oBizee. The lead line is the
+// positioning and it is checkable: no code path in the backend charges a
+// subscription, a monthly fee or a setup fee, and the 1% commission is debited
+// only after an order exists. Keep any rewrite true to that.
 export const metadata: Metadata = {
   title: {
-    default: "oBizee — India's Most Affordable Online Store Builder | Start Free, Pay 1% Max ₹10",
+    default: "oBizee — 0 Subscription Charges. Pay Only When You Get an Order.",
     template: "%s",
   },
-  description: "India's cheapest D2C platform. Auto-generated online store, Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, order management, inventory tracking. 1% per order, max ₹10. No monthly fees. No coding needed.",
-  keywords: "cheapest ecommerce platform India, D2C platform India, online store builder, Shopify alternative India, Dukaan alternative, sell online India, Instagram seller platform, WhatsApp business tools",
+  description:
+    "0 subscription charges — you pay oBizee only when you get an order, and then just 1% capped at ₹10. A month with no sales costs nothing. Online store, orders from Instagram and WhatsApp, stock and raw materials, Delhivery, DTDC and Blue Dart shipping, COD and real profit reporting. No coding needed.",
+  keywords:
+    "no subscription ecommerce India, pay per order ecommerce India, cheapest ecommerce platform India, D2C platform India, online store builder, Shopify alternative India, Dukaan alternative, sell online India, Instagram seller platform, WhatsApp business tools",
   metadataBase: new URL("https://www.obizee.com"),
   openGraph: {
-    title: "oBizee — India's Most Affordable Online Store Builder",
-    description: "Auto-generated online store, Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, order management. 1% per order, max ₹10. No monthly fees.",
+    title: "oBizee — 0 Subscription Charges. Pay Only When You Get an Order.",
+    description:
+      "0 subscription charges — pay only when you get an order, then 1% capped at ₹10. Online store, order management, stock, and Delhivery, DTDC & Blue Dart shipping.",
     url: "https://www.obizee.com",
     siteName: "oBizee",
     images: [{ url: "/Obizee.png" }],
@@ -54,8 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "oBizee — India's Most Affordable Online Store Builder",
-    description: "Auto-generated online store, Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, order management. 1% per order, max ₹10. No monthly fees.",
+    title: "oBizee — 0 Subscription Charges. Pay Only When You Get an Order.",
+    description:
+      "0 subscription charges — pay only when you get an order, then 1% capped at ₹10. Online store, order management, stock, and Delhivery, DTDC & Blue Dart shipping.",
     images: ["/Obizee.png"],
   },
   robots: { index: true, follow: true },

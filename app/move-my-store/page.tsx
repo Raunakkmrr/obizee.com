@@ -23,7 +23,7 @@ export default function MoveMyStorePage() {
         name: "What does the migration cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Nothing. We move your products, images, prices, variants and categories across at no charge. After the move there is no monthly fee and no setup fee — you pay 1% per order, capped at ₹10.",
+          text: "Nothing. We move your products, images, prices, variants and categories across at no charge. After the move there are 0 subscription charges — you pay oBizee only when you get an order, and then 1% of it capped at ₹10.",
         },
       },
       {

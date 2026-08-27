@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs DM2buy — Best D2C Platform for Indian Sellers [2026 Comparison]",
   description:
-    "Compare oBizee vs DM2buy for Indian sellers. oBizee offers Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, WhatsApp + Instagram selling, transparent pricing (1% max ₹10). DM2buy is Instagram-only with no logistics.",
+    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs DM2buy for Indian sellers. oBizee offers Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, WhatsApp + Instagram selling, transparent pricing (1% max ₹10). DM2buy is Instagram-only with no logistics.",
   keywords:
     "oBizee vs DM2buy, DM2buy alternative, best D2C platform India, DM2buy review, Instagram selling platform India, dm2buy shipping",
   alternates: {

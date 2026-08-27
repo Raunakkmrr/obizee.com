@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs Dukaan — Best Dukaan Alternative in India [2026 Comparison]",
   description:
-    "Compare oBizee vs Dukaan for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal. Dukaan: ₹4,999/year subscription.",
+    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs Dukaan for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal. Dukaan: ₹4,999/year subscription.",
   keywords:
     "oBizee vs Dukaan, Dukaan alternative, Dukaan app review, cheapest online store India, Dukaan pricing, best Dukaan alternative 2026",
   alternates: {

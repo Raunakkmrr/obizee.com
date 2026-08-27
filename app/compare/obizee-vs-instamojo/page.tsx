@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers [2026]",
   description:
-    "Compare oBizee vs Instamojo for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Instamojo: 2-5% per transaction, basic storefront.",
+    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs Instamojo for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Instamojo: 2-5% per transaction, basic storefront.",
   keywords:
     "oBizee vs Instamojo, Instamojo alternative, Instamojo review 2026, cheapest payment platform India, online store vs payment links",
   alternates: {

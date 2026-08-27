@@ -72,9 +72,13 @@ const Footer = () => {
                   oBizee
                 </span>
               </div>
-              <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-lg">
-                Empowering businesses to build professional websites, manage operations, and grow their online presence. From startup to
-                success story - we've got you covered.
+              <p className="mb-4 text-base font-semibold leading-snug text-white sm:text-lg">
+                0 subscription charges. Pay us when you get an order.
+              </p>
+              <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
+                Nothing monthly, nothing to set up, nothing hidden — when an order comes in you
+                pay 1% of it, capped at ₹10. A month with no orders costs you nothing. Sell
+                online, manage orders and stock, and ship across India from your phone.
               </p>
               <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-3 sm:p-4 mb-5 sm:mb-7">
                 <p className="text-xs sm:text-sm text-gray-300">

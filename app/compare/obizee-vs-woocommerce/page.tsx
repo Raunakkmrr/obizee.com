@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs WooCommerce — Easiest WooCommerce Alternative for India [2026]",
   description:
-    "Compare oBizee vs WooCommerce for Indian sellers. oBizee: 2-minute setup, ₹0/month, built-in Delhivery, DTDC, Blue Dart & hyperlocal. WooCommerce: requires WordPress, hosting, plugins, and technical knowledge.",
+    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs WooCommerce for Indian sellers. oBizee: 2-minute setup, ₹0/month, built-in Delhivery, DTDC, Blue Dart & hyperlocal. WooCommerce: requires WordPress, hosting, plugins, and technical knowledge.",
   keywords:
     "oBizee vs WooCommerce, WooCommerce alternative India, easiest online store India, no coding ecommerce India, WooCommerce too complicated",
   alternates: {

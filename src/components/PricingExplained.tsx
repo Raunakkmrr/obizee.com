@@ -23,8 +23,8 @@ const worked = [
 
 const rows = [
   { label: "Most we take from one order", us: "₹10", dm: "No cap", shopify: "No cap" },
-  { label: "Monthly fee", us: "₹0", dm: "₹999", shopify: "₹1,994" },
-  { label: "A month with no sales", us: "₹0", dm: "₹999", shopify: "₹1,994" },
+  { label: "Subscription", us: "None", dm: "₹999/mo", shopify: "₹1,994/mo" },
+  { label: "A month with no orders", us: "₹0", dm: "₹999", shopify: "₹1,994" },
   { label: "Same-day hyperlocal delivery", us: "Yes", dm: "No", shopify: "No" },
   { label: "Raw materials & vendors", us: "Yes", dm: "No", shopify: "No" },
   { label: "Migration done for you", us: "Free", dm: "—", shopify: "Paid agency" },
@@ -40,13 +40,13 @@ export default function PricingExplained() {
           </p>
           <h2 id="pricing-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-              ₹10
+              0 subscription charges
             </span>
-            . That is the most we ever take from one order.
+            . Pay us when you get an order.
           </h2>
           <p className="text-lg text-gray-600">
-            1% per order, and it stops at ₹10 however large the order is. No monthly fee, no
-            setup fee, nothing hidden — a month with no sales costs you nothing.
+            Nothing monthly, nothing to set up, nothing hidden. When an order comes in you pay
+            1% of it, and that stops at ₹10 however large the order is.
           </p>
         </ScrollReveal>
 

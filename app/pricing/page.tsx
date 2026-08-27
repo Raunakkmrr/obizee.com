@@ -3,14 +3,16 @@ import PricingPage from "@/pages/Pricing";
 
 
 export const metadata: Metadata = {
-  title: "oBizee Pricing | 3-Month Free Trial + 1% Per Order (Max ₹10)",
+  title: "oBizee Pricing — 0 Subscription Charges. Pay Only When You Get an Order.",
   description:
-    "Start with a 3-month free trial. After trial, pay 1% per successful order with a maximum cap of ₹10 per order.",
+    "0 subscription charges — you pay oBizee only when you get an order. Start with a 3-month " +
+    "free trial; after it, 1% per successful order capped at ₹10, so a ₹10,000 order still costs " +
+    "₹10. A month with no orders costs nothing.",
   keywords:
-    "oBizee pricing, 3 month free trial, 1 percent fee, max 10 rupees per order, India SaaS pricing",
+    "oBizee pricing, no subscription ecommerce India, pay per order, 3 month free trial, 1 percent fee, max 10 rupees per order, India SaaS pricing",
   alternates: { canonical: "https://www.obizee.com/pricing" },
   openGraph: {
-    title: "oBizee Pricing | 3-Month Free Trial + 1% Per Order (Max ₹10)",
+    title: "oBizee Pricing — 0 Subscription Charges. Pay Only When You Get an Order.",
     description:
       "Simple single-plan pricing: 3-month free trial, then 1% per successful order capped at ₹10.",
     type: "website",
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "oBizee Pricing | 3-Month Free Trial + 1% Per Order (Max ₹10)",
+    title: "oBizee Pricing — 0 Subscription Charges. Pay Only When You Get an Order.",
     description:
       "Simple single-plan pricing: 3-month free trial, then 1% per successful order capped at ₹10.",
     images: ["/Obizee.png"],

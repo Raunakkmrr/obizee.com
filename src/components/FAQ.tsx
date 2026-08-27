@@ -16,8 +16,8 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
  */
 const faqs = [
   {
-    q: "Does oBizee take a commission on my sales?",
-    a: "Yes — 1% of each order, capped at ₹10. On a ₹500 order that is ₹5; on a ₹10,000 order it is still ₹10, which works out at 0.1%. It comes out of your oBizee wallet and appears on a daily invoice, so you can check every rupee. What is zero: the monthly fee, the setup fee, and anything hidden. A month with no sales costs you nothing.",
+    q: "What does oBizee cost?",
+    a: "0 subscription charges. You pay oBizee only when you get an order — nothing monthly, nothing to set up, nothing hidden. When an order does come in you pay 1% of it, capped at ₹10, so a ₹500 order costs ₹5 and a ₹10,000 order still costs ₹10. It comes out of your oBizee wallet and appears on a daily invoice, so you can check every rupee. A month with no orders costs you nothing.",
   },
   {
     q: "What does 1% capped at ₹10 actually mean?",

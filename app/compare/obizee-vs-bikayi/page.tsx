@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs Bikayi — Best Bikayi Alternative in India [2026 Comparison]",
   description:
-    "Compare oBizee vs Bikayi for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Bikayi: free tier + paid plans from ₹999/month.",
+    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs Bikayi for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Bikayi: free tier + paid plans from ₹999/month.",
   keywords:
     "oBizee vs Bikayi, Bikayi alternative, Bikayi app review, cheapest online store India, Bikayi pricing",
   alternates: {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs Shopify — Cheapest Shopify Alternative in India [2026]",
   description:
-    "Compare oBizee vs Shopify for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Shopify: ₹2,000+/month + extra for Indian logistics.",
+    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs Shopify for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Shopify: ₹2,000+/month + extra for Indian logistics.",
   keywords:
     "oBizee vs Shopify, Shopify alternative India, cheapest Shopify alternative, Shopify too expensive India, best ecommerce platform India, Shopify India pricing",
   alternates: {

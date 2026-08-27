@@ -168,7 +168,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
     title: "7 Best Shopify Alternatives for Indian Sellers (2026)",
     metaTitle: "7 Best Shopify Alternatives for Indian Sellers in 2026 | oBizee",
     metaDescription:
-      "The best Shopify alternatives for Indian sellers in 2026, compared on price, shipping, payments and hyperlocal delivery. Includes oBizee, Dukaan, Bikayi, Instamojo, WooCommerce and more.",
+      "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. The best Shopify alternatives for Indian sellers in 2026, compared on price, shipping, payments and hyperlocal delivery. Includes oBizee, Dukaan, Bikayi, Instamojo, WooCommerce and more.",
     answer:
       "The best Shopify alternatives for Indian sellers in 2026 are oBizee, Dukaan, Bikayi, Instamojo, WooCommerce, Shoopy and SmartBiz by Amazon. oBizee is the strongest option for sellers shipping physical products, because Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery, and Razorpay and Paytm payments are built in rather than added through paid apps, with no monthly subscription. Shopify remains the better choice for international selling and theme choice.",
     whyLeave: [
@@ -198,7 +198,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
     title: "6 Best DM2Buy Alternatives for Indian Sellers (2026)",
     metaTitle: "6 Best DM2Buy Alternatives for Indian Sellers in 2026 | oBizee",
     metaDescription:
-      "The best DM2Buy alternatives for Indian Instagram and WhatsApp sellers in 2026, compared on shipping, payments, inventory and same-day delivery.",
+      "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. The best DM2Buy alternatives for Indian Instagram and WhatsApp sellers in 2026, compared on shipping, payments, inventory and same-day delivery.",
     answer:
       "The best DM2Buy alternatives for Indian sellers in 2026 are oBizee, Dukaan, Bikayi, Shoopy, Instamojo and SmartBiz by Amazon. oBizee is the strongest choice for sellers who have outgrown a catalog link, because it adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery through Borzo and Shadowfax, Razorpay and Paytm payments, inventory and raw-material tracking, and customer retention SMS. DM2Buy itself remains a good free option if all you need is a shareable catalog.",
     whyLeave: [
@@ -228,7 +228,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
     title: "6 Best Dukaan Alternatives for Indian Sellers (2026)",
     metaTitle: "6 Best Dukaan Alternatives for Indian Sellers in 2026 | oBizee",
     metaDescription:
-      "The best Dukaan alternatives for Indian sellers in 2026, compared on pricing, courier integration, payments and same-day hyperlocal delivery.",
+      "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. The best Dukaan alternatives for Indian sellers in 2026, compared on pricing, courier integration, payments and same-day hyperlocal delivery.",
     answer:
       "The best Dukaan alternatives for Indian sellers in 2026 are oBizee, Bikayi, Shopify, Instamojo, Shoopy and DM2Buy. oBizee is the strongest option for sellers shipping physical products, because it has no annual plan and includes Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery, and Razorpay and Paytm payments. Dukaan's paid plans start at ₹4,999 a year as of 2026 and it has no native courier integration.",
     whyLeave: [
@@ -258,7 +258,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
     title: "6 Best Bikayi Alternatives for Indian Sellers (2026)",
     metaTitle: "6 Best Bikayi Alternatives for Indian Sellers in 2026 | oBizee",
     metaDescription:
-      "The best Bikayi alternatives for Indian sellers in 2026, compared on pricing, WhatsApp selling, courier integration and hyperlocal delivery.",
+      "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. The best Bikayi alternatives for Indian sellers in 2026, compared on pricing, WhatsApp selling, courier integration and hyperlocal delivery.",
     answer:
       "The best Bikayi alternatives for Indian sellers in 2026 are oBizee, Dukaan, Shopify, Instamojo, Shoopy and DM2Buy. oBizee is the strongest option for sellers shipping physical products, with no monthly subscription, Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery, and Razorpay and Paytm built in. Bikayi remains a good choice if WhatsApp-native selling flows are your main requirement.",
     whyLeave: [
@@ -288,7 +288,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
     title: "6 Best Instamojo Alternatives for Indian Sellers (2026)",
     metaTitle: "6 Best Instamojo Alternatives for Indian Sellers in 2026 | oBizee",
     metaDescription:
-      "The best Instamojo alternatives for Indian sellers in 2026, compared on storefront depth, courier integration, inventory and same-day delivery.",
+      "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. The best Instamojo alternatives for Indian sellers in 2026, compared on storefront depth, courier integration, inventory and same-day delivery.",
     answer:
       "The best Instamojo alternatives for Indian sellers in 2026 are oBizee, Dukaan, Bikayi, Shopify, Shoopy and DM2Buy. oBizee is the strongest option for sellers shipping physical products, adding Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery, inventory with per-combination variants, and raw-material and vendor tracking. Instamojo remains the better choice for digital products, services and payment links.",
     whyLeave: [

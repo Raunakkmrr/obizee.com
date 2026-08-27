@@ -68,9 +68,9 @@ export default function SocialProofBar() {
                   down — it is the number a seller is actually weighing, and it
                   is the one figure here that is a promise rather than a total. */}
               <div className="border-b border-orange-100 bg-orange-50/40 px-5 py-5 sm:border-b-0 lg:py-6">
-                <p className="text-2xl font-bold tabular-nums text-orange-600 sm:text-3xl">₹10</p>
+                <p className="text-2xl font-bold tabular-nums text-orange-600 sm:text-3xl">₹0/mo</p>
                 <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-orange-700 sm:text-[11px]">
-                  Most we take per order
+                  Only when you sell
                 </p>
               </div>
             </div>

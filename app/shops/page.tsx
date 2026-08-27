@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     `${liveShops.length} real shops running on oBizee right now — crochet, jewellery, clothing, ` +
     "candles, food and more, run by sellers across India. Open any of them and buy something. " +
-    "No monthly fee, no setup fee, 1% per order capped at ₹10.",
+    "0 subscription charges — sellers pay only when they get an order, then 1% capped at ₹10.",
   keywords:
     "oBizee stores, online shops India, Instagram seller websites, D2C store examples India, " +
     "handmade sellers India, crochet shop online India",
