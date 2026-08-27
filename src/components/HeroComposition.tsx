@@ -12,15 +12,17 @@ import React, { useEffect, useRef, useState } from "react";
  * check; stock and best-sellers behind it, tilted, so all three read at once.
  *
  * Three motions, each doing a different job:
- *   1. a staggered entrance, so the fan assembles rather than appearing;
- *   2. a slow idle float, so the stack is never fully still;
+ *   1. a staggered entrance, the cards arriving from the right;
+ *   2. a slow horizontal drift, right to left and back, so the stack is never
+ *      fully still — each card on its own period, so they never travel in
+ *      lockstep;
  *   3. pointer parallax weighted by depth — the front card travels furthest,
  *      which is what sells the illusion that these sit at different distances.
  *
  * Those would fight each other on a single `transform`, so they are layered:
  * an outer wrapper runs the entrance, the figure carries `rotate` for the fan,
  * `translate` for parallax and `scale` for hover, and an inner div rides
- * `transform` for the float. Nothing overwrites anything else.
+ * `transform` for the drift. Nothing overwrites anything else.
  *
  * The entrance is CSS, never React state. Gating opacity on a state flag makes
  * the imagery invisible until hydration — the same failure that once left this
@@ -46,6 +48,7 @@ const cards = [
     depth: 0.45,
     z: 10,
     delay: 90,
+    drift: { seconds: 9.5, phase: -3.1 },
   },
   {
     key: "sells",
@@ -57,6 +60,7 @@ const cards = [
     depth: 0.55,
     z: 10,
     delay: 180,
+    drift: { seconds: 12, phase: -7.4 },
   },
   {
     key: "money",
@@ -68,6 +72,7 @@ const cards = [
     depth: 1,
     z: 30,
     delay: 0,
+    drift: { seconds: 7.5, phase: 0 },
   },
 ];
 
@@ -118,7 +123,7 @@ export default function HeroComposition() {
         className="pointer-events-none absolute inset-x-[8%] bottom-[6%] h-28 rounded-full bg-orange-400/20 blur-3xl"
       />
 
-      {cards.map(({ key, src, tag, alt, className, rotate, depth, z, delay }) => {
+      {cards.map(({ key, src, tag, alt, className, rotate, depth, z, delay, drift }) => {
         const isHovered = hovered === key;
         const dimmed = hovered !== null && !isHovered;
         return (
@@ -138,12 +143,12 @@ export default function HeroComposition() {
               }}
               className="overflow-hidden rounded-2xl bg-gray-900 shadow-2xl shadow-gray-900/30 [transition:translate_300ms_cubic-bezier(0.22,1,0.36,1),scale_450ms_cubic-bezier(0.22,1,0.36,1),rotate_450ms_cubic-bezier(0.22,1,0.36,1),opacity_300ms_ease-out]"
             >
-              {/* The float rides `transform`, leaving translate/rotate/scale free
+              {/* The drift rides `transform`, leaving translate/rotate/scale free
                   for parallax, the fan and hover. Paused while the pointer is on
                   the stack, so a card being inspected holds still. */}
               <div
                 className="group-hover:[animation-play-state:paused] motion-reduce:animate-none"
-                style={{ animation: `obz-float ${6.5 + depth * 1.5}s ease-in-out ${delay}ms infinite` }}
+                style={{ animation: `obz-drift ${drift.seconds}s ease-in-out ${drift.phase}s infinite` }}
               >
                 <figcaption className="flex items-center gap-2 px-2.5 py-2">
                   <span className="h-3 w-3 shrink-0 rounded bg-orange-500" aria-hidden="true" />
@@ -163,38 +168,34 @@ export default function HeroComposition() {
         @keyframes obz-enter {
           from {
             opacity: 0;
-            scale: 0.9;
-            transform: translateY(14px);
+            scale: 0.92;
+            transform: translateX(56px);
           }
           to {
             opacity: 1;
             scale: 1;
-            transform: translateY(0);
+            transform: translateX(0);
           }
         }
-        @keyframes obz-float {
+        @keyframes obz-drift {
           0%,
           100% {
-            transform: translateY(0);
+            transform: translateX(12px);
           }
           50% {
-            transform: translateY(-9px);
+            transform: translateX(-12px);
           }
         }
         @media (prefers-reduced-motion: reduce) {
           @keyframes obz-enter {
-          from {
-            opacity: 0;
-            scale: 0.9;
-            transform: translateY(14px);
+            from,
+            to {
+              opacity: 1;
+              scale: 1;
+              transform: none;
+            }
           }
-          to {
-            opacity: 1;
-            scale: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes obz-float {
+          @keyframes obz-drift {
             0%,
             100% {
               transform: none;
