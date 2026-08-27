@@ -1,105 +1,82 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { Star, Instagram, Quote } from "lucide-react";
-import { verifiedBrands } from "@/data/verifiedBrands";
+import React from "react";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import { sellerQuotes } from "@/data/sellerQuotes";
 
-// Laid out as a grid, not a horizontal scroller. A sideways strip hides most of
-// the proof behind a gesture people do not always make, and on a phone it
-// competes with the page scroll. Every quote should be visible by scrolling down.
+/**
+ * Seller proof, at position 4 on the homepage.
+ *
+ * Laid out as a grid rather than the horizontal auto-scroller this used to be.
+ * A sideways strip hides most of the proof behind a gesture people do not always
+ * make, and on a phone it fights the page scroll. Every quote should be
+ * reachable by scrolling down, which is the one gesture everyone makes.
+ *
+ * The "awaiting approval" badge is not decoration. These quotes are drafted by
+ * oBizee and carry real, named businesses — the badge is what keeps that honest
+ * until each seller signs off. It is driven by `approved` in the data file and
+ * disappears per-card as approvals land. See src/data/sellerQuotes.ts.
+ */
 const Testimonials = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
-
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-    let animationId: number;
-    const scroll = () => {
-      if (!isPaused && container) {
-        container.scrollLeft += 0.5;
-        if (container.scrollLeft >= container.scrollWidth - container.clientWidth - 10) {
-          container.scrollLeft = 0;
-        }
-      }
-      animationId = requestAnimationFrame(scroll);
-    };
-    animationId = requestAnimationFrame(scroll);
-    return () => cancelAnimationFrame(animationId);
-  }, [isPaused]);
-
   return (
-    <section className="py-16 sm:py-24 bg-gray-50 overflow-hidden" aria-labelledby="testimonials-heading">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal className="text-center mb-12 sm:mb-16">
-          <p className="text-orange-600 text-sm font-semibold tracking-widest uppercase mb-4">Success Stories</p>
-          <h2 id="testimonials-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
-            Real Merchants,
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600"> Real Growth</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Instagram sellers and small businesses across India are scaling with oBizee.
+    <section className="bg-orange-50 py-16 sm:py-24" aria-labelledby="testimonials-heading">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ScrollReveal className="mb-12 max-w-xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-orange-600">
+            Sellers
           </p>
-        </ScrollReveal>
-      </div>
-
-      <div
-        ref={scrollRef}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 px-4 sm:px-8"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        role="list"
-      >
-        {[...verifiedBrands, ...verifiedBrands].map((brand, index) => (
-          <motion.article
-            key={`${brand.brandName}-${index}`}
-            className="flex h-full flex-col bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-100 transition-all duration-300"
-            whileHover={{ y: -4 }}
-            role="listitem"
+          <h2
+            id="testimonials-heading"
+            className="mb-5 text-3xl font-bold text-gray-900 sm:max-w-[440px] sm:text-5xl"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <img
-                src={brand.logo}
-                alt={`${brand.brandName} logo`}
-                className="w-11 h-11 rounded-xl object-contain bg-gray-50 p-0.5 ring-1 ring-gray-200 flex-shrink-0"
-                width="44" height="44" loading="lazy"
-              />
-              <div className="min-w-0 flex-1">
-                <h3 className="font-bold text-gray-900 text-sm truncate">{brand.brandName}</h3>
-                <p className="text-gray-500 text-xs truncate">{brand.ownerName}</p>
-              </div>
-              <a
-                href={brand.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-lg flex items-center justify-center hover:scale-110 transition-transform"
-              >
-                <Instagram className="w-4 h-4 text-white" />
-              </a>
-            </div>
+            Don&rsquo;t take our word. Take{" "}
+            <span className="text-orange-600">theirs</span>.
+          </h2>
+          <p className="text-lg text-gray-600">Real shops you can open and buy from today.</p>
+        </ScrollReveal>
 
-            <div className="flex gap-0.5 mb-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-3.5 w-3.5 text-orange-400 fill-current" />
-              ))}
-            </div>
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {sellerQuotes.map(({ brandName, subDomain, category, products, logo, quote, approved }) => (
+            <ScrollReveal key={subDomain}>
+              <figure className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7">
+                {!approved && (
+                  <p className="mb-5 self-start rounded-full border border-dashed border-orange-300 bg-orange-50 px-3 py-1 font-mono text-[11px] leading-tight text-orange-700">
+                    DRAFT &mdash; awaiting {brandName}&rsquo;s approval
+                  </p>
+                )}
 
-            <div className="relative mb-4">
-              <Quote className="absolute -top-1 -left-1 w-4 h-4 text-orange-200" />
-              <blockquote className="text-gray-700 text-sm leading-relaxed pl-5 line-clamp-4">
-                {brand.quote}
-              </blockquote>
-            </div>
+                <blockquote className="mb-7 text-[17px] leading-relaxed text-gray-800">
+                  &ldquo;{quote}&rdquo;
+                </blockquote>
 
-            <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-              <span className="text-xs text-gray-500 font-medium">{brand.state}</span>
-              <span className="text-xs text-orange-600 font-semibold">{brand.subDomain}</span>
-            </div>
-          </motion.article>
-        ))}
+                <figcaption className="mt-auto flex items-center gap-3 border-t border-gray-200 pt-5">
+                  {/* the seller's real businessImage, not a drawn stand-in */}
+                  <img
+                    src={logo}
+                    alt={`${brandName} logo`}
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    className="h-12 w-12 shrink-0 rounded-lg object-cover"
+                  />
+                  <span className="min-w-0">
+                    <a
+                      href={`https://${subDomain}.obizee.com`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block truncate font-bold text-gray-900 transition-colors hover:text-orange-600"
+                    >
+                      {brandName}
+                    </a>
+                    <span className="mt-0.5 block font-mono text-[13px] text-gray-500">
+                      {category} &middot; {products} products
+                    </span>
+                  </span>
+                </figcaption>
+              </figure>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   );
