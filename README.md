@@ -1,73 +1,45 @@
-# Welcome to your Lovable project
+# obizee.com
 
-## Project info
+The oBizee marketing site — homepage, pricing, blog, and the `/compare` survey
+and head-to-head pages. Static-exported Next.js, deployed from `main`.
 
-**URL**: https://lovable.dev/projects/00da7bc6-655e-4a72-ba8f-8a5f024a143e
+## Stack
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/00da7bc6-655e-4a72-ba8f-8a5f024a143e) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
+- Next.js 14 (App Router, `output: "export"` — fully static)
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Run locally
 
-Simply open [Lovable](https://lovable.dev/projects/00da7bc6-655e-4a72-ba8f-8a5f024a143e) and click on Share -> Publish.
+```sh
+npm install
+npm run dev
+```
 
-## Can I connect a custom domain to my Lovable project?
+Opens at `http://localhost:3000`.
 
-Yes, you can!
+## Build
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+npm run build
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Static output goes to `out/`.
+
+## Deploy
+
+Push to `main`. No manual deploy step — the connected host builds and
+publishes automatically.
+
+## Content
+
+- `/compare/*` — survey ("best X alternatives") and head-to-head pages, data
+  in `src/data/alternatives.ts`, rendered by
+  `src/components/AlternativesListicle.tsx`.
+- `/blog/*` — long-form posts, one `BlogPostN.tsx` per post under
+  `src/pages/blog/`, rendered by `src/components/BlogPostLayout.tsx`.
+- `public/sitemap-*.xml` — sitemap index files. `scripts/fix-sitemaps.mjs` is
+  their sole owner; run it (`--write` to apply) after any content change so
+  `lastmod` stays real instead of drifting.
