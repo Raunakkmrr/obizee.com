@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, X, Minus, Phone } from "lucide-react";
+import { ArrowRight, Check, X, Minus, Phone, Calendar, User } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
@@ -18,11 +18,12 @@ const CompareShopify = () => {
     { feature: "Courier partners", obizee: "Delhivery, DTDC, Blue Dart, India Post +", competitor: "Via paid apps like Shiprocket", winner: "obizee" },
     { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
     { feature: "AWB generation & pickup scheduling", obizee: true, competitor: "Via third-party apps", winner: "obizee" },
-    { feature: "Custom domain", obizee: "Included — your own domain", competitor: "Supported, domain bought separately", winner: "tie" },
+    { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: "Supported, domain bought separately", winner: "tie" },
+    { feature: "Setup / website-creation fee", obizee: "₹0", competitor: "₹0 (subscription still applies)", winner: "obizee" },
     { feature: "Storefront templates", obizee: "4 India-first templates", competitor: "Large paid theme marketplace", winner: "competitor" },
     { feature: "Order forms for Instagram & WhatsApp", obizee: "Custom form builder + QR + links", competitor: false, winner: "obizee" },
     { feature: "Inventory & stock tracking", obizee: true, competitor: true, winner: "tie" },
-    { feature: "Product variants", obizee: "Per-combination price, stock, SKU, image", competitor: true, winner: "tie" },
+    { feature: "Product variants", obizee: "Unlimited, per-combination price, stock, SKU, image", competitor: true, winner: "tie" },
     { feature: "Bulk product upload", obizee: "Photo-first, with AI-assisted titles", competitor: "CSV import", winner: "obizee" },
     { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Purchase lists & vendor management", obizee: true, competitor: "Via paid apps", winner: "obizee" },
@@ -110,6 +111,24 @@ const CompareShopify = () => {
     inLanguage: "en-IN",
   };
 
+  // Real git commit dates — never guess these. Update dateModified only when
+  // the content on this page actually changes.
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "oBizee vs Shopify — Shopify Alternative for Indian Sellers (2026 Comparison)",
+    description: "Comparison of oBizee and Shopify for Indian sellers. oBizee charges no monthly subscription, no setup fee, 1% per order capped at ₹10, and includes a free mapped custom domain, unlimited products, and same-day hyperlocal delivery.",
+    datePublished: "2026-04-23",
+    dateModified: "2026-08-31",
+    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
+    publisher: {
+      "@type": "Organization",
+      name: "oBizee",
+      logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" },
+    },
+    mainEntityOfPage: "https://www.obizee.com/compare/obizee-vs-shopify",
+    image: "https://www.obizee.com/Obizee.png",
+  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -135,6 +154,7 @@ const CompareShopify = () => {
         { name: "oBizee vs Shopify", url: "https://www.obizee.com/compare/obizee-vs-shopify" },
       ]} />
       <JsonLd data={jsonLd} />
+      <JsonLd data={articleJsonLd} />
         <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
@@ -152,8 +172,18 @@ const CompareShopify = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a Shopify alternative built for Indian sellers, with no monthly subscription, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Shopify starts at ₹1,994 per month as of 2026 and needs paid apps for Indian couriers. Here is the honest comparison.
+              oBizee is a Shopify alternative built for Indian sellers, with no monthly subscription, no setup fee, a custom domain mapped for free, unlimited products and variants, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Shopify starts at ₹1,994 per month as of 2026 and needs paid apps for Indian couriers. Here is the honest comparison.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
+              <div className="flex items-center gap-1.5">
+                <User className="w-4 h-4" />
+                <span>Raunak Kumar</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4" />
+                <span>Published 23 April 2026 · Updated 31 August 2026</span>
+              </div>
+            </div>
           </div>
         </section>
 

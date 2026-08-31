@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, X, Phone } from "lucide-react";
+import { ArrowRight, Check, X, Phone, Calendar, User } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
@@ -49,7 +49,9 @@ const CompareInstamojo = () => {
     { feature: "DTDC integration", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Built-in logistics", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Order management dashboard", obizee: "Full lifecycle", competitor: "Basic", winner: "obizee" },
-    { feature: "Inventory management", obizee: true, competitor: "Limited", winner: "obizee" },
+    { feature: "Inventory management", obizee: "Unlimited products & variants", competitor: "Limited", winner: "obizee" },
+    { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: false, winner: "obizee" },
+    { feature: "Setup / website-creation fee", obizee: "₹0", competitor: "₹0", winner: "tie" },
     { feature: "Custom order form builder", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Digital product support", obizee: false, competitor: true, winner: "competitor" },
     { feature: "Payment gateway (Razorpay etc)", obizee: "Integrated", competitor: "Built-in + mojoXpress", winner: "tie" },
@@ -90,6 +92,25 @@ const CompareInstamojo = () => {
     inLanguage: "en-IN",
   };
 
+  // Real git commit dates — never guess these. Update dateModified only when
+  // the content on this page actually changes.
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers (2026)",
+    description: "Detailed comparison of oBizee vs Instamojo for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees, no setup fee, a free mapped custom domain and unlimited products.",
+    datePublished: "2026-04-23",
+    dateModified: "2026-08-31",
+    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
+    publisher: {
+      "@type": "Organization",
+      name: "oBizee",
+      logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" },
+    },
+    mainEntityOfPage: "https://www.obizee.com/compare/obizee-vs-instamojo",
+    image: "https://www.obizee.com/Obizee.png",
+  };
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -114,6 +135,7 @@ const CompareInstamojo = () => {
         { name: "oBizee vs Instamojo", url: "https://www.obizee.com/compare/obizee-vs-instamojo" },
       ]} />
       <JsonLd data={jsonLd} />
+      <JsonLd data={articleJsonLd} />
         <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
@@ -131,8 +153,18 @@ const CompareInstamojo = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is an Instamojo alternative for sellers shipping physical products. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, inventory and raw-material tracking, vendor management and retention SMS, with no monthly subscription and a 1% platform fee capped at ₹10 per order. Instamojo began as a payment gateway and its storefront remains lighter on logistics and stock.
+              oBizee is an Instamojo alternative for sellers shipping physical products. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, no setup fee, a custom domain mapped for free, unlimited products and variants, inventory and raw-material tracking, vendor management and retention SMS, with no monthly subscription and a 1% platform fee capped at ₹10 per order. Instamojo began as a payment gateway and its storefront remains lighter on logistics and stock.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
+              <div className="flex items-center gap-1.5">
+                <User className="w-4 h-4" />
+                <span>Raunak Kumar</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4" />
+                <span>Published 23 April 2026 · Updated 31 August 2026</span>
+              </div>
+            </div>
           </div>
         </section>
 

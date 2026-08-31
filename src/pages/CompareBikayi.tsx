@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, X, Phone } from "lucide-react";
+import { ArrowRight, Check, X, Phone, Calendar, User } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
@@ -50,7 +50,9 @@ const CompareBikayi = () => {
     { feature: "DTDC integration", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Built-in logistics (AWB, pickup)", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Order management", obizee: true, competitor: true, winner: "tie" },
-    { feature: "Inventory management", obizee: true, competitor: true, winner: "tie" },
+    { feature: "Inventory management", obizee: "Unlimited products & variants", competitor: true, winner: "tie" },
+    { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: "Free domain tied to the yearly plan", winner: "obizee" },
+    { feature: "Setup / website-creation fee", obizee: "₹0", competitor: "₹0 on free tier", winner: "tie" },
     { feature: "Custom order form builder", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Multi-link order forms", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Fare calculator", obizee: true, competitor: false, winner: "obizee" },
@@ -91,6 +93,25 @@ const CompareBikayi = () => {
     inLanguage: "en-IN",
   };
 
+  // Real git commit dates — never guess these. Update dateModified only when
+  // the content on this page actually changes.
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "oBizee vs Bikayi — Best Bikayi Alternative in India (2026 Comparison)",
+    description: "Detailed comparison of oBizee vs Bikayi for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees, no setup fee, a free mapped custom domain and unlimited products.",
+    datePublished: "2026-04-23",
+    dateModified: "2026-08-31",
+    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
+    publisher: {
+      "@type": "Organization",
+      name: "oBizee",
+      logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" },
+    },
+    mainEntityOfPage: "https://www.obizee.com/compare/obizee-vs-bikayi",
+    image: "https://www.obizee.com/Obizee.png",
+  };
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -115,6 +136,7 @@ const CompareBikayi = () => {
         { name: "oBizee vs Bikayi", url: "https://www.obizee.com/compare/obizee-vs-bikayi" },
       ]} />
       <JsonLd data={jsonLd} />
+      <JsonLd data={articleJsonLd} />
         <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
@@ -132,8 +154,18 @@ const CompareBikayi = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a Bikayi alternative for Indian sellers with no monthly subscription, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery via Borzo and Shadowfax. Bikayi's paid plans run to ₹999 a month or more as of 2026 and it has no built-in courier integration. Here is the honest comparison.
+              oBizee is a Bikayi alternative for Indian sellers with no monthly subscription, no setup fee, a custom domain mapped for free, unlimited products and variants, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery via Borzo and Shadowfax. Bikayi's paid plans run to ₹999 a month or more as of 2026 and it has no built-in courier integration. Here is the honest comparison.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
+              <div className="flex items-center gap-1.5">
+                <User className="w-4 h-4" />
+                <span>Raunak Kumar</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4" />
+                <span>Published 23 April 2026 · Updated 31 August 2026</span>
+              </div>
+            </div>
           </div>
         </section>
 

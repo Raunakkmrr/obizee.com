@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, X, Phone } from "lucide-react";
+import { ArrowRight, Check, X, Phone, Calendar, User } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
@@ -51,7 +51,9 @@ const CompareWoocommerce = () => {
     { feature: "DTDC integration", obizee: true, competitor: "Via plugins", winner: "obizee" },
     { feature: "Built-in logistics", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Order management", obizee: true, competitor: true, winner: "tie" },
-    { feature: "Inventory management", obizee: true, competitor: true, winner: "tie" },
+    { feature: "Inventory management", obizee: "Unlimited products & variants", competitor: true, winner: "tie" },
+    { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: "You configure DNS yourself", winner: "obizee" },
+    { feature: "Setup / website-creation fee", obizee: "₹0", competitor: "₹0 (hosting still applies)", winner: "obizee" },
     { feature: "Custom order form builder", obizee: true, competitor: "Via plugins", winner: "obizee" },
     { feature: "Mobile app for sellers", obizee: true, competitor: "Limited", winner: "obizee" },
     { feature: "Security & updates", obizee: "Managed", competitor: "Self-managed", winner: "obizee" },
@@ -92,6 +94,25 @@ const CompareWoocommerce = () => {
     inLanguage: "en-IN",
   };
 
+  // Real git commit dates — never guess these. Update dateModified only when
+  // the content on this page actually changes.
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "oBizee vs WooCommerce — Easiest WooCommerce Alternative for India (2026)",
+    description: "Detailed comparison of oBizee vs WooCommerce for Indian sellers. oBizee: 2-minute setup, zero technical knowledge, built-in shipping, no setup fee, a free mapped custom domain and unlimited products.",
+    datePublished: "2026-04-23",
+    dateModified: "2026-08-31",
+    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
+    publisher: {
+      "@type": "Organization",
+      name: "oBizee",
+      logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" },
+    },
+    mainEntityOfPage: "https://www.obizee.com/compare/obizee-vs-woocommerce",
+    image: "https://www.obizee.com/Obizee.png",
+  };
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -116,6 +137,7 @@ const CompareWoocommerce = () => {
         { name: "oBizee vs WooCommerce", url: "https://www.obizee.com/compare/obizee-vs-woocommerce" },
       ]} />
       <JsonLd data={jsonLd} />
+      <JsonLd data={articleJsonLd} />
         <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
@@ -133,8 +155,18 @@ const CompareWoocommerce = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a WooCommerce alternative for Indian sellers who do not want to run a website. There is no hosting, no plugin stack and no maintenance: Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm from 1%, inventory and vendor management are already included, for a 1% platform fee capped at ₹10 per order. WooCommerce is free software but needs hosting, plugins and technical upkeep.
+              oBizee is a WooCommerce alternative for Indian sellers who do not want to run a website. There is no hosting, no plugin stack, no setup fee and no maintenance: Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm from 1%, a custom domain mapped for free, unlimited products and variants, inventory and vendor management are already included, for a 1% platform fee capped at ₹10 per order. WooCommerce is free software but needs hosting, plugins and technical upkeep.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
+              <div className="flex items-center gap-1.5">
+                <User className="w-4 h-4" />
+                <span>Raunak Kumar</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4" />
+                <span>Published 23 April 2026 · Updated 31 August 2026</span>
+              </div>
+            </div>
           </div>
         </section>
 

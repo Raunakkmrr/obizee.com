@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs DM2buy — Best D2C Platform for Indian Sellers [2026 Comparison]",
   description:
-    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs DM2buy for Indian sellers. oBizee offers Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, WhatsApp + Instagram selling, transparent pricing (1% max ₹10). DM2buy is Instagram-only with no logistics.",
+    "0 subscription charges, 0 setup fee, a free mapped custom domain and unlimited products — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs DM2buy for Indian sellers. oBizee offers Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, WhatsApp + Instagram selling, transparent pricing (1% max ₹10). DM2buy is Instagram-only with no logistics.",
   keywords:
     "oBizee vs DM2buy, DM2buy alternative, best D2C platform India, DM2buy review, Instagram selling platform India, dm2buy shipping",
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title:
       "oBizee vs DM2buy — Which D2C Platform Wins for Indian Sellers?",
     description:
-      "Feature-by-feature comparison: logistics, multi-channel, pricing, and more. See why oBizee wins on 14 of 19 features.",
+      "Feature-by-feature comparison: logistics, multi-channel, pricing, and more. See why oBizee wins on 21 of 27 features.",
     type: "article",
     url: "https://www.obizee.com/compare/obizee-vs-dm2buy",
     images: [{ url: "/Obizee.png" }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title:
       "oBizee vs DM2buy — Best D2C Platform for Indian Sellers [2026]",
     description:
-      "Logistics, multi-channel, transparent pricing — oBizee wins on 14 of 19 features vs DM2buy.",
+      "Logistics, multi-channel, transparent pricing — oBizee wins on 21 of 27 features vs DM2buy.",
     images: ["/Obizee.png"],
   },
 };
@@ -36,7 +36,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs DM2buy \u2014 Which D2C Platform is Better for Indian Sellers?",
-    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 14 of 19 features with built-in Delhivery, DTDC, Blue Dart & hyperlocal logistics.",
+    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 21 of 27 features with built-in Delhivery, DTDC, Blue Dart & hyperlocal logistics.",
     url: "https://www.obizee.com/compare/obizee-vs-dm2buy",
     inLanguage: "en-IN",
   };
@@ -49,7 +49,7 @@ export default function Page() {
       { "@type": "Question", name: "Does DM2buy have shipping integration?", acceptedAnswer: { "@type": "Answer", text: "No. DM2buy does not have built-in logistics or shipping integration. Merchants need to handle shipping separately. oBizee has native integration with Delhivery, DTDC and Blue Dart \u2014 you can generate AWB numbers, schedule courier pickups, and provide live tracking to customers directly from the app." } },
       { "@type": "Question", name: "Is DM2buy free to use?", acceptedAnswer: { "@type": "Answer", text: "DM2buy offers a free tier for basic features, but their pricing for advanced features is not publicly documented. oBizee has fully transparent pricing: no monthly fees, just 1% per order capped at \u20B910 maximum. You always know exactly what you\u2019ll pay." } },
       { "@type": "Question", name: "Can I sell on WhatsApp with DM2buy?", acceptedAnswer: { "@type": "Answer", text: "No, DM2buy is Instagram-only. oBizee supports selling through Instagram, WhatsApp, and your own auto-generated website \u2014 all managed from a single dashboard. This multi-channel approach means you can reach more customers without managing multiple tools." } },
-      { "@type": "Question", name: "Which is better for Indian small businesses \u2014 oBizee or DM2buy?", acceptedAnswer: { "@type": "Answer", text: "oBizee is the more complete solution for Indian small businesses. It offers everything DM2buy does (online storefront, product listings, order management) plus logistics integration, multi-channel selling, custom order forms, fare calculator, and transparent pricing. oBizee wins on 13 out of 19 features in a direct comparison." } },
+      { "@type": "Question", name: "Which is better for Indian small businesses \u2014 oBizee or DM2buy?", acceptedAnswer: { "@type": "Answer", text: "oBizee is the more complete solution for Indian small businesses. It offers everything DM2buy does (online storefront, product listings, order management) plus logistics integration, multi-channel selling, custom order forms, fare calculator, and transparent pricing. oBizee wins on 21 out of 27 features in a direct comparison, including unlimited products, a free mapped custom domain, and 0 setup fee." } },
     ],
   };
 

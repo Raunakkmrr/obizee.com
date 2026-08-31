@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, X, Phone } from "lucide-react";
+import { ArrowRight, Check, X, Phone, Calendar, User } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
@@ -53,13 +53,15 @@ const CompareDM2buy = () => {
     { feature: "Live order tracking for customers", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Custom order form builder", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Multi-link order forms", obizee: true, competitor: false, winner: "obizee" },
-    { feature: "Inventory management", obizee: "Full-featured", competitor: "Basic", winner: "obizee" },
+    { feature: "Inventory management", obizee: "Unlimited products & variants, full-featured", competitor: "Basic", winner: "obizee" },
     { feature: "Order dashboard", obizee: "Full lifecycle tracking", competitor: "Basic", winner: "obizee" },
     { feature: "Fare calculator", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Employee & vendor management", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Seller collaboration network", obizee: false, competitor: true, winner: "competitor" },
     { feature: "IRL pop-up events", obizee: false, competitor: true, winner: "competitor" },
     { feature: "Payment processing", obizee: "Razorpay + Paytm built in, from 1% per transaction", competitor: "Available", winner: "obizee" },
+    { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: false, winner: "obizee" },
+    { feature: "Website setup / creation cost", obizee: "₹0 — free to build and publish", competitor: "₹0", winner: "tie" },
   ];
 
   const faqs = [
@@ -89,9 +91,28 @@ const CompareDM2buy = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs DM2buy — Which D2C Platform is Better for Indian Sellers?",
-    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 14 of 19 features with built-in Delhivery, DTDC, Blue Dart & hyperlocal logistics.",
+    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 21 of 27 features with built-in Delhivery, DTDC, Blue Dart & hyperlocal logistics, unlimited products, and a free mapped custom domain.",
     url: "https://www.obizee.com/compare/obizee-vs-dm2buy",
     inLanguage: "en-IN",
+  };
+
+  // Real git commit dates — never guess these. Update dateModified only when
+  // the content on this page actually changes.
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "oBizee vs DM2buy — Which D2C Platform is Better for Indian Sellers?",
+    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 21 of 27 features.",
+    datePublished: "2026-04-23",
+    dateModified: "2026-08-31",
+    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
+    publisher: {
+      "@type": "Organization",
+      name: "oBizee",
+      logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" },
+    },
+    mainEntityOfPage: "https://www.obizee.com/compare/obizee-vs-dm2buy",
+    image: "https://www.obizee.com/Obizee.png",
   };
 
   const faqJsonLd = {
@@ -118,6 +139,7 @@ const CompareDM2buy = () => {
         { name: "oBizee vs DM2buy", url: "https://www.obizee.com/compare/obizee-vs-dm2buy" },
       ]} />
       <JsonLd data={jsonLd} />
+      <JsonLd data={articleJsonLd} />
         <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <JsonLd data={faqJsonLd} />
 
@@ -134,8 +156,18 @@ const CompareDM2buy = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a DM2Buy alternative for Indian sellers who have outgrown a catalog link. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm from 1%, inventory and raw-material tracking, and retention SMS — for no monthly subscription and a 1% platform fee capped at ₹10 per order. DM2Buy is a catalog and order-link tool without built-in logistics.
+              oBizee is a DM2Buy alternative for Indian sellers who have outgrown a catalog link. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm from 1%, unlimited products and variants, a custom domain mapped for free, and inventory and raw-material tracking, and retention SMS — for no setup fee, no monthly subscription, and a 1% platform fee capped at ₹10 per order. DM2Buy is a catalog and order-link tool without built-in logistics.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
+              <div className="flex items-center gap-1.5">
+                <User className="w-4 h-4" />
+                <span>Raunak Kumar</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4" />
+                <span>Published 23 April 2026 · Updated 31 August 2026</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -176,7 +208,7 @@ const CompareDM2buy = () => {
               </div>
             </div>
             <p className="text-center text-gray-500 mt-4 text-sm">
-              oBizee wins on 13 features. DM2buy wins on 2 features (collaboration network & IRL events). 4 are tied.
+              oBizee wins on 21 features. DM2buy wins on 3 features (collaboration network, IRL events & free to start). 3 are tied.
             </p>
           </div>
         </section>
