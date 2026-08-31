@@ -73,7 +73,15 @@ const CompareShopify = () => {
     },
     {
       question: "Is oBizee cheaper than Shopify for Indian sellers?",
-      answer: "Yes, for small and mid-sized sellers. oBizee has no subscription and caps its platform fee at ₹10 per order, so 100 orders a month costs at most ₹1,000. Shopify's Basic plan is ₹1,994 per month before you add a shipping app, a marketing app, or the gateway. The gap widens further because oBizee's app stack is included rather than billed separately.",
+      answer: "Yes, for small and mid-sized sellers. oBizee has 0 SUBSCRIPTION and 0 SETUP FEE (see Pricing for the simple structure). Shopify's Basic plan is ₹1,994 per month before you add a shipping app, a marketing app, or the gateway — and Shopify Payments isn't available in India, so every store also pays Shopify's own transaction fee on top of the gateway's cut.",
+    },
+    {
+      question: "Why doesn't Shopify Payments work in India?",
+      answer: "It was never launched for Indian merchants. Every Indian Shopify store runs on a third-party gateway (Razorpay, PayU or Paytm) instead, which means paying Shopify's own transaction fee on top of whatever the gateway charges, on every order. oBizee has Razorpay and Paytm built in with no separate gateway account to open.",
+    },
+    {
+      question: "Does Shopify calculate GST correctly at checkout in India?",
+      answer: "Not reliably. Shopify's own community forum has an open, unresolved thread from merchants using Razorpay whose GST stopped being applied automatically at checkout after Shopify stopped sharing full order details with the gateway. oBizee's GST is a first-party feature — CGST/SGST/IGST are worked out automatically from the product's HSN rate and the buyer's state, not routed through a payment integration that can break.",
     },
     {
       question: "Does oBizee support same-day delivery?",
@@ -82,6 +90,10 @@ const CompareShopify = () => {
     {
       question: "Which courier partners does oBizee support?",
       answer: "Delhivery is integrated directly, and DTDC, Blue Dart, India Post and other national couriers are available through the built-in aggregator. You can compare live rates and pick the cheapest courier per order, then generate the AWB and schedule pickup without leaving the app.",
+    },
+    {
+      question: "Can I show a real shipping rate before checkout on Shopify in India?",
+      answer: "Not natively. Shopify's real-time, carrier-calculated shipping rates aren't available for Indian addresses, so stores are stuck choosing between a flat rate or a paid app. oBizee shows live rate comparison across Delhivery, DTDC, Blue Dart and India Post per order, before you commit to a courier.",
     },
     {
       question: "What payment gateways does oBizee support?",

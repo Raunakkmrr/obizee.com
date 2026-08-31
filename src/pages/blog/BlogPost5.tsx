@@ -49,10 +49,10 @@ const BlogPost5 = () => {
   return (
     <BlogPostLayout
       title="Shopify India Pricing: Is It Worth It for Small Businesses?"
-      description="A detailed breakdown of Shopify's real cost for Indian sellers — monthly plans, transaction fees, app costs, and how it compares to affordable alternatives like oBizee."
+      description="Shopify's real cost for Indian sellers, plus the India-specific problems its own community forum is full of — GST not calculating at checkout, broken Cash on Delivery, no live shipping rates — and how oBizee handles each."
       date="2026-04-24"
-      updatedDate="2026-08-20"
-      readTime="7 min read"
+      updatedDate="2026-08-31"
+      readTime="9 min read"
       author="Raunak Kumar"
       slug="shopify-india-pricing-review"
     >
@@ -173,7 +173,8 @@ const BlogPost5 = () => {
 
       <div className="not-prose my-6 space-y-3">
         {[
-          { title: "No built-in shipping for India", desc: "You need a separate app (Shiprocket, Delhivery plugin) — adding cost and complexity." },
+          { title: "Shopify Payments doesn't exist for India", desc: "The native processing that would waive Shopify's own transaction fee was never launched here — every Indian store runs on a third-party gateway instead." },
+          { title: "No built-in, calculated shipping for India", desc: "You need a separate app (Shiprocket, Delhivery plugin) just to show a real courier rate before checkout — adding cost and complexity." },
           { title: "Pricing in USD mindset", desc: "Many apps, themes, and integrations are priced in dollars. A $20/month app is ₹1,700+." },
           { title: "Overkill for small catalogs", desc: "If you sell 10-50 products via Instagram and WhatsApp, Shopify's feature set is far more than you need." },
           { title: "Monthly commitment regardless of sales", desc: "Even if you have zero sales in a month, you still pay the full subscription plus app fees." },
@@ -188,6 +189,71 @@ const BlogPost5 = () => {
         ))}
       </div>
 
+      <h2>What Shopify Sellers in India Are Actually Running Into</h2>
+      <p>
+        The gap between Shopify's pricing page and the real experience isn't only about money. Read
+        through Shopify's own community forum and a pattern shows up fast — the same India-specific
+        problems, asked over and over by different merchants.
+      </p>
+
+      <div className="not-prose my-6 space-y-4">
+        {[
+          {
+            q: "Why doesn't Shopify Payments work in India?",
+            a: "It was never launched for Indian merchants. Every Indian store runs on a third-party gateway (Razorpay, PayU or Paytm) instead — which means paying Shopify's own transaction fee (0.6-2% depending on plan) on top of whatever the gateway charges, on every order. This one gap is the root cause of most of what follows.",
+          },
+          {
+            q: "Why did GST stop calculating at checkout?",
+            a: "A live, unresolved thread on Shopify's community forum: merchants using Razorpay report GST no longer being applied automatically, after Shopify stopped sharing full order and customer details with the gateway. The community's own workaround is manual — reconfigure taxes and pull GST data separately after the fact. No official fix has landed as of the latest activity on that thread.",
+          },
+          {
+            q: "Why does Cash on Delivery redirect my customer to pay upfront?",
+            a: "Shopify's own recommended app for this, Advanced Cash on Delivery, has been discontinued. What's left on the community forum is merchant after merchant trying to get COD working the way they expect — several report the COD option redirecting straight to a Razorpay payment screen instead of letting the customer pay on delivery, with no built-in setting to fix it.",
+          },
+          {
+            q: "Why can't I show a real shipping rate before checkout?",
+            a: "Shopify's real-time, carrier-calculated shipping rates aren't available for Indian addresses. Every Indian store is stuck choosing between a flat rate — usually wrong for a chunk of orders — or a paid app just to show what a Delhivery or Blue Dart shipment actually costs.",
+          },
+          {
+            q: "Why doesn't my refund show up correctly?",
+            a: "Refunds processed through Razorpay don't sync back into Shopify's own order and analytics records, so the two ledgers drift apart. Merchants end up reconciling manually to figure out what was actually refunded.",
+          },
+        ].map((item) => (
+          <div key={item.q} className="bg-white rounded-xl p-5 border border-gray-200">
+            <div className="text-sm font-bold text-gray-900 mb-1.5">{item.q}</div>
+            <div className="text-sm text-gray-600 leading-relaxed">{item.a}</div>
+          </div>
+        ))}
+      </div>
+
+      <Callout type="warning">
+        None of this shows up on Shopify's pricing page. It shows up three weeks in, when GST stops
+        calculating or a customer says their "Cash on Delivery" order just charged their card.
+      </Callout>
+
+      <h3>How oBizee handles the same list</h3>
+      <ul>
+        <li>
+          Razorpay and Paytm are built in — 0 setup, no separate gateway approval to wait on. oBizee's
+          own platform fee is capped at ₹10 regardless of order size (see <Link href="/pricing">Pricing</Link>),
+          not a percentage that grows with revenue the way Shopify's does.
+        </li>
+        <li>
+          GST is a first-party feature, not something bolted on through a payment-gateway integration
+          that can silently break. Merchants generate GST-compliant bills per order — CGST/SGST/IGST
+          worked out automatically from the product's HSN rate and the buyer's state.
+        </li>
+        <li>
+          Live rate comparison across Delhivery, DTDC, Blue Dart and India Post, per order, before you
+          commit to a courier — the exact gap Shopify has no answer for in India.
+        </li>
+        <li>
+          An order doesn't require the customer to pay online before it's confirmed — the merchant
+          collects payment the way that works for them, and refunds are tracked automatically inside
+          oBizee's own order and wallet records rather than two ledgers that drift apart.
+        </li>
+      </ul>
+
       <h2>Shopify vs oBizee: Side-by-Side</h2>
 
       <div className="not-prose my-6 overflow-x-auto">
@@ -201,12 +267,13 @@ const BlogPost5 = () => {
           </thead>
           <tbody>
             {[
-              ["Monthly fee", "₹2,000+", "₹0"],
-              ["Per-order fee", "2%", "1% (max ₹10)"],
-              ["Shipping integration", "Paid apps needed", "Delhivery + DTDC built-in"],
+              ["Monthly fee", "₹2,000+", "0 SUBSCRIPTION"],
+              ["Setup fee", "Theme + app setup costs", "0 SETUP FEE"],
+              ["Shipping integration", "Paid apps needed, no calculated rates in India", "Delhivery + DTDC + Blue Dart built-in, live rates"],
+              ["Custom domain mapping", "Domain bought and connected separately", "FREE — DNS & SSL handled for you"],
               ["Free trial", "3 days", "3 months"],
               ["Mobile app management", "Yes", "Yes (mobile-first)"],
-              ["Payment gateway", "Shopify Payments / 3rd party", "Razorpay + Paytm built in, from 1%"],
+              ["Payment gateway", "Shopify Payments not available in India — 3rd party only", "Razorpay + Paytm built in"],
               ["Best for", "Large/international businesses", "Small-medium Indian sellers"],
               ["App ecosystem", "Thousands of apps", "Core features built-in"],
             ].map(([feature, shopify, obizee]) => (

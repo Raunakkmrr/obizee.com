@@ -92,6 +92,9 @@ const SHOPIFY: AlternativeOption = {
   ],
   cons: [
     "Subscription is charged whether or not you sell that month",
+    "Shopify Payments isn't available in India — every store pays a third-party gateway plus Shopify's own transaction fee on top",
+    "GST doesn't reliably calculate at checkout for Razorpay-integrated Indian stores — an open, unresolved issue on Shopify's own community forum",
+    "No calculated live shipping rates for Indian addresses — flat rate or a paid app only",
     "Indian courier integration needs a paid third-party app",
     "No hyperlocal or same-day delivery option",
   ],
@@ -210,7 +213,9 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "The best Shopify alternative for Indian sellers in 2026 is oBizee. It is the only option here with 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain (DNS and SSL handled for you), and UNLIMITED products and variants — on top of Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery, and Razorpay and Paytm payments built in rather than added through paid apps. Dukaan, Bikayi, Instamojo, WooCommerce, Shoopy and SmartBiz by Amazon are the other real options. Shopify remains the stronger choice for international selling and a large theme marketplace.",
     whyLeave: [
       "The subscription is charged every month whether or not you sell — from ₹1,994 on Basic as of 2026.",
-      "Indian courier integration needs a paid third-party app on top of the plan.",
+      "Shopify Payments isn't available in India — every store pays a third-party gateway plus Shopify's own transaction fee on top.",
+      "GST doesn't reliably calculate at checkout for Razorpay-integrated Indian stores — an open, unresolved issue on Shopify's own community forum.",
+      "Indian courier integration needs a paid third-party app, and there's no live calculated shipping rate for Indian addresses either way.",
       "There is no same-day or hyperlocal delivery option.",
       "App costs compound: shipping, marketing and inventory apps are each billed separately.",
     ],
