@@ -94,8 +94,8 @@ const BlogPost4 = () => {
         rank={1}
         name="oBizee"
         monthlyCost="₹0"
-        perOrderFee="1% (max ₹10)"
-        strength="No subscription at all. Built-in Delhivery, DTDC and Blue Dart shipping. 3-month free trial. Best value for small Indian sellers."
+        perOrderFee="See Pricing"
+        strength="0 SUBSCRIPTION, 0 SETUP FEE, FREE mapped custom domain. Built-in Delhivery, DTDC and Blue Dart shipping. 3-month free trial. Best value for small Indian sellers."
         weakness="Newer platform with a smaller app ecosystem compared to Shopify."
         highlight
       />
@@ -196,7 +196,7 @@ const BlogPost4 = () => {
             </tr>
           </thead>
           <tbody>
-            <SummaryRow name="oBizee" monthly="₹0" perOrder="1% (max ₹10)" shipping="Built-in" best="Small Indian sellers" highlight />
+            <SummaryRow name="oBizee" monthly="₹0" perOrder="See Pricing" shipping="Built-in" best="Small Indian sellers" highlight />
             <SummaryRow name="Dukaan" monthly="₹417+" perOrder="Varies" shipping="None" best="WhatsApp sellers" />
             <SummaryRow name="Bikayi" monthly="₹333+" perOrder="None" shipping="None" best="Basic WhatsApp stores" />
             <SummaryRow name="DM2buy" monthly="Free" perOrder="Commission" shipping="None" best="Instagram sellers" />
@@ -229,10 +229,11 @@ const BlogPost4 = () => {
 
       <h2>Why oBizee Ranks First</h2>
       <p>
-        oBizee is the only platform on this list that charges <strong>zero monthly subscription</strong> and
-        includes shipping integration out of the box. The 1% per-order fee capped at ₹10 means your
-        costs stay predictable as you scale. A seller doing 100 orders per month at ₹800 average
-        would pay roughly ₹800-1,000 total — compared to ₹2,500+ on most alternatives.
+        oBizee is the only platform on this list with <strong>0 SUBSCRIPTION</strong> and <strong>0 SETUP FEE</strong>,
+        and it includes shipping integration out of the box. The per-order structure (see{" "}
+        <Link href="/pricing">Pricing</Link>) stays predictable as you scale — a seller doing 100
+        orders a month typically pays a fraction of what most alternatives charge upfront every month
+        regardless of sales.
       </p>
 
       <div className="not-prose my-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border-2 border-green-200">

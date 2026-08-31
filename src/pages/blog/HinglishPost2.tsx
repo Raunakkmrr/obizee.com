@@ -101,9 +101,8 @@ const HinglishPost2 = () => {
         koi order nahi aata.
       </p>
       <p>
-        Jab order aata hai, tab sirf <strong>1% per order</strong> charge lagta hai — aur woh bhi
-        <strong> maximum ₹10</strong>. Matlab agar aap ₹1,000 ka order lete hain toh ₹10 charge.
-        ₹5,000 ka order lete hain toh bhi ₹10. ₹10,000 ka order? Phir bhi sirf ₹10.
+        Order aane ke baad ka simple, transparent structure <Link href="/pricing">Pricing page</Link> pe
+        dekh sakte hain — koi surprise nahi.
       </p>
       <p>
         Aur pehle <strong>3 mahine toh bilkul free</strong> hain — koi charge nahi, koi limit nahi.
@@ -120,7 +119,7 @@ const HinglishPost2 = () => {
           platform="oBizee"
           monthlyFee="₹0"
           yearlyTotal="₹0 fixed cost"
-          perOrderFee="1% (max ₹10)"
+          perOrderFee="See Pricing"
           highlight={true}
         />
         <PricingCompareCard

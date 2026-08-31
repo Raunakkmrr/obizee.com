@@ -236,7 +236,7 @@ const BlogPost8 = () => {
       <div className="not-prose my-6 space-y-4">
         {[
           { q: "My customers prefer WhatsApp — they won't use a store link.", a: "Most sellers who switch report the opposite. Customers actually prefer browsing a proper catalog over scrolling through chat photos. The ones who want to chat can still reach you on WhatsApp." },
-          { q: "I don't want to pay for a store when WhatsApp is free.", a: "oBizee has no subscription. You pay 1% per order (max ₹10) only on successful orders. If you make no sales, you pay nothing. The time you save on manual order management is worth far more." },
+          { q: "I don't want to pay for a store when WhatsApp is free.", a: "oBizee has 0 SUBSCRIPTION and 0 SETUP FEE. If you make no sales, you pay nothing — see Pricing for the simple structure once you do. The time you save on manual order management is worth far more." },
           { q: "Setting up a store sounds complicated.", a: "On oBizee, you can set up your store in under 5 minutes from your phone. No coding, no design skills. If you can use WhatsApp, you can use oBizee." },
           { q: "I only have a few products — do I really need a store?", a: "Even with 5 products, a store link eliminates the back-and-forth of 'what do you have?' messages. Every minute saved on order management is a minute spent growing your business." },
         ].map((item) => (

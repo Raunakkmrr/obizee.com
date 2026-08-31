@@ -146,9 +146,9 @@ const BlogPost6 = () => {
 
       <h2>Cost Comparison: Dukaan vs oBizee at Different Volumes</h2>
       <p>
-        Let us compare real costs for a seller at different order volumes. oBizee charges 1% per
-        order capped at ₹10, with no subscription. Dukaan charges a yearly subscription plus
-        per-order fees.
+        Let us compare real costs for a seller at different order volumes. oBizee has 0 SUBSCRIPTION
+        and 0 SETUP FEE (see <Link href="/pricing">Pricing</Link> for the structure). Dukaan charges a
+        yearly subscription plus per-order fees.
       </p>
 
       <div className="not-prose my-6 overflow-x-auto">
@@ -232,12 +232,12 @@ const BlogPost6 = () => {
           </thead>
           <tbody>
             <ComparisonRow feature="Monthly subscription" dukaan="₹417+ (annual billing)" obizee="₹0" winner="obizee" />
-            <ComparisonRow feature="Per-order fee" dukaan="Varies by plan" obizee="1% (max ₹10)" winner="obizee" />
+            <ComparisonRow feature="Setup / website-creation fee" dukaan="₹0 on free plan" obizee="₹0" winner="tie" />
             <ComparisonRow feature="Free trial" dukaan="Limited free plan" obizee="3 months full access" winner="obizee" />
             <ComparisonRow feature="WhatsApp selling" dukaan="Excellent" obizee="Share store/order links" winner="dukaan" />
             <ComparisonRow feature="Marketing tools" dukaan="Discount codes, CRM" obizee="Basic (growing)" winner="dukaan" />
             <ComparisonRow feature="Shipping integration" dukaan="Not built-in" obizee="Delhivery + DTDC" winner="obizee" />
-            <ComparisonRow feature="Payment processing" dukaan="Razorpay + others" obizee="Razorpay + Paytm, from 1% per transaction" winner="obizee" />
+            <ComparisonRow feature="Payment processing" dukaan="Razorpay + others" obizee="Razorpay + Paytm built in" winner="obizee" />
             <ComparisonRow feature="Mobile-first" dukaan="Yes" obizee="Yes" winner="tie" />
           </tbody>
         </table>

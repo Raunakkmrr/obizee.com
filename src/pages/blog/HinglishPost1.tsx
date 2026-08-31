@@ -38,7 +38,7 @@ const PricingHighlight = () => (
       {[
         { label: "Monthly Fees", value: "₹0 — Bilkul Nahi" },
         { label: "Setup Fees", value: "₹0 — Kuch Nahi Lagta" },
-        { label: "Per Order Charge", value: "Sirf 1% (Maximum ₹10)" },
+        { label: "Per Order Charge", value: "Pricing page dekhein" },
         { label: "Free Trial", value: "3 Mahine Bilkul Free" },
       ].map((item) => (
         <div key={item.label} className="flex items-center justify-between bg-white rounded-xl p-3 border border-green-100">
@@ -171,9 +171,8 @@ const HinglishPost1 = () => {
 
       <p>
         Agar aap compare karein toh — Shopify pe minimum <strong>₹2,000/month</strong> lagta hai.
-        Dukaan app pe <strong>₹4,999/saal</strong>. Lekin oBizee pe aapko <strong>koi monthly fees nahi</strong> deni.
-        Sirf jab order aaye tab 1% charge lagta hai, aur woh bhi maximum ₹10 hai. Matlab agar aap
-        ₹5,000 ka order lete hain, toh bhi charge sirf ₹10 hoga. Aur pehle 3 mahine toh bilkul free hain!
+        Dukaan app pe <strong>₹4,999/saal</strong>. Lekin oBizee pe <strong>0 SUBSCRIPTION, 0 SETUP FEE</strong> hai.
+        Pehle 3 mahine toh bilkul free hain — uske baad ka simple structure <Link href="/pricing">Pricing page</Link> pe hai.
       </p>
 
       <h2>Kyun Aaj Hi Shuru Karein?</h2>

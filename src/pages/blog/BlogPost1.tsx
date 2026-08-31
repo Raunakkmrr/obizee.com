@@ -138,7 +138,7 @@ const BlogPost1 = () => {
           <h3 className="text-xl font-bold text-gray-900">What About Pricing?</h3>
         </div>
         <p className="text-gray-700 mb-4">
-          oBizee has <strong>no monthly subscription</strong>. You pay just <strong>1% per successful order, capped at ₹10</strong>. Even a ₹5,000 order costs only ₹10 in fees.
+          oBizee has <strong>0 SUBSCRIPTION</strong> and <strong>0 SETUP FEE</strong> — see <Link href="/pricing">Pricing</Link> for the simple structure once you're actually selling.
         </p>
         <div className="grid grid-cols-3 gap-3 mb-4">
           <div className="bg-white rounded-lg p-3 text-center border border-orange-100">

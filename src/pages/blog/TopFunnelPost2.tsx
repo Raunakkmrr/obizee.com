@@ -183,8 +183,8 @@ const TopFunnelPost2 = () => {
 
       <p>
         Whatever you choose from the 50 ideas above, you need a platform to sell on. oBizee lets you create your
-        online store for free — no monthly fees, no setup costs, and no technical skills needed. You only pay a
-        small 1% commission when you make a sale.
+        online store for free — 0 SUBSCRIPTION, 0 SETUP FEE, no technical skills needed, and a FREE mapped
+        custom domain.
       </p>
       <p>
         Set up your store in 5 minutes, add your products, and start sharing your link. It is that simple.

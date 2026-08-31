@@ -85,7 +85,7 @@ const HinglishPost4 = () => {
   return (
     <BlogPostLayout
       title="India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]"
-      description="India ka sabse sasta ecommerce platform kaun sa hai? oBizee — jahan koi monthly fees nahi, sirf 1% per order (maximum ₹10). Shopify, Dukaan se comparison."
+      description="India ka sabse sasta ecommerce platform kaun sa hai? oBizee — 0 SUBSCRIPTION, 0 SETUP FEE. Shopify, Dukaan se comparison."
       date="2026-04-24"
       updatedDate="2026-08-20"
       readTime="6 min read"
@@ -109,7 +109,7 @@ const HinglishPost4 = () => {
         <PlatformCard
           name="oBizee"
           monthlyFee="₹0"
-          perOrderFee="1% (max ₹10)"
+          perOrderFee="Pricing page dekhein"
           shippingIntegration={true}
           mobileApp={true}
           freeTrialDays="3 Mahine Free"
@@ -196,19 +196,19 @@ const HinglishPost4 = () => {
       <div className="not-prose my-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
         <PricingExample
           orderValue="₹500"
-          obizee="₹5 (1%)"
+          obizee="0 SUBSCRIPTION"
           shopify="₹2,000+ monthly + 2%"
           dukaan="₹416+ monthly + fees"
         />
         <PricingExample
           orderValue="₹2,000"
-          obizee="₹10 (max cap)"
+          obizee="0 SETUP FEE"
           shopify="₹2,000+ monthly + ₹40"
           dukaan="₹416+ monthly + fees"
         />
         <PricingExample
           orderValue="₹5,000"
-          obizee="₹10 (max cap)"
+          obizee="See Pricing page"
           shopify="₹2,000+ monthly + ₹100"
           dukaan="₹416+ monthly + fees"
         />
@@ -284,8 +284,8 @@ const HinglishPost4 = () => {
         Seedha jawab — <strong>oBizee</strong>. Yeh India ka sabse sasta ecommerce platform hai kyunki:
       </p>
       <ul>
-        <li><strong>Koi monthly fees nahi</strong> — aap tab tak ₹0 pay karte hain jab tak order nahi aata</li>
-        <li><strong>Per order charge sirf 1%</strong> — aur woh bhi maximum ₹10, chahe order ₹10,000 ka ho</li>
+        <li><strong>0 SUBSCRIPTION</strong> — aap tab tak ₹0 pay karte hain jab tak order nahi aata</li>
+        <li><strong>0 SETUP FEE</strong> — FREE mapped custom domain bhi milta hai</li>
         <li><strong>3 mahine free trial</strong> — pehle 3 mahine toh bilkul kuch nahi lagta</li>
         <li><strong>Koi hidden charges nahi</strong> — jo dikhta hai wahi lagta hai</li>
       </ul>
