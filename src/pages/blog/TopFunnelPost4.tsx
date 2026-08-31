@@ -31,9 +31,9 @@ const TopFunnelPost4 = () => {
     <BlogPostLayout
       title="GST for Online Sellers in India: Everything You Need to Know [2026]"
       description="Complete guide to GST for online sellers in India. Registration threshold, rates, filing, invoicing, and common questions answered for ecommerce businesses."
-      date="2026-04-23"
+      date="2026-04-24"
       readTime="8 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="gst-for-online-sellers-india"
     >
       <p>

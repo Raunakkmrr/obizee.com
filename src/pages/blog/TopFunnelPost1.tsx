@@ -43,9 +43,9 @@ const TopFunnelPost1 = () => {
     <BlogPostLayout
       title="How to Start an Online Business in India: Complete Guide [2026]"
       description="Everything you need to know about starting an online business in India in 2026. From choosing a product to setting up your store, shipping, payments, and growing your customer base."
-      date="2026-04-23"
+      date="2026-04-24"
       readTime="10 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="how-to-start-online-business-india-2026"
     >
       <p>

@@ -54,9 +54,9 @@ const HinglishPost2 = () => {
     <BlogPostLayout
       title="Bina Paisa Lagaye Online Business Kaise Shuru Kare [2026]"
       description="Bina koi paisa lagaye online business shuru karne ka tarika. oBizee ke saath bilkul free mein apna online store banayein. 3 mahine free trial, koi setup fees nahi."
-      date="2026-04-23"
+      date="2026-04-24"
       readTime="5 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="bina-paisa-online-business-kaise-shuru-kare"
     >
       <p>

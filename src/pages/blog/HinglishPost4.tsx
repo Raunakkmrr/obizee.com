@@ -86,9 +86,10 @@ const HinglishPost4 = () => {
     <BlogPostLayout
       title="India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]"
       description="India ka sabse sasta ecommerce platform kaun sa hai? oBizee — jahan koi monthly fees nahi, sirf 1% per order (maximum ₹10). Shopify, Dukaan se comparison."
-      date="2026-04-23"
+      date="2026-04-24"
+      updatedDate="2026-08-20"
       readTime="6 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="sabse-sasta-ecommerce-platform-india"
     >
       <p>

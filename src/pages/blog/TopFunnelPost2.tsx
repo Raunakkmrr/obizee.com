@@ -43,9 +43,9 @@ const TopFunnelPost2 = () => {
     <BlogPostLayout
       title="50 Profitable Online Business Ideas for India in 2026"
       description="50 proven online business ideas for India in 2026. From handmade products to food delivery, dropshipping to digital services. Find the right business for you."
-      date="2026-04-23"
+      date="2026-04-24"
       readTime="12 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="profitable-online-business-ideas-india-2026"
     >
       <p>

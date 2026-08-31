@@ -13,7 +13,10 @@ import JsonLd from "@/components/JsonLd";
 interface BlogPostLayoutProps {
   title: string;
   description: string;
+  /** Real git commit date this post first went live. Never guess — check `git log`. */
   date: string;
+  /** Real git commit date of the most recent substantive edit. Omit if the post hasn't been touched since it published — a bumped date with no real edit is the "fake freshness" pattern Google discounts. */
+  updatedDate?: string;
   readTime: string;
   author: string;
   slug: string;
@@ -25,6 +28,7 @@ export default function BlogPostLayout({
   title,
   description,
   date,
+  updatedDate,
   readTime,
   author,
   slug,
@@ -37,8 +41,8 @@ export default function BlogPostLayout({
     headline: title,
     description: description,
     datePublished: date,
-    dateModified: date,
-    author: { "@type": "Organization", name: "oBizee" },
+    dateModified: updatedDate ?? date,
+    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: {
       "@type": "Organization",
       name: "oBizee",
@@ -81,7 +85,10 @@ export default function BlogPostLayout({
               </div>
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
-                <span>{date}</span>
+                <span>
+                  Published {date}
+                  {updatedDate && updatedDate !== date && ` · Updated ${updatedDate}`}
+                </span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" />

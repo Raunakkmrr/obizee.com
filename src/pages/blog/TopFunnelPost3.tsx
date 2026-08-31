@@ -34,9 +34,10 @@ const TopFunnelPost3 = () => {
     <BlogPostLayout
       title="Ecommerce Shipping in India: Delhivery vs DTDC vs BlueDart [2026 Guide]"
       description="Complete guide to ecommerce shipping in India. Compare Delhivery, DTDC, and BlueDart on pricing, coverage, speed, and reliability. Plus how to integrate shipping into your online store."
-      date="2026-04-23"
+      date="2026-04-24"
+      updatedDate="2026-08-20"
       readTime="8 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="ecommerce-shipping-india-delhivery-dtdc-bluedart"
     >
       <p>

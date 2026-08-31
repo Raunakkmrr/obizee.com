@@ -50,9 +50,10 @@ const BlogPost5 = () => {
     <BlogPostLayout
       title="Shopify India Pricing: Is It Worth It for Small Businesses?"
       description="A detailed breakdown of Shopify's real cost for Indian sellers — monthly plans, transaction fees, app costs, and how it compares to affordable alternatives like oBizee."
-      date="2026-04-23"
+      date="2026-04-24"
+      updatedDate="2026-08-20"
       readTime="7 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="shopify-india-pricing-review"
     >
       <p>

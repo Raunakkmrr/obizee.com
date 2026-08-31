@@ -31,7 +31,7 @@ const BlogPost2 = () => {
       description="Understanding oBizee's pricing model: 1% per order capped at ₹10. How it compares to Shopify, Dukaan, and why it's the most affordable option for Indian sellers."
       date="2026-04-23"
       readTime="6 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="why-obizee-charges-only-1-percent"
     >
       <p>

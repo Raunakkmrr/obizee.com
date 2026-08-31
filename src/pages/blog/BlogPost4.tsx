@@ -67,9 +67,10 @@ const BlogPost4 = () => {
     <BlogPostLayout
       title="10 Cheapest Ecommerce Platforms in India [2026 Comparison]"
       description="A ranked comparison of the 10 most affordable ecommerce platforms for Indian sellers in 2026 — with real pricing, per-order fees, and honest pros and cons."
-      date="2026-04-23"
+      date="2026-04-24"
+      updatedDate="2026-08-20"
       readTime="8 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="cheapest-ecommerce-platforms-india-2026"
     >
       <p>

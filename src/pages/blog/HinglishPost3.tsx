@@ -69,9 +69,10 @@ const HinglishPost3 = () => {
     <BlogPostLayout
       title="Mobile Se Online Store Kaise Banaye — Sirf Phone Se [2026]"
       description="Sirf apne mobile phone se online store banayein. Koi laptop ya computer ki zaroorat nahi. oBizee app se 2 minute mein store ready. Step-by-step guide."
-      date="2026-04-23"
+      date="2026-04-24"
+      updatedDate="2026-08-20"
       readTime="5 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="mobile-se-online-store-kaise-banaye"
     >
       <p>

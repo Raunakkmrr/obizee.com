@@ -50,9 +50,10 @@ const BlogPost6 = () => {
     <BlogPostLayout
       title="Dukaan App Review 2026: Pros, Cons, and Better Alternatives"
       description="An honest review of Dukaan in 2026 — what it does well, where it falls short, pricing breakdown, and how it compares to alternatives like oBizee for Indian sellers."
-      date="2026-04-23"
+      date="2026-04-24"
+      updatedDate="2026-08-20"
       readTime="7 min read"
-      author="oBizee Team"
+      author="Raunak Kumar"
       slug="dukaan-app-review-2026"
     >
       <p>
