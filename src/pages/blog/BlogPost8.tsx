@@ -70,6 +70,7 @@ const BlogPost8 = () => {
       title="Online Store vs WhatsApp Business: Which Is Better for Selling?"
       description="Should you sell through WhatsApp Business alone or create an online store? A detailed comparison of both approaches — with the case for using both together."
       date="2026-04-24"
+      updatedDate="2026-08-31"
       readTime="8 min read"
       author="Raunak Kumar"
       slug="online-store-vs-whatsapp-business"

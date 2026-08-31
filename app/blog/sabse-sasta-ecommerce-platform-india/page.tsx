@@ -3,12 +3,12 @@ import HinglishPost4 from "@/pages/blog/HinglishPost4";
 
 export const metadata: Metadata = {
   title: "India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]",
-  description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee — jahan koi monthly fees nahi, sirf 1% per order (maximum ₹10). Shopify, Dukaan se comparison.",
+  description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee — 0 SUBSCRIPTION, 0 SETUP FEE. Shopify, Dukaan se comparison.",
   keywords: "sabse sasta ecommerce platform India, cheapest online store India Hindi, sasta online selling platform, kam paisa mein online store",
   alternates: { canonical: "https://www.obizee.com/blog/sabse-sasta-ecommerce-platform-india" },
   openGraph: {
     title: "India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]",
-    description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee — jahan koi monthly fees nahi, sirf 1% per order (maximum ₹10).",
+    description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee — 0 SUBSCRIPTION, 0 SETUP FEE.",
     type: "article",
     url: "https://www.obizee.com/blog/sabse-sasta-ecommerce-platform-india",
     images: [{ url: "/Obizee.png" }],
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]",
-    description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee — jahan koi monthly fees nahi, sirf 1% per order (maximum ₹10).",
+    description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee — 0 SUBSCRIPTION, 0 SETUP FEE.",
     images: ["/Obizee.png"],
   },
 };
@@ -26,9 +26,9 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]",
-    description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee \u2014 jahan koi monthly fees nahi, sirf 1% per order (maximum \u20B910). Shopify, Dukaan se comparison.",
+    description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee \u2014 0 SUBSCRIPTION, 0 SETUP FEE. Shopify, Dukaan se comparison.",
     datePublished: "2026-04-24",
-    dateModified: "2026-08-20",
+    dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
     mainEntityOfPage: "https://www.obizee.com/blog/sabse-sasta-ecommerce-platform-india",

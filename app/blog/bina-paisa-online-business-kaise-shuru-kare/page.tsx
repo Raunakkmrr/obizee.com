@@ -28,7 +28,7 @@ export default function Page() {
     headline: "Bina Paisa Lagaye Online Business Kaise Shuru Kare [2026]",
     description: "Bina koi paisa lagaye online business shuru karne ka tarika. oBizee ke saath bilkul free mein apna online store banayein. 3 mahine free trial, koi setup fees nahi.",
     datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
+    dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
     mainEntityOfPage: "https://www.obizee.com/blog/bina-paisa-online-business-kaise-shuru-kare",

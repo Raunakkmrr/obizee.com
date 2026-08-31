@@ -28,7 +28,7 @@ export default function Page() {
     headline: "50 Profitable Online Business Ideas for India in 2026",
     description: "50 proven online business ideas for India in 2026. From handmade products to food delivery, dropshipping to digital services. Find the right business for you.",
     datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
+    dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
     mainEntityOfPage: "https://www.obizee.com/blog/profitable-online-business-ideas-india-2026",

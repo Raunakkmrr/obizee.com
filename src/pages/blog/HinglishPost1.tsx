@@ -56,6 +56,7 @@ const HinglishPost1 = () => {
       title="Online Dukaan Kaise Khole — Poori Jankari [2026 Guide]"
       description="Online dukaan kholne ka sabse aasan tarika. oBizee app se 2 minute mein apna online store banayein. Koi coding nahi, koi monthly fees nahi. Poori step-by-step guide."
       date="2026-04-24"
+      updatedDate="2026-08-31"
       readTime="6 min read"
       author="Raunak Kumar"
       slug="online-dukaan-kaise-khole"

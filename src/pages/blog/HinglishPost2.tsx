@@ -55,6 +55,7 @@ const HinglishPost2 = () => {
       title="Bina Paisa Lagaye Online Business Kaise Shuru Kare [2026]"
       description="Bina koi paisa lagaye online business shuru karne ka tarika. oBizee ke saath bilkul free mein apna online store banayein. 3 mahine free trial, koi setup fees nahi."
       date="2026-04-24"
+      updatedDate="2026-08-31"
       readTime="5 min read"
       author="Raunak Kumar"
       slug="bina-paisa-online-business-kaise-shuru-kare"
@@ -143,8 +144,8 @@ const HinglishPost2 = () => {
         </div>
         <div className="text-sm text-amber-800 leading-relaxed">
           Shopify pe 1 saal ka kharcha <strong>₹24,000+</strong> hai chahe aapko ek bhi order na aaye.
-          oBizee pe agar aapko ek bhi order nahi aata toh aap <strong>₹0</strong> pay karte hain.
-          Aur agar 100 orders aate hain toh bhi maximum <strong>₹1,000</strong> (100 x ₹10). Fark samajh aaya?
+          oBizee pe agar aapko ek bhi order nahi aata toh aap <strong>₹0</strong> pay karte hain — order
+          aane ke baad ka structure <Link href="/pricing">Pricing page</Link> pe hai. Fark samajh aaya?
         </div>
       </div>
 

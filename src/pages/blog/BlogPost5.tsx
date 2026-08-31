@@ -126,14 +126,15 @@ const BlogPost5 = () => {
 
       <h2>Cost at Different Order Volumes</h2>
       <p>
-        Let us calculate the real cost for an Indian seller at different scales, comparing Shopify
-        Basic (with essential apps) to oBizee:
+        Let us calculate the real cost for an Indian seller at different scales on Shopify Basic
+        (with essential apps). oBizee has 0 SUBSCRIPTION and 0 SETUP FEE at every volume — see{" "}
+        <Link href="/pricing">Pricing</Link> for the simple structure once you're selling:
       </p>
 
       <div className="not-prose my-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <VolumeCard orders={30} avgOrder="₹800" shopifyCost="₹4,480+" obizeeCost="₹240" />
-        <VolumeCard orders={100} avgOrder="₹800" shopifyCost="₹5,600+" obizeeCost="₹800" />
-        <VolumeCard orders={300} avgOrder="₹1,200" shopifyCost="₹9,200+" obizeeCost="₹3,000" />
+        <VolumeCard orders={30} avgOrder="₹800" shopifyCost="₹4,480+" obizeeCost="0 SUBSCRIPTION" />
+        <VolumeCard orders={100} avgOrder="₹800" shopifyCost="₹5,600+" obizeeCost="0 SUBSCRIPTION" />
+        <VolumeCard orders={300} avgOrder="₹1,200" shopifyCost="₹9,200+" obizeeCost="0 SUBSCRIPTION" />
       </div>
 
       <div className="not-prose my-6 bg-green-50 rounded-xl p-5 border border-green-200">
@@ -235,8 +236,8 @@ const BlogPost5 = () => {
       <ul>
         <li>
           Razorpay and Paytm are built in — 0 setup, no separate gateway approval to wait on. oBizee's
-          own platform fee is capped at ₹10 regardless of order size (see <Link href="/pricing">Pricing</Link>),
-          not a percentage that grows with revenue the way Shopify's does.
+          own platform fee is capped, not a percentage that grows with revenue the way Shopify's does
+          (see <Link href="/pricing">Pricing</Link> for the structure).
         </li>
         <li>
           GST is a first-party feature, not something bolted on through a payment-gateway integration

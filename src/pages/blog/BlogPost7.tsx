@@ -53,7 +53,7 @@ const BlogPost7 = () => {
       title="DM2buy vs oBizee: Which Platform Should Indian Sellers Choose?"
       description="A detailed comparison of DM2buy and oBizee — features, pricing, shipping, multi-channel support, and which platform is better for Indian online sellers."
       date="2026-04-24"
-      updatedDate="2026-08-20"
+      updatedDate="2026-08-31"
       readTime="7 min read"
       author="Raunak Kumar"
       slug="dm2buy-vs-obizee-comparison"

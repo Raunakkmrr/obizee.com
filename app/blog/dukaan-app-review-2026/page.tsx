@@ -28,7 +28,7 @@ export default function Page() {
     headline: "Dukaan App Review 2026: Pros, Cons, and Better Alternatives",
     description: "An honest review of Dukaan in 2026 \u2014 what it does well, where it falls short, pricing breakdown, and how it compares to alternatives like oBizee for Indian sellers.",
     datePublished: "2026-04-24",
-    dateModified: "2026-08-20",
+    dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
     mainEntityOfPage: "https://www.obizee.com/blog/dukaan-app-review-2026",

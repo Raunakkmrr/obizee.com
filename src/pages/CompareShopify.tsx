@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -60,10 +61,10 @@ const CompareShopify = () => {
   ];
 
   const costComparison = [
-    { orders: "50 orders/month (avg ₹500)", obizee: "₹250", shopify: "₹2,000+ subscription + gateway fees" },
-    { orders: "100 orders/month (avg ₹500)", obizee: "₹500", shopify: "₹2,000+ subscription + gateway fees" },
-    { orders: "200 orders/month (avg ₹1,000)", obizee: "₹2,000 (all capped at ₹10)", shopify: "₹2,000+ subscription + ₹2,000+ fees" },
-    { orders: "500 orders/month (avg ₹2,000)", obizee: "₹5,000 (all capped at ₹10)", shopify: "₹2,000+ subscription + ₹5,000+ fees" },
+    { orders: "50 orders/month (avg ₹500)", obizee: "0 SUBSCRIPTION", shopify: "₹2,000+ subscription + gateway fees" },
+    { orders: "100 orders/month (avg ₹500)", obizee: "0 SUBSCRIPTION", shopify: "₹2,000+ subscription + gateway fees" },
+    { orders: "200 orders/month (avg ₹1,000)", obizee: "0 SUBSCRIPTION", shopify: "₹2,000+ subscription + ₹2,000+ fees" },
+    { orders: "500 orders/month (avg ₹2,000)", obizee: "0 SUBSCRIPTION", shopify: "₹2,000+ subscription + ₹5,000+ fees" },
   ];
 
   const faqs = [
@@ -243,7 +244,7 @@ const CompareShopify = () => {
         <section className="py-10 sm:py-14 bg-gray-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">Monthly Cost Comparison</h2>
-            <p className="text-gray-600 text-center mb-8">See how much you save with oBizee at different order volumes</p>
+            <p className="text-gray-600 text-center mb-8">oBizee stays at 0 subscription at every volume — see <Link href="/pricing">Pricing</Link> for the per-order structure</p>
             <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[600px] text-sm sm:text-base">

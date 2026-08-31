@@ -32,7 +32,7 @@ const BlogPost1 = () => {
       title="How to Create Your Online Store in 5 Minutes with oBizee"
       description="A complete guide to setting up your online store on oBizee. From download to first sale — no coding, no monthly fees, no technical knowledge needed."
       date="2026-04-23"
-      updatedDate="2026-08-20"
+      updatedDate="2026-08-31"
       readTime="5 min read"
       author="Raunak Kumar"
       slug="how-to-create-online-store-5-minutes"

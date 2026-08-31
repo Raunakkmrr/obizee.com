@@ -87,7 +87,7 @@ const HinglishPost4 = () => {
       title="India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]"
       description="India ka sabse sasta ecommerce platform kaun sa hai? oBizee — 0 SUBSCRIPTION, 0 SETUP FEE. Shopify, Dukaan se comparison."
       date="2026-04-24"
-      updatedDate="2026-08-20"
+      updatedDate="2026-08-31"
       readTime="6 min read"
       author="Raunak Kumar"
       slug="sabse-sasta-ecommerce-platform-india"
@@ -221,9 +221,9 @@ const HinglishPost4 = () => {
         </div>
         <div className="text-sm text-amber-800 leading-relaxed">
           Shopify pe agar aapko poore mahine mein <strong>ek bhi order nahi aata</strong>, tab bhi aap
-          <strong> ₹2,000+</strong> pay karenge. oBizee pe zero orders = <strong>₹0 charge</strong>.
-          Aur agar 50 orders aate hain ₹2,000 average value ke, toh oBizee pe total charge sirf
-          <strong> ₹500</strong> (50 x ₹10 max). Shopify pe <strong>₹2,000 + ₹2,000 = ₹4,000+</strong>.
+          <strong> ₹2,000+</strong> pay karenge. oBizee pe zero orders = <strong>₹0 charge</strong> —
+          order aane ke baad ka structure <Link href="/pricing">Pricing page</Link> pe hai. Shopify pe
+          50 orders (₹2,000 average) ka kharcha <strong>₹2,000 + ₹2,000 = ₹4,000+</strong>.
         </div>
       </div>
 
@@ -235,7 +235,7 @@ const HinglishPost4 = () => {
 
       <div className="not-prose my-6 space-y-3">
         {[
-          { platform: "oBizee", cost: "₹3,600/saal", detail: "360 orders x ₹10 max = ₹3,600. Koi monthly fee nahi.", highlight: true },
+          { platform: "oBizee", cost: "0 Subscription", detail: "Koi monthly fee nahi — Pricing page pe structure dekhein.", highlight: true },
           { platform: "Shopify Basic", cost: "₹24,000+/saal", detail: "₹2,000/month x 12 = ₹24,000 + per order charges.", highlight: false },
           { platform: "Dukaan", cost: "₹4,999+/saal", detail: "₹4,999 yearly plan + payment gateway charges alag.", highlight: false },
           { platform: "Bikayi", cost: "₹3,588+/saal", detail: "₹299/month x 12 = ₹3,588 + extra fees.", highlight: false },
@@ -251,9 +251,8 @@ const HinglishPost4 = () => {
       </div>
 
       <Callout type="tip">
-        Agar aapke kam orders aate hain toh oBizee aur bhi sasta hai. Jaise agar 10 orders/month
-        hain (₹1,000 average), toh oBizee pe saal ka kharcha sirf <strong>₹1,200</strong> (120 x ₹10).
-        Shopify pe phir bhi <strong>₹24,000</strong>. 20 guna fark hai!
+        Agar aapke kam orders aate hain toh oBizee aur bhi sasta hai — 0 Subscription har volume pe.
+        Shopify pe phir bhi <strong>₹24,000/saal</strong> chahe kitne bhi orders aayein.
       </Callout>
 
       <h2>Sirf Price Hi Nahi — Features Bhi Dekho</h2>

@@ -28,7 +28,7 @@ export default function Page() {
     headline: "Online Store vs WhatsApp Business: Which Is Better for Selling?",
     description: "Should you sell through WhatsApp Business alone or create an online store? A detailed comparison of both approaches \u2014 with the case for using both together.",
     datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
+    dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
     mainEntityOfPage: "https://www.obizee.com/blog/online-store-vs-whatsapp-business",

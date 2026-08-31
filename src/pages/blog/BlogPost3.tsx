@@ -63,7 +63,7 @@ const BlogPost3 = () => {
       title="oBizee Customer Success Stories: Real Merchants, Real Growth"
       description="How Indian Instagram sellers, crochet artists, and home businesses are scaling with oBizee's platform. Real stories from real merchants."
       date="2026-04-23"
-      updatedDate="2026-08-20"
+      updatedDate="2026-08-31"
       readTime="7 min read"
       author="Raunak Kumar"
       slug="obizee-customer-success-stories"
