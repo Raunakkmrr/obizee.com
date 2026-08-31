@@ -2,15 +2,15 @@
 
 **Written 2026-08-27 10:26 IST.**
 
-Six quotes are live on the homepage right now under real business names. **Every
-one of them was written by oBizee, not spoken by the seller.** The DRAFT badges
-that marked them were removed on request, so nothing on the page signals this.
+**RESOLVED 2026-08-31.** All six sellers approved their line as written. Dates
+are recorded per-entry in `src/data/sellerQuotes.ts` under `approvedOn`.
 
-Until a seller approves their line, it is a claim about what a real business
-said. Get each one to reply with a yes, then record the date in
-`src/data/sellerQuotes.ts` under `approvedOn`.
+The quotes were drafted by oBizee from how each seller uses the app, then sent
+to that seller for sign-off. They are now attributed with permission.
 
-If a seller declines or does not answer, tell me and I will pull their card.
+This file stays as the record of what was sent and when. Any NEW seller quote
+follows the same route: draft, send, approve, record — never live before the
+approval.
 
 ---
 
@@ -68,12 +68,12 @@ link your shop alongside it.
 
 | Seller | Sent | Approved | Recorded in code |
 |---|---|---|---|
-| CrochetByPriya | ☐ | ☐ | ☐ |
-| Shop velnora | ☐ | ☐ | ☐ |
-| Candle_of__midnight | ☐ | ☐ | ☐ |
-| Snazzy Store | ☐ | ☐ | ☐ |
-| Crazy Crochet | ☐ | ☐ | ☐ |
-| oh.trinkets | ☐ | ☐ | ☐ |
+| CrochetByPriya | ☑ | ☑ 2026-08-31 | ☑ |
+| Shop velnora | ☑ | ☑ 2026-08-31 | ☑ |
+| Candle_of__midnight | ☑ | ☑ 2026-08-31 | ☑ |
+| Snazzy Store | ☑ | ☑ 2026-08-31 | ☑ |
+| Crazy Crochet | ☑ | ☑ 2026-08-31 | ☑ |
+| oh.trinkets | ☑ | ☑ 2026-08-31 | ☑ |
 
 A real quote in the seller's own words beats a drafted one every time — if
 someone rewrites theirs, use their version.
