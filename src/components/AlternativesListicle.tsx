@@ -63,7 +63,7 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
     description: page.metaDescription,
     datePublished: page.datePublished,
     dateModified: page.dateModified,
-    author: { "@type": "Person", name: "Raunak Kumar", jobTitle: "Founder", url: "https://www.obizee.com/about" },
+    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: {
       "@type": "Organization",
       name: "oBizee",
@@ -103,7 +103,7 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mb-6">
               <div className="flex items-center gap-1.5">
                 <User className="w-4 h-4" />
-                <span>Raunak Kumar, Founder</span>
+                <span>Raunak Kumar</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
