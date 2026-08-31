@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs Shopify — Cheapest Shopify Alternative in India [2026]",
   description:
-    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs Shopify for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Shopify: ₹2,000+/month + extra for Indian logistics.",
+    "0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain and UNLIMITED products. Compare oBizee vs Shopify for Indian sellers. oBizee: ₹0/month, built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Shopify: ₹2,000+/month + extra for Indian logistics.",
   keywords:
     "oBizee vs Shopify, Shopify alternative India, cheapest Shopify alternative, Shopify too expensive India, best ecommerce platform India, Shopify India pricing",
   alternates: {
@@ -36,7 +36,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs Shopify \u2014 Cheapest Shopify Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Shopify for Indian sellers. oBizee charges 1% per order (max \u20B910) with no monthly fees. Shopify costs \u20B92,000+/month.",
+    description: "Detailed comparison of oBizee vs Shopify for Indian sellers. oBizee has 0 SUBSCRIPTION and 0 SETUP FEE. Shopify costs \u20B92,000+/month.",
     url: "https://www.obizee.com/compare/obizee-vs-shopify",
     inLanguage: "en-IN",
   };
@@ -45,11 +45,11 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Is oBizee really cheaper than Shopify for Indian sellers?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee has no monthly subscription \u2014 you pay only 1% per order, capped at \u20B910 max. A merchant doing 100 orders/month at \u20B9500 average pays just \u20B9500 total on oBizee vs \u20B92,000+ on Shopify before any transaction fees. For small Indian merchants, oBizee is dramatically more affordable." } },
+      { "@type": "Question", name: "Is oBizee really cheaper than Shopify for Indian sellers?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE and a FREE mapped custom domain \u2014 see Pricing for the simple per-order structure. Shopify charges \u20B92,000+/month before any transaction fees, whether or not you make a sale. For small Indian merchants, oBizee is dramatically more affordable." } },
       { "@type": "Question", name: "Does oBizee have shipping like Shopify?", acceptedAnswer: { "@type": "Answer", text: "oBizee has built-in native integration with Delhivery, DTDC and Blue Dart \u2014 India\u2019s top courier services. You can generate AWB numbers, schedule pickups, and provide live tracking directly from the app. Shopify requires third-party apps like Shiprocket for Indian logistics, adding complexity and cost." } },
       { "@type": "Question", name: "Can I migrate from Shopify to oBizee?", acceptedAnswer: { "@type": "Answer", text: "Yes. You can set up your oBizee store in under 2 minutes, add your products, and start taking orders immediately. Your customers won\u2019t notice any difference \u2014 they get a clean storefront and order tracking just like Shopify." } },
       { "@type": "Question", name: "Is Shopify better for larger businesses?", acceptedAnswer: { "@type": "Answer", text: "Shopify has more advanced features for larger, global businesses with complex needs. But for Indian small merchants, home businesses, Instagram sellers, and WhatsApp businesses, oBizee offers everything you need at a fraction of the cost \u2014 with logistics built in rather than requiring paid add-ons." } },
-      { "@type": "Question", name: "Which is the cheapest Shopify alternative in India?", acceptedAnswer: { "@type": "Answer", text: "oBizee is the cheapest Shopify alternative in India. With zero monthly fees and a maximum of \u20B910 per order in commission, it\u2019s designed specifically for Indian small merchants who find Shopify\u2019s \u20B92,000+/month pricing too expensive." } },
+      { "@type": "Question", name: "Which is the cheapest Shopify alternative in India?", acceptedAnswer: { "@type": "Answer", text: "oBizee is the cheapest Shopify alternative in India. With 0 SUBSCRIPTION, 0 SETUP FEE and a FREE mapped custom domain, it's designed specifically for Indian small merchants who find Shopify's \u20B92,000+/month pricing too expensive." } },
     ],
   };
 

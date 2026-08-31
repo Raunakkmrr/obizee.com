@@ -12,8 +12,7 @@ import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 const CompareShopify = () => {
   const features = [
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "From ₹1,994/month (Basic, as of 2026)", winner: "obizee" },
-    { feature: "Platform fee per order", obizee: "1%, capped at ₹10", competitor: "Up to 2% if not using Shopify Payments", winner: "obizee" },
-    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in, from 1%", competitor: "Third-party gateway, set up separately", winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in", competitor: "Third-party gateway, set up separately", winner: "obizee" },
     { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
     { feature: "Courier partners", obizee: "Delhivery, DTDC, Blue Dart, India Post +", competitor: "Via paid apps like Shiprocket", winner: "obizee" },
     { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
@@ -48,7 +47,7 @@ const CompareShopify = () => {
       stage: "First 100 orders",
       pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
       need: "Shipping and payments that do not need three more subscriptions",
-      obizee: "Delhivery, DTDC, Blue Dart and India Post with rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax. Razorpay and Paytm from 1%, no separate gateway account.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax. Razorpay and Paytm built in, no separate gateway account.",
       shopify: "Needs Shiprocket or similar for Indian couriers, a separate gateway, and has no hyperlocal delivery at all.",
     },
     {
@@ -70,7 +69,7 @@ const CompareShopify = () => {
   const faqs = [
     {
       question: "What is the best Shopify alternative in India?",
-      answer: "oBizee is the best Shopify alternative for Indian sellers who need shipping and payments built in rather than bolted on. It charges no monthly subscription, takes 1% per order capped at ₹10, and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery without any third-party app. Shopify starts at ₹1,994 per month as of 2026 and requires separate apps for Indian courier integration.",
+      answer: "oBizee is the best Shopify alternative for Indian sellers who need shipping and payments built in rather than bolted on. It has 0 SUBSCRIPTION, 0 SETUP FEE and a FREE mapped custom domain, and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery without any third-party app. Shopify starts at ₹1,994 per month as of 2026 and requires separate apps for Indian courier integration.",
     },
     {
       question: "Is oBizee cheaper than Shopify for Indian sellers?",
@@ -86,11 +85,11 @@ const CompareShopify = () => {
     },
     {
       question: "What payment gateways does oBizee support?",
-      answer: "Razorpay and Paytm are both built in. Gateway charges start at 1% per transaction on Paytm and 2% on Razorpay, charged by the gateway and separate from oBizee's platform fee. You do not need to open or configure a gateway account yourself.",
+      answer: "Razorpay and Paytm are both built in — you do not need to open or configure a gateway account yourself. Gateway charges are billed by Razorpay or Paytm directly; see Pricing for oBizee's own platform structure.",
     },
     {
       question: "Can I use my own domain with oBizee?",
-      answer: "Yes. Every merchant gets a free store at yourname.obizee.com, and you can connect your own custom domain. The store is provisioned, secured with HTTPS and served from your domain.",
+      answer: "Yes, FREE. Every merchant gets a store at yourname.obizee.com, and your own custom domain is mapped at 0 cost — DNS and SSL handled for you. The store is provisioned, secured with HTTPS and served from your domain.",
     },
     {
       question: "Can I migrate from Shopify to oBizee?",
@@ -106,7 +105,7 @@ const CompareShopify = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs Shopify — Shopify Alternative for Indian Sellers (2026 Comparison)",
-    description: "Comparison of oBizee and Shopify for Indian sellers. oBizee charges no monthly subscription, 1% per order capped at ₹10, and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery.",
+    description: "Comparison of oBizee and Shopify for Indian sellers. oBizee has 0 SUBSCRIPTION and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery.",
     url: "https://www.obizee.com/compare/obizee-vs-shopify",
     inLanguage: "en-IN",
   };
@@ -117,7 +116,7 @@ const CompareShopify = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "oBizee vs Shopify — Shopify Alternative for Indian Sellers (2026 Comparison)",
-    description: "Comparison of oBizee and Shopify for Indian sellers. oBizee charges no monthly subscription, no setup fee, 1% per order capped at ₹10, and includes a free mapped custom domain, unlimited products, and same-day hyperlocal delivery.",
+    description: "Comparison of oBizee and Shopify for Indian sellers. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products, and same-day hyperlocal delivery.",
     datePublished: "2026-04-23",
     dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
@@ -172,7 +171,7 @@ const CompareShopify = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a Shopify alternative built for Indian sellers, with no monthly subscription, no setup fee, a custom domain mapped for free, unlimited products and variants, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Shopify starts at ₹1,994 per month as of 2026 and needs paid apps for Indian couriers. Here is the honest comparison.
+              oBizee is a Shopify alternative built for Indian sellers, with 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products and variants, Razorpay and Paytm built in, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Shopify starts at ₹1,994 per month as of 2026 and needs paid apps for Indian couriers. Here is the honest comparison.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">
@@ -264,7 +263,7 @@ const CompareShopify = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Why Indian Sellers Choose oBizee Over Shopify</h2>
             <div className="grid sm:grid-cols-2 gap-5">
               {[
-                { title: "Zero Monthly Fees", desc: "No subscription. Pay only when you make a sale — 1% per order, max ₹10." },
+                { title: "0 SUBSCRIPTION", desc: "No monthly fee, ever. FREE 3-month trial, FREE setup, FREE custom domain — see Pricing for the simple structure once you're selling." },
                 { title: "Built-in Indian Logistics", desc: "Delhivery, DTDC & Blue Dart integrated natively. Generate AWB, schedule pickups, live tracking — all from the app." },
                 { title: "2-Minute Setup", desc: "Sign up, add products, get your website. No themes to configure, no apps to install." },
                 { title: "Made for Indian Merchants", desc: "Built specifically for Instagram sellers, WhatsApp businesses, and home entrepreneurs in India." },

@@ -22,7 +22,7 @@ const CompareDukaan = () => {
       stage: "First 100 orders",
       need: "Shipping and payments that do not need three more subscriptions",
       pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
-      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm built in, with no separate gateway account to open.",
       rival: "Dukaan has no built-in courier integration, so shipping means a separate Shiprocket-style subscription and a second dashboard. There is no hyperlocal option.",
     },
     {
@@ -36,14 +36,13 @@ const CompareDukaan = () => {
 
   const features = [
     { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
-    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in, from 1%", competitor: "Supported, configured separately", winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in", competitor: "Supported, configured separately", winner: "obizee" },
     { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Purchase lists & vendor management", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: "Third-party tool", winner: "obizee" },
     { feature: "Established user base", obizee: "Growing", competitor: "Large, well known", winner: "competitor" },
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "₹4,999/year (~₹417/month)", winner: "obizee" },
-    { feature: "Commission per order", obizee: "1% (max ₹10 cap)", competitor: "2-3% + payment gateway fees", winner: "obizee" },
     { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
     { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: "Requires a paid plan", winner: "obizee" },
     { feature: "Setup / website-creation fee", obizee: "₹0", competitor: "₹0 on free plan", winner: "tie" },
@@ -68,7 +67,7 @@ const CompareDukaan = () => {
   const faqs = [
     {
       question: "Which is the best Dukaan alternative in India?",
-      answer: "oBizee is the best Dukaan alternative for sellers who need shipping built in rather than bought separately. There is no annual plan — the platform fee is 1% per order capped at ₹10 — and Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery are included. Dukaan's paid plans start at ₹4,999 a year as of 2026 and it has no native courier integration.",
+      answer: "oBizee is the best Dukaan alternative for sellers who need shipping built in rather than bought separately. There is no annual plan — 0 SUBSCRIPTION, 0 SETUP FEE — and Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery are included. Dukaan's paid plans start at ₹4,999 a year as of 2026 and it has no native courier integration.",
     },
     {
       question: "Is oBizee cheaper than Dukaan?",
@@ -92,7 +91,7 @@ const CompareDukaan = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs Dukaan — Best Dukaan Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Dukaan for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees. Dukaan costs ₹4,999/year plus 2-3% per order.",
+    description: "Detailed comparison of oBizee vs Dukaan for Indian sellers. oBizee has 0 SUBSCRIPTION and 0 SETUP FEE. Dukaan costs ₹4,999/year plus 2-3% per order.",
     url: "https://www.obizee.com/compare/obizee-vs-dukaan",
     inLanguage: "en-IN",
   };
@@ -103,7 +102,7 @@ const CompareDukaan = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "oBizee vs Dukaan — Best Dukaan Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Dukaan for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees, no setup fee, a free mapped custom domain and unlimited products.",
+    description: "Detailed comparison of oBizee vs Dukaan for Indian sellers. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain and UNLIMITED products.",
     datePublished: "2026-04-23",
     dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
@@ -158,7 +157,7 @@ const CompareDukaan = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a Dukaan alternative for Indian sellers with no annual plan, no setup fee, a custom domain mapped for free, unlimited products and variants, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Dukaan's paid plans start at ₹4,999 a year as of 2026, gate a custom domain behind that plan, and have no built-in courier integration. Here is the honest comparison.
+              oBizee is a Dukaan alternative for Indian sellers with 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products and variants, Razorpay and Paytm built in, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Dukaan's paid plans start at ₹4,999 a year as of 2026, gate a custom domain behind that plan, and have no built-in courier integration. Here is the honest comparison.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">
@@ -222,7 +221,7 @@ const CompareDukaan = () => {
               {[
                 { title: "Zero Monthly Fees", desc: "No subscription at all. Dukaan charges ₹4,999/year. oBizee: pay only when you sell." },
                 { title: "Built-in Indian Logistics", desc: "Delhivery, DTDC & Blue Dart integrated. AWB generation, pickup scheduling, live tracking. Dukaan has no shipping integration." },
-                { title: "Lower Per-Order Cost", desc: "1% per order, max ₹10. On a ₹5,000 order, you pay ₹10 on oBizee vs ₹100-150 on Dukaan." },
+                { title: "FREE Custom Domain", desc: "DNS and SSL mapped for you at 0 cost. Dukaan gates a custom domain behind its paid plan." },
                 { title: "Custom Order Forms", desc: "Build custom order forms with dynamic fields and multi-link support. Dukaan doesn't offer this." },
               ].map((item) => (
                 <div key={item.title} className="bg-orange-50 rounded-2xl p-6">

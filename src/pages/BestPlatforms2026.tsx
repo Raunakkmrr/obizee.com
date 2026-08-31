@@ -15,8 +15,8 @@ const BestPlatforms2026 = () => {
       rank: 1,
       name: "oBizee",
       verdict: "Best overall for Indian small merchants",
-      pricing: "1% per order, max ₹10. No monthly fees.",
-      pros: ["Same-day hyperlocal delivery via Borzo & Shadowfax", "Delhivery, DTDC, Blue Dart & India Post with per-order rate comparison", "Razorpay & Paytm built in, from 1%", "Raw materials, vendors & purchase lists", "Customer retention SMS at ₹0.25", "Zero subscription — 1% per order, capped at ₹10"],
+      pricing: "0 SUBSCRIPTION. 0 SETUP FEE. FREE mapped custom domain.",
+      pros: ["Same-day hyperlocal delivery via Borzo & Shadowfax", "Delhivery, DTDC, Blue Dart & India Post with per-order rate comparison", "Razorpay & Paytm built in", "Raw materials, vendors & purchase lists", "Customer retention SMS at ₹0.25", "UNLIMITED products & variants, FREE custom domain"],
       cons: ["No blog/SEO tools built in", "Newer platform with a smaller user base", "Fewer storefront themes than Shopify"],
     },
     {
@@ -70,7 +70,7 @@ const BestPlatforms2026 = () => {
   ];
 
   const summaryTable = [
-    { platform: "oBizee", cost: "₹0/month + 1% (max ₹10)", shipping: "Delhivery, DTDC", multiChannel: "Yes", bestFor: "Small Indian merchants" },
+    { platform: "oBizee", cost: "0 SUBSCRIPTION, 0 SETUP FEE", shipping: "Delhivery, DTDC", multiChannel: "Yes", bestFor: "Small Indian merchants" },
     { platform: "Dukaan", cost: "₹4,999/year", shipping: "No", multiChannel: "Yes", bestFor: "Small-medium D2C brands" },
     { platform: "Shopify", cost: "₹2,000+/month", shipping: "Via apps", multiChannel: "Yes", bestFor: "Larger/international businesses" },
     { platform: "Bikayi", cost: "Free + ₹999/month", shipping: "No", multiChannel: "WhatsApp focus", bestFor: "WhatsApp-first sellers" },
@@ -82,7 +82,7 @@ const BestPlatforms2026 = () => {
   const faqs = [
     {
       question: "Which is the cheapest ecommerce platform in India?",
-      answer: "oBizee is the cheapest with zero monthly fees and 1% per order capped at ₹10. Even for high-value orders, the maximum commission is ₹10.",
+      answer: "oBizee is the cheapest, with 0 SUBSCRIPTION, 0 SETUP FEE and a FREE mapped custom domain — see Pricing for the simple structure once you're selling.",
     },
     {
       question: "Which platform has built-in shipping in India?",
@@ -90,7 +90,7 @@ const BestPlatforms2026 = () => {
     },
     {
       question: "Can I start an online store for free in India?",
-      answer: "Yes. oBizee has no setup fees and no monthly subscription. You only pay 1% per order (max ₹10) when you make a sale. Bikayi and DM2buy also have free tiers but with limitations.",
+      answer: "Yes. oBizee has 0 SETUP FEE and 0 SUBSCRIPTION, with a 3-month FREE trial (see Pricing for what applies once you're selling). Bikayi and DM2buy also have free tiers but with limitations.",
     },
     {
       question: "Which platform is best for Instagram sellers in India?",
@@ -171,7 +171,7 @@ const BestPlatforms2026 = () => {
             <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Verdict</h2>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                For most Indian small merchants, <strong>oBizee</strong> offers the best value: zero monthly fees, built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, and the lowest per-order cost at 1% (max ₹10). <strong>Shopify</strong> is better for larger businesses, and <strong>Instamojo</strong> for digital products.
+                For most Indian small merchants, <strong>oBizee</strong> offers the best value: 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, and built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping. <strong>Shopify</strong> is better for larger businesses, and <strong>Instamojo</strong> for digital products.
               </p>
             </div>
           </div>

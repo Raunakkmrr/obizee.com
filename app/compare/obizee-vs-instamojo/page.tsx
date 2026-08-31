@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers [2026]",
   description:
-    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs Instamojo for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Instamojo: 2-5% per transaction, basic storefront.",
+    "0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain and UNLIMITED products. Compare oBizee vs Instamojo for Indian sellers. oBizee: ₹0/month, built-in Delhivery, DTDC, Blue Dart & hyperlocal shipping. Instamojo: 2-5% per transaction, basic storefront.",
   keywords:
     "oBizee vs Instamojo, Instamojo alternative, Instamojo review 2026, cheapest payment platform India, online store vs payment links",
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title:
       "oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers [2026]",
     description:
-      "Side-by-side comparison: 1% max ₹10 vs 2-5% fees. Full store vs basic storefront. See why Indian sellers choose oBizee over Instamojo.",
+      "Side-by-side comparison: 0 SUBSCRIPTION vs 2-5% fees. Full store vs basic storefront. See why Indian sellers choose oBizee over Instamojo.",
     type: "article",
     url: "https://www.obizee.com/compare/obizee-vs-instamojo",
     images: [{ url: "/Obizee.png" }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title:
       "oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers [2026]",
     description:
-      "1% max ₹10 vs 2-5% fees. Full store vs basic storefront. Compare oBizee and Instamojo for Indian sellers.",
+      "0 SUBSCRIPTION vs 2-5% fees. Full store vs basic storefront. Compare oBizee and Instamojo for Indian sellers.",
     images: ["/Obizee.png"],
   },
 };
@@ -36,7 +36,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs Instamojo \u2014 Best Instamojo Alternative for Indian Sellers (2026)",
-    description: "Detailed comparison of oBizee vs Instamojo for Indian sellers. oBizee charges 1% per order (max \u20B910) with no monthly fees. Instamojo charges 2-5% per transaction.",
+    description: "Detailed comparison of oBizee vs Instamojo for Indian sellers. oBizee has 0 SUBSCRIPTION and 0 SETUP FEE. Instamojo charges 2-5% per transaction.",
     url: "https://www.obizee.com/compare/obizee-vs-instamojo",
     inLanguage: "en-IN",
   };
@@ -47,7 +47,7 @@ export default function Page() {
     mainEntity: [
       { "@type": "Question", name: "Is oBizee better than Instamojo for selling products?", acceptedAnswer: { "@type": "Answer", text: "For physical products, yes. oBizee offers a full store, order management, inventory tracking, and built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping. Instamojo is better for digital products and payment links." } },
       { "@type": "Question", name: "Does Instamojo have shipping?", acceptedAnswer: { "@type": "Answer", text: "No. Instamojo is primarily a payment platform with a basic storefront. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal logistics integration." } },
-      { "@type": "Question", name: "Which is cheaper \u2014 oBizee or Instamojo?", acceptedAnswer: { "@type": "Answer", text: "oBizee charges 1% per order capped at \u20B910. Instamojo charges 2-5% per transaction. For a \u20B92,000 order, you pay \u20B910 on oBizee vs \u20B940-100 on Instamojo." } },
+      { "@type": "Question", name: "Which is cheaper \u2014 oBizee or Instamojo?", acceptedAnswer: { "@type": "Answer", text: "oBizee has 0 SUBSCRIPTION, 0 SETUP FEE and a FREE mapped custom domain \u2014 see Pricing for the simple structure. Instamojo charges 2-5% per transaction plus its plan fee." } },
       { "@type": "Question", name: "Can Instamojo replace an online store?", acceptedAnswer: { "@type": "Answer", text: "Instamojo offers basic storefront features, but it\u2019s primarily a payment gateway. oBizee is purpose-built as a complete D2C store with order management, inventory, shipping, and multi-channel selling." } },
       { "@type": "Question", name: "What is the best Instamojo alternative for physical products?", acceptedAnswer: { "@type": "Answer", text: "oBizee is the best Instamojo alternative for physical product sellers in India. It offers everything Instamojo lacks: full order lifecycle management, Delhivery, DTDC & Blue Dart integration, and custom order forms \u2014 all at lower fees." } },
     ],

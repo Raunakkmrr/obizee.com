@@ -22,7 +22,7 @@ const CompareBikayi = () => {
       stage: "First 100 orders",
       need: "Shipping and payments that do not need three more subscriptions",
       pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
-      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm built in, with no separate gateway account to open.",
       rival: "Bikayi does not include courier integration, so shipping is a separate subscription and dashboard. There is no same-day hyperlocal option.",
     },
     {
@@ -36,14 +36,13 @@ const CompareBikayi = () => {
 
   const features = [
     { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
-    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in, from 1%", competitor: "Supported, configured separately", winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in", competitor: "Supported, configured separately", winner: "obizee" },
     { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Purchase lists & vendor management", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: "Third-party tool", winner: "obizee" },
     { feature: "WhatsApp-native selling flows", obizee: "Order forms + links", competitor: "Purpose-built", winner: "competitor" },
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Free tier + paid plans from ₹999/month", winner: "obizee" },
-    { feature: "Commission per order", obizee: "1% (max ₹10)", competitor: "Varies by plan", winner: "obizee" },
     { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
     { feature: "WhatsApp catalog integration", obizee: true, competitor: true, winner: "tie" },
     { feature: "Delhivery integration", obizee: true, competitor: false, winner: "obizee" },
@@ -64,7 +63,7 @@ const CompareBikayi = () => {
   const faqs = [
     {
       question: "Is oBizee better than Bikayi?",
-      answer: "For sellers who ship physical products, oBizee covers more ground. It includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery, Razorpay and Paytm from 1%, raw-material and vendor tracking and retention SMS, with no monthly subscription. Bikayi builds a strong WhatsApp-led storefront but leaves shipping and inventory depth to other tools.",
+      answer: "For sellers who ship physical products, oBizee covers more ground. It includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery, Razorpay and Paytm built in, raw-material and vendor tracking and retention SMS, with 0 SUBSCRIPTION. Bikayi builds a strong WhatsApp-led storefront but leaves shipping and inventory depth to other tools.",
     },
     {
       question: "Does Bikayi have shipping integration?",
@@ -72,7 +71,7 @@ const CompareBikayi = () => {
     },
     {
       question: "How much does oBizee cost compared with Bikayi?",
-      answer: "oBizee has no monthly subscription. After a 3-month free trial you pay 1% per successful order capped at ₹10, plus gateway charges from 1%. Bikayi's paid tiers reach ₹999 a month or more as of 2026, charged whether or not you sell that month.",
+      answer: "oBizee has 0 SUBSCRIPTION and a 3-month FREE trial — see Pricing for the simple structure after that. Bikayi's paid tiers reach ₹999 a month or more as of 2026, charged whether or not you sell that month.",
     },
     {
       question: "Which is better for WhatsApp selling?",
@@ -88,7 +87,7 @@ const CompareBikayi = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs Bikayi — Best Bikayi Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Bikayi for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees. Bikayi has paid plans from ₹999/month.",
+    description: "Detailed comparison of oBizee vs Bikayi for Indian sellers. oBizee has 0 SUBSCRIPTION and 0 SETUP FEE. Bikayi has paid plans from ₹999/month.",
     url: "https://www.obizee.com/compare/obizee-vs-bikayi",
     inLanguage: "en-IN",
   };
@@ -99,7 +98,7 @@ const CompareBikayi = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "oBizee vs Bikayi — Best Bikayi Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Bikayi for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees, no setup fee, a free mapped custom domain and unlimited products.",
+    description: "Detailed comparison of oBizee vs Bikayi for Indian sellers. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain and UNLIMITED products.",
     datePublished: "2026-04-23",
     dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
@@ -154,7 +153,7 @@ const CompareBikayi = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a Bikayi alternative for Indian sellers with no monthly subscription, no setup fee, a custom domain mapped for free, unlimited products and variants, a 1% platform fee capped at ₹10 per order, Razorpay and Paytm from 1%, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery via Borzo and Shadowfax. Bikayi's paid plans run to ₹999 a month or more as of 2026 and it has no built-in courier integration. Here is the honest comparison.
+              oBizee is a Bikayi alternative for Indian sellers with 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products and variants, Razorpay and Paytm built in, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery via Borzo and Shadowfax. Bikayi's paid plans run to ₹999 a month or more as of 2026 and it has no built-in courier integration. Here is the honest comparison.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">
@@ -218,7 +217,7 @@ const CompareBikayi = () => {
               {[
                 { title: "Zero Subscription", desc: "No monthly or yearly fees. Bikayi's advanced features require paid plans starting at ₹999/month." },
                 { title: "Built-in Shipping", desc: "Native Delhivery, DTDC, Blue Dart & hyperlocal integration. AWB generation, pickup scheduling, live tracking. Bikayi has no logistics integration." },
-                { title: "Transparent Pricing", desc: "1% per order, max ₹10. Always know what you'll pay. Bikayi's pricing varies by plan." },
+                { title: "FREE Custom Domain", desc: "DNS and SSL mapped for you at 0 cost. Bikayi ties a free domain to its paid yearly plan." },
                 { title: "Custom Order Forms", desc: "Build custom order forms with dynamic fields. Bikayi doesn't offer this functionality." },
               ].map((item) => (
                 <div key={item.title} className="bg-orange-50 rounded-2xl p-6">

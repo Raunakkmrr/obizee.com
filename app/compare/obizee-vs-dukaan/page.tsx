@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "oBizee vs Dukaan — Best Dukaan Alternative in India [2026 Comparison]",
   description:
-    "0 subscription charges — you pay oBizee only when you get an order, then 1% capped at ₹10. Compare oBizee vs Dukaan for Indian sellers. oBizee: ₹0/month, 1% per order (max ₹10), built-in Delhivery, DTDC, Blue Dart & hyperlocal. Dukaan: ₹4,999/year subscription.",
+    "0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain and UNLIMITED products. Compare oBizee vs Dukaan for Indian sellers. oBizee: ₹0/month, built-in Delhivery, DTDC, Blue Dart & hyperlocal. Dukaan: ₹4,999/year subscription.",
   keywords:
     "oBizee vs Dukaan, Dukaan alternative, Dukaan app review, cheapest online store India, Dukaan pricing, best Dukaan alternative 2026",
   alternates: {
@@ -36,7 +36,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs Dukaan \u2014 Best Dukaan Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Dukaan for Indian sellers. oBizee charges 1% per order (max \u20B910) with no monthly fees. Dukaan costs \u20B94,999/year plus 2-3% per order.",
+    description: "Detailed comparison of oBizee vs Dukaan for Indian sellers. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE and a FREE mapped custom domain. Dukaan costs \u20B94,999/year plus 2-3% per order and gates its custom domain behind that plan.",
     url: "https://www.obizee.com/compare/obizee-vs-dukaan",
     inLanguage: "en-IN",
   };
@@ -45,11 +45,11 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Is oBizee cheaper than Dukaan?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee has no yearly subscription and charges only 1% per order, capped at \u20B910 max. Dukaan charges \u20B94,999/year plus 2-3% per order. For a merchant doing 100 orders/month at \u20B9500 average, oBizee costs \u20B9500/month vs Dukaan\u2019s \u20B9417/month subscription + \u20B91,000+ in transaction fees." } },
+      { "@type": "Question", name: "Is oBizee cheaper than Dukaan?", acceptedAnswer: { "@type": "Answer", text: "Yes. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE and a FREE mapped custom domain \u2014 see Pricing for the simple per-order structure. Dukaan charges \u20B94,999/year plus 2-3% per order, and gates its own custom domain behind that plan." } },
       { "@type": "Question", name: "Does Dukaan have shipping integration?", acceptedAnswer: { "@type": "Answer", text: "No. Dukaan does not have built-in logistics. You need to handle shipping separately or use third-party services. oBizee has native Delhivery, DTDC, Blue Dart and hyperlocal integration with AWB generation, pickup scheduling, and live customer tracking." } },
       { "@type": "Question", name: "Can I switch from Dukaan to oBizee?", acceptedAnswer: { "@type": "Answer", text: "Yes. Set up your oBizee store in under 2 minutes, add your products, and start selling immediately. You get an auto-generated website, order management, and shipping \u2014 all without paying a yearly subscription." } },
       { "@type": "Question", name: "Does Dukaan have WhatsApp selling?", acceptedAnswer: { "@type": "Answer", text: "Yes, both Dukaan and oBizee support WhatsApp selling. However, oBizee also includes built-in logistics integration, custom order forms, and a fare calculator that Dukaan doesn\u2019t offer." } },
-      { "@type": "Question", name: "Which is the best Dukaan alternative in India?", acceptedAnswer: { "@type": "Answer", text: "oBizee is the best Dukaan alternative for merchants who want lower costs and built-in shipping. With zero monthly fees, 1% per order (max \u20B910), and native Delhivery, DTDC & Blue Dart logistics, oBizee offers more value at a fraction of the cost." } },
+      { "@type": "Question", name: "Which is the best Dukaan alternative in India?", acceptedAnswer: { "@type": "Answer", text: "oBizee is the best Dukaan alternative for merchants who want lower costs and built-in shipping. With 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, and native Delhivery, DTDC & Blue Dart logistics, oBizee offers more value at a fraction of the cost." } },
     ],
   };
 

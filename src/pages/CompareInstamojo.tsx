@@ -22,7 +22,7 @@ const CompareInstamojo = () => {
       stage: "First 100 orders",
       need: "Shipping and payments that do not need three more subscriptions",
       pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
-      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm built in, with no separate gateway account to open.",
       rival: "Instamojo's storefront is payments-first. Courier booking, rate comparison and same-day hyperlocal delivery are not part of it.",
     },
     {
@@ -42,7 +42,6 @@ const CompareInstamojo = () => {
     { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: false, winner: "obizee" },
     { feature: "Digital products & payment links", obizee: "Not the focus", competitor: "Core strength", winner: "competitor" },
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Free + Premium from ₹999/month", winner: "obizee" },
-    { feature: "Commission per order", obizee: "1% (max ₹10)", competitor: "2-5% + payment gateway fees", winner: "obizee" },
     { feature: "Full online store", obizee: true, competitor: "Basic storefront", winner: "obizee" },
     { feature: "Payment links", obizee: false, competitor: true, winner: "competitor" },
     { feature: "Delhivery integration", obizee: true, competitor: false, winner: "obizee" },
@@ -75,7 +74,7 @@ const CompareInstamojo = () => {
     },
     {
       question: "What does oBizee cost compared with Instamojo?",
-      answer: "oBizee has no monthly subscription. After a 3-month free trial the platform fee is 1% per successful order capped at ₹10, plus gateway charges from 1% billed by Razorpay or Paytm. Compare that against Instamojo's plan fee plus its transaction charges for your own order volume.",
+      answer: "oBizee has 0 SUBSCRIPTION and a 3-month FREE trial — see Pricing for the simple structure after that. Compare it against Instamojo's plan fee plus its transaction charges for your own order volume.",
     },
     {
       question: "When is Instamojo the better choice?",
@@ -87,7 +86,7 @@ const CompareInstamojo = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers (2026)",
-    description: "Detailed comparison of oBizee vs Instamojo for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees. Instamojo charges 2-5% per transaction.",
+    description: "Detailed comparison of oBizee vs Instamojo for Indian sellers. oBizee has 0 SUBSCRIPTION and 0 SETUP FEE. Instamojo charges 2-5% per transaction.",
     url: "https://www.obizee.com/compare/obizee-vs-instamojo",
     inLanguage: "en-IN",
   };
@@ -98,7 +97,7 @@ const CompareInstamojo = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "oBizee vs Instamojo — Best Instamojo Alternative for Indian Sellers (2026)",
-    description: "Detailed comparison of oBizee vs Instamojo for Indian sellers. oBizee charges 1% per order (max ₹10) with no monthly fees, no setup fee, a free mapped custom domain and unlimited products.",
+    description: "Detailed comparison of oBizee vs Instamojo for Indian sellers. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain and UNLIMITED products.",
     datePublished: "2026-04-23",
     dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
@@ -153,7 +152,7 @@ const CompareInstamojo = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is an Instamojo alternative for sellers shipping physical products. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, no setup fee, a custom domain mapped for free, unlimited products and variants, inventory and raw-material tracking, vendor management and retention SMS, with no monthly subscription and a 1% platform fee capped at ₹10 per order. Instamojo began as a payment gateway and its storefront remains lighter on logistics and stock.
+              oBizee is an Instamojo alternative for sellers shipping physical products. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products and variants, inventory and raw-material tracking, vendor management and retention SMS, with 0 SUBSCRIPTION. Instamojo began as a payment gateway and its storefront remains lighter on logistics and stock.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">
@@ -217,7 +216,7 @@ const CompareInstamojo = () => {
               {[
                 { title: "Full-Featured Store", desc: "Complete online store with order management, inventory, and multi-channel selling. Instamojo offers a basic storefront." },
                 { title: "Built-in Shipping", desc: "Native Delhivery, DTDC, Blue Dart & hyperlocal. AWB generation, pickups, live tracking. Instamojo has no logistics integration." },
-                { title: "Lower Fees", desc: "1% per order, max ₹10. Instamojo charges 2-5% per transaction plus gateway fees." },
+                { title: "FREE Custom Domain", desc: "DNS and SSL mapped for you at 0 cost. Instamojo doesn't map a domain for you at all." },
                 { title: "Order Lifecycle", desc: "Track orders from Pending → In Progress → Shipped → Delivered. Instamojo has basic order tracking." },
               ].map((item) => (
                 <div key={item.title} className="bg-orange-50 rounded-2xl p-6">
@@ -288,7 +287,7 @@ const CompareInstamojo = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-5">Need More Than Payment Links?</h2>
             <p className="text-lg text-orange-100 mb-8">
-              Get a full store with shipping, orders, and inventory — all for 1% per order.
+              Get a full store with shipping, orders, and inventory — 0 SUBSCRIPTION, 0 SETUP FEE.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <AppDownloadTrigger>

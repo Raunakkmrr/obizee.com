@@ -22,7 +22,7 @@ const CompareWoocommerce = () => {
       stage: "First 100 orders",
       need: "Shipping and payments that do not need three more subscriptions",
       pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
-      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm built in, with no separate gateway account to open.",
       rival: "WooCommerce needs a shipping plugin, a gateway plugin and configuration for each. There is no same-day hyperlocal option without custom work.",
     },
     {
@@ -36,14 +36,14 @@ const CompareWoocommerce = () => {
 
   const features = [
     { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: "Custom development only", winner: "obizee" },
-    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in, from 1%", competitor: "Plugin, configured yourself", winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in", competitor: "Plugin, configured yourself", winner: "obizee" },
     { feature: "Compare courier rates per order", obizee: true, competitor: "Via paid plugin", winner: "obizee" },
     { feature: "Hosting & maintenance", obizee: "None needed", competitor: "You host and maintain it", winner: "obizee" },
     { feature: "Raw materials & recipes", obizee: true, competitor: "Via paid plugin", winner: "obizee" },
     { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: "Via paid plugin", winner: "obizee" },
     { feature: "Customisation ceiling", obizee: "Fixed feature set", competitor: "Unlimited via plugins/code", winner: "competitor" },
     { feature: "Data ownership", obizee: "Hosted by oBizee", competitor: "Fully self-hosted", winner: "competitor" },
-    { feature: "Monthly cost", obizee: "₹0/month (1% per order, max ₹10)", competitor: "₹300-2,000+/month (hosting + plugins)", winner: "obizee" },
+    { feature: "Monthly cost", obizee: "0 SUBSCRIPTION", competitor: "₹300-2,000+/month (hosting + plugins)", winner: "obizee" },
     { feature: "Setup time", obizee: "Under 2 minutes", competitor: "2-5 hours minimum", winner: "obizee" },
     { feature: "Technical knowledge needed", obizee: "None", competitor: "WordPress, PHP, hosting knowledge", winner: "obizee" },
     { feature: "Hosting included", obizee: true, competitor: false, winner: "obizee" },
@@ -65,7 +65,7 @@ const CompareWoocommerce = () => {
   const faqs = [
     {
       question: "Is oBizee better than WooCommerce for Indian sellers?",
-      answer: "For sellers who do not want to run a website, yes. oBizee needs no hosting, no plugins and no maintenance, and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal shipping, Razorpay and Paytm from 1%, inventory and vendor management. WooCommerce offers more customisation but requires you to build and maintain the stack yourself.",
+      answer: "For sellers who do not want to run a website, yes. oBizee needs no hosting, no plugins and no maintenance, and includes Delhivery, DTDC, Blue Dart and same-day hyperlocal shipping, Razorpay and Paytm built in, inventory and vendor management. WooCommerce offers more customisation but requires you to build and maintain the stack yourself.",
     },
     {
       question: "Does oBizee have shipping like WooCommerce?",
@@ -73,7 +73,7 @@ const CompareWoocommerce = () => {
     },
     {
       question: "What does WooCommerce actually cost?",
-      answer: "The plugin is free, but a working store needs hosting, an SSL certificate, a theme, and plugins for shipping, payments and often inventory. That is a recurring cost plus your time maintaining versions and compatibility. oBizee has no subscription and charges 1% per order capped at ₹10.",
+      answer: "The plugin is free, but a working store needs hosting, an SSL certificate, a theme, and plugins for shipping, payments and often inventory. That is a recurring cost plus your time maintaining versions and compatibility. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE and a FREE mapped custom domain — see Pricing for the simple structure.",
     },
     {
       question: "Do I need technical knowledge for oBizee?",
@@ -155,7 +155,7 @@ const CompareWoocommerce = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a WooCommerce alternative for Indian sellers who do not want to run a website. There is no hosting, no plugin stack, no setup fee and no maintenance: Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm from 1%, a custom domain mapped for free, unlimited products and variants, inventory and vendor management are already included, for a 1% platform fee capped at ₹10 per order. WooCommerce is free software but needs hosting, plugins and technical upkeep.
+              oBizee is a WooCommerce alternative for Indian sellers who do not want to run a website. There is no hosting, no plugin stack, 0 SETUP FEE and no maintenance: Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm built in, a FREE mapped custom domain, UNLIMITED products and variants, inventory and vendor management are already included, with 0 SUBSCRIPTION. WooCommerce is free software but needs hosting, plugins and technical upkeep.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">

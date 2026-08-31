@@ -22,7 +22,7 @@ const CompareDM2buy = () => {
       stage: "First 100 orders",
       need: "Shipping and payments that do not need three more subscriptions",
       pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
-      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm from 1%, with no separate gateway account to open.",
+      obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm built in, with no separate gateway account to open.",
       rival: "DM2Buy has no built-in logistics. You book couriers yourself or pay for a separate aggregator, and there is no same-day option.",
     },
     {
@@ -42,7 +42,6 @@ const CompareDM2buy = () => {
     { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: false, winner: "obizee" },
     { feature: "Free to start", obizee: "3-month free trial", competitor: "Core catalog free", winner: "competitor" },
     { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Free tier + unclear paid features", winner: "obizee" },
-    { feature: "Transparent pricing", obizee: "1% per order, max ₹10 (published)", competitor: "Commission-based (details vary)", winner: "obizee" },
     { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
     { feature: "Instagram selling", obizee: true, competitor: true, winner: "tie" },
     { feature: "WhatsApp selling", obizee: true, competitor: false, winner: "obizee" },
@@ -59,7 +58,7 @@ const CompareDM2buy = () => {
     { feature: "Employee & vendor management", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Seller collaboration network", obizee: false, competitor: true, winner: "competitor" },
     { feature: "IRL pop-up events", obizee: false, competitor: true, winner: "competitor" },
-    { feature: "Payment processing", obizee: "Razorpay + Paytm built in, from 1% per transaction", competitor: "Available", winner: "obizee" },
+    { feature: "Payment processing", obizee: "Razorpay + Paytm built in, no separate account", competitor: "Available", winner: "obizee" },
     { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: false, winner: "obizee" },
     { feature: "Website setup / creation cost", obizee: "₹0 — free to build and publish", competitor: "₹0", winner: "tie" },
   ];
@@ -67,7 +66,7 @@ const CompareDM2buy = () => {
   const faqs = [
     {
       question: "What is the best DM2Buy alternative for Indian sellers?",
-      answer: "oBizee is the best DM2Buy alternative for sellers who need more than a catalog link. It includes Delhivery, DTDC, Blue Dart and same-day hyperlocal shipping, Razorpay and Paytm from 1%, inventory and variant management, and customer retention SMS, with no monthly subscription and a 1% platform fee capped at ₹10 per order.",
+      answer: "oBizee is the best DM2Buy alternative for sellers who need more than a catalog link. It includes Delhivery, DTDC, Blue Dart and same-day hyperlocal shipping, Razorpay and Paytm built in, inventory and variant management, and customer retention SMS, with 0 SUBSCRIPTION and 0 SETUP FEE (see Pricing for the simple structure).",
     },
     {
       question: "What is the difference between oBizee and DM2Buy?",
@@ -79,7 +78,7 @@ const CompareDM2buy = () => {
     },
     {
       question: "Is oBizee free like DM2Buy?",
-      answer: "oBizee has a 3-month free trial and no monthly subscription after it. You then pay 1% per successful order, capped at ₹10, plus gateway charges from 1% billed by Razorpay or Paytm. DM2Buy's core catalog is free, so oBizee costs more per order — the trade is that shipping, payments and inventory are included rather than handled separately.",
+      answer: "oBizee has a 3-month FREE trial and 0 SUBSCRIPTION after it — see Pricing for the simple structure that applies once you're making sales. DM2Buy's core catalog is free too — the trade is that shipping, payments and inventory are included with oBizee rather than handled separately.",
     },
     {
       question: "When is DM2Buy the better choice?",
@@ -91,7 +90,7 @@ const CompareDM2buy = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs DM2buy — Which D2C Platform is Better for Indian Sellers?",
-    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 21 of 27 features with built-in Delhivery, DTDC, Blue Dart & hyperlocal logistics, unlimited products, and a free mapped custom domain.",
+    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 20 of 26 features with built-in Delhivery, DTDC, Blue Dart & hyperlocal logistics, UNLIMITED products, and a FREE mapped custom domain.",
     url: "https://www.obizee.com/compare/obizee-vs-dm2buy",
     inLanguage: "en-IN",
   };
@@ -102,7 +101,7 @@ const CompareDM2buy = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "oBizee vs DM2buy — Which D2C Platform is Better for Indian Sellers?",
-    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 21 of 27 features.",
+    description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 20 of 26 features.",
     datePublished: "2026-04-23",
     dateModified: "2026-08-31",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
@@ -156,7 +155,7 @@ const CompareDM2buy = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a DM2Buy alternative for Indian sellers who have outgrown a catalog link. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm from 1%, unlimited products and variants, a custom domain mapped for free, and inventory and raw-material tracking, and retention SMS — for no setup fee, no monthly subscription, and a 1% platform fee capped at ₹10 per order. DM2Buy is a catalog and order-link tool without built-in logistics.
+              oBizee is a DM2Buy alternative for Indian sellers who have outgrown a catalog link. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm built in, UNLIMITED products and variants, a FREE mapped custom domain, and inventory and raw-material tracking, and retention SMS — with 0 SETUP FEE and 0 SUBSCRIPTION. DM2Buy is a catalog and order-link tool without built-in logistics.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">
@@ -208,7 +207,7 @@ const CompareDM2buy = () => {
               </div>
             </div>
             <p className="text-center text-gray-500 mt-4 text-sm">
-              oBizee wins on 21 features. DM2buy wins on 3 features (collaboration network, IRL events & free to start). 3 are tied.
+              oBizee wins on 20 features. DM2buy wins on 3 features (collaboration network, IRL events & free to start). 3 are tied.
             </p>
           </div>
         </section>
@@ -220,7 +219,7 @@ const CompareDM2buy = () => {
               {[
                 { title: "Built-in Shipping", desc: "Delhivery, DTDC & Blue Dart integrated natively. AWB generation, pickup scheduling, live tracking — all from the app. DM2buy has no shipping integration." },
                 { title: "Multi-Channel Selling", desc: "Sell on Instagram, WhatsApp, and your own website from one dashboard. DM2buy only supports Instagram." },
-                { title: "Transparent Pricing", desc: "1% per order, max ₹10. Published and clear. You always know exactly what you'll pay before you start." },
+                { title: "FREE Custom Domain", desc: "DNS and SSL mapped for you at 0 cost, store live in under 2 minutes. DM2buy doesn't map a domain for you at all." },
               ].map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
