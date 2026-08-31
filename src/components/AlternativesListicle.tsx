@@ -4,13 +4,15 @@ import React from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Check, X, ArrowRight, AlertTriangle } from "lucide-react";
+import { Check, X, ArrowRight, AlertTriangle, Calendar, User } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
 import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 import type { AlternativesPage } from "@/data/alternatives";
+
+const articleFor = (word: string) => (/^[aeiou]/i.test(word) ? "an" : "a");
 
 /**
  * Survey-format comparison: "the best alternatives to X".
@@ -19,9 +21,13 @@ import type { AlternativesPage } from "@/data/alternatives";
  * "is oBizee better than X". This answers "what are my options instead of X",
  * which is the query people actually type and the format Google serves for it.
  *
- * oBizee appears first because it is the strongest fit for the audience these
- * pages target, and every entry — including oBizee's — carries real drawbacks.
- * A survey with no downsides on its author reads as an advertisement.
+ * oBizee appears first and is badged "Best {rival} alternative overall" because,
+ * for this audience, it verifiably is — 0 subscription, 0 setup fee, a free
+ * mapped custom domain, unlimited products, plus shipping and payments the
+ * rival doesn't have. Every entry, including oBizee's, still carries real
+ * drawbacks: a survey with no downsides on its author reads as an
+ * advertisement and gets discounted. Lead with what's true and strong; don't
+ * hide it, and don't invent what isn't there.
  */
 const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
   const itemListJsonLd = {
@@ -47,10 +53,39 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
     })),
   };
 
+  // Dates are real git commit dates from src/data/alternatives.ts, not
+  // guesses — see the field comments there. Update dateModified only when
+  // the content on this page actually changes.
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: page.title,
+    description: page.metaDescription,
+    datePublished: page.datePublished,
+    dateModified: page.dateModified,
+    author: { "@type": "Person", name: "Raunak Kumar", jobTitle: "Founder", url: "https://www.obizee.com/about" },
+    publisher: {
+      "@type": "Organization",
+      name: "oBizee",
+      logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" },
+    },
+    mainEntityOfPage: `https://www.obizee.com/compare/${page.slug}`,
+    image: "https://www.obizee.com/Obizee.png",
+  };
+
+  const formattedDate = (iso: string) =>
+    new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    });
+
   return (
     <div className="min-h-screen bg-white">
       <JsonLd data={itemListJsonLd} />
       <JsonLd data={faqJsonLd} />
+      <JsonLd data={articleJsonLd} />
       <JsonLd data={OBIZEE_SOFTWARE_SCHEMA} />
       <BreadcrumbSchema
         items={[
@@ -64,7 +99,20 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
       <main>
         <section className="py-12 sm:py-16 bg-gradient-to-br from-white to-orange-50/40">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">{page.title}</h1>
+            <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">{page.title}</h1>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mb-6">
+              <div className="flex items-center gap-1.5">
+                <User className="w-4 h-4" />
+                <span>Raunak Kumar, Founder</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4" />
+                <span>
+                  Published {formattedDate(page.datePublished)}
+                  {page.dateModified !== page.datePublished && ` · Updated ${formattedDate(page.dateModified)}`}
+                </span>
+              </div>
+            </div>
             {/* The opening answer is deliberately complete on its own — this is the
                 paragraph a search engine or language model quotes. */}
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">{page.answer}</p>
@@ -74,7 +122,7 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
         <section className="py-10 sm:py-14">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-              Why sellers look for a {page.rival} alternative
+              Why sellers look for {articleFor(page.rival)} {page.rival} alternative
             </h2>
             <ul className="space-y-3">
               {page.whyLeave.map((reason) => (
@@ -107,7 +155,7 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
                     </h3>
                     {option.isObizee && (
                       <span className="rounded-full bg-orange-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-orange-700">
-                        Best for shipping physical products
+                        {page.obizeeBadge ?? `Best ${page.rival} alternative overall`}
                       </span>
                     )}
                   </div>
