@@ -55,7 +55,7 @@ const About = () => {
       name: "oBizee",
       description:
         "oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base.",
-      foundingDate: "2023",
+      foundingDate: "2026",
       location: {
         "@type": "Place",
         address: {
@@ -91,7 +91,7 @@ const About = () => {
                 Our Story
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Empowering businesses with innovative technology solutions since 2023
+                Empowering businesses with innovative technology solutions since 2026
               </p>
             </div>
           </div>

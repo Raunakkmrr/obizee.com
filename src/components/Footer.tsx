@@ -88,6 +88,9 @@ const Footer = () => {
                   <span className="font-semibold text-white">Trade Name:</span> SRN TECHNO
                 </p>
                 <p className="text-xs sm:text-sm text-gray-300 mt-1">
+                  <span className="font-semibold text-white">GSTIN:</span> 07FXHPK5913D1ZI
+                </p>
+                <p className="text-xs sm:text-sm text-gray-300 mt-1">
                   <span className="font-semibold text-white">Office:</span> G-11, Hemkunt Chamber, Nehru Place, New Delhi, Delhi 110019, India
                 </p>
               </div>
