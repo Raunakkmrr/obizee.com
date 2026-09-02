@@ -36,24 +36,24 @@ const Contact = () => {
           email: "admin@obizee.com",
           areaServed: "IN",
           availableLanguage: ["English", "Hindi"],
-          hoursAvailable: "Mo-Su 09:00-18:00",
+          hoursAvailable: "Mo-Fr 09:00-18:00",
         },
         {
           "@type": "ContactPoint",
           telephone: "+91-8796971046",
           contactType: "technical support",
-          email: "support@obizee.com",
+          email: "admin@obizee.com",
           areaServed: "IN",
           availableLanguage: ["English", "Hindi"],
-          hoursAvailable: "Mo-Su 09:00-18:00",
+          hoursAvailable: "Mo-Fr 09:00-18:00",
         },
       ],
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Gurgaon",
-        addressLocality: "Gurgaon",
-        addressRegion: "Haryana",
-        postalCode: "122001",
+        streetAddress: "G-11, Hemkunt Chamber, Nehru Place",
+        addressLocality: "New Delhi",
+        addressRegion: "Delhi",
+        postalCode: "110019",
         addressCountry: "IN",
       },
     },
@@ -128,7 +128,7 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-orange-600" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Visit Us</h3>
-                <p className="text-gray-600 mb-4">Gurgaon, Haryana, India</p>
+                <p className="text-gray-600 mb-4">G-11, Hemkunt Chamber, Nehru Place,<br />New Delhi, Delhi 110019</p>
                 <p className="text-gray-600">By appointment only</p>
               </div>
 

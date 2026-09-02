@@ -250,8 +250,8 @@ const PrivacyPolicy = () => {
               <address className="space-y-2 text-orange-100 not-italic">
                 <p>
                   Email:{" "}
-                  <a href="mailto:privacy@obizee.com" className="underline hover:text-white">
-                    privacy@obizee.com
+                  <a href="mailto:admin@obizee.com" className="underline hover:text-white">
+                    admin@obizee.com
                   </a>
                 </p>
                 <p>
@@ -260,7 +260,7 @@ const PrivacyPolicy = () => {
                     +91-8796971046
                   </a>
                 </p>
-                <p>Address: oBizee, Gurgaon, Haryana, India</p>
+                <p>Address: SRN TECHNO, G-11, Hemkunt Chamber, Nehru Place, New Delhi, Delhi 110019, India</p>
               </address>
             </div>
           </div>

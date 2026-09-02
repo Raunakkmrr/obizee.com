@@ -60,8 +60,10 @@ const About = () => {
         "@type": "Place",
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Gurgaon",
-          addressRegion: "Haryana",
+          streetAddress: "G-11, Hemkunt Chamber, Nehru Place",
+          addressLocality: "New Delhi",
+          addressRegion: "Delhi",
+          postalCode: "110019",
           addressCountry: "IN",
         },
       },

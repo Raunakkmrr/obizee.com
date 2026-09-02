@@ -202,7 +202,7 @@ const RefundPolicy = () => {
                     +91-8796971046
                   </a>
                 </p>
-                <p>Address: oBizee, Gurgaon, Haryana, India</p>
+                <p>Address: SRN TECHNO, G-11, Hemkunt Chamber, Nehru Place, New Delhi, Delhi 110019, India</p>
               </address>
             </div>
           </div>

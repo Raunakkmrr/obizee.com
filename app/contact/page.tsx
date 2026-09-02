@@ -42,10 +42,10 @@ export default function Page() {
       "@type": "Organization",
       name: "oBizee",
       contactPoint: [
-        { "@type": "ContactPoint", telephone: "+91-8796971046", contactType: "customer service", email: "admin@obizee.com", areaServed: "IN", availableLanguage: ["English", "Hindi"], hoursAvailable: "Mo-Su 09:00-18:00" },
-        { "@type": "ContactPoint", telephone: "+91-8796971046", contactType: "technical support", email: "support@obizee.com", areaServed: "IN", availableLanguage: ["English", "Hindi"], hoursAvailable: "Mo-Su 09:00-18:00" },
+        { "@type": "ContactPoint", telephone: "+91-8796971046", contactType: "customer service", email: "admin@obizee.com", areaServed: "IN", availableLanguage: ["English", "Hindi"], hoursAvailable: "Mo-Fr 09:00-18:00" },
+        { "@type": "ContactPoint", telephone: "+91-8796971046", contactType: "technical support", email: "admin@obizee.com", areaServed: "IN", availableLanguage: ["English", "Hindi"], hoursAvailable: "Mo-Fr 09:00-18:00" },
       ],
-      address: { "@type": "PostalAddress", streetAddress: "Gurgaon", addressLocality: "Gurgaon", addressRegion: "Haryana", postalCode: "122001", addressCountry: "IN" },
+      address: { "@type": "PostalAddress", streetAddress: "G-11, Hemkunt Chamber, Nehru Place", addressLocality: "New Delhi", addressRegion: "Delhi", postalCode: "110019", addressCountry: "IN" },
     },
   };
 

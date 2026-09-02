@@ -46,7 +46,7 @@ export default function Page() {
       name: "oBizee",
       description: "oBizee is a comprehensive business management platform that helps businesses streamline operations, manage inventory, handle payments, and grow their customer base.",
       foundingDate: "2023",
-      location: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "Gurgaon", addressRegion: "Haryana", addressCountry: "IN" } },
+      location: { "@type": "Place", address: { "@type": "PostalAddress", streetAddress: "G-11, Hemkunt Chamber, Nehru Place", addressLocality: "New Delhi", addressRegion: "Delhi", postalCode: "110019", addressCountry: "IN" } },
       sameAs: ["https://facebook.com/obizee", "https://twitter.com/obizee", "https://linkedin.com/company/obizee"],
     },
   };
