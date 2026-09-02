@@ -7,6 +7,16 @@
  * schema.org markup. Import from here — never hardcode.
  */
 
+/**
+ * Merchant dashboard. Linked from the header CTA and opened in a new tab so a
+ * merchant signing in does not lose the marketing page they came from.
+ *
+ * Deliberately the bare host, not /login: an already-signed-in merchant lands
+ * on their dashboard instead of being bounced through a login form they do not
+ * need. Signed-out visitors are redirected to /login by the app itself.
+ */
+export const DASHBOARD_URL = "https://dashboard.obizee.com";
+
 /** Public support inbox. Must be a live mailbox before deploy. */
 export const CONTACT_EMAIL = "admin@obizee.com";
 

@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import AppDownloadTrigger from "@/components/AppDownloadTrigger";
+import { DASHBOARD_URL } from "@/lib/contact";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -153,14 +153,19 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <AppDownloadTrigger>
-              <Button
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-xl shadow-lg hover:shadow-xl transition-colors hover:scale-105"
-                aria-label="Download oBizee mobile app"
+            <Button
+              asChild
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-xl shadow-lg hover:shadow-xl transition-colors hover:scale-105"
+            >
+              <a
+                href={DASHBOARD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Log in to your oBizee dashboard (opens in a new tab)"
               >
-                Download App
-              </Button>
-            </AppDownloadTrigger>
+                Login
+              </a>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -244,16 +249,21 @@ const Navigation = () => {
             </Link>
             <div className="pt-3 pb-2 border-t border-gray-200">
               <div className="flex flex-col space-y-2 px-3">
-                <AppDownloadTrigger>
-                  <Button
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white justify-start rounded-xl w-full transition-colors"
+                <Button
+                  asChild
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white justify-start rounded-xl w-full transition-colors"
+                >
+                  <a
+                    href={DASHBOARD_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     role="menuitem"
-                    aria-label="Download oBizee mobile app"
+                    aria-label="Log in to your oBizee dashboard (opens in a new tab)"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Download App
-                  </Button>
-                </AppDownloadTrigger>
+                    Login
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
