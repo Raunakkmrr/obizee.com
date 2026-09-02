@@ -183,7 +183,7 @@ const TermsConditions = () => {
               <p className="text-gray-700 leading-relaxed">
                 These Terms and Conditions ("Terms") govern your use of oBizee's business management platform and services. Please read
                 these Terms carefully before using our services. These Terms constitute a legally binding agreement between you and
-                oBizee Technologies Pvt. Ltd.
+                SRN TECHNO, a sole proprietorship of Raunak Kumar, which operates oBizee.
               </p>
             </div>
 
@@ -254,8 +254,7 @@ const TermsConditions = () => {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Governing Law and Dispute Resolution</h2>
                 <p className="text-gray-700 leading-relaxed">
                   These Terms are governed by the laws of India. Any disputes arising from these Terms or your use of our services will be
-                  resolved through binding arbitration in Bangalore, Karnataka, in accordance with the Arbitration and Conciliation Act,
-                  2015.
+                  resolved through binding arbitration in New Delhi, in accordance with the Arbitration and Conciliation Act, 1996.
                 </p>
               </div>
             </div>
