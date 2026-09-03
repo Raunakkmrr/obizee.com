@@ -36,3 +36,8 @@ dist-ssr
 
 # TypeScript incremental build cache
 tsconfig.tsbuildinfo
+
+# macOS resource-fork sidecars. The T7 drive creates these, and the Next App
+# Router tries to compile ._page.tsx as a route, which 404s the real page.
+._*
+.DS_Store

@@ -30,6 +30,10 @@ const articleFor = (word: string) => (/^[aeiou]/i.test(word) ? "an" : "a");
  * hide it, and don't invent what isn't there.
  */
 const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
+  // Root-level slugs beat /compare/ ones for the queries these pages target, so
+  // two of them have moved. `path` is the source of truth; slug is only the key.
+  const pageUrl = `https://www.obizee.com${page.path ?? `/compare/${page.slug}`}`;
+
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -69,7 +73,7 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
       name: "oBizee",
       logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" },
     },
-    mainEntityOfPage: `https://www.obizee.com/compare/${page.slug}`,
+    mainEntityOfPage: pageUrl,
     image: "https://www.obizee.com/Obizee.png",
   };
 
@@ -91,7 +95,7 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
         items={[
           { name: "Home", url: "https://www.obizee.com/" },
           { name: "Compare", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
-          { name: page.title, url: `https://www.obizee.com/compare/${page.slug}` },
+          { name: page.title, url: pageUrl },
         ]}
       />
       <Navigation />

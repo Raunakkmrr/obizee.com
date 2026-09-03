@@ -31,6 +31,18 @@ export interface AlternativeOption {
 
 export interface AlternativesPage {
   slug: string;
+  /**
+   * The page's real path, without a trailing slash. Defaults to
+   * `/compare/<slug>` when omitted.
+   *
+   * Set it only for pages that live at a root-level slug because the slug is
+   * what people actually type into Google — "dm2buy free alternative", not
+   * "obizee vs dm2buy". Two pages moved out of /compare/ on 2026-09-03, and
+   * their old URLs 301 to the new ones from vercel.json. If you move another,
+   * set `path` here AND add the redirect, or the canonical and the breadcrumb
+   * will quietly point at a URL that no longer exists.
+   */
+  path?: string;
   rival: string;
   /** Used in the H1, e.g. "7 Best DM2Buy Alternatives for Indian Sellers (2026)" */
   title: string;
@@ -202,6 +214,7 @@ const commonFaq = (rival: string) => [
 export const ALTERNATIVES_PAGES: AlternativesPage[] = [
   {
     slug: "best-shopify-alternatives-india",
+    path: "/shopify-alternatives-india",
     datePublished: "2026-08-20",
     dateModified: "2026-08-31",
     rival: "Shopify",
@@ -364,6 +377,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
   },
   {
     slug: "best-free-dm2buy-alternative",
+    path: "/dm2buy-free-alternative",
     datePublished: "2026-08-31",
     dateModified: "2026-08-31",
     rival: "Free DM2Buy",

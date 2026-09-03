@@ -7,12 +7,12 @@ const page = getAlternativesPage("best-shopify-alternatives-india")!;
 export const metadata: Metadata = {
   title: page.metaTitle,
   description: page.metaDescription,
-  alternates: { canonical: "https://www.obizee.com/compare/best-shopify-alternatives-india" },
+  alternates: { canonical: "https://www.obizee.com/shopify-alternatives-india" },
   openGraph: {
     title: page.metaTitle,
     description: page.metaDescription,
     type: "article",
-    url: "https://www.obizee.com/compare/best-shopify-alternatives-india",
+    url: "https://www.obizee.com/shopify-alternatives-india",
     images: [{ url: "/Obizee.png" }],
   },
   twitter: {

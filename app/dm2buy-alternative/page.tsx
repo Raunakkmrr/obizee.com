@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   keywords:
     "oBizee vs DM2buy, DM2buy alternative, best DM2Buy alternative India, best D2C platform India, DM2buy review, Instagram selling platform India, dm2buy shipping, free online store India",
   alternates: {
-    canonical: "https://www.obizee.com/compare/obizee-vs-dm2buy",
+    canonical: "https://www.obizee.com/dm2buy-alternative",
   },
   openGraph: {
     title: "oBizee vs DM2buy — Which D2C Platform Wins for Indian Sellers?",
     description:
       "165 real shops running today, the line-by-line comparison, and a free migration that keeps your old store live while you switch. Nothing to pay until ₹50,000 in orders.",
     type: "article",
-    url: "https://www.obizee.com/compare/obizee-vs-dm2buy",
+    url: "https://www.obizee.com/dm2buy-alternative",
     images: [{ url: "/Obizee.png" }],
   },
   twitter: {

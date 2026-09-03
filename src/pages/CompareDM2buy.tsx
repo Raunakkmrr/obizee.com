@@ -261,7 +261,7 @@ const CompareDM2buy = () => {
     name: "oBizee vs DM2buy — India's Best DM2Buy Alternative for Indian Sellers",
     description:
       "oBizee vs DM2buy for Indian sellers: built-in Delhivery, DTDC, Blue Dart and India Post shipping, same-day hyperlocal delivery, Instagram and WhatsApp selling, expenses, vendors and staff accounts. Nothing to pay until your store has taken ₹50,000 in orders.",
-    url: "https://www.obizee.com/compare/obizee-vs-dm2buy",
+    url: "https://www.obizee.com/dm2buy-alternative",
     inLanguage: "en-IN",
   };
 
@@ -279,7 +279,7 @@ const CompareDM2buy = () => {
       name: "oBizee",
       logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" },
     },
-    mainEntityOfPage: "https://www.obizee.com/compare/obizee-vs-dm2buy",
+    mainEntityOfPage: "https://www.obizee.com/dm2buy-alternative",
     image: "https://www.obizee.com/Obizee.png",
   };
 
@@ -299,7 +299,7 @@ const CompareDM2buy = () => {
         items={[
           { name: "Home", url: "https://www.obizee.com/" },
           { name: "Compare", url: "https://www.obizee.com/compare/best-ecommerce-platforms-india-2026" },
-          { name: "oBizee vs DM2buy", url: "https://www.obizee.com/compare/obizee-vs-dm2buy" },
+          { name: "oBizee vs DM2buy", url: "https://www.obizee.com/dm2buy-alternative" },
         ]}
       />
       <JsonLd data={jsonLd} />

@@ -7,12 +7,12 @@ const page = getAlternativesPage("best-free-dm2buy-alternative")!;
 export const metadata: Metadata = {
   title: page.metaTitle,
   description: page.metaDescription,
-  alternates: { canonical: "https://www.obizee.com/compare/best-free-dm2buy-alternative" },
+  alternates: { canonical: "https://www.obizee.com/dm2buy-free-alternative" },
   openGraph: {
     title: page.metaTitle,
     description: page.metaDescription,
     type: "article",
-    url: "https://www.obizee.com/compare/best-free-dm2buy-alternative",
+    url: "https://www.obizee.com/dm2buy-free-alternative",
     images: [{ url: "/Obizee.png" }],
   },
   twitter: {

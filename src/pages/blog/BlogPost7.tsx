@@ -245,7 +245,7 @@ const BlogPost7 = () => {
       </p>
 
       <div className="not-prose my-6 flex flex-wrap gap-3 justify-center">
-        <Link href="/compare/obizee-vs-dm2buy" className="inline-flex items-center gap-1.5 bg-orange-50 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold border border-orange-200 hover:bg-orange-100 transition-colors">
+        <Link href="/dm2buy-alternative" className="inline-flex items-center gap-1.5 bg-orange-50 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold border border-orange-200 hover:bg-orange-100 transition-colors">
           Full oBizee vs DM2buy Comparison <ArrowRight className="w-4 h-4" />
         </Link>
         <Link href="/pricing" className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold border border-gray-200 hover:bg-gray-100 transition-colors">
