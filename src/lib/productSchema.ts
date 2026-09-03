@@ -23,7 +23,7 @@ export const OBIZEE_SOFTWARE_SCHEMA = {
     price: "0",
     priceCurrency: "INR",
     description:
-      "No monthly subscription. 3-month free trial, then 1% platform fee per successful order capped at ₹10. Payment gateway from 1% per transaction (Paytm 1%, Razorpay 2%), charged separately by the gateway.",
+      "0 SUBSCRIPTION, 0 SETUP FEE. A month with no orders costs nothing. Full order-based pricing structure at obizee.com/pricing.",
   },
   featureList: [
     "Online store on your own custom domain or a free yourname.obizee.com subdomain",
@@ -31,7 +31,7 @@ export const OBIZEE_SOFTWARE_SCHEMA = {
     "Multi-courier shipping with Delhivery, DTDC, Blue Dart and India Post",
     "Compare live courier rates and pick the cheapest per order",
     "AWB generation, pickup scheduling and live order tracking",
-    "Razorpay and Paytm payment gateways built in, from 1% per transaction",
+    "Razorpay and Paytm payment gateways built in",
     "Order forms, QR codes and shareable links for Instagram and WhatsApp selling",
     "Inventory management with per-combination variant price, stock, SKU and image",
     "Photo-first bulk product upload with AI-assisted titles and descriptions",

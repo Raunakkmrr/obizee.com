@@ -16,70 +16,66 @@ const CompareBikayi = () => {
       need: "Somewhere for orders to land",
       pain: "You are taking orders in Instagram DMs and writing them in a notebook. Two get missed in a week.",
       obizee: "Store live at yourname.obizee.com in under 2 minutes, or on your own custom domain. Custom order forms, QR codes and shareable links, so orders arrive in one dashboard instead of three inboxes.",
-      rival: "Bikayi is strong here, particularly for WhatsApp-led selling, and its store builder is well made.",
+      rival: "Bikayi's store builder no longer exists — bikayi.com redirects to a company memo, and the app was pulled from the Play Store in late 2023.",
     },
     {
       stage: "First 100 orders",
       need: "Shipping and payments that do not need three more subscriptions",
       pain: "You are standing in a courier queue, and a customer wants their cake today, not Thursday.",
       obizee: "Delhivery, DTDC, Blue Dart and India Post with live rate comparison per order. Same-day hyperlocal via Borzo and Shadowfax riders. Razorpay and Paytm built in, with no separate gateway account to open.",
-      rival: "Bikayi does not include courier integration, so shipping is a separate subscription and dashboard. There is no same-day hyperlocal option.",
+      rival: "Not applicable — there's no active Bikayi store to ship orders from.",
     },
     {
       stage: "Scaling",
       need: "The business behind the shop",
       pain: "You sold out of the wrong yarn, you cannot remember which vendor was cheaper, and last month's buyers never came back.",
       obizee: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, plus retention SMS to at-risk and win-back segments at ₹0.25 a message.",
-      rival: "Bikayi covers the storefront well but stops before raw materials, purchase lists, vendor management and RFM retention marketing.",
+      rival: "Not applicable — sellers who were scaling on Bikayi have had to migrate elsewhere since its 2023 shutdown.",
     },
   ];
 
   const features = [
     { feature: "Same-day hyperlocal delivery", obizee: "Borzo + Shadowfax riders, booked in-app", competitor: false, winner: "obizee" },
-    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in", competitor: "Supported, configured separately", winner: "obizee" },
+    { feature: "Payment gateway", obizee: "Razorpay + Paytm built in", competitor: false, winner: "obizee" },
     { feature: "Compare courier rates per order", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Raw materials & recipes", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Purchase lists & vendor management", obizee: true, competitor: false, winner: "obizee" },
-    { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: "Third-party tool", winner: "obizee" },
-    { feature: "WhatsApp-native selling flows", obizee: "Order forms + links", competitor: "Purpose-built", winner: "competitor" },
-    { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "Free tier + paid plans from ₹999/month", winner: "obizee" },
-    { feature: "Auto-generated website", obizee: true, competitor: true, winner: "tie" },
-    { feature: "WhatsApp catalog integration", obizee: true, competitor: true, winner: "tie" },
+    { feature: "Customer retention SMS (RFM segments)", obizee: "Built in, ₹0.25/SMS", competitor: false, winner: "obizee" },
+    { feature: "Storefront product still sold", obizee: true, competitor: "Discontinued (2023)", winner: "obizee" },
+    { feature: "Monthly subscription", obizee: "None — ₹0/month", competitor: "N/A — no active plans", winner: "obizee" },
+    { feature: "Auto-generated website", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Delhivery integration", obizee: true, competitor: false, winner: "obizee" },
     { feature: "DTDC integration", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Built-in logistics (AWB, pickup)", obizee: true, competitor: false, winner: "obizee" },
-    { feature: "Order management", obizee: true, competitor: true, winner: "tie" },
-    { feature: "Inventory management", obizee: "Unlimited products & variants", competitor: true, winner: "tie" },
-    { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: "Free domain tied to the yearly plan", winner: "obizee" },
-    { feature: "Setup / website-creation fee", obizee: "₹0", competitor: "₹0 on free tier", winner: "tie" },
+    { feature: "Order management", obizee: true, competitor: false, winner: "obizee" },
+    { feature: "Inventory management", obizee: "Unlimited products & variants", competitor: false, winner: "obizee" },
+    { feature: "Custom domain mapping", obizee: "Free — DNS & SSL handled for you", competitor: false, winner: "obizee" },
     { feature: "Custom order form builder", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Multi-link order forms", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Fare calculator", obizee: true, competitor: false, winner: "obizee" },
     { feature: "Employee & vendor management", obizee: true, competitor: false, winner: "obizee" },
-    { feature: "WhatsApp Business API", obizee: false, competitor: true, winner: "competitor" },
-    { feature: "AI-powered store builder", obizee: false, competitor: true, winner: "competitor" },
   ];
 
   const faqs = [
     {
+      question: "Is Bikayi still around in 2026?",
+      answer: "Not as a storefront builder. As of September 2026, bikayi.com redirects to a short company memo from its founders, and the Bikayi Android app — 8.2 million downloads at its peak — was delisted from the Play Store in November 2023. The founders' current products, bik.ai and Manifest AI, are WhatsApp-CRM and AI shopping-assistant tools that plug into other platforms' stores, not a store builder of their own. If you're searching for a Bikayi alternative because your old store is gone, oBizee is a direct, active replacement.",
+    },
+    {
       question: "Is oBizee better than Bikayi?",
-      answer: "For sellers who ship physical products, oBizee covers more ground. It includes Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery, Razorpay and Paytm built in, raw-material and vendor tracking and retention SMS, with 0 SUBSCRIPTION. Bikayi builds a strong WhatsApp-led storefront but leaves shipping and inventory depth to other tools.",
+      answer: "There's no longer a live comparison to make on features alone — Bikayi's storefront product has shut down. oBizee is an active platform with Delhivery, DTDC, Blue Dart and same-day hyperlocal delivery, Razorpay and Paytm built in, raw-material and vendor tracking and retention SMS, with 0 SUBSCRIPTION.",
     },
     {
       question: "Does Bikayi have shipping integration?",
-      answer: "Bikayi does not include native courier integration. Sellers use a separate aggregator, which adds a subscription and a second dashboard. oBizee integrates Delhivery directly, reaches DTDC, Blue Dart and India Post through a built-in aggregator, and books same-day hyperlocal riders through Borzo and Shadowfax.",
+      answer: "There's no current Bikayi store to integrate shipping into. oBizee integrates Delhivery directly, reaches DTDC, Blue Dart and India Post through a built-in aggregator, and books same-day hyperlocal riders through Borzo and Shadowfax.",
     },
     {
       question: "How much does oBizee cost compared with Bikayi?",
-      answer: "oBizee has 0 SUBSCRIPTION and a 3-month FREE trial — see Pricing for the simple structure after that. Bikayi's paid tiers reach ₹999 a month or more as of 2026, charged whether or not you sell that month.",
+      answer: "oBizee has 0 SUBSCRIPTION and a 3-month FREE trial — see Pricing for the simple structure after that. Bikayi's last published tiers (before its 2023 shutdown) ran to roughly ₹999 a month or more, per third-party listings — those prices are no longer live or purchasable anywhere.",
     },
     {
-      question: "Which is better for WhatsApp selling?",
-      answer: "Both handle WhatsApp orders. Bikayi is built around WhatsApp-first flows and does that well. oBizee provides custom order forms, QR codes and shareable links that work across WhatsApp and Instagram, and then carries the order through shipping, payment and stock rather than stopping at checkout.",
-    },
-    {
-      question: "When is Bikayi the better choice?",
-      answer: "Bikayi is the better choice if WhatsApp-native selling flows are your priority and shipping is already handled. oBizee is stronger when you want couriers, payments, inventory and retention marketing included in one place.",
+      question: "What happened to my Bikayi store?",
+      answer: "If your store was on Bikayi before its 2023 shutdown, it's very likely no longer live. Sellers in that position typically need to rebuild elsewhere. oBizee's store setup takes under 2 minutes on a free yourname.obizee.com link or your own custom domain, with 0 SETUP FEE.",
     },
   ];
 
@@ -87,7 +83,7 @@ const CompareBikayi = () => {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "oBizee vs Bikayi — Best Bikayi Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Bikayi for Indian sellers. oBizee has 0 SUBSCRIPTION and 0 SETUP FEE. Bikayi has paid plans from ₹999/month.",
+    description: "Bikayi's storefront product was discontinued in 2023. oBizee is an active Bikayi alternative for Indian sellers with 0 SUBSCRIPTION, 0 SETUP FEE, built-in shipping and payments.",
     url: "https://www.obizee.com/compare/obizee-vs-bikayi",
     inLanguage: "en-IN",
   };
@@ -98,9 +94,9 @@ const CompareBikayi = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "oBizee vs Bikayi — Best Bikayi Alternative in India (2026 Comparison)",
-    description: "Detailed comparison of oBizee vs Bikayi for Indian sellers. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain and UNLIMITED products.",
+    description: "Bikayi's storefront product was discontinued in 2023. oBizee is an active Bikayi alternative for Indian sellers with 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain and UNLIMITED products.",
     datePublished: "2026-04-23",
-    dateModified: "2026-08-31",
+    dateModified: "2026-09-03",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: {
       "@type": "Organization",
@@ -153,7 +149,7 @@ const CompareBikayi = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a Bikayi alternative for Indian sellers with 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products and variants, Razorpay and Paytm built in, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery via Borzo and Shadowfax. Bikayi's paid plans run to ₹999 a month or more as of 2026 and it has no built-in courier integration. Here is the honest comparison.
+              oBizee is a Bikayi alternative for Indian sellers with 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products and variants, Razorpay and Paytm built in, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery via Borzo and Shadowfax. As of September 2026, Bikayi's storefront product is no longer being sold — bikayi.com now redirects to a company memo, and its store-builder app was delisted from the Play Store in late 2023. Here is the honest comparison, including what's changed.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">
@@ -162,7 +158,7 @@ const CompareBikayi = () => {
               </div>
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
-                <span>Published 23 April 2026 · Updated 31 August 2026</span>
+                <span>Published 23 April 2026 · Updated 3 September 2026</span>
               </div>
             </div>
           </div>
@@ -174,7 +170,7 @@ const CompareBikayi = () => {
             <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
               <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Verdict</h2>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                <strong>Choose oBizee</strong> if you want zero monthly fees, built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, and transparent pricing. <strong>Choose Bikayi</strong> if you specifically need WhatsApp Business API integration and AI-powered store building features.
+                <strong>Choose oBizee</strong> if you want zero monthly fees, built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping, and transparent pricing. <strong>There is no real choice on the Bikayi side anymore</strong> — its storefront product has been discontinued. If you're specifically looking for the WhatsApp AI-agent tooling its founders pivoted to, that's now sold separately as bik.ai, a different kind of product entirely.
               </p>
             </div>
           </div>
@@ -215,10 +211,10 @@ const CompareBikayi = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Why Indian Sellers Choose oBizee Over Bikayi</h2>
             <div className="grid sm:grid-cols-2 gap-5">
               {[
-                { title: "Zero Subscription", desc: "No monthly or yearly fees. Bikayi's advanced features require paid plans starting at ₹999/month." },
-                { title: "Built-in Shipping", desc: "Native Delhivery, DTDC, Blue Dart & hyperlocal integration. AWB generation, pickup scheduling, live tracking. Bikayi has no logistics integration." },
-                { title: "FREE Custom Domain", desc: "DNS and SSL mapped for you at 0 cost. Bikayi ties a free domain to its paid yearly plan." },
-                { title: "Custom Order Forms", desc: "Build custom order forms with dynamic fields. Bikayi doesn't offer this functionality." },
+                { title: "A Storefront That's Still Being Built", desc: "0 SUBSCRIPTION, 0 SETUP FEE, and a team actively shipping. Bikayi's storefront product is discontinued — there's no roadmap to compare against." },
+                { title: "Built-in Shipping", desc: "Native Delhivery, DTDC, Blue Dart & hyperlocal integration. AWB generation, pickup scheduling, live tracking." },
+                { title: "FREE Custom Domain", desc: "DNS and SSL mapped for you at 0 cost, on a store you can actually sign up for today." },
+                { title: "Custom Order Forms", desc: "Build custom order forms with dynamic fields, tailored to your business." },
               ].map((item) => (
                 <div key={item.title} className="bg-orange-50 rounded-2xl p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
