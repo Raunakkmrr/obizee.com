@@ -272,7 +272,7 @@ const BlogPost5 = () => {
               ["Setup fee", "Theme + app setup costs", "0 SETUP FEE"],
               ["Shipping integration", "Paid apps needed, no calculated rates in India", "Delhivery + DTDC + Blue Dart built-in, live rates"],
               ["Custom domain mapping", "Domain bought and connected separately", "FREE — DNS & SSL handled for you"],
-              ["Free trial", "3 days", "3 months"],
+              ["Free until", "3-day trial", "₹50,000 in orders"],
               ["Mobile app management", "Yes", "Yes (mobile-first)"],
               ["Payment gateway", "Shopify Payments not available in India — 3rd party only", "Razorpay + Paytm built in"],
               ["Best for", "Large/international businesses", "Small-medium Indian sellers"],

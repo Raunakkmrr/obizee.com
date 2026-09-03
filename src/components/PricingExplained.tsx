@@ -45,8 +45,9 @@ export default function PricingExplained() {
             . Pay us when you get an order.
           </h2>
           <p className="text-lg text-gray-600">
-            Nothing monthly, nothing to set up, nothing hidden. When an order comes in you pay
-            1% of it, and that stops at ₹10 however large the order is.
+            Nothing monthly, nothing to set up, nothing hidden — and nothing at all until your shop
+            has taken ₹50,000 in orders. After that you pay 1% of each order, and that stops at ₹10
+            however large the order is.
           </p>
         </ScrollReveal>
 

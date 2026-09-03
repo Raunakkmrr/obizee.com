@@ -53,7 +53,7 @@ const HinglishPost2 = () => {
   return (
     <BlogPostLayout
       title="Bina Paisa Lagaye Online Business Kaise Shuru Kare [2026]"
-      description="Bina koi paisa lagaye online business shuru karne ka tarika. oBizee ke saath bilkul free mein apna online store banayein. 3 mahine free trial, koi setup fees nahi."
+      description="Bina koi paisa lagaye online business shuru karne ka tarika. oBizee ke saath bilkul free mein apna online store banayein. ₹50,000 ke orders tak bilkul free, koi setup fees nahi."
       date="2026-04-24"
       updatedDate="2026-08-31"
       readTime="5 min read"
@@ -106,8 +106,8 @@ const HinglishPost2 = () => {
         dekh sakte hain — koi surprise nahi.
       </p>
       <p>
-        Aur pehle <strong>3 mahine toh bilkul free</strong> hain — koi charge nahi, koi limit nahi.
-        3 mahine mein aap apna business set kar sakte hain bina ek bhi paisa kharche.
+        Aur <strong>₹50,000 ke orders tak toh bilkul free</strong> hai — koi charge nahi, koi limit nahi.
+        Tab tak aap apna business set kar sakte hain bina ek bhi paisa kharche.
       </p>
 
       <h2>Doosre Platforms Kitna Charge Karte Hain?</h2>
@@ -225,7 +225,7 @@ const HinglishPost2 = () => {
       </p>
       <p>
         oBizee ke saath aap <strong>aaj, abhi, is waqt</strong> apna online business shuru kar sakte
-        hain. Koi paisa nahi lagana, koi risk nahi. 3 mahine free trial mein dekh lein — agar kaam
+        hain. Koi paisa nahi lagana, koi risk nahi. ₹50,000 tak free hai, dekh lein — agar kaam
         kare toh continue karein, nahi toh kuch nahi jaata.
       </p>
 

@@ -62,9 +62,10 @@ const Hero = () => {
                 commission, which the billing code flatly contradicts — the cap
                 is the real story and it does not need overstating. */}
             <p className="mx-auto mb-9 max-w-xl text-lg leading-relaxed text-gray-700 sm:text-xl lg:mx-0">
-              No subscription, no monthly fee, no setup fee. You pay nothing until an order
-              comes in — then 1%, capped at ₹10, so a ₹10,000 sale still costs you ₹10. Sell
-              online, track stock, ship with Delhivery and see your real profit.
+              No subscription, no monthly fee, no setup fee. You pay nothing at all until your
+              shop has taken <strong className="font-semibold text-gray-900">₹50,000 in orders</strong> —
+              then 1%, capped at ₹10, so a ₹10,000 sale still costs you ₹10. Sell online, track
+              stock, ship with Delhivery and see your real profit.
             </p>
 
             <div className="mb-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">

@@ -74,7 +74,7 @@ const CompareInstamojo = () => {
     },
     {
       question: "What does oBizee cost compared with Instamojo?",
-      answer: "oBizee has 0 SUBSCRIPTION and a 3-month FREE trial — see Pricing for the simple structure after that. Compare it against Instamojo's plan fee plus its transaction charges for your own order volume.",
+      answer: "oBizee has 0 SUBSCRIPTION and charges nothing until your store has taken ₹50,000 in orders — see Pricing for the simple structure after that. Compare it against Instamojo's plan fee plus its transaction charges for your own order volume.",
     },
     {
       question: "When is Instamojo the better choice?",

@@ -233,7 +233,7 @@ const BlogPost6 = () => {
           <tbody>
             <ComparisonRow feature="Monthly subscription" dukaan="₹417+ (annual billing)" obizee="₹0" winner="obizee" />
             <ComparisonRow feature="Setup / website-creation fee" dukaan="₹0 on free plan" obizee="₹0" winner="tie" />
-            <ComparisonRow feature="Free trial" dukaan="Limited free plan" obizee="3 months full access" winner="obizee" />
+            <ComparisonRow feature="Free until" dukaan="Limited free plan" obizee="₹50,000 in orders" winner="obizee" />
             <ComparisonRow feature="WhatsApp selling" dukaan="Excellent" obizee="Share store/order links" winner="dukaan" />
             <ComparisonRow feature="Marketing tools" dukaan="Discount codes, CRM" obizee="Basic (growing)" winner="dukaan" />
             <ComparisonRow feature="Shipping integration" dukaan="Not built-in" obizee="Delhivery + DTDC" winner="obizee" />

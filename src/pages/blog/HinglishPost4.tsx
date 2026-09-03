@@ -33,7 +33,7 @@ const PlatformCard = ({ name, monthlyFee, perOrderFee, shippingIntegration, mobi
         <span className={`font-bold ${winner ? "text-green-700" : "text-gray-900"}`}>{perOrderFee}</span>
       </div>
       <div className="flex justify-between text-sm">
-        <span className="text-gray-500">Free Trial</span>
+        <span className="text-gray-500">Free Until</span>
         <span className="font-bold text-gray-900">{freeTrialDays}</span>
       </div>
       <div className="flex justify-between text-sm">
@@ -112,7 +112,7 @@ const HinglishPost4 = () => {
           perOrderFee="Pricing page dekhein"
           shippingIntegration={true}
           mobileApp={true}
-          freeTrialDays="3 Mahine Free"
+          freeTrialDays="₹50,000 tak free"
           winner={true}
           features={[
             "Koi monthly ya yearly fees nahi",
@@ -285,7 +285,7 @@ const HinglishPost4 = () => {
       <ul>
         <li><strong>0 SUBSCRIPTION</strong> — aap tab tak ₹0 pay karte hain jab tak order nahi aata</li>
         <li><strong>0 SETUP FEE</strong> — FREE mapped custom domain bhi milta hai</li>
-        <li><strong>3 mahine free trial</strong> — pehle 3 mahine toh bilkul kuch nahi lagta</li>
+        <li><strong>₹50,000 tak bilkul free</strong> — jab tak ₹50,000 ke orders nahi aate, kuch nahi lagta</li>
         <li><strong>Koi hidden charges nahi</strong> — jo dikhta hai wahi lagta hai</li>
       </ul>
       <p>

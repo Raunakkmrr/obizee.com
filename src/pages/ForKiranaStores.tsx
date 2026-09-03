@@ -82,7 +82,7 @@ const ForKiranaStores = () => {
     },
     {
       question: "How much does it cost?",
-      answer: "Setting up is free. After a 3-month trial, you pay 1% per order with a maximum cap of ₹10. Much cheaper than building your own app or website.",
+      answer: "Setting up is free. Once your store has taken ₹50,000 in orders, you pay 1% per order with a maximum cap of ₹10. Much cheaper than building your own app or website.",
     },
     {
       question: "Can my regular customers order on WhatsApp?",

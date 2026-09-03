@@ -58,7 +58,7 @@ const Home = () => {
       price: "0",
       priceCurrency: "INR",
       availability: "https://schema.org/InStock",
-      description: "3-month free trial. After trial, 1% per successful order with a maximum cap of ₹10 per order.",
+      description: "Nothing to pay until your store has taken ₹50,000 in orders. After that, 1% per successful order with a maximum cap of ₹10 per order.",
     },
   };
 
@@ -79,8 +79,7 @@ const Home = () => {
                 <span className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">oBizee</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                All-in-one platform for inventory management, payments, and customer engagement. Download the app and start your 3-month
-                free trial. After trial, pay 1% per successful order with a ₹10 maximum cap.
+                All-in-one platform for inventory management, payments, and customer engagement. Download the app and start selling. You pay nothing until your store has taken ₹50,000 in orders, then 1% per successful order with a ₹10 maximum cap.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <AppDownloadTrigger>
@@ -193,7 +192,7 @@ const Home = () => {
                   <span className="text-2xl font-bold text-orange-600">1</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Download the App</h3>
-                <p className="text-gray-600">Install oBizee on iOS or Android and activate your 3-month free trial</p>
+                <p className="text-gray-600">Install oBizee on iOS or Android — you pay nothing until your store has taken ₹50,000 in orders</p>
               </div>
 
               {/* Step 2 */}

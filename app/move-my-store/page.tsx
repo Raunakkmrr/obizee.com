@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Already selling on Dukaan, Shopify, Bikayi, Instamojo or Instagram? Send us your store " +
     "link and we move your products, images, prices and categories across for you. No charge " +
-    "for the move. No monthly fee after it, no setup fee — 1% per order, capped at ₹10.",
+    "for the move. No monthly fee after it, no setup fee — and nothing at all until your store has taken ₹50,000 in orders, then 1% per order capped at ₹10.",
   keywords:
     "migrate from Dukaan, Shopify alternative India migration, move online store India, " +
     "Bikayi alternative, Instamojo alternative, switch ecommerce platform India",

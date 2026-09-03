@@ -71,11 +71,11 @@ const OBIZEE: AlternativeOption = {
   positioning:
     "India-first commerce platform with shipping, payments and inventory built in rather than added through apps.",
   pricing:
-    "0 SUBSCRIPTION. 0 SETUP FEE. FREE custom domain, DNS & SSL included. 3-month FREE trial. Razorpay and Paytm built in.",
+    "0 SUBSCRIPTION. 0 SETUP FEE. FREE custom domain, DNS & SSL included. NOTHING to pay until ₹50,000 in orders. Razorpay and Paytm built in.",
   bestFor:
     "Indian sellers shipping physical products, especially anyone who also delivers locally.",
   pros: [
-    "0 SUBSCRIPTION — 3-month FREE trial, then a simple, transparent structure (see Pricing)",
+    "0 SUBSCRIPTION — nothing at all until ₹50,000 in orders, then a simple, transparent structure (see Pricing)",
     "0 SETUP FEE — building and publishing the store costs nothing",
     "FREE custom domain mapping — DNS and SSL handled end to end, store live in under 2 minutes",
     "UNLIMITED products, variants and categories on every plan, no tier to unlock more",
@@ -399,12 +399,12 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       {
         question: "What is the most free DM2Buy alternative?",
         answer:
-          "For a store that costs ₹0 forever regardless of what you sell, Bikayi's free-forever tier, Shoopy's free tier, Dukaan's free plan and DM2Buy's own core catalog are the genuine options — each with shipping and payment gateway costs left for you to add separately. If you want ₹0 until you actually make a sale, oBizee's 3-month FREE trial and simple, transparent structure after that (see Pricing) is usually the cheaper real-world total.",
+          "For a store that costs ₹0 forever regardless of what you sell, Bikayi's free-forever tier, Shoopy's free tier, Dukaan's free plan and DM2Buy's own core catalog are the genuine options — each with shipping and payment gateway costs left for you to add separately. If you want ₹0 until you actually make a sale, oBizee charges nothing until your store has taken ₹50,000 in orders, and its simple, transparent structure after that (see Pricing) is usually the cheaper real-world total.",
       },
       {
         question: "Is oBizee actually free?",
         answer:
-          "oBizee has a 3-month FREE trial and, after it, 0 SUBSCRIPTION, 0 SETUP FEE and 0 CHARGE for your custom domain — see Pricing for the simple structure that applies once you're actually selling. It is not a ₹0-forever catalog tool like DM2Buy; it is a full store with shipping and payments built in, priced so you only pay once you are actually making money.",
+          "oBizee charges nothing until your store has taken ₹50,000 in orders and, after that, 0 SUBSCRIPTION, 0 SETUP FEE and 0 CHARGE for your custom domain — see Pricing for the simple structure that applies once you're actually selling. It is not a ₹0-forever catalog tool like DM2Buy; it is a full store with shipping and payments built in, priced so you only pay once you are actually making money.",
       },
       {
         question: "Which free DM2Buy alternative has same-day delivery in India?",

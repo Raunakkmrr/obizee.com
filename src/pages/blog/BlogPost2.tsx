@@ -28,7 +28,7 @@ const BlogPost2 = () => {
   return (
     <BlogPostLayout
       title="Why oBizee Charges Only 1% — And Why That Matters for Small Businesses"
-      description="Understanding oBizee's pricing model: 1% per order capped at ₹10. How it compares to Shopify, Dukaan, and why it's the most affordable option for Indian sellers."
+      description="Understanding oBizee's pricing model: nothing until ₹50,000 in orders, then 1% per order capped at ₹10. How it compares to Shopify, Dukaan, and why it's the most affordable option for Indian sellers."
       date="2026-04-23"
       readTime="6 min read"
       author="Raunak Kumar"
@@ -41,7 +41,7 @@ const BlogPost2 = () => {
       </p>
       <p>
         oBizee works differently. There is no monthly subscription. You pay{" "}
-        <strong>1% per successful order, capped at ₹10</strong>. And every new merchant gets a <strong>3-month free trial</strong>.
+        <strong>1% per successful order, capped at ₹10</strong>. And you pay <strong>nothing at all until your store has taken ₹50,000 in orders</strong>.
       </p>
 
       {/* Visual pricing breakdown */}

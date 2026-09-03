@@ -155,7 +155,7 @@ const BlogPost1 = () => {
           </div>
         </div>
         <p className="text-sm text-gray-600">
-          Plus a <strong>3-month free trial</strong> — no credit card required. <Link href="/pricing" className="text-orange-600 font-semibold hover:underline">See full pricing →</Link>
+          Plus <strong>nothing to pay until ₹50,000 in orders</strong> — no credit card required. <Link href="/pricing" className="text-orange-600 font-semibold hover:underline">See full pricing →</Link>
         </p>
       </div>
 

@@ -28,7 +28,7 @@ const SignUp = () => {
     "@type": "WebPage",
     name: "Sign Up | oBizee",
     description:
-      "Create your oBizee business account and get started with a 3-month free trial, then 1% per successful order capped at ₹10.",
+      "Create your oBizee business account and pay nothing until your store has taken ₹50,000 in orders, then 1% per successful order capped at ₹10.",
     publisher: {
       "@type": "Organization",
       name: "oBizee",
@@ -71,11 +71,11 @@ const SignUp = () => {
               </span>
             </Link>
 
-            {/* Free Trial Banner */}
+            {/* Free-until-₹50,000 banner */}
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-4 mb-6" role="alert" aria-label="Special offer">
               <div className="flex items-center justify-center text-white">
                 <Gift className="h-6 w-6 mr-2" aria-hidden="true" />
-                <span className="font-bold">3-Month Free Trial • Then 1% Fee (Max ₹10 per order)</span>
+                <span className="font-bold">Nothing to Pay Until ₹50,000 in Orders • Then 1% (Max ₹10 per order)</span>
               </div>
             </div>
 
@@ -220,9 +220,9 @@ const SignUp = () => {
               type="submit"
               disabled={!formData.agreeToTerms}
               className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-              aria-label="Create account and start free trial"
+              aria-label="Create account and start selling"
             >
-              Create Account & Start Free Trial
+              Create Account & Start Selling
             </Button>
 
             {/* Divider */}

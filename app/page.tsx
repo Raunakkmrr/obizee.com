@@ -15,8 +15,9 @@ import HomePageClient from "./HomePageClient";
 export const metadata: Metadata = {
   title: "oBizee — 0 Subscription Charges. Pay Only When You Get an Order.",
   description:
-    "0 subscription charges — you pay oBizee only when you get an order, and then just 1% " +
-    "capped at ₹10. A ₹10,000 sale still costs ₹10, and a month with no orders costs nothing. " +
+    "You pay oBizee nothing until your store has taken ₹50,000 in orders. After that, 0 " +
+    "subscription charges — just 1% per order capped at ₹10. A ₹10,000 sale still costs ₹10, " +
+    "and a month with no orders costs nothing. " +
     "Online store, orders from Instagram and WhatsApp, stock and raw materials, vendors, " +
     "Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery, COD and profit reporting.",
   keywords:
@@ -47,8 +48,9 @@ export default function HomePage() {
     url: "https://www.obizee.com",
     logo: "https://www.obizee.com/Obizee.png",
     description:
-      "Indian commerce platform with 0 subscription charges — merchants pay only when they get " +
-      "an order, then 1% of it capped at ₹10. Online store, order management, stock and raw " +
+      "Indian commerce platform that charges a merchant nothing until their store has taken " +
+      "₹50,000 in orders. After that, 0 subscription charges — 1% per order capped at ₹10. " +
+      "Online store, order management, stock and raw " +
       "materials, vendors, Delhivery shipping, WhatsApp marketing and profit reporting.",
     // The identity graph Google resolves oBizee against. It previously held one
     // entry, and that entry 404'd — the app id was com.obizee, one "e" short of
@@ -80,9 +82,10 @@ export default function HomePage() {
       price: "0",
       priceCurrency: "INR",
       description:
-        "0 subscription charges. Free to start, nothing monthly, nothing on setup — you pay " +
-        "oBizee only when you get an order, and then 1% of it capped at ₹10. A month with no " +
-        "orders costs nothing. Payment gateway charges are separate and set by the gateway.",
+        "Nothing is charged until the store has taken ₹50,000 in orders. After that: 0 " +
+        "subscription charges, nothing monthly, nothing on setup — you pay 1% per order capped " +
+        "at ₹10. A month with no orders costs nothing. Payment gateway charges are separate " +
+        "and set by the gateway.",
     },
   };
 

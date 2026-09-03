@@ -60,14 +60,14 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "0 subscription charges — you pay oBizee only when you get an order, and then just 1% capped at ₹10. A month with no sales costs nothing. Online store, orders from Instagram and WhatsApp, stock and raw materials, Delhivery, DTDC and Blue Dart shipping, COD and real profit reporting. No coding needed.",
+    "You pay oBizee nothing until your store has taken ₹50,000 in orders. After that, 0 subscription charges — just 1% per order, capped at ₹10. A month with no sales costs nothing. Online store, orders from Instagram and WhatsApp, stock and raw materials, Delhivery, DTDC and Blue Dart shipping, COD and real profit reporting. No coding needed.",
   keywords:
     "no subscription ecommerce India, pay per order ecommerce India, cheapest ecommerce platform India, D2C platform India, online store builder, Shopify alternative India, Dukaan alternative, sell online India, Instagram seller platform, WhatsApp business tools",
   metadataBase: new URL("https://www.obizee.com"),
   openGraph: {
     title: "oBizee — 0 Subscription Charges. Pay Only When You Get an Order.",
     description:
-      "0 subscription charges — pay only when you get an order, then 1% capped at ₹10. Online store, order management, stock, and Delhivery, DTDC & Blue Dart shipping.",
+      "Nothing to pay until ₹50,000 in orders. Then 0 subscription — just 1% per order, capped at ₹10. Online store, order management, stock, and Delhivery, DTDC & Blue Dart shipping.",
     url: "https://www.obizee.com",
     siteName: "oBizee",
     images: [{ url: "/Obizee.png" }],
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "oBizee — 0 Subscription Charges. Pay Only When You Get an Order.",
     description:
-      "0 subscription charges — pay only when you get an order, then 1% capped at ₹10. Online store, order management, stock, and Delhivery, DTDC & Blue Dart shipping.",
+      "Nothing to pay until ₹50,000 in orders. Then 0 subscription — just 1% per order, capped at ₹10. Online store, order management, stock, and Delhivery, DTDC & Blue Dart shipping.",
     images: ["/Obizee.png"],
   },
   robots: { index: true, follow: true },

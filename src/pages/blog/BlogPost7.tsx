@@ -111,7 +111,7 @@ const BlogPost7 = () => {
         {[
           { icon: Globe, title: "Multi-channel selling", desc: "oBizee gives you a standalone store link that works everywhere — Instagram bio, WhatsApp status, Facebook, email, or even a physical business card. You are not locked into any single social platform." },
           { icon: Truck, title: "Built-in shipping (Delhivery + DTDC)", desc: "Generate AWB numbers, schedule pickups, and provide live tracking to customers — all from within the oBizee app. No third-party shipping software needed." },
-          { icon: CreditCard, title: "0 SUBSCRIPTION, 0 SETUP FEE", desc: "No hidden fees, a FREE mapped custom domain, and a 3-month free trial to test everything before paying anything." },
+          { icon: CreditCard, title: "0 SUBSCRIPTION, 0 SETUP FEE", desc: "No hidden fees, a FREE mapped custom domain, and nothing to pay until your store has taken ₹50,000 in orders." },
           { icon: BarChart3, title: "Complete business dashboard", desc: "Order management, inventory tracking, customer data, payment processing, and shipping — all in one mobile app." },
         ].map((item) => (
           <div key={item.title} className="flex items-start gap-3 bg-green-50 rounded-xl p-4 border border-green-100">
@@ -146,7 +146,7 @@ const BlogPost7 = () => {
             <FeatureRow feature="Payment processing" dm2buy="Available" obizee="Razorpay + Paytm built in" winner="obizee" />
             <FeatureRow feature="Setup / website-creation fee" dm2buy="₹0" obizee="₹0" winner="tie" />
             <FeatureRow feature="Custom domain mapping" dm2buy="Not offered" obizee="FREE — DNS & SSL handled" winner="obizee" />
-            <FeatureRow feature="Free trial" dm2buy="Free to start" obizee="3 months free" winner="obizee" />
+            <FeatureRow feature="Free until" dm2buy="Free to start" obizee="₹50,000 in orders" winner="obizee" />
             <FeatureRow feature="Seller community" dm2buy="Strong (IRL events)" obizee="Growing" winner="dm2buy" />
             <FeatureRow feature="Order dashboard" dm2buy="Basic" obizee="Full dashboard" winner="obizee" />
             <FeatureRow feature="Inventory management" dm2buy="Limited" obizee="Built-in" winner="obizee" />

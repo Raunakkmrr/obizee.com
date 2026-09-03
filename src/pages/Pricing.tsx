@@ -10,8 +10,8 @@ import JsonLd from "@/components/JsonLd";
 
 const Pricing = () => {
   const planFeatures = [
-    "3 months full platform access at no platform fee",
-    "After trial: 1% charged per successful order",
+    "Full platform access at no platform fee until ₹50,000 in orders",
+    "After ₹50,000 in orders: 1% charged per successful order",
     "Per-order fee is capped at maximum ₹10",
     "Payment gateway from 1% per transaction (Paytm 1%, Razorpay 2%)",
     "Razorpay and Paytm built in — no separate gateway account setup",
@@ -32,11 +32,11 @@ const Pricing = () => {
   const faqs = [
     {
       question: "When does billing start?",
-      answer: "Billing starts only after your 3-month free trial ends.",
+      answer: "Billing starts only after your store has taken ₹50,000 in orders.",
     },
     {
-      question: "What exactly is the platform fee after trial?",
-      answer: "After trial, the platform fee is 1% per successful order with a maximum cap of ₹10 for each order.",
+      question: "What exactly is the platform fee after ₹50,000?",
+      answer: "Once your store has taken ₹50,000 in orders, the platform fee is 1% per successful order with a maximum cap of ₹10 for each order.",
     },
     {
       question: "What do payment gateway charges cost?",
@@ -70,7 +70,7 @@ const Pricing = () => {
       priceCurrency: "INR",
       availability: "https://schema.org/InStock",
       url: "https://www.obizee.com/pricing",
-      description: "3-month free trial. After trial, 1% per successful order with a maximum fee cap of ₹10 per order.",
+      description: "Nothing to pay until your store has taken ₹50,000 in orders. After that, 1% per successful order with a maximum fee cap of ₹10 per order.",
     },
   };
 
@@ -98,7 +98,7 @@ const Pricing = () => {
 
         <section className="py-5 bg-gradient-to-r from-orange-500 to-orange-600" role="status" aria-label="Pricing highlight">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <p className="text-base sm:text-lg font-semibold">3-Month Free Trial • Then 1% per successful order • Max ₹10 per order</p>
+            <p className="text-base sm:text-lg font-semibold">Nothing to Pay Until ₹50,000 in Orders • Then 1% per order • Max ₹10</p>
           </div>
         </section>
 
@@ -109,7 +109,7 @@ const Pricing = () => {
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Growing Merchants</span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Start free for 3 months. After that, you pay only when you make a successful sale.
+              Free until your store has taken ₹50,000 in orders. After that, you pay only when you make a successful sale.
             </p>
           </div>
         </section>
@@ -123,7 +123,7 @@ const Pricing = () => {
               <div className="flex flex-wrap items-center gap-2.5 mb-4">
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-green-100 text-green-800">
                   <Clock3 className="w-4 h-4 mr-2" aria-hidden="true" />
-                  3 Months Free Trial
+                  Free Until ₹50,000
                 </span>
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-orange-100 text-orange-800">
                   <Calculator className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -219,7 +219,7 @@ const Pricing = () => {
               Start Free, Pay Only When Orders Succeed
             </h2>
             <p className="text-lg text-orange-100 mb-8">
-              Get started with a 3-month free trial and scale with predictable per-order pricing.
+              Start with nothing to pay until ₹50,000 in orders, then scale with predictable per-order pricing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" role="group" aria-label="Pricing CTA buttons">
               <AppDownloadTrigger>

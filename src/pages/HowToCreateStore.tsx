@@ -23,7 +23,7 @@ const HowToCreateStore = () => {
     {
       question: "How much does it cost to create a store on oBizee?",
       answer:
-        "Setting up your store is completely free. There are no setup fees and no monthly subscription. After a 3-month free trial, you pay only 1% per order, capped at \u20B910 maximum.",
+        "Setting up your store is completely free. There are no setup fees and no monthly subscription. Once your store has taken ₹50,000 in orders, you pay 1% per order, capped at \u20B910 maximum.",
     },
     {
       question: "How do customers place orders on my oBizee store?",

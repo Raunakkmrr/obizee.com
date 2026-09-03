@@ -82,7 +82,7 @@ const ForHandicrafts = () => {
     },
     {
       question: "How much does it cost to sell handicrafts on oBizee?",
-      answer: "Setting up is free. After a 3-month trial, you pay 1% per order with a maximum cap of ₹10. Perfect for artisans who need to protect their margins. Even on an ₹8,000 pottery set, you pay just ₹10.",
+      answer: "Setting up is free. Once your store has taken ₹50,000 in orders, you pay 1% per order with a maximum cap of ₹10. Perfect for artisans who need to protect their margins. Even on an ₹8,000 pottery set, you pay just ₹10.",
     },
     {
       question: "Can I ship fragile handicraft items?",

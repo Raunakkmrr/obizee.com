@@ -43,14 +43,14 @@ const Help = () => {
       title: "Billing & Pricing",
       faqs: [
         {
-          question: "How does the 3-month free trial work?",
+          question: "How does the ₹50,000 free threshold work?",
           answer:
-            "When you download the app and activate your account, you get full access to the platform for 3 months at no platform fee. You can use core operations features during this period.",
+            "When you download the app and activate your account, you get full access to the platform at no platform fee until your store has taken ₹50,000 in orders. Every feature is available during this period — it is not a limited tier.",
         },
         {
           question: "When am I charged the 1% fee?",
           answer:
-            "The 1% fee (max ₹10 per order) is charged only on successful orders after your 3-month trial ends. No fee is charged for failed transactions or canceled orders.",
+            "The 1% fee (max ₹10 per order) is charged only on successful orders until your store has taken ₹50,000 in orders. No fee is charged for failed transactions or canceled orders.",
         },
         {
           question: "How does the ₹10 cap work for larger orders?",

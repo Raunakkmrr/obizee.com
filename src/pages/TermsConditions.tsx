@@ -96,7 +96,7 @@ const TermsConditions = () => {
     {
       title: "Payment Terms",
       items: [
-        "Fees are charged as outlined in our pricing page (1% per order, max ₹10)",
+        "No fee is charged until your store has taken ₹50,000 in orders. After that, fees are charged as outlined in our pricing page (1% per order, max ₹10)",
         "All fees are non-refundable except as required by law",
         "You are responsible for all applicable taxes",
         "We may change our fees with 30 days' notice",

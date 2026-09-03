@@ -71,7 +71,7 @@ const CompareBikayi = () => {
     },
     {
       question: "How much does oBizee cost compared with Bikayi?",
-      answer: "oBizee has 0 SUBSCRIPTION and a 3-month FREE trial — see Pricing for the simple structure after that. Bikayi's paid tiers reach ₹999 a month or more as of 2026, charged whether or not you sell that month.",
+      answer: "oBizee has 0 SUBSCRIPTION and charges nothing until your store has taken ₹50,000 in orders — see Pricing for the simple structure after that. Bikayi's paid tiers reach ₹999 a month or more as of 2026, charged whether or not you sell that month.",
     },
     {
       question: "Which is better for WhatsApp selling?",

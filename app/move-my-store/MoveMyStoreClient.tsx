@@ -82,7 +82,8 @@ export default function MoveMyStoreClient() {
               />
             </div>
             <p className="mt-5 font-mono text-[12px] text-gray-500">
-              ₹0 for the move. 0 subscription charges after it — pay only when you get an order.
+              ₹0 for the move. 0 subscription charges after it — and nothing at all until your
+              store has taken ₹50,000 in orders.
             </p>
           </div>
         </div>

@@ -23,7 +23,7 @@ export const OBIZEE_SOFTWARE_SCHEMA = {
     price: "0",
     priceCurrency: "INR",
     description:
-      "No monthly subscription. 3-month free trial, then 1% platform fee per successful order capped at ₹10. Payment gateway from 1% per transaction (Paytm 1%, Razorpay 2%), charged separately by the gateway.",
+      "No monthly subscription. Nothing is charged until the store has taken ₹50,000 in orders, then 1% platform fee per successful order capped at ₹10. Payment gateway from 1% per transaction (Paytm 1%, Razorpay 2%), charged separately by the gateway.",
   },
   featureList: [
     "Online store on your own custom domain or a free yourname.obizee.com subdomain",

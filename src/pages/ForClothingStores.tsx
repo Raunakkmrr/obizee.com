@@ -82,7 +82,7 @@ const ForClothingStores = () => {
     },
     {
       question: "How much does it cost to sell clothes online with oBizee?",
-      answer: "Setting up is free. After a 3-month trial, you pay 1% per order with a maximum cap of ₹10. Even on a ₹10,000 designer outfit, you only pay ₹10.",
+      answer: "Setting up is free. Once your store has taken ₹50,000 in orders, you pay 1% per order with a maximum cap of ₹10. Even on a ₹10,000 designer outfit, you only pay ₹10.",
     },
     {
       question: "Can I ship clothes all over India?",

@@ -66,7 +66,7 @@ const CTA = () => {
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 text-sm text-orange-100">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-300" />
-              <span>3-month free trial</span>
+              <span>Free until ₹50,000 in orders</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-300" />

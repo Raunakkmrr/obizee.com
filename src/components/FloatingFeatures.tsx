@@ -42,7 +42,7 @@ const featureItems: { icon: LucideIcon; text: string }[] = [
   { icon: PackageCheck, text: "Pickup scheduling" },
   { icon: PieChart, text: "Expense tracking" },
   { icon: ShoppingCart, text: "Product variants" },
-  { icon: BadgeCheck, text: "3 months free trial" },
+  { icon: BadgeCheck, text: "Free until ₹50,000 in orders" },
   { icon: Lock, text: "Data security" },
 ];
 

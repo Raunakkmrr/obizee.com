@@ -90,7 +90,7 @@ const BestPlatforms2026 = () => {
     },
     {
       question: "Can I start an online store for free in India?",
-      answer: "Yes. oBizee has 0 SETUP FEE and 0 SUBSCRIPTION, with a 3-month FREE trial (see Pricing for what applies once you're selling). Bikayi and DM2buy also have free tiers but with limitations.",
+      answer: "Yes. oBizee has 0 SETUP FEE and 0 SUBSCRIPTION, and charges nothing until your store has taken ₹50,000 in orders (see Pricing for what applies after that). Bikayi and DM2buy also have free tiers but with limitations.",
     },
     {
       question: "Which platform is best for Instagram sellers in India?",

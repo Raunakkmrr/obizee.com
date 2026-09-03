@@ -17,11 +17,11 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 const faqs = [
   {
     q: "What does oBizee cost?",
-    a: "0 subscription charges. You pay oBizee only when you get an order — nothing monthly, nothing to set up, nothing hidden. When an order does come in you pay 1% of it, capped at ₹10, so a ₹500 order costs ₹5 and a ₹10,000 order still costs ₹10. It comes out of your oBizee wallet and appears on a daily invoice, so you can check every rupee. A month with no orders costs you nothing.",
+    a: "Nothing at all until your shop has taken ₹50,000 in orders. Not a trial and not a cut-down tier — every feature is switched on the whole time. After ₹50,000 there is still 0 subscription, nothing monthly and nothing to set up: you pay 1% of each order, capped at ₹10, so a ₹500 order costs ₹5 and a ₹10,000 order still costs ₹10. It comes out of your oBizee wallet and appears on a daily invoice, so you can check every rupee. A month with no orders costs you nothing.",
   },
   {
     q: "What does 1% capped at ₹10 actually mean?",
-    a: "On a ₹500 order the gateway takes ₹5. On a ₹2,000 order it takes ₹10. On a ₹10,000 order it still takes ₹10, because the cap holds. You would pay a gateway fee on any platform; ours is among the lowest in India.",
+    a: "It is oBizee's own fee, and it only starts once your shop has taken ₹50,000 in orders. On a ₹500 order it is ₹5. On a ₹2,000 order it is ₹10. On a ₹10,000 order it is still ₹10, because the cap holds. Your payment gateway charges its own fee separately, on any platform.",
   },
   {
     q: "Do I lose my products if I move from another platform?",

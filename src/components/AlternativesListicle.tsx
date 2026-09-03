@@ -227,7 +227,7 @@ const AlternativesListicle = ({ page }: { page: AlternativesPage }) => {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-5">Want to see if oBizee fits?</h2>
             <p className="text-orange-50 mb-8 text-lg">
-              Tell us what you sell and we will set you up. No monthly fee, and a 3-month free trial.
+              Tell us what you sell and we will set you up. No monthly fee, and nothing to pay until ₹50,000 in orders.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <AppDownloadTrigger>

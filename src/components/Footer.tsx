@@ -76,9 +76,10 @@ const Footer = () => {
                 0 subscription charges. Pay us when you get an order.
               </p>
               <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
-                Nothing monthly, nothing to set up, nothing hidden — when an order comes in you
-                pay 1% of it, capped at ₹10. A month with no orders costs you nothing. Sell
-                online, manage orders and stock, and ship across India from your phone.
+                Nothing monthly, nothing to set up, nothing hidden — and nothing at all until your
+                shop has taken ₹50,000 in orders. After that you pay 1% of each order, capped at ₹10.
+                A month with no orders costs you nothing. Sell online, manage orders and stock, and
+                ship across India from your phone.
               </p>
               <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-3 sm:p-4 mb-5 sm:mb-7">
                 <p className="text-xs sm:text-sm text-gray-300">

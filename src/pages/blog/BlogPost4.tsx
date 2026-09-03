@@ -95,7 +95,7 @@ const BlogPost4 = () => {
         name="oBizee"
         monthlyCost="₹0"
         perOrderFee="See Pricing"
-        strength="0 SUBSCRIPTION, 0 SETUP FEE, FREE mapped custom domain. Built-in Delhivery, DTDC and Blue Dart shipping. 3-month free trial. Best value for small Indian sellers."
+        strength="0 SUBSCRIPTION, 0 SETUP FEE, FREE mapped custom domain. Built-in Delhivery, DTDC and Blue Dart shipping. Nothing to pay until ₹50,000 in orders. Best value for small Indian sellers."
         weakness="Newer platform with a smaller app ecosystem compared to Shopify."
         highlight
       />
