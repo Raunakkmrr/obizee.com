@@ -2,15 +2,15 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://www.obizee.com/sitemap-core.xml</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://www.obizee.com/sitemap-company.xml</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://www.obizee.com/sitemap-legal.xml</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://www.obizee.com/sitemap-auth.xml</loc>
@@ -18,14 +18,14 @@
   </sitemap>
   <sitemap>
     <loc>https://www.obizee.com/sitemap-compare.xml</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://www.obizee.com/sitemap-verticals.xml</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://www.obizee.com/sitemap-blog.xml</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-03</lastmod>
   </sitemap>
 </sitemapindex>
