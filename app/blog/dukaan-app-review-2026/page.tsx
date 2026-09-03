@@ -22,33 +22,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "Dukaan App Review 2026: Pros, Cons, and Better Alternatives",
-    description: "An honest review of Dukaan in 2026 \u2014 what it does well, where it falls short, pricing breakdown, and how it compares to alternatives like oBizee for Indian sellers.",
-    datePublished: "2026-04-24",
-    dateModified: "2026-08-31",
-    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
-    publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
-    mainEntityOfPage: "https://www.obizee.com/blog/dukaan-app-review-2026",
-    image: "https://www.obizee.com/Obizee.png",
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.obizee.com/blog" },
-      { "@type": "ListItem", position: 3, name: "Dukaan App Review 2026", item: "https://www.obizee.com/blog/dukaan-app-review-2026" },
-    ],
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <BlogPost6 />
     </>
   );

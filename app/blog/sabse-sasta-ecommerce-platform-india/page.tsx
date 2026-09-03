@@ -22,33 +22,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]",
-    description: "India ka sabse sasta ecommerce platform kaun sa hai? oBizee \u2014 0 SUBSCRIPTION, 0 SETUP FEE. Shopify, Dukaan se comparison.",
-    datePublished: "2026-04-24",
-    dateModified: "2026-08-31",
-    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
-    publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
-    mainEntityOfPage: "https://www.obizee.com/blog/sabse-sasta-ecommerce-platform-india",
-    image: "https://www.obizee.com/Obizee.png",
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.obizee.com/blog" },
-      { "@type": "ListItem", position: 3, name: "Sabse Sasta Ecommerce Platform India", item: "https://www.obizee.com/blog/sabse-sasta-ecommerce-platform-india" },
-    ],
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <HinglishPost4 />
     </>
   );

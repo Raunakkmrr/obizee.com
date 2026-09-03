@@ -27,12 +27,12 @@ const ComparisonRow = ({ scenario, obizee, shopify, dukaan }: { scenario: string
 const BlogPost2 = () => {
   return (
     <BlogPostLayout
-      title="Why oBizee Charges Only 1% — And Why That Matters for Small Businesses"
+      title="Why oBizee Charges Nothing Until ₹50,000 — And Only 1% After That"
       description="Understanding oBizee's pricing model: nothing until ₹50,000 in orders, then 1% per order capped at ₹10. How it compares to Shopify, Dukaan, and why it's the most affordable option for Indian sellers."
       date="2026-04-23"
       readTime="6 min read"
       author="Raunak Kumar"
-      slug="why-obizee-charges-only-1-percent"
+      slug="why-obizee-is-free-until-50000"
     >
       <p>
         If you have ever looked into selling online, you have probably been put off by the costs.

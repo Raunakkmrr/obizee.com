@@ -22,33 +22,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "Mobile Se Online Store Kaise Banaye \u2014 Sirf Phone Se [2026]",
-    description: "Sirf apne mobile phone se online store banayein. Koi laptop ya computer ki zaroorat nahi. oBizee app se 2 minute mein store ready. Step-by-step guide.",
-    datePublished: "2026-04-24",
-    dateModified: "2026-08-20",
-    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
-    publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
-    mainEntityOfPage: "https://www.obizee.com/blog/mobile-se-online-store-kaise-banaye",
-    image: "https://www.obizee.com/Obizee.png",
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.obizee.com/blog" },
-      { "@type": "ListItem", position: 3, name: "Mobile Se Online Store Kaise Banaye", item: "https://www.obizee.com/blog/mobile-se-online-store-kaise-banaye" },
-    ],
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <HinglishPost3 />
     </>
   );

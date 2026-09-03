@@ -22,33 +22,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "GST for Online Sellers in India: Everything You Need to Know [2026]",
-    description: "Complete guide to GST for online sellers in India. Registration threshold, rates, filing, invoicing, and common questions answered for ecommerce businesses.",
-    datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
-    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
-    publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
-    mainEntityOfPage: "https://www.obizee.com/blog/gst-for-online-sellers-india",
-    image: "https://www.obizee.com/Obizee.png",
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.obizee.com/blog" },
-      { "@type": "ListItem", position: 3, name: "GST for Online Sellers in India", item: "https://www.obizee.com/blog/gst-for-online-sellers-india" },
-    ],
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <TopFunnelPost4 />
     </>
   );

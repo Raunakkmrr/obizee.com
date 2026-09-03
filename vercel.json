@@ -11,10 +11,17 @@
     "These 301s carry the old URLs' authority to the new ones — never delete",
     "them, and never downgrade permanent to false.",
     "",
+    "The 2026-09-03 pricing rename: the '1%' blog post became the '₹50,000'",
+    "blog post, because the fee only applies after that threshold and the old",
+    "headline undersold it.",
+    "",
     "Both the bare and trailing-slash forms are listed because next.config.js",
     "sets trailingSlash: true, so the canonical form of every URL ends in '/'."
   ],
   "redirects": [
+    { "source": "/blog/why-obizee-charges-only-1-percent", "destination": "/blog/why-obizee-is-free-until-50000", "permanent": true },
+    { "source": "/blog/why-obizee-charges-only-1-percent/", "destination": "/blog/why-obizee-is-free-until-50000/", "permanent": true },
+
     { "source": "/compare/obizee-vs-dm2buy", "destination": "/dm2buy-alternative", "permanent": true },
     { "source": "/compare/obizee-vs-dm2buy/", "destination": "/dm2buy-alternative/", "permanent": true },
 

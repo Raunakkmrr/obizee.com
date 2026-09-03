@@ -22,18 +22,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "Shopify India Pricing: Is It Worth It for Small Businesses?",
-    description: "Shopify's real cost for Indian sellers, plus the India-specific problems its own community forum is full of — GST not calculating at checkout, broken Cash on Delivery, no live shipping rates — and how oBizee handles each.",
-    datePublished: "2026-04-24",
-    dateModified: "2026-08-31",
-    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
-    publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
-    mainEntityOfPage: "https://www.obizee.com/blog/shopify-india-pricing-review",
-    image: "https://www.obizee.com/Obizee.png",
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -47,21 +35,9 @@ export default function Page() {
     ],
   };
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.obizee.com/blog" },
-      { "@type": "ListItem", position: 3, name: "Shopify India Pricing Review", item: "https://www.obizee.com/blog/shopify-india-pricing-review" },
-    ],
-  };
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <BlogPost5 />
     </>
   );

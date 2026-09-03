@@ -22,33 +22,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "10 Cheapest Ecommerce Platforms in India [2026 Comparison]",
-    description: "A ranked comparison of the 10 most affordable ecommerce platforms for Indian sellers in 2026 \u2014 with real pricing, per-order fees, and honest pros and cons.",
-    datePublished: "2026-04-24",
-    dateModified: "2026-08-31",
-    author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
-    publisher: { "@type": "Organization", name: "oBizee", logo: { "@type": "ImageObject", url: "https://www.obizee.com/Obizee.png" } },
-    mainEntityOfPage: "https://www.obizee.com/blog/cheapest-ecommerce-platforms-india-2026",
-    image: "https://www.obizee.com/Obizee.png",
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.obizee.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.obizee.com/blog" },
-      { "@type": "ListItem", position: 3, name: "10 Cheapest Ecommerce Platforms in India", item: "https://www.obizee.com/blog/cheapest-ecommerce-platforms-india-2026" },
-    ],
-  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <BlogPost4 />
     </>
   );

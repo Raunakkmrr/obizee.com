@@ -18,8 +18,8 @@ const blogPosts = [
     category: "Getting Started",
   },
   {
-    slug: "why-obizee-charges-only-1-percent",
-    title: "Why oBizee Charges Only 1% — And Why That Matters for Small Businesses",
+    slug: "why-obizee-is-free-until-50000",
+    title: "Why oBizee Charges Nothing Until ₹50,000 — And Only 1% After That",
     description: "Understanding oBizee's pricing model: nothing at all until ₹50,000 in orders, then 1% per order capped at ₹10. How it compares to Shopify, Dukaan, and why it's the cheapest option in India.",
     date: "April 23, 2026",
     readTime: "6 min read",
