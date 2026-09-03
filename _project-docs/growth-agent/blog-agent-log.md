@@ -227,6 +227,56 @@ rebuild from scratch.
 Committed as a second commit on the same `blog-agent/2026-09-03` branch, pushed, PR #1
 updated (not a new PR).
 
+### Addendum 2 — 06:31–07:03 UTC, same run — direct correction, real feedback
+
+Raunak reviewed the previous addendum's output and rejected it as not up to standard, with
+specific, concrete critique:
+1. The DM2Buy hero line ("for sellers who have outgrown a catalog link") named one narrow
+   reason when there are many real reasons a seller is on this page — too reductive.
+2. Content was "not up to mark" generally.
+3/4. SitesPlaced's actual page uses real background/separator variation and follows a
+   specific section order (why → features → stores → why migrating → comparison → process
+   → what you keep → who it's for → free-vs-paid close) that the previous pass did not
+   follow — comparison and pricing were still opening the page instead of closing it.
+5. **The core correction, now codified as R11**: reusing oBizee's own existing components
+   because they already existed was optimizing for speed over quality. Explicit
+   instruction: "if something is average then remove it and implement something even
+   better." R5's asset-reuse guidance was never meant to license shipping something
+   merely average.
+
+Loaded the `visual-conviction` skill before touching code again, per standing personal
+guidance to do this before any product UI work. Then fully rebuilt both flagship pages
+(not just patched):
+- Rewrote both heroes to state the actual range of real reasons (reliability, missing
+  logistics, native payments/GST gaps, wanting one dashboard) instead of one guess.
+- Reordered both pages to match Raunak's own breakdown: hero → features (expanded from 3
+  cards to 4, richer, not thin) → named proof (Testimonials) → why sellers are actually
+  leaving (reframed, explicitly named as "rarely one thing") → quick verdict → feature
+  table → (Shopify only: cost-comparison table, a real oBizee-side mechanic SitesPlaced's
+  own page doesn't have) → migration offer → **two new sections that didn't exist before**:
+  "Who it's for" (real product categories, not invented) and "The honest pricing picture"
+  (a closing, non-pushy 0-SUBSCRIPTION statement, R3-compliant, no exact fee number) →
+  FAQ → CTA.
+- Introduced `bg-stone-50` as a genuine third surface tone (previously the pages
+  alternated only white/orange-50) for real section-to-section separation, without
+  inventing a new brand palette outside today's scope.
+- Fixed an unrelated pre-existing unused import (`Minus` from lucide-react) in
+  `CompareShopify.tsx` while in the file.
+
+Hit and resolved a real tooling issue along the way, logged in case it recurs: the Next.js
+dev server's Rust-side source reader intermittently threw `ENOENT` for a file that
+genuinely existed (confirmed via direct `node -e` read and `tsc`) — turned out to be a
+stuck client-side dev-overlay in one browser tab, not a real build failure; a fresh tab
+and a direct `curl` of the rendered HTML confirmed the page was serving correctly the
+whole time. Don't trust a single stuck tab's console over the server's own logs and a
+direct HTTP check.
+
+Verified: `tsc --noEmit` clean, both pages return HTTP 200, curl of the rendered HTML
+confirms every new section is present server-side, fresh browser tab shows zero console
+errors on both pages.
+
+Committed as a third commit on `blog-agent/2026-09-03`, pushed, PR #1 updated again.
+
 ---
 
 ## Bootstrap — 2026-09-03

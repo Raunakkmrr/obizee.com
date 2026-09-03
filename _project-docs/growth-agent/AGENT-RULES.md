@@ -172,6 +172,37 @@ Do not copy their visual design system — their specific palette and fonts are 
 and R5 already covers this for content; the same applies to visual identity. Copy the
 structural/content pattern above, in oBizee's own voice and design system.
 
+**The section order that actually works** (Raunak's own breakdown of
+`sitesplaced.com/dm2buy-alternative`, 2026-09-03 — treat this as the reference flow, not
+just the list of sections R5 already names): hero (why) → features, already-plugged-in →
+named stores/proof → why sellers are actually leaving (the trigger, framed as a real
+pattern, not a single narrow reason) → feature comparison table → migration process →
+"what you keep" trust section → who the product is actually for → a closing, honest
+statement of the pricing shape (not a hard sell) — then FAQ, then CTA. Comparison and
+pricing come **after** proof and trust are established, not as the opening pitch.
+
+**Hero copy must not narrow the reason someone is on this page to one guess.** A hero that
+states a single specific trigger ("for sellers who have outgrown a catalog link") is
+telling every reader who is here for a different reason that this page is not for them.
+State the range of real reasons plainly, or state the outcome instead of guessing the
+cause.
+
+### R11 — Reuse only what's already excellent; average existing work does not survive
+Corrected 2026-09-03, after direct feedback that the first attempt at R10 "was not up to
+mark" and "just implementing what is already there" rather than learning from it. R5's
+push toward reusing oBizee's own existing assets (`sellerQuotes.ts`, `move-my-store`) is
+about not inventing fake proof or duplicating real work — **it is not permission to ship
+something merely average because it already existed.** Before reusing any existing
+section or component on a page you're rebuilding, judge it against the competitor's live
+page, not against oBizee's own prior bar. If oBizee's version is thinner content, a
+flatter visual treatment (background/separator variation matters — a page that is white
+and orange-50 in strict alternation, with no other surface, reads as unfinished next to a
+competitor using a real palette and real photography), or a narrower framing than the
+actual range of reasons a seller is here — **remove it and implement something better,
+even if that means not reusing something that was already built.** Raunak's own words:
+"if something is average then remove it and implement something even better." Speed from
+reuse is never the reason to settle.
+
 ---
 
 ## The daily loop

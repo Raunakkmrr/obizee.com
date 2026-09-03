@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, X, Phone, Calendar, User } from "lucide-react";
+import { ArrowRight, Check, X, Phone, Calendar, User, Truck, MessageCircle, Wallet, Package } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
@@ -34,6 +34,23 @@ const CompareDM2buy = () => {
       obizee: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, plus retention SMS to at-risk and win-back segments at ₹0.25 a message.",
       rival: "DM2Buy is a catalog tool, not a business system. Stock, materials, vendors and repeat-customer marketing all live outside it.",
     },
+  ];
+
+  const alreadyPluggedIn = [
+    { icon: Truck, title: "Shipping, not a separate app", desc: "Delhivery, DTDC, Blue Dart and India Post, plus same-day hyperlocal via Borzo and Shadowfax. Live rate comparison, AWB generation and pickup scheduling, all from the app." },
+    { icon: MessageCircle, title: "Instagram and WhatsApp, one dashboard", desc: "Custom order forms, QR codes and shareable links across both channels, so orders land in one place instead of three inboxes." },
+    { icon: Wallet, title: "Payments, already connected", desc: "Razorpay and Paytm built in — no separate gateway account to open or configure before you can take an order." },
+    { icon: Package, title: "The business behind the shop", desc: "Raw materials and recipes, purchase lists, vendor management, expense and profit tracking, and retention SMS to win back customers who haven't ordered in a while." },
+  ];
+
+  const forWhom = [
+    "Crochet & handmade",
+    "Jewellery & accessories",
+    "Clothing & fashion",
+    "Food, snacks & bakery",
+    "Beauty & skincare",
+    "Home decor & gifting",
+    "Art & prints",
   ];
 
   const features = [
@@ -147,6 +164,7 @@ const CompareDM2buy = () => {
       <div className="min-h-screen bg-white">
         <Navigation />
 
+        {/* Hero — the range of real reasons, not one narrow guess */}
         <section className="py-12 sm:py-16 bg-gradient-to-br from-white to-orange-50/40">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-sm font-semibold text-orange-600 uppercase tracking-wide mb-3">2026 Comparison</p>
@@ -157,7 +175,7 @@ const CompareDM2buy = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a DM2Buy alternative for Indian sellers who have outgrown a catalog link. It adds Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm built in, UNLIMITED products and variants, a FREE mapped custom domain, and inventory and raw-material tracking, and retention SMS — with 0 SETUP FEE and 0 SUBSCRIPTION. DM2Buy is a catalog and order-link tool without built-in logistics.
+              Sellers move off DM2Buy for different reasons — a storefront that has gone down at the wrong moment, no way to book a courier without opening a second app, or just wanting Instagram and WhatsApp orders in one dashboard instead of three. oBizee is built to be the platform you don't have to leave next: Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery via Borzo and Shadowfax, Razorpay and Paytm built in, UNLIMITED products and variants, and a FREE mapped custom domain — with 0 SETUP FEE and 0 SUBSCRIPTION.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">
@@ -172,74 +190,40 @@ const CompareDM2buy = () => {
           </div>
         </section>
 
-        <section className="py-8 bg-orange-50">
+        {/* Features — already plugged in, not sold as separate apps */}
+        <section className="py-10 sm:py-14 bg-stone-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Verdict</h2>
-              <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                <strong>Choose oBizee</strong> if you need shipping integration, want to sell on both Instagram and WhatsApp, and prefer transparent pricing. <strong>Consider DM2buy</strong> if you're purely an Instagram seller who values their seller collaboration network and doesn't need logistics support.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-10 sm:py-14">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Feature-by-Feature Comparison</h2>
-            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[700px] text-sm sm:text-base">
-                  <thead className="bg-gray-100">
-                    <tr>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-700 w-1/3">Feature</th>
-                      <th className="px-4 py-3 text-left font-semibold text-orange-600 w-1/3">oBizee</th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-700 w-1/3">DM2buy</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {features.map((row) => (
-                      <tr key={row.feature} className={`border-t border-gray-100 ${row.winner === "obizee" ? "bg-green-50/50" : row.winner === "competitor" ? "bg-blue-50/30" : ""}`}>
-                        <td className="px-4 py-3 font-medium text-gray-900">{row.feature}</td>
-                        <td className="px-4 py-3 text-gray-700">{renderValue(row.obizee)}</td>
-                        <td className="px-4 py-3 text-gray-700">{renderValue(row.competitor)}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <p className="text-center text-gray-500 mt-4 text-sm">
-              oBizee wins on 20 features. DM2buy wins on 3 features (collaboration network, IRL events & free to start). 3 are tied.
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-2">Everything already plugged in</h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              Not an app store. Not a Pro-plan gate. Shipping, payments, multi-channel selling and the
+              business tooling behind the shop, included from day one.
             </p>
-          </div>
-        </section>
-
-        <section className="py-10 sm:py-14 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Why oBizee Wins for Indian Sellers</h2>
             <div className="grid sm:grid-cols-2 gap-5">
-              {[
-                { title: "Built-in Shipping", desc: "Delhivery, DTDC & Blue Dart integrated natively. AWB generation, pickup scheduling, live tracking — all from the app. DM2buy has no shipping integration." },
-                { title: "Multi-Channel Selling", desc: "Sell on Instagram, WhatsApp, and your own website from one dashboard. DM2buy only supports Instagram." },
-                { title: "FREE Custom Domain", desc: "DNS and SSL mapped for you at 0 cost, store live in under 2 minutes. DM2buy doesn't map a domain for you at all." },
-              ].map((item) => (
+              {alreadyPluggedIn.map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-orange-100 mb-4">
+                    <item.icon className="h-5 w-5 text-orange-600" aria-hidden="true" />
+                  </span>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-10 sm:py-14">
+        {/* Named proof — real shops, open right now */}
+        <Testimonials />
+
+        {/* Why sellers are actually leaving DM2Buy — a pattern, not one narrow reason */}
+        <section className="py-10 sm:py-14 bg-stone-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">
-              What You Actually Need, and When
+              Why sellers are actually leaving DM2Buy
             </h2>
             <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-              Most platforms solve the first stage well and leave you to buy apps for the rest.
-              Here is where each one stops.
+              It is rarely one thing. Most platforms solve the first stage well and leave you to buy
+              apps for the rest — here is where sellers say DM2Buy stops being enough.
             </p>
 
             <div className="space-y-6">
@@ -271,11 +255,89 @@ const CompareDM2buy = () => {
           </div>
         </section>
 
-        <Testimonials />
+        {/* Quick verdict, as the lead-in to the comparison table */}
+        <section className="py-8 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-orange-50 rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
+              <h2 className="text-xl font-bold text-gray-900 mb-3">The Short Version</h2>
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                <strong>Choose oBizee</strong> if you need shipping integration, want to sell on both Instagram and WhatsApp, and prefer transparent pricing. <strong>Consider DM2buy</strong> if you're purely an Instagram seller who values their seller collaboration network and doesn't need logistics support.
+              </p>
+            </div>
+          </div>
+        </section>
 
+        {/* Feature comparison table */}
+        <section className="py-10 sm:py-14 bg-gray-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Feature-by-Feature Comparison</h2>
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[700px] text-sm sm:text-base">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-700 w-1/3">Feature</th>
+                      <th className="px-4 py-3 text-left font-semibold text-orange-600 w-1/3">oBizee</th>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-700 w-1/3">DM2buy</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {features.map((row) => (
+                      <tr key={row.feature} className={`border-t border-gray-100 ${row.winner === "obizee" ? "bg-green-50/50" : row.winner === "competitor" ? "bg-blue-50/30" : ""}`}>
+                        <td className="px-4 py-3 font-medium text-gray-900">{row.feature}</td>
+                        <td className="px-4 py-3 text-gray-700">{renderValue(row.obizee)}</td>
+                        <td className="px-4 py-3 text-gray-700">{renderValue(row.competitor)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p className="text-center text-gray-500 mt-4 text-sm">
+              oBizee wins on 20 features. DM2buy wins on 3 features (collaboration network, IRL events & free to start). 3 are tied.
+            </p>
+          </div>
+        </section>
+
+        {/* Migration process + what you keep */}
         <CompareMigrationOffer competitorName="DM2Buy" />
 
-        <section className="py-12 sm:py-16">
+        {/* Who it's for */}
+        <section className="py-10 sm:py-14 bg-orange-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Built for Indian Instagram and WhatsApp sellers</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+              Not generic ecommerce. oBizee is built for small businesses selling handmade and short-run
+              products from a phone, usually as a one-person team.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {forWhom.map((cat) => (
+                <span key={cat} className="rounded-full bg-white border border-orange-200 px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">
+                  {cat}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Honest, closing statement of the pricing shape — not a hard sell */}
+        <section className="py-10 sm:py-14 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="rounded-2xl border-2 border-orange-200 bg-white p-8 sm:p-10">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">The honest pricing picture</h2>
+              <p className="text-gray-600 leading-relaxed">
+                0 SUBSCRIPTION, always — not a free tier with the real features locked behind a paid plan.
+                You pay only when you get an order, and a month with no orders costs nothing.
+                No setup fee, no monthly minimum, nothing hidden in an app-store add-on.
+              </p>
+              <a href="/pricing" className="inline-block mt-5 text-sm font-semibold text-orange-600 hover:text-orange-700 underline underline-offset-4">
+                See the full structure on Pricing →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
             <div className="space-y-5">

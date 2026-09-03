@@ -4,7 +4,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, X, Minus, Phone, Calendar, User } from "lucide-react";
+import { ArrowRight, Check, X, Phone, Calendar, User, Truck, MessageCircle, Wallet, Receipt } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
@@ -34,6 +34,13 @@ const CompareShopify = () => {
     { feature: "Expense & profit tracking", obizee: true, competitor: "Via paid apps", winner: "obizee" },
     { feature: "Setup time", obizee: "Under 2 minutes", competitor: "30–60 minutes", winner: "obizee" },
     { feature: "Best for", obizee: "Indian sellers on Instagram, WhatsApp and local delivery", competitor: "Global brands with budget for apps", winner: "tie" },
+  ];
+
+  const alreadyPluggedIn = [
+    { icon: Wallet, title: "0 SUBSCRIPTION, not a monthly floor", desc: "No fee before your first sale. FREE 3-month trial, FREE setup, FREE custom domain — see Pricing for the simple structure once you're selling." },
+    { icon: Truck, title: "Built-in Indian logistics", desc: "Delhivery, DTDC and Blue Dart integrated natively. AWB generation, pickup scheduling, live tracking — all from the app, not a paid Shiprocket app." },
+    { icon: MessageCircle, title: "Instagram and WhatsApp, native", desc: "Custom order forms, QR codes and shareable links for both channels — Shopify has no equivalent without a third-party app." },
+    { icon: Receipt, title: "GST that doesn't depend on the gateway", desc: "CGST/SGST/IGST worked out first-party from the product's HSN rate and buyer's state — not routed through a payment integration that can silently stop applying it." },
   ];
 
   // The spine of the page: what a seller actually needs at each stage, and where
@@ -67,6 +74,16 @@ const CompareShopify = () => {
     { orders: "100 orders/month (avg ₹500)", obizee: "0 SUBSCRIPTION", shopify: "₹2,000+ subscription + gateway fees" },
     { orders: "200 orders/month (avg ₹1,000)", obizee: "0 SUBSCRIPTION", shopify: "₹2,000+ subscription + ₹2,000+ fees" },
     { orders: "500 orders/month (avg ₹2,000)", obizee: "0 SUBSCRIPTION", shopify: "₹2,000+ subscription + ₹5,000+ fees" },
+  ];
+
+  const forWhom = [
+    "Crochet & handmade",
+    "Jewellery & accessories",
+    "Clothing & fashion",
+    "Food, snacks & bakery",
+    "Beauty & skincare",
+    "Home decor & gifting",
+    "Art & prints",
   ];
 
   const faqs = [
@@ -175,7 +192,7 @@ const CompareShopify = () => {
       <div className="min-h-screen bg-white">
         <Navigation />
 
-        {/* Hero */}
+        {/* Hero — the range of real reasons, not one narrow guess */}
         <section className="py-12 sm:py-16 bg-gradient-to-br from-white to-orange-50/40">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-sm font-semibold text-orange-600 uppercase tracking-wide mb-3">2026 Comparison</p>
@@ -186,7 +203,7 @@ const CompareShopify = () => {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              oBizee is a Shopify alternative built for Indian sellers, with 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products and variants, Razorpay and Paytm built in, Delhivery, DTDC and Blue Dart shipping, and same-day hyperlocal delivery through Borzo and Shadowfax. Shopify starts at ₹1,994 per month as of 2026 and needs paid apps for Indian couriers. Here is the honest comparison.
+              Indian sellers move off Shopify for different reasons — a ₹1,994/month bill before the first sale, Shopify Payments not existing in India so every order pays a gateway on top of a gateway, a GST calculation that can silently stop applying, or just wanting Instagram and WhatsApp orders somewhere a global theme store was never built for. oBizee is 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products and variants, Razorpay and Paytm built in, and Delhivery, DTDC and Blue Dart shipping with same-day hyperlocal delivery through Borzo and Shadowfax. Here is the honest comparison.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mt-6">
               <div className="flex items-center gap-1.5">
@@ -201,106 +218,40 @@ const CompareShopify = () => {
           </div>
         </section>
 
-        {/* Quick verdict */}
-        <section className="py-8 bg-orange-50">
+        {/* Features — already plugged in, not sold as separate apps */}
+        <section className="py-10 sm:py-14 bg-stone-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Verdict</h2>
-              <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                <strong>Choose oBizee</strong> if you're a small Indian merchant, Instagram seller, or home business looking for the most affordable way to sell online with built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping. <strong>Choose Shopify</strong> if you're a larger business with complex needs, selling internationally, and have a budget of ₹2,000+/month for your platform.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Feature Comparison Table */}
-        <section className="py-10 sm:py-14">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Feature-by-Feature Comparison</h2>
-            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[700px] text-sm sm:text-base">
-                  <thead className="bg-gray-100">
-                    <tr>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-700 w-1/3">Feature</th>
-                      <th className="px-4 py-3 text-left font-semibold text-orange-600 w-1/3">oBizee</th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-700 w-1/3">Shopify</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {features.map((row, i) => (
-                      <tr key={row.feature} className={`border-t border-gray-100 ${row.winner === "obizee" ? "bg-green-50/50" : ""}`}>
-                        <td className="px-4 py-3 font-medium text-gray-900">{row.feature}</td>
-                        <td className="px-4 py-3 text-gray-700">{renderValue(row.obizee)}</td>
-                        <td className="px-4 py-3 text-gray-700">{renderValue(row.competitor)}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Cost Comparison */}
-        <section className="py-10 sm:py-14 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">Monthly Cost Comparison</h2>
-            <p className="text-gray-600 text-center mb-8">oBizee stays at 0 subscription at every volume — see <Link href="/pricing">Pricing</Link> for the per-order structure</p>
-            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[600px] text-sm sm:text-base">
-                  <thead className="bg-gray-100">
-                    <tr>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-700">Scenario</th>
-                      <th className="px-4 py-3 text-left font-semibold text-orange-600">oBizee Cost</th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-700">Shopify Cost</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {costComparison.map((row) => (
-                      <tr key={row.orders} className="border-t border-gray-100">
-                        <td className="px-4 py-3 font-medium text-gray-900">{row.orders}</td>
-                        <td className="px-4 py-3 text-green-700 font-semibold">{row.obizee}</td>
-                        <td className="px-4 py-3 text-gray-700">{row.shopify}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why oBizee */}
-        <section className="py-10 sm:py-14">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Why Indian Sellers Choose oBizee Over Shopify</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-2">Everything already plugged in</h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+              Not a theme marketplace and an app stack. Shipping, payments, GST and multi-channel
+              selling, included from day one.
+            </p>
             <div className="grid sm:grid-cols-2 gap-5">
-              {[
-                { title: "0 SUBSCRIPTION", desc: "No monthly fee, ever. FREE 3-month trial, FREE setup, FREE custom domain — see Pricing for the simple structure once you're selling." },
-                { title: "Built-in Indian Logistics", desc: "Delhivery, DTDC & Blue Dart integrated natively. Generate AWB, schedule pickups, live tracking — all from the app." },
-                { title: "2-Minute Setup", desc: "Sign up, add products, get your website. No themes to configure, no apps to install." },
-                { title: "Made for Indian Merchants", desc: "Built specifically for Instagram sellers, WhatsApp businesses, and home entrepreneurs in India." },
-              ].map((item) => (
-                <div key={item.title} className="bg-orange-50 rounded-2xl p-6">
+              {alreadyPluggedIn.map((item) => (
+                <div key={item.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-orange-100 mb-4">
+                    <item.icon className="h-5 w-5 text-orange-600" aria-hidden="true" />
+                  </span>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="py-10 sm:py-14">
+        {/* Named proof — real shops, open right now */}
+        <Testimonials />
+
+        {/* Why sellers are actually leaving Shopify — a pattern, not one narrow reason */}
+        <section className="py-10 sm:py-14 bg-stone-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">
-              What You Actually Need, and When
+              Why Indian sellers are actually leaving Shopify
             </h2>
             <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-              Most platforms solve the first stage well and leave you to buy apps for the rest.
-              Here is where each one stops.
+              It is rarely one thing. Most platforms solve the first stage well and leave you to buy
+              apps for the rest — here is where sellers say Shopify stops being enough in India.
             </p>
 
             <div className="space-y-6">
@@ -332,9 +283,114 @@ const CompareShopify = () => {
           </div>
         </section>
 
-        <Testimonials />
+        {/* Quick verdict, as the lead-in to the comparison table */}
+        <section className="py-8 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-orange-50 rounded-2xl border-2 border-orange-200 p-6 sm:p-8">
+              <h2 className="text-xl font-bold text-gray-900 mb-3">The Short Version</h2>
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                <strong>Choose oBizee</strong> if you're a small Indian merchant, Instagram seller, or home business looking for the most affordable way to sell online with built-in Delhivery, DTDC, Blue Dart & same-day hyperlocal shipping. <strong>Choose Shopify</strong> if you're a larger business with complex needs, selling internationally, and have a budget of ₹2,000+/month for your platform.
+              </p>
+            </div>
+          </div>
+        </section>
 
+        {/* Feature Comparison Table */}
+        <section className="py-10 sm:py-14 bg-gray-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">Feature-by-Feature Comparison</h2>
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[700px] text-sm sm:text-base">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-700 w-1/3">Feature</th>
+                      <th className="px-4 py-3 text-left font-semibold text-orange-600 w-1/3">oBizee</th>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-700 w-1/3">Shopify</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {features.map((row, i) => (
+                      <tr key={row.feature} className={`border-t border-gray-100 ${row.winner === "obizee" ? "bg-green-50/50" : ""}`}>
+                        <td className="px-4 py-3 font-medium text-gray-900">{row.feature}</td>
+                        <td className="px-4 py-3 text-gray-700">{renderValue(row.obizee)}</td>
+                        <td className="px-4 py-3 text-gray-700">{renderValue(row.competitor)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Cost Comparison — the mechanic Shopify's own page can't show, since oBizee has no tiers */}
+        <section className="py-10 sm:py-14 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-3">Monthly Cost Comparison</h2>
+            <p className="text-gray-600 text-center mb-8">oBizee stays at 0 subscription at every volume — see <Link href="/pricing">Pricing</Link> for the per-order structure</p>
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[600px] text-sm sm:text-base">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-700">Scenario</th>
+                      <th className="px-4 py-3 text-left font-semibold text-orange-600">oBizee Cost</th>
+                      <th className="px-4 py-3 text-left font-semibold text-gray-700">Shopify Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {costComparison.map((row) => (
+                      <tr key={row.orders} className="border-t border-gray-100">
+                        <td className="px-4 py-3 font-medium text-gray-900">{row.orders}</td>
+                        <td className="px-4 py-3 text-green-700 font-semibold">{row.obizee}</td>
+                        <td className="px-4 py-3 text-gray-700">{row.shopify}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Migration process + what you keep */}
         <CompareMigrationOffer competitorName="Shopify" />
+
+        {/* Who it's for */}
+        <section className="py-10 sm:py-14 bg-orange-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Built for Indian Instagram and WhatsApp sellers</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+              Not a global storefront platform. oBizee is built for small businesses selling handmade
+              and short-run products from a phone, usually as a one-person team.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {forWhom.map((cat) => (
+                <span key={cat} className="rounded-full bg-white border border-orange-200 px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">
+                  {cat}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Honest, closing statement of the pricing shape — not a hard sell */}
+        <section className="py-10 sm:py-14 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="rounded-2xl border-2 border-orange-200 bg-white p-8 sm:p-10">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">The honest pricing picture</h2>
+              <p className="text-gray-600 leading-relaxed">
+                0 SUBSCRIPTION, always — no ₹1,994/month floor before your first sale. You pay only
+                when you get an order, and a month with no orders costs nothing. No setup fee, no
+                theme marketplace, nothing hidden in an app-store add-on.
+              </p>
+              <a href="/pricing" className="inline-block mt-5 text-sm font-semibold text-orange-600 hover:text-orange-700 underline underline-offset-4">
+                See the full structure on Pricing →
+              </a>
+            </div>
+          </div>
+        </section>
 
         <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
