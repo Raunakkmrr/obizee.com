@@ -25,6 +25,9 @@ export default {
 				// Headings. Applied through a base rule in src/index.css so every
 				// existing h1/h2/h3 picks it up without touching each component.
 				display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
+				// Editorial serif, italic only. The competitor's name in a comparison
+				// headline, or a pull quote. Never body copy, never UI.
+				editorial: ["var(--font-editorial)", "ui-serif", "Georgia", "serif"],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

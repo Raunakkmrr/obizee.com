@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Plus_Jakarta_Sans } from "next/font/google";
+import { Bricolage_Grotesque, Plus_Jakarta_Sans, Instrument_Serif } from "next/font/google";
 import "../src/index.css";
 
 /**
@@ -23,6 +23,20 @@ const body = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-body",
+  display: "swap",
+});
+
+/**
+ * One editorial serif, italic only, used sparingly — the competitor's name in a
+ * comparison headline, a pull quote. The contrast against the grotesque is what
+ * makes an argument section read as journalism rather than as a sales page.
+ * Not for body copy, not for UI.
+ */
+const editorial = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["italic"],
+  variable: "--font-editorial",
   display: "swap",
 });
 import Providers from "./providers";
@@ -73,7 +87,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${display.variable} ${body.variable}`}>
+    <html lang="en-IN" className={`${display.variable} ${body.variable} ${editorial.variable}`}>
       <head>
         <link rel="icon" type="image/png" href="/Obizee.png" />
       </head>
