@@ -178,6 +178,55 @@ by hand per R9.
 
 Committed to `blog-agent/2026-09-03`, pushed, PR opened against `main` per R1.
 
+### Addendum — 06:09–06:31 UTC, same run, interactive with Raunak
+
+After the PR opened, Raunak directed two follow-ups directly:
+
+**1. Closed the named-proof/migration-offer gap on the two flagship pages.** He set
+`obizee-vs-dm2buy` and `obizee-vs-shopify` as the pages that get first/deepest attention
+going forward (now codified as **R10** in `AGENT-RULES.md` — also mirrored into the
+source-of-truth `SKILL.md`). Direct fetch of `sitesplaced.com/dm2buy-alternative` and
+`sitesplaced.com/vs/shopify` (not memory/secondhand) confirmed the teardown's spine still
+holds and added new specifics: their FAQ answers are fully present in `FAQPage` JSON-LD
+even though visually accordion-collapsed, every H2 reads as the literal question a
+searcher/AI would ask, and numbers are always concrete (827 products, 24 hours, 11/50
+early-bird slots) rather than vague. R10 captures this as the content-directness bar.
+
+Built and shipped, reusing already-approved assets instead of writing new content or
+waiting on new permission:
+- `src/components/Testimonials.tsx` (the homepage's approved seller-quote grid — 6
+  sellers, all approved 2026-08-31) is now also rendered on both flagship pages.
+- New `src/components/CompareMigrationOffer.tsx` — a compact 4-step + "what you keep"
+  migration section, per-competitor personalized copy and WhatsApp message, linking to
+  the full `/move-my-store` page for detail.
+- New `src/data/migrationOffer.ts` — extracted the steps/keeps data out of
+  `MoveMyStoreClient.tsx` into one shared source, so the full page and the new compact
+  section can't drift apart. Also fixed a real bug found in the process: the migration
+  page's own step-1 copy listed Dukaan/Shopify/Bikayi/Instamojo as source platforms but
+  never DM2Buy — despite DM2Buy being one of the four highest-priority switch-from
+  targets. Fixed.
+- Both flagship pages' `dateModified` bumped to 2026-09-03 (real edit, real date).
+- Verified: `tsc --noEmit` clean, both pages render with no console errors, migration CTA
+  correctly personalizes per competitor (checked via the rendered WhatsApp link text on
+  both pages, not assumed).
+
+**2. Updated the rulebook itself** (`AGENT-RULES.md`, the mirrored `SKILL.md`, and
+`CONTEXT.md`) so future scheduled runs inherit today's decisions rather than this being a
+one-off. R5 now points first at `sellerQuotes.ts`/`move-my-store` (today's discovery)
+before falling back to `sitesplaced-teardown.md`'s raw numbers. R10 is new. `CONTEXT.md`'s
+settled-decisions section records both changes with the reasoning, per its own "why"
+convention.
+
+Not yet done, flagged for a future run rather than attempted today: extending the same
+named-proof + migration-offer sections to the other 4 compare pages (Dukaan, Bikayi,
+Instamojo, WooCommerce). Per R10 this is intentionally lower priority than the two
+flagship pages, but should still happen — `CompareMigrationOffer` and `Testimonials` are
+now both drop-in ready for any compare page, so this is fast follow-up work, not a
+rebuild from scratch.
+
+Committed as a second commit on the same `blog-agent/2026-09-03` branch, pushed, PR #1
+updated (not a new PR).
+
 ---
 
 ## Bootstrap — 2026-09-03

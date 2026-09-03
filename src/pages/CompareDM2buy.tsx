@@ -7,6 +7,8 @@ import { ArrowRight, Check, X, Phone, Calendar, User } from "lucide-react";
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import Testimonials from "@/components/Testimonials";
+import CompareMigrationOffer from "@/components/CompareMigrationOffer";
 import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const CompareDM2buy = () => {
@@ -103,7 +105,7 @@ const CompareDM2buy = () => {
     headline: "oBizee vs DM2buy — Which D2C Platform is Better for Indian Sellers?",
     description: "Compare oBizee and DM2buy: features, pricing, shipping, multi-channel support. oBizee wins on 20 of 26 features.",
     datePublished: "2026-04-23",
-    dateModified: "2026-08-31",
+    dateModified: "2026-09-03",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: {
       "@type": "Organization",
@@ -164,7 +166,7 @@ const CompareDM2buy = () => {
               </div>
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
-                <span>Published 23 April 2026 · Updated 31 August 2026</span>
+                <span>Published 23 April 2026 · Updated 3 September 2026</span>
               </div>
             </div>
           </div>
@@ -268,6 +270,10 @@ const CompareDM2buy = () => {
             </div>
           </div>
         </section>
+
+        <Testimonials />
+
+        <CompareMigrationOffer competitorName="DM2Buy" />
 
         <section className="py-12 sm:py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

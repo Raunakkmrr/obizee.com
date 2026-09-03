@@ -77,9 +77,26 @@ that gets a page discounted by Google.
 ### R5 — Recreate the mechanic, never the sentence
 When a competitor's page does something demonstrably working (SitesPlaced's named
 customer proof, migration offer, evaluation-criteria section, integrations showcase),
-adapt the *structure* using oBizee's own real facts — the 887 products across 4 named
-merchants and 3,281 lifetime orders documented in `sitesplaced-teardown.md`, not invented
-numbers. Never reproduce their copy. One short quote under 15 words, attributed, is the
+adapt the *structure* using oBizee's own real facts. **The actual assets to use, found
+2026-09-03 and already cleared for public use — check these before reaching for
+`sitesplaced-teardown.md`'s raw numbers:**
+- **Named proof:** `src/data/sellerQuotes.ts` — 6 sellers, real attributed quotes, real
+  product counts, real logos, each individually approved in writing on 2026-08-31 (see
+  the `approvedOn` field per entry). Already live on the homepage (`Testimonials.tsx`) —
+  reuse directly on compare pages, no new merchant permission needed. Only add a NEW
+  seller's quote here if they have actually approved it in writing (`approvedOn` starts
+  `null` and must not go live until set) — never invent or paraphrase a quote without
+  that approval on record.
+- **Migration offer:** `app/move-my-store/MoveMyStoreClient.tsx` already exists — a
+  4-step process, a 6-item "what you keep" loss-aversion list, a WhatsApp CTA. Link to it
+  and/or adapt a condensed version directly onto compare pages rather than building a new
+  migration section from scratch. Its step-1 copy lists Dukaan/Shopify/Bikayi/Instamojo
+  as source platforms but not DM2Buy — fix that omission if you touch this file.
+- `sitesplaced-teardown.md`'s numbers (887 products / 4 merchants / 3,281 orders) are a
+  fallback only, if `sellerQuotes.ts` doesn't cover the specific sellers a page needs —
+  prefer the already-approved quotes first.
+
+Never reproduce a competitor's copy. One short quote under 15 words, attributed, is the
 ceiling if you must cite a forum thread directly.
 
 ### R6 — When the human voice is uncertain, stop and ask — don't guess
@@ -118,6 +135,43 @@ r/IndiaBusiness and r/smallbusiness remove undisclosed promotion. This agent nev
 and never will have a Reddit login. Posting is done by Raunak or whoever on the team he
 asks.
 
+### R10 — DM2Buy and Shopify are the flagship pages; write for AI-answer directness
+`obizee-vs-dm2buy` and `obizee-vs-shopify` get first and deepest attention every run —
+Raunak's explicit priority (2026-09-03). Every other compare page is held to the same
+structural and content bar below, but doesn't need a dedicated rebuild each run unless
+something urgent surfaces (a factual-accuracy break like Bikayi's 2023 shutdown, not
+routine polish).
+
+The actual bar, reverse-engineered from a direct fetch of
+`sitesplaced.com/dm2buy-alternative` and `sitesplaced.com/vs/shopify` on 2026-09-03 —
+re-fetch and re-verify each time you rely on this, their template updates:
+- Every H2 is a small-caps eyebrow label + a plain-English sentence that could be the
+  literal query or AI-assistant question itself ("Why sellers are migrating from dm2buy
+  in 2026," not "Why Choose Us").
+- FAQ questions are phrased as a real person's exact question ("Will I lose any product
+  information, customer data or order history when I switch?"), not a marketing
+  paraphrase.
+- FAQ answers lead with the direct yes/no/number in the first few words, then supporting
+  detail. No throat-clearing, no "Great question!" filler.
+- The `FAQPage` JSON-LD carries the FULL answer text even when the visible UI has the FAQ
+  collapsed behind an accordion — confirmed by reading their schema directly, not
+  assumed. Check oBizee's own `FAQPage` JSON-LD matches its visible answers every time
+  (this connects to R8) — an answer that only exists after a click and isn't also in the
+  schema is invisible to a crawler.
+- Concrete numbers everywhere instead of vague claims: "827 real products," "24 hours,"
+  "11 taken · 39 left" — not "many sellers" or "fast migration."
+- Freshness stated in visible text, not just meta: "Last reviewed May 2026," a dated
+  byline. This is its own citation-trust signal, independent of the `dateModified`
+  schema field.
+- Fair, caveat-aware treatment of the competitor even inside a comparison table
+  ("Pro-plan-only," "currently broken," not blanket false) — this is what makes the page
+  read as credible rather than a sales pitch, which is exactly what gets it cited.
+- Short, declarative sentences. Minimal subordinate clauses.
+
+Do not copy their visual design system — their specific palette and fonts are their own,
+and R5 already covers this for content; the same applies to visual identity. Copy the
+structural/content pattern above, in oBizee's own voice and design system.
+
 ---
 
 ## The daily loop
@@ -139,11 +193,16 @@ pattern of complaints on their own community forum or review sites. Use WebSearc
 WebFetch. Do not scrape Google's own search UI directly — it CAPTCHAs automated traffic,
 and bypassing that is off-limits regardless of whether it's technically possible.
 
-**3. Component/section gap analysis.** Take the competitor's strongest page for the
-query oBizee most wants to win. List every section it has (evaluation criteria, named
-proof, migration/switching offer, comparison table, FAQ addressing the worst objection,
-integrations showcase — the spine documented in `sitesplaced-teardown.md`). Check
-oBizee's equivalent page section-by-section. List what's missing.
+**3. Component/section gap analysis.** Per R10, start with `obizee-vs-dm2buy` and
+`obizee-vs-shopify` — those two get the deepest gap analysis every run. Take the
+competitor's strongest page for the query oBizee most wants to win. List every section
+it has (evaluation criteria, named proof, migration/switching offer, comparison table,
+FAQ addressing the worst objection, integrations showcase — the spine documented in
+`sitesplaced-teardown.md`, refined by R10's content-directness findings). Check oBizee's
+equivalent page section-by-section. List what's missing. Only extend this same
+gap-analysis depth to the other compare pages if something urgent surfaced in phase 2
+(a factual-accuracy break, not routine polish) — otherwise just confirm they still meet
+the same bar (R8 checks, no stale claims) without a full rebuild.
 
 **4. Verify, per R2, before writing anything for a gap.** Confirmed or already-true-per-
 this-repo's-own-content → write it. Not found / can't verify → flag it per R7 instead of

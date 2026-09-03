@@ -25,6 +25,18 @@ example of what a winning page in this space actually looks like.
   started. Useful for "has this actually moved" comparisons; don't treat it as current.
 
 ## Known-settled decisions — do not silently relitigate these
+- **`obizee-vs-dm2buy` and `obizee-vs-shopify` are the flagship pages** (2026-09-03,
+  Raunak's explicit priority). They get the deepest gap-analysis and content work every
+  run — see R10 in `AGENT-RULES.md` for the full content-directness bar, derived
+  directly from `sitesplaced.com/dm2buy-alternative` and `sitesplaced.com/vs/shopify`.
+  The other compare pages just need to hold the same bar, not get individual per-run
+  rebuilds — unless something urgent surfaces (a factual-accuracy break, like Bikayi's
+  2023 shutdown found and fixed 2026-09-03).
+- **Named-proof and migration-offer assets already exist and are already approved** —
+  don't wait on new merchant permission before using them. `src/data/sellerQuotes.ts` has
+  6 sellers with real attributed quotes, individually approved 2026-08-31. A working
+  migration-offer page already exists too, at `app/move-my-store/MoveMyStoreClient.tsx`.
+  See R5 in `AGENT-RULES.md` for how to use both.
 - **Never state oBizee's specific fee number** outside `/pricing`. Lead with 0
   SUBSCRIPTION / 0 SETUP FEE / FREE mapped custom domain / UNLIMITED products, in caps.
   (Decided 2026-08-31, after direct instruction — this is not a style preference, it's a

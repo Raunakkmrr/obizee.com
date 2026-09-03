@@ -8,6 +8,8 @@ import { ArrowRight, Check, X, Minus, Phone, Calendar, User } from "lucide-react
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
+import Testimonials from "@/components/Testimonials";
+import CompareMigrationOffer from "@/components/CompareMigrationOffer";
 import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 
 const CompareShopify = () => {
@@ -131,7 +133,7 @@ const CompareShopify = () => {
     headline: "oBizee vs Shopify — Shopify Alternative for Indian Sellers (2026 Comparison)",
     description: "Comparison of oBizee and Shopify for Indian sellers. oBizee has 0 SUBSCRIPTION, 0 SETUP FEE, a FREE mapped custom domain, UNLIMITED products, and same-day hyperlocal delivery.",
     datePublished: "2026-04-23",
-    dateModified: "2026-08-31",
+    dateModified: "2026-09-03",
     author: { "@type": "Person", name: "Raunak Kumar", url: "https://www.obizee.com/about" },
     publisher: {
       "@type": "Organization",
@@ -193,7 +195,7 @@ const CompareShopify = () => {
               </div>
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
-                <span>Published 23 April 2026 · Updated 31 August 2026</span>
+                <span>Published 23 April 2026 · Updated 3 September 2026</span>
               </div>
             </div>
           </div>
@@ -329,6 +331,10 @@ const CompareShopify = () => {
             </div>
           </div>
         </section>
+
+        <Testimonials />
+
+        <CompareMigrationOffer competitorName="Shopify" />
 
         <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { ArrowRight, Link2, PackageCheck, Eye, Rocket } from "lucide-react";
+import { migrationSteps, migrationKeeps } from "@/data/migrationOffer";
 
 /**
  * The migration offer, given its own page.
@@ -16,40 +17,12 @@ import { ArrowRight, Link2, PackageCheck, Eye, Rocket } from "lucide-react";
  * objection on its own, so it can be linked to directly from ads, DMs and the
  * comparison pages.
  *
- * Every fee figure here matches the billing code: 1% per order capped at ₹10,
- * nothing monthly, nothing on signup.
+ * Steps and keeps live in src/data/migrationOffer.ts, shared with the compact
+ * version embedded on compare pages, so the two surfaces can't drift apart.
  */
-const steps = [
-  {
-    icon: Link2,
-    title: "Send us the link",
-    body: "Your Dukaan, Shopify, Bikayi, Instamojo or Instagram store. One message on WhatsApp is enough.",
-  },
-  {
-    icon: PackageCheck,
-    title: "We move it across",
-    body: "Products, images, prices, variants and categories. You do not re-upload anything.",
-  },
-  {
-    icon: Eye,
-    title: "You check it",
-    body: "Your old store stays live the whole time. Look at yours on oBizee before anything changes.",
-  },
-  {
-    icon: Rocket,
-    title: "Switch when ready",
-    body: "Point your domain over, or use your free obizee.com address. Your call, your timing.",
-  },
-];
-
-const keeps = [
-  "Your product photos, at full resolution",
-  "Your prices, variants and categories",
-  "Your own domain, or a free one from us",
-  "Your customers — we do not touch your list",
-  "Your Instagram and WhatsApp orders, now in one place",
-  "Your existing store, running until you say otherwise",
-];
+const stepIcons = [Link2, PackageCheck, Eye, Rocket];
+const steps = migrationSteps.map((step, i) => ({ ...step, icon: stepIcons[i] }));
+const keeps = migrationKeeps;
 
 export default function MoveMyStoreClient() {
   return (
