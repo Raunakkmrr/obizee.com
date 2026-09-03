@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import {
-  ArrowRight, Check, X, Minus, Truck, MessageCircle, Wallet, Send, Eye,
+  ArrowRight, Check, Truck, MessageCircle, Wallet, Send, Eye,
   Rocket, Link2, ShieldCheck, Clock, Globe, Phone, MapPin,
   Image as ImageIcon, Tag, Users, Store, Banknote, Mail, Download, Search,
   BarChart3, Bug, Megaphone, User, Calendar,
@@ -15,6 +15,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
 import { liveShops } from "@/data/liveShops";
 import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
+import { GoalMark, Mark, type ComparisonGroup } from "@/components/compare/marks";
 
 /**
  * oBizee vs DM2Buy.
@@ -154,10 +155,7 @@ const CompareDM2buy2 = () => {
   // Counted from the data, never typed by hand — the heading can't go stale.
   const integrationCount = integrationGroups.reduce((n, g) => n + g.items.length, 0);
 
-  type CellState = "yes" | "partial" | "no";
-  type Cell = { s: CellState; t: string };
-
-  const comparisonGroups: { group: string; rows: { feature: string; obizee: Cell; rival: Cell }[] }[] = [
+  const comparisonGroups: ComparisonGroup[] = [
     {
       group: "Shipping & delivery",
       rows: [
@@ -290,60 +288,6 @@ const CompareDM2buy2 = () => {
       name: faq.question,
       acceptedAnswer: { "@type": "Answer", text: faq.answer },
     })),
-  };
-
-  /**
-   * The ₹50,000 goal mark — a hand-drawn circle round the number, with the
-   * milestone read out beneath it. Used anywhere the goal is stated, so the
-   * "nothing to pay until here" reads in one glance.
-   *
-   * Deliberately says nothing about HOW the threshold is funded internally.
-   * The published claim is only the outcome.
-   */
-  const GoalMark = ({ tone = "light" }: { tone?: "light" | "dark" }) => {
-    const ink = tone === "dark" ? "text-white" : "text-gray-900";
-    const note = tone === "dark" ? "text-gray-400" : "text-gray-500";
-    return (
-      <div className="flex flex-col items-center">
-        {/*
-          Drawn by hand, exported to PNG (R18) — not a CSS shape. The number and the words
-          are both in the drawing, in two inks so the payoff word carries. Because the
-          number is now inside the image, the same figure is repeated as screen-reader-only
-          text below so crawlers and AI still read ₹50,000 off this page.
-        */}
-        <img
-          src={tone === "dark" ? "/sketches/goal-sketch-dark.png" : "/sketches/goal-sketch-light.png"}
-          alt="Hand-drawn note: ₹50,000 — first goal completed for free"
-          width={963}
-          height={511}
-          className="w-[290px] select-none sm:w-[390px]"
-        />
-        <span className="sr-only">
-          ₹50,000 in orders — the first goal, completed for free. Nothing is charged before it.
-        </span>
-        <p className={`mt-1 text-[12.5px] ${note}`}>
-          Nothing charged before it. <span className={ink}>Not a rupee.</span>
-        </p>
-      </div>
-    );
-  };
-
-  const Mark = ({ cell }: { cell: Cell }) => {
-    const chip =
-      cell.s === "yes"
-        ? { bg: "bg-orange-600", icon: <Check className="h-3 w-3 text-white" strokeWidth={3} />, label: "Included" }
-        : cell.s === "partial"
-        ? { bg: "bg-amber-200", icon: <Minus className="h-3 w-3 text-amber-800" strokeWidth={3} />, label: "Partly" }
-        : { bg: "bg-gray-200", icon: <X className="h-3 w-3 text-gray-500" strokeWidth={3} />, label: "Not included" };
-    return (
-      <span className="flex items-start gap-2">
-        <span className={`mt-0.5 grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full ${chip.bg}`}>
-          {chip.icon}
-          <span className="sr-only">{chip.label}</span>
-        </span>
-        <span className="text-[12.5px] leading-snug text-gray-700">{cell.t}</span>
-      </span>
-    );
   };
 
   return (
