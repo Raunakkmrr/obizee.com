@@ -277,6 +277,58 @@ errors on both pages.
 
 Committed as a third commit on `blog-agent/2026-09-03`, pushed, PR #1 updated again.
 
+### Addendum 3 — 07:03–07:47 UTC, same run — full ground-up rebuild of one page
+
+Raunak was still not satisfied with addendum 2 and gave a sharper instruction: stop
+patching `CompareDM2buy.tsx` incrementally and treat this as a genuinely new page,
+studying SitesPlaced's actual live page structure closely and rebuilding to match its
+depth — same oBizee brand color, but otherwise free to redesign. Also flagged the UI as
+reading too large/"zoomed in" relative to information density.
+
+Rewrote `CompareDM2buy.tsx` from a blank file, not an edit of the old one. Section count
+went from 10 to 13, matching the real depth of SitesPlaced's page (studied via direct
+fetch, not memory) while keeping every word of copy original — no sentence from their
+page was reused, per R5's standing rule. New sections/mechanics, each grounded in real
+oBizee data, nothing invented:
+- **Real shops, open right now** — a new "browser-tab" card component (favicon dots +
+  domain + logo + product count) for all 6 approved `sellerQuotes.ts` sellers, an
+  original visual treatment of the "inspectable, checkable proof" mechanic rather than a
+  copy of any specific competitor's card design.
+- **Everything already plugged in** — an integrations grid categorized by Payments /
+  Shipping / Selling channels / Running the business, listing only oBizee's real,
+  already-verified integrations (Delhivery, DTDC, Blue Dart, India Post, Borzo,
+  Shadowfax, Razorpay, Paytm) — nothing invented to pad the list.
+- **Why sellers are actually leaving DM2Buy** — three named, distinct reasons (uptime
+  risk, no shipping department, orders scattered across three channels), replacing the
+  single narrow reason flagged as the core problem in the original feedback.
+- **The honest pricing picture** — restructured into two explicit columns, "always free"
+  vs "pass-through, not oBizee's cut" (courier charges, gateway charges, per-SMS
+  retention cost) — still R3-compliant, no exact oBizee fee percentage stated, but far
+  more substantial than the single closing card from addendum 2.
+- A new lead FAQ question ("Will I lose orders or customers while I switch?") addressing
+  switching-friction anxiety directly, ahead of the existing FAQ set.
+
+Density: base heading sizes dropped roughly one Tailwind step across the page (h1
+`text-5xl`→`text-4xl`, h2 `text-3xl`→`text-2xl`, body `text-lg`→`text-sm`/`text-base`),
+section vertical padding tightened (`py-16`/`py-14`→`py-10`/`py-12`/`py-8`), addressing
+the "too zoomed in" note directly rather than guessing at a fix.
+
+Verified: `tsc --noEmit` clean, page returns HTTP 200, fresh browser tab shows zero
+console errors, full accessibility-tree read confirms all 13 sections render in the
+intended order with real content (not placeholder text). Could not get a reliable
+pixel-level density/contrast measurement this run — browser-pane screenshot capture was
+intermittent throughout the session (a known tool limitation when the pane isn't actively
+displayed, not a page bug) — flagging that honestly rather than asserting a Gate-V5-style
+number that wasn't actually measured. Worth Raunak's own eyes before merging.
+
+**Not yet done, explicitly scoped out this round**: `CompareShopify.tsx` was left at the
+addendum-2 version, not rebuilt to this same depth — Raunak's instruction named
+`obizee-vs-dm2buy` specifically ("create a new obizee-vs-dm2buy page"). Apply the same
+treatment to Shopify once this page is approved, so the same pattern isn't built twice
+without a checkpoint in between.
+
+Committed as a fourth commit on `blog-agent/2026-09-03`, pushed, PR #1 updated again.
+
 ---
 
 ## Bootstrap — 2026-09-03
