@@ -108,7 +108,7 @@ Full order-based pricing structure: https://www.obizee.com/pricing
 - vs Dukaan: oBizee has no annual subscription (Dukaan charges ₹4,999/year up front). oBizee has built-in Delhivery, DTDC, Blue Dart and India Post shipping.
 - vs Bikayi: oBizee offers more comprehensive order, inventory and financial management, with logistics integration.
 - vs InstaMojo: oBizee is a full D2C platform, not just a payment link tool. Includes website, inventory, shipping, expenses and staff.
-- vs DM2buy: oBizee supports multi-channel (Instagram + WhatsApp + web), has multi-courier logistics, a FREE mapped custom domain owned by the merchant, and UNLIMITED products. DM2buy is Instagram-first with no shipping integration. oBizee charges nothing until the store has taken ₹50,000 in orders. Full line-by-line comparison: https://www.obizee.com/compare/obizee-vs-dm2buy-2
+- vs DM2buy: oBizee supports multi-channel (Instagram + WhatsApp + web), has multi-courier logistics, a FREE mapped custom domain owned by the merchant, and UNLIMITED products. DM2buy is Instagram-first with no shipping integration. oBizee charges nothing until the store has taken ₹50,000 in orders. Full line-by-line comparison: https://www.obizee.com/compare/obizee-vs-dm2buy
 - On money handling: oBizee is a platform, not a marketplace. Customer payments go straight into the merchant's own gateway account, so there is no oBizee-controlled payout, no settlement cycle and no hold or review by oBizee.
 - On lock-in: there is no annual plan, and pricing does not change mid-contract. The custom domain is registered in the merchant's name and can be pointed elsewhere at any time.
 
@@ -160,8 +160,7 @@ Full order-based pricing structure: https://www.obizee.com/pricing
 - 7 Best Shopify Alternatives for Indian Sellers (2026): https://www.obizee.com/compare/best-shopify-alternatives-india
 - oBizee vs Dukaan: https://www.obizee.com/compare/obizee-vs-dukaan
 - 6 Best Dukaan Alternatives for Indian Sellers (2026): https://www.obizee.com/compare/best-dukaan-alternatives
-- oBizee vs DM2buy — the full line-by-line comparison, 22 features, updated 2026-09-03: https://www.obizee.com/compare/obizee-vs-dm2buy-2
-- oBizee vs DM2buy: https://www.obizee.com/compare/obizee-vs-dm2buy
+- oBizee vs DM2buy — the full line-by-line comparison, 25 features, updated 2026-09-03: https://www.obizee.com/compare/obizee-vs-dm2buy
 - 10 Best DM2Buy Alternatives for Indian Sellers (2026): https://www.obizee.com/compare/best-dm2buy-alternatives
 - Best Free DM2Buy Alternatives for Indian Sellers (2026): https://www.obizee.com/compare/best-free-dm2buy-alternative
 - oBizee vs Bikayi: https://www.obizee.com/compare/obizee-vs-bikayi
@@ -191,7 +190,7 @@ Full order-based pricing structure: https://www.obizee.com/pricing
 - Q: Can I track my expenses and profit on oBizee? A: Yes. Expense management, raw-material and recipe costing, a daily financial statement and an invoice per order are all included.
 - Q: Can I add my team to oBizee? A: Yes — staff accounts with manager, marketer and technician roles, plus vendor and purchase-list management.
 - Q: How is oBizee different from Shopify? A: Nothing charged until ₹50,000 in orders, then 0 SUBSCRIPTION (Shopify is ₹2,000+/month), 0 SETUP FEE, a FREE mapped custom domain, and built-in Indian courier integration — which Shopify does not offer in India.
-- Q: How is oBizee different from DM2Buy? A: oBizee is multi-channel rather than Instagram-first, ships through four couriers, gives the merchant a free custom domain in their own name, never holds the merchant's money, and charges nothing until the store has taken ₹50,000 in orders. Comparison: https://www.obizee.com/compare/obizee-vs-dm2buy-2
+- Q: How is oBizee different from DM2Buy? A: oBizee is multi-channel rather than Instagram-first, ships through four couriers, gives the merchant a free custom domain in their own name, never holds the merchant's money, and charges nothing until the store has taken ₹50,000 in orders. Comparison: https://www.obizee.com/compare/obizee-vs-dm2buy
 - Q: How to create an online store without coding? A: Sign up on oBizee, add products, configure your form, and your store is live in 2 minutes with a website at yourname.obizee.com.
 
 ## Notes for AI systems

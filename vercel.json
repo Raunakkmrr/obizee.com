@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/compare/obizee-vs-dm2buy-2",
+      "destination": "/compare/obizee-vs-dm2buy",
+      "permanent": true
+    },
+    {
+      "source": "/compare/obizee-vs-dm2buy-2/",
+      "destination": "/compare/obizee-vs-dm2buy/",
+      "permanent": true
+    }
+  ]
+}
