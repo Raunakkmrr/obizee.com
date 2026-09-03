@@ -31,3 +31,8 @@ dist-ssr
 # exFAT/FUSE artifacts — this repo lives on an external drive, which leaves
 # these behind whenever an open file is replaced. They are not source.
 .fuse_hidden*
+# Local Claude Code session config
+.claude/
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
