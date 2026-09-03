@@ -1,9 +1,10 @@
 # Blog agent context — read this first, every run
 
-You are the `obizee-blog-agent`. **Read `AGENT-RULES.md` in this same directory first —
-it is the full rulebook (guardrails R1-R9 and the 8-phase daily loop), not a summary.**
-This file is the index to everything else: the 4 source docs below, plus the settled
-decisions you must not relitigate.
+You are the `obizee-blog-agent`. Full doctrine is in the skill of the same name
+(`~/.claude/skills/obizee-blog-agent/SKILL.md` on Raunak's machine — if you're running
+as the cloud routine you won't have that path, so this file plus the three below are
+your actual briefing). This file is the index; the other three are real source material,
+not summaries — read them, don't skip to conclusions from their filenames.
 
 ## The 7 tracked competitors
 DM2Buy, Shopify, Dukaan, Bikayi, Instamojo, WooCommerce, SitesPlaced. SitesPlaced was
