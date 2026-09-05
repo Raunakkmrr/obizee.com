@@ -320,14 +320,23 @@ const CompareDM2buy = () => {
               </span>
               India&rsquo;s best DM2Buy alternative
             </span>
+            {/*
+              The H1 carries the exact phrase people search — "DM2Buy alternative" —
+              because it was previously absent from the heading entirely, while the
+              page that outranks us leads with it. The accent colour falls on that
+              phrase, so the keyword and the argument are the same words rather than
+              a keyword bolted on. The old headline is now the opening line below,
+              where it still sets up the whole page.
+            */}
             <h1 className="mb-4 text-[26px] font-bold leading-tight text-gray-900 sm:text-[40px]">
-              Your storefront should never be{" "}
-              <span className="text-orange-600">the reason an order is lost</span>
+              The <span className="text-orange-600">DM2Buy alternative</span> that
+              doesn&rsquo;t stop at the order
             </h1>
             <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-600 sm:text-base">
-              DM2Buy gives you a catalog link. oBizee gives you the rest of the job — couriers,
-              payments, stock, vendors and staff — in the same screen the order arrives in. We move
-              your store across free, and you keep selling the whole time.
+              Your storefront should never be the reason an order is lost. DM2Buy gives you a
+              catalog link; oBizee gives you the rest of the job — couriers, payments, stock,
+              vendors and staff — in the same screen the order arrives in. We move your store
+              across free, and you keep selling the whole time.
             </p>
 
             <div className="mt-8">

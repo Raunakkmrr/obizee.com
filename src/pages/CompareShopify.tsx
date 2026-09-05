@@ -420,12 +420,14 @@ const CompareShopify = () => {
               </span>
               India&rsquo;s best Shopify alternative
             </span>
+            {/* See CompareDM2buy for why the exact phrase sits in the H1. */}
             <h1 className="mb-4 text-[26px] font-bold leading-tight text-gray-900 sm:text-[40px]">
-              You should not be paying rent on a shop that{" "}
-              <span className="text-orange-600">hasn&rsquo;t sold anything yet</span>
+              The <span className="text-orange-600">Shopify alternative</span> that
+              doesn&rsquo;t charge you rent
             </h1>
             <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-600 sm:text-base">
-              Shopify will sell you three months at ₹20. Month four is{" "}
+              You should not be paying rent on a shop that has not sold anything yet. Shopify will
+              sell you three months at ₹20; month four is{" "}
               <span className="font-semibold text-gray-900">₹1,994</span>, sold or not — and it takes
               another <span className="font-semibold text-gray-900">2% of every order</span> because
               Shopify Payments has no India. oBizee charges you nothing until your shop has actually

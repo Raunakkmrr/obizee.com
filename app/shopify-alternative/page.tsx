@@ -11,10 +11,12 @@ import CompareShopifyPage from "@/pages/CompareShopify";
  * ₹1,499 annual. Do not add JSON-LD back here.
  */
 export const metadata: Metadata = {
-  title:
-    "oBizee vs Shopify — India's Best Shopify Alternative for Indian Sellers [2026]",
+  // Leads with the phrase people actually search, and stays under the ~60
+  // characters Google renders. See the DM2Buy route for the same reasoning.
+  title: "Best Shopify Alternative in India — Free Until ₹50,000 | oBizee",
+  // ~155 chars. The full Shopify cost argument lives on the page, not here.
   description:
-    "Shopify Basic in India is ₹1,994/month after the ₹20 trial, plus 2% of every order because Shopify Payments has no India. oBizee: 0 SUBSCRIPTION, and nothing at all until your store has taken ₹50,000 in orders — with Delhivery, DTDC, Blue Dart and India Post shipping, GST invoicing and same-day delivery built in.",
+    "Shopify Basic is ₹1,994/mo, sold or not. oBizee charges nothing until ₹50,000 in orders — with four couriers and GST invoicing built in.",
   keywords:
     "oBizee vs Shopify, Shopify alternative India, cheapest Shopify alternative, Shopify India pricing 2026, Shopify too expensive India, Shopify transaction fee India, Shopify GST invoice, best ecommerce platform India",
   alternates: {

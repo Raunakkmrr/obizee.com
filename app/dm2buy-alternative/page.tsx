@@ -10,10 +10,13 @@ import CompareDM2buyPage from "@/pages/CompareDM2buy";
  * removed. Do not add JSON-LD back here.
  */
 export const metadata: Metadata = {
-  title:
-    "oBizee vs DM2buy — India's Best DM2Buy Alternative for Indian Sellers [2026]",
+  // Leads with the phrase people actually search. The old title opened with
+  // "oBizee vs DM2buy" — a low-volume comparison query — and pushed "DM2Buy
+  // Alternative" past the ~60 characters Google renders. Keep this under 62.
+  title: "Best DM2Buy Alternative in India — Free Until ₹50,000 | oBizee",
+  // ~155 chars — Google truncates past that, and the old one was 302.
   description:
-    "Nothing to pay until your store has taken ₹50,000 in orders. oBizee vs DM2buy for Indian sellers: built-in Delhivery, DTDC, Blue Dart and India Post shipping, same-day hyperlocal delivery, Instagram and WhatsApp selling, expenses, vendors and staff accounts. DM2buy is a catalog link with no logistics.",
+    "Nothing to pay until ₹50,000 in orders. Delhivery, DTDC, Blue Dart and India Post shipping, plus Instagram and WhatsApp selling — all built in, free.",
   keywords:
     "oBizee vs DM2buy, DM2buy alternative, best DM2Buy alternative India, best D2C platform India, DM2buy review, Instagram selling platform India, dm2buy shipping, free online store India",
   alternates: {
