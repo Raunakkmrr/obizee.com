@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 434" width="620" height="434" role="img" aria-labelledby="igGridTitle igGridDesc">
+  <title id="igGridTitle">Illustration of a generic Instagram shop grid</title>
+  <desc id="igGridDesc">A drawn stand-in for a seller's Instagram profile: a profile row and a three-by-three grid of blank post tiles. It is not a screenshot of any real account.</desc>
+
+  <!--
+    THE "BEFORE" PANE — UI-003.
+
+    R12 / R4: this is a DRAWN ILLUSTRATION and is marked as one, in the caption beneath
+    the pane in MoveYourShop.tsx and in the <desc> above. It is deliberately NOT a
+    screenshot of any merchant's live Instagram: design-brief.md §9 O-13 records that no
+    consent for such a capture has been obtained, and screenshotting a real seller's feed
+    without a recorded yes is the thing that gap exists to prevent. Swapping in a real,
+    consented pair later is an asset swap in this same file plus dropping the caption.
+
+    It is an image asset rather than CSS boxes because a pane of this comparison is an
+    IMAGE — the component takes two `src` strings and clips between them — and because a
+    stand-in built out of divs would not survive being dragged over.
+
+    Palette: the muted warm neutrals already on this site's dark slab. No brand hue: the
+    argument is that the "before" is undifferentiated, and colouring it would undercut it.
+  -->
+
+  <rect width="620" height="434" rx="16" fill="#1b2330"/>
+
+  <!-- profile row -->
+  <circle cx="60" cy="56" r="26" fill="#33415a"/>
+  <rect x="100" y="42" width="132" height="11" rx="5.5" fill="#3d4a63"/>
+  <rect x="100" y="62" width="86" height="9" rx="4.5" fill="#2c384d"/>
+
+  <!-- three counters: posts / followers / following -->
+  <rect x="392" y="40" width="44" height="9" rx="4.5" fill="#3d4a63"/>
+  <rect x="392" y="56" width="30" height="7" rx="3.5" fill="#2c384d"/>
+  <rect x="464" y="40" width="44" height="9" rx="4.5" fill="#3d4a63"/>
+  <rect x="464" y="56" width="30" height="7" rx="3.5" fill="#2c384d"/>
+  <rect x="536" y="40" width="44" height="9" rx="4.5" fill="#3d4a63"/>
+  <rect x="536" y="56" width="30" height="7" rx="3.5" fill="#2c384d"/>
+
+  <!-- bio lines -->
+  <rect x="34" y="102" width="268" height="8" rx="4" fill="#2c384d"/>
+  <rect x="34" y="118" width="196" height="8" rx="4" fill="#242f42"/>
+
+  <line x1="34" y1="150" x2="586" y2="150" stroke="#2a3548" stroke-width="1.5"/>
+
+  <!-- the grid: 3 x 3 blank post tiles -->
+  <g fill="#28344a" stroke="#3a4761" stroke-width="1.5">
+    <rect x="34"  y="170" width="172" height="76" rx="8"/>
+    <rect x="224" y="170" width="172" height="76" rx="8"/>
+    <rect x="414" y="170" width="172" height="76" rx="8"/>
+    <rect x="34"  y="262" width="172" height="76" rx="8"/>
+    <rect x="224" y="262" width="172" height="76" rx="8"/>
+    <rect x="414" y="262" width="172" height="76" rx="8"/>
+    <rect x="34"  y="354" width="172" height="56" rx="8"/>
+    <rect x="224" y="354" width="172" height="56" rx="8"/>
+    <rect x="414" y="354" width="172" height="56" rx="8"/>
+  </g>
+
+  <!-- the carousel and reel marks the import actually has to tell apart -->
+  <g fill="none" stroke="#5d6b8a" stroke-width="2" stroke-linejoin="round">
+    <rect x="368" y="182" width="14" height="14" rx="3"/>
+    <path d="M364 192v-12a3 3 0 0 1 3-3h11"/>
+    <rect x="558" y="274" width="14" height="14" rx="3"/>
+    <path d="M554 284v-12a3 3 0 0 1 3-3h11"/>
+  </g>
+  <g fill="#5d6b8a">
+    <path d="M182 274l16 9-16 9z"/>
+    <path d="M372 366l14 8-14 8z"/>
+  </g>
+</svg>
