@@ -79,6 +79,9 @@ function loadGis(): Promise<void> {
 
 export type GoogleButtonStatus = "idle" | "opening" | "exchanging";
 
+/** How long "Opening Google…" may sit alone before it earns an explanation. */
+const POPUP_HINT_AFTER_MS = 4000;
+
 export default function GoogleButton({
   clientId,
   onCode,
@@ -97,7 +100,29 @@ export default function GoogleButton({
 }) {
   const [status, setStatus] = useState<GoogleButtonStatus>("idle");
   const [blocked, setBlocked] = useState<null | "popup" | "unavailable">(null);
+  /** True once "Opening Google…" has been showing long enough to look stuck. */
+  const [popupSlow, setPopupSlow] = useState(false);
   const clientRef = useRef<CodeClient | null>(null);
+
+  /**
+   * WHY THIS EXISTS. Chrome opens the GIS popup as a SEPARATE WINDOW, and on a busy
+   * desktop it can open behind the one the merchant is looking at. GIS reports nothing
+   * — no error, no callback — so the button spins on "Opening Google…" forever and the
+   * product reads as dead. Observed 2026-09-06: the window was open and waiting the
+   * whole time, and the only visible state was a spinner.
+   *
+   * Four seconds is past the point a popup that opened normally would still be
+   * unanswered, and short of the point someone gives up. It adds a sentence; it never
+   * cancels, blames, or takes the choice away.
+   */
+  useEffect(() => {
+    if (status !== "opening") {
+      setPopupSlow(false);
+      return;
+    }
+    const timer = setTimeout(() => setPopupSlow(true), POPUP_HINT_AFTER_MS);
+    return () => clearTimeout(timer);
+  }, [status]);
 
   useEffect(() => {
     // The script is fetched on mount, not on click: a popup opened inside an async
@@ -182,6 +207,23 @@ export default function GoogleButton({
           </span>
         ) : null}
       </button>
+
+      {popupSlow && !blocked ? (
+        // Not an Alert: nothing has gone wrong, and a banner would say it had. A quiet
+        // line under the button, with the same "try again" escape the blocked band
+        // offers, because a popup that never comes forward is indistinguishable from
+        // one that never opened.
+        <p className="text-[13px] leading-5 text-[color:var(--text-muted)]">
+          Can&apos;t see it? The Google window may have opened behind this one.{" "}
+          <button
+            type="button"
+            onClick={start}
+            className="font-semibold text-[color:var(--obz-cta)] underline underline-offset-4"
+          >
+            Try again
+          </button>
+        </p>
+      ) : null}
 
       {blocked ? (
         // INFO, never danger: the browser did this, not her. `role="status"` overrides
