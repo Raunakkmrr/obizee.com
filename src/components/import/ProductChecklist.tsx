@@ -193,7 +193,7 @@ export default function ProductChecklist({
               className="inline-flex h-11 items-center justify-center rounded-[var(--radius-md)] bg-[color:var(--obz-cta)] px-4 text-[14px] font-bold text-white disabled:opacity-60"
             >
               {saving ? <Loader2 aria-hidden className="mr-2 size-4 animate-spin" /> : null}
-              Save prices
+              Save changes
             </button>
           </div>
         </div>

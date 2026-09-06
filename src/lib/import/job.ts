@@ -52,6 +52,8 @@ export type ImportPostView = {
   thumbUrl: string | null;
   dropReason: string | null;
   hasProducts: boolean;
+  /** False = no usable photo, which is now the only reason a post is set aside. */
+  hasImages?: boolean;
 };
 
 /** `capturedProfileSchema`, projected. Populated from the FIRST fetched page. */

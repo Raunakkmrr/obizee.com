@@ -76,7 +76,7 @@ export default function SkippedGroups({
         {/* Says "product", never "price". A missing price does NOT set a post aside —
             a named item with no price is kept, priced later. Claiming otherwise tells
             every "DM for price" seller her catalogue was rejected. */}
-        Nothing was thrown away. These posts named no product we could read — open a group to
+        Nothing was thrown away. These posts had no photo we could use — open a group to
         see which.
       </p>
 

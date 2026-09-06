@@ -101,8 +101,12 @@ export type SkippedGroup = {
 export function groupSkipped(job: ImportJobView): SkippedGroup[] {
   const buckets = new Map<string, ImportPostView[]>();
   for (const post of job.posts) {
-    if (post.hasProducts) continue;
-    const reason = post.dropReason ?? "no_product_named";
+    // SET ASIDE MEANS "NO PHOTO", NOT "WE COULD NOT READ THE CAPTION". Since every post
+    // with an image became a product, keying this on `hasProducts` — which still
+    // reports only what the EXTRACTOR found — listed 13 posts as set aside directly
+    // under a line saying 0 were. `hasImages` is the question the rule actually asks.
+    if (post.hasImages !== false) continue;
+    const reason = post.dropReason ?? "no_photo";
     const bucket = buckets.get(reason);
     if (bucket) bucket.push(post);
     else buckets.set(reason, [post]);
