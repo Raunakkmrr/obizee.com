@@ -54,7 +54,12 @@ export const SKIP_REASON_LABELS: Record<string, string> = {
   testimonial_or_review: "A customer's review",
   no_product_named: "No product named in the caption",
   empty_caption: "No caption to read",
-  reel_or_video: "A video with no price in it",
+  // NOT about price. The extractor's `reel_or_video` fires when a reel caption
+  // describes CONTENT rather than an item ("watch till the end", "day in my life") —
+  // a video that names a product is kept like any other post. The old wording,
+  // "A video with no price in it", made the screen claim price was the gate; a seller
+  // whose captions say "DM for price" would read that as a rejection of her whole shop.
+  reel_or_video: "A video, not an item for sale",
   caption_unreadable: "We couldn't read this caption",
   no_media_url: "Instagram withheld the photo",
   no_video_thumbnail: "This reel had no cover photo",

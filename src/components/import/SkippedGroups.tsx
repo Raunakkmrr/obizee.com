@@ -73,7 +73,10 @@ export default function SkippedGroups({
         The posts we set aside
       </h2>
       <p className="text-[13.5px] leading-5 text-[color:var(--slab-text-muted)]">
-        Nothing was thrown away. These posts had no product and price we could read — open a group to
+        {/* Says "product", never "price". A missing price does NOT set a post aside —
+            a named item with no price is kept, priced later. Claiming otherwise tells
+            every "DM for price" seller her catalogue was rejected. */}
+        Nothing was thrown away. These posts named no product we could read — open a group to
         see which.
       </p>
 
