@@ -19,9 +19,7 @@ import CryptoJS from "crypto-js";
  * legible at rest. It is not a boundary against a targeted attacker. The real
  * fix, if that day comes, is a backend-minted single-use hand-off code.
  *
- * SET `NEXT_PUBLIC_SSO_KEY` in BOTH apps to the same value. Without it this
- * falls back to the constant the dashboard already ships, which is public in
- * the repo and therefore worth nothing — it keeps the flow working, not safe.
+ * The key below is committed in BOTH repos and must stay identical in the two.
  */
 
 /** Unique to this hand-off. Verified against every cookie the storefront uses. */
@@ -33,10 +31,23 @@ const SHARED_DOMAIN = ".obizee.com";
 /** Matches the dashboard's own token cookie lifetime. */
 const MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
 
-const key = () =>
-  process.env.NEXT_PUBLIC_SSO_KEY ||
-  process.env.NEXT_PUBLIC_ENCRYPTION_KEY ||
-  "obizee-secure-key-2024";
+/**
+ * The shared key, in the repo on purpose.
+ *
+ * IT IS NOT A SECRET AND MUST NOT BE TREATED AS ONE. Any client-side scheme
+ * ships its key to the browser, so this value is readable by anyone who opens
+ * the bundle — committing it changes nothing about that. What it DOES buy over
+ * the previous fallback is that it is long, random and used nowhere else, so it
+ * is not guessable and not shared with any other system.
+ *
+ * Hardcoded rather than env-only because both apps must agree on it and the two
+ * are deployed through different consoles; a value that only works once someone
+ * remembers to set it in both places is a value that silently does not work.
+ * `NEXT_PUBLIC_SSO_KEY` still overrides it, so rotating later needs no release.
+ */
+const SHARED_KEY = "pbprd2Fcgj7_T16AK-FXrD5gq76jFbg_-Clzc60MbNUF8CC_e9MUYSWhNbDz7cuy";
+
+const key = () => process.env.NEXT_PUBLIC_SSO_KEY || SHARED_KEY;
 
 const onSharedDomain = () =>
   typeof window !== "undefined" && window.location.hostname.endsWith("obizee.com");
