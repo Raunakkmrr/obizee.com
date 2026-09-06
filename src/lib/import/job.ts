@@ -88,6 +88,8 @@ export type ImportProductView = {
   priceSource: "caption" | "seller" | "default" | null;
   /** The literal caption text a price was read from, so an unpriced row can show why. */
   priceSourceText: string | null;
+  /** "guessed" = the caption never named it, so the screen asks her to confirm. */
+  titleSource: "extracted" | "guessed" | "seller" | null;
   thumbUrl: string | null;
   sourceUrl: string;
 };

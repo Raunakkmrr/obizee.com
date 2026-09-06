@@ -59,6 +59,9 @@ export const SKIP_REASON_LABELS: Record<string, string> = {
   // a video that names a product is kept like any other post. The old wording,
   // "A video with no price in it", made the screen claim price was the gate; a seller
   // whose captions say "DM for price" would read that as a rejection of her whole shop.
+  // Since the 2026-09-06 rule, the ONLY thing that sets a post aside is having no
+  // usable photo. The caption reasons below are kept because old jobs still carry them.
+  no_photo: "No photo we could use",
   reel_or_video: "A video, not an item for sale",
   caption_unreadable: "We couldn't read this caption",
   no_media_url: "Instagram withheld the photo",
@@ -314,26 +317,27 @@ export async function setGrouping(jobId: string, grouping: Grouping): Promise<As
  */
 export const DEFAULT_PRICE_RUPEES = 499;
 
-export type PriceEntry = { index: number; priceRupees: number | null };
+/** One row's corrections. Both fields optional — she may fix a name, a price, or both. */
+export type ProductEdit = { index: number; title?: string; priceRupees?: number | null };
 
 /**
- * `POST /import/jobs/:jobId/prices` — record what she decided things cost.
+ * `POST /import/jobs/:jobId/products` — record her corrections to her own rows.
  *
  * Returns the same poll shape everything else on this screen returns, so the list
  * re-renders from the server's own rows rather than from what the form believed it
  * sent. Price is never a gate: this call can be skipped entirely and every product
  * survives.
  */
-export async function savePrices(
+export async function saveProductEdits(
   jobId: string,
-  { prices = [], applyDefaultToUnpriced = false }: { prices?: PriceEntry[]; applyDefaultToUnpriced?: boolean },
+  { rows = [], applyDefaultToUnpriced = false }: { rows?: ProductEdit[]; applyDefaultToUnpriced?: boolean },
 ): Promise<AssemblyResult> {
   let response: Response;
   try {
-    response = await authedFetch(`/import/jobs/${encodeURIComponent(jobId)}/prices`, {
+    response = await authedFetch(`/import/jobs/${encodeURIComponent(jobId)}/products`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prices, applyDefaultToUnpriced }),
+      body: JSON.stringify({ rows, applyDefaultToUnpriced }),
     });
   } catch {
     return { ok: false, message: "We could not reach oBizee." };
@@ -341,6 +345,6 @@ export async function savePrices(
 
   const payload = (await response.json().catch(() => ({}))) as { message?: string; data?: ImportJobView };
   if (response.status === 200 && payload.data?.jobId) return { ok: true, job: payload.data };
-  return { ok: false, message: payload.message ?? "We could not save those prices just now." };
+  return { ok: false, message: payload.message ?? "We could not save that just now." };
 }
 
