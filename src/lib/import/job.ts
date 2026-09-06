@@ -77,6 +77,21 @@ export type ImportCaptureSummary = {
   pagesTruncated?: boolean;
 };
 
+/** One assembled product, as the pricing step edits it. */
+export type ImportProductView = {
+  /** Position in the server's `normalised.products`. The address a price is sent to. */
+  index: number;
+  title: string;
+  /** null = nobody has priced it. Never a guess. */
+  priceRupees: number | null;
+  /** Who decided the number: her caption, her own typing, or the ₹499 placeholder. */
+  priceSource: "caption" | "seller" | "default" | null;
+  /** The literal caption text a price was read from, so an unpriced row can show why. */
+  priceSourceText: string | null;
+  thumbUrl: string | null;
+  sourceUrl: string;
+};
+
 export type ImportJobView = {
   jobId: string;
   status: ImportStatus;
@@ -86,6 +101,14 @@ export type ImportJobView = {
   profile: ImportProfileView | null;
   captureSummary: ImportCaptureSummary;
   posts: ImportPostView[];
+  /**
+   * The assembled rows the server actually holds, in the order it holds them.
+   *
+   * The pricing step edits these BY INDEX, so this array — not a client-side re-derive
+   * from `posts` — is the one the seller must be looking at. `normalisedProductSchema`
+   * is `_id: false`, so position is the only address a row has.
+   */
+  products: ImportProductView[];
   assembly: { grouping: string | null; decidedAt: string | null };
   errors: { code: string; message: string; step: string | null; at: string }[];
   warnings: string[];

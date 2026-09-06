@@ -28,7 +28,6 @@ import { WHATSAPP_HREF } from "@/components/import/OutcomeBand";
  *   no_products_found / timed_out  UI-009. Their next step is "see what we got", which
  *                                  renders report-like content; `WorkingScreen` routes
  *                                  both to the `report` state rather than ending here.
- *   unpriced_rows_remaining        a confirm-time refusal; no capture can end on it.
  *
  * THE REST OF THE LIST STILL HAS TO LAND SOMEWHERE. `instagram_unreachable`,
  * `instagram_token_expired`, `extraction_failed` and `killed_by_operator` are all

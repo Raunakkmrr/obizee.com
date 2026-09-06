@@ -305,3 +305,42 @@ export async function setGrouping(jobId: string, grouping: Grouping): Promise<As
   if (response.status === 200 && payload.data?.jobId) return { ok: true, job: payload.data };
   return { ok: false, message: payload.message ?? "We could not change that just now." };
 }
+
+/**
+ * What an unpriced product costs when she skips. Mirrors
+ * `OM-backend/import/types/index.js` — IMPORT_DEFAULT_PRICE_RUPEES. Duplicated rather
+ * than fetched because the SCREEN has to say the number out loud before she chooses,
+ * and a number she is asked to agree to cannot arrive after the question.
+ */
+export const DEFAULT_PRICE_RUPEES = 499;
+
+export type PriceEntry = { index: number; priceRupees: number | null };
+
+/**
+ * `POST /import/jobs/:jobId/prices` — record what she decided things cost.
+ *
+ * Returns the same poll shape everything else on this screen returns, so the list
+ * re-renders from the server's own rows rather than from what the form believed it
+ * sent. Price is never a gate: this call can be skipped entirely and every product
+ * survives.
+ */
+export async function savePrices(
+  jobId: string,
+  { prices = [], applyDefaultToUnpriced = false }: { prices?: PriceEntry[]; applyDefaultToUnpriced?: boolean },
+): Promise<AssemblyResult> {
+  let response: Response;
+  try {
+    response = await authedFetch(`/import/jobs/${encodeURIComponent(jobId)}/prices`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prices, applyDefaultToUnpriced }),
+    });
+  } catch {
+    return { ok: false, message: "We could not reach oBizee." };
+  }
+
+  const payload = (await response.json().catch(() => ({}))) as { message?: string; data?: ImportJobView };
+  if (response.status === 200 && payload.data?.jobId) return { ok: true, job: payload.data };
+  return { ok: false, message: payload.message ?? "We could not save those prices just now." };
+}
+

@@ -6,6 +6,7 @@ import type { LucideIcon } from "lucide-react";
 
 import { Skeleton } from "@/components/ui/skeleton";
 import GroupingChoice from "@/components/import/GroupingChoice";
+import PricingStep from "@/components/import/PricingStep";
 import MediaMixStrip from "@/components/import/MediaMixStrip";
 import SkippedGroups from "@/components/import/SkippedGroups";
 import SourceMasthead from "@/components/import/SourceMasthead";
@@ -264,6 +265,11 @@ export default function ReportScreen({
           onAssembled={setOverride}
         />
       ) : null}
+
+      {/* AFTER the grouping, never before: `postAssembly` REPLACES normalised.products,
+          so a price typed against the old array would be written onto a different row.
+          Renders nothing at all once every product has a price she chose. */}
+      <PricingStep job={job} onPriced={setOverride} />
 
       {/* R7 — the exit. */}
       <div className="flex flex-col gap-3 rounded-[var(--radius-lg)] border border-[color:var(--slab-chip-border)] bg-[color:var(--slab-chip-ground)] p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
