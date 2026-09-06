@@ -249,7 +249,10 @@ function toIdentity(
       retryAfterSeconds: payload.retryAfterSeconds,
     };
   }
-  if (data.token) setMerchantToken(data.token);
+  // A prospect's token is import-scoped, so it must NOT cross to the dashboard —
+  // see setMerchantToken's `shareAcrossSubdomains`. `merchant` is the same flag
+  // `hasSession` reads, and for the same reason.
+  if (data.token) setMerchantToken(data.token, { shareAcrossSubdomains: Boolean(data.merchant) });
   const identity: VerifiedIdentity = {
     method,
     email: data.email,
