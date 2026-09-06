@@ -98,3 +98,499 @@ html {
     letter-spacing: -0.025em;
   }
 }
+
+/* =============================================================================
+ * Instagram import journey — Design Tokens (SCOPED, [data-portal="import"])
+ *
+ * PROVENANCE — DERIVED, ported verbatim from
+ *   star_by_obizee/app/merchant/styles.css:189-755   (branch feat/instagram-import)
+ * written across UI-001 / UI-006 / UI-007 / UI-008 / UI-009+UI-010.
+ *
+ * DIFF vs the source, and there are only three, all forced by this repo:
+ *   1. SCOPE MOVED, VALUES UNTOUCHED. The source appended this to the merchant
+ *      portal's own stylesheet; here it lives in the ONE global stylesheet this
+ *      repo has (R3 — one owner per file; nothing else writes this block).
+ *   2. TAILWIND 3.4, NOT 4. The source repo's comments describe utilities that
+ *      Tailwind v4 silently drops for want of an `@theme` entry. In v3 the same
+ *      utilities are dropped for want of a `theme.extend` entry, so the repair is
+ *      identical and the real classes are still declared below. Two of them —
+ *      `animate-accordion-down` / `-up` — DO exist here (tailwind.config.ts
+ *      keyframes+animation), so the `[data-slot=accordion-content]` rules below
+ *      are belt-and-braces rather than the sole mechanism; kept because they are
+ *      what the ported markup was measured against.
+ *      NOTE: this repo's `--radius` is 0.5rem and there is no `--radius-lg` /
+ *      `--radius-sm` custom property (v4 shipped those for free); the two ported
+ *      components that referenced them are re-pointed at Tailwind classes instead.
+ *   3. `--slab-ground` is the SAME #111827 — it is literally what this repo's own
+ *      Tailwind v3 `bg-gray-900` resolves to in MoveYourShop.tsx, which is the
+ *      whole point of the seam. In the source it was a token because star is on
+ *      v4, whose gray-900 differs. Here the utility and the token agree.
+ *
+ * Contrast ratios in the comments were measured in the source repo with WCAG 2.x
+ * relative luminance against the same grounds; the grounds are unchanged, so the
+ * ratios carry over unchanged.
+ * =========================================================================== */
+
+[data-portal="import"] {
+  /* ---- colour: primary — the one "you can act here" fill */
+  --obz-cta: #a85b28; /* white on it = 5.01:1, AA-text */
+  --obz-cta-hover: #8f4c21; /* white on it = 6.51:1, AA-text */
+  /* The primary, LIFTED for the dark slab. The light-ground primary as text on
+   * the slab is 3.54:1 and fails AA below 24px. */
+  --obz-cta-on-dark: #d17c45; /* on the slab = 5.64:1, AA-text */
+
+  /* Secondary text on the slab. A token rather than `text-white/70`: expressing
+   * text colour as opacity multiplies against its ground and drifts (D5). */
+  --slab-text-muted: #d4d4d4; /* on the slab = 11.97:1, AA-text */
+
+  /* ---- colour: tertiary — reels. The third media kind needs its own hue. */
+  --violet: #6d3fa0; /* on #ffffff = 7.32:1 · on #f6eddc = 6.30:1 */
+  --violet-tint: #f2ecfa; /* #1b2a22 on it = 12.96:1 */
+  --violet-on-dark: #c9a3e8; /* on the slab #111827 = 8.35:1 */
+
+  /* ---- colour: secondary — the travelling slab's ground. THE SEAM.
+   * Exactly what `bg-gray-900` resolves to in src/components/MoveYourShop.tsx.
+   * #ffffff on it = 17.74:1. */
+  --slab-ground: #111827;
+
+  /* ---- motion. */
+  --motion-fast: 120ms; /* focus, hover, press */
+  --motion-base: 200ms; /* state changes, step transitions */
+  --motion-slow: 320ms; /* the counter roll */
+  --motion-slower: 600ms; /* the report reveal; the stagger ceiling */
+  --motion-stagger: 40ms; /* per-tile delay: 12 tiles x 40 = 480ms */
+  --motion-ease: cubic-bezier(0.4, 0, 0.2, 1); /* the one easing */
+
+  /* ---- radius. PORTED FROM star_by_obizee/app/merchant/styles.css:75-79, the
+   * [data-portal="merchant"] block the import scope sat beside there and silently
+   * inherited through the shared stylesheet. Nothing in the import block declared
+   * them, and 50 `rounded-[var(--radius-*)]` call sites across the ported components
+   * read them — in this repo those variables do not exist at all, so `border-radius`
+   * resolved to an invalid value and every tile, chip, card and specimen rendered as a
+   * sharp-cornered box. Found by grep, not by luck; verified by rendering.
+   * The values are the source's, unchanged — NOT this repo's own 4/6/8 scale, which
+   * would have quietly reshaped every ported surface. */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* ---- z-index. Names for the values already in use across the app. */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+
+  /* ---- type. Shipped as `font` shorthand + a tracking companion. */
+  --text-display: 700 56px/56px var(--font-display), system-ui, sans-serif;
+  --text-display-tracking: -1.6px;
+  --text-h1: 700 36px/42px var(--font-display), system-ui, sans-serif;
+  --text-h1-tracking: -1px;
+}
+
+/* Below 768px both display steps drop a size. Designed at 390px, not squeezed. */
+@media (max-width: 767px) {
+  [data-portal="import"] {
+    --text-display: 700 36px/40px var(--font-display), system-ui, sans-serif;
+    --text-display-tracking: -1px;
+    --text-h1: 700 28px/34px var(--font-display), system-ui, sans-serif;
+    --text-h1-tracking: -0.6px;
+  }
+}
+
+[data-portal="import"] .typo-display-xl {
+  font: var(--text-display);
+  letter-spacing: var(--text-display-tracking);
+}
+[data-portal="import"] .typo-h1-xl {
+  font: var(--text-h1);
+  letter-spacing: var(--text-h1-tracking);
+}
+
+/* The gate's question, a size RAMP not a third token: h1 (28/34) below 768,
+ * h1 (36/42) to 1023, display (56/56) from 1024 up. Deliberately NOT applied
+ * below 1024 — at 390 the display step pushes the submit button past the fold. */
+@media (min-width: 1024px) {
+  [data-portal="import"] .typo-gate-question {
+    font: var(--text-display);
+    letter-spacing: var(--text-display-tracking);
+  }
+}
+
+/* Focus is visible on this route too, and takes the primary stage.
+ * This OVERRIDES the site-wide `*:focus-visible { outline: orange-500 }` rule
+ * earlier in this file by specificity (0,2,0 vs 0,1,0), deliberately: inside the
+ * import scope the brand's own #a85b28 is the acting colour, and orange-500 is
+ * the 2.80:1 value gate-a.md ruled must not be "fixed" sitewide this round. */
+[data-portal="import"] *:focus-visible {
+  outline: 2px solid var(--obz-cta);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Motion tokens are opt-in per component; this is the one global honouring of
+ * the OS setting, so no import component has to remember it. */
+@media (prefers-reduced-motion: reduce) {
+  [data-portal="import"] * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- the identity gate's surfaces, text and state grounds.
+ * The gate's figure/ground: a WHITE CARD on the DARK SLAB, which is why both a
+ * light and a dark value exist for the same job. */
+[data-portal="import"] {
+  /* ---- secondary stage: the card that sits on the slab */
+  --card-ground: #ffffff;
+  --card-ground-2: #fbf4e5; /* the inset row inside the card */
+  --card-border: #dad4c8;
+  --card-border-strong: #bfb29a;
+
+  /* ---- text on the card. #1b2a22 on #ffffff = 16.72:1 · #7c633a = 5.68:1 */
+  --text-primary: #1b2a22;
+  --text-muted: #7c633a;
+  /* Placeholders are text. #7e6e5a measures 4.92:1 on the card and still reads
+   * as a placeholder rather than as a typed value. */
+  --text-placeholder: #7e6e5a;
+
+  /* ---- the chip that carries her handle across the hop. A solid ground, not
+   * `white/10`: a surface expressed as opacity drifts against its backdrop. */
+  --slab-chip-ground: #1e293b;
+  --slab-chip-border: #33415a;
+  --brand-warm-on-dark: #ffd1b0; /* on the slab = 12.67:1 */
+  /* The third hue family at REST. Green is this system's "good/kept" tertiary,
+   * and the only green thing on the gate is the sentence saying nothing bad
+   * happens to her email. */
+  --kept-green-on-dark: #7bd3a6; /* on the slab = 9.89:1 */
+
+  /* ---- tertiary stage: state, always paired with an icon AND a word */
+  --color-info: #34618a;
+  --color-info-bg: #e2ebf3;
+  --color-info-border: #b9cfe2;
+  --color-success: #2c6542;
+  --color-success-bg: #e5efe7;
+  --color-success-border: #b8d2bd;
+  --color-danger: #b23a4a;
+  --color-danger-bg: #f6e2e5;
+
+  /* ---- the page ground. Warm, so the slab does not float in a white field;
+   * softened because a WHITE CARD sits on it and must stay the brightest object.
+   * Every text pair still clears AA because each one sits on the slab or the
+   * card, never on this ground. */
+  background-color: var(--color-surface-page, #f6eddc);
+  background-image: radial-gradient(
+      900px 480px at 0% 0%,
+      rgba(255, 209, 176, 0.3) 0%,
+      rgba(255, 209, 176, 0) 70%
+    ),
+    radial-gradient(
+      700px 420px at 100% 0%,
+      rgba(184, 210, 189, 0.22) 0%,
+      rgba(184, 210, 189, 0) 65%
+    ),
+    radial-gradient(
+      800px 600px at 50% 100%,
+      rgba(218, 212, 200, 0.28) 0%,
+      rgba(218, 212, 200, 0) 60%
+    );
+  background-attachment: fixed;
+  --color-surface-page: #fbf6ec;
+}
+
+/* ---- the code step.
+ *   1. the WARNING stage — "expired" and "already used" are not failures she
+ *      caused, so they must not land on the danger ground.
+ *   2. `.animate-caret-blink`, which the imported shadcn `input-otp` emits on
+ *      its fake caret. Neither this repo's tailwind.config.ts nor the source's
+ *      @theme declares that utility, so it is dropped and the caret would be a
+ *      static bar — the imported component made invisible (V3).
+ *   3. `.animate-code-shake` — one 6px shake on a wrong code. */
+[data-portal="import"] {
+  --color-warning: #9a5b12; /* 4.73:1 on --color-warning-bg, 5.41:1 on the card */
+  --color-warning-bg: #fceed7;
+  /* The expired/used cell's BOUNDARY. Those cells are still enabled, so WCAG
+   * 1.4.11 asks 3:1 against the adjacent card ground. Measured 3.64:1. */
+  --color-warning-border: #b07d1c;
+
+  /* ---- the six cells. Not an alias of --card-border-strong, which measures
+   * 2.09:1 against the card and fails 1.4.11 for a form control's boundary.
+   * This measures 3.44:1. */
+  --code-cell-ground: var(--card-ground);
+  --code-cell-border: #97896d;
+}
+
+@keyframes obz-caret-blink {
+  0%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  50% {
+    opacity: 0;
+  }
+}
+
+[data-portal="import"] .animate-caret-blink {
+  animation: obz-caret-blink 1s step-end infinite;
+}
+
+/* A SINGLE shake, not a loop. A repeating shake is decoration; one is a flinch,
+ * and a flinch is what "that code is not right" feels like. */
+@keyframes obz-code-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+[data-portal="import"] .animate-code-shake {
+  animation: obz-code-shake var(--motion-base) var(--motion-ease) 1;
+}
+
+/* ---- the working screen and the four pre-report dead ends.
+ * EVERYTHING HERE IS MEASURED ON THE SLAB (#111827), because that is where this
+ * screen lives. A light-ground value dropped in here is the standing failure
+ * mode this block exists to prevent. */
+[data-portal="import"] {
+  /* ---- tertiary stage, LIFTED FOR THE SLAB. The card-ground --color-info and
+   * --color-warning measure 2.02:1 and 2.35:1 on the slab — below the 3:1 floor
+   * for a non-text mark, far below 4.5:1 for the sentence beside it. */
+  --info-on-dark: #9cc4e8; /* on the slab = 9.69:1 · on its ground = 7.09:1 */
+  /* THE PANEL GROUNDS WERE TUNED BY LOOKING. These sit at 1.37:1 and 1.35:1
+   * against the slab, where the blue reads as blue and the amber as amber; every
+   * text pair on them is far past AA (white 12.97 / 13.19, muted 8.75 / 8.90). */
+  --info-on-dark-bg: #1e324d;
+  --info-on-dark-border: #2f4a68;
+  --warning-on-dark: #f0c987; /* on the slab = 11.33:1 · on its ground = 8.42:1 */
+  --warning-on-dark-bg: #3b2e1b; /* a wait, not a failure — never danger */
+  --warning-on-dark-border: #58421f;
+
+  /* ---- the photo wall and its skeletons.
+   * A SKELETON THAT CANNOT BE SEEN IS NOT A LOADING STATE. 1.42:1 against the
+   * slab, with a border at 3.32:1, so the twelve tiles read as twelve tiles
+   * before a single photo has arrived. */
+  --wall-tile-ground: #28344a;
+  /* 3.32:1 against the slab, and the SAME value the progress track's border
+   * takes: in the loading state the tile IS the content, so its boundary is a
+   * graphical object under SC 1.4.11 and has to clear 3:1. */
+  --wall-tile-border: #5d6b8a;
+
+  /* ---- the extraction bar. TWO contrast requirements, not one:
+   *   fill vs track = 3.82:1 — the boundary carrying the VALUE (SC 1.4.11)
+   *   track vs slab = 1.48:1 — which is why the track also takes a border at
+   *                            3.32:1, so the REMAINING extent is findable. */
+  --progress-track: #2b374b;
+  --progress-track-border: #5d6b8a;
+
+  /* ---- the live status line's shimmer base.
+   * ALPHA IS DELIBERATE AND IS NOT A CONTRAST DODGE: AnimatedShinyText clips a
+   * moving gradient to the glyphs (`background-clip: text`), and an OPAQUE
+   * `color` paints straight over it — the sweep would exist and be invisible.
+   * 0.85 composites to #b7b8ba, 8.94:1. 0.7 cleared AA and read as DISABLED. */
+  --slab-shimmer-base: rgba(212, 212, 212, 0.85);
+}
+
+/* The shimmer sweep on the live status line.
+ * `animate-shiny-text` is declared by the registry item under `cssVars.theme`;
+ * the CLI wrote it into this file as an `@theme inline` block, which Tailwind 3
+ * does not read AT ALL — the same trap the source hit under v4, with the same
+ * consequence: the component renders and the shimmer that is its entire reason
+ * for existing does not (V3). That CLI edit was reverted and the real class is
+ * declared here, in this scope only. 8s is the component's own published period;
+ * the reduced-motion rule above already collapses it. */
+@keyframes obz-shiny-text {
+  0%,
+  90%,
+  100% {
+    background-position: calc(-100% - var(--shiny-width)) 0;
+  }
+  30%,
+  60% {
+    background-position: calc(100% + var(--shiny-width)) 0;
+  }
+}
+
+[data-portal="import"] .animate-shiny-text {
+  animation: obz-shiny-text 8s infinite;
+}
+
+/* A photo-wall tile arriving. 200ms with a per-index `animation-delay` set
+ * inline by the tile. `both` matters: without it a tile is fully painted during
+ * its own delay and then jumps, which is the opposite of a stagger. */
+@keyframes obz-tile-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+[data-portal="import"] .animate-tile-enter {
+  animation: obz-tile-enter var(--motion-base) var(--motion-ease) both;
+}
+
+/* ---- THE REPORT AND THE ONE QUESTION.
+ * THE COLOUR STAGING. Five hue families, each with a job, each paired with an
+ * icon or a word — never colour alone (SC 1.4.1):
+ *   orange  --obz-cta-on-dark      the brand, the numbers, the chosen option
+ *   green   --kept-green-on-dark   KEPT — a post that became a product
+ *   violet  --violet-on-dark       CAROUSEL — a post with several photos
+ *   blue    --info-on-dark         REEL — a video post
+ *   amber   --warning-on-dark      SET ASIDE / the 50-product cap */
+[data-portal="import"] {
+  /* Grounds for the three media-mix specimens, each its own hue at ~1.35:1
+   * against the slab — the band where a hue reads AS that hue rather than as
+   * another grey rectangle (V1). Their borders clear 3:1: the tile boundary is
+   * what makes a specimen a specimen, so it is a graphical object (1.4.11). */
+  --media-single-bg: #33261a; /* white on it = 13.35:1 */
+  --media-single-border: #6b4a2c; /* 3.04:1 on the slab */
+  --media-carousel-bg: #2a2140; /* white on it = 13.11:1 */
+  --media-carousel-border: #5b4a80; /* 3.10:1 on the slab */
+  --media-reel-bg: #172d3f; /* white on it = 13.62:1 */
+  --media-reel-border: #3f6280; /* 3.05:1 on the slab */
+
+  /* The skipped list. A SET-ASIDE POST IS NOT A FAILURE — a partial result is
+   * still a result — so the group heads take amber, never danger red, and the
+   * reason chip carries the WORD as well as the hue. */
+  --skipped-chip-bg: #2c2a24; /* --warning-on-dark on it = 9.98:1 */
+  --skipped-chip-border: #4d4636; /* 3.02:1 on the slab */
+  --skipped-row-border: #33415a;
+
+  /* The grouping question. The chosen option needs a boundary a seller can find
+   * without reading the radio dot. */
+  --choice-ground: #1a2436; /* 1.24:1 on the slab */
+  --choice-border: #33415a;
+  --choice-border-selected: #d17c45; /* = --obz-cta-on-dark, 5.64:1 on the slab */
+  --choice-ground-selected: #2a2118; /* white on it = 14.36:1 */
+}
+
+/* The skipped group opening. Radix publishes the measured content height as
+ * --radix-accordion-content-height, and it does so ONLY when it detects an
+ * animation on the element. Targeting Radix's own data-slot + data-state needs
+ * no Tailwind participation at all, which is why it is written this way rather
+ * than as a bare `.animate-accordion-down` rule (that matches nothing, because
+ * the class token in the DOM is the literal string
+ * `data-[state=open]:animate-accordion-down`). */
+@keyframes obz-accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes obz-accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+[data-portal="import"] [data-slot="accordion-content"][data-state="open"] {
+  animation: obz-accordion-down var(--motion-base) var(--motion-ease);
+}
+
+[data-portal="import"] [data-slot="accordion-content"][data-state="closed"] {
+  animation: obz-accordion-up var(--motion-base) var(--motion-ease);
+}
+
+/* The report arriving. ONE reveal, 600ms, on the region that changes: nine
+ * seconds of watching a counter ends and a result appears. Rows inside it do NOT
+ * each animate — 156 staggered rows is decoration. */
+@keyframes obz-report-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-portal="import"] .animate-report-enter {
+  animation: obz-report-enter var(--motion-slower) var(--motion-ease) both;
+}
+
+/* =============================================================================
+ * MoveYourShop — the import handoff (UI-002 / UI-003)
+ *
+ * A SECOND, SEPARATE SCOPE, and deliberately not `[data-portal="import"]`.
+ * That scope paints a warm page ground and a fixed background gradient on
+ * whatever carries it — correct for a full-screen route, wrong for one section
+ * inside an existing marketing page, which would suddenly acquire a different
+ * canvas from the sections above and below it. This block therefore takes only
+ * the handful of values the rebuilt section needs, and takes them BY THE SAME
+ * NAMES so a reader can see the two surfaces agree.
+ *
+ * The slab itself keeps its live Tailwind class (`bg-gray-900`) — R13, improve
+ * what exists — and `--slab-ground` above is that exact colour, which is what
+ * makes the rectangle continuous across the hop to /import.
+ *
+ * Owner: this block. Nothing else writes it.
+ * =========================================================================== */
+
+[data-entry="import-handoff"] {
+  /* Shared with the import route, same values, so the two sides of the hop are
+   * the same object rather than two things that look alike. */
+  --slab-text-muted: #d4d4d4; /* on gray-900 = 11.97:1, AA-text */
+  --slab-chip-ground: #1e293b;
+  --slab-chip-border: #33415a;
+  --kept-green-on-dark: #7bd3a6; /* on gray-900 = 9.89:1 */
+  --info-on-dark: #9cc4e8; /* on gray-900 = 9.69:1 */
+  --text-primary: #1b2a22; /* on the white pill = 16.72:1 */
+  --text-placeholder: #7e6e5a; /* on the white pill = 4.92:1 — a placeholder IS text */
+  --motion-fast: 120ms;
+  --motion-base: 200ms;
+  --motion-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* The white pill the handle is typed into, and its resting shadow. The shadow
+   * is a token because the imported component ships it as a raw rgba() triple in
+   * a Tailwind arbitrary value, and a raw colour has exactly one legal home. */
+  --field-ground: #ffffff;
+  --field-ground-typed: #fbf6ec; /* the warm tint the moment she types */
+  --field-shadow: 0 2px 3px -1px rgba(17, 24, 39, 0.1), 0 1px 0 0 rgba(17, 24, 39, 0.02),
+    0 0 0 1px rgba(17, 24, 39, 0.08);
+  /* The pill's own focus ring — 3.02:1 against the white pill, so the boundary of
+   * the control is findable under WCAG 1.4.11 as well as merely visible. */
+  --field-ring: #8a6a4e;
+  /* The colour the vanish canvas paints its glyphs in before the CSS `invert` flips
+   * them to ink. It is a token rather than the imported component's hardcoded `#FFF`
+   * for one reason and it is not tidiness: a raw colour literal has exactly one legal
+   * home in this repo and this is it. The canvas needs a real, opaque, non-black value —
+   * the pixel scan that builds the particle list discards any pixel whose RGB is all
+   * zero — so this must stay light. */
+  --field-particle-ink: #ffffff;
+
+  /* The error sentence under the field. #ff9a8f on gray-900 = 8.02:1. A light
+   * step of the danger family, because this text sits on the DARK slab — the
+   * card-ground #b23a4a measures 2.87:1 here and would fail. */
+  --danger-on-dark: #ff9a8f;
+
+  /* The before/after comparison. The divider is the control; its stem and handle
+   * are graphical objects under 1.4.11 and clear 3:1 against both panes. */
+  --compare-divider: #d17c45; /* = the import route's --obz-cta-on-dark */
+  --compare-handle-ground: #ffffff;
+  --compare-handle-ink: #1b2a22;
+  --compare-handle-shadow: 0 1px 3px rgba(17, 24, 39, 0.45);
+  --compare-glow: rgba(209, 124, 69, 0.55);
+}
