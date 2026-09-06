@@ -21,24 +21,14 @@
 // same pattern. The merchant flow also doesn't touch payments, so the
 // blast radius of a stolen JWT is bounded to "modify own catalog".
 
+import { clearSharedSession, publishSharedSession } from "@/lib/crossSiteSession";
 import { WEBSITE_API_URL } from "@/lib/runtime-config";
 
 const TOKEN_STORAGE_KEY = "merchant_token";
 const SESSION_COOKIE = "merchant_session";
 
-/**
- * Where a signed-in merchant is sent, and how her session travels with her.
- *
- * NOT A COOKIE. `Domain=.obizee.com` is the obvious fix and the wrong one:
- * cookies cannot be scoped to two named subdomains, so it would be sent to
- * every merchant storefront as well, handing a dashboard JWT to any script on
- * any shop. The token rides in the URL FRAGMENT instead — browsers never
- * transmit a fragment, so it reaches the dashboard's JavaScript and nothing
- * else: not our server, not a Referer header, not a proxy log. The dashboard's
- * /handoff page stores it and replaces the history entry.
- */
+/** Where a signed-in merchant is sent. The session travels by cookie, not URL. */
 const DASHBOARD_ORIGIN = "https://dashboard.obizee.com";
-const HANDOFF_FRAGMENT_KEY = "t";
 /**
  * Whether the stored token belongs to a real oBizee account.
  *
@@ -69,23 +59,33 @@ export function setMerchantToken(token: string) {
 }
 
 /**
- * The dashboard URL to send a signed-in merchant to.
- *
- * Returns the plain dashboard when there is no token — a prospect, or a browser
- * that lost its storage — so the link is never dead. She simply signs in there.
- *
- * A PROSPECT IS NEVER HANDED OVER — see SESSION_KIND_KEY.
+ * The dashboard URL. Always the plain origin — a credential never travels in a
+ * URL, where it would land in history, logs and any Referer downstream. The
+ * session is already waiting for her in the shared cookie.
  */
 export function dashboardUrl(): string {
-  const token = isMerchantSession() ? getMerchantToken() : null;
-  if (!token) return DASHBOARD_ORIGIN;
-  return `${DASHBOARD_ORIGIN}/handoff#${HANDOFF_FRAGMENT_KEY}=${encodeURIComponent(token)}`;
+  return DASHBOARD_ORIGIN;
 }
 
-/** Record whether the token just stored is a real account or a prospect. */
+/**
+ * Record whether the token just stored is a real account or a prospect, and
+ * publish it to the other subdomain only if it is a real one.
+ *
+ * A PROSPECT IS NEVER PUBLISHED. UI-011's `import_prospect` token is scoped to
+ * the import routes, so a dashboard session built on it would look signed in
+ * and 401 on every screen — worse than the second login this exists to remove.
+ * Publishing happens HERE rather than in `setMerchantToken` because this is the
+ * first moment the kind is known.
+ */
 export function setMerchantSessionKind(isMerchant: boolean) {
   if (!isBrowser()) return;
   window.localStorage.setItem(SESSION_KIND_KEY, isMerchant ? "merchant" : "prospect");
+  if (isMerchant) {
+    const token = getMerchantToken();
+    if (token) publishSharedSession(token);
+  } else {
+    clearSharedSession();
+  }
 }
 
 /** Defaults to FALSE when unknown: never hand over a token we cannot vouch for. */
@@ -98,6 +98,7 @@ export function clearMerchantToken() {
   if (!isBrowser()) return;
   window.localStorage.removeItem(TOKEN_STORAGE_KEY);
   window.localStorage.removeItem(SESSION_KIND_KEY);
+  clearSharedSession();
   document.cookie = `${SESSION_COOKIE}=; path=/; max-age=0; samesite=lax`;
 }
 
