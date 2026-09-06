@@ -208,7 +208,7 @@ export default function CodeStep({
         // The SAME sequence as UI-006's Google-success path, called rather than copied
         // (`lib/import/useSettle.ts`): session already established by `toIdentity`,
         // then `POST /import/jobs`, then `?job=<id>` into the URL.
-        await settle(result.identity, result.hasSession);
+        await settle(result.identity, result.hasSession, result.canImport);
         return;
       }
 

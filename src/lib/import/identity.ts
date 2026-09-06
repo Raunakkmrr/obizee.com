@@ -62,7 +62,22 @@ export type ApiFailure = {
    */
   retryAfterSeconds?: number | null;
 };
-export type IdentityOk = { ok: true; identity: VerifiedIdentity; hasSession: boolean };
+export type IdentityOk = {
+  ok: true;
+  identity: VerifiedIdentity;
+  /** She already HAS an oBizee account. Drives copy only — never whether the import runs. */
+  hasSession: boolean;
+  /**
+   * A credential came back that `POST /import/jobs` will accept.
+   *
+   * SEPARATE FROM `hasSession` ON PURPOSE. UI-011 gave prospects a token of their own
+   * (`import_prospect` scope), so "may she start an import" and "is she a merchant"
+   * stopped being the same question. Collapsing them is what dead-ended every
+   * first-time seller at the gate — which is the entire audience this feature exists
+   * for — while the backend was already built to carry them.
+   */
+  canImport: boolean;
+};
 
 /** localStorage throws in a private-mode iframe; a memory of last time is not worth a crash. */
 function safeRead(key: string): string | null {
@@ -247,7 +262,7 @@ function toIdentity(
   // so `Boolean(data.token)` became true for someone with no account, and the gate
   // told a first-time seller "Signed in as …". `merchant` is null unless she really
   // has one, which is the question this flag is actually asking.
-  return { ok: true, identity, hasSession: Boolean(data.merchant) };
+  return { ok: true, identity, hasSession: Boolean(data.merchant), canImport: Boolean(data.token) };
 }
 
 /** Exchange Google's authorization code for a session. */

@@ -37,6 +37,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 export type Outcome =
   | { kind: "none" }
   | { kind: "matched"; email: string }
+  /** Proven address, no account yet, and an import is starting anyway. */
+  | { kind: "verified"; email: string }
   | { kind: "prospect"; email: string }
   | { kind: "error"; message: string };
 
@@ -66,6 +68,26 @@ export default function OutcomeBand({ outcome }: { outcome: Exclude<Outcome, { k
             <Loader2 aria-hidden className="h-3.5 w-3.5 animate-spin" />
             Starting your import…
           </p>
+        </AlertDescription>
+      </Alert>
+    );
+  }
+
+  if (outcome.kind === "verified") {
+    return (
+      // Deliberately the SAME visual weight as `matched`: both are good news and both
+      // are followed immediately by the capture. What differs is the claim being made —
+      // this one promises an account, it does not assert one already exists.
+      <Alert
+        role="status"
+        className="rounded-[var(--radius-md)] border-[color:var(--color-info-border)] bg-[color:var(--color-info-bg)] p-3 [&>svg]:size-5"
+      >
+        <Info aria-hidden className="text-[color:var(--color-info)]" />
+        <AlertTitle className="text-[13.5px] font-semibold break-all whitespace-normal line-clamp-none text-[color:var(--text-primary)]">
+          We&apos;ve verified {outcome.email}.
+        </AlertTitle>
+        <AlertDescription className="text-[13px] leading-5 text-[color:var(--text-muted)]">
+          <p>Reading your Instagram now. We&apos;ll build your account from what we find.</p>
         </AlertDescription>
       </Alert>
     );

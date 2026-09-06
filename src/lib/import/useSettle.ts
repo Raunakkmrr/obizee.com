@@ -74,17 +74,24 @@ export function useSettle({
 
   /** Both paths end here: a proven address, and either a session or not. */
   const settle = useCallback(
-    async (identity: VerifiedIdentity, hasSession: boolean) => {
+    async (identity: VerifiedIdentity, hasSession: boolean, canImport: boolean) => {
       setSettling(true);
-      if (!hasSession) {
-        // NOT an error, and not a collision. She proved her address; she simply has no
-        // oBizee account yet, which is the normal case for the seller this feature is
-        // built for.
+      if (!canImport) {
+        // No credential of ANY kind came back, so `POST /import/jobs` has nothing to
+        // present. The band offers the human path instead. This was once every
+        // first-time seller; since UI-011 shipped the prospect token it should be
+        // nobody, and it stays here only because a token can still be withheld
+        // (`google_email_unverified`, a future kill switch) and a dead end is better
+        // than a spinner.
         setOutcome({ kind: "prospect", email: identity.email });
         setSettling(false);
         return;
       }
-      setOutcome({ kind: "matched", email: identity.email });
+      // NOT the same sentence for both. A merchant is signed in; a first-time seller is
+      // verified and about to have an account made for her from what Instagram returns.
+      // Telling her "Signed in as …" before any account exists is the false claim this
+      // flag was split to avoid — but stopping her was the wrong correction.
+      setOutcome({ kind: hasSession ? "matched" : "verified", email: identity.email });
       const [started] = await Promise.all([
         startImport(handle),
         new Promise((resolve) => setTimeout(resolve, MATCHED_DWELL_MS)),
@@ -95,6 +102,8 @@ export function useSettle({
         return;
       }
       if (started.code === "no_session") {
+        // The token vanished between the exchange and the job create — cleared storage,
+        // or an expired prospect credential. The human path is the honest answer.
         setOutcome({ kind: "prospect", email: identity.email });
         return;
       }

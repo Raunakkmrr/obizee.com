@@ -133,7 +133,7 @@ export default function GateScreen({
         setOutcome({ kind: "error", message: result.message });
         return;
       }
-      await settle(result.identity, result.hasSession);
+      await settle(result.identity, result.hasSession, result.canImport);
     },
     [setOutcome, settle],
   );
