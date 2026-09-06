@@ -27,22 +27,28 @@ const TOKEN_STORAGE_KEY = "merchant_token";
 const SESSION_COOKIE = "merchant_session";
 
 /**
- * The cross-subdomain hand-off.
+ * Where a signed-in merchant is sent, and how her session travels with her.
  *
- * A merchant who signed in here and clicked through to dashboard.obizee.com was
- * asked to log in again: this site keeps its JWT in localStorage on
- * `www.obizee.com`, and neither localStorage nor a host-only cookie crosses to
- * another subdomain. This cookie is written on the shared parent so the
- * dashboard's route gate can pick it up on the very first navigation.
- *
- * FIVE MINUTES, AND THE DASHBOARD DELETES IT ON USE. A `.obizee.com` cookie
- * reaches EVERY subdomain, merchant storefronts included, so a long-lived one
- * would hand a merchant's dashboard JWT to any script on any shop. This exists
- * for the length of a redirect and no longer.
+ * NOT A COOKIE. `Domain=.obizee.com` is the obvious fix and the wrong one:
+ * cookies cannot be scoped to two named subdomains, so it would be sent to
+ * every merchant storefront as well, handing a dashboard JWT to any script on
+ * any shop. The token rides in the URL FRAGMENT instead — browsers never
+ * transmit a fragment, so it reaches the dashboard's JavaScript and nothing
+ * else: not our server, not a Referer header, not a proxy log. The dashboard's
+ * /handoff page stores it and replaces the history entry.
  */
-const HANDOFF_COOKIE = "obz_handoff";
-const HANDOFF_MAX_AGE_SECONDS = 300;
-const SHARED_DOMAIN = ".obizee.com";
+const DASHBOARD_ORIGIN = "https://dashboard.obizee.com";
+const HANDOFF_FRAGMENT_KEY = "t";
+/**
+ * Whether the stored token belongs to a real oBizee account.
+ *
+ * The import gate also issues an `import_prospect` token to a seller who has no
+ * account yet. It is scoped to the import routes, so a dashboard session built
+ * on it would look signed in and 401 on every screen — worse than the second
+ * login this hand-off exists to remove. The token itself does not say which it
+ * is, so the gate records it here.
+ */
+const SESSION_KIND_KEY = "merchant_session_kind";
 
 function isBrowser() {
   return typeof window !== "undefined";
@@ -53,53 +59,46 @@ export function getMerchantToken(): string | null {
   return window.localStorage.getItem(TOKEN_STORAGE_KEY);
 }
 
-/**
- * @param token the JWT to store for this origin
- * @param options.shareAcrossSubdomains write the cross-subdomain hand-off too.
- *   FALSE FOR A PROSPECT. UI-011's `import_prospect` token is scoped to the
- *   import routes; handing it to the dashboard would produce a session that
- *   looks signed in and 401s on every screen — worse than the second login this
- *   whole change exists to remove.
- */
-export function setMerchantToken(
-  token: string,
-  { shareAcrossSubdomains = true }: { shareAcrossSubdomains?: boolean } = {},
-) {
+export function setMerchantToken(token: string) {
   if (!isBrowser()) return;
   window.localStorage.setItem(TOKEN_STORAGE_KEY, token);
   // 30-day sentinel cookie matching the backend JWT TTL. Read by
   // middleware.ts to gate /merchant/* page navigation.
   const maxAge = 60 * 60 * 24 * 30;
   document.cookie = `${SESSION_COOKIE}=1; path=/; max-age=${maxAge}; samesite=lax`;
-  if (shareAcrossSubdomains) writeHandoffCookie(token);
 }
 
 /**
- * Write the hand-off, but only where a shared parent domain actually exists.
+ * The dashboard URL to send a signed-in merchant to.
  *
- * On localhost there is none — `domain=.obizee.com` from `localhost:3200` is
- * silently rejected by the browser, and writing it anyway would look like it
- * worked. `Secure` is unconditional because the cookie carries a real JWT.
+ * Returns the plain dashboard when there is no token — a prospect, or a browser
+ * that lost its storage — so the link is never dead. She simply signs in there.
  *
- * @param token the merchant JWT
+ * A PROSPECT IS NEVER HANDED OVER — see SESSION_KIND_KEY.
  */
-function writeHandoffCookie(token: string) {
+export function dashboardUrl(): string {
+  const token = isMerchantSession() ? getMerchantToken() : null;
+  if (!token) return DASHBOARD_ORIGIN;
+  return `${DASHBOARD_ORIGIN}/handoff#${HANDOFF_FRAGMENT_KEY}=${encodeURIComponent(token)}`;
+}
+
+/** Record whether the token just stored is a real account or a prospect. */
+export function setMerchantSessionKind(isMerchant: boolean) {
   if (!isBrowser()) return;
-  if (!window.location.hostname.endsWith("obizee.com")) return;
-  document.cookie =
-    `${HANDOFF_COOKIE}=${encodeURIComponent(token)}` +
-    `; domain=${SHARED_DOMAIN}; path=/; max-age=${HANDOFF_MAX_AGE_SECONDS}; secure; samesite=lax`;
+  window.localStorage.setItem(SESSION_KIND_KEY, isMerchant ? "merchant" : "prospect");
+}
+
+/** Defaults to FALSE when unknown: never hand over a token we cannot vouch for. */
+export function isMerchantSession(): boolean {
+  if (!isBrowser()) return false;
+  return window.localStorage.getItem(SESSION_KIND_KEY) === "merchant";
 }
 
 export function clearMerchantToken() {
   if (!isBrowser()) return;
   window.localStorage.removeItem(TOKEN_STORAGE_KEY);
+  window.localStorage.removeItem(SESSION_KIND_KEY);
   document.cookie = `${SESSION_COOKIE}=; path=/; max-age=0; samesite=lax`;
-  // A signed-out merchant must not leave a live hand-off behind for the next
-  // person on this browser.
-  if (window.location.hostname.endsWith("obizee.com")) {
-    document.cookie = `${HANDOFF_COOKIE}=; domain=${SHARED_DOMAIN}; path=/; max-age=0; samesite=lax`;
-  }
 }
 
 /**

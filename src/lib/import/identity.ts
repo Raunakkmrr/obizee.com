@@ -21,7 +21,7 @@
 import { useSyncExternalStore } from "react";
 
 import { WEBSITE_API_URL } from "@/lib/runtime-config";
-import { authedFetch, setMerchantToken } from "@/lib/merchantAuth";
+import { authedFetch, setMerchantSessionKind, setMerchantToken } from "@/lib/merchantAuth";
 
 /** Which path she used last time. The ticket names this key; do not rename it. */
 export const LAST_AUTH_METHOD_KEY = "import_last_auth_method";
@@ -249,10 +249,10 @@ function toIdentity(
       retryAfterSeconds: payload.retryAfterSeconds,
     };
   }
-  // A prospect's token is import-scoped, so it must NOT cross to the dashboard —
-  // see setMerchantToken's `shareAcrossSubdomains`. `merchant` is the same flag
-  // `hasSession` reads, and for the same reason.
-  if (data.token) setMerchantToken(data.token, { shareAcrossSubdomains: Boolean(data.merchant) });
+  if (data.token) setMerchantToken(data.token);
+  // `merchant` is the same field `hasSession` reads: null means a prospect, whose
+  // import-scoped token must never be handed to the dashboard.
+  setMerchantSessionKind(Boolean(data.merchant));
   const identity: VerifiedIdentity = {
     method,
     email: data.email,

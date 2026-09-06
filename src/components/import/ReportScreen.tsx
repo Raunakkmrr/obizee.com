@@ -21,8 +21,15 @@ import {
   resolveGrouping,
 } from "@/lib/import/report";
 
-/** Not a session hand-off — a literal external link, per UI-009's scope. */
-const DASHBOARD_HREF = "https://dashboard.obizee.com";
+/**
+ * NOW A SESSION HAND-OFF. It used to be a literal external link, and a merchant
+ * who had just signed in here was asked to log in again on the other side.
+ * `dashboardUrl()` carries her token in the URL fragment when — and only when —
+ * she has a real account; a prospect still gets the plain dashboard.
+ * Computed at click time, not at module load, because the token is written
+ * during this session.
+ */
+import { dashboardUrl } from "@/lib/merchantAuth";
 
 /**
  * SCREEN C — THE REPORT (design-brief.md §2.5), and SCREEN D's question inline on it.
@@ -283,7 +290,7 @@ export default function ReportScreen({
           </span>
         </p>
         <a
-          href={DASHBOARD_HREF}
+          href={dashboardUrl()}
           className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[color:var(--obz-cta)] px-5 text-[15px] font-bold text-white transition-colors [transition-duration:var(--motion-fast)] hover:bg-[color:var(--obz-cta-hover)]"
         >
           Open my dashboard
