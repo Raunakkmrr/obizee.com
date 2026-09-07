@@ -376,6 +376,14 @@ export async function startImport(handle: string): Promise<StartImportResult> {
     if (response.status === 202 && payload.data?.jobId) {
       return { ok: true, jobId: payload.data.jobId };
     }
+    // AN IMPORT ALREADY RUNNING IS NOT A FAILURE — it is the thing she asked for,
+    // already happening. The 409 carries the job's id precisely so she can be
+    // taken to it instead of being told to go away on the gate she just filled
+    // in. The commonest cause is her own reload, or a finished capture still
+    // sitting at `awaiting_confirmation` from an earlier run.
+    if (response.status === 409 && payload.data?.jobId) {
+      return { ok: true, jobId: payload.data.jobId };
+    }
     const header = response.headers.get("Retry-After");
     return {
       ok: false,
