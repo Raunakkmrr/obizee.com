@@ -13,7 +13,7 @@ import {
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
-import { liveShops } from "@/data/liveShops";
+import { liveShops, MILESTONE_MERCHANT_COUNT } from "@/data/liveShops";
 import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 import { GoalMark, Mark, type ComparisonGroup } from "@/components/compare/marks";
 
@@ -582,7 +582,7 @@ const CompareShopify = () => {
               */}
               <p className="mx-auto mt-4 inline-flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-[13px] text-orange-900">
                 <Check className="h-3.5 w-3.5 shrink-0 text-orange-600" strokeWidth={3} aria-hidden="true" />
-                <span className="font-bold text-orange-700">{shopCount} of them</span>
+                <span className="font-bold text-orange-700">{MILESTONE_MERCHANT_COUNT} merchants</span>
                 <span>have already crossed the first goal —</span>
                 <span className="font-bold text-orange-700">₹50,000 in orders</span>
               </p>
