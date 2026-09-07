@@ -31,6 +31,24 @@ const Footer = () => {
       { name: "Medium Blog", href: "https://medium.com/@obizee.app", external: true },
       { name: "Product Hunt", href: "https://www.producthunt.com/products/obizee?launch=obizee", external: true },
     ],
+    /*
+     * The alternative pages were effectively orphaned — /dm2buy-alternative had
+     * one inbound internal link and /dm2buy-free-alternative and
+     * /shopify-alternatives-india had none at all, while /pricing had twenty.
+     * A page nothing links to reads as unimportant to Google, which is how they
+     * ended up crawled-but-not-indexed. The footer renders on every page, so
+     * each of these now has a site-wide inbound link. Keep them here.
+     */
+    compare: [
+      { name: "DM2Buy Alternative", href: "/dm2buy-alternative" },
+      { name: "Shopify Alternative", href: "/shopify-alternative" },
+      { name: "Free DM2Buy Alternative", href: "/dm2buy-free-alternative" },
+      { name: "Shopify Alternatives India", href: "/shopify-alternatives-india" },
+      { name: "Best DM2Buy Alternatives", href: "/compare/best-dm2buy-alternatives" },
+      { name: "oBizee vs Dukaan", href: "/compare/obizee-vs-dukaan" },
+      { name: "oBizee vs Bikayi", href: "/compare/obizee-vs-bikayi" },
+      { name: "oBizee vs WooCommerce", href: "/compare/obizee-vs-woocommerce" },
+    ],
     company: [
       { name: "About oBizee", href: "/about" },
       { name: "Pricing", href: "/pricing" },
@@ -169,6 +187,22 @@ const Footer = () => {
                         {link.name}
                       </Link>
                     )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Compare links */}
+            <nav aria-labelledby="footer-compare">
+              <h3 id="footer-compare" className="text-lg sm:text-xl font-bold mb-4 sm:mb-8 text-white">
+                Compare
+              </h3>
+              <ul className="space-y-2 sm:space-y-3">
+                {footerLinks.compare.map((link) => (
+                  <li key={link.name}>
+                    <Link href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-lg">
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

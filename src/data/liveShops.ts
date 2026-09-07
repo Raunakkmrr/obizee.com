@@ -33,14 +33,8 @@ export interface LiveShop {
  */
 export const MILESTONE_MERCHANT_COUNT = 42;
 
-/**
- * REMOVED 2026-09-07: crochetbypriya. The subdomain stopped resolving entirely
- * (connection failure, not a 404) while it was still the first card on both
- * comparison pages, under the line "open any of them and buy something". The
- * other 41 were re-checked the same day and all return 200. Re-check before
- * every publish — a dead shop in this list is a claim the page cannot keep.
- */
 export const liveShops: LiveShop[] = [
+  { brandName: "CrochetByPriya", subDomain: "crochetbypriya", category: "Crochet & handmade", state: "Haryana" },
   { brandName: "Shop velnora", subDomain: "shopvelnora", category: "Clothing", state: "Maharashtra" },
   { brandName: "Snazzy Store", subDomain: "snazzystore", category: "Handmade", state: "Maharashtra" },
   { brandName: "Candle_of__midnight", subDomain: "candleofmidnight", category: "Candles & home", state: "Uttar Pradesh" },

@@ -61,7 +61,7 @@ Full order-based pricing structure: https://www.obizee.com/pricing
 - 165 merchants are selling on oBizee
 - 42 of them have already crossed ₹50,000 in orders
 - Those 42 span 13 Indian states and 8 product categories
-- Live, browsable storefronts include shopvelnora.obizee.com, snazzystore.obizee.com, candleofmidnight.obizee.com, ohtrinkets.obizee.com, crazycrochet.obizee.com
+- Live, browsable storefronts include crochetbypriya.obizee.com, shopvelnora.obizee.com, snazzystore.obizee.com, candleofmidnight.obizee.com, ohtrinkets.obizee.com, crazycrochet.obizee.com
 
 ## Who it is for
 - Small businesses and merchants in India
