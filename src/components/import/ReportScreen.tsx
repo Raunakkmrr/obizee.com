@@ -30,6 +30,7 @@ import {
  * during this session.
  */
 import { dashboardUrl } from "@/lib/merchantAuth";
+import { createStorefrontAccount } from "@/lib/import/report";
 
 /**
  * SCREEN C — THE REPORT (design-brief.md §2.5), and SCREEN D's question inline on it.
@@ -289,14 +290,62 @@ export default function ReportScreen({
             </span>
           </span>
         </p>
-        <a
-          href={dashboardUrl()}
-          className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[color:var(--obz-cta)] px-5 text-[15px] font-bold text-white transition-colors [transition-duration:var(--motion-fast)] hover:bg-[color:var(--obz-cta-hover)]"
-        >
-          Open my dashboard
-          <ArrowRight aria-hidden className="size-4" />
-        </a>
+        <FinishButton jobId={job.jobId} />
       </div>
+    </div>
+  );
+}
+
+/**
+ * THE EXIT, and the step that used to be missing entirely.
+ *
+ * It was a plain link to the dashboard, which dead-ended every first-time
+ * seller: she reaches this screen as a PROSPECT, holding a token scoped to the
+ * import routes, and the dashboard then asked her to sign in to an account that
+ * did not exist, with a password she had never chosen.
+ *
+ * `POST /import/jobs/:jobId/account` builds the account from what the capture
+ * already found — her verified email, her Instagram name, her logo, her palette
+ * — and hands back a real merchant session. Only then is there anywhere to go.
+ *
+ * Her own shop first, the dashboard second: `storefrontUrl` is the thing she
+ * just made, and it is what she asked for. Idempotent on the server, so a
+ * double click or a retry after a dropped connection lands on the same account.
+ */
+function FinishButton({ jobId }: { jobId: string }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const finish = useCallback(async () => {
+    setBusy(true);
+    setError(null);
+    const result = await createStorefrontAccount(jobId);
+    if (result.ok === false) {
+      setBusy(false);
+      setError(result.message);
+      return;
+    }
+    // A full navigation, not a router push: she is leaving this origin, and the
+    // session she was just given has to travel with her.
+    window.location.href = result.account.storefrontUrl ?? dashboardUrl();
+  }, [jobId]);
+
+  return (
+    <div className="flex shrink-0 flex-col items-stretch gap-2 sm:items-end">
+      <button
+        type="button"
+        onClick={finish}
+        disabled={busy}
+        className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[color:var(--obz-cta)] px-5 text-[15px] font-bold text-white transition-colors [transition-duration:var(--motion-fast)] hover:bg-[color:var(--obz-cta-hover)] disabled:opacity-60"
+      >
+        {busy ? "Setting up your shop…" : "Open my shop"}
+        <ArrowRight aria-hidden className="size-4" />
+      </button>
+      {error ? (
+        <p role="status" className="text-[13px] leading-5 text-[color:var(--color-error)]">
+          {error}
+        </p>
+      ) : null}
     </div>
   );
 }

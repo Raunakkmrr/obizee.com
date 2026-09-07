@@ -30,7 +30,7 @@
  * ────────────────────────────────────────────────────────────────────────────────
  */
 
-import { authedFetch } from "@/lib/merchantAuth";
+import { authedFetch, setMerchantSessionKind, setMerchantToken } from "@/lib/merchantAuth";
 import type { ImportJobView, ImportPostView } from "@/lib/import/job";
 
 /**
@@ -350,5 +350,53 @@ export async function saveProductEdits(
   const payload = (await response.json().catch(() => ({}))) as { message?: string; data?: ImportJobView };
   if (response.status === 200 && payload.data?.jobId) return { ok: true, job: payload.data };
   return { ok: false, message: payload.message ?? "We could not save that just now." };
+}
+
+export type StorefrontAccount = {
+  storefrontUrl: string | null;
+  subDomain: string | null;
+  isNewAccount: boolean;
+  email: string;
+};
+
+export type AccountResult =
+  | { ok: true; account: StorefrontAccount }
+  | { ok: false; message: string };
+
+/**
+ * `POST /import/jobs/:jobId/account` — turn a finished import into her shop.
+ *
+ * THE STEP THAT WAS MISSING. Everything before this left her a PROSPECT: an
+ * `import_prospect` token scoped to the import routes and worthless anywhere
+ * else. The dashboard then asked her to log in to an account that did not exist
+ * yet, with a password she had never chosen. This is what creates the account
+ * and hands back a real merchant session.
+ *
+ * Storing the token here rather than in the caller is deliberate: every path
+ * that reaches a merchant session must also record the KIND, because that is
+ * what publishes it to the other subdomain.
+ */
+export async function createStorefrontAccount(jobId: string): Promise<AccountResult> {
+  let response: Response;
+  try {
+    response = await authedFetch(`/import/jobs/${encodeURIComponent(jobId)}/account`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch {
+    return { ok: false, message: "We could not reach oBizee." };
+  }
+
+  const payload = (await response.json().catch(() => ({}))) as {
+    message?: string;
+    data?: StorefrontAccount & { token?: string };
+  };
+
+  if ((response.status === 201 || response.status === 200) && payload.data?.token) {
+    setMerchantToken(payload.data.token);
+    setMerchantSessionKind(true);
+    return { ok: true, account: payload.data };
+  }
+  return { ok: false, message: payload.message ?? "We could not set up your shop just now." };
 }
 
