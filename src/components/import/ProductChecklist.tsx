@@ -45,9 +45,20 @@ export default function ProductChecklist({
    * guess, and she is the only one who can confirm it.
    */
   const guessed = useMemo(() => products.filter((product) => product.titleSource === "guessed"), [products]);
+  /** Prices we read off a photograph. Offered for confirmation, never asserted. */
+  const fromImage = useMemo(
+    () => products.filter((product) => product.priceSource === "image"),
+    [products],
+  );
   /** The list she opens: anything we could not read for certain, priced or not. */
   const needsCheck = useMemo(
-    () => products.filter((product) => product.priceRupees == null || product.titleSource === "guessed"),
+    () =>
+      products.filter(
+        (product) =>
+          product.priceRupees == null ||
+          product.titleSource === "guessed" ||
+          product.priceSource === "image",
+      ),
     [products],
   );
   const defaulted = useMemo(
@@ -132,6 +143,12 @@ export default function ProductChecklist({
           products could use a look.
         </h2>
         <p className="max-w-2xl text-[14px] leading-5 text-[color:var(--slab-text-muted)]">
+          {fromImage.length > 0 ? (
+            <>
+              We read {formatRupees(fromImage.length)} price
+              {fromImage.length === 1 ? "" : "s"} off your photos — check we got them right.{" "}
+            </>
+          ) : null}
           {guessed.length > 0 ? (
             <>
               We named {formatRupees(guessed.length)} of them from your captions, and{" "}
@@ -268,7 +285,9 @@ function ChecklistRow({
             <span className="block truncate text-[14px] font-semibold text-white">{product.title}</span>
             {product.priceSourceText ? (
               <span className="block truncate text-[12.5px] text-[color:var(--slab-text-muted)]">
-                Your caption said &ldquo;{product.priceSourceText}&rdquo;
+                {product.priceSource === "image"
+                  ? `We read “${product.priceSourceText}” on your photo`
+                  : `Your caption said “${product.priceSourceText}”`}
               </span>
             ) : null}
           </>

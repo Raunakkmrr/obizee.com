@@ -87,7 +87,7 @@ export type ImportProductView = {
   /** null = nobody has priced it. Never a guess. */
   priceRupees: number | null;
   /** Who decided the number: her caption, her own typing, or the ₹499 placeholder. */
-  priceSource: "caption" | "seller" | "default" | null;
+  priceSource: "caption" | "seller" | "image" | "default" | null;
   /** The literal caption text a price was read from, so an unpriced row can show why. */
   priceSourceText: string | null;
   /** "guessed" = the caption never named it, so the screen asks her to confirm. */
