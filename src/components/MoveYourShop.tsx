@@ -417,36 +417,36 @@ export default function MoveYourShop() {
             </ScrollReveal>
           </div>
 
-          {/* E8 — the four steps, as a marker row rather than four panels. They
-              were `p-5` cards with a stacked 28px badge and two-line bodies,
-              which at 1440 read as a second hero competing with the field. Two
-              across at 390px instead of one, so the sequence is visible without
-              scrolling four times. */}
-          <div className="mt-10 grid grid-cols-2 gap-2.5 lg:grid-cols-4 lg:gap-3">
+          {/* E8 — FOUR MARKERS, NOT FOUR CARDS.
+              Slimmed twice. First from `p-5` panels with stacked badges; then the
+              box itself came off — border, fill, padding and hover. A bordered,
+              filled rectangle says "this is a separate object you can act on", and
+              these are four words about a sequence that has already happened by the
+              time she reads them. Spending a card on each made them argue with the
+              field above, which IS the thing to act on.
+              An `<ol>`, because the order is the content (R: structure is
+              information). Title and body run on ONE line so a step is one glance. */}
+          {/* ONE COLUMN AT 390, not two. Two columns give each step a ~165px track,
+              which wraps "You type your handle. Nothing to send." onto three ragged
+              lines — measured 155px for the row. Stacked, each step is one line and
+              the whole row is ~116px. Narrower is not always shorter. */}
+          <ol className="mt-8 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
             {steps.map(({ n, title, body }) => (
-              <div
-                key={n}
-                className="rounded-xl border border-white/10 bg-white/5 px-3.5 py-3 transition-colors hover:bg-white/10"
-              >
-                <div className="flex items-center gap-2">
-                  {/* The badge sits INLINE with the title now. Stacked, it cost a
-                      whole row of height per card for one digit. */}
-                  <span className="inline-flex size-5 shrink-0 items-center justify-center rounded-md bg-orange-500 text-[11px] font-bold text-white">
-                    {n}
-                  </span>
-                  <h3 className="text-[13.5px] font-bold leading-tight text-white">
-                    {/* Only step one differs per source, and only by its noun. */}
-                    {n === "1" && source.id === "website" ? "You paste your link" : title}
-                  </h3>
-                </div>
-                <p className="mt-1 pl-7 text-[12.5px] leading-snug text-[color:var(--slab-text-muted)]">
-                  {n === "1" && source.id === "website" ? "Nothing to install." : body}
+              <li key={n} className="flex items-baseline gap-2">
+                <span
+                  aria-hidden
+                  className="inline-flex size-[18px] shrink-0 translate-y-[2px] items-center justify-center rounded bg-orange-500 text-[10.5px] font-bold text-white"
+                >
+                  {n}
+                </span>
+                <p className="min-w-0 text-[13px] leading-snug">
+                  <span className="font-bold text-white">{title}.</span>{" "}
+                  <span className="text-[color:var(--slab-text-muted)]">{body}</span>
                 </p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
 
-          {/* E9 — unchanged. */}
           <div className="mt-10 border-t border-white/10 pt-8">
             <p className="mb-4 font-semibold text-white">You lose nothing by moving</p>
             <ul className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
