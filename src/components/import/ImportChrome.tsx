@@ -45,8 +45,15 @@ export default function ImportChrome() {
         <span className="font-[family-name:var(--font-display)] text-[20px] font-extrabold tracking-tight text-[color:var(--text-primary)]">
           oBizee
         </span>
+        {/* SOURCE-NEUTRAL, and deliberately so. This eyebrow sits OUTSIDE the
+            `<Suspense>` boundary that resolves `?src=`, so it cannot read the source
+            without moving the wordmark inside a boundary whose whole job is to not
+            block it. It should not anyway: the chrome is the stable "you are on
+            oBizee" signal the stranger-across-the-room test asks for, and a subtitle
+            that renamed itself when she corrected her ref would be the opposite of
+            stable. The CHIP, two rows down, is what says which shop. */}
         <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[color:var(--obz-cta)]">
-          Instagram import
+          Shop import
         </span>
       </div>
     </div>

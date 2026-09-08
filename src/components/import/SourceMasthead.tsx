@@ -5,6 +5,7 @@ import { ImageOff, Package, Users } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatCount, type ImportProfileView } from "@/lib/import/job";
+import { SOURCE_UI, formatRef, type ImportSourceId } from "@/lib/import/source";
 
 /**
  * W0 — THE SOURCE MASTHEAD, and it is this screen's first named wow mechanic.
@@ -38,12 +39,23 @@ import { formatCount, type ImportProfileView } from "@/lib/import/job";
 export default function SourceMasthead({
   profile,
   handle,
+  sourceType = "instagram",
 }: {
   profile: ImportProfileView | null;
   /** The handle she typed. Shown while `profile` is still null so the row is never empty. */
   handle: string | null;
+  /**
+   * Which shop this job is reading. Every Instagram-specific word on this row — the
+   * `@`, the alt text, the placeholder name, the skeleton's screen-reader line — comes
+   * from `SOURCE_UI` rather than being written here, so a website job never announces
+   * itself as an Instagram profile. Instagram by default: this component shipped
+   * before a second source existed.
+   */
+  sourceType?: ImportSourceId;
 }) {
   const username = profile?.username ?? handle ?? null;
+  const copy = SOURCE_UI[sourceType];
+  const display = username ? formatRef(sourceType, username) : null;
 
   return (
     <div
@@ -59,7 +71,7 @@ export default function SourceMasthead({
         {profile?.profilePictureUrl ? (
           <AvatarImage
             src={profile.profilePictureUrl}
-            alt={username ? `@${username} profile picture` : "Instagram profile picture"}
+            alt={display ? `${display} profile picture` : `${copy.label} profile picture`}
             className="object-cover"
           />
         ) : null}
@@ -80,10 +92,10 @@ export default function SourceMasthead({
                 64-character account name, and one that ends in an ellipsis after four
                 words is a name she cannot recognise as hers. Two lines, then clamp. */}
             <p className="line-clamp-2 text-[17px] leading-6 font-bold break-words text-white sm:text-[20px]">
-              {profile.name ?? (username ? `@${username}` : "Your Instagram")}
+              {profile.name ?? display ?? copy.editLabel}
             </p>
             {username ? (
-              <p className="mt-0.5 text-[13px] break-all text-[color:var(--slab-text-muted)]">@{username}</p>
+              <p className="mt-0.5 text-[13px] break-all text-[color:var(--slab-text-muted)]">{display}</p>
             ) : null}
             {/* THE FIGURES SIT BELOW THE NAME ON A PHONE AND AT THE FAR RIGHT OF THE ROW
                 FROM `md`, which is the masthead layout every real one uses — identity
@@ -104,7 +116,7 @@ export default function SourceMasthead({
             <Skeleton className="h-6 w-40 max-w-full sm:h-7" />
             <Skeleton className="mt-1.5 h-4 w-28 max-w-full" />
             <Skeleton className="mt-2 h-4 w-52 max-w-full" />
-            <span className="sr-only">Reading your Instagram profile</span>
+            <span className="sr-only">{`Reading ${copy.editLabel.toLowerCase()}`}</span>
           </>
         )}
       </div>

@@ -332,6 +332,8 @@ export async function verifyEmailCode(
   return toIdentity("email", payload);
 }
 
+import type { ImportSourceId } from "@/lib/import/source";
+
 export type StartImportResult =
   | { ok: true; jobId: string }
   | {
@@ -362,12 +364,19 @@ export type StartImportResult =
  * asserting an identity the server would have to trust from a browser. Open item in the
  * dev report, with the proposal.
  */
-export async function startImport(handle: string): Promise<StartImportResult> {
+export async function startImport(
+  ref: string,
+  sourceType: ImportSourceId = "instagram",
+): Promise<StartImportResult> {
   try {
     const response = await authedFetch("/import/jobs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ handle }),
+      // BOTH `ref` AND `handle`, on purpose. `ImportController.js:370` reads
+      // `req.body?.ref ?? req.body?.handle`, and the Instagram branch at :367 reads
+      // `handle` only — so sending both keeps the Instagram request byte-identical to
+      // what shipped, while the website branch gets the field it actually looks for.
+      body: JSON.stringify({ sourceType, ref, handle: ref }),
     });
     const payload = (await response.json().catch(() => ({}))) as Envelope<{
       jobId?: string;

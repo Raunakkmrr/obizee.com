@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 
 import ImportChrome from "@/components/import/ImportChrome";
 import ImportRoute from "@/components/import/ImportRoute";
-import { parseHandle } from "@/lib/import/handle";
+import { parseSourceId, parseSourceRef } from "@/lib/import/source";
 import { deriveImportState } from "@/lib/import/state";
 
 /**
@@ -55,20 +55,29 @@ function ImportParams() {
   const raw = params.get("h");
   const job = params.get("job");
 
-  // The same rule the server runs on the handle before it ever reaches Instagram's Graph
-  // field expression (`src/lib/import/handle.ts`, derived from OM-backend's
-  // `normaliseHandle`). A `?h=` that could never be a handle is dropped rather than
-  // rendered: the chip is a claim that we know where her shop is, and it must not carry
-  // something we already know is not one.
-  const parsed = parseHandle(raw);
-  const handle = parsed.ok ? parsed.handle : null;
+  // WHERE HER SHOP IS, from `?src=`. An absent, unknown or malformed value resolves to
+  // Instagram — `parseSourceId`'s header says why, and it is the same default
+  // `ImportController.js:356` applies to a body with no `sourceType`, so the two ends
+  // of the hand-off cannot disagree about what an unlabelled request means.
+  const sourceType = parseSourceId(params.get("src"));
+
+  // The same rule the server runs on the ref before it is used — for Instagram that is
+  // still `parseHandle` (`src/lib/import/handle.ts`, derived from OM-backend's
+  // `normaliseHandle`, which interpolates into a Graph field expression); for a website
+  // it is a hostname shape. Reached through `parseSourceRef` so this page, the chip and
+  // the picker on obizee.com run one rule per source rather than three copies of it. A
+  // `?h=` that could never be a ref is dropped rather than rendered: the chip is a claim
+  // that we know where her shop is, and it must not carry something we know is not one.
+  const parsed = parseSourceRef(sourceType, raw);
+  const handle = parsed.ok ? parsed.ref : null;
 
   return (
-    <div data-state={deriveImportState({ job })} data-handle={handle ?? ""}>
+    <div data-state={deriveImportState({ job })} data-handle={handle ?? ""} data-source={sourceType}>
       <ImportRoute
         state={deriveImportState({ job })}
         handle={handle}
         job={job}
+        sourceType={sourceType}
         // Public by necessity: Google Identity Services' `initCodeClient` runs in the
         // browser. The SECRET stays server-side in OM-backend's env.
         googleClientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}

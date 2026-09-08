@@ -26,6 +26,7 @@ import {
 } from "@/lib/import/job";
 import { startImport } from "@/lib/import/identity";
 import { useImportJob } from "@/lib/import/useImportJob";
+import type { ImportSourceId } from "@/lib/import/source";
 
 /**
  * SCREEN B — WORKING (design-brief.md §2.5), and the three pre-report endings a capture
@@ -83,6 +84,7 @@ import { useImportJob } from "@/lib/import/useImportJob";
 export default function WorkingScreen({
   jobId,
   handle,
+  sourceType = "instagram",
   /** A retry created a new job — write `?job=<id>` and re-point the poll. */
   onJobStarted,
   /** Back to the gate with the handle intact and editable. D-1/D-2's second action. */
@@ -92,6 +94,8 @@ export default function WorkingScreen({
 }: {
   jobId: string;
   handle: string | null;
+  /** Which shop this job reads. Carries into the retry and into the masthead's words. */
+  sourceType?: ImportSourceId;
   onJobStarted: (jobId: string) => void;
   onRestartGate: () => void;
   email: string | null;
@@ -105,14 +109,17 @@ export default function WorkingScreen({
       return;
     }
     setRetrying(true);
-    const started = await startImport(handle);
+    // The RETRY must restart the same source. Calling `startImport(handle)` here was
+    // the bug this prop closes: a website job that failed once would come back as an
+    // Instagram job reading a domain as a handle.
+    const started = await startImport(handle, sourceType);
     setRetrying(false);
     // A retry that itself fails falls back to the gate rather than stacking a second
     // panel on top of the first: two error states about the same handle is how a seller
     // decides the product is broken.
     if (started.ok === true) onJobStarted(started.jobId);
     else onRestartGate();
-  }, [handle, onJobStarted, onRestartGate]);
+  }, [handle, sourceType, onJobStarted, onRestartGate]);
 
   const handlers = useMemo(
     () => ({ onTryAnotherHandle: onRestartGate, onRetry, email }),
@@ -132,7 +139,7 @@ export default function WorkingScreen({
     // report-like content off the posts this job DID capture. They are routed to the
     // report state rather than ended here — the job document is intact either way.
     if (reason === "no_products_found" || reason === "timed_out") {
-      return <ReportScreen job={job} handle={handle} reason={reason} onRestartGate={onRestartGate} />;
+      return <ReportScreen job={job} handle={handle} sourceType={sourceType} reason={reason} onRestartGate={onRestartGate} />;
     }
     return <ImportOutcome spec={outcomeFor(reason, handlers)} />;
   }
@@ -141,7 +148,7 @@ export default function WorkingScreen({
   // handing the OBJECT over rather than the id is what stops the report re-fetching a
   // job this component already holds, and is why the hand-off has no loading flash.
   if (job && isFinished(job)) {
-    return <ReportScreen job={job} handle={handle} onRestartGate={onRestartGate} />;
+    return <ReportScreen job={job} handle={handle} sourceType={sourceType} onRestartGate={onRestartGate} />;
   }
 
   // ── The working screen ─────────────────────────────────────────────────────
@@ -168,7 +175,7 @@ export default function WorkingScreen({
 
       {/* W0 — populated at about one second, and it stays for the nine minutes after
           that. V4 wow mechanic 1, and V2's tenant identity in the same move. */}
-      <SourceMasthead profile={profile} handle={handle} />
+      <SourceMasthead profile={profile} handle={handle} sourceType={sourceType} />
 
       <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:gap-8">
         <div className="flex min-w-0 flex-col gap-6">

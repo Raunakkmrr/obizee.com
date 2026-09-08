@@ -32,9 +32,12 @@ import type { Metadata, Viewport } from "next";
  *    her email. It is scoped to this route and does not touch the site's root viewport.
  */
 export const metadata: Metadata = {
-  title: "Import your Instagram shop — oBizee",
+  // SOURCE-NEUTRAL. `output: export` builds this route's <head> once at build time, so
+  // it cannot vary with `?src=` — and a title that says Instagram over a Shopify import
+  // is worse than one that says neither. The route reads both.
+  title: "Import your shop — oBizee",
   description:
-    "Bring your Instagram shop to oBizee. We read your posts and captions and show you exactly what we found before anything is saved.",
+    "Bring your Instagram shop or your website to oBizee. We read what is already public and show you exactly what we found before anything is saved.",
   // Not indexable while the Meta App Review is outstanding: until then this route can
   // only serve accounts allow-listed in the Instagram app's development mode.
   robots: { index: false, follow: false },

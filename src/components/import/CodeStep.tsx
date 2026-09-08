@@ -23,6 +23,7 @@ import {
   requestEmailCode,
   verifyEmailCode,
 } from "@/lib/import/identity";
+import type { ImportSourceId } from "@/lib/import/source";
 import { useSettle } from "@/lib/import/useSettle";
 import { cn } from "@/lib/utils";
 
@@ -113,6 +114,7 @@ function formatCountdown(seconds: number) {
 
 export default function CodeStep({
   handle,
+  sourceType = "instagram",
   email,
   onHandleChange,
   onJobStarted,
@@ -121,6 +123,8 @@ export default function CodeStep({
   onUseGoogle,
 }: {
   handle: string;
+  /** Which shop the job reads, carried from `?src=`. Instagram unless told otherwise. */
+  sourceType?: ImportSourceId;
   email: string;
   onHandleChange: (next: string) => void;
   onJobStarted: (jobId: string) => void;
@@ -147,7 +151,7 @@ export default function CodeStep({
   const [shake, setShake] = useState(0);
   const [resendNote, setResendNote] = useState<string | null>(null);
 
-  const { outcome, settle } = useSettle({ handle, onJobStarted, onBlocked });
+  const { outcome, settle } = useSettle({ handle, sourceType, onJobStarted, onBlocked });
 
   // ── The resend window ────────────────────────────────────────────────────────
   // The code was sent by the gate immediately before this screen mounted, so the
@@ -341,7 +345,7 @@ export default function CodeStep({
 
         {/* G0 stays. It is still the only thing on screen that says this is HER import
             and not a generic login, and it is still editable. */}
-        <HandleChip handle={handle} onChange={onHandleChange} />
+        <HandleChip handle={handle} onChange={onHandleChange} sourceType={sourceType} />
 
         {/* O1 — two-tone (R8): the words carrying the argument take the brand colour,
             and both tones clear AA on the slab (§4.2). */}

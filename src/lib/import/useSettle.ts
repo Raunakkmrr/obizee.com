@@ -4,6 +4,7 @@ import { useCallback, useState } from "react";
 
 import type { Outcome } from "@/components/import/OutcomeBand";
 import { startImport, type VerifiedIdentity } from "@/lib/import/identity";
+import type { ImportSourceId } from "@/lib/import/source";
 
 /**
  * WHAT HAPPENS AFTER AN IDENTITY IS PROVEN — one implementation, both paths.
@@ -61,10 +62,16 @@ export const BLOCKING_CREATE_CODES = ["source_not_enabled", "rate_limited"] as c
 
 export function useSettle({
   handle,
+  sourceType = "instagram",
   onJobStarted,
   onBlocked,
 }: {
   handle: string;
+  /**
+   * Which shop the job reads. Defaults to Instagram: this hook shipped before a second
+   * source existed and every caller that has not been told otherwise means that one.
+   */
+  sourceType?: ImportSourceId;
   onJobStarted: (jobId: string) => void;
   /** UI-008. Hands D-5 / D-6 to the route so it can render a full outcome panel. */
   onBlocked?: (blocked: { code: string; retryAfterSeconds?: number | null }) => void;
@@ -93,7 +100,7 @@ export function useSettle({
       // flag was split to avoid — but stopping her was the wrong correction.
       setOutcome({ kind: hasSession ? "matched" : "verified", email: identity.email });
       const [started] = await Promise.all([
-        startImport(handle),
+        startImport(handle, sourceType),
         new Promise((resolve) => setTimeout(resolve, MATCHED_DWELL_MS)),
       ]);
       setSettling(false);
@@ -114,7 +121,7 @@ export function useSettle({
       }
       setOutcome({ kind: "error", message: started.message });
     },
-    [handle, onJobStarted, onBlocked],
+    [handle, sourceType, onJobStarted, onBlocked],
   );
 
   return { outcome, setOutcome, settling, settle };

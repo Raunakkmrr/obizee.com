@@ -11,6 +11,7 @@ import ImportSlab from "@/components/import/ImportSlab";
 import WorkingScreen from "@/components/import/WorkingScreen";
 import { outcomeFor } from "@/components/import/importOutcomes";
 import { useVerifiedEmail } from "@/lib/import/identity";
+import type { ImportSourceId } from "@/lib/import/source";
 import type { ImportState } from "@/lib/import/state";
 
 /**
@@ -33,11 +34,18 @@ export default function ImportRoute({
   state,
   handle,
   job,
+  sourceType = "instagram",
   googleClientId,
 }: {
   state: ImportState;
   handle: string | null;
   job: string | null;
+  /**
+   * Which shop she is moving, resolved from `?src=` by `app/import/page.tsx`.
+   * Instagram by default, because that is what every `/import/` link issued before the
+   * picker existed means, and what the server assumes for a body with no `sourceType`.
+   */
+  sourceType?: ImportSourceId;
   googleClientId: string | undefined;
 }) {
   const router = useRouter();
@@ -90,9 +98,16 @@ export default function ImportRoute({
    */
   const onRestartGate = useCallback(() => {
     setBlocked(null);
-    const search = handle ? `?h=${encodeURIComponent(handle)}` : "";
-    router.replace(`/import${search}`, { scroll: false });
-  }, [handle, router]);
+    // `src` SURVIVES ALONGSIDE `h`. Dropping it here would send a seller who came in
+    // from the website pill back to a gate branded Instagram, holding a domain — the
+    // exact mismatch this prop exists to prevent. Instagram is the default, so it is
+    // omitted rather than written, and the URL of the flow that shipped is unchanged.
+    const params = new URLSearchParams();
+    if (handle) params.set("h", handle);
+    if (sourceType !== "instagram") params.set("src", sourceType);
+    const search = params.toString();
+    router.replace(`/import${search ? `?${search}` : ""}`, { scroll: false });
+  }, [handle, sourceType, router]);
 
   /**
    * Her verified address, for D-6's "you won't be asked again".
@@ -139,6 +154,7 @@ export default function ImportRoute({
         <WorkingScreen
           jobId={job}
           handle={handle}
+          sourceType={sourceType}
           onJobStarted={onJobStarted}
           onRestartGate={onRestartGate}
           email={email}
@@ -168,6 +184,7 @@ export default function ImportRoute({
           >
             <CodeStep
               handle={handle ?? ""}
+              sourceType={sourceType}
               email={otpEmail}
               onHandleChange={onHandleChange}
               onJobStarted={onJobStarted}
@@ -196,6 +213,7 @@ export default function ImportRoute({
               // A missing `?h=` is a real arrival — someone typed /import directly. The
               // chip opens empty and editable rather than the screen refusing to render.
               handle={handle ?? ""}
+              sourceType={sourceType}
               googleClientId={googleClientId}
               initialEmail={returned?.email}
               focusOnMount={returned?.target}

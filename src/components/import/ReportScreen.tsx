@@ -31,6 +31,7 @@ import {
  */
 import { dashboardUrl } from "@/lib/merchantAuth";
 import { createStorefrontAccount } from "@/lib/import/report";
+import type { ImportSourceId } from "@/lib/import/source";
 
 /**
  * SCREEN C — THE REPORT (design-brief.md §2.5), and SCREEN D's question inline on it.
@@ -73,6 +74,7 @@ import { createStorefrontAccount } from "@/lib/import/report";
 export default function ReportScreen({
   job: incoming,
   handle,
+  sourceType = "instagram",
   /** `no_products_found` (D-3) or `timed_out` (D-4). Absent on a normal finish. */
   reason,
   /** D-4's "Try again" and D-3's fallback — back to the gate with the handle kept. */
@@ -80,6 +82,8 @@ export default function ReportScreen({
 }: {
   job: ImportJobView | null;
   handle: string | null;
+  /** Which shop this job read. Only the masthead's wording depends on it. */
+  sourceType?: ImportSourceId;
   reason?: string | null;
   onRestartGate: () => void;
 }) {
@@ -126,7 +130,7 @@ export default function ReportScreen({
         <h1 className="typo-h1-xl text-balance text-white">
           That took <span className="text-[color:var(--warning-on-dark)]">too long</span>.
         </h1>
-        <SourceMasthead profile={profile} handle={handle} />
+        <SourceMasthead profile={profile} handle={handle} sourceType={sourceType} />
         <Band tone="warning" icon={Clock} title="Nothing was lost.">
           We saved everything we read before it stopped —{" "}
           <strong className="font-bold text-white">{formatCount(counts.postsRead)} posts</strong>, already
@@ -153,7 +157,7 @@ export default function ReportScreen({
         <Eyebrow>Reading finished</Eyebrow>
         {/* THE MASTHEAD STILL RENDERS. She has to be able to see WHICH account we
             looked at before she can tell us we looked at the wrong one. */}
-        <SourceMasthead profile={profile} handle={handle} />
+        <SourceMasthead profile={profile} handle={handle} sourceType={sourceType} />
         <h1 className="typo-h1-xl text-balance text-white">This account has no posts yet.</h1>
         <p className="max-w-2xl text-[15px] leading-6 text-[color:var(--slab-text-muted)]">
           We found the account and read it — there was nothing on it to bring over. Post your first
@@ -207,7 +211,7 @@ export default function ReportScreen({
       </h1>
 
       {/* R1 */}
-      <SourceMasthead profile={profile} handle={handle} />
+      <SourceMasthead profile={profile} handle={handle} sourceType={sourceType} />
 
       {/* D-3 — the panel, and its two real next steps. */}
       {noProducts ? (

@@ -20,6 +20,7 @@ import {
   requestEmailCode,
   useLastAuthMethod,
 } from "@/lib/import/identity";
+import type { ImportSourceId } from "@/lib/import/source";
 import { useSettle } from "@/lib/import/useSettle";
 import { cn } from "@/lib/utils";
 
@@ -65,6 +66,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function GateScreen({
   handle,
+  sourceType = "instagram",
   googleClientId,
   initialEmail,
   focusOnMount,
@@ -74,6 +76,12 @@ export default function GateScreen({
   onCodeSent,
 }: {
   handle: string;
+  /**
+   * Which shop she is moving, from `?src=`. Defaults to Instagram — the route carried
+   * nothing else until the picker on obizee.com grew a second pill, and every link
+   * already sent to a merchant still points at the Instagram flow.
+   */
+  sourceType?: ImportSourceId;
   googleClientId: string | undefined;
   /**
    * ADDED BY UI-007. The code step's O2 sends her back here to fix a mis-typed
@@ -105,7 +113,12 @@ export default function GateScreen({
   const [email, setEmail] = useState(initialEmail ?? "");
   const [emailError, setEmailError] = useState<string | null>(null);
   const [sending, setSending] = useState(false);
-  const { outcome, setOutcome, settling: busy, settle } = useSettle({ handle, onJobStarted, onBlocked });
+  const { outcome, setOutcome, settling: busy, settle } = useSettle({
+    handle,
+    sourceType,
+    onJobStarted,
+    onBlocked,
+  });
 
   // ADDED BY UI-007. `focusOnMount` is only ever set when she came BACK from the code
   // step, so this never steals focus on a first arrival — a page that grabs focus on
@@ -177,7 +190,7 @@ export default function GateScreen({
         </p>
 
         {/* G0 — rendered from the server-resolved `?h=`, so it is in the first HTML. */}
-        <HandleChip handle={handle} onChange={onHandleChange} />
+        <HandleChip handle={handle} onChange={onHandleChange} sourceType={sourceType} />
 
         {/* G1 — her question, not ours. Two-tone: the words carrying the argument take
             the brand colour (R8), and both tones clear AA on the slab (§4.2). */}
