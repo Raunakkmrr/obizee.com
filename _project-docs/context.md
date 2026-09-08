@@ -124,6 +124,15 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [FACT] DM2Buy's API (`api.dm2buy.com/v4|v5`) 502s from Azure App Gateway; their own storefront renders blank. Their product endpoint could not be discovered.
 - [PREFERENCE] Under no condition may the Instagram extraction flow be touched or broken
 
+### Session — 2026-09-08 (later)
+- [DONE] Fixed the edit-loss bug: her prices and titles now live in `job.edits`, keyed to `posts[]`, and survive any re-group. 12 new tests, 332 pass. OM-backend `60aceb0`
+- [DONE] `postAssembly` refuses a published job with 409 `import_already_published`; `GroupingChoice` now shows the refusal instead of silently rolling the dot back
+- [DONE] "You can change this later" replaced — it was false. She cannot change it after publish
+- [DONE] `?resume=1` skips the gate for a signed-in merchant — `478a508`
+- [FACT] Reading `localStorage` in a lazy initialiser inside the `/import` Suspense boundary DOES hydration-mismatch. The boundary's `fallback={null}` does not mean "no server HTML" — measured, React threw the subtree away
+- [FACT] A `started` ref plus a cleanup `cancelled` flag deadlocks under React 18's double-mount: the only in-flight request is cancelled and nothing retries
+- [NEEDS-INPUT] Brief written for the remaining two: `_project-docs/planning/product-brief-second-import.md`
+
 ---
 
 ## OPEN ITEMS
@@ -134,3 +143,5 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [IN-PROGRESS] The dashboard home rebuild and the SSO precedence fix are deployed but unverified in production — both sit behind auth.
 - [NEEDS-INPUT] DM2Buy adapter — blocked on their API. Retry when `api.dm2buy.com` stops 502ing.
 - [ASSUMED] No test anywhere covers `sourceType` or the website path at the HTTP layer, in this repo or OM-backend. Worth a ticket.
+- [NEEDS-INPUT] Three questions in `product-brief-second-import.md` block the re-group-after-publish work: whether it should exist at all versus "just import again", deactivate vs delete for dropped products, and whether import jobs ever expire.
+- [IN-PROGRESS] Nothing writes `?resume=1` yet. The gate short-circuit works but has no caller until the dashboard entry point ships (Part A of the brief).
