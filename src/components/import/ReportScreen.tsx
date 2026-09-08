@@ -278,8 +278,10 @@ export default function ReportScreen({
         />
       ) : null}
 
-      {/* AFTER the grouping, never before: `postAssembly` REPLACES normalised.products,
-          so a price typed against the old array would be written onto a different row.
+      {/* Below the grouping because it is the finer decision, not because it has to be:
+          her prices and titles are stored in `job.edits`, keyed to `posts[]`, and
+          `assembleProducts` re-applies them after every re-derive. Flipping the grouping
+          mid-checklist used to write her numbers onto different rows — it no longer can.
           Renders nothing at all once every product has a price she chose. */}
       <ProductChecklist job={job} onPriced={setOverride} />
 

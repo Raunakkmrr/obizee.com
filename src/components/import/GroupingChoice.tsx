@@ -71,6 +71,7 @@ export default function GroupingChoice({
   const groupId = useId();
   // The optimistic value. `null` means "no divergence — show what the server holds".
   const [pending, setPending] = useState<Grouping | null>(null);
+  const [error, setError] = useState<string | null>(null);
   // AC-3 — a double-click must not fire two requests. A ref, not state, because the
   // guard has to be true on the SAME tick as the second click, before any re-render.
   const inFlight = useRef(false);
@@ -84,6 +85,7 @@ export default function GroupingChoice({
       inFlight.current = true;
       setPending(grouping);
 
+      setError(null);
       const result = await setGrouping(jobId, grouping);
       inFlight.current = false;
 
@@ -94,9 +96,14 @@ export default function GroupingChoice({
         setPending(null);
         return;
       }
-      // The request did not land. Say so by moving the dot back rather than by leaving
-      // her looking at a choice we did not record.
+      // The request did not land. Move the dot back AND say why.
+      //
+      // It used to only move the dot, which made the one refusal that actually matters
+      // invisible: a published import answers 409 `import_already_published`, and a
+      // seller who clicked and saw the selection silently snap back would read that as
+      // the product being broken rather than as an answer.
       setPending(null);
+      setError(result.message);
     },
     [jobId, onAssembled, shown],
   );
@@ -151,9 +158,19 @@ export default function GroupingChoice({
         />
       </RadioGroup>
 
+      {/* TRUE AS WRITTEN, which the old line was not. It said "You can change this
+          later", and later is exactly when she cannot: `postAssembly` refuses a
+          published job, because the catalogue skips by title and never removes, so a
+          re-group after publish would add the new products beside the old ones. */}
       <p className="text-[13px] leading-5 text-[color:var(--slab-text-muted)]">
-        You can change this later. Nothing is fetched again — we already have your photos.
+        Change it as often as you like here — nothing is re-fetched. Fixed once your shop is live.
       </p>
+
+      {error ? (
+        <p role="alert" className="text-[13px] leading-5 font-medium text-[color:var(--brand-warm-on-dark)]">
+          {error}
+        </p>
+      ) : null}
     </fieldset>
   );
 }
