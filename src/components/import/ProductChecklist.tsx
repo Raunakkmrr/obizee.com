@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useId, useMemo, useState } from "react";
-import { Check, IndianRupee, Loader2 } from "lucide-react";
+import { Check, ChevronDown, IndianRupee, Loader2 } from "lucide-react";
 
 import { DEFAULT_PRICE_RUPEES, saveProductEdits, type ProductEdit } from "@/lib/import/report";
 import type { ImportJobView, ImportProductView } from "@/lib/import/job";
@@ -66,7 +66,34 @@ export default function ProductChecklist({
     [products],
   );
 
+  /**
+   * THE ROWS THE CAPTURE DOES NOT THINK ARE PRODUCTS — grouped, never hidden.
+   *
+   * A shop had three `video/mp4` reels sitting in its catalogue rendering as nothing.
+   * The classifier now flags those, and this is where the flag becomes visible.
+   *
+   * `isProduct === false` and NOT `!isProduct`: `classification` is null for every
+   * import captured before there was a judge, and "no opinion" has to read as "leave it
+   * with the products". Treating null as a negative would sweep an entire old shop into
+   * the bottom drawer.
+   */
+  const [likely, unlikely] = useMemo(() => {
+    const yes: typeof needsCheck = [];
+    const no: typeof needsCheck = [];
+    for (const product of needsCheck) {
+      (product.classification?.isProduct === false ? no : yes).push(product);
+    }
+    return [yes, no];
+  }, [needsCheck]);
+
   const [open, setOpen] = useState(false);
+  /**
+   * Open when there is nothing else to show. An account whose every post is content
+   * rather than merchandise — a coding page, a studio's process feed — would otherwise
+   * meet an empty list above a closed drawer holding everything, which reads as a
+   * broken screen rather than as an answer.
+   */
+  const [seeUnlikely, setSeeUnlikely] = useState(false);
   const [drafts, setDrafts] = useState<Record<number, string>>({});
   const [titleDrafts, setTitleDrafts] = useState<Record<number, string>>({});
   const [saving, setSaving] = useState(false);
@@ -188,7 +215,7 @@ export default function ProductChecklist({
       {open ? (
         <div className="flex flex-col gap-3">
           <ul className="flex max-h-[26rem] flex-col gap-2 overflow-y-auto pr-1">
-            {needsCheck.map((product) => (
+            {likely.map((product) => (
               <ChecklistRow
                 key={product.index}
                 product={product}
@@ -199,6 +226,51 @@ export default function ProductChecklist({
               />
             ))}
           </ul>
+
+          {/* NOT A GATE, A DRAWER. Every one of these is already a product in her shop;
+              this only says we do not think it is one, and opens so she can disagree.
+              Nothing here is unticked, removed, or excluded from the catalogue — the
+              2026-09-06 ruling that every post is a product is untouched. */}
+          {unlikely.length > 0 ? (
+            <div className="rounded-[var(--radius-md)] border border-[color:var(--slab-chip-border)]">
+              <button
+                type="button"
+                onClick={() => setSeeUnlikely((was) => !was)}
+                aria-expanded={seeUnlikely || likely.length === 0}
+                className="flex min-h-11 w-full items-center justify-between gap-3 px-3.5 text-left"
+              >
+                <span className="text-[13.5px] leading-5 text-[color:var(--slab-text-muted)]">
+                  <span className="font-bold text-white">
+                    {formatRupees(unlikely.length)}{" "}
+                    {unlikely.length === 1 ? "of these does not look" : "of these do not look"} like
+                    products
+                  </span>
+                  <span className="block">A reel, a note, or a photo of something you are not selling.</span>
+                </span>
+                <ChevronDown
+                  aria-hidden
+                  className={`size-4 shrink-0 text-[color:var(--slab-text-muted)] transition-transform [transition-duration:var(--motion-fast)] ${
+                    seeUnlikely || likely.length === 0 ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {seeUnlikely || likely.length === 0 ? (
+                <ul className="flex max-h-[20rem] flex-col gap-2 overflow-y-auto border-t border-[color:var(--slab-chip-border)] p-3">
+                  {unlikely.map((product) => (
+                    <ChecklistRow
+                      key={product.index}
+                      product={product}
+                      price={drafts[product.index] ?? ""}
+                      title={titleDrafts[product.index] ?? ""}
+                      onPrice={(value) => setDrafts((was) => ({ ...was, [product.index]: value }))}
+                      onTitle={(value) => setTitleDrafts((was) => ({ ...was, [product.index]: value }))}
+                    />
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          ) : null}
+
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-[13px] leading-5 text-[color:var(--slab-text-muted)]">
               Leave any of them blank — blanks get ₹{formatRupees(DEFAULT_PRICE_RUPEES)} when you skip.
@@ -244,7 +316,15 @@ function ChecklistRow({
   const guessed = product.titleSource === "guessed";
 
   return (
-    <li className="flex items-center gap-3 rounded-[var(--radius-md)] border border-[color:var(--slab-chip-border)] bg-[color:var(--slab-chip-ground)] p-2.5">
+    /* STACKS AT 390, ROW FROM sm. Measured on a 375px viewport: thumbnail + name field +
+       price field on one line left the name showing six characters ("Handma", "Burger
+       K"), which is a field she cannot read what she typed in. The name is the thing
+       this row exists to let her fix, so below sm the price drops beneath it and the
+       name gets the full width. */
+    <li className="flex flex-col gap-2 rounded-[var(--radius-md)] border border-[color:var(--slab-chip-border)] bg-[color:var(--slab-chip-ground)] p-2.5 sm:flex-row sm:items-center sm:gap-3">
+      {/* Thumbnail and name travel TOGETHER at every width. Only the price leaves the
+          row below sm, which is what buys the name its full measure. */}
+      <div className="flex min-w-0 flex-1 items-center gap-3">
       {product.thumbUrl ? (
         /* A plain <img>, not next/image: this is a remote S3 thumbnail on a statically
            exported site, where the optimiser has no server to run on. */
@@ -293,8 +373,10 @@ function ChecklistRow({
           </>
         )}
       </div>
+      </div>
 
-      <div className="relative shrink-0">
+      {/* Full width below sm, where it sits under the name rather than beside it. */}
+      <div className="relative w-full shrink-0 sm:w-auto">
         <label htmlFor={priceId} className="sr-only">
           Price for {product.title} in rupees
         </label>

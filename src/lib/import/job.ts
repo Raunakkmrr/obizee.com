@@ -94,6 +94,20 @@ export type ImportProductView = {
   titleSource: "extracted" | "guessed" | "seller" | null;
   thumbUrl: string | null;
   sourceUrl: string;
+  /**
+   * Whether the capture thinks this is something she SELLS.
+   *
+   * ORDERING, NOT MEMBERSHIP. Every captured post is a row and none is ever hidden;
+   * this decides which rows lead and which are grouped at the bottom. `null` means the
+   * import ran before there was a judge — read that as no opinion, never as "no".
+   */
+  classification: {
+    isProduct: boolean;
+    /** 0..1. Zero means nothing judged it, which belongs WITH the products. */
+    confidence: number;
+    reason: string | null;
+    category: string | null;
+  } | null;
 };
 
 export type ImportJobView = {
