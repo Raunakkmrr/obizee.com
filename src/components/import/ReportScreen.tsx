@@ -18,6 +18,7 @@ import {
   hasPartialFailure,
   mediaSpecimens,
   reportCounts,
+  GROUPINGS,
   resolveGrouping,
 } from "@/lib/import/report";
 
@@ -285,14 +286,23 @@ export default function ReportScreen({
           Renders nothing at all once every product has a price she chose. */}
       <ProductChecklist job={job} onPriced={setOverride} />
 
-      {/* R7 — the exit. */}
+      {/* R7 — the exit, and the LAST REVERSIBLE MOMENT.
+          `POST /import/jobs/:jobId/account` publishes the catalogue, and from then on
+          `postAssembly` answers 409: the catalogue skips by title and never removes, so
+          a re-group afterwards cannot be reconciled. Re-grouping after publish was
+          costed at four days and declined (2026-09-08) in favour of making the choice
+          harder to get wrong while it is still free to change — which is this line.
+
+          It also replaces "Your catalogue is saved. Nothing here needs your approval —
+          it is already stored." That was true of the JOB and read as a claim about her
+          SHOP, one click before the sentence became true. */}
       <div className="flex flex-col gap-3 rounded-[var(--radius-lg)] border border-[color:var(--slab-chip-border)] bg-[color:var(--slab-chip-ground)] p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
         <p className="flex items-start gap-2 text-[15px] leading-6">
           <Check aria-hidden className="mt-0.5 size-5 shrink-0 text-[color:var(--kept-green-on-dark)]" />
           <span>
-            <span className="font-bold text-white">Your catalogue is saved.</span>
+            <span className="font-bold text-white">{summaryLine(job, carousels)}</span>
             <span className="block text-[13.5px] text-[color:var(--slab-text-muted)]">
-              Nothing here needs your approval — it is already stored.
+              This is what goes into your shop. Change anything above first.
             </span>
           </span>
         </p>
@@ -300,6 +310,23 @@ export default function ReportScreen({
       </div>
     </div>
   );
+}
+
+/**
+ * What she is about to publish, in one line: how many, and how they were grouped.
+ *
+ * THE GROUPING HALF IS CONDITIONAL, and on the same test that decides whether the
+ * question was ever asked. `GroupingChoice` renders only when the capture found a
+ * carousel, so a seller who never saw the question is not told the answer to it — and a
+ * WEBSITE import, where `carousels` is 0, is never described in Instagram's words
+ * ("one per post") for rows that came out of a Shopify collection.
+ */
+function summaryLine(job: ImportJobView, carousels: number): string {
+  const count = job.products?.length ?? 0;
+  const noun = count === 1 ? "product" : "products";
+  if (carousels < 1) return `${count} ${noun} ready.`;
+  const perPhoto = resolveGrouping(job.assembly?.grouping) === GROUPINGS.oneImageOneProduct;
+  return `${count} ${noun}, one per ${perPhoto ? "photo" : "post"}.`;
 }
 
 /**

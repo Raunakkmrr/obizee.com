@@ -66,6 +66,255 @@ export interface AlternativesPage {
   obizeeBadge?: string;
 }
 
+/**
+ * PAGE-SPECIFIC oBizee blocks — one per listicle.
+ *
+ * These existed as a single shared OBIZEE constant rendered verbatim on all
+ * seven listicles. Together with the shared competitor blocks that put ~615
+ * words of byte-identical text on every page, which measured 42-60% phrase
+ * overlap between them and put twelve URLs into Google's "Duplicate without
+ * user-selected canonical" bucket. Every claim below is the same claim; what
+ * changes per page is which one leads and how it is put, because the reason a
+ * seller leaves Shopify is not the reason they leave DM2Buy.
+ *
+ * If you add a listicle, write it a new block. Do not reuse one.
+ */
+const SHOPIFY_SUBJECT: AlternativeOption = {
+  name: "Shopify",
+  positioning:
+    "The default global platform, and a genuinely excellent one — but its India edition is missing the two pieces an Indian seller uses every day.",
+  pricing:
+    "₹20/month for the first three months, then ₹1,994/month on Basic billed monthly or ₹1,499 billed yearly, as of 2026. The ₹399 Starter plan was withdrawn in India in 2026.",
+  bestFor: "Sellers going international, or anyone who needs a specific app that only Shopify has.",
+  pros: [
+    "The largest app and theme ecosystem of any platform",
+    "Strong multi-currency and cross-border selling",
+    "Mature analytics and reporting",
+    "Cash on delivery is native, and exempt from Shopify's own transaction fee",
+  ],
+  cons: [
+    "The plan fee is charged in a month with no sales, exactly as in a good one",
+    "Shopify Payments does not operate in India, so Shopify adds 2% on Basic on top of your gateway's own fee",
+    "Shopify Shipping covers the US, Canada and Australia only — Indian couriers need a third-party app",
+    "Shopify's own documentation says it does not create a GST-compliant bill",
+  ],
+};
+
+const DM2BUY_SUBJECT: AlternativeOption = {
+  name: "DM2Buy",
+  positioning:
+    "An Instagram-first catalog and order link. It does the top of the funnel well and stops where the parcel begins.",
+  pricing: "Core catalog free.",
+  bestFor: "Sellers who want a shareable link in their bio and are happy arranging delivery themselves.",
+  pros: [
+    "Genuinely free to start, with no card needed",
+    "Set up in minutes — the fastest way to get a catalog shareable",
+    "A seller collaboration network and IRL pop-up events, which no one else here runs",
+  ],
+  cons: [
+    "No courier integration, so every shipment is booked somewhere else",
+    "No inventory, raw-material or vendor tracking",
+    "No payment gateway of its own",
+    "Instagram-first, so WhatsApp and web orders live outside it",
+  ],
+};
+
+const DM2BUY_FREE_SUBJECT: AlternativeOption = {
+  name: "DM2Buy",
+  positioning:
+    "Free in the most literal sense — the core catalog costs nothing and keeps costing nothing, because it does less.",
+  pricing: "Core catalog free.",
+  bestFor: "Sellers who will never ship through the platform and only need the link.",
+  pros: [
+    "Free with no threshold and no end date",
+    "Nothing to configure before you can share a catalog",
+    "Good if Instagram DMs are genuinely your whole operation",
+  ],
+  cons: [
+    "The free part stops at the catalog — couriers, payments and stock are your problem",
+    "No GST invoicing",
+    "The costs reappear as your time, once you are shipping more than a few parcels a week",
+  ],
+};
+
+const OBIZEE_VS_SHOPIFY: AlternativeOption = {
+  name: "oBizee",
+  positioning:
+    "Built for Indian sellers from the start, so the things Shopify leaves to apps in India — couriers, a payment gateway, GST invoices — are simply part of the product.",
+  pricing:
+    "No subscription at any volume, and nothing at all until your store has taken ₹50,000 in orders. No setup fee. Custom domain mapped free.",
+  bestFor:
+    "Sellers whose customers are in India, who would rather not pay rent on a shop in a month it did not sell.",
+  pros: [
+    "No monthly plan to pay in a slow month — Shopify Basic is charged whether or not you sell",
+    "Nothing at all charged until your store has taken ₹50,000 in orders",
+    "Delhivery, DTDC, Blue Dart and India Post built in, with live rate comparison — Shopify Shipping does not operate in India",
+    "Same-day hyperlocal delivery through Borzo and Shadowfax riders",
+    "A GST invoice on every order, with CGST/SGST/IGST split from the HSN rate and the buyer's state",
+    "Razorpay and Paytm connected for you, and no platform cut on top of the gateway's own fee",
+    "Custom domain mapped free, DNS and SSL handled, store live in under 2 minutes",
+    "Unlimited products and variants on every plan",
+  ],
+  cons: [
+    "No app marketplace — what is built in is what there is",
+    "Four storefront templates, against Shopify's paid theme ecosystem",
+    "India-first: not the tool if you are selling mainly overseas",
+  ],
+  isObizee: true,
+};
+
+const OBIZEE_VS_DM2BUY: AlternativeOption = {
+  name: "oBizee",
+  positioning:
+    "Everything a catalog link does, and then the part that actually takes time — booking the courier, chasing the payment, knowing what the product cost you to make.",
+  pricing:
+    "Free until your store has taken ₹50,000 in orders. After that a small fee per order, no subscription, and a month with no orders still costs nothing.",
+  bestFor:
+    "Instagram and WhatsApp sellers who have outgrown a shareable link and are now packing and shipping real parcels.",
+  pros: [
+    "Nothing to pay until your store has taken ₹50,000 in orders",
+    "Four couriers — Delhivery, DTDC, Blue Dart, India Post — with rates compared on each parcel",
+    "AWB generated and pickup booked from the order screen, not a second dashboard",
+    "Same-day hyperlocal delivery through Borzo and Shadowfax riders",
+    "Instagram and WhatsApp orders land in one list, with custom order forms for size, flavour or delivery date",
+    "Raw materials and recipes, so you know a product's true cost before you price it",
+    "Expenses, vendors, purchase lists and staff accounts with their own access levels",
+    "Custom domain mapped free and registered in your name, transferable away whenever you want",
+  ],
+  cons: [
+    "More product than you need if all you want is a link in your bio",
+    "No seller collaboration network or IRL pop-up events",
+    "Four storefront templates, not a large theme marketplace",
+  ],
+  isObizee: true,
+};
+
+const OBIZEE_FREE: AlternativeOption = {
+  name: "oBizee",
+  positioning:
+    "Free in the way that matters to a seller who has not sold yet: nothing is charged, and nothing is switched off while you are not paying.",
+  pricing:
+    "₹0 until your store has taken ₹50,000 in orders. Not a trial, not a limited tier — every feature is on the whole time.",
+  bestFor:
+    "Sellers who want a real store rather than a free catalog, and do not want a bill before the first order.",
+  pros: [
+    "Nothing charged until ₹50,000 in orders, with no feature held back in the meantime",
+    "It is not time-limited — the threshold is order value, so a slow start costs you nothing",
+    "No setup fee, no monthly fee, and no card required to publish a store",
+    "Custom domain mapping is free too, and the domain stays in your name",
+    "Couriers, payment gateways, GST invoicing and staff accounts are included, not upsells",
+    "A month with no orders costs nothing, before or after the threshold",
+    "After ₹50,000 the structure is published in full — a small fee per order, capped",
+  ],
+  cons: [
+    "Free-forever catalog tools exist if you never intend to ship through the platform",
+    "The free period ends at a real number, and we say so up front",
+    "Four storefront templates today, not a large theme marketplace",
+  ],
+  isObizee: true,
+};
+
+const OBIZEE_VS_DUKAAN: AlternativeOption = {
+  name: "oBizee",
+  positioning:
+    "A store you are not asked to pay for a year in advance, with the courier and the payment gateway already wired in.",
+  pricing:
+    "No annual plan and no upfront payment. Nothing at all until your store has taken ₹50,000 in orders, then a small fee per order.",
+  bestFor:
+    "Sellers who do not want to commit a year's fee before they know whether the channel works.",
+  pros: [
+    "Nothing paid up front — Dukaan's plans are billed annually in advance",
+    "Nothing at all charged until ₹50,000 in orders",
+    "Delhivery, DTDC, Blue Dart and India Post built in, with rates compared per parcel",
+    "Same-day hyperlocal delivery through Borzo and Shadowfax riders",
+    "Razorpay and Paytm connected for you, with money settling into your own account",
+    "Raw materials, vendors and purchase lists for anyone making what they sell",
+    "Custom domain mapped free, and it stays in your name",
+    "Unlimited products and variants, with no tier to unlock more",
+  ],
+  cons: [
+    "A smaller seller base than Dukaan, so fewer public reviews to read",
+    "Four storefront templates today",
+    "No app marketplace",
+  ],
+  isObizee: true,
+};
+
+const OBIZEE_VS_BIKAYI: AlternativeOption = {
+  name: "oBizee",
+  positioning:
+    "WhatsApp selling without the ceiling — the same chat-first ordering, plus the shipping and stock side that a growing catalogue needs.",
+  pricing:
+    "Free until ₹50,000 in orders, then per order. There is no paid tier that unlocks features, because there are no tiers.",
+  bestFor:
+    "WhatsApp and Instagram sellers who are shipping enough that the courier is now the hard part.",
+  pros: [
+    "One price structure with no tiers — nothing is gated behind an upgrade",
+    "Nothing charged at all until ₹50,000 in orders",
+    "Four couriers built in with live rate comparison, plus same-day delivery through Borzo and Shadowfax",
+    "WhatsApp and Instagram orders in a single dashboard with full lifecycle tracking",
+    "Custom order forms for size, flavour, engraving or delivery date",
+    "Expenses, vendors, raw materials and staff accounts included",
+    "Custom domain mapped free, registered in your name",
+  ],
+  cons: [
+    "Bikayi's WhatsApp-native flows are more specialised if chat is your only channel",
+    "Four storefront templates today",
+    "Newer platform, so fewer public reviews",
+  ],
+  isObizee: true,
+};
+
+const OBIZEE_VS_INSTAMOJO: AlternativeOption = {
+  name: "oBizee",
+  positioning:
+    "Built around the parcel rather than the payment link — inventory, couriers and costing for people shipping physical goods.",
+  pricing:
+    "No plan fee. Nothing at all until your store has taken ₹50,000 in orders, then a small fee per order.",
+  bestFor:
+    "Sellers of physical products, where the work is stock, packing and delivery rather than collecting a payment.",
+  pros: [
+    "Stock, variants and raw-material costing, not just a checkout",
+    "Nothing charged until ₹50,000 in orders",
+    "Delhivery, DTDC, Blue Dart and India Post built in with per-parcel rate comparison",
+    "Same-day hyperlocal delivery through Borzo and Shadowfax riders",
+    "Razorpay and Paytm connected, with money settling into your own gateway account",
+    "Order lifecycle from pending to delivered, with tracking sent to the customer",
+    "Vendors, purchase lists and staff accounts with their own access levels",
+    "Custom domain mapped free, and unlimited products on every plan",
+  ],
+  cons: [
+    "Instamojo is stronger for digital products, courses and one-off payment links",
+    "Four storefront templates today",
+    "No app marketplace",
+  ],
+  isObizee: true,
+};
+
+const OBIZEE_INCUMBENT: AlternativeOption = {
+  name: "oBizee",
+  positioning:
+    "The platform being compared against here — an India-first store with couriers, payments, stock and staff included rather than assembled.",
+  pricing:
+    "No subscription and no setup fee. Nothing at all until your store has taken ₹50,000 in orders, then a small published fee per order.",
+  bestFor:
+    "Indian sellers shipping physical products, particularly makers and anyone delivering locally.",
+  pros: [
+    "Nothing charged until the store has taken ₹50,000 in orders",
+    "No subscription at any volume, and a month with no orders costs nothing",
+    "Four couriers plus same-day riders, with rates compared on every parcel",
+    "Payments settle into the seller's own Razorpay or Paytm account — oBizee never holds the money",
+    "Custom domain mapped free and registered in the seller's name, transferable at any time",
+    "Raw materials, vendors, expenses and staff accounts included",
+  ],
+  cons: [
+    "Newer than Shopify or Dukaan, so a smaller body of public reviews",
+    "Four storefront templates rather than a theme marketplace",
+    "No app ecosystem — the feature set is what ships",
+  ],
+  isObizee: true,
+};
+
 const OBIZEE: AlternativeOption = {
   name: "oBizee",
   positioning:
@@ -232,7 +481,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "There is no same-day or hyperlocal delivery option.",
       "App costs compound: shipping, marketing and inventory apps are each billed separately.",
     ],
-    options: [OBIZEE, SHOPIFY, DUKAAN, BIKAYI, INSTAMOJO, WOOCOMMERCE, SHOOPY],
+    options: [OBIZEE_VS_SHOPIFY, SHOPIFY_SUBJECT, DUKAAN, BIKAYI, INSTAMOJO, WOOCOMMERCE, SHOOPY],
     faqs: [
       {
         question: "What is the best Shopify alternative in India?",
@@ -264,7 +513,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "No inventory depth: variants, stock movements, raw materials and vendors live elsewhere.",
       "Nothing for bringing past customers back.",
     ],
-    options: [OBIZEE, DUKAAN, BIKAYI, SHOPEXER, SHOOPY, INSTAMOJO, SHOPIFY, WOOCOMMERCE, SMARTBIZ, DM2BUY],
+    options: [OBIZEE_VS_DM2BUY, DUKAAN, BIKAYI, SHOPEXER, SHOOPY, INSTAMOJO, SHOPIFY, WOOCOMMERCE, SMARTBIZ, DM2BUY_SUBJECT],
     faqs: [
       {
         question: "What is the best DM2Buy alternative in India?",
@@ -296,7 +545,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "No same-day or hyperlocal delivery.",
       "Raw materials, purchase lists and vendor tracking are not part of it.",
     ],
-    options: [OBIZEE, BIKAYI, SHOPIFY, INSTAMOJO, SHOOPY, DM2BUY],
+    options: [OBIZEE_VS_DUKAAN, BIKAYI, SHOPIFY, INSTAMOJO, SHOOPY, DM2BUY],
     faqs: [
       {
         question: "What is the best Dukaan alternative in India?",
@@ -328,7 +577,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "No hyperlocal or same-day delivery.",
       "Limited inventory depth for makers who track materials.",
     ],
-    options: [OBIZEE, DUKAAN, SHOPIFY, INSTAMOJO, SHOOPY, DM2BUY],
+    options: [OBIZEE_VS_BIKAYI, DUKAAN, SHOPIFY, INSTAMOJO, SHOOPY, DM2BUY],
     faqs: [
       {
         question: "What is the best Bikayi alternative in India?",
@@ -360,7 +609,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "No courier rate comparison or hyperlocal delivery.",
       "Nothing for materials, vendors or purchase planning.",
     ],
-    options: [OBIZEE, DUKAAN, BIKAYI, SHOPIFY, SHOOPY, DM2BUY],
+    options: [OBIZEE_VS_INSTAMOJO, DUKAAN, BIKAYI, SHOPIFY, SHOOPY, DM2BUY],
     faqs: [
       {
         question: "What is the best Instamojo alternative for physical products?",
@@ -393,7 +642,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "No inventory or variant depth once you are tracking real stock, not just a catalog.",
       "Nothing for bringing customers back — retention tooling is rarely on the free tier.",
     ],
-    options: [OBIZEE, DM2BUY, BIKAYI, SHOOPY, DUKAAN, SMARTBIZ, INSTAMOJO],
+    options: [OBIZEE_FREE, DM2BUY_FREE_SUBJECT, BIKAYI, SHOOPY, DUKAAN, SMARTBIZ, INSTAMOJO],
     obizeeBadge: "Best value once you're actually selling",
     faqs: [
       {
@@ -435,7 +684,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "You only need a free shareable catalog link with no shipping or payments — DM2Buy already does that.",
       "You want a large theme marketplace rather than oBizee's four templates.",
     ],
-    options: [OBIZEE, SHOPIFY, DUKAAN, BIKAYI, INSTAMOJO, DM2BUY],
+    options: [OBIZEE_INCUMBENT, SHOPIFY, DUKAAN, BIKAYI, INSTAMOJO, DM2BUY],
     obizeeBadge: "Why most sellers stay",
     faqs: [
       {
