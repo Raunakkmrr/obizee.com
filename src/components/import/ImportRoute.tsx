@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
@@ -10,8 +10,10 @@ import ImportOutcome from "@/components/import/ImportOutcome";
 import ImportSlab from "@/components/import/ImportSlab";
 import WorkingScreen from "@/components/import/WorkingScreen";
 import { outcomeFor } from "@/components/import/importOutcomes";
-import { useVerifiedEmail } from "@/lib/import/identity";
-import type { ImportSourceId } from "@/lib/import/source";
+import { startImport, useVerifiedEmail } from "@/lib/import/identity";
+import { BLOCKING_CREATE_CODES } from "@/lib/import/useSettle";
+import { isMerchantSession } from "@/lib/merchantAuth";
+import { SOURCE_UI, formatRef, type ImportSourceId } from "@/lib/import/source";
 import type { ImportState } from "@/lib/import/state";
 
 /**
@@ -35,11 +37,17 @@ export default function ImportRoute({
   handle,
   job,
   sourceType = "instagram",
+  resumeRequested = false,
   googleClientId,
 }: {
   state: ImportState;
   handle: string | null;
   job: string | null;
+  /**
+   * `?resume=1` — she came from a place that already knows who she is, so skip the gate
+   * and start the capture on her existing session. See the `resume` state below.
+   */
+  resumeRequested?: boolean;
   /**
    * Which shop she is moving, resolved from `?src=` by `app/import/page.tsx`.
    * Instagram by default, because that is what every `/import/` link issued before the
@@ -67,6 +75,32 @@ export default function ImportRoute({
   // and a Back out of it would strand her on a job id that was never issued (AC-5).
   const [blocked, setBlocked] = useState<{ code: string; retryAfterSeconds?: number | null } | null>(null);
 
+  /**
+   * A MERCHANT WHO IS ALREADY SIGNED IN IS NEVER ASKED TO SIGN IN AGAIN.
+   *
+   * The gate was written for a prospect — someone with no oBizee account, for whom
+   * proving an address IS the first step. A merchant arriving from her own dashboard
+   * has already done it, and showing her "Where should we put your catalogue?" asks her
+   * to authenticate into the account she is currently inside. `POST /import/jobs` sits
+   * behind `verifyToken` and scopes the job from `req.user`, so her existing token is
+   * all the door needs; there was simply never a path that used it.
+   *
+   * THE INTENT COMES FROM THE URL (`?resume=1`), NOT FROM localStorage.
+   *
+   * Reading `isMerchantSession()` in a lazy initialiser was the obvious implementation
+   * and it is wrong: the server pass has no localStorage, renders the gate, and the
+   * client then renders something else on the very first tick — a hydration mismatch
+   * that React reports and recovers from by throwing the subtree away. It was measured
+   * doing exactly that, which is also why the auto-start never fell back.
+   *
+   * A query parameter is visible to both passes, so the two agree. It costs nothing
+   * either, because the only place a signed-in merchant starts an import from is a link
+   * we write ourselves — the dashboard entry point. `isMerchantSession()` still gates
+   * the attempt, but as a CHECK inside the effect rather than as render input: a stale
+   * `?resume=1` in a shared link must not start a capture for whoever opens it.
+   */
+  const [resume, setResume] = useState<"starting" | "gate">(resumeRequested ? "starting" : "gate");
+  const started = useRef(false);
   const setParam = useCallback(
     (key: string, value: string) => {
       const next = new URLSearchParams(window.location.search);
@@ -87,6 +121,53 @@ export default function ImportRoute({
     },
     [setParam],
   );
+
+  useEffect(() => {
+    if (resume !== "starting" || started.current) return;
+    // React 18 mounts effects twice in development. Creating two jobs would collide on
+    // `one_active_import_per_merchant` and answer 409 — survivable, but it would also
+    // spend two entries of her create budget.
+    started.current = true;
+
+    if (!isMerchantSession()) {
+      // `?resume=1` on a browser with no merchant session — a forwarded link, or a
+      // signed-out tab. The gate is the correct answer, not an error.
+      setResume("gate");
+      return;
+    }
+
+    if (!handle) {
+      // No ref to read. She typed /import directly, so the chip has to ask.
+      setResume("gate");
+      return;
+    }
+
+    // NO CLEANUP CANCELLATION, and the omission is load-bearing.
+    //
+    // The obvious pairing — a `started` ref plus a `cancelled` flag cleared on unmount —
+    // deadlocks under React 18's development double-mount: the first effect fires the
+    // request, the cleanup marks it cancelled, the second effect returns early on the
+    // ref, and the one response that arrives is then dropped. Measured: the panel sat on
+    // "Reading @izeljewels." forever instead of falling back to the gate.
+    //
+    // The ref alone is the correct guard. It already guarantees exactly one request per
+    // mount, and a `setState` after unmount is a no-op in React 18, not a leak.
+    startImport(handle, sourceType).then((outcome) => {
+      if (outcome.ok === true) {
+        onJobStarted(outcome.jobId);
+        return;
+      }
+      if ((BLOCKING_CREATE_CODES as readonly string[]).includes(outcome.code)) {
+        setBlocked({ code: outcome.code, retryAfterSeconds: outcome.retryAfterSeconds ?? null });
+        return;
+      }
+      // `no_session` here means the token she was carrying is gone or expired. The gate
+      // is the correct fallback, not an error: she can prove the address again.
+      setResume("gate");
+    });
+    // `onJobStarted` is stable via useCallback; `handle` and `sourceType` are fixed for
+    // the life of this mount in the only case that reaches here.
+  }, [resume, handle, sourceType, onJobStarted]);
 
   /**
    * UI-008 — back to the gate, with the handle kept and the job dropped.
@@ -159,6 +240,17 @@ export default function ImportRoute({
           onRestartGate={onRestartGate}
           email={email}
         />
+      </ImportSlab>
+    );
+  }
+
+  // The signed-in merchant's one screen between clicking and her capture. It is not a
+  // spinner: it names the shop being read and who is reading it, so the half-second is
+  // an answer rather than a wait. See the `resume` state above.
+  if (resume === "starting") {
+    return (
+      <ImportSlab>
+        <ResumingPanel handle={handle} sourceType={sourceType} />
       </ImportSlab>
     );
   }
@@ -237,6 +329,35 @@ export default function ImportRoute({
  * other than a create refusal (UI-010). `running` no longer lands here — see above.
  * Same marked-placeholder rule as UI-001 (R12).
  */
+/**
+ * SHOWN ONLY TO A MERCHANT WHO WAS ALREADY SIGNED IN, for as long as the job create
+ * takes. She never sees the gate at all, so this is her first frame on the route.
+ *
+ * It carries the chip and the same eyebrow the gate uses, so the panel she lands on is
+ * recognisably the one she was sent to — and it states what is happening in her terms
+ * rather than showing a spinner over an empty rectangle.
+ */
+function ResumingPanel({ handle, sourceType }: { handle: string | null; sourceType: ImportSourceId }) {
+  const copy = SOURCE_UI[sourceType];
+  return (
+    <div className="flex flex-col gap-5">
+      <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[color:var(--obz-cta-on-dark)]">
+        Bring your shop over
+      </p>
+      <h1 className="typo-h1-xl max-w-[16ch] text-balance text-white">
+        Reading{" "}
+        <span className="text-[color:var(--obz-cta-on-dark)]">
+          {handle ? formatRef(sourceType, handle) : copy.editLabel.toLowerCase()}
+        </span>
+        .
+      </h1>
+      <p className="max-w-[42ch] text-[15px] leading-6 text-[color:var(--slab-text-muted)]">
+        You are signed in already, so there is nothing to fill in. This takes a few seconds.
+      </p>
+    </div>
+  );
+}
+
 function StatePlaceholder({ state, job }: { state: ImportState; job: string | null }) {
   const owner = state === "report" ? "UI-009" : "UI-010";
   return (

@@ -61,6 +61,12 @@ function ImportParams() {
   // of the hand-off cannot disagree about what an unlabelled request means.
   const sourceType = parseSourceId(params.get("src"));
 
+  // `?resume=1` — written only by links we control (the dashboard's "Bring in
+  // products"), and read here so the value is identical on the server pass and the
+  // client one. `ImportRoute` still checks for a real merchant session before acting on
+  // it; this parameter is an intent, not a credential.
+  const resumeRequested = params.get("resume") === "1";
+
   // The same rule the server runs on the ref before it is used — for Instagram that is
   // still `parseHandle` (`src/lib/import/handle.ts`, derived from OM-backend's
   // `normaliseHandle`, which interpolates into a Graph field expression); for a website
@@ -78,6 +84,7 @@ function ImportParams() {
         handle={handle}
         job={job}
         sourceType={sourceType}
+        resumeRequested={resumeRequested}
         // Public by necessity: Google Identity Services' `initCodeClient` runs in the
         // browser. The SECRET stays server-side in OM-backend's env.
         googleClientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}
