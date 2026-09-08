@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
  *
  * PROVENANCE: DERIVED from the live marketing panel at
  * `Original-obizee-website/src/components/MoveYourShop.tsx:39`, whose class list is
- *   `rounded-3xl bg-gray-900 px-6 py-12 sm:px-12 sm:py-16`
+ *   `rounded-3xl bg-gray-900 px-5 py-8 sm:px-10 sm:py-12`
  * (named as the provenance source in design-brief.md §3.4, "E0-E10 panel geometry").
  *
  * ONE-LINE DIFF: `bg-gray-900` -> `bg-[color:var(--slab-ground)]`. The marketing site is
@@ -33,7 +33,7 @@ export default function ImportSlab({ children }: { children: ReactNode }) {
     // marketing panel: it fires only when an on-screen keyboard has shrunk the viewport
     // below 600px, a state that panel is never in. Radius, width and the sm: padding ramp
     // — the three things the seam is measured on — are untouched at every normal height.
-    <div className="rounded-3xl bg-[color:var(--slab-ground)] px-6 py-12 sm:px-12 sm:py-16 [@media(max-height:600px)]:py-6">
+    <div className="rounded-3xl bg-[color:var(--slab-ground)] px-5 py-8 sm:px-10 sm:py-12 [@media(max-height:600px)]:py-6">
       {children}
     </div>
   );

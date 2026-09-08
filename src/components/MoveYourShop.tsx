@@ -181,22 +181,22 @@ export default function MoveYourShop() {
 
   return (
     <section
-      className="bg-white py-16 sm:py-24"
+      className="bg-white py-12 sm:py-16"
       aria-labelledby="move-shop-heading"
       data-entry="import-handoff"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* THE SEAM. `rounded-3xl bg-gray-900 px-6 py-12 sm:px-12 sm:py-16` inside
+        {/* THE SEAM. `rounded-3xl bg-gray-900 px-5 py-8 sm:px-10 sm:py-12` inside
             `max-w-7xl px-4 sm:px-6 lg:px-8` is the exact rectangle `app/import/page.tsx`
             and `ImportSlab` reproduce on the other side of the hand-off — 1216px wide at
             1440. Change this only by changing both files, or the panel she was looking at
             is not the panel she lands on. */}
-        <div className="rounded-3xl bg-gray-900 px-6 py-12 sm:px-12 sm:py-16">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:items-center lg:gap-14">
+        <div className="rounded-3xl bg-gray-900 px-5 py-8 sm:px-10 sm:py-12">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:items-center lg:gap-12">
             {/* --- the argument column: E0, E1, E2, E4, E5, E6, E7 --- */}
             <ScrollReveal className="max-w-2xl">
               {/* E0 — unchanged. orange-400 on the slab = 7.84:1. */}
-              <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-orange-400">
+              <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-orange-400">
                 Already selling somewhere
               </p>
 
@@ -204,14 +204,20 @@ export default function MoveYourShop() {
                   never price, it was time, and this section's own step 2 admits it. */}
               <h2
                 id="move-shop-heading"
-                className="mb-5 text-3xl font-bold text-white sm:text-5xl"
+                className="mb-3 text-[26px] font-bold leading-[1.1] text-white sm:text-[38px]"
               >
-                We move your shop for you.
-                <span className="text-orange-400"> In seconds.</span>
+                We move your shop for you.{" "}
+                {/* `whitespace-nowrap` so the two words that carry the argument break as
+                    a unit. At 38px in this column the line otherwise ends "…for you. In"
+                    and orphans the preposition onto the head of the next line, which is
+                    the one place on the slab where the type is big enough for that to
+                    read as a mistake. The space is OUTSIDE the span, or nowrap would
+                    glue "In" to "you." and undo the break entirely. */}
+                <span className="whitespace-nowrap text-orange-400">In seconds.</span>
               </h2>
 
               {/* E2 — one word changed from "So we do the work." */}
-              <p className="text-lg text-[color:var(--slab-text-muted)]">
+              <p className="text-[15px] leading-6 text-[color:var(--slab-text-muted)]">
                 Most sellers stall because moving is work. So a machine does it.
               </p>
 
@@ -219,7 +225,7 @@ export default function MoveYourShop() {
                   column, and moved by the grid at lg. See the comparison block below. */}
 
               {/* E4 + E5 — the field and the action. */}
-              <div className="mt-8">
+              <div className="mt-5">
                 {/* THE PICKER. Above the field because it changes what the field
                     IS — its label, its placeholder, its rule and where it sends
                     her. A control that reframes the one below it belongs first
@@ -227,7 +233,7 @@ export default function MoveYourShop() {
                 <div
                   role="radiogroup"
                   aria-label="Where your shop is now"
-                  className="mb-4 flex flex-wrap gap-2"
+                  className="mb-3 flex flex-wrap gap-2"
                 >
                   {LIVE_SOURCES.map((entry) => {
                     const selected = entry.id === sourceId;
@@ -326,7 +332,7 @@ export default function MoveYourShop() {
                 {/* E6 — kill the password fear before it is asked. Green is this system's
                     "nothing bad happens" hue and it is paired with a word and an icon,
                     never used alone (SC 1.4.1). */}
-                <p className="mt-4 flex items-start gap-2 text-sm text-[color:var(--slab-text-muted)]">
+                <p className="mt-3 flex items-start gap-2 text-[13.5px] text-[color:var(--slab-text-muted)]">
                   <ShieldCheck
                     className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--kept-green-on-dark)]"
                     aria-hidden="true"
@@ -339,7 +345,7 @@ export default function MoveYourShop() {
                 </p>
 
                 {/* E7 — state the gate BEFORE she is turned away by it. */}
-                <p className="mt-2 flex items-start gap-2 text-sm text-[color:var(--slab-text-muted)]">
+                <p className="mt-1.5 flex items-start gap-2 text-[13.5px] text-[color:var(--slab-text-muted)]">
                   <Info
                     className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--info-on-dark)]"
                     aria-hidden="true"
@@ -389,7 +395,7 @@ export default function MoveYourShop() {
                   sliderLabel="Compare the Instagram grid with the oBizee storefront"
                   className={
                     // 390x220 at mobile, per the ticket; it grows with the column above it.
-                    "h-[220px] w-full rounded-2xl border border-[color:var(--slab-chip-border)] sm:h-[300px] lg:h-[280px]"
+                    "h-[200px] w-full rounded-2xl border border-[color:var(--slab-chip-border)] sm:h-[270px] lg:h-[250px]"
                   }
                   // `object-top`, not a plain `object-cover`, and this was decided by
                   // looking at the render. Both panes are wider than they are tall in
@@ -430,7 +436,7 @@ export default function MoveYourShop() {
               which wraps "You type your handle. Nothing to send." onto three ragged
               lines — measured 155px for the row. Stacked, each step is one line and
               the whole row is ~116px. Narrower is not always shorter. */}
-          <ol className="mt-8 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
+          <ol className="mt-7 grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-7">
             {steps.map(({ n, title, body }) => (
               <li key={n} className="flex items-baseline gap-2">
                 <span
@@ -447,13 +453,13 @@ export default function MoveYourShop() {
             ))}
           </ol>
 
-          <div className="mt-10 border-t border-white/10 pt-8">
-            <p className="mb-4 font-semibold text-white">You lose nothing by moving</p>
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-7 border-t border-white/10 pt-6">
+            <p className="mb-3 text-[15px] font-bold text-white">You lose nothing by moving</p>
+            <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
               {keeps.map((k) => (
                 <li
                   key={k}
-                  className="flex items-start gap-2.5 text-sm text-[color:var(--slab-text-muted)]"
+                  className="flex items-start gap-2 text-[13.5px] text-[color:var(--slab-text-muted)]"
                 >
                   <Check
                     className="mt-0.5 h-4 w-4 shrink-0 text-orange-400"
@@ -469,10 +475,10 @@ export default function MoveYourShop() {
               account, on Shopify, or on a DM2Buy link cannot use the import TODAY, and
               this is the only path those merchants have. Removing it would silently
               delete it. `/move-my-store` is unchanged and still a valid page. */}
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/move-my-store"
-              className="inline-flex items-center justify-center rounded-xl border border-white/25 px-7 py-3.5 font-semibold text-white transition-colors hover:border-white/50 hover:bg-white/10"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/25 px-6 text-[15px] font-semibold text-white transition-colors hover:border-white/50 hover:bg-white/10"
             >
               How the move works
             </Link>
