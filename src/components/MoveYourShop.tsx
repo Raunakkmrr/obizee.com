@@ -8,6 +8,7 @@ import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { Compare } from "@/components/ui/compare";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import { parseHandle, HANDLE_ERROR_COPY } from "@/lib/import/handle";
+import { parseSourceRef } from "@/lib/import/source";
 
 /**
  * The migration offer — REBUILT as the import's entry point (UI-002 + UI-003).
@@ -37,12 +38,64 @@ import { parseHandle, HANDLE_ERROR_COPY } from "@/lib/import/handle";
  * should have seen this and the seller proof, not a feature grid.
  */
 
-/** E8. Steps 1 and 2 rewritten; 3 and 4 unchanged, because they are still true. */
+/**
+ * WHERE HER SHOP IS NOW. The seller picks; everything below the pills follows.
+ *
+ * Two live sources and the ones behind them named honestly. A pill that opens a
+ * field and then cannot read the thing she typed is worse than a pill that says
+ * "not yet", so `ready: false` is rendered as a disabled chip with the reason on
+ * it rather than as an option.
+ */
+type LiveSource = {
+  id: "instagram" | "website";
+  label: string;
+  fieldLabel: string;
+  submitLabel: string;
+  placeholders: string[];
+};
+
+/**
+ * WHERE HER SHOP IS NOW. The seller picks; everything below the pills follows —
+ * the field's label, its placeholder, the rule it is checked against and where
+ * a valid value is sent.
+ */
+const LIVE_SOURCES: LiveSource[] = [
+  {
+    id: "instagram",
+    label: "Instagram",
+    fieldLabel: "Your Instagram",
+    submitLabel: "Read my Instagram",
+    placeholders: ["crochetbypriya", "shopvelnora", "candleofmidnight", "oh.trinkets"],
+  },
+  {
+    id: "website",
+    label: "My website",
+    fieldLabel: "Your website",
+    submitLabel: "Read my website",
+    placeholders: ["phuljhadi.com", "yourshop.com", "yourshop.myshopify.com"],
+  },
+];
+
+/**
+ * Named, not hidden, and not selectable.
+ *
+ * A pill that opens a field and then cannot read what she typed is worse than
+ * one that says "soon" — and leaving DM2Buy off the row entirely would tell a
+ * DM2Buy seller this is not for her.
+ */
+const COMING_SOON = [{ id: "dm2buy", label: "DM2Buy", note: "Soon" }];
+
+/**
+ * E8, SLIMMED. Was four cards at `p-5` with a 28px badge and two-line bodies,
+ * which read as four panels competing with the field above them. These are one
+ * row of markers: the sequence is the content, and the words are down to a
+ * ceiling of six per body so nothing wraps to three lines at 390px.
+ */
 const steps = [
-  { n: "1", title: "You type your handle", body: "Nothing to send, nothing to attach." },
-  { n: "2", title: "It reads every post", body: "About nine seconds for two hundred posts." },
-  { n: "3", title: "You check it over", body: "Nothing goes live until you say so." },
-  { n: "4", title: "Switch when ready", body: "Keep your products, domain, Razorpay and buyers." },
+  { n: "1", title: "You type your handle", body: "Nothing to send." },
+  { n: "2", title: "It reads everything", body: "Seconds, not a day." },
+  { n: "3", title: "You check it over", body: "Nothing goes live yet." },
+  { n: "4", title: "Switch when ready", body: "Keep domain, Razorpay, buyers." },
 ];
 
 /** E9 — kept verbatim. Every item is still true; R16 says do not touch what is not broken. */
@@ -61,13 +114,6 @@ const keeps = [
  * and in `ShopsWall`'s marquee, with a real screenshot in `public/shops/`. Not one is
  * invented, and a visitor who scrolls up can find each of them.
  */
-const PLACEHOLDER_HANDLES = [
-  "crochetbypriya",
-  "shopvelnora",
-  "candleofmidnight",
-  "oh.trinkets",
-];
-
 /**
  * Where a valid handle goes. A RELATIVE PATH WITH A TRAILING SLASH, and both halves
  * matter: `next.config.js:5` sets `trailingSlash: true` sitewide, so `/import?h=…`
@@ -83,7 +129,11 @@ const IMPORT_PATH = "/import/";
  */
 const IG_BUSINESS_HELP = "https://help.instagram.com/502981923235522";
 
+type SourceId = LiveSource["id"];
+
 export default function MoveYourShop() {
+  const [sourceId, setSourceId] = useState<SourceId>("instagram");
+  const source = LIVE_SOURCES.find((entry) => entry.id === sourceId) ?? LIVE_SOURCES[0];
   const [handle, setHandle] = useState("");
   const [error, setError] = useState<string | null>(null);
   const fieldId = useId();
@@ -99,6 +149,22 @@ export default function MoveYourShop() {
    * animation is what a `true` buys.
    */
   const validateAndGo = (raw: string): boolean => {
+    if (source.id === "website") {
+      // A website is checked here only for SHAPE, by the SAME function the gate's chip
+      // and `app/import/page.tsx` run — `parseSourceRef`, not a regex written twice.
+      // Whether the domain is a store we can read is `WebsiteAdapter.validateRef`'s
+      // question; asking it here would mean a network call on every keystroke.
+      const parsedRef = parseSourceRef("website", raw);
+      if (parsedRef.ok === false) {
+        setError(parsedRef.message);
+        inputRef.current?.focus();
+        return false;
+      }
+      setError(null);
+      window.location.assign(`${IMPORT_PATH}?src=website&h=${encodeURIComponent(parsedRef.ref)}`);
+      return true;
+    }
+
     const parsed = parseHandle(raw);
     if (parsed.ok === false) {
       setError(HANDLE_ERROR_COPY[parsed.reason]);
@@ -154,16 +220,75 @@ export default function MoveYourShop() {
 
               {/* E4 + E5 — the field and the action. */}
               <div className="mt-8">
+                {/* THE PICKER. Above the field because it changes what the field
+                    IS — its label, its placeholder, its rule and where it sends
+                    her. A control that reframes the one below it belongs first
+                    in the reading order, not beside it. */}
+                <div
+                  role="radiogroup"
+                  aria-label="Where your shop is now"
+                  className="mb-4 flex flex-wrap gap-2"
+                >
+                  {LIVE_SOURCES.map((entry) => {
+                    const selected = entry.id === sourceId;
+                    return (
+                      <button
+                        key={entry.id}
+                        type="button"
+                        role="radio"
+                        aria-checked={selected}
+                        onClick={() => {
+                          setSourceId(entry.id);
+                          // Her Instagram handle is not a website address. Clearing
+                          // is kinder than validating what she typed for the other one.
+                          setHandle("");
+                          setError(null);
+                        }}
+                        // Selected is an orange TINT, not the solid brand fill.
+                        // White on orange-500 measures 2.80:1 — below AA — and a
+                        // second solid-orange control sitting a few pixels above
+                        // the submit button also fights it for the eye. The tint
+                        // reads as chosen at 9.3:1 and leaves the button the only
+                        // solid orange thing in the slab.
+                        className={
+                          selected
+                            ? "rounded-full border border-orange-400/60 bg-orange-500/20 px-4 py-2 text-sm font-semibold text-orange-200"
+                            : "rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                        }
+                      >
+                        {entry.label}
+                      </button>
+                    );
+                  })}
+                  {COMING_SOON.map((entry) => (
+                    <span
+                      key={entry.id}
+                      className="cursor-not-allowed rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white/50"
+                    >
+                      {entry.label}
+                      <span className="ml-1.5 text-[11px] font-bold uppercase tracking-wider text-white/50">
+                        {entry.note}
+                      </span>
+                    </span>
+                  ))}
+                </div>
+
                 <label
                   htmlFor={fieldId}
                   className="mb-2 block text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--slab-text-muted)]"
                 >
-                  Your Instagram
+                  {source.fieldLabel}
                 </label>
                 <PlaceholdersAndVanishInput
+                  // Remounted per source so the vanish animation and the rotating
+                  // placeholder both restart rather than finishing the last one's.
+                  key={source.id}
                   id={fieldId}
-                  name="instagram_handle"
-                  placeholders={PLACEHOLDER_HANDLES}
+                  name={source.id === "website" ? "website_url" : "instagram_handle"}
+                  placeholders={source.placeholders}
+                  // "@" belongs to a handle. On a website field it reads as a
+                  // typo she has to work around.
+                  prefix={source.id === "website" ? "" : "@"}
                   value={handle}
                   inputRef={inputRef}
                   onValueChange={(next) => {
@@ -175,12 +300,12 @@ export default function MoveYourShop() {
                   // AC-3 runs on blur as well as on submit, but an empty field she has
                   // merely tabbed through is not a mistake she has made yet.
                   onBlur={() => {
-                    if (!handle) return;
+                    if (!handle || source.id === "website") return;
                     const parsed = parseHandle(handle);
                     setError(parsed.ok === false ? HANDLE_ERROR_COPY[parsed.reason] : null);
                   }}
                   onSubmit={validateAndGo}
-                  submitLabel="Read my Instagram"
+                  submitLabel={source.submitLabel}
                   ariaDescribedBy={error ? errorId : undefined}
                   ariaInvalid={Boolean(error)}
                 />
@@ -207,7 +332,9 @@ export default function MoveYourShop() {
                     aria-hidden="true"
                   />
                   <span className="min-w-0">
-                    No Instagram password. No permissions. We read what is already public.
+                    {source.id === "website"
+                      ? "No login. No plugin. We read what your shop already shows buyers."
+                      : "No Instagram password. No permissions. We read what is already public."}
                   </span>
                 </p>
 
@@ -218,15 +345,23 @@ export default function MoveYourShop() {
                     aria-hidden="true"
                   />
                   <span className="min-w-0">
-                    Works with Instagram Business accounts.{" "}
-                    <a
-                      href={IG_BUSINESS_HELP}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-semibold text-white underline decoration-white/40 underline-offset-4 transition-colors hover:decoration-white"
-                    >
-                      Not sure?
-                    </a>
+                    {source.id === "website" ? (
+                      // Shopify is the one platform read today. Naming it is more
+                      // useful than "most websites", which is a claim we cannot keep.
+                      <>Works with Shopify stores today. More platforms are coming.</>
+                    ) : (
+                      <>
+                        Works with Instagram Business accounts.{" "}
+                        <a
+                          href={IG_BUSINESS_HELP}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold text-white underline decoration-white/40 underline-offset-4 transition-colors hover:decoration-white"
+                        >
+                          Not sure?
+                        </a>
+                      </>
+                    )}
                   </span>
                 </p>
               </div>
@@ -282,19 +417,30 @@ export default function MoveYourShop() {
             </ScrollReveal>
           </div>
 
-          {/* E8 — the four steps. Unchanged as a grid; steps 1 and 2 rewritten. */}
-          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {/* E8 — the four steps, as a marker row rather than four panels. They
+              were `p-5` cards with a stacked 28px badge and two-line bodies,
+              which at 1440 read as a second hero competing with the field. Two
+              across at 390px instead of one, so the sequence is visible without
+              scrolling four times. */}
+          <div className="mt-10 grid grid-cols-2 gap-2.5 lg:grid-cols-4 lg:gap-3">
             {steps.map(({ n, title, body }) => (
               <div
                 key={n}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 transition-colors hover:bg-white/10"
+                className="rounded-xl border border-white/10 bg-white/5 px-3.5 py-3 transition-colors hover:bg-white/10"
               >
-                <span className="mb-3 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-orange-500 text-sm font-bold text-white">
-                  {n}
-                </span>
-                <h3 className="mb-2 font-bold text-white">{title}</h3>
-                <p className="text-sm leading-relaxed text-[color:var(--slab-text-muted)]">
-                  {body}
+                <div className="flex items-center gap-2">
+                  {/* The badge sits INLINE with the title now. Stacked, it cost a
+                      whole row of height per card for one digit. */}
+                  <span className="inline-flex size-5 shrink-0 items-center justify-center rounded-md bg-orange-500 text-[11px] font-bold text-white">
+                    {n}
+                  </span>
+                  <h3 className="text-[13.5px] font-bold leading-tight text-white">
+                    {/* Only step one differs per source, and only by its noun. */}
+                    {n === "1" && source.id === "website" ? "You paste your link" : title}
+                  </h3>
+                </div>
+                <p className="mt-1 pl-7 text-[12.5px] leading-snug text-[color:var(--slab-text-muted)]">
+                  {n === "1" && source.id === "website" ? "Nothing to install." : body}
                 </p>
               </div>
             ))}
