@@ -248,9 +248,30 @@ export const Compare = ({
               aria-valuetext={`${Math.round(sliderXPercent)}% revealed`}
               aria-orientation="horizontal"
               onKeyDown={handleKeyDown}
-              className="absolute -right-[22px] top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center focus-visible:outline-none"
+              className="group/handle absolute -right-[22px] top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center focus-visible:outline-none"
             >
-              <span className="flex h-5 w-5 items-center justify-center rounded-md bg-[color:var(--compare-handle-ground)] shadow-[var(--compare-handle-shadow)] ring-offset-2 ring-offset-transparent transition-shadow group-focus:ring-2">
+              {/* DIFF 6 — THE CHIP IS HIDDEN UNTIL IT IS THE THING BEING USED.
+                  It sat in the middle of the photograph permanently, covering the
+                  argument the image exists to make, to advertise a drag on a slider
+                  that `slideMode="hover"` already moves without one. The DIVIDER LINE
+                  is the affordance; the grip was decoration on top of content.
+
+                  The control itself stays — focusable, named, 44px of hit area, arrow
+                  keys — because removing it would take the keyboard path with it and
+                  make the comparison mouse-only, which is the WCAG 2.1.1 failure
+                  DIFF 5 exists to fix. Hiding the chip is a visual change; deleting
+                  the `showHandlebar` element would have been an accessibility one.
+
+                  It reappears on focus, which is exactly when someone needs to see
+                  where the control is. `group/handle` is named because the ring below
+                  used a bare `group-focus` against no group at all — a dead style.
+
+                  PLAIN `:focus`, not `:focus-visible`. A slider reached by pointer is
+                  being used just as deliberately as one reached by Tab, and the
+                  narrower selector also cannot be verified without synthesising the
+                  browser's own keyboard heuristic — a control whose visibility cannot
+                  be checked is a control that silently rots. */}
+              <span className="flex h-5 w-5 items-center justify-center rounded-md bg-[color:var(--compare-handle-ground)] opacity-0 shadow-[var(--compare-handle-shadow)] ring-offset-2 ring-offset-transparent transition-opacity motion-reduce:transition-none group-focus/handle:opacity-100 group-focus/handle:ring-2">
                 <GripVertical
                   className="h-4 w-4 text-[color:var(--compare-handle-ink)]"
                   aria-hidden="true"
