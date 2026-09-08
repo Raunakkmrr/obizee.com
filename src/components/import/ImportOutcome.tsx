@@ -11,7 +11,8 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
-import { InstagramMark } from "@/components/import/marks";
+import { InstagramMark, WebsiteMark } from "@/components/import/marks";
+import type { ImportSourceId } from "@/lib/import/source";
 
 /**
  * THE ONE DEAD-END PANEL. Every ending this feature can reach renders through this
@@ -59,6 +60,12 @@ export type ImportOutcomeSpec = {
   id: string;
   /** Never "danger". See the header. */
   tone: "info" | "warning";
+  /**
+   * Which shop the ended job read. It picks the GLYPH, and it is here rather than
+   * hard-coded below because the panel was showing the Instagram mark over a website
+   * import — the one visual on the screen, contradicting every word beside it.
+   */
+  sourceType?: ImportSourceId;
   /** The badge riding the Instagram mark: `ArrowRightLeft` for a switch, `Clock` for a wait. */
   badge: LucideIcon;
   /** The WORD beside the badge. Colour alone never carries a state here (SC 1.4.1). */
@@ -88,6 +95,7 @@ const TONE = {
 export default function ImportOutcome({ spec }: { spec: ImportOutcomeSpec }) {
   const tone = TONE[spec.tone];
   const Badge = spec.badge;
+  const Mark = spec.sourceType === "website" ? WebsiteMark : InstagramMark;
 
   return (
     <Empty
@@ -106,8 +114,10 @@ export default function ImportOutcome({ spec }: { spec: ImportOutcomeSpec }) {
       className={`w-full items-start justify-start border-solid text-left ${tone.ground} ${tone.border} gap-6 p-6 sm:p-8 md:p-8`}
     >
       <EmptyHeader className="max-w-3xl items-start gap-3 text-left">
-        {/* I-7 — the Instagram glyph, DESATURATED, with a state badge, ON ONE ROW WITH
-            THE WORD. §2.7 is explicit that the mark must read as a SWITCH or a WAIT, not
+        {/* I-7 — the SOURCE's glyph, DESATURATED, with a state badge, ON ONE ROW WITH
+            THE WORD. It was the Instagram glyph unconditionally, which put an Instagram
+            mark on top of "Nothing on your website changed" for every website ending.
+            `WebsiteMark` already existed for the gate and the chip; this is the same one. §2.7 is explicit that the mark must read as a SWITCH or a WAIT, not
             as an error: a red cross here would be the design telling her she broke
             something. The glyph keeps its shape so she recognises the source; `grayscale`
             takes the celebration out of it. Mark and word together rather than stacked,
@@ -118,7 +128,7 @@ export default function ImportOutcome({ spec }: { spec: ImportOutcomeSpec }) {
             variant="icon"
             className="relative mb-0 size-12 shrink-0 rounded-[var(--radius-lg)] border border-[color:var(--slab-chip-border)] bg-[color:var(--slab-chip-ground)]"
           >
-            <InstagramMark size={26} className="opacity-90 grayscale" />
+            <Mark size={26} className="opacity-90 grayscale" />
             <span
               className={`absolute -right-1.5 -bottom-1.5 flex size-6 items-center justify-center rounded-full border-2 border-[color:var(--slab-ground)] ${tone.ground}`}
             >

@@ -1,9 +1,10 @@
 "use client";
 
-import { ArrowRightLeft, AtSign, Clock, Hourglass, MessageCircle, RotateCw, ShieldAlert } from "lucide-react";
+import { ArrowRightLeft, AtSign, Clock, Globe, Hourglass, MessageCircle, RotateCw, ShieldAlert } from "lucide-react";
 
 import type { ImportOutcomeSpec } from "@/components/import/ImportOutcome";
 import { WHATSAPP_HREF } from "@/components/import/OutcomeBand";
+import type { ImportSourceId } from "@/lib/import/source";
 
 /**
  * EVERY ENDING THIS SCREEN CAN REACH, as data.
@@ -29,6 +30,14 @@ import { WHATSAPP_HREF } from "@/components/import/OutcomeBand";
  *                                  renders report-like content; `WorkingScreen` routes
  *                                  both to the `report` state rather than ending here.
  *
+ * TWO SOURCES NOW REACH THESE ENDINGS, NOT ONE. `runWebsiteCapture` ends website jobs
+ * on the same codes — `rate_limited` when a storefront throttles the read,
+ * `extraction_failed` when we cannot read the site — and every sentence here had
+ * Instagram written into it. A merchant who pasted a URL was reading "We've hit
+ * Instagram's limit" and "Nothing on your Instagram changed". No code was added for
+ * that: the ending is the same, so `sourceType` (already threaded here for the retry)
+ * now picks the noun through `SOURCE_WORDS`, and the panel's glyph with it.
+ *
  * THE REST OF THE LIST STILL HAS TO LAND SOMEWHERE. `instagram_unreachable`,
  * `instagram_token_expired`, `extraction_failed` and `killed_by_operator` are all
  * reachable from `classifyPublicCaptureError` today, and an unmapped code would render
@@ -49,6 +58,22 @@ export type OutcomeHandlers = {
   email: string | null;
   /** Seconds the server said to wait, from `Retry-After`. Null unless it sent one. */
   retryAfterSeconds?: number | null;
+  /**
+   * WHICH SHOP THIS JOB READ, and the reason it had to be added.
+   *
+   * Every sentence below was written for Instagram, because Instagram was the only
+   * source when they were written. `runWebsiteCapture` then started ending jobs on the
+   * same codes: a merchant who pasted `phuljhadi.com` and hit Shopify's rate limit was
+   * shown "We've hit Instagram's limit for now", and one whose site we cannot read was
+   * told "Nothing on your Instagram changed" — about a website she had never linked to
+   * an Instagram account.
+   *
+   * The alternative was a second failure code per source, which `failureReasons.js`
+   * warns off in its own header: the ENDING is identical (a wait, a stop), only the
+   * noun changes. `sourceType` was already threaded to every call site for the retry;
+   * this carries it one level further, into the words.
+   */
+  sourceType?: ImportSourceId;
 };
 
 /** A real timeframe, or nothing. §2.7 D-5 bans "later" with no number behind it. */
@@ -71,12 +96,54 @@ const askAPerson = {
   href: WHATSAPP_HREF,
 } as const;
 
+/**
+ * The words that change with the source, in one row per source. Nothing else in this
+ * file branches — the panels, the actions and the tones are the same endings either way.
+ */
+const SOURCE_WORDS: Record<
+  ImportSourceId,
+  {
+    /** The ref she edits, as she calls it. ≤ 5 words with "Try another " in front. */
+    anotherLabel: string;
+    /** Whose limit we hit. Reads inside "We've hit …'s limit for now." */
+    limitOwner: string;
+    /** What the limit belongs to, for the reassurance line. */
+    limitSide: string;
+    /** What did NOT change while our side stopped. */
+    untouched: string;
+    /** The heading and body for a source that is switched off. */
+    notOpen: { heading: string; body: string };
+  }
+> = {
+  instagram: {
+    anotherLabel: "Try another handle",
+    limitOwner: "Instagram's",
+    limitSide: "shared across everyone importing today",
+    untouched: "your Instagram",
+    notOpen: {
+      heading: "Instagram import isn't open yet.",
+      body: "We're waiting on Instagram's approval before we can read accounts automatically.",
+    },
+  },
+  website: {
+    anotherLabel: "Try another address",
+    limitOwner: "your website's",
+    limitSide: "set by the platform your shop runs on",
+    untouched: "your website",
+    notOpen: {
+      heading: "Website import isn't open yet.",
+      body: "We're not reading shop websites automatically just yet.",
+    },
+  },
+};
+
 export function outcomeFor(code: string | null, handlers: OutcomeHandlers): ImportOutcomeSpec {
-  const { onTryAnotherHandle, onRetry, email, retryAfterSeconds } = handlers;
+  const { onTryAnotherHandle, onRetry, email, retryAfterSeconds, sourceType = "instagram" } = handlers;
+  const words = SOURCE_WORDS[sourceType] ?? SOURCE_WORDS.instagram;
 
   const tryAnotherHandle = {
-    label: "Try another handle",
-    icon: AtSign,
+    label: words.anotherLabel,
+    icon: sourceType === "website" ? Globe : AtSign,
     onClick: onTryAnotherHandle,
   } as const;
 
@@ -101,6 +168,9 @@ export function outcomeFor(code: string | null, handlers: OutcomeHandlers): Impo
       return {
         id: "not_a_business_account",
         tone: "info",
+        // Instagram-only by construction: `classifyPublicCaptureError` is reached from
+        // `runPublicCapture` alone, and `runWebsiteCapture` does not call it.
+        sourceType: "instagram",
         badge: ArrowRightLeft,
         badgeLabel: "A switch, not an error",
         heading: "We couldn't read that Instagram account.",
@@ -122,12 +192,17 @@ export function outcomeFor(code: string | null, handlers: OutcomeHandlers): Impo
       return {
         id: "rate_limited",
         tone: "warning",
+        sourceType,
         badge: Clock,
         badgeLabel: "Please wait",
-        heading: "We've hit Instagram's limit for now.",
+        heading: `We've hit ${words.limitOwner} limit for now.`,
         body: retryLine(retryAfterSeconds),
-        detail:
-          "The limit is on oBizee's side, not yours — it's shared across everyone importing today, and it clears on its own.",
+        // NOT "the limit is on oBizee's side" for a website, because it is not.
+        // A storefront's 429/430 is its own platform throttling how fast we read her
+        // feed — the same read that worked ninety seconds earlier — and it clears in
+        // seconds. Naming the wrong owner is what makes a merchant go and change a
+        // setting somewhere that has nothing to do with it.
+        detail: `The limit isn't yours — it's ${words.limitSide}, and it clears on its own.`,
         primary: { label: "Try again", icon: RotateCw, onClick: onRetry },
         secondary: askAPerson,
       };
@@ -150,10 +225,11 @@ export function outcomeFor(code: string | null, handlers: OutcomeHandlers): Impo
       return {
         id: "source_not_enabled",
         tone: "info",
+        sourceType,
         badge: Hourglass,
         badgeLabel: "Not open yet",
-        heading: "Instagram import isn't open yet.",
-        body: "We're waiting on Instagram's approval before we can read accounts automatically.",
+        heading: words.notOpen.heading,
+        body: words.notOpen.body,
         detail: email
           ? `You've already verified ${email}, so you won't be asked again.`
           : "Your shop can still move over in the meantime — a person does it by hand.",
@@ -171,6 +247,7 @@ export function outcomeFor(code: string | null, handlers: OutcomeHandlers): Impo
       return {
         id: "session_expired",
         tone: "info",
+        sourceType,
         badge: ShieldAlert,
         badgeLabel: "Sign in again",
         heading: "We need your email once more.",
@@ -188,10 +265,11 @@ export function outcomeFor(code: string | null, handlers: OutcomeHandlers): Impo
       return {
         id: code ?? "unknown",
         tone: "warning",
+        sourceType,
         badge: RotateCw,
         badgeLabel: "Stopped on our side",
         heading: "That import stopped before it finished.",
-        body: "Nothing on your Instagram changed, and nothing you did caused this. Starting it again usually works.",
+        body: `Nothing on ${words.untouched} changed, and nothing you did caused this. Starting it again usually works.`,
         primary: { label: "Try again", icon: RotateCw, onClick: onRetry },
         secondary: askAPerson,
       };

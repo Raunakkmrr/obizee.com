@@ -219,6 +219,7 @@ export default function ImportRoute({
             onRetry: onRestartGate,
             email,
             retryAfterSeconds: blocked.retryAfterSeconds,
+            sourceType,
           })}
         />
       </ImportSlab>

@@ -121,9 +121,11 @@ export default function WorkingScreen({
     else onRestartGate();
   }, [handle, sourceType, onJobStarted, onRestartGate]);
 
+  // `sourceType` rides along so the ending SAYS the source too, not just retries it —
+  // the same bug this prop was added for, one layer further down.
   const handlers = useMemo(
-    () => ({ onTryAnotherHandle: onRestartGate, onRetry, email }),
-    [onRestartGate, onRetry, email],
+    () => ({ onTryAnotherHandle: onRestartGate, onRetry, email, sourceType }),
+    [onRestartGate, onRetry, email, sourceType],
   );
 
   // ── The endings ────────────────────────────────────────────────────────────
