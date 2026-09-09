@@ -47,11 +47,21 @@ import { parseSourceRef } from "@/lib/import/source";
  * it rather than as an option.
  */
 type LiveSource = {
-  id: "instagram" | "website";
+  id: "instagram" | "website" | "shopexer";
   label: string;
   fieldLabel: string;
   submitLabel: string;
   placeholders: string[];
+  /**
+   * The `?src=` the gate is handed, when it differs from the pill's own id.
+   *
+   * A Shopexer shop is read by the WEBSITE adapter — its storefronts publish a sitemap
+   * and schema.org product markup, which is exactly the generic rung. The pill exists
+   * for recognition, not because the plumbing differs: a seller on Shopexer looking for
+   * her platform in the row should find it rather than having to know that "my website"
+   * would have worked.
+   */
+  handoff?: "instagram" | "website";
 };
 
 /**
@@ -73,6 +83,16 @@ const LIVE_SOURCES: LiveSource[] = [
     fieldLabel: "Your website",
     submitLabel: "Read my website",
     placeholders: ["phuljhadi.com", "yourshop.com", "yourshop.myshopify.com"],
+  },
+  {
+    id: "shopexer",
+    label: "Shopexer",
+    fieldLabel: "Your Shopexer address",
+    submitLabel: "Read my Shopexer shop",
+    placeholders: ["dreamyjewels.shopexer.com", "yourshop.shopexer.com"],
+    // Read by the website adapter's schema.org rung — verified against three live
+    // Shopexer shops (52, 89 and 136 products, with their real categories).
+    handoff: "website",
   },
 ];
 
@@ -149,7 +169,9 @@ export default function MoveYourShop() {
    * animation is what a `true` buys.
    */
   const validateAndGo = (raw: string): boolean => {
-    if (source.id === "website") {
+    // EVERY SOURCE BUT INSTAGRAM IS AN ADDRESS. Written as "not Instagram" rather than
+    // as a list, so adding a fourth pill cannot silently drop it into the handle rule.
+    if (source.id !== "instagram") {
       // A website is checked here only for SHAPE, by the SAME function the gate's chip
       // and `app/import/page.tsx` run — `parseSourceRef`, not a regex written twice.
       // Whether the domain is a store we can read is `WebsiteAdapter.validateRef`'s
@@ -161,7 +183,9 @@ export default function MoveYourShop() {
         return false;
       }
       setError(null);
-      window.location.assign(`${IMPORT_PATH}?src=website&h=${encodeURIComponent(parsedRef.ref)}`);
+      window.location.assign(
+        `${IMPORT_PATH}?src=${source.handoff ?? source.id}&h=${encodeURIComponent(parsedRef.ref)}`,
+      );
       return true;
     }
 
@@ -290,11 +314,11 @@ export default function MoveYourShop() {
                   // placeholder both restart rather than finishing the last one's.
                   key={source.id}
                   id={fieldId}
-                  name={source.id === "website" ? "website_url" : "instagram_handle"}
+                  name={source.id === "instagram" ? "instagram_handle" : "website_url"}
                   placeholders={source.placeholders}
                   // "@" belongs to a handle. On a website field it reads as a
                   // typo she has to work around.
-                  prefix={source.id === "website" ? "" : "@"}
+                  prefix={source.id === "instagram" ? "@" : ""}
                   value={handle}
                   inputRef={inputRef}
                   onValueChange={(next) => {
@@ -306,7 +330,7 @@ export default function MoveYourShop() {
                   // AC-3 runs on blur as well as on submit, but an empty field she has
                   // merely tabbed through is not a mistake she has made yet.
                   onBlur={() => {
-                    if (!handle || source.id === "website") return;
+                    if (!handle || source.id !== "instagram") return;
                     const parsed = parseHandle(handle);
                     setError(parsed.ok === false ? HANDLE_ERROR_COPY[parsed.reason] : null);
                   }}
@@ -338,9 +362,9 @@ export default function MoveYourShop() {
                     aria-hidden="true"
                   />
                   <span className="min-w-0">
-                    {source.id === "website"
-                      ? "No login. No plugin. We read what your shop already shows buyers."
-                      : "No Instagram password. No permissions. We read what is already public."}
+                    {source.id === "instagram"
+                      ? "No Instagram password. No permissions. We read what is already public."
+                      : "No login. No plugin. We read what your shop already shows buyers."}
                   </span>
                 </p>
 
@@ -351,10 +375,15 @@ export default function MoveYourShop() {
                     aria-hidden="true"
                   />
                   <span className="min-w-0">
-                    {source.id === "website" ? (
-                      // Shopify is the one platform read today. Naming it is more
-                      // useful than "most websites", which is a claim we cannot keep.
-                      <>Works with Shopify stores today. More platforms are coming.</>
+                    {source.id === "shopexer" ? (
+                      // Verified against three live Shopexer shops. Naming the platform
+                      // she is on is worth more than "most websites", which is a claim
+                      // we could not keep.
+                      <>Works with Shopexer shops. Nothing to install, nothing to export.</>
+                    ) : source.id === "website" ? (
+                      // Shopify by its feed, everything else by its sitemap and product
+                      // markup. Both are real; neither is "most websites".
+                      <>Works with Shopify, and most shops that Google can already find.</>
                     ) : (
                       <>
                         Works with Instagram Business accounts.{" "}
