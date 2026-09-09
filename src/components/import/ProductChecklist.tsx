@@ -356,13 +356,29 @@ function ChecklistRow({
               placeholder={product.title}
               className="h-9 w-full rounded-[var(--radius-sm)] border border-[color:var(--slab-chip-border)] bg-[color:var(--choice-ground)] px-2 text-[14px] font-semibold text-white outline-none focus-visible:border-[color:var(--obz-cta)]"
             />
-            <span className="mt-0.5 block text-[12px] text-[color:var(--slab-text-muted)]">
-              We named this one from your caption.
+            {/* "from your caption" was true when the name was the caption's first six
+                words. It is not any more: the judge reads the post and names the ITEM,
+                so "Let's pack these cuties" is now "Handmade Keychain Gift Set". Saying
+                the old thing would point her at words that are no longer on the screen. */}
+            <span className="mt-0.5 flex flex-wrap items-center gap-x-2 text-[12px] text-[color:var(--slab-text-muted)]">
+              <span>We named this one for you — change it if it is wrong.</span>
+              {product.classification?.category ? (
+                <span className="rounded-full border border-[color:var(--slab-chip-border)] px-1.5 py-px text-[11px] font-semibold text-white">
+                  {product.classification.category}
+                </span>
+              ) : null}
             </span>
           </>
         ) : (
           <>
-            <span className="block truncate text-[14px] font-semibold text-white">{product.title}</span>
+            <span className="flex min-w-0 items-center gap-2">
+              <span className="min-w-0 truncate text-[14px] font-semibold text-white">{product.title}</span>
+              {product.classification?.category ? (
+                <span className="shrink-0 rounded-full border border-[color:var(--slab-chip-border)] px-1.5 py-px text-[11px] font-semibold text-[color:var(--slab-text-muted)]">
+                  {product.classification.category}
+                </span>
+              ) : null}
+            </span>
             {product.priceSourceText ? (
               <span className="block truncate text-[12.5px] text-[color:var(--slab-text-muted)]">
                 {product.priceSource === "image"
