@@ -47,7 +47,7 @@ import { parseSourceRef } from "@/lib/import/source";
  * it rather than as an option.
  */
 type LiveSource = {
-  id: "instagram" | "website" | "shopexer" | "instamojo";
+  id: "instagram" | "website" | "shopexer" | "instamojo" | "linktree";
   label: string;
   fieldLabel: string;
   submitLabel: string;
@@ -61,7 +61,7 @@ type LiveSource = {
    * her platform in the row should find it rather than having to know that "my website"
    * would have worked.
    */
-  handoff?: "instagram" | "website";
+  handoff?: "instagram" | "website" | "linktree";
 };
 
 /**
@@ -105,6 +105,18 @@ const LIVE_SOURCES: LiveSource[] = [
     // Its own rung on the website adapter: their storefronts serve no feed and no
     // schema.org, but their category pages carry the catalogue. 64 products verified.
     handoff: "website",
+  },
+  {
+    id: "linktree",
+    label: "Link page",
+    fieldLabel: "Your link page",
+    submitLabel: "Find my shop",
+    placeholders: ["linktr.ee/yourname", "beacons.ai/yourname"],
+    // NOT a source, and it keeps its own `?src=` for exactly that reason: the gate has
+    // to show her the link page she pasted, and the website rule would strip the
+    // username off it. The SERVER resolves it to her real shop when she submits, so the
+    // job that gets created is an ordinary Instagram or website one.
+    handoff: "linktree",
   },
 ];
 
@@ -182,13 +194,14 @@ export default function MoveYourShop() {
    */
   const validateAndGo = (raw: string): boolean => {
     // EVERY SOURCE BUT INSTAGRAM IS AN ADDRESS. Written as "not Instagram" rather than
-    // as a list, so adding a fourth pill cannot silently drop it into the handle rule.
+    // as a list, so adding another pill cannot silently drop it into the handle rule.
+    // `parseSourceRef` branches again inside on `linktree`, whose ref keeps its path.
     if (source.id !== "instagram") {
       // A website is checked here only for SHAPE, by the SAME function the gate's chip
       // and `app/import/page.tsx` run — `parseSourceRef`, not a regex written twice.
       // Whether the domain is a store we can read is `WebsiteAdapter.validateRef`'s
       // question; asking it here would mean a network call on every keystroke.
-      const parsedRef = parseSourceRef("website", raw);
+      const parsedRef = parseSourceRef(source.id === "linktree" ? "linktree" : "website", raw);
       if (parsedRef.ok === false) {
         setError(parsedRef.message);
         inputRef.current?.focus();
@@ -376,7 +389,9 @@ export default function MoveYourShop() {
                   <span className="min-w-0">
                     {source.id === "instagram"
                       ? "No Instagram password. No permissions. We read what is already public."
-                      : "No login. No plugin. We read what your shop already shows buyers."}
+                      : source.id === "linktree"
+                        ? "No login. We read the links you already show everyone."
+                        : "No login. No plugin. We read what your shop already shows buyers."}
                   </span>
                 </p>
 
@@ -387,7 +402,9 @@ export default function MoveYourShop() {
                     aria-hidden="true"
                   />
                   <span className="min-w-0">
-                    {source.id === "instamojo" ? (
+                    {source.id === "linktree" ? (
+                      <>We follow your links and read whichever shop they point at.</>
+                    ) : source.id === "instamojo" ? (
                       <>Works with Instamojo stores, on your own domain or theirs.</>
                     ) : source.id === "shopexer" ? (
                       // Verified against three live Shopexer shops. Naming the platform

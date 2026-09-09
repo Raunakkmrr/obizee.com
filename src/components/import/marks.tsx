@@ -1,4 +1,4 @@
-import { Globe } from "lucide-react";
+import { Globe, Link2 } from "lucide-react";
 
 /**
  * The two OFFICIAL provider marks, inline — plus one that is deliberately generic.
@@ -55,6 +55,26 @@ export function GoogleMark({ size = 20, className }: MarkProps) {
 export function WebsiteMark({ size = 20, className }: MarkProps) {
   return (
     <Globe
+      aria-hidden="true"
+      focusable="false"
+      width={size}
+      height={size}
+      strokeWidth={1.75}
+      className={className}
+    />
+  );
+}
+
+/**
+ * A link. G0, when what she pasted is a link page rather than a shop.
+ *
+ * Generic for the same reason `WebsiteMark` is: Linktree has a brand mark, but the pill
+ * accepts bio.link, beacons.ai and taplink.cc too, and stamping one company's logo on a
+ * field that takes five would tell four sets of sellers this is not for them.
+ */
+export function LinkPageMark({ size = 20, className }: MarkProps) {
+  return (
+    <Link2
       aria-hidden="true"
       focusable="false"
       width={size}

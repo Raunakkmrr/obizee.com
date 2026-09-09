@@ -24,7 +24,7 @@
 import { HANDLE_ERROR_COPY, parseHandle } from "@/lib/import/handle";
 
 /** Every source the route can carry. Ordered as the picker shows them. */
-export const IMPORT_SOURCE_IDS = ["instagram", "website"] as const;
+export const IMPORT_SOURCE_IDS = ["instagram", "website", "linktree"] as const;
 
 export type ImportSourceId = (typeof IMPORT_SOURCE_IDS)[number];
 
@@ -76,6 +76,22 @@ export function parseSourceRef(
   source: ImportSourceId,
   raw: string | null | undefined,
 ): SourceRefResult {
+  if (source === "linktree") {
+    // THE PATH IS THE WHOLE POINT HERE, which is why this cannot reuse the website rule:
+    // `normaliseWebsiteRef` keeps the host and drops everything after it, so
+    // `linktr.ee/hershop` would arrive at the server as `linktr.ee` — a page that
+    // identifies nobody. A link page is identified by its username.
+    const cleaned = String(raw ?? "")
+      .trim()
+      .replace(/^https?:\/\//i, "")
+      .replace(/^www\./i, "")
+      .replace(/[?#].*$/, "")
+      .replace(/\/+$/, "");
+    if (cleaned.length === 0) return { ok: false, message: LINK_PAGE_ERROR_COPY.empty };
+    if (!LINK_PAGE_PATTERN.test(cleaned)) return { ok: false, message: LINK_PAGE_ERROR_COPY.bad_shape };
+    return { ok: true, ref: cleaned.toLowerCase() };
+  }
+
   if (source === "website") {
     const address = normaliseWebsiteRef(raw);
     if (address.length === 0) return { ok: false, message: WEBSITE_ERROR_COPY.empty };
@@ -88,6 +104,22 @@ export function parseSourceRef(
   if (parsed.ok === false) return { ok: false, message: HANDLE_ERROR_COPY[parsed.reason] };
   return { ok: true, ref: parsed.handle };
 }
+
+/**
+ * A link page, as `linktr.ee/username` — the hosts the server's resolver knows.
+ *
+ * Mirrored from `LINK_PAGE_HOSTS` in `OM-backend/import/adapters/linktree/resolve.js`.
+ * A host missing here is simply refused on the gate rather than resolved, which is a
+ * visible no rather than a silent one.
+ */
+const LINK_PAGE_PATTERN =
+  /^(linktr\.ee|link\.tree|bio\.link|linkin\.bio|beacons\.ai|taplink\.cc)\/[A-Za-z0-9._-]{1,60}$/i;
+
+/** Word budget ≤ 12 (design-in-context D4). */
+export const LINK_PAGE_ERROR_COPY = {
+  empty: "Paste your link page address.",
+  bad_shape: "That does not look like a link page — try linktr.ee/yourname.",
+} as const;
 
 /** Word budget ≤ 12 (design-in-context D4), same as `HANDLE_ERROR_COPY`. */
 export const WEBSITE_ERROR_COPY = {
@@ -138,6 +170,15 @@ export const SOURCE_UI: Record<
     editLabel: "Your web address",
     editPlaceholder: "yourshop.com",
     maxLength: HOSTNAME_MAX,
+  },
+  linktree: {
+    label: "Link page",
+    prefix: "",
+    chipEmpty: "Add your link page",
+    chipLabel: (display) => `Your link page, ${display}. Edit it.`,
+    editLabel: "Your link page",
+    editPlaceholder: "linktr.ee/yourname",
+    maxLength: 80,
   },
 };
 

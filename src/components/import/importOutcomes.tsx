@@ -135,6 +135,19 @@ const SOURCE_WORDS: Record<
       body: "We're not reading shop websites automatically just yet.",
     },
   },
+  // A link page is resolved at create time, so a job never carries this source and
+  // these words are close to unreachable. They exist because the type demands a row and
+  // an unreachable panel is still a panel someone can land on — never a crash.
+  linktree: {
+    anotherLabel: "Try another link",
+    limitOwner: "your link page's",
+    limitSide: "set by the service your link page runs on",
+    untouched: "your link page",
+    notOpen: {
+      heading: "Link pages aren't open yet.",
+      body: "We're not reading link pages automatically just yet.",
+    },
+  },
 };
 
 export function outcomeFor(code: string | null, handlers: OutcomeHandlers): ImportOutcomeSpec {
@@ -143,7 +156,7 @@ export function outcomeFor(code: string | null, handlers: OutcomeHandlers): Impo
 
   const tryAnotherHandle = {
     label: words.anotherLabel,
-    icon: sourceType === "website" ? Globe : AtSign,
+    icon: sourceType === "instagram" ? AtSign : Globe,
     onClick: onTryAnotherHandle,
   } as const;
 

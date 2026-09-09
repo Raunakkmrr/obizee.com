@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, Pencil, X } from "lucide-react";
 
-import { InstagramMark, WebsiteMark } from "@/components/import/marks";
+import { InstagramMark, LinkPageMark, WebsiteMark } from "@/components/import/marks";
 import { middleTruncate } from "@/lib/import/handle";
 import { SOURCE_UI, formatRef, parseSourceRef, type ImportSourceId } from "@/lib/import/source";
 
@@ -15,6 +15,7 @@ import { SOURCE_UI, formatRef, parseSourceRef, type ImportSourceId } from "@/lib
 const SOURCE_MARK: Record<ImportSourceId, typeof InstagramMark> = {
   instagram: InstagramMark,
   website: WebsiteMark,
+  linktree: LinkPageMark,
 };
 
 /**
