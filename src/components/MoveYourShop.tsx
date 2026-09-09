@@ -47,7 +47,7 @@ import { parseSourceRef } from "@/lib/import/source";
  * it rather than as an option.
  */
 type LiveSource = {
-  id: "instagram" | "website" | "shopexer";
+  id: "instagram" | "website" | "shopexer" | "instamojo";
   label: string;
   fieldLabel: string;
   submitLabel: string;
@@ -92,6 +92,18 @@ const LIVE_SOURCES: LiveSource[] = [
     placeholders: ["dreamyjewels.shopexer.com", "yourshop.shopexer.com"],
     // Read by the website adapter's schema.org rung — verified against three live
     // Shopexer shops (52, 89 and 136 products, with their real categories).
+    handoff: "website",
+  },
+  {
+    id: "instamojo",
+    label: "Instamojo",
+    fieldLabel: "Your Instamojo store",
+    submitLabel: "Read my Instamojo store",
+    // Instamojo sellers get a custom domain — clearias reads as clearias.store — so the
+    // placeholder shows one rather than an instamojo.com address she does not use.
+    placeholders: ["clearias.store", "yourstore.com"],
+    // Its own rung on the website adapter: their storefronts serve no feed and no
+    // schema.org, but their category pages carry the catalogue. 64 products verified.
     handoff: "website",
   },
 ];
@@ -375,7 +387,9 @@ export default function MoveYourShop() {
                     aria-hidden="true"
                   />
                   <span className="min-w-0">
-                    {source.id === "shopexer" ? (
+                    {source.id === "instamojo" ? (
+                      <>Works with Instamojo stores, on your own domain or theirs.</>
+                    ) : source.id === "shopexer" ? (
                       // Verified against three live Shopexer shops. Naming the platform
                       // she is on is worth more than "most websites", which is a claim
                       // we could not keep.
