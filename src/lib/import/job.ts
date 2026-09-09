@@ -95,6 +95,14 @@ export type ImportProductView = {
   thumbUrl: string | null;
   sourceUrl: string;
   /**
+   * What her shop will do to this photo, decided against the square tile every product
+   * surface renders. `null` for a capture taken before the shapes were recorded — read
+   * that as "we did not measure", never as "it is fine".
+   */
+  imageIssue: "will_crop" | "low_resolution" | "unusable" | "unmeasured" | null;
+  /** How much of the photo the square crop discards, 0-100. */
+  imageCropLossPct: number;
+  /**
    * Whether the capture thinks this is something she SELLS.
    *
    * ORDERING, NOT MEMBERSHIP. Every captured post is a row and none is ever hidden;

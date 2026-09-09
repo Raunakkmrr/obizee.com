@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useId, useMemo, useState } from "react";
-import { Check, ChevronDown, IndianRupee, Loader2 } from "lucide-react";
+import { Check, ChevronDown, ImageOff, IndianRupee, Loader2 } from "lucide-react";
 
 import { DEFAULT_PRICE_RUPEES, saveProductEdits, type ProductEdit } from "@/lib/import/report";
 import type { ImportJobView, ImportProductView } from "@/lib/import/job";
@@ -298,6 +298,37 @@ export default function ProductChecklist({
 }
 
 /** One row: the photo, its name (ours or hers), and the price. */
+/**
+ * What her shop will do to this photo, when there is something to say.
+ *
+ * SHOWN AT THE MOMENT SHE CAN STILL ACT ON IT. Every product surface renders
+ * `aspect-square object-cover`, so a 1080x1920 reel cover loses 44% of itself to the
+ * crop. She finds that out either here, on the screen where she is already checking her
+ * products, or later on her own storefront.
+ *
+ * NO NUMBERS SHE CANNOT USE. "0.56:1" is true and worthless; "about 44% of this one gets
+ * cut off" is the same fact in a form she can act on. `unmeasured` renders nothing —
+ * a capture from before the shapes were recorded has no verdict, and silence is honest.
+ */
+function ImageWarning({ product }: { product: ImportProductView }) {
+  const issue = product.imageIssue;
+  if (!issue || issue === "unmeasured") return null;
+
+  const text =
+    issue === "will_crop"
+      ? `Square crop cuts about ${product.imageCropLossPct}%`
+      : issue === "low_resolution"
+        ? "Small photo — may look soft"
+        : "Photo too small to use";
+
+  return (
+    <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-[color:var(--brand-warm-on-dark)]/40 px-1.5 py-px text-[11px] font-semibold text-[color:var(--brand-warm-on-dark)]">
+      <ImageOff aria-hidden className="size-3" />
+      {text}
+    </span>
+  );
+}
+
 function ChecklistRow({
   product,
   price,
@@ -362,6 +393,7 @@ function ChecklistRow({
                 the old thing would point her at words that are no longer on the screen. */}
             <span className="mt-0.5 flex flex-wrap items-center gap-x-2 text-[12px] text-[color:var(--slab-text-muted)]">
               <span>We named this one for you — change it if it is wrong.</span>
+              <ImageWarning product={product} />
               {product.classification?.category ? (
                 <span className="rounded-full border border-[color:var(--slab-chip-border)] px-1.5 py-px text-[11px] font-semibold text-white">
                   {product.classification.category}
@@ -371,8 +403,9 @@ function ChecklistRow({
           </>
         ) : (
           <>
-            <span className="flex min-w-0 items-center gap-2">
+            <span className="flex min-w-0 flex-wrap items-center gap-2">
               <span className="min-w-0 truncate text-[14px] font-semibold text-white">{product.title}</span>
+              <ImageWarning product={product} />
               {product.classification?.category ? (
                 <span className="shrink-0 rounded-full border border-[color:var(--slab-chip-border)] px-1.5 py-px text-[11px] font-semibold text-[color:var(--slab-text-muted)]">
                   {product.classification.category}
