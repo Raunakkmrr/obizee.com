@@ -67,7 +67,7 @@ const About = () => {
           addressCountry: "IN",
         },
       },
-      sameAs: ["https://facebook.com/obizee", "https://twitter.com/obizee", "https://linkedin.com/company/obizee"],
+      sameAs: ["https://www.linkedin.com/company/obizee", "https://play.google.com/store/apps/details?id=com.obizeee", "https://www.producthunt.com/products/obizee"],
     },
   };
 

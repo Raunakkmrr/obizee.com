@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import { CONTACT_EMAIL } from "@/lib/contact";
 
@@ -60,11 +60,11 @@ const Footer = () => {
     ],
   };
 
+  // Only profiles oBizee actually owns. The Instagram / Facebook / X icons used
+  // to point at "#" — a dead link behind an aria-label that promised a profile.
+  // Add an entry back only with a URL that has been opened and verified as ours.
   const socialLinks = [
-    { icon: Instagram, href: "#", name: "Instagram" },
-    { icon: Facebook, href: "#", name: "Facebook" },
-    { icon: Twitter, href: "#", name: "Twitter" },
-    { icon: Linkedin, href: "#", name: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/obizee", name: "LinkedIn" },
   ];
 
   return (

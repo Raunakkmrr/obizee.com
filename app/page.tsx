@@ -56,11 +56,12 @@ export default function HomePage() {
     // entry, and that entry 404'd — the app id was com.obizee, one "e" short of
     // the real com.obizeee — so the only external identity we published was a
     // dead link. Verify any URL added here actually resolves.
+    // twitter.com/obizee and facebook.com/obizee are NOT ours — they resolve to
+    // unrelated personal accounts (verified 2026-09-11). Listing them told Google
+    // oBizee was the same entity as two strangers. Only profiles we own go here.
     sameAs: [
       "https://play.google.com/store/apps/details?id=com.obizeee",
-      "https://twitter.com/obizee",
       "https://www.linkedin.com/company/obizee",
-      "https://www.facebook.com/obizee",
       "https://www.producthunt.com/products/obizee",
     ],
   };
