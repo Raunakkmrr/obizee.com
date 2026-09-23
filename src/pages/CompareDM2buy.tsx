@@ -13,7 +13,7 @@ import {
 import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import JsonLd from "@/components/JsonLd";
-import { liveShops, MILESTONE_MERCHANT_COUNT } from "@/data/liveShops";
+import { liveShops, MILESTONE_MERCHANT_COUNT, TOTAL_MERCHANT_COUNT } from "@/data/liveShops";
 import { OBIZEE_SOFTWARE_SCHEMA } from "@/lib/productSchema";
 import { GoalMark, Mark, type ComparisonGroup } from "@/components/compare/marks";
 
@@ -378,6 +378,91 @@ const CompareDM2buy = () => {
           </div>
         </section>
 
+        {/*
+          1b — THE SHORT ANSWER
+          Snippet and AI-Overview target. Google's own People Also Ask box for
+          "dm2buy alternative" asks: is there a free one, why isn't dm2buy
+          working, is dm2buy safe. The page argued its case well but gave Google
+          nothing liftable — a featured snippet is pulled from visible prose, not
+          from schema, and it has to survive being read out of context.
+
+          Rules if you edit this: the first answer stays a single self-contained
+          paragraph of roughly 40-65 words that names oBizee in its opening
+          clause, so a lift still attributes us. Each heading stays a real
+          question someone types. Nothing here repeats the FAQ at the foot of the
+          page — those answer "what is the best alternative", these answer "is
+          there a free one" and "what happens if my store goes down".
+        */}
+        <section className="border-b border-gray-100 bg-white py-12 sm:py-16">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <p className="mb-3 font-mono text-[10.5px] font-semibold uppercase tracking-[0.18em] text-orange-600">
+              The short answer
+            </p>
+
+            <h2 className="mb-5 text-[24px] font-bold leading-tight tracking-tight text-gray-900 sm:text-[30px]">
+              Is there a <span className="text-orange-600">free DM2Buy alternative</span> in India?
+            </h2>
+
+            {/* The lift target. Kept as one paragraph on purpose. */}
+            <div className="rounded-2xl border-l-[3px] border-orange-500 bg-orange-50/60 p-5 sm:p-6">
+              <p className="text-[15px] leading-[1.7] text-gray-800 sm:text-[16px]">
+                <span className="font-bold text-gray-900">
+                  Yes — oBizee is free until your store has taken ₹50,000 in orders.
+                </span>{" "}
+                Not a trial and not a cut-down tier: every feature stays switched on. It does what a
+                DM2Buy catalog link does, then keeps going — Delhivery, DTDC, Blue Dart and India Post
+                shipping with live rate comparison, Razorpay and Paytm built in, and a custom domain
+                registered in your own name. {TOTAL_MERCHANT_COUNT} merchants sell on it today;{" "}
+                {MILESTONE_MERCHANT_COUNT} have passed ₹50,000.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-7 sm:mt-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-8">
+              <div>
+                <h3 className="mb-2 flex items-start gap-2 text-[15.5px] font-bold leading-snug text-gray-900">
+                  <Truck className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" aria-hidden="true" />
+                  What can oBizee do that DM2Buy can&rsquo;t?
+                </h3>
+                <p className="text-[13.5px] leading-[1.65] text-gray-600">
+                  Ship the order. DM2Buy gives you a catalog and a link; the courier, the payment and
+                  the stock are yours to arrange elsewhere. oBizee books the courier from the order
+                  screen — comparing rates across four couriers on that parcel — takes payment through
+                  Razorpay, Paytm, PhonePe, Cashfree or cash on delivery, and tracks stock, raw
+                  materials, vendors and staff in the same place.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-2 flex items-start gap-2 text-[15.5px] font-bold leading-snug text-gray-900">
+                  <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" aria-hidden="true" />
+                  What happens to my store if DM2Buy goes down?
+                </h3>
+                <p className="text-[13.5px] leading-[1.65] text-gray-600">
+                  Your catalogue is only as safe as the platform holding it. On oBizee your custom
+                  domain is registered in your name and can be pointed anywhere, your customer list is
+                  yours, and payments settle straight into your own Razorpay or Paytm account — oBizee
+                  never holds the money, so there is no payout to be frozen. Moving off DM2Buy, send
+                  the store link on WhatsApp and we rebuild it; your DM2Buy store stays live until you
+                  switch it off yourself.
+                </p>
+              </div>
+
+              <div className="sm:col-span-2">
+                <h3 className="mb-2 flex items-start gap-2 text-[15.5px] font-bold leading-snug text-gray-900">
+                  <Wallet className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" aria-hidden="true" />
+                  Is oBizee actually free, or is there a catch?
+                </h3>
+                <p className="max-w-3xl text-[13.5px] leading-[1.65] text-gray-600">
+                  The catch is the number: after ₹50,000 in orders you pay 1% per order, capped at ₹10
+                  — so an ₹800 sale costs ₹8 and a ₹10,000 sale still costs ₹10. There is no
+                  subscription at any volume, no setup fee, and a month with no orders costs nothing,
+                  before or after the threshold.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 2 — WHAT IS ACTUALLY PLUGGED IN */}
         <section className="border-b border-gray-100 bg-stone-50 py-12 sm:py-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -473,10 +558,10 @@ const CompareDM2buy = () => {
             <div className="mb-9 text-center">
               <p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-orange-600">See for yourself</p>
               <h2 className="mb-2 text-xl font-bold text-gray-900 sm:text-[28px]">
-                165 real shops, <span className="text-orange-600">open right now</span>
+                {TOTAL_MERCHANT_COUNT} real shops, <span className="text-orange-600">open right now</span>
               </h2>
               <p className="mx-auto max-w-xl text-sm text-gray-600">
-                Not mockups and not templates. <span className="font-semibold text-gray-900">165 merchants</span>{" "}
+                Not mockups and not templates. <span className="font-semibold text-gray-900">{TOTAL_MERCHANT_COUNT} merchants</span>{" "}
                 selling on oBizee today, across{" "}
                 <span className="font-semibold text-gray-900">{stateCount} states</span> and{" "}
                 <span className="font-semibold text-gray-900">{categoryCount} categories</span>. Open any of them

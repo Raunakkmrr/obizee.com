@@ -33,6 +33,18 @@ export interface LiveShop {
  */
 export const MILESTONE_MERCHANT_COUNT = 42;
 
+/**
+ * Every merchant selling on oBizee. OWNER-SUPPLIED (Raunak, 2026-09-03) and,
+ * like MILESTONE_MERCHANT_COUNT, NOT derivable from liveShops — that array only
+ * holds shops with a reachable storefront and more than two products.
+ *
+ * It exists because it was previously a bare literal typed into the page in two
+ * places, and a third spot reached for liveShops.length instead, which rendered
+ * "42 merchants sell on it today; 42 have passed ₹50,000". Update from billing
+ * data only.
+ */
+export const TOTAL_MERCHANT_COUNT = 165;
+
 export const liveShops: LiveShop[] = [
   { brandName: "CrochetByPriya", subDomain: "crochetbypriya", category: "Crochet & handmade", state: "Haryana" },
   { brandName: "Shop velnora", subDomain: "shopvelnora", category: "Clothing", state: "Maharashtra" },
