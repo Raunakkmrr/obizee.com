@@ -137,6 +137,156 @@ const DM2BUY_FREE_SUBJECT: AlternativeOption = {
   ],
 };
 
+/*
+ * ALSO-RAN BLOCKS, WRITTEN PER PAGE.
+ *
+ * best-dukaan / best-bikayi / best-instamojo previously drew the same five
+ * competitors from the same shared constants, four of them common to all three.
+ * Measured on production 2026-09-23 that left them 40.8-42.9% identical to each
+ * other, which is what put them in GSC's "Duplicate, Google chose different
+ * canonical than user" bucket. Same verified facts below; what changes is which
+ * trade-off is named, because someone leaving Dukaan over an annual bill is not
+ * asking the same question as someone leaving Instamojo over fulfilment.
+ */
+
+// --- on "best Dukaan alternatives": the reader is leaving an annual upfront bill
+const BIKAYI_FOR_DUKAAN: AlternativeOption = {
+  name: "Bikayi",
+  positioning: "The obvious move if the annual bill is what you are leaving — there is a free tier to land on.",
+  pricing: "Free tier, with paid plans reaching ₹999+/month as of 2026.",
+  bestFor: "Sellers whose orders arrive over WhatsApp anyway.",
+  pros: ["A free tier, so nothing is paid up front", "Purpose-built WhatsApp ordering", "Quick to migrate a simple catalog into"],
+  cons: ["The monthly tiers climb as you grow", "Still no courier integration, so shipping stays manual", "No hyperlocal delivery"],
+};
+
+const SHOPIFY_FOR_DUKAAN: AlternativeOption = {
+  name: "Shopify",
+  positioning: "The opposite trade from Dukaan: billed monthly rather than yearly, but a good deal more of it.",
+  pricing: "₹20/month for three months, then ₹1,994/month on Basic as of 2026.",
+  bestFor: "Sellers who need a specific app, or who are selling beyond India.",
+  pros: ["No year paid in advance", "The largest app and theme ecosystem anywhere", "Strong cross-border and multi-currency selling"],
+  cons: ["Costs more per year than Dukaan once the intro period ends", "Indian couriers need a third-party app", "Its own docs say it does not produce a GST-compliant bill"],
+};
+
+const INSTAMOJO_FOR_DUKAAN: AlternativeOption = {
+  name: "Instamojo",
+  positioning: "Worth a look only if a good part of what you sell does not get posted to anyone.",
+  pricing: "Free storefront tier plus per-transaction charges.",
+  bestFor: "Sellers with a meaningful share of digital products or services.",
+  pros: ["No annual commitment", "Excellent payment links", "Fast to start collecting money"],
+  cons: ["Thin on fulfilment, which is Dukaan's gap too", "Limited inventory depth", "Not the answer if you are shipping parcels"],
+};
+
+const SHOOPY_FOR_DUKAAN: AlternativeOption = {
+  name: "Shoopy",
+  positioning: "For a shop that also sells across a counter, not only online.",
+  pricing: "Free tier with paid upgrades.",
+  bestFor: "Local shops running offline and online off one catalog.",
+  pros: ["POS built in, which Dukaan does not do", "Simple inventory tracking", "Low starting cost"],
+  cons: ["Limited courier integration", "Smaller ecosystem than Dukaan's", "Lighter on customer marketing"],
+};
+
+const DM2BUY_FOR_DUKAAN: AlternativeOption = {
+  name: "DM2Buy",
+  positioning: "A step back rather than sideways — the catalog without the storefront you are already paying for.",
+  pricing: "Core catalog free.",
+  bestFor: "Sellers who decided the store was more than they needed.",
+  pros: ["Free, with no annual commitment at all", "Set up in minutes", "Good for pure Instagram catalog sharing"],
+  cons: ["No storefront to replace the one you are leaving", "No courier integration and no inventory", "No payment gateway of its own"],
+};
+
+// --- on "best Bikayi alternatives": the reader is leaving escalating monthly tiers
+const DUKAAN_FOR_BIKAYI: AlternativeOption = {
+  name: "Dukaan",
+  positioning: "A flat annual fee in place of tiers that climb — you trade flexibility for a number that stops moving.",
+  pricing: "Paid plans from ₹4,999/year as of 2026, billed for the year in advance.",
+  bestFor: "Sellers who would rather pay once and stop thinking about it.",
+  pros: ["One predictable annual figure, no tier to be pushed up", "A large, established seller base", "Straightforward catalog builder"],
+  cons: ["The whole year is paid before you know it works", "No native courier integration", "No hyperlocal delivery"],
+};
+
+const SHOPIFY_FOR_BIKAYI: AlternativeOption = {
+  name: "Shopify",
+  positioning: "Where sellers go when the thing they need is an app nobody else has built.",
+  pricing: "₹20/month for three months, then ₹1,994/month on Basic as of 2026.",
+  bestFor: "Sellers who have outgrown a chat-first tool and want a full web storefront.",
+  pros: ["An app for almost anything you can name", "A real web storefront, not a chat flow", "Mature analytics and reporting"],
+  cons: ["Considerably more per month than Bikayi's top tier", "WhatsApp selling is not native", "Indian couriers and GST invoices need paid apps"],
+};
+
+const INSTAMOJO_FOR_BIKAYI: AlternativeOption = {
+  name: "Instamojo",
+  positioning: "Strong if the order is really just a payment — a course, a consult, a download.",
+  pricing: "Free storefront tier plus per-transaction charges.",
+  bestFor: "Digital products and services sold over chat.",
+  pros: ["Payment links you can drop straight into a WhatsApp reply", "No tier to climb for the basics", "Quick to start"],
+  cons: ["Light on fulfilment once something has to ship", "Limited inventory depth", "Not built around a physical parcel"],
+};
+
+const SHOOPY_FOR_BIKAYI: AlternativeOption = {
+  name: "Shoopy",
+  positioning: "If the WhatsApp orders sit alongside a counter you also serve.",
+  pricing: "Free tier with paid upgrades.",
+  bestFor: "Local shops selling both in person and over chat.",
+  pros: ["POS alongside the online catalog", "Free tier to start on", "Simple inventory tracking"],
+  cons: ["WhatsApp flows are less developed than Bikayi's", "Limited courier integration", "Smaller ecosystem"],
+};
+
+const DM2BUY_FOR_BIKAYI: AlternativeOption = {
+  name: "DM2Buy",
+  positioning: "Instagram rather than WhatsApp, and free — a sideways move if your buyers moved channel.",
+  pricing: "Core catalog free.",
+  bestFor: "Sellers whose orders now come from Instagram rather than chat.",
+  pros: ["Free, with nothing that escalates later", "Built around Instagram specifically", "A seller network and IRL pop-up events"],
+  cons: ["No WhatsApp ordering to replace what you are leaving", "No courier integration or inventory", "No payment gateway of its own"],
+};
+
+// --- on "best Instamojo alternatives": the reader is now shipping physical goods
+const DUKAAN_FOR_INSTAMOJO: AlternativeOption = {
+  name: "Dukaan",
+  positioning: "A storefront-first tool, for the point where the product stopped being a download.",
+  pricing: "Paid plans from ₹4,999/year as of 2026, billed for the year in advance.",
+  bestFor: "Sellers who now need a catalog and stock rather than a payment link.",
+  pros: ["A proper product catalog with stock", "Large established seller base", "Good WhatsApp sharing"],
+  cons: ["The year is paid up front", "No native courier integration, so shipping is still yours", "No hyperlocal delivery"],
+};
+
+const BIKAYI_FOR_INSTAMOJO: AlternativeOption = {
+  name: "Bikayi",
+  positioning: "For sellers whose buyers were always in the chat, and the payment link was the workaround.",
+  pricing: "Free tier, with paid plans reaching ₹999+/month as of 2026.",
+  bestFor: "Sellers taking orders over WhatsApp rather than a web checkout.",
+  pros: ["Native WhatsApp ordering rather than a link you paste", "Free tier to start", "Fast setup"],
+  cons: ["Paid tiers escalate", "No courier integration, so the parcel is still your problem", "No hyperlocal delivery"],
+};
+
+const SHOPIFY_FOR_INSTAMOJO: AlternativeOption = {
+  name: "Shopify",
+  positioning: "The full storefront, for sellers who have stopped selling one thing at a time.",
+  pricing: "₹20/month for three months, then ₹1,994/month on Basic as of 2026.",
+  bestFor: "Sellers with a real catalogue, especially anyone selling abroad.",
+  pros: ["Deep catalog, variants and inventory", "Strong cross-border and multi-currency selling", "The largest app ecosystem"],
+  cons: ["A monthly fee where Instamojo charged you per transaction", "Shopify Shipping does not operate in India", "No GST-compliant invoice, by its own documentation"],
+};
+
+const SHOOPY_FOR_INSTAMOJO: AlternativeOption = {
+  name: "Shoopy",
+  positioning: "If the shift is from digital to a physical shop rather than to a web brand.",
+  pricing: "Free tier with paid upgrades.",
+  bestFor: "Local shops selling over a counter as well as online.",
+  pros: ["POS for the offline side", "Simple inventory tracking", "Low starting cost"],
+  cons: ["Limited courier integration", "Smaller ecosystem", "Lighter on customer marketing"],
+};
+
+const DM2BUY_FOR_INSTAMOJO: AlternativeOption = {
+  name: "DM2Buy",
+  positioning: "Free, and Instagram-shaped — but it solves the catalog, not the parcel.",
+  pricing: "Core catalog free.",
+  bestFor: "Sellers who just want the products visible somewhere shareable.",
+  pros: ["Genuinely free to start", "Very quick to set up", "Good for Instagram-led selling"],
+  cons: ["No logistics, which is the gap you are leaving Instamojo over", "No inventory or materials tracking", "No payment gateway of its own"],
+};
+
 const OBIZEE_VS_SHOPIFY: AlternativeOption = {
   name: "oBizee",
   positioning:
@@ -545,7 +695,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "No same-day or hyperlocal delivery.",
       "Raw materials, purchase lists and vendor tracking are not part of it.",
     ],
-    options: [OBIZEE_VS_DUKAAN, BIKAYI, SHOPIFY, INSTAMOJO, SHOOPY, DM2BUY],
+    options: [OBIZEE_VS_DUKAAN, BIKAYI_FOR_DUKAAN, SHOPIFY_FOR_DUKAAN, INSTAMOJO_FOR_DUKAAN, SHOOPY_FOR_DUKAAN, DM2BUY_FOR_DUKAAN],
     faqs: [
       {
         question: "What is the best Dukaan alternative in India?",
@@ -577,7 +727,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "No hyperlocal or same-day delivery.",
       "Limited inventory depth for makers who track materials.",
     ],
-    options: [OBIZEE_VS_BIKAYI, DUKAAN, SHOPIFY, INSTAMOJO, SHOOPY, DM2BUY],
+    options: [OBIZEE_VS_BIKAYI, DUKAAN_FOR_BIKAYI, SHOPIFY_FOR_BIKAYI, INSTAMOJO_FOR_BIKAYI, SHOOPY_FOR_BIKAYI, DM2BUY_FOR_BIKAYI],
     faqs: [
       {
         question: "What is the best Bikayi alternative in India?",
@@ -609,7 +759,7 @@ export const ALTERNATIVES_PAGES: AlternativesPage[] = [
       "No courier rate comparison or hyperlocal delivery.",
       "Nothing for materials, vendors or purchase planning.",
     ],
-    options: [OBIZEE_VS_INSTAMOJO, DUKAAN, BIKAYI, SHOPIFY, SHOOPY, DM2BUY],
+    options: [OBIZEE_VS_INSTAMOJO, DUKAAN_FOR_INSTAMOJO, BIKAYI_FOR_INSTAMOJO, SHOPIFY_FOR_INSTAMOJO, SHOOPY_FOR_INSTAMOJO, DM2BUY_FOR_INSTAMOJO],
     faqs: [
       {
         question: "What is the best Instamojo alternative for physical products?",
