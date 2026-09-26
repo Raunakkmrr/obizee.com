@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TemplatesPage from "@/pages/Templates";
+import TemplatesPage from "@/legacy-views/Templates";
 
 
 export const metadata: Metadata = {

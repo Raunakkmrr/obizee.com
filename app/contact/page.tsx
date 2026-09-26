@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ContactPage from "@/pages/Contact";
+import ContactPage from "@/legacy-views/Contact";
 
 
 export const metadata: Metadata = {

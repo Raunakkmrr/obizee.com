@@ -9,6 +9,7 @@ frontend:
     build:
       commands:
         - npm run build
+        - npm run test:content-release
   artifacts:
     baseDirectory: out
     files:

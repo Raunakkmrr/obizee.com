@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RefundPolicyPage from "@/pages/RefundPolicy";
+import RefundPolicyPage from "@/legacy-views/RefundPolicy";
 
 
 export const metadata: Metadata = {

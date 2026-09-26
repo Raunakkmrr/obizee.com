@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PricingPage from "@/pages/Pricing";
+import PricingPage from "@/legacy-views/Pricing";
 
 
 export const metadata: Metadata = {

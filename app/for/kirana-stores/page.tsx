@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ForKiranaStoresPage from "@/pages/ForKiranaStores";
+import ForKiranaStoresPage from "@/legacy-views/ForKiranaStores";
 
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompliancePage from "@/pages/Compliance";
+import CompliancePage from "@/legacy-views/Compliance";
 
 
 export const metadata: Metadata = {

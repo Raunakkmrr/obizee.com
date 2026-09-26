@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BlogIndexPage from "@/pages/BlogIndex";
+import BlogIndexPage from "@/legacy-views/BlogIndex";
 
 
 export const metadata: Metadata = {

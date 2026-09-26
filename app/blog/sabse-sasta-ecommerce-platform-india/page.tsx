@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HinglishPost4 from "@/pages/blog/HinglishPost4";
+import HinglishPost4 from "@/legacy-views/blog/HinglishPost4";
 
 export const metadata: Metadata = {
   title: "India Mein Sabse Sasta Ecommerce Platform Kaun Sa Hai? [2026]",

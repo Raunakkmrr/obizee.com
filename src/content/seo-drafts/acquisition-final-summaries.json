@@ -1,0 +1,258 @@
+[
+  {
+    "id": 320,
+    "title": "Run a useful AI SEO audit on three real store pages",
+    "description": "An AI SEO audit is useful when it produces a small set of evidence-backed changes. Start with a homepage, a category and a product you actually sell, rather than asking a tool to invent hundreds of recommendations.",
+    "category": "Search, data and automation",
+    "route": "/blog/run-a-useful-ai-seo-audit-on-three-real-store-pages/",
+    "minutes": 4
+  },
+  {
+    "id": 321,
+    "title": "Rewrite a product page title around the promise it can keep",
+    "description": "A product title should identify the page clearly enough that the right buyer understands why it is relevant. Adding every possible search phrase can make that job harder rather than easier.",
+    "category": "Search, data and automation",
+    "route": "/blog/rewrite-a-product-page-title-around-the-promise-it-can-keep/",
+    "minutes": 3
+  },
+  {
+    "id": 322,
+    "title": "Write a search description that helps the right visitor choose",
+    "description": "A search description should explain what the page offers, not repeat a string of disconnected keywords. Treat it as a short, accurate invitation to a page that already answers a useful question.",
+    "category": "Search, data and automation",
+    "route": "/blog/write-a-search-description-that-helps-the-right-visitor-choose/",
+    "minutes": 3
+  },
+  {
+    "id": 323,
+    "title": "Check product structured data against the page a customer sees",
+    "description": "Product structured data should describe the real page and offer. Before asking someone to add markup, make sure the visible product, price, availability and option handling are consistent.",
+    "category": "Search, data and automation",
+    "route": "/blog/check-product-structured-data-against-the-page-a-customer-sees/",
+    "minutes": 3
+  },
+  {
+    "id": 324,
+    "title": "Separate product-review stars from general store praise",
+    "description": "A customer saying they enjoyed buying from your shop is not automatically reviewing every product in the catalogue. Keep the subject of a review clear before displaying or marking up a rating.",
+    "category": "Search, data and automation",
+    "route": "/blog/separate-product-review-stars-from-general-store-praise/",
+    "minutes": 3
+  },
+  {
+    "id": 325,
+    "title": "Prepare review records for a store move without losing their origin",
+    "description": "Moving reviews is not just transferring text into a new template. Preserve the evidence that connects each review to its source, product and original context.",
+    "category": "Search, data and automation",
+    "route": "/blog/prepare-review-records-for-a-store-move-without-losing-their-origin/",
+    "minutes": 3
+  },
+  {
+    "id": 326,
+    "title": "Match imported reviews to the right product version",
+    "description": "A review can remain authentic while becoming misleading on the wrong product page. Product mapping deserves its own check, especially when sizes, materials or editions have changed.",
+    "category": "Search, data and automation",
+    "route": "/blog/match-imported-reviews-to-the-right-product-version/",
+    "minutes": 3
+  },
+  {
+    "id": 327,
+    "title": "Choose a review-request moment that reflects the real order state",
+    "description": "Ask for feedback after the customer has had a fair chance to experience the product. A fixed delay from checkout can be inappropriate when production, delivery or a service appointment is still pending.",
+    "category": "Search, data and automation",
+    "route": "/blog/choose-a-review-request-moment-that-reflects-the-real-order-state/",
+    "minutes": 3
+  },
+  {
+    "id": 328,
+    "title": "Choose a store domain you can continue to control",
+    "description": "A domain decision includes ownership, access and renewal—not just a memorable name. Choose an address your business can keep using when a contractor, platform or team member changes.",
+    "category": "Search, data and automation",
+    "route": "/blog/choose-a-store-domain-you-can-continue-to-control/",
+    "minutes": 3
+  },
+  {
+    "id": 329,
+    "title": "Prepare a custom-domain cutover before changing any record",
+    "description": "A custom-domain cutover is a change to an existing service boundary. Write the destination, current state and rollback before editing DNS or a hosting association.",
+    "category": "Search, data and automation",
+    "route": "/blog/prepare-a-custom-domain-cutover-before-changing-any-record/",
+    "minutes": 3
+  },
+  {
+    "id": 330,
+    "title": "Protect business email while connecting a new storefront domain",
+    "description": "A storefront change should not casually replace the configuration that keeps business email working. Treat the domain as shared infrastructure even when the immediate task concerns only the shop.",
+    "category": "Search, data and automation",
+    "route": "/blog/protect-business-email-while-connecting-a-new-storefront-domain/",
+    "minutes": 3
+  },
+  {
+    "id": 331,
+    "title": "Map old product links before moving a store",
+    "description": "A store move can leave useful product links behind in search, messages, QR codes and social posts. Map those destinations before the old site disappears.",
+    "category": "Search, data and automation",
+    "route": "/blog/map-old-product-links-before-moving-a-store/",
+    "minutes": 3
+  },
+  {
+    "id": 332,
+    "title": "Create a search baseline before rewriting the whole catalogue",
+    "description": "A search baseline should describe the data you actually have. Approximate weekly impressions and clicks are useful, but they cannot reveal every query, conversion or customer segment.",
+    "category": "Search, data and automation",
+    "route": "/blog/create-a-search-baseline-before-rewriting-the-whole-catalogue/",
+    "minutes": 3
+  },
+  {
+    "id": 333,
+    "title": "Define a purchase event before installing another marketing tag",
+    "description": "Before adding a pixel or analytics tag, decide what your business means by purchase. A submitted request, created order, successful payment and delivered order are not interchangeable events.",
+    "category": "Search, data and automation",
+    "route": "/blog/define-a-purchase-event-before-installing-another-marketing-tag/",
+    "minutes": 3
+  },
+  {
+    "id": 334,
+    "title": "Check browser and server event duplicates before trusting campaign revenue",
+    "description": "Sending an event from both a browser and a server can produce misleading totals if the implementation does not identify the same business event consistently. Ask for a duplicate test before using the report to increase spending.",
+    "category": "Search, data and automation",
+    "route": "/blog/check-browser-and-server-event-duplicates-before-trusting-campaign-revenue/",
+    "minutes": 3
+  },
+  {
+    "id": 335,
+    "title": "Keep catalogue-feed identifiers stable across product changes",
+    "description": "A product feed needs a reliable way to identify the item it describes. Treat identifiers as a data contract rather than rebuilding them from whatever title happens to be visible today.",
+    "category": "Search, data and automation",
+    "route": "/blog/keep-catalogue-feed-identifiers-stable-across-product-changes/",
+    "minutes": 3
+  },
+  {
+    "id": 336,
+    "title": "Reconcile feed prices with the product and checkout",
+    "description": "A feed price is useful only when it represents the product a buyer can actually choose. Compare the feed, landing page and checkout before sending more traffic to the offer.",
+    "category": "Search, data and automation",
+    "route": "/blog/reconcile-feed-prices-with-the-product-and-checkout/",
+    "minutes": 3
+  },
+  {
+    "id": 337,
+    "title": "Keep unavailable products out of a careless retargeting promise",
+    "description": "A visitor returning from an advertisement should find an offer the store can still explain and fulfil. Review availability and the destination before treating retargeting as an automatic recovery mechanism.",
+    "category": "Search, data and automation",
+    "route": "/blog/keep-unavailable-products-out-of-a-careless-retargeting-promise/",
+    "minutes": 3
+  },
+  {
+    "id": 338,
+    "title": "Keep a register of every custom script added to your store",
+    "description": "A custom-code field can become an unowned collection of tags. Keep a register so every script has a purpose, an authorised owner and a way to be removed.",
+    "category": "Search, data and automation",
+    "route": "/blog/keep-a-register-of-every-custom-script-added-to-your-store/",
+    "minutes": 3
+  },
+  {
+    "id": 339,
+    "title": "Evaluate a new store tag with a before-and-after test",
+    "description": "A new analytics or marketing tag should answer a defined question without damaging the buying journey. Compare the same pages and tasks before and after installation.",
+    "category": "Search, data and automation",
+    "route": "/blog/evaluate-a-new-store-tag-with-a-before-and-after-test/",
+    "minutes": 3
+  },
+  {
+    "id": 340,
+    "title": "Give an AI store assistant the smallest useful permission",
+    "description": "An assistant that can read a catalogue does not automatically need permission to change prices, publish copy or alter orders. Separate advice from action when evaluating store automation.",
+    "category": "Search, data and automation",
+    "route": "/blog/give-an-ai-store-assistant-the-smallest-useful-permission/",
+    "minutes": 3
+  },
+  {
+    "id": 341,
+    "title": "Prepare a minimal store dataset for an AI business question",
+    "description": "An AI analysis does not need every customer detail simply because you can export it. Start with the business question and provide the smallest relevant dataset.",
+    "category": "Search, data and automation",
+    "route": "/blog/prepare-a-minimal-store-dataset-for-an-ai-business-question/",
+    "minutes": 3
+  },
+  {
+    "id": 342,
+    "title": "Budget AI credits around a finished task rather than a demo",
+    "description": "A credit allowance is hard to evaluate without knowing how much usable work it produces. Compare tools around a finished, checked task rather than the number in the plan headline.",
+    "category": "Search, data and automation",
+    "route": "/blog/budget-ai-credits-around-a-finished-task-rather-than-a-demo/",
+    "minutes": 3
+  },
+  {
+    "id": 343,
+    "title": "Write stop conditions for an automated store task",
+    "description": "An automation needs a definition of when not to continue. Write stop conditions before it touches a large catalogue or a live business record.",
+    "category": "Search, data and automation",
+    "route": "/blog/write-stop-conditions-for-an-automated-store-task/",
+    "minutes": 3
+  },
+  {
+    "id": 344,
+    "title": "Build a product fact pack before asking AI for a launch campaign",
+    "description": "A launch campaign can only remain accurate if every asset starts from the same product facts. Prepare that source before generating captions, images or advertising variations.",
+    "category": "Search, data and automation",
+    "route": "/blog/build-a-product-fact-pack-before-asking-ai-for-a-launch-campaign/",
+    "minutes": 3
+  },
+  {
+    "id": 345,
+    "title": "Review a batch of AI product copy for factual drift",
+    "description": "Checking one generated description is not enough to establish that a whole batch is accurate. Review the claims most likely to change the customer's decision.",
+    "category": "Search, data and automation",
+    "route": "/blog/review-a-batch-of-ai-product-copy-for-factual-drift/",
+    "minutes": 3
+  },
+  {
+    "id": 346,
+    "title": "Check an AI ad creative against the offer on the landing page",
+    "description": "An advertisement and its destination should make the same offer. Check them together before publishing a generated creative, especially when price or availability appears in the image.",
+    "category": "Search, data and automation",
+    "route": "/blog/check-an-ai-ad-creative-against-the-offer-on-the-landing-page/",
+    "minutes": 3
+  },
+  {
+    "id": 347,
+    "title": "Separate an AI sales recommendation from a forecast you can defend",
+    "description": "An AI tool can suggest a next action without proving what the action will earn. Keep observations, assumptions and forecasts separate before changing prices or spending.",
+    "category": "Search, data and automation",
+    "route": "/blog/separate-an-ai-sales-recommendation-from-a-forecast-you-can-defend/",
+    "minutes": 3
+  },
+  {
+    "id": 348,
+    "title": "Turn a PDF catalogue into product records without trusting every extracted number",
+    "description": "A PDF catalogue can be a useful starting source, but extracted text still needs to be matched to the right product. Treat uncertain prices and options as review items, not automatically publishable data.",
+    "category": "Search, data and automation",
+    "route": "/blog/turn-a-pdf-catalogue-into-product-records-without-trusting-every-extracted-number/",
+    "minutes": 3
+  },
+  {
+    "id": 349,
+    "title": "Convert social posts into a catalogue without reviving old offers",
+    "description": "An old social post can contain a useful product photograph and an offer that is no longer true. Separate reusable product facts from time-specific promotion before building a catalogue record.",
+    "category": "Search, data and automation",
+    "route": "/blog/convert-social-posts-into-a-catalogue-without-reviving-old-offers/",
+    "minutes": 3
+  },
+  {
+    "id": 350,
+    "title": "Deduplicate catalogue imports using identity rather than similar names",
+    "description": "Two similar names can describe different products, while two different names can describe the same item. Define a product-identity rule before merging imported records.",
+    "category": "Search, data and automation",
+    "route": "/blog/deduplicate-catalogue-imports-using-identity-rather-than-similar-names/",
+    "minutes": 3
+  },
+  {
+    "id": 351,
+    "title": "Check data portability before connecting another store automation tool",
+    "description": "A useful automation should not leave you unable to retrieve the records needed to continue your business. Evaluate export and disconnection alongside the demonstration.",
+    "category": "Search, data and automation",
+    "route": "/blog/check-data-portability-before-connecting-another-store-automation-tool/",
+    "minutes": 3
+  }
+]

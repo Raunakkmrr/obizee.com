@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompareDM2buyPage from "@/pages/CompareDM2buy";
+import CompareDM2buyPage from "@/legacy-views/CompareDM2buy";
 
 /**
  * Metadata only. Every JSON-LD block for this route — WebPage, Article, FAQPage,

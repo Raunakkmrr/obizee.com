@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HinglishPost2 from "@/pages/blog/HinglishPost2";
+import HinglishPost2 from "@/legacy-views/blog/HinglishPost2";
 
 export const metadata: Metadata = {
   title: "Bina Paisa Lagaye Online Business Kaise Shuru Kare [2026]",

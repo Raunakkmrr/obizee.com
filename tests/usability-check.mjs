@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {calculate} from '../src/components/seo-drafts/resource-engine.mjs';
+assert.throws(()=>calculate('capacity',{hours:10,reserve:1,per:0}),/Hours per item must be greater than zero/);
+assert.throws(()=>calculate('photo-plan',{products:1,views:1.5,minutes:1,setup:1}),/Views per product must be a whole number/);
+assert.throws(()=>calculate('capacity',{hours:10,reserve:1,per:0},{per:'Production hours per piece'}),/Production hours per piece must be greater than zero/);
+const ui=fs.readFileSync('src/components/seo-drafts/ResourceCalculator.tsx','utf8');
+assert.ok(ui.includes('<form noValidate'));
+assert.ok(ui.includes('role="alert"'));
+assert.ok(ui.includes('errorRef.current?.focus()'));
+assert.ok(ui.includes("setNotes('');"));
+assert.ok(ui.includes('value={notes}'));
+const table=fs.readFileSync('src/components/seo-drafts/ArticlePage.tsx','utf8');
+assert.ok(table.includes('aria-describedby={`table-hint-${index}`}'));
+assert.ok(table.includes('swipe horizontally'));
+console.log('10 usability source/engine assertions passed; not a rendered-browser test.');

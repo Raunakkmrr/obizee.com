@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompareShopifyPage from "@/pages/CompareShopify";
+import CompareShopifyPage from "@/legacy-views/CompareShopify";
 
 /**
  * Metadata only. Every JSON-LD block for this route — WebPage, Article, FAQPage,

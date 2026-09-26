@@ -1,0 +1,351 @@
+[
+  {
+    "key": "margin",
+    "title": "Product contribution and margin calculator",
+    "description": "Separate sales revenue, variable cost, contribution and gross margin before deciding what an order can support.",
+    "route": "/resources/margin/",
+    "fields": [
+      {
+        "name": "price",
+        "label": "Selling price per unit (₹)",
+        "value": 1000
+      },
+      {
+        "name": "product",
+        "label": "Product cost per unit (₹)",
+        "value": 600
+      },
+      {
+        "name": "packing",
+        "label": "Packing and other variable cost (₹)",
+        "value": 50
+      },
+      {
+        "name": "fee",
+        "label": "Payment fee (%)",
+        "value": 2
+      }
+    ],
+    "formula": "Price minus product cost gives gross profit. Subtract packing and the entered payment fee to estimate contribution. This is not net profit: fixed costs, taxes, refunds and owner costs not entered remain excluded.",
+    "example": "At ₹1,000 with ₹600 product cost, ₹50 packing and a 2% fee, gross margin is 40% and contribution is ₹330.",
+    "limit": "Do not compare this result with another product whose cost boundary excludes different items.",
+    "related": "/blog/build-a-contribution-margin-sheet-for-each-product/"
+  },
+  {
+    "key": "target-price",
+    "title": "Target contribution price calculator",
+    "description": "Estimate the selling price required for a chosen rupee contribution when a percentage payment fee applies.",
+    "route": "/resources/target-price/",
+    "fields": [
+      {
+        "name": "cost",
+        "label": "Variable cost before fee (₹)",
+        "value": 500
+      },
+      {
+        "name": "target",
+        "label": "Desired contribution per unit (₹)",
+        "value": 150
+      },
+      {
+        "name": "fee",
+        "label": "Payment fee (%)",
+        "value": 3
+      }
+    ],
+    "formula": "Required price = (variable cost + desired contribution) ÷ (1 − fee rate). The model assumes the fee applies to this price only. It is not a tax or provider-fee calculation.",
+    "example": "With ₹500 cost, ₹150 target and 3% fee, the unrounded result is about ₹670.1031; rounding up to ₹670.11 keeps the target within this model.",
+    "limit": "A desired contribution is a planning choice, not evidence that buyers will accept the resulting price.",
+    "related": "/blog/separate-owner-labour-from-business-profit/"
+  },
+  {
+    "key": "break-even",
+    "title": "Break-even order planner",
+    "description": "Find how many consistent orders would cover a stated fixed-cost budget.",
+    "route": "/resources/break-even/",
+    "fields": [
+      {
+        "name": "fixed",
+        "label": "Fixed costs for the period (₹)",
+        "value": 12500
+      },
+      {
+        "name": "contribution",
+        "label": "Contribution per order (₹)",
+        "value": 300
+      }
+    ],
+    "formula": "Break-even orders = fixed costs ÷ contribution per order, rounded up to the next whole order. Use a contribution figure after the variable costs you intend to include.",
+    "example": "₹12,500 divided by ₹300 requires 42 whole orders; 41 provides ₹12,300 and leaves a ₹200 gap.",
+    "limit": "This simplified model assumes a stable order mix and does not forecast demand or cash timing.",
+    "related": "/blog/find-the-break-even-order-count-for-a-small-store/"
+  },
+  {
+    "key": "discount-limit",
+    "title": "Discount ceiling calculator",
+    "description": "Estimate the largest discount that still leaves your chosen contribution after variable cost and a percentage fee.",
+    "route": "/resources/discount-limit/",
+    "fields": [
+      {
+        "name": "price",
+        "label": "Current selling price (₹)",
+        "value": 1000
+      },
+      {
+        "name": "cost",
+        "label": "Variable cost before fee (₹)",
+        "value": 600
+      },
+      {
+        "name": "target",
+        "label": "Minimum contribution (₹)",
+        "value": 150
+      },
+      {
+        "name": "fee",
+        "label": "Payment fee (%)",
+        "value": 2
+      }
+    ],
+    "formula": "First find the required retained price: (cost + target) ÷ (1 − fee rate). Compare it with the current selling price. If the required price is higher, there is no feasible discount in this model.",
+    "example": "At ₹1,000, ₹600 cost, ₹150 minimum contribution and 2% fee, the retained price must be at least ₹765.31 when rounded up to paise.",
+    "limit": "Shipping subsidies, other discounts and provider-specific fee bases can reduce the real ceiling. Enter a complete cost boundary.",
+    "related": "/blog/set-a-discount-ceiling-from-the-contribution-you-need/"
+  },
+  {
+    "key": "bundle",
+    "title": "Bundle contribution calculator",
+    "description": "Test a proposed bundle price against its component costs, packaging and fees.",
+    "route": "/resources/bundle/",
+    "fields": [
+      {
+        "name": "price",
+        "label": "Bundle selling price (₹)",
+        "value": 750
+      },
+      {
+        "name": "components",
+        "label": "Total component cost (₹)",
+        "value": 540
+      },
+      {
+        "name": "packing",
+        "label": "Bundle packing cost (₹)",
+        "value": 30
+      },
+      {
+        "name": "fee",
+        "label": "Payment fee (%)",
+        "value": 0
+      }
+    ],
+    "formula": "Contribution = bundle price − total component cost − packing − percentage fee. Enter the total component cost, not the average cost of one item.",
+    "example": "A ₹750 bundle containing ₹540 of components and ₹30 packing contributes ₹180 before excluded costs.",
+    "limit": "This does not prove that the bundle improves sales or uses stock better than selling the components separately.",
+    "related": "/blog/price-a-product-bundle-without-hiding-its-weakest-margin/"
+  },
+  {
+    "key": "shipping-threshold",
+    "title": "Free-shipping threshold planner",
+    "description": "Estimate a basket value that could fund a delivery subsidy and retain a chosen contribution.",
+    "route": "/resources/shipping-threshold/",
+    "fields": [
+      {
+        "name": "delivery",
+        "label": "Delivery subsidy per order (₹)",
+        "value": 80
+      },
+      {
+        "name": "target",
+        "label": "Contribution to retain after subsidy (₹)",
+        "value": 100
+      },
+      {
+        "name": "rate",
+        "label": "Pre-delivery contribution rate (%)",
+        "value": 40
+      }
+    ],
+    "formula": "Threshold = (delivery subsidy + desired retained contribution) ÷ pre-delivery contribution rate. The rate must already account for the variable costs other than this subsidy.",
+    "example": "An ₹80 subsidy plus ₹100 retained contribution at a 40% rate gives ₹450.",
+    "limit": "The result is not a promise that every basket qualifies economically. Low-margin product mixes, remote-area charges and returns need separate checks.",
+    "related": "/blog/set-a-minimum-order-value-from-actual-handling-costs/"
+  },
+  {
+    "key": "campaign-budget",
+    "title": "Acquisition spending limit planner",
+    "description": "Set a scenario budget from expected qualifying orders, contribution and the amount you want to retain.",
+    "route": "/resources/campaign-budget/",
+    "fields": [
+      {
+        "name": "orders",
+        "label": "Scenario qualifying orders",
+        "value": 20
+      },
+      {
+        "name": "contribution",
+        "label": "Contribution before acquisition per order (₹)",
+        "value": 300
+      },
+      {
+        "name": "retained",
+        "label": "Contribution to retain per order (₹)",
+        "value": 100
+      }
+    ],
+    "formula": "Maximum scenario spend = qualifying orders × (contribution before acquisition − retained contribution). A negative result means the retention target is not feasible before any campaign spend.",
+    "example": "Twenty qualifying orders at ₹300 contribution, retaining ₹100 each, leave a ₹4,000 scenario spending allowance.",
+    "limit": "Expected orders are your assumption, not a prediction. Reconcile actual cancellations, refunds and spend before deciding to continue.",
+    "related": "/blog/set-a-campaign-spending-limit-from-contribution-rather-than-hope/"
+  },
+  {
+    "key": "plan-cost",
+    "title": "Monthly versus annual plan comparison",
+    "description": "Compare the cash cost of monthly billing with an annual commitment over a chosen usage period.",
+    "route": "/resources/plan-cost/",
+    "fields": [
+      {
+        "name": "monthly",
+        "label": "Monthly charge (₹)",
+        "value": 1200
+      },
+      {
+        "name": "annual",
+        "label": "Annual upfront charge (₹)",
+        "value": 12000
+      },
+      {
+        "name": "months",
+        "label": "Months you expect to use (1–12)",
+        "value": 6
+      }
+    ],
+    "formula": "Monthly scenario cost = monthly charge × months. Compare it with the full annual upfront payment. No refund, cancellation credit, tax or renewal offer is assumed.",
+    "example": "At ₹1,200 monthly and ₹12,000 annually, six months cost ₹7,200 monthly; a full year costs ₹14,400 monthly, ₹2,400 more than the annual commitment.",
+    "limit": "Lower annual unit cost does not mean a smaller immediate cash commitment or a better choice for uncertain use.",
+    "related": "/blog/compare-annual-billing-savings-with-the-cash-commitment/"
+  },
+  {
+    "key": "capacity",
+    "title": "Made-to-order capacity planner",
+    "description": "Estimate available production slots after reserving time for administration and rework.",
+    "route": "/resources/capacity/",
+    "fields": [
+      {
+        "name": "hours",
+        "label": "Total available hours",
+        "value": 40
+      },
+      {
+        "name": "reserve",
+        "label": "Hours reserved for other work",
+        "value": 10
+      },
+      {
+        "name": "per",
+        "label": "Production hours per item",
+        "value": 3
+      }
+    ],
+    "formula": "Available production hours = total hours − reserved hours. Whole-item capacity = available hours ÷ hours per item, rounded down.",
+    "example": "Forty available hours, ten reserved and three hours per item give ten production slots.",
+    "limit": "This is a time model, not an inventory or delivery promise. Drying, supplier delays and concurrent tasks may require a separate schedule.",
+    "related": "/blog/plan-made-to-order-capacity-separately-from-finished-stock/"
+  },
+  {
+    "key": "reorder",
+    "title": "Reorder-point worksheet",
+    "description": "Estimate a stock trigger using your own daily demand, replenishment lead time and safety allowance.",
+    "route": "/resources/reorder/",
+    "fields": [
+      {
+        "name": "daily",
+        "label": "Average units used per day",
+        "value": 3
+      },
+      {
+        "name": "days",
+        "label": "Replenishment lead time (days)",
+        "value": 7
+      },
+      {
+        "name": "safety",
+        "label": "Safety allowance (units)",
+        "value": 5
+      }
+    ],
+    "formula": "Reorder point = daily usage × lead time + safety allowance, rounded up to a whole unit. Compare with usable stock and outstanding replenishment deliberately.",
+    "example": "Three units per day over seven days plus five safety units gives a trigger of 26 units.",
+    "limit": "Historical averages can hide seasonality and unreliable lead times. This worksheet does not place a purchase order or synchronise stock.",
+    "related": "/blog/set-a-reorder-alert-from-demand-and-lead-time/"
+  },
+  {
+    "key": "launch-budget",
+    "title": "Store launch budget planner",
+    "description": "Separate one-time launch spending from recurring costs and an explicit contingency.",
+    "route": "/resources/launch-budget/",
+    "fields": [
+      {
+        "name": "build",
+        "label": "One-time design and setup (₹)",
+        "value": 15000
+      },
+      {
+        "name": "assets",
+        "label": "One-time photography and content (₹)",
+        "value": 5000
+      },
+      {
+        "name": "monthly",
+        "label": "Recurring monthly cost (₹)",
+        "value": 1500
+      },
+      {
+        "name": "months",
+        "label": "Planning months",
+        "value": 12
+      },
+      {
+        "name": "reserve",
+        "label": "Contingency (₹)",
+        "value": 3000
+      }
+    ],
+    "formula": "Planning total = setup + assets + monthly cost × months + contingency. Keep stock purchases and advertising outside the result unless you deliberately include them in the entered categories.",
+    "example": "₹15,000 setup + ₹5,000 assets + twelve months at ₹1,500 + ₹3,000 reserve gives ₹41,000.",
+    "limit": "A budget is not a vendor quotation. Check taxes, renewals, scope exclusions and whether costs are due upfront or later.",
+    "related": "/blog/budget-a-store-launch-without-spending-everything-on-the-homepage/"
+  },
+  {
+    "key": "photo-plan",
+    "title": "Product photography session planner",
+    "description": "Estimate capture workload and write a local shot list without uploading product or customer data.",
+    "route": "/resources/photo-plan/",
+    "fields": [
+      {
+        "name": "products",
+        "label": "Products to photograph",
+        "value": 12
+      },
+      {
+        "name": "views",
+        "label": "Required views per product",
+        "value": 4
+      },
+      {
+        "name": "minutes",
+        "label": "Minutes per view",
+        "value": 3
+      },
+      {
+        "name": "setup",
+        "label": "Setup and packing minutes",
+        "value": 60
+      }
+    ],
+    "formula": "Required shots = products × views. Planned session minutes = shots × minutes per view + setup. Editing, retakes and travel are excluded unless added to your time estimate.",
+    "example": "Twelve products with four views each give 48 shots; three minutes each plus one hour setup gives 204 minutes.",
+    "limit": "The calculator counts planned views, not usable finished images. Inspect focus, accurate colour and product identity before treating the session as complete.",
+    "related": "/blog/allocate-photography-costs-across-a-usable-product-range/"
+  }
+]

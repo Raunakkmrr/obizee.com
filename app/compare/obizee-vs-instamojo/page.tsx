@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompareInstamojoPage from "@/pages/CompareInstamojo";
+import CompareInstamojoPage from "@/legacy-views/CompareInstamojo";
 
 
 export const metadata: Metadata = {

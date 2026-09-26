@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompareDukaanPage from "@/pages/CompareDukaan";
+import CompareDukaanPage from "@/legacy-views/CompareDukaan";
 
 
 export const metadata: Metadata = {

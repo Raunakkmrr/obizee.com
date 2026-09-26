@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BlogPost1 from "@/pages/blog/BlogPost1";
+import BlogPost1 from "@/legacy-views/blog/BlogPost1";
 
 export const metadata: Metadata = {
   title: "How to Create Your Online Store in 5 Minutes with oBizee",

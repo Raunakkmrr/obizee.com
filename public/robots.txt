@@ -31,9 +31,7 @@ Allow: /
 User-agent: *
 Allow: /
 
-# Block merchant subdomain product pages from being indexed
-# These are thin auto-generated pages that hurt crawl budget
-Host: www.obizee.com
+# These directives apply only to this host, not merchant subdomains.
 
 Sitemap: https://www.obizee.com/sitemap.xml
 Sitemap: https://www.obizee.com/sitemap-core.xml
@@ -43,6 +41,7 @@ Sitemap: https://www.obizee.com/sitemap-auth.xml
 Sitemap: https://www.obizee.com/sitemap-compare.xml
 Sitemap: https://www.obizee.com/sitemap-verticals.xml
 Sitemap: https://www.obizee.com/sitemap-blog.xml
+Sitemap: https://www.obizee.com/sitemap-content.xml
 
 # LLM context file
 # https://www.obizee.com/llms.txt

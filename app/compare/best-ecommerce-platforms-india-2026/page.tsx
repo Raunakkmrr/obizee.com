@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BestPlatforms2026Page from "@/pages/BestPlatforms2026";
+import BestPlatforms2026Page from "@/legacy-views/BestPlatforms2026";
 
 
 export const metadata: Metadata = {

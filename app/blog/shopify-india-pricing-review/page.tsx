@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BlogPost5 from "@/pages/blog/BlogPost5";
+import BlogPost5 from "@/legacy-views/blog/BlogPost5";
 
 export const metadata: Metadata = {
   title: "Shopify India Pricing: Is It Worth It for Small Businesses?",

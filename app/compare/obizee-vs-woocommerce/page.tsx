@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompareWoocommercePage from "@/pages/CompareWoocommerce";
+import CompareWoocommercePage from "@/legacy-views/CompareWoocommerce";
 
 
 export const metadata: Metadata = {

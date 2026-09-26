@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TermsConditionsPage from "@/pages/TermsConditions";
+import TermsConditionsPage from "@/legacy-views/TermsConditions";
 
 
 export const metadata: Metadata = {

@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const file=process.argv[2];assert.ok(file,'Pass the candidate sitemap path');
+const names=['articles','acquisition-final','help','commercial','resources','hubs'];
+const expected=names.flatMap(n=>JSON.parse(fs.readFileSync(`src/content/seo-drafts/${n}.json`))).map(r=>'https://www.obizee.com'+r.route).sort();
+const xml=fs.readFileSync(file,'utf8');
+const urls=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
+assert.equal(urls.length,500);assert.equal(new Set(urls).size,500);
+assert.deepEqual(urls.sort(),expected);
+assert.ok(!xml.includes('<lastmod>'),'No invented publication or modification dates');
+assert.ok(urls.every(u=>!u.includes('editorial-preview')&&!u.includes('127.0.0.1')));
+console.log(JSON.stringify({routes:500,exactMatch:true,published:false,submitted:false}));

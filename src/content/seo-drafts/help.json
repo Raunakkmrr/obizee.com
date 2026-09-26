@@ -1,0 +1,2151 @@
+[
+  {
+    "id": 1,
+    "key": "store-live",
+    "route": "/help/store-live/",
+    "title": "Turn on your storefront after completing the profile",
+    "category": "Store setup",
+    "intro": "Use this when Website Settings still shows Make your website live. Turning it on changes customer access; complete this deliberately rather than using it to test a button.",
+    "steps": [
+      "Open Website Settings and read the current live status.",
+      "Tap Make your website live once. If Almost ready to go live appears, choose Complete profile and fill the missing items shown by the app.",
+      "Return to Website Settings after saving the profile and request the change again.",
+      "Wait for Your storefront is live, then use Preview Website to check the correct merchant address."
+    ],
+    "success": "The switch should remain on after the server confirms. The website-management rows become available. A tap without the success message is not proof the store is public.",
+    "troubleshoot": "If the profile message returns, use its current missing-item list. Do not repeatedly toggle or enter invented identity details. If the app reports a network error, reopen the screen and check the saved state before retrying.",
+    "sources": [
+      "WebsiteLiveToggle",
+      "WebsiteSettings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 2,
+    "key": "profile-gate",
+    "route": "/help/profile-gate/",
+    "title": "Resolve Almost ready to go live without guessing the missing details",
+    "category": "Store setup",
+    "intro": "The profile gate prevents a store from becoming live when required information is missing. The app displays the server's current requirements rather than a universal checklist that applies to every account.",
+    "steps": [
+      "Read the missing fields in the Almost ready to go live message.",
+      "Choose Complete profile and supply accurate information for your own business or account.",
+      "Save the affected profile sections and return to the website screen.",
+      "Try the live switch again only after checking the saved profile."
+    ],
+    "success": "The gate no longer appears and the live switch receives a confirmed success response.",
+    "troubleshoot": "Do not send identity documents or full personal details in a public support screenshot. If a completed field remains listed, report its label, the time and your app version through the official support route; do not bypass the gate.",
+    "sources": [
+      "WebsiteLiveToggle"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 3,
+    "key": "website-locked",
+    "route": "/help/website-locked/",
+    "title": "Understand locked website-management options",
+    "category": "Store setup",
+    "intro": "Select Website Template, Edit Content, Edit Brand Colors, Delivery and Preview Website are intentionally disabled while the storefront's live flag is off in the inspected app.",
+    "steps": [
+      "Open Website Settings and look for LIVE TO UNLOCK.",
+      "Check the Make your website live card above the management options.",
+      "If you intend to publish, complete the profile gate and wait for the live confirmation.",
+      "If you do not intend to publish yet, leave the switch off rather than enabling it merely to remove the lock."
+    ],
+    "success": "Once the app receives the live state, the management options become tappable.",
+    "troubleshoot": "If the switch is confirmed on but rows remain locked, reopen Website Settings after refreshing the app's account state. Report the inconsistent screen instead of changing unrelated payment or delivery settings.",
+    "sources": [
+      "WebsiteSettings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 4,
+    "key": "hide-store",
+    "route": "/help/hide-store/",
+    "title": "Hide your storefront deliberately",
+    "category": "Store setup",
+    "intro": "Use the website live switch when you intend to stop the storefront being available. Hiding is not an order-cancellation or refund action.",
+    "steps": [
+      "Record any customer communication you need to send about the interruption.",
+      "Open Website Settings and check that you are in the correct merchant account.",
+      "Turn the live switch off and wait for Your storefront is now hidden.",
+      "Reopen the screen to confirm its saved state and check the store address separately."
+    ],
+    "success": "The switch is off and the app confirms that the storefront is hidden.",
+    "troubleshoot": "Do not assume existing orders, payments or deliveries have been cancelled. Handle outstanding commitments separately. If the update fails, check the stored state before repeating the action; the source does not establish a guaranteed propagation time.",
+    "sources": [
+      "WebsiteLiveToggle"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 5,
+    "key": "preview-address",
+    "route": "/help/preview-address/",
+    "title": "Check and copy your own storefront address",
+    "category": "Store setup",
+    "intro": "Preview Website uses the merchant subdomain saved on the account. Confirm the displayed address before sharing it with customers.",
+    "steps": [
+      "Open Website Settings and choose Preview Website when available.",
+      "Wait for account details and the website to load.",
+      "Read the address above the preview and check the merchant name and catalogue.",
+      "Tap the address area to copy it; wait for URL copied to clipboard. Paste it somewhere you can inspect before sharing."
+    ],
+    "success": "The copied address matches the intended merchant and the preview displays that store.",
+    "troubleshoot": "If no subdomain is loaded, the preview may remain blank. Do not share a demo address or assume that a template demonstration belongs to you. Refresh account details or contact support with the displayed URL and app version, without tokens or customer information.",
+    "sources": [
+      "WebsitePreviewScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 6,
+    "key": "preview-template",
+    "route": "/help/preview-template/",
+    "title": "Preview a template without applying it",
+    "category": "Store design",
+    "intro": "A template thumbnail can open a demonstration inside the app. A demonstration is for evaluating a design; it is not proof that the same products or copy will appear in your store.",
+    "steps": [
+      "Open Website Settings, then Select Website Template.",
+      "Allow the available template list to load.",
+      "Tap a template thumbnail to open its preview.",
+      "Inspect the layout, then close the preview. Do not apply a change unless you intend to change your storefront."
+    ],
+    "success": "You return to the picker with the existing applied template unchanged unless you separately apply a selection.",
+    "troubleshoot": "A missing thumbnail can fall back to the template name. If the list reports Failed to load website templates, retry the list rather than selecting an unknown template. Do not interpret a slow demonstration as an empty merchant catalogue.",
+    "sources": [
+      "StoreTemplateScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 7,
+    "key": "apply-template",
+    "route": "/help/apply-template/",
+    "title": "Apply an available storefront template",
+    "category": "Store design",
+    "intro": "Changing the selected template affects your customer-facing design. Keep a note of the previous choice and inspect your actual content after applying the new one.",
+    "steps": [
+      "Open Select Website Template from Website Settings.",
+      "Preview the intended available design and select it.",
+      "Use the picker's apply action and wait for Template Applied.",
+      "Open your own Website Preview and inspect home, product, bag and checkout presentation with your real content."
+    ],
+    "success": "The confirmation names the applied template and the account's saved selection reflects it.",
+    "troubleshoot": "If No changes appears, the chosen template is already selected. If application fails, check the saved selection before retrying. The preview alone does not confirm a change. Do not promise that every design exposes identical editable sections.",
+    "sources": [
+      "StoreTemplateScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 8,
+    "key": "brand-colours",
+    "route": "/help/brand-colours/",
+    "title": "Save the three supported brand colours",
+    "category": "Store design",
+    "intro": "Edit Brand Colors controls primary, secondary and accent values. It is not a free-form editor for every font, spacing or layout property.",
+    "steps": [
+      "Open Website Settings, then Edit Brand Colors.",
+      "Record the current values before changing them.",
+      "Enter valid hexadecimal colours such as #D17C45; each of the three fields must be valid.",
+      "Use the save control and wait for Brand colors updated successfully, then inspect readable text and controls in your storefront."
+    ],
+    "success": "The saved values reload on the colour screen and the supported storefront theme uses them.",
+    "troubleshoot": "An Invalid color message means at least one value does not match the accepted three- or six-digit hexadecimal format. A valid colour value can still produce poor contrast. Correct readability rather than treating successful saving as accessibility approval.",
+    "sources": [
+      "WebsiteBrandColorsScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 9,
+    "key": "automatic-copy",
+    "route": "/help/automatic-copy/",
+    "title": "Understand automatic homepage wording",
+    "category": "Store content",
+    "intro": "Where supported, the app explains that oBizee writes homepage wording from the merchant's products and photos at the first, fifth and tenth product milestones. The status card reports the current state.",
+    "steps": [
+      "Open Website Settings and find Your store text is written for you.",
+      "Read whether your current design supports the feature.",
+      "Check the reported last-written information and remaining updates.",
+      "Review the actual homepage wording for accurate product facts, even when the text was generated automatically."
+    ],
+    "success": "The card explains whether anything has been written and whether updates remain. It does not promise unlimited rewrites.",
+    "troubleshoot": "Do not add or remove products merely to force a rewrite. The card states that fields edited by the merchant are not changed by this process. If the reported state and storefront differ, preserve an example and report it; do not assume every design uses the feature.",
+    "sources": [
+      "HomepageCopyCard",
+      "homepageCopyService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 10,
+    "key": "pause-copy",
+    "route": "/help/pause-copy/",
+    "title": "Stop future automatic homepage-text updates",
+    "category": "Store content",
+    "intro": "The homepage-copy switch changes whether the supported automatic process may continue. It is separate from making the website live.",
+    "steps": [
+      "Open Website Settings and locate Your store text is written for you.",
+      "Read the current status before changing the switch.",
+      "Turn Write my store text for me off and wait for the success message.",
+      "Reopen the screen to confirm the saved state, then make any intended content edits through Edit Content."
+    ],
+    "success": "The app reports that the store text will stay as it is and the switch remains off.",
+    "troubleshoot": "Turning this off is not described as restoring earlier wording or undoing previous updates. If saving fails, the switch returns to its previous state. Do not repeatedly toggle while a request is pending; check the saved state first.",
+    "sources": [
+      "HomepageCopyCard"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 11,
+    "key": "missing-copy-card",
+    "route": "/help/missing-copy-card/",
+    "title": "Why the automatic-text card may be missing or disabled",
+    "category": "Store content",
+    "intro": "A missing automatic-copy card does not establish that the feature is off. In the inspected app, a failed status read leaves the card absent; an unsupported design disables its switch.",
+    "steps": [
+      "Confirm that you are on Website Settings for the intended account.",
+      "Allow the screen to load on a working connection.",
+      "If the card appears, read its support message and remaining-update status.",
+      "If it stays absent, record your app version and the screen name for support."
+    ],
+    "success": "A supported, successfully loaded status produces the card. An unsupported design has an explicit explanation.",
+    "troubleshoot": "Do not change templates solely to make the switch active or assume missing UI has disabled automatic updates. Ask support to verify the account state. Do not send passwords, access tokens or a full account-data dump.",
+    "sources": [
+      "HomepageCopyCard"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 12,
+    "key": "content-sections",
+    "route": "/help/content-sections/",
+    "title": "Prepare a safe edit to template-driven homepage content",
+    "category": "Store content",
+    "intro": "Edit Content loads sections supplied for the current template. Available fields can differ, so use the labels actually shown rather than following a fixed layout copied from another design.",
+    "steps": [
+      "Open Website Settings and choose Edit Content.",
+      "Confirm the selected template and let its content load.",
+      "Record the current wording or image for the section you intend to change.",
+      "Edit only the supported field and use the screen's save action; then inspect the corresponding public section."
+    ],
+    "success": "The changed section should show your intended content after saving and reopening the editor.",
+    "troubleshoot": "Do not paste secret information, fabricated reviews or unlicensed images into public fields. If a section is absent, do not assume the template supports it. Stop after a save error and verify the current state before changing several more sections.",
+    "sources": [
+      "WebsiteEditScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 13,
+    "key": "delivery-rate",
+    "route": "/help/delivery-rate/",
+    "title": "Set a standard flat delivery charge",
+    "category": "Delivery",
+    "intro": "A standard flat rate is a checkout pricing setting, not a booking with a courier. Use a charge your business can support.",
+    "steps": [
+      "Open Website Settings, then Delivery.",
+      "Keep Offer delivery on if you intend to deliver.",
+      "Choose the flat pricing option and enter Standard rate (₹) as a non-negative value.",
+      "Choose Save Delivery Settings, then reopen the screen and inspect a checkout delivery quote without submitting an order."
+    ],
+    "success": "The saved standard rate is retained and the applicable checkout quote reflects the configuration.",
+    "troubleshoot": "Do not use a negative amount. If loading fails, do not save the displayed defaults over an unknown existing configuration. Record the error and retry loading first. A note saying free shipping does not override the pricing fields.",
+    "sources": [
+      "DeliverySettingsScreen",
+      "deliveryConfigService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 14,
+    "key": "free-shipping-rule",
+    "route": "/help/free-shipping-rule/",
+    "title": "Set or remove the free-shipping threshold",
+    "category": "Delivery",
+    "intro": "Free shipping above (₹) is a separate configuration from the standard rate. Check the actual checkout boundary before advertising the offer.",
+    "steps": [
+      "Open Delivery in Website Settings and review the current pricing strategy.",
+      "In Free shipping above (₹), enter the intended threshold, or leave it blank to disable that threshold rule.",
+      "Save Delivery Settings and reopen to confirm the stored value.",
+      "Inspect baskets below, at and above the threshold with the same delivery address before publishing promotional copy."
+    ],
+    "success": "The saved field matches your intended rule and the observed quote boundary is understood.",
+    "troubleshoot": "Do not infer whether an exact threshold qualifies solely from the word above. Test the current checkout and avoid promising a boundary you have not checked. Fast-tier pricing and other conditions should be checked separately rather than assumed free.",
+    "sources": [
+      "DeliverySettingsScreen",
+      "deliveryConfigService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 15,
+    "key": "fast-delivery",
+    "route": "/help/fast-delivery/",
+    "title": "Configure the optional fast delivery tier",
+    "category": "Delivery",
+    "intro": "Offer fast delivery adds a separate fee and timing inputs. It should describe a service your business can actually fulfil.",
+    "steps": [
+      "Open Delivery and review the standard option first.",
+      "Turn on Offer fast delivery.",
+      "Enter Fast rate (₹) and the relevant estimated fast-delivery window.",
+      "Save, reopen the settings, and inspect both delivery choices in a non-submitted checkout."
+    ],
+    "success": "The fast tier remains configured and the shopper can distinguish its price and estimate from standard delivery where offered.",
+    "troubleshoot": "Switching the tier off clears its active fast-rate and fast-window values in the submitted configuration. Do not describe the faster estimate as guaranteed arrival without an operational basis. Resolve save failures before promoting the option.",
+    "sources": [
+      "DeliverySettingsScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 16,
+    "key": "delivery-window",
+    "route": "/help/delivery-window/",
+    "title": "Write realistic delivery-window settings",
+    "category": "Delivery",
+    "intro": "The screen has Standard min and Standard max day fields, with fast-window fields when the fast tier is enabled. These are estimates, not proof of a courier commitment.",
+    "steps": [
+      "Check your preparation and transit process before choosing values.",
+      "Open Delivery and find Estimated delivery window (days).",
+      "Enter a coherent minimum and maximum for standard delivery and, if used, the fast tier.",
+      "Save and inspect the customer-facing explanation alongside any preparation information."
+    ],
+    "success": "The saved ranges match your intended estimate and do not contradict other storefront wording.",
+    "troubleshoot": "Do not enter a shorter maximum than minimum or copy a courier's best-case transit time while omitting your preparation work. If the app refuses the settings, correct the named fields; do not keep resubmitting unchanged values.",
+    "sources": [
+      "DeliverySettingsScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 17,
+    "key": "allowed-pincodes",
+    "route": "/help/allowed-pincodes/",
+    "title": "Limit delivery using serviceable pincodes",
+    "category": "Delivery",
+    "intro": "Serviceable pincodes (whitelist) accepts comma-separated six-digit entries. A blank list is described in the interface as not restricting delivery to a whitelist.",
+    "steps": [
+      "Confirm the locations your fulfilment process supports.",
+      "Open Delivery and find Pincode rules.",
+      "Enter complete six-digit pincodes in Serviceable pincodes (whitelist).",
+      "Save, reopen and confirm the retained list. Check one intended allowed address and one outside the list without submitting an order."
+    ],
+    "success": "The stored list contains the intended codes and the checkout behaves consistently for the checked addresses.",
+    "troubleshoot": "The app filters malformed entries while preparing the list. Reopen after saving so a mistyped code does not silently disappear unnoticed. Do not use postal ranges, city names or partial codes in this field.",
+    "sources": [
+      "DeliverySettingsScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 18,
+    "key": "blocked-pincodes",
+    "route": "/help/blocked-pincodes/",
+    "title": "Exclude delivery destinations with blocked pincodes",
+    "category": "Delivery",
+    "intro": "Blocked pincodes (blacklist) is the place for specific destinations you cannot serve. Review it together with any serviceable list.",
+    "steps": [
+      "Open Delivery and inspect both pincode lists.",
+      "Enter complete six-digit exclusions in Blocked pincodes (blacklist).",
+      "Avoid contradictory entries in both lists until their outcome has been checked.",
+      "Save and verify a blocked destination in checkout without creating an order."
+    ],
+    "success": "The exclusion is retained after reopening and the tested destination is not offered as a normal serviceable delivery.",
+    "troubleshoot": "Do not claim nationwide delivery from an empty whitelist without considering exclusions and real courier coverage. If a code disappears, check its format. If the quote disagrees with the saved list, report both states and do not change unrelated settings.",
+    "sources": [
+      "DeliverySettingsScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 19,
+    "key": "delivery-date",
+    "route": "/help/delivery-date/",
+    "title": "Show or hide the requested-delivery-date field",
+    "category": "Delivery",
+    "intro": "Ask for requested delivery date controls whether shoppers see a preferred-date picker. A requested date is not automatically an accepted delivery promise.",
+    "steps": [
+      "Open Delivery in Website Settings.",
+      "Find Ask for requested delivery date.",
+      "Choose the intended setting and save the delivery configuration.",
+      "Open a fresh checkout and confirm whether the date field is shown."
+    ],
+    "success": "The date picker appears when enabled and is hidden when disabled in the supported storefront flow.",
+    "troubleshoot": "Do not tell a customer that selecting a date guarantees it. Keep the setting distinct from delivery-window estimates and your actual acceptance process. If the field remains unchanged, verify the saved state and storefront address before reporting the issue.",
+    "sources": [
+      "DeliverySettingsScreen",
+      "deliveryConfigService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 20,
+    "key": "checkout-note",
+    "route": "/help/checkout-note/",
+    "title": "Add an accurate delivery-step checkout note",
+    "category": "Delivery",
+    "intro": "Checkout note is optional text shown on the delivery step. It explains a rule; it does not configure that rule.",
+    "steps": [
+      "Open Delivery and locate Checkout note.",
+      "Write a short factual message consistent with rates, thresholds and delivery estimates.",
+      "Choose Save Delivery Settings.",
+      "Inspect the delivery step and compare the note with the amount and options shown."
+    ],
+    "success": "The note is visible in the intended place and agrees with the actual quote.",
+    "troubleshoot": "Do not type a free-shipping promise while leaving a conflicting paid configuration. Avoid private contact details or customer-specific information in a public note. If a rule changes later, update both its setting and the explanatory text.",
+    "sources": [
+      "DeliverySettingsScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 21,
+    "key": "delivery-off",
+    "route": "/help/delivery-off/",
+    "title": "Turn off the delivery offer without confusing existing orders",
+    "category": "Delivery",
+    "intro": "Offer delivery can be turned off when you are not delivering. This changes storefront configuration, not the commitments on orders already received.",
+    "steps": [
+      "Review outstanding delivery commitments first.",
+      "Open Delivery and turn Offer delivery off.",
+      "Save Delivery Settings and reopen to confirm the value.",
+      "Inspect the shopper flow to understand the alternatives currently available; do not assume pickup is configured merely because delivery is off."
+    ],
+    "success": "The delivery offer is disabled in the saved settings and the observed shopper flow matches the intended operating mode.",
+    "troubleshoot": "Existing orders still need their own handling and communication. If the switch reverts, treat the update as unsuccessful until the saved state is confirmed. Do not cancel or refund orders through an unrelated settings change.",
+    "sources": [
+      "DeliverySettingsScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 22,
+    "key": "delivery-save-error",
+    "route": "/help/delivery-save-error/",
+    "title": "Recover safely from a delivery-settings load or save error",
+    "category": "Delivery",
+    "intro": "A load error and a save error require different checks. Saving a screen that failed to load can overwrite values you have not verified.",
+    "steps": [
+      "Note whether the message says Failed to load delivery config or Failed to save delivery config.",
+      "For a load failure, leave the values unchanged and retry opening the screen on a working connection.",
+      "For a save failure, reopen and compare the stored values before retrying.",
+      "Record the time, field labels and a redacted screenshot if the mismatch persists."
+    ],
+    "success": "You can distinguish the confirmed saved configuration from an unsaved local edit.",
+    "troubleshoot": "Do not repeatedly press Save or replace the configuration with defaults to clear an error. Keep customer addresses out of the support report. A successful-looking local field is not proof of a completed server update.",
+    "sources": [
+      "DeliverySettingsScreen",
+      "deliveryConfigService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 23,
+    "key": "direct-pay-upi",
+    "route": "/help/direct-pay-upi/",
+    "title": "Add a UPI ID for direct payment",
+    "category": "Direct payment",
+    "intro": "Direct Pay is intended for a store without a payment gateway. Customers see the configured details after placing an order; the setting does not confirm that money arrived.",
+    "steps": [
+      "Open Settings, then Direct Pay (UPI / Bank).",
+      "Read the ON FILE section before entering anything. Saving replaces the whole set, so prepare every method you want to retain.",
+      "Enter your own correct UPI ID and any bank details you also intend to keep.",
+      "Choose Save payout details, inspect the masked saved result and review whether Offer direct pay at checkout is enabled."
+    ],
+    "success": "The saved UPI ID is shown masked and the method is available in the saved configuration.",
+    "troubleshoot": "Leaving bank fields empty can remove a previously stored bank method. Never enter a UPI PIN, OTP or password. Confirm each actual customer transfer in your own bank or UPI app before accepting payment as received.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 24,
+    "key": "direct-pay-bank",
+    "route": "/help/direct-pay-bank/",
+    "title": "Add bank details for customer transfers",
+    "category": "Direct payment",
+    "intro": "Bank details entered here are shown to customers after an order in the supported direct-payment flow. Use an account you are authorised to receive business payments into.",
+    "steps": [
+      "Open Settings > Direct Pay (UPI / Bank).",
+      "Read the existing masked methods and prepare all methods you want to keep.",
+      "Fill Account holder name, Account number and IFSC accurately; re-enter the UPI ID too if you intend to retain that method.",
+      "Save once, then compare the masked account ending, holder name and IFSC with your own records."
+    ],
+    "success": "The ON FILE section identifies the saved bank method without revealing the complete account number back to the phone.",
+    "troubleshoot": "Do not enter card credentials, online-banking passwords or an OTP. A saved bank method is not a verified payment receipt. If you are unsure of an account number, stop and confirm it privately before saving rather than testing with a customer transfer.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 25,
+    "key": "replace-payout-methods",
+    "route": "/help/replace-payout-methods/",
+    "title": "Change payout details without accidentally removing another method",
+    "category": "Direct payment",
+    "intro": "Save payout details replaces the complete set. It is not a patch that changes only the visible field you edited.",
+    "steps": [
+      "Read every method currently shown under ON FILE.",
+      "Prepare the complete UPI and bank values for every method that should remain available.",
+      "Enter both sets if both must remain. Leave a set empty only if you intend to remove that method.",
+      "Save, reopen the screen and check the masked methods and enabled state."
+    ],
+    "success": "The saved list contains exactly the methods you intended to retain.",
+    "troubleshoot": "The app deliberately does not return the full saved account number, so you must obtain it from your own records rather than copy a masked value. Do not type bullets or a partially masked number into an input. If saving fails, verify the saved state before another attempt.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 26,
+    "key": "masked-payout-details",
+    "route": "/help/masked-payout-details/",
+    "title": "Why saved payout details are masked",
+    "category": "Direct payment",
+    "intro": "ON FILE shows a masked UPI ID or account number so the full saved value is not returned to the phone. Masking is intentional, not evidence that characters were lost.",
+    "steps": [
+      "Open Direct Pay and compare the visible account ending, holder name or UPI handle with your own records.",
+      "Do not attempt to expand or reconstruct the hidden characters.",
+      "If the value needs changing, enter the complete replacement from a trusted record.",
+      "Remember that saving replaces all methods; include every method you intend to retain."
+    ],
+    "success": "The masked display gives enough context to recognise the method while keeping the full number out of the app response.",
+    "troubleshoot": "Do not send complete payout details to a public help thread to ask whether masking is normal. If the visible ending is wrong, stop using the affected method and resolve the saved details privately before inviting more transfers.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 27,
+    "key": "enable-direct-pay",
+    "route": "/help/enable-direct-pay/",
+    "title": "Enable or pause the direct-payment offer",
+    "category": "Direct payment",
+    "intro": "Offer direct pay at checkout controls the saved direct-payment offer without retyping an account. It appears when the saved details are not incomplete.",
+    "steps": [
+      "Open Direct Pay (UPI / Bank).",
+      "Check that the saved masked methods are the intended ones.",
+      "Change Offer direct pay at checkout and wait for the request to finish.",
+      "Reopen the screen to verify the saved enabled state, then inspect the relevant shopper flow without placing an order."
+    ],
+    "success": "The switch matches the stored state. Existing order and bank records are not payment confirmations created by this switch.",
+    "troubleshoot": "If the control is missing, inspect whether the details are incomplete rather than repeatedly saving empty fields. Pausing an offer does not reverse transfers already made or remove the need to handle existing customers.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 28,
+    "key": "remove-payout-details",
+    "route": "/help/remove-payout-details/",
+    "title": "Remove stored direct-payment details",
+    "category": "Direct payment",
+    "intro": "Remove payout details is a deliberate removal action. The app warns that customers will no longer be offered these UPI or bank-transfer details; existing orders are unaffected.",
+    "steps": [
+      "Review whether any customers are already using previously supplied details.",
+      "Open Direct Pay and choose Remove payout details.",
+      "Read the confirmation. Choose Cancel if you are not certain; choose Remove only when intended.",
+      "Reopen the screen to confirm the resulting saved state."
+    ],
+    "success": "The old methods are no longer shown as stored direct-payment options.",
+    "troubleshoot": "Removal is not a bank-account closure, payment reversal, refund or order cancellation. Keep handling existing transfers and orders through their normal records. If removal fails, do not assume the methods disappeared; verify before communicating a change.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 29,
+    "key": "payout-storage-unavailable",
+    "route": "/help/payout-storage-unavailable/",
+    "title": "What to do when payout saving is switched off",
+    "category": "Direct payment",
+    "intro": "The app can show that secure storage is not configured and disable saving. This is a protection, not a request to send your bank details through another channel.",
+    "steps": [
+      "Read the message on Direct Pay and leave the disabled inputs unchanged.",
+      "Note the app version and the time the message appeared.",
+      "Contact support through the official route with the message, without account numbers or credentials.",
+      "Wait for confirmation that the feature is available, then reopen and use the normal screen."
+    ],
+    "success": "Saving becomes available only after the underlying issue is resolved; no workaround in the help page should bypass the protection.",
+    "troubleshoot": "Do not paste payout information into chat, a product description or checkout note as a substitute. Do not ask another person for server credentials. The merchant should not need to alter encryption settings to use this screen.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 30,
+    "key": "confirm-direct-receipt",
+    "route": "/help/confirm-direct-receipt/",
+    "title": "Confirm a direct transfer using your own payment record",
+    "category": "Direct payment",
+    "intro": "A shopper's transfer claim, reference or screenshot is not proof that your account received the money. The Direct Pay screen explicitly leaves receipt verification with the merchant.",
+    "steps": [
+      "Find the relevant order and the amount the customer says they paid.",
+      "Open your own trusted bank or UPI app independently, not a link supplied in a message.",
+      "Compare the actual credited transaction, amount and timing with the order.",
+      "If the receipt is uncertain, keep the payment unresolved and use the normal support or customer clarification process."
+    ],
+    "success": "You have a matching credited transaction in your own account before treating the transfer as received.",
+    "troubleshoot": "Do not ask the customer to pay again just because a screenshot is unclear. Do not share your PIN or approve a collect request to receive money. A duplicate or mismatched reference needs investigation, not an automatic acceptance or refund.",
+    "sources": [
+      "PayoutDetailsSettings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 31,
+    "key": "direct-pay-not-visible",
+    "route": "/help/direct-pay-not-visible/",
+    "title": "Investigate missing direct-payment instructions",
+    "category": "Direct payment",
+    "intro": "Direct-payment availability depends on saved methods, their enabled state and the supported checkout mode. The source describes it for stores without a gateway.",
+    "steps": [
+      "Open Direct Pay and confirm a complete method is stored.",
+      "Check Offer direct pay at checkout after reopening the screen.",
+      "Check whether the store is using a payment gateway rather than assuming both flows appear together.",
+      "Inspect the correct merchant checkout and report the mismatch without creating repeated orders."
+    ],
+    "success": "The configuration explains whether the direct-payment offer should be available in the observed flow.",
+    "troubleshoot": "Do not disable a working gateway merely to make another option appear. If settings are correct but the instructions are absent, provide the storefront URL, time and app version to support. Do not include customer addresses or full payout details.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 32,
+    "key": "payout-validation",
+    "route": "/help/payout-validation/",
+    "title": "Correct a payout-details validation error",
+    "category": "Direct payment",
+    "intro": "The app can place an error beside UPI ID, account holder name, account number or IFSC. Correct the named field using your own verified information.",
+    "steps": [
+      "Read the error beside the input and the Check the details message.",
+      "Compare the value privately with a trusted bank record.",
+      "Correct the full replacement payload, including other methods you intend to retain.",
+      "Save once and inspect the masked result after reopening."
+    ],
+    "success": "The field error clears and the stored methods match the intended configuration.",
+    "troubleshoot": "An uppercase IFSC presentation does not prove the branch or account is correct. Do not guess missing characters. If the error persists for a verified value, send the error wording and field label to support, not the complete sensitive value.",
+    "sources": [
+      "PayoutDetailsSettings",
+      "payoutDetailsService"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 33,
+    "key": "gateway-or-direct",
+    "route": "/help/gateway-or-direct/",
+    "title": "Distinguish Payment Gateway from Direct Pay settings",
+    "category": "Direct payment",
+    "intro": "Settings exposes Payment Gateway and Direct Pay (UPI / Bank) as different routes. Direct Pay gives customers merchant-supplied transfer details; it does not provide automatic receipt verification.",
+    "steps": [
+      "Identify which payment flow the store currently uses.",
+      "Open the relevant settings screen rather than assuming bank details configure a gateway.",
+      "Review the displayed eligibility and current state before changing anything.",
+      "Verify an intended configuration through a safe non-submitted checkout and the appropriate provider records."
+    ],
+    "success": "You understand which service handles payment and who verifies receipt.",
+    "troubleshoot": "Do not copy one provider's credentials into payout fields or promise gateway settlement from a direct transfer. Provider approval, fees and payout timing require current provider-specific evidence; this article does not establish eligibility or a universal rate.",
+    "sources": [
+      "Settings",
+      "PayoutDetailsSettings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 34,
+    "key": "payout-save-uncertain",
+    "route": "/help/payout-save-uncertain/",
+    "title": "Check whether a payout change actually saved",
+    "category": "Direct payment",
+    "intro": "A connection problem can leave you unsure whether an update completed. Reopen the saved view before sending a second replacement payload.",
+    "steps": [
+      "Wait for the pending action to finish rather than tapping repeatedly.",
+      "Reopen Direct Pay and read ON FILE.",
+      "Compare the masked methods with the complete configuration you intended to save.",
+      "Only retry after you know the current state and can provide every method that should remain."
+    ],
+    "success": "The saved state is identified independently of the unsaved input fields.",
+    "troubleshoot": "Successful saving clears the entry fields in this app, so blank inputs afterwards do not by themselves mean the stored details were deleted. Use ON FILE. Never submit another blank replacement merely to test the screen.",
+    "sources": [
+      "PayoutDetailsSettings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 35,
+    "key": "sign-in",
+    "route": "/help/sign-in/",
+    "title": "Sign in with the email registered to your merchant account",
+    "category": "Account access",
+    "intro": "The merchant app uses Email and Password. A saved-account shortcut helps recall an email; it does not replace the need for valid account access.",
+    "steps": [
+      "Open the app's sign-in screen.",
+      "Enter the email belonging to the intended merchant account and its password.",
+      "Choose Sign In once and wait for the result.",
+      "Confirm the correct merchant context after the app opens."
+    ],
+    "success": "The app accepts the login and opens the account rather than merely clearing a field.",
+    "troubleshoot": "Correct a missing or malformed email before retrying. An incorrect-password message is different from a network failure. Do not create another account simply to bypass an error, and never send your password or login token to support.",
+    "sources": [
+      "LoginScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 36,
+    "key": "wrong-login-email",
+    "route": "/help/wrong-login-email/",
+    "title": "Resolve a sign-in email error",
+    "category": "Account access",
+    "intro": "Please enter a valid email address is a format check. No account with this email is an account lookup response. Treat them as different problems.",
+    "steps": [
+      "Read the exact message beside Email.",
+      "Remove accidental leading or trailing spaces and check the address you registered.",
+      "If using a saved account, verify that it is the intended merchant email.",
+      "Try the corrected address once; use the recovery route for a password problem instead."
+    ],
+    "success": "The email error is resolved or you have a clear account-lookup issue to report.",
+    "troubleshoot": "Do not guess through other people's email addresses. If you no longer have access to the registered address, contact official support for the supported recovery process. Do not send a list of passwords or screenshots containing them.",
+    "sources": [
+      "LoginScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 37,
+    "key": "login-network-error",
+    "route": "/help/login-network-error/",
+    "title": "Handle a sign-in connection failure safely",
+    "category": "Account access",
+    "intro": "A general sign-in error does not prove that your password is wrong. The app distinguishes some credential errors from connection or server failures.",
+    "steps": [
+      "Record the exact message and time.",
+      "Check whether your device has a working connection without following links from an unsolicited message.",
+      "Retry once when the connection is stable.",
+      "If the error persists, report your app version and the message through the official support route."
+    ],
+    "success": "You either sign in normally or have a reproducible error report without changing unrelated account data.",
+    "troubleshoot": "Avoid repeated password resets, new accounts or clearing all app storage as the first response. Do not include passwords, tokens or one-time codes in the report. This procedure does not bypass account verification.",
+    "sources": [
+      "LoginScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 38,
+    "key": "sign-out",
+    "route": "/help/sign-out/",
+    "title": "Sign out of the merchant app",
+    "category": "Account access",
+    "intro": "Logout is available at the bottom of Settings. Use it when you intentionally want to end access on that app session.",
+    "steps": [
+      "Finish or record any unsaved edits.",
+      "Open Settings and choose Logout.",
+      "Wait for the app to return to Login.",
+      "If the app reports Failed to logout, check the current session rather than assuming access ended."
+    ],
+    "success": "The app returns to its login screen after the logout service succeeds.",
+    "troubleshoot": "Do not treat a failed logout as a completed security action. On a shared or lost device, follow the official account-security support process as needed. This guide does not claim that logging out one session revokes every other device.",
+    "sources": [
+      "Settings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 39,
+    "key": "app-version",
+    "route": "/help/app-version/",
+    "title": "Find the app version before reporting a problem",
+    "category": "Account access",
+    "intro": "The inspected Settings screen includes a version footer so support can distinguish the running app and update bundle. Version context matters when labels differ from a help draft.",
+    "steps": [
+      "Open Settings.",
+      "Scroll to the version information at the bottom.",
+      "Record the displayed app and update information exactly as shown.",
+      "Include it with the screen name, time and a short description of the problem."
+    ],
+    "success": "Your support report identifies the interface version instead of saying only that the app is the latest.",
+    "troubleshoot": "Do not send a full account dump or notification token to prove the version. A redacted screenshot of the footer is enough where appropriate. Source-checked help may describe a newer or different version than the one on your device.",
+    "sources": [
+      "Settings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 40,
+    "key": "external-help-link",
+    "route": "/help/external-help-link/",
+    "title": "Open an official help link when the app cannot launch a browser",
+    "category": "Account access",
+    "intro": "Settings opens public help and policy destinations in the device browser. A managed device or missing browser handler can prevent that handoff.",
+    "steps": [
+      "Read the Could not open the page message.",
+      "Use the official www.obizee.com address shown by the app in a trusted browser.",
+      "Keep the full path rather than searching for a lookalike support site.",
+      "If browser access is restricted by your organisation, ask its authorised administrator rather than disabling protections."
+    ],
+    "success": "The intended official page opens, or you have identified a device-policy limitation.",
+    "troubleshoot": "Do not install an unknown browser or remote-access app from an unsolicited support message. The www hostname and full path matter; copying only the homepage may not reach the requested help or policy content.",
+    "sources": [
+      "Settings",
+      "links"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 41,
+    "key": "support-report",
+    "route": "/help/support-report/",
+    "title": "Prepare a useful support report without exposing private data",
+    "category": "Support",
+    "intro": "A useful report gives support a reproducible symptom and its context. More private data does not make a report better.",
+    "steps": [
+      "Write the screen name, exact error, approximate time and app version.",
+      "Describe the last action and whether a change appeared to save.",
+      "Add a cropped screenshot with customer details, account values and credentials removed.",
+      "Use the official contact route and retain any case reference returned."
+    ],
+    "success": "The report lets support identify the affected workflow and ask for only the necessary next evidence.",
+    "troubleshoot": "Never send passwords, OTPs, PINs, access tokens or complete bank details. Do not post customer order screenshots publicly. A contact click is not proof that a case was received; follow the channel's actual acknowledgement.",
+    "sources": [
+      "Settings",
+      "links"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 42,
+    "key": "inactive-controls",
+    "route": "/help/inactive-controls/",
+    "title": "What to do when a visible setting has no action",
+    "category": "Support",
+    "intro": "A label on a screen is not proof of a working feature. In the inspected source, Notifications has no settings action and Create Coupon has no save handler. These are not documented here as completed setup workflows.",
+    "steps": [
+      "Record the exact screen and control that appears inactive.",
+      "Check whether the app shows a lock, pending request or error first.",
+      "Do not repeat taps expecting an unseen order, coupon or configuration to be created.",
+      "Report the control and app version, and ask whether the feature is supported in your current release."
+    ],
+    "success": "You distinguish a disabled or unfinished control from a successful hidden operation.",
+    "troubleshoot": "Do not advertise a coupon as active solely because its name appears in the form. Do not assume notification preferences changed after tapping an inert row. This draft observation is source-version-specific and should be rechecked when the app changes.",
+    "sources": [
+      "Settings",
+      "AddCouponScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 43,
+    "key": "first-product",
+    "route": "/help/first-product/",
+    "title": "Prepare and save a first physical product",
+    "category": "Products",
+    "intro": "The inspected product form requires an image, category, name, description and a valid price for a product without variants. Prepare accurate public information before opening it.",
+    "steps": [
+      "Open the app's Add Product screen from your product workflow.",
+      "Add at least one suitable product image and choose Product Category.",
+      "Enter Product Name, Product Price and Product Description. Complete any enabled option combinations.",
+      "Submit once and wait for Item added successfully, then find and inspect the saved product."
+    ],
+    "success": "The product exists once in the catalogue with the intended category, image and price.",
+    "troubleshoot": "If the operation fails, check whether the item already exists before creating another copy. Minimum text lengths are validation rules, not a reason to add meaningless filler. Do not use this guide to invent tax classifications or service eligibility.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 44,
+    "key": "product-name-error",
+    "route": "/help/product-name-error/",
+    "title": "Correct a product-name validation error",
+    "category": "Products",
+    "intro": "The product-name input accepts up to 100 characters and the inspected validation requires at least two non-empty characters.",
+    "steps": [
+      "Read the error beside Product Name.",
+      "Enter a clear name identifying the actual item, not only spaces or a single character.",
+      "Check that useful size or pack context fits without relying on a truncated ending.",
+      "Complete other required fields, save and inspect the resulting product title."
+    ],
+    "success": "The name validation clears and the saved title identifies the intended product.",
+    "troubleshoot": "Do not repeatedly rename an existing item to force a save when another field is failing. If the name is accepted but the overall operation fails, record the actual error. A minimum length does not guarantee a useful customer-facing name.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 45,
+    "key": "product-description-error",
+    "route": "/help/product-description-error/",
+    "title": "Complete the required product description",
+    "category": "Products",
+    "intro": "Product Description must contain at least ten non-empty characters in the inspected form. Use that field to explain the item accurately, not to satisfy a character counter with repeated words.",
+    "steps": [
+      "Describe what is included, relevant dimensions and any important limits.",
+      "Enter the description in the product form.",
+      "Read any validation message and correct it before submission.",
+      "Save once, reopen the product and check the public wording."
+    ],
+    "success": "The saved description contains the intended information and the validation message is gone.",
+    "troubleshoot": "Do not add unsupported material, safety or performance claims. If several products are similar, check that the description belongs to this exact one. A saved description is public content, so exclude customer messages and private order details.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 46,
+    "key": "product-price",
+    "route": "/help/product-price/",
+    "title": "Enter a non-variant product price",
+    "category": "Products",
+    "intro": "When variants are off, the inspected form requires a numeric Product Price greater than zero. A price field should reflect the amount you intend to charge, not a deposit explanation hidden elsewhere.",
+    "steps": [
+      "Confirm that the product does not use variants.",
+      "Enter the intended numeric price in Product Price.",
+      "Review any sale, bulk or other settings separately rather than assuming they stack.",
+      "Save and inspect the product and a non-submitted checkout amount."
+    ],
+    "success": "The form accepts the price and the observed shopper amount is understood.",
+    "troubleshoot": "If the amount differs, do not accept a real order to test it. Record the product and the displayed amounts for investigation. This source check does not establish tax treatment, currency conversion or every pricing-precedence rule.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 47,
+    "key": "product-image-required",
+    "route": "/help/product-image-required/",
+    "title": "Resolve the missing-product-image message",
+    "category": "Products",
+    "intro": "The form checks that at least one uploaded product image is available before submission. Selecting a file is not the same as completing its upload.",
+    "steps": [
+      "Choose Add Product Images and select a suitable photograph from the gallery.",
+      "Wait for upload activity to finish.",
+      "Confirm an image appears in the form rather than only a pending indicator.",
+      "Submit after the image and other required fields are ready."
+    ],
+    "success": "A valid image is present and Please add at least one product image no longer blocks the form.",
+    "troubleshoot": "The inspected picker rejects GIFs. If no valid image uploaded, check the reported error and use a supported still photograph. Do not repeatedly create new products to troubleshoot one failed image.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 48,
+    "key": "product-image-upload",
+    "route": "/help/product-image-upload/",
+    "title": "Handle an interrupted product-image upload",
+    "category": "Products",
+    "intro": "An upload failure can occur before product saving. Resolve the image state before deciding whether the product operation itself failed.",
+    "steps": [
+      "Read whether the message concerns opening the picker, selecting images or uploading.",
+      "Check that a valid still image was selected and the app has the intended gallery access.",
+      "Wait for the current upload to settle, then inspect the image list.",
+      "Retry the affected image only when its state is clear; submit the product after required content is present."
+    ],
+    "success": "The image is visible in the form and no upload remains pending.",
+    "troubleshoot": "Do not upload a customer screenshot containing addresses or payment details. If a valid file repeatedly fails, provide the file type, approximate size, app version and error wording to support, not unrelated private files.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 49,
+    "key": "select-product-category",
+    "route": "/help/select-product-category/",
+    "title": "Choose the correct category while adding a product",
+    "category": "Products",
+    "intro": "Product Category is required. Entering Add Product from a newly created category can preselect it, so check the selection rather than assuming it is blank.",
+    "steps": [
+      "Open Product Category in the form.",
+      "Use Search categories to find the intended category.",
+      "Choose the category and confirm its name beside the field.",
+      "Save the product and verify its category in the catalogue."
+    ],
+    "success": "The selected category is retained with the saved product.",
+    "troubleshoot": "No categories found can reflect a search term rather than an empty catalogue. Clear the search first. If the category truly does not exist, create it through the category workflow instead of assigning an unrelated category just to pass validation.",
+    "sources": [
+      "AddProductScreen",
+      "CategoryListingScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 50,
+    "key": "create-category",
+    "route": "/help/create-category/",
+    "title": "Create a product category with a useful description",
+    "category": "Products",
+    "intro": "The category form requires a name of at least two characters and a description of at least ten. A category should describe a real grouping, not a temporary workaround for one failed product save.",
+    "steps": [
+      "Open Categories and use the add control.",
+      "Enter the category name and description.",
+      "Submit and wait for Category added successfully.",
+      "Choose Add Product to continue with the new category preselected, or Done to return."
+    ],
+    "success": "The new category appears in the category list and can be selected for a product.",
+    "troubleshoot": "If saving fails, search the refreshed list before creating a duplicate. Do not use a description unrelated to the grouping merely to reach the minimum length. Category-image upload is not established by this particular form.",
+    "sources": [
+      "AddProductCategoryScreen",
+      "CategoryListingScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 51,
+    "key": "edit-category",
+    "route": "/help/edit-category/",
+    "title": "Edit an existing category instead of duplicating it",
+    "category": "Products",
+    "intro": "The category editor supports updating the selected category's title and description. Use the existing category when correcting its wording.",
+    "steps": [
+      "Find the category in Categories.",
+      "Open its edit action and confirm the existing name and description.",
+      "Make the intended correction and save.",
+      "Wait for Category updated successfully, then refresh the list and inspect it."
+    ],
+    "success": "The existing category shows the revised wording rather than a second near-identical entry.",
+    "troubleshoot": "Check which category you opened before saving. Do not assume renaming creates redirects or changes every marketing link automatically. If the update is uncertain, reload the existing record instead of creating another category.",
+    "sources": [
+      "AddProductCategoryScreen",
+      "CategoryListingScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 52,
+    "key": "search-categories",
+    "route": "/help/search-categories/",
+    "title": "Find a category when the category list looks empty",
+    "category": "Products",
+    "intro": "The category list searches names and descriptions. No matching categories found is different from No categories added yet.",
+    "steps": [
+      "Open Categories and read the empty-state wording.",
+      "Clear Search categories to remove an accidental filter.",
+      "Refresh the list on a working connection.",
+      "Search again using a short distinctive part of the category name."
+    ],
+    "success": "The expected category appears or the refreshed list confirms that it is absent.",
+    "troubleshoot": "A failed network load should not be treated as proof that every category was deleted. Do not recreate an entire catalogue from an empty-looking screen. Report a persistent load problem with the app version and time.",
+    "sources": [
+      "CategoryListingScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 53,
+    "key": "variant-names",
+    "route": "/help/variant-names/",
+    "title": "Complete product option names and values",
+    "category": "Products",
+    "intro": "When variants are enabled, the form requires at least one option such as Size or Color, non-empty option values and generated combinations.",
+    "steps": [
+      "Enable the intended variant workflow in the product form.",
+      "Name each option and add the values customers can actually select.",
+      "Check the resulting combinations rather than assuming every combination is available.",
+      "Complete each combination's price and any intended stock value before saving."
+    ],
+    "success": "The form no longer reports missing option names or values and the saved product presents the intended choices.",
+    "troubleshoot": "Do not create meaningless values to bypass Variant Errors. A colour name should describe the item, not an internal packing note. Check the customer selection and order summary before relying on a newly configured variant product.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 54,
+    "key": "variant-prices",
+    "route": "/help/variant-prices/",
+    "title": "Review every variant combination price",
+    "category": "Products",
+    "intro": "The inspected form validates a price on every variant combination. Its base-price helper and the submitted combination values should not be interpreted as proof that the base is added to each variant at checkout.",
+    "steps": [
+      "List the combinations you intend to sell.",
+      "Enter and inspect each combination's price in the variant editor.",
+      "Save the product and select representative combinations on the storefront.",
+      "Compare the displayed and checkout amounts without placing a real order."
+    ],
+    "success": "Each intended selection has a known observed price and no combination is left unintentionally at zero.",
+    "troubleshoot": "If the price is unexpected, stop promotion of the affected item and report the selection and amounts. Do not infer pricing precedence from a short helper label. This guide does not certify variant-plus-tier behaviour.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 55,
+    "key": "variant-stock",
+    "route": "/help/variant-stock/",
+    "title": "Do not confuse blank variant stock with zero stock",
+    "category": "Products",
+    "intro": "In the inspected save payload, blank combination stock is omitted while an entered zero is sent as zero. These are not equivalent states.",
+    "steps": [
+      "Count the stock for each intended combination.",
+      "Enter whole non-negative quantities where you intend to provide stock values.",
+      "Use zero deliberately for a combination with no units, rather than leaving it blank as shorthand.",
+      "Save and inspect the resulting availability through the supported inventory and storefront views."
+    ],
+    "success": "The intended quantities are stored and the observed availability matches the configuration.",
+    "troubleshoot": "A blank quantity is not a safe way to mark a variant sold out. Source comments describe legacy untracked behaviour for omitted quantities; do not rely on it as an inventory policy. Investigate inconsistent availability before accepting more orders.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 56,
+    "key": "variant-validation",
+    "route": "/help/variant-validation/",
+    "title": "Resolve Variant Errors without deleting the product",
+    "category": "Products",
+    "intro": "Variant Errors indicates that option names, values, combination prices or stock entries are incomplete or invalid. It does not mean the entire product must be recreated.",
+    "steps": [
+      "Check every option has a name and at least one named value.",
+      "Check that combinations exist and each price is numeric and non-negative.",
+      "Check entered stock values are whole non-negative numbers.",
+      "Correct the fields and save once, then reopen the existing product."
+    ],
+    "success": "The variant validation passes with the intended combinations intact.",
+    "troubleshoot": "Do not disable variants merely to dismiss the error if customers need those choices. Record the affected combination for support if a complete configuration still fails. Avoid submitting a duplicate product as a diagnostic step.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 57,
+    "key": "bulk-tier-shape",
+    "route": "/help/bulk-tier-shape/",
+    "title": "Enter bulk-pricing tiers without overlapping ranges",
+    "category": "Products",
+    "intro": "The form validates bulk-tier ranges: minimum quantity is an integer of at least two, optional maximum is no lower than minimum, and tiers are ordered without overlap.",
+    "steps": [
+      "Prepare the quantity ranges and per-unit prices on paper first.",
+      "Enter the tiers in ascending minimum-quantity order.",
+      "Leave a maximum open-ended only on the final tier.",
+      "Save and inspect prices at the tier boundaries in a non-submitted shopper flow."
+    ],
+    "success": "The range validation passes and the applicable observed prices match the intended boundaries.",
+    "troubleshoot": "Stored tier data on a variant product does not establish that tiers apply to its variant prices. Do not advertise that combination without checking the real behaviour. A label such as Pack is descriptive, not a replacement for the numeric range.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 58,
+    "key": "product-tax-fields",
+    "route": "/help/product-tax-fields/",
+    "title": "Use product tax fields only with verified tax information",
+    "category": "Products",
+    "intro": "HSN / SAC and GST rate are optional fields in the inspected product form. The screen tells merchants they are responsible for the rate; this help draft does not choose a classification for you.",
+    "steps": [
+      "Obtain the correct applicable information from your business records or qualified adviser.",
+      "Open the product's Tax section.",
+      "Enter the verified values, or understand the documented default behaviour before leaving them blank.",
+      "Save and inspect an appropriate non-live example through your accounting process."
+    ],
+    "success": "The product retains the intended fields; correctness of the classification requires separate tax verification.",
+    "troubleshoot": "Do not copy example codes or a rate from another product just because the app accepts it. A technical save is not tax advice or compliance approval. Changing a product should not be used as a way to rewrite an already issued record.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 59,
+    "key": "product-save-uncertain",
+    "route": "/help/product-save-uncertain/",
+    "title": "Check whether a product save completed before retrying",
+    "category": "Products",
+    "intro": "The form distinguishes Item added successfully from Product updated successfully. A timeout or general error needs a saved-record check before another creation attempt.",
+    "steps": [
+      "Note whether you were adding or editing.",
+      "Return to the product list and refresh it.",
+      "Search for the item and inspect its current fields.",
+      "Retry only the missing operation after confirming the saved state."
+    ],
+    "success": "You know whether the intended item exists and whether the change is present.",
+    "troubleshoot": "Repeatedly pressing submit can make diagnosis harder. Do not delete an existing product merely because one field looks stale. Preserve the error wording and time, and avoid including private order information in a catalogue support report.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 60,
+    "key": "service-product-fields",
+    "route": "/help/service-product-fields/",
+    "title": "Understand optional service-product details without assuming a booking guarantee",
+    "category": "Products",
+    "intro": "The inspected product form can carry service duration and cancellation-policy information. These fields describe an offer; they do not by themselves reserve a staff member or guarantee an appointment.",
+    "steps": [
+      "Choose the correct product type in the supported form.",
+      "If entering duration, use a valid value of at least one and the intended unit.",
+      "Write an accurate cancellation explanation only if it reflects your actual terms.",
+      "Save and inspect how the offer is presented before advertising booking availability."
+    ],
+    "success": "The optional service information is retained with the product where supported.",
+    "troubleshoot": "Do not assume that creating a service product enables every payment, scheduling or fulfilment integration. If availability or booking behaviour is unverified, describe the offer as requiring confirmation and obtain product-specific support before taking commitments.",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 61,
+    "key": "enable-stock",
+    "route": "/help/enable-stock/",
+    "title": "Start inventory tracking with a counted opening balance",
+    "category": "Inventory",
+    "intro": "Enable tracking only after physically counting the sellable units of the product. An opening balance is not a purchase order or a forecast.",
+    "steps": [
+      "Open Inventory Management, find the product and choose its enable-tracking action.",
+      "Enter the current counted stock and the minimum stock level as whole numbers.",
+      "Keep the minimum at or below the opening balance; the form refuses a higher minimum.",
+      "Submit once, wait for completion and refresh the product row."
+    ],
+    "success": "The product should appear as tracked with the saved stock values. Record when the count was taken so later movements can be reconciled.",
+    "troubleshoot": "Both fields are required, including an explicit zero. Do not enter decimals or use a guessed stock balance just to dismiss validation. If the request times out, inspect the refreshed state before repeating it.",
+    "sources": [
+      "InventoryManagement",
+      "EnableTrackingModal"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 62,
+    "key": "adjust-stock",
+    "route": "/help/adjust-stock/",
+    "title": "Correct a stock count with a reason attached",
+    "category": "Inventory",
+    "intro": "A stock adjustment changes the recorded quantity. Use it for a verified receipt, damage or count correction, not to conceal an unresolved order discrepancy.",
+    "steps": [
+      "Open the adjustment action for the correct product and inspect Current Stock.",
+      "Choose Add Stock or Subtract Stock and enter a positive whole-number quantity.",
+      "Write a specific reason in Notes, such as counted damage or an identified receipt reference.",
+      "Check the resulting quantity shown by the form and submit once."
+    ],
+    "success": "The refreshed stock should reflect the signed adjustment. The reason makes the event understandable when you review history.",
+    "troubleshoot": "The form refuses an empty reason, a non-positive amount or a result below zero. After an uncertain response, inspect history before repeating the adjustment; two accepted submissions would not be one correction.",
+    "sources": [
+      "StockAdjustmentModal",
+      "InventoryManagement"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 63,
+    "key": "disable-stock",
+    "route": "/help/disable-stock/",
+    "title": "Understand the consequence before disabling stock tracking",
+    "category": "Inventory",
+    "intro": "Disabling tracking is not a way to mark a product sold out. It changes whether this inventory workflow tracks the product.",
+    "steps": [
+      "Open Inventory Management and locate the exact product.",
+      "Record its current balance and any discrepancy you still need to investigate.",
+      "Choose the disable action and read the confirmation before accepting.",
+      "Refresh and check that the product is now shown as untracked."
+    ],
+    "success": "The tracking state changes after the service confirms. This action is separate from deleting the product or cancelling its orders.",
+    "troubleshoot": "If your aim is to stop selling an unavailable item, do not assume disabling tracking achieves that. Use the relevant product availability controls and check the storefront. Preserve stock evidence before changing how it is tracked.",
+    "sources": [
+      "InventoryManagement"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 64,
+    "key": "find-inventory",
+    "route": "/help/find-inventory/",
+    "title": "Find a product without mistaking a partial list for the whole catalogue",
+    "category": "Inventory",
+    "intro": "The inspected Inventory Management screen requests an initial set of up to 100 products and searches the loaded list. A missing search result is therefore not proof a product does not exist.",
+    "steps": [
+      "Open Inventory Management and refresh the list.",
+      "Search using a distinctive part of the product title.",
+      "Clear the search and any low-stock filter to see whether the row was hidden.",
+      "If a larger catalogue still has no match, check the product elsewhere in the app and report the missing inventory entry."
+    ],
+    "success": "A matching loaded row can be opened for the intended inventory task. Confirm the product identity before adjusting anything.",
+    "troubleshoot": "Do not recreate a product to solve a missing local search result. Include the product reference, catalogue size and applied filters in a support report; avoid a full customer or inventory export.",
+    "sources": [
+      "InventoryManagement"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 65,
+    "key": "stock-history",
+    "route": "/help/stock-history/",
+    "title": "Read stock history before making another correction",
+    "category": "Inventory",
+    "intro": "History is the place to investigate which movement changed a product's quantity. Read the event and its context before deciding whether another adjustment is needed.",
+    "steps": [
+      "Open the stock-transaction history for the intended product.",
+      "Check the product name and refresh the screen.",
+      "Use the available purchase, sale, adjustment or return filter to narrow the events.",
+      "Compare the time, quantity and available notes with your own receipt or order reference."
+    ],
+    "success": "You should be able to distinguish the movement you are investigating from unrelated events. A filter changes the view, not the stock itself.",
+    "troubleshoot": "If an expected event is missing, remove the filter and refresh before concluding that the action failed. Do not repeat a stock-changing action merely because a filtered history looks empty.",
+    "sources": [
+      "StockTransactionHistory"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 66,
+    "key": "low-stock-alerts",
+    "route": "/help/low-stock-alerts/",
+    "title": "Review low-stock alerts without treating them as purchase orders",
+    "category": "Inventory",
+    "intro": "The alerts screen helps you find products needing attention. It does not place a replenishment order or decide how much you should buy.",
+    "steps": [
+      "Open Low Stock Alerts and refresh the results.",
+      "Use All, Critical or Warning to focus the list.",
+      "Open the affected product and compare its recorded balance with a physical count and outstanding commitments.",
+      "Decide whether to replenish, correct a count or reduce customer promises before making any change."
+    ],
+    "success": "You have a verified list of items to investigate, rather than an assumption that every alert requires the same action.",
+    "troubleshoot": "A threshold is an operational setting, not a demand forecast. Check supplier lead time and existing incoming stock separately. If the list seems wrong, record the product reference and threshold rather than editing stock solely to remove the alert.",
+    "sources": [
+      "LowStockAlerts"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 67,
+    "key": "stock-timeout",
+    "route": "/help/stock-timeout/",
+    "title": "Recover from an uncertain stock-adjustment response",
+    "category": "Inventory",
+    "intro": "A connection error does not establish whether the server applied an adjustment. Repeating it immediately can make reconciliation harder.",
+    "steps": [
+      "Keep the product name, quantity, direction and note from the attempted change.",
+      "Reopen or refresh its inventory row when the connection is stable.",
+      "Review transaction history for the same movement and time.",
+      "Retry only when you have established that the intended movement was not recorded; otherwise investigate the difference."
+    ],
+    "success": "One intended movement should be represented once. The refreshed balance and history should explain each other.",
+    "troubleshoot": "Do not make an equal-and-opposite adjustment as an automatic workaround: the first request may still have succeeded. If the result remains unclear, stop stock edits on that item and send a redacted support report with the time and product reference.",
+    "sources": [
+      "StockAdjustmentModal",
+      "StockTransactionHistory"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 68,
+    "key": "variant-stock-count",
+    "route": "/help/variant-stock-count/",
+    "title": "Keep variant stock separate from a product-wide count",
+    "category": "Inventory",
+    "intro": "A size or colour combination can have its own quantity. A product total cannot tell you whether the specific option promised to a customer is available.",
+    "steps": [
+      "Identify the exact variant before editing its quantity.",
+      "Where the adjustment dialog shows a variant subtitle, check that subtitle as well as the product name.",
+      "Use whole sellable units and include the variant reference in the adjustment note.",
+      "Refresh the variant view and compare it with the counted items."
+    ],
+    "success": "The change should belong to the intended variant, not another size or the parent product.",
+    "troubleshoot": "The adjustment component can display variant context, but routing to that variant depends on its caller. If your screen shows no variant context, do not assume a product-level action changes the desired option. Ask for clarification rather than compensating with unrelated stock changes.",
+    "sources": [
+      "StockAdjustmentModal",
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 69,
+    "key": "order-tabs",
+    "route": "/help/order-tabs/",
+    "title": "Find items, money and delivery in the order details screen",
+    "category": "Orders",
+    "intro": "The current order-details layout separates information into tabs. Service orders may show Bookings where a physical order uses a delivery view.",
+    "steps": [
+      "Open the order and confirm its customer and reference.",
+      "Use the items tab to inspect quantities and selected products.",
+      "Open Money for the recorded total, paid amount, due balance and bill controls.",
+      "Use Delivery or Bookings for the fulfilment information appropriate to that order."
+    ],
+    "success": "You are inspecting the right part of the order without changing its state. The item badge reflects units, not necessarily a count of unique products.",
+    "troubleshoot": "If the screen differs, note the app version and order type before assuming information has disappeared. A service booking and a parcel shipment are different workflows; do not create a shipment just to complete a service record.",
+    "sources": [
+      "OrderTabBar",
+      "OrderDerive"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 70,
+    "key": "order-balance",
+    "route": "/help/order-balance/",
+    "title": "Interpret Total, Paid and Due without assuming a bank confirmation",
+    "category": "Orders",
+    "intro": "The Money tab displays amounts recorded against the order. It is not independent evidence that funds have arrived in your bank account.",
+    "steps": [
+      "Open Money and read the Items, Delivery charge, Discount and Total rows.",
+      "Compare Paid and Due with your actual payment record.",
+      "For gateway orders, read the separate payment summary when present.",
+      "Investigate any disagreement before using Clear due amount."
+    ],
+    "success": "You can explain the recorded balance and its components. Keep the order reference with the payment reconciliation.",
+    "troubleshoot": "Older records can be displayed as settled when a partial-payment field is absent. Do not use that display alone to confirm receipt. Check the payment provider or bank through your normal authorised process, without sending passwords or complete statements to support.",
+    "sources": [
+      "MoneyTab",
+      "OrderDerive"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 71,
+    "key": "clear-order-due",
+    "route": "/help/clear-order-due/",
+    "title": "Record a received balance using Clear due amount",
+    "category": "Orders",
+    "intro": "Clear due amount records that the outstanding money has been received. It does not charge the customer or collect a payment.",
+    "steps": [
+      "Independently confirm the money has arrived for this exact order.",
+      "Open the order's Money tab and compare the outstanding amount.",
+      "Choose Clear due amount and read the confirmation showing the amount to be marked received.",
+      "Confirm only if that amount is correct, then wait for the refreshed order."
+    ],
+    "success": "The order's recorded due balance should update after a successful response. Your actual payment receipt remains the separate evidence of collection.",
+    "troubleshoot": "If the request fails or times out, reopen Money before repeating it. Do not clear a balance because a customer sent an unverified screenshot. If only part was received, do not mark the full displayed due as collected.",
+    "sources": [
+      "OrderDetails",
+      "MoneyTab"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 72,
+    "key": "generate-order-bill",
+    "route": "/help/generate-order-bill/",
+    "title": "Generate an order bill from the order record",
+    "category": "Bills",
+    "intro": "Bills are generated from Order Details, not from the Bills & Payments list. Check the order data before creating a document for a customer.",
+    "steps": [
+      "Open the correct order and its Money tab.",
+      "Review the customer, items and amounts that will support the bill.",
+      "If the Bill section says Not generated yet, choose Generate bill.",
+      "Wait for the document number and download option, or the Already generated response."
+    ],
+    "success": "The Bill section should identify the existing document and offer Download PDF. Reopening it is preferable to creating unrelated replacement records.",
+    "troubleshoot": "The interface states that the server chooses Tax Invoice or Bill of Supply from the GSTIN configuration. This guide is not tax advice: verify your legal details and document requirements with an appropriate adviser. Report generation errors rather than editing an order solely to force a document.",
+    "sources": [
+      "OrderDetails",
+      "MoneyTab"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 73,
+    "key": "download-order-bill",
+    "route": "/help/download-order-bill/",
+    "title": "Download an already generated bill",
+    "category": "Bills",
+    "intro": "Download uses the existing bill reference. A PDF download is separate from creating or collecting an order payment.",
+    "steps": [
+      "Open the order, choose Money and find the Bill section.",
+      "Check the document number and choose Download PDF.",
+      "On iOS, use the share sheet offered by the app. On Android, check the downloaded-file message and Downloads location.",
+      "Open the PDF and confirm the order and recipient before forwarding it."
+    ],
+    "success": "You have a readable local document with the expected number. Keep customer documents private and share only with the intended recipient.",
+    "troubleshoot": "If downloading fails, check the connection and available storage, then retry the download rather than generating another bill. Do not publish a customer PDF in a support ticket; provide its document number and a redacted error instead.",
+    "sources": [
+      "OrderDetails",
+      "MoneyTab"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 74,
+    "key": "delete-order-warning",
+    "route": "/help/delete-order-warning/",
+    "title": "Check what Delete order removes before confirming",
+    "category": "Orders",
+    "intro": "Deleting an order is destructive. The confirmation states that the order and its items are removed permanently, while already generated bills remain in the records.",
+    "steps": [
+      "Open the exact order and verify its reference.",
+      "Resolve any requirement to retain the order before choosing Delete order in the overflow menu.",
+      "Read the permanent-removal warning and cancel if your intention is merely to stop fulfilment or investigate a problem.",
+      "Confirm only when deletion is truly intended and authorised."
+    ],
+    "success": "After successful deletion the app leaves the order screen. Generated bills are not described as being deleted with it.",
+    "troubleshoot": "Do not use deletion as a refund, courier cancellation or bookkeeping correction. This page does not guarantee reversal, stock restoration or payment recovery. If a request times out, verify whether the order still exists before taking further action.",
+    "sources": [
+      "OrderDetails",
+      "OverflowSheet"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 75,
+    "key": "order-tracking-id",
+    "route": "/help/order-tracking-id/",
+    "title": "Update an order tracking ID carefully",
+    "category": "Delivery",
+    "intro": "A tracking ID should refer to the parcel actually handed to the selected delivery service. Entering an identifier is not proof the parcel has shipped.",
+    "steps": [
+      "Open the order's Delivery tab and confirm the customer and parcel.",
+      "Use the tracking-ID edit action when available.",
+      "Enter the identifier from your actual shipment record and save once.",
+      "Read the updated tracking information and check that it belongs to this order."
+    ],
+    "success": "The app confirms Tracking ID updated after the save. Compare the saved value with the carrier record before sharing it.",
+    "troubleshoot": "If the carrier has not yet recognised the number, check for a copying error and the carrier's own update timing. Do not fabricate an AWB to remove an empty state. Avoid sharing a customer's full address in screenshots used to report a tracking problem.",
+    "sources": [
+      "OrderDetails",
+      "DeliveryTab"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 76,
+    "key": "shipment-label",
+    "route": "/help/shipment-label/",
+    "title": "Find a shipping label when a shipment exists",
+    "category": "Delivery",
+    "intro": "A label belongs to a shipment, not merely to an order. The delivery screen can show different actions depending on the provider and shipment state.",
+    "steps": [
+      "Open Delivery and inspect the existing shipment details.",
+      "Use View label when the shipment offers that action.",
+      "For a provider without a label action, read the available delivery-link controls instead.",
+      "Check the parcel reference and customer details before printing or sharing anything."
+    ],
+    "success": "The document or delivery link should match the intended order. A downloaded label alone does not prove pickup or delivery.",
+    "troubleshoot": "Creating a shipment requires the shipping connection and additional shipment details. Do not repeatedly create shipments to recover a missing label. If the order already has an AWB, report that reference and the missing action rather than booking another parcel.",
+    "sources": [
+      "DeliveryTab",
+      "OrderDetails"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 77,
+    "key": "cancel-shipment",
+    "route": "/help/cancel-shipment/",
+    "title": "Distinguish shipment cancellation from order cancellation",
+    "category": "Delivery",
+    "intro": "The Cancel shipment action concerns the courier shipment. It is not the same operation as deleting an order or refunding a customer.",
+    "steps": [
+      "Open the correct order's Delivery tab and identify the shipment.",
+      "Choose Cancel shipment only if cancellation is intended.",
+      "Read the confirmation and wait for the provider-backed response.",
+      "Recheck the shipment state and separately decide what should happen to the customer order."
+    ],
+    "success": "A successful action is acknowledged as Cancelled. Confirm the provider's resulting state before arranging a replacement shipment.",
+    "troubleshoot": "Cancellation can fail or be unavailable for a shipment already progressing. Do not promise a refund, pickup reversal or stock restoration based only on pressing this action. Keep the AWB and error message for support, with personal address data redacted.",
+    "sources": [
+      "DeliveryTab",
+      "OrderDetails"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 78,
+    "key": "order-ship-by",
+    "route": "/help/order-ship-by/",
+    "title": "Read the ship-by estimate without promising a delivery date",
+    "category": "Delivery",
+    "intro": "The order layout can derive a ship-by value by subtracting configured delivery days from the expected delivery date. This is a planning calculation, not a live courier guarantee.",
+    "steps": [
+      "Inspect the expected date and delivery information on the order.",
+      "Check the configured number of delivery days and whether it reflects the service you intend to use.",
+      "Compare the derived timing with actual production readiness and the courier's current estimate.",
+      "Tell the customer about any material delay before making a replacement promise."
+    ],
+    "success": "You understand why the displayed planning date appears and can assess whether it is operationally realistic.",
+    "troubleshoot": "Do not treat a computed date as proof of a booked pickup or guaranteed arrival. If its inputs are wrong, correct the underlying information through the appropriate workflow instead of relying on an unexplained date in the UI.",
+    "sources": [
+      "OrderDerive",
+      "DeliveryTab"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 79,
+    "key": "copy-order-reference",
+    "route": "/help/copy-order-reference/",
+    "title": "Copy the right order reference for a support conversation",
+    "category": "Orders",
+    "intro": "The order overflow menu offers separate copy actions. Use the minimum information needed for the person receiving it.",
+    "steps": [
+      "Open the order and check its identity.",
+      "Choose Copy order ID when a technical support request needs a reference.",
+      "Use customer or order-detail copy actions only when the recipient genuinely needs that additional information.",
+      "Review the clipboard text before pasting it into a message or shared document."
+    ],
+    "success": "The recipient receives an unambiguous reference without unnecessary customer data.",
+    "troubleshoot": "Clipboard contents can outlive the immediate task. Do not paste a full customer address or phone number into a public issue, group chat or screenshot when an order ID will do. If there is nothing to copy, check that the order has loaded rather than trying unrelated records.",
+    "sources": [
+      "OverflowSheet",
+      "OrderDetails"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 80,
+    "key": "order-comment",
+    "route": "/help/order-comment/",
+    "title": "Keep an operational note on the correct order",
+    "category": "Orders",
+    "intro": "An order comment can preserve a short operational detail. It should not become a place to store payment credentials or excessive personal data.",
+    "steps": [
+      "Open the intended order and use Add comment or Edit comment from the overflow menu.",
+      "Write a concise, factual note that another authorised operator can understand.",
+      "Avoid passwords, full banking details and unrelated customer information.",
+      "Save and reopen the comment to confirm the intended text was retained."
+    ],
+    "success": "The note belongs to that order and explains a relevant action or exception.",
+    "troubleshoot": "A comment is not a state transition: writing refunded, shipped or paid does not itself perform those operations. If saving is uncertain, reload the order before adding another version. Keep dated external evidence where your normal business process requires it.",
+    "sources": [
+      "OverflowSheet",
+      "OrderDetails"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 81,
+    "key": "shopper-cart",
+    "route": "/help/shopper-cart/",
+    "title": "Change quantities and remove an item from your cart",
+    "category": "Shopping",
+    "intro": "Check the merchant's name before editing a bag. Products from another store or another browser session may not appear in the same cart.",
+    "steps": [
+      "Open Cart and identify the product and its selected options.",
+      "Use the quantity controls to adjust the intended line.",
+      "Use Remove for an item you no longer want.",
+      "Review quantities and subtotal before proceeding to checkout."
+    ],
+    "success": "The cart should show the intended products and quantities. Delivery and final availability are checked separately during checkout.",
+    "troubleshoot": "Adding an item is not a guarantee of stock or an accepted order. If a change looks unsuccessful, wait for the update and reload once before pressing repeatedly. Do not submit checkout merely to find out whether the cart edit worked.",
+    "sources": [
+      "CartView",
+      "CartContext"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 82,
+    "key": "shopper-empty-cart",
+    "route": "/help/shopper-empty-cart/",
+    "title": "Understand an empty cart after changing browser or store",
+    "category": "Shopping",
+    "intro": "The storefront uses a store-scoped browser cart as part of its cart workflow. A bag on another device, browser or merchant address is not guaranteed to be the same bag.",
+    "steps": [
+      "Confirm you opened the intended merchant's address.",
+      "Return to the browser where you added the items, if available.",
+      "Check whether private browsing or a recent clearing of site data removed the local cart.",
+      "Re-add only the intended products after verifying that no order was already submitted."
+    ],
+    "success": "The right store and browser context should make the cart state understandable. An empty bag does not itself cancel an existing order.",
+    "troubleshoot": "Do not clear all browser data as the first troubleshooting step; it can remove useful session information. If checkout was already submitted, look up the order or contact the merchant before recreating it.",
+    "sources": [
+      "CartContext",
+      "CartView"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 83,
+    "key": "shopper-checkout-fields",
+    "route": "/help/shopper-checkout-fields/",
+    "title": "Complete the fields your merchant requires at checkout",
+    "category": "Shopping",
+    "intro": "Checkout fields are loaded from the merchant configuration, so two stores can ask for different information. Complete the labels shown on your current store rather than following a fixed universal form.",
+    "steps": [
+      "Review the cart and continue to Request Details.",
+      "Fill each required field using accurate information.",
+      "Read the validation beside any field that prevents continuing.",
+      "Wait for any requested image upload and delivery check to finish before proceeding."
+    ],
+    "success": "You can reach the review step with the required details intact and readable.",
+    "troubleshoot": "The inspected physical checkout checks phone, email, pincode and address formats where those fields apply. Do not insert placeholder personal information just to pass validation. If the form itself cannot load, retry later rather than treating missing fields as optional.",
+    "sources": [
+      "DeliveryAddressStep",
+      "CheckoutView"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 84,
+    "key": "shopper-pincode",
+    "route": "/help/shopper-pincode/",
+    "title": "Resolve a pincode validation or serviceability message",
+    "category": "Shopping",
+    "intro": "A correctly formatted pincode and a serviceable delivery address are separate requirements. Six digits alone do not guarantee that a merchant delivers there.",
+    "steps": [
+      "Enter the actual six-digit pincode for the destination.",
+      "Wait for verification and the delivery quote.",
+      "Read any not-available or outside-serviceable-area message.",
+      "Correct a genuine typing error, or contact the merchant about an unavailable location."
+    ],
+    "success": "The checkout should show the delivery choices permitted for the real address, or an explicit reason it cannot proceed.",
+    "troubleshoot": "Do not substitute a nearby serviceable pincode for an address the store cannot deliver to. If verification is temporarily unavailable, keep the correct address and try again later; a technical failure is not proof the destination is unsupported.",
+    "sources": [
+      "DeliveryAddressStep"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 85,
+    "key": "shopper-delivery-date",
+    "route": "/help/shopper-delivery-date/",
+    "title": "Choose a delivery date the checkout actually permits",
+    "category": "Shopping",
+    "intro": "The checkout may present a requested delivery date and a minimum selectable date. Treat it as the stated request or estimate, not an unconditional promise of arrival.",
+    "steps": [
+      "Complete the address and allow the delivery options to load.",
+      "Review the available standard or fast option and its charge.",
+      "Choose a date no earlier than the minimum allowed by the form.",
+      "Read the final review before submitting the request."
+    ],
+    "success": "The selected delivery choice and date should be visible in the review step along with the charge.",
+    "troubleshoot": "If a date is rejected, inspect the current option and minimum date instead of repeatedly selecting an earlier day. For a fixed occasion, confirm the merchant's actual ability to fulfil it before relying on the request.",
+    "sources": [
+      "DeliveryAddressStep",
+      "OrderReviewStep"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 86,
+    "key": "shopper-service-time",
+    "route": "/help/shopper-service-time/",
+    "title": "Request a service time without assuming the slot is confirmed",
+    "category": "Shopping",
+    "intro": "A service-only bag uses a booking-details step instead of a parcel-address step. The preferred time is a request that the merchant must handle.",
+    "steps": [
+      "Check every service item in the bag.",
+      "Complete the merchant's required contact fields.",
+      "Choose a future preferred date and time for each service; the input is labelled IST.",
+      "Review any service notes and proceed only when the requested times are correct."
+    ],
+    "success": "The review should contain the intended service requests. The interface explains that the merchant confirms the slot when accepting the booking.",
+    "troubleshoot": "A date in the past or an invalid time is refused. Do not assume choosing a time has reserved staff or a venue. If your local timezone differs, interpret the explicit IST label carefully and confirm the agreed time with the merchant.",
+    "sources": [
+      "ServiceBookingStep",
+      "CheckoutView"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 87,
+    "key": "shopper-stock-refusal",
+    "route": "/help/shopper-stock-refusal/",
+    "title": "Handle an item that becomes unavailable at submission",
+    "category": "Shopping",
+    "intro": "Availability can change after an item was added to the cart. The order-review flow performs a stock check and can show item-specific stock issues.",
+    "steps": [
+      "Read the unavailable-item message on the review screen.",
+      "Return to the cart and identify the exact product or option affected.",
+      "Remove it or change to an available choice only if that suits your purchase.",
+      "Review the updated bag and total before submitting again."
+    ],
+    "success": "The revised request should contain only the items you intend to buy. A refused attempt is not permission to charge for a substitute.",
+    "troubleshoot": "If payment or order creation may already have occurred, check the order and payment state before starting again. Do not repeatedly press submission or assume that a displayed old cart quantity is reserved for you.",
+    "sources": [
+      "OrderReviewStep"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 88,
+    "key": "shopper-direct-pay",
+    "route": "/help/shopper-direct-pay/",
+    "title": "Understand Pay the store directly at checkout",
+    "category": "Shopping",
+    "intro": "Direct Pay is different from an integrated gateway. Where enabled, the store asks you to place the order, then pay the displayed UPI or bank details from your own payment app.",
+    "steps": [
+      "Read the payment-method explanation before ordering.",
+      "Check the order and amount on the resulting payment instructions.",
+      "Verify the recipient through the store's genuine contact route if anything appears wrong.",
+      "Keep your payment reference and wait for the merchant's receipt confirmation."
+    ],
+    "success": "A transfer made in your payment app and an order marked received are separate events. The store confirms when the money arrives.",
+    "troubleshoot": "Do not pay twice because the page has not updated immediately. Never share a UPI PIN, bank password or OTP with the merchant or support. If the recipient or amount is unexpected, stop and verify it before transferring.",
+    "sources": [
+      "DirectPayMethodBlock",
+      "OrderReviewStep"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 89,
+    "key": "shopper-track-order",
+    "route": "/help/shopper-track-order/",
+    "title": "Look up one order with its reference and checkout contact",
+    "category": "Shopping",
+    "intro": "Track Order asks for an order number plus the email or phone associated with the purchase. Use the same merchant storefront where you placed it.",
+    "steps": [
+      "Open Track Order on the store.",
+      "Enter the exact order number.",
+      "Supply the email address or phone number used for that order.",
+      "Submit the lookup and read the returned order and timeline."
+    ],
+    "success": "A successful lookup shows the matched order details and available progress information.",
+    "troubleshoot": "If no order is found, check the reference, store and contact for typing differences. A lookup error does not mean you should place another order. Contact the merchant privately with the reference; do not publish the full order or customer contact.",
+    "sources": [
+      "TrackOrderPage"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 90,
+    "key": "shopper-my-orders",
+    "route": "/help/shopper-my-orders/",
+    "title": "Open My Orders using your checkout email",
+    "category": "Shopping",
+    "intro": "My Orders is customer access for a particular merchant, not the merchant's own administration login. It uses the email entered at checkout.",
+    "steps": [
+      "Open My Orders on the correct store.",
+      "Enter your checkout email and request the code.",
+      "Enter the six-digit OTP delivered to that email.",
+      "After verification, review the order list and use the available pagination or refresh controls."
+    ],
+    "success": "The store's order history loads for the authorised customer session. An expired session asks you to log in again.",
+    "troubleshoot": "The send-code message deliberately says an OTP is sent if that email has orders. It is not confirmation that a particular address exists. Keep the code private and do not ask someone else to forward their customer-access OTP.",
+    "sources": [
+      "MyOrdersPage"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 91,
+    "key": "shopper-otp",
+    "route": "/help/shopper-otp/",
+    "title": "Troubleshoot an order-history OTP that does not arrive",
+    "category": "Shopping",
+    "intro": "The order-history code goes to the checkout email, and the interface uses a deliberately non-specific send confirmation. Check the address before repeatedly requesting codes.",
+    "steps": [
+      "Confirm the merchant address and the email used at checkout.",
+      "Inspect the inbox and spam folder for that address.",
+      "Use Resend when needed and follow any error or waiting instruction shown.",
+      "Enter the latest available six-digit code without sharing it."
+    ],
+    "success": "A valid code opens the authorised order list. A send confirmation alone does not establish that the email has an order.",
+    "troubleshoot": "If the address was entered incorrectly on the order, contact the merchant through a verified route rather than trying other people's emails. Send support a redacted error and time, never an OTP, password or complete mailbox screenshot.",
+    "sources": [
+      "MyOrdersPage"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 92,
+    "key": "shopper-session",
+    "route": "/help/shopper-session/",
+    "title": "Sign out of customer order history on a shared device",
+    "category": "Shopping",
+    "intro": "A customer order-history session can remain available in the same browser. Sign out when another person can use the device.",
+    "steps": [
+      "Finish viewing the order details you need.",
+      "Use the My Orders logout control.",
+      "Confirm that the page returns to the email-access step.",
+      "Close the page when you are done and avoid leaving customer information visible."
+    ],
+    "success": "The saved customer session is cleared and the visible order list is removed. A remembered email suggestion is not an authenticated session.",
+    "troubleshoot": "If the server reports an expired session, request access again using your own checkout email. Do not send a browser token or storage dump to support. Signing out does not cancel an order or erase the merchant's records.",
+    "sources": [
+      "MyOrdersPage"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 93,
+    "key": "customer-bills-list",
+    "route": "/help/customer-bills-list/",
+    "title": "Find customer bills separately from platform invoices",
+    "category": "Bills",
+    "intro": "Bills & Payments separates documents you issue to customers from documents issued to you by the platform. Keeping the issuer clear prevents incorrect forwarding and bookkeeping.",
+    "steps": [
+      "Open Settings, then Bills & Payments.",
+      "Choose the relevant customer-bill or platform-payment list.",
+      "Check the document number, buyer and amount before opening an entry.",
+      "Refresh if you expect a recently generated document."
+    ],
+    "success": "You can identify whose document you are reading before downloading or sharing it.",
+    "troubleshoot": "The inspected screen requests the first 30 records for each list. An absent older document is not proof it never existed. Locate its order or ask support with the document reference; do not generate a new bill just to make it appear here.",
+    "sources": [
+      "BillsAndPaymentsScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 94,
+    "key": "bill-preview",
+    "route": "/help/bill-preview/",
+    "title": "Inspect a bill before choosing Save or Share",
+    "category": "Bills",
+    "intro": "The bill-preview screen loads the PDF for inspection. Opening it is different from deliberately saving or sharing a permanent copy.",
+    "steps": [
+      "Open the bill from the document list.",
+      "Wait for the preview and check its document number.",
+      "Read the customer and amount before using Save / Share.",
+      "Choose the intended device destination or recipient, or close the preview without sharing."
+    ],
+    "success": "The viewed document matches the record you intended to distribute. Saving reuses the previewed file rather than creating a new bill.",
+    "troubleshoot": "If the preview cannot load, resolve the connection or document error first. Do not forward a blank or unrelated file. On a shared device, remember that a downloaded PDF can remain outside the app even after you sign out.",
+    "sources": [
+      "BillPreviewScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 95,
+    "key": "bill-list-empty",
+    "route": "/help/bill-list-empty/",
+    "title": "Investigate an empty bill list before assuming records were deleted",
+    "category": "Bills",
+    "intro": "The current list screen can display empty results after a loading failure. An empty screen is therefore not enough evidence that no bills exist.",
+    "steps": [
+      "Check the connection and refresh Bills & Payments.",
+      "Verify whether you selected customer bills or platform-issued documents.",
+      "Open a known order and inspect its Bill section.",
+      "Record the document reference and time if the list still omits a document you can identify."
+    ],
+    "success": "You can distinguish a missing list result from a genuinely ungenerated bill.",
+    "troubleshoot": "Do not delete or recreate orders to repair a list problem. The current list fetch is bounded, so older documents may need another lookup route. Escalate with a redacted reference rather than sending an entire customer invoice publicly.",
+    "sources": [
+      "BillsAndPaymentsScreen",
+      "MoneyTab"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 96,
+    "key": "gst-settings-location",
+    "route": "/help/gst-settings-location/",
+    "title": "Find the billing GST settings without relying on an old profile field",
+    "category": "Bills",
+    "intro": "GST & Tax is a separate Settings screen. A legacy GST value on a profile is not necessarily the billing setting used by the current document workflow.",
+    "steps": [
+      "Open Settings and choose GST & Tax.",
+      "Read the current GSTIN and any warning about an older profile value.",
+      "Compare the displayed setting with your verified business records.",
+      "Only edit it when you know the correct information and have authority to change billing configuration."
+    ],
+    "success": "You have identified the billing-specific setting rather than assuming a profile entry controls invoices.",
+    "troubleshoot": "This article explains the screen, not whether you must register or which tax treatment applies. Obtain appropriate professional guidance for those decisions. Do not enter a made-up GSTIN to change the document label or remove an empty state.",
+    "sources": [
+      "GstSettings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 97,
+    "key": "gst-save-confirmation",
+    "route": "/help/gst-save-confirmation/",
+    "title": "Understand the confirmation before saving GST settings",
+    "category": "Bills",
+    "intro": "Saving tax configuration requires an explicit acknowledgement. Read it as a consequential billing change, not a routine screen-dismissal step.",
+    "steps": [
+      "Open GST & Tax and check the existing values.",
+      "Make only the verified change you intend.",
+      "Choose Save and read Confirm your GST settings.",
+      "Use I understand, apply only if the change is correct; otherwise cancel and review it."
+    ],
+    "success": "The app confirms that the settings were updated and reflects the saved values. If nothing changed, it says they are already up to date.",
+    "troubleshoot": "Do not interpret this confirmation as tax advice or legal validation of your business circumstances. If saving fails, reopen the screen before retrying. Retain your own evidence for why the billing setting was chosen.",
+    "sources": [
+      "GstSettings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 98,
+    "key": "default-tax-rate",
+    "route": "/help/default-tax-rate/",
+    "title": "Distinguish the billing default from a product-specific tax setting",
+    "category": "Bills",
+    "intro": "The GST & Tax screen describes its default rate as applying to products without their own HSN or rate. That makes the default and product fields different inputs.",
+    "steps": [
+      "Read the current default setting in GST & Tax.",
+      "Check whether the product in question already has its own HSN or rate.",
+      "Use verified classification information rather than choosing a convenient number.",
+      "Review the resulting document before sharing it with a customer."
+    ],
+    "success": "You know which configuration needs investigation when a bill's tax treatment appears unexpected.",
+    "troubleshoot": "This guide does not prescribe a rate or classify goods. Do not assume changing the default rewrites previously issued documents or overrides every product. Ask a qualified adviser about classification and report an application discrepancy with a redacted document reference.",
+    "sources": [
+      "GstSettings",
+      "AddProductScreen"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 99,
+    "key": "bill-download-failure",
+    "route": "/help/bill-download-failure/",
+    "title": "Recover from a failed PDF save without duplicating the bill",
+    "category": "Bills",
+    "intro": "A failed download can be a device or connection problem while the bill itself still exists. Keep generation and file-saving steps separate.",
+    "steps": [
+      "Check that the existing document number remains visible.",
+      "Retry opening its preview or download after restoring the connection.",
+      "Check available device storage and the destination shown by the app.",
+      "Open the saved file before forwarding it."
+    ],
+    "success": "The same existing document becomes readable on the device. No replacement order or second bill is needed merely to repeat a file download.",
+    "troubleshoot": "If the problem persists, report the document number, platform, app version and redacted error. Do not include complete customer addresses, banking details or the entire PDF unless an authorised private support process specifically needs it.",
+    "sources": [
+      "BillPreviewScreen",
+      "OrderDetails"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  },
+  {
+    "id": 100,
+    "key": "support-safe-evidence",
+    "route": "/help/support-safe-evidence/",
+    "title": "Send a useful support report without exposing customer or payment secrets",
+    "category": "Account and support",
+    "intro": "A precise report helps distinguish a screen problem from a saved-state problem. Collect the smallest evidence that demonstrates the issue.",
+    "steps": [
+      "Write the screen name, action, actual result and expected result.",
+      "Include the time, app version and relevant product, order or document reference.",
+      "Redact customer contact details, full addresses and sensitive financial information from screenshots.",
+      "Use the official support route and say whether a retry, refresh or state-changing action has already occurred."
+    ],
+    "success": "Support receives a reproducible description without needing your password, OTP or complete account export.",
+    "troubleshoot": "Never share secret keys, session tokens, bank credentials or UPI PINs. For an uncertain order, stock or payment update, pause repeated submissions and explain that the outcome is unknown. Do not let a troubleshooting step silently become a second business transaction.",
+    "sources": [
+      "Settings",
+      "OrderDetails",
+      "PayoutDetailsSettings"
+    ],
+    "verifiedAt": "2026-09-26",
+    "verification": "local-source-only"
+  }
+]

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ForFoodBusinessPage from "@/pages/ForFoodBusiness";
+import ForFoodBusinessPage from "@/legacy-views/ForFoodBusiness";
 
 
 export const metadata: Metadata = {

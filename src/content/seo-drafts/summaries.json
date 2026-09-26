@@ -1,0 +1,1581 @@
+[
+  {
+    "id": 1,
+    "route": "/blog/online-store-vs-whatsapp-business/",
+    "title": "WhatsApp Business or an online store? How to choose—and when to use both",
+    "description": "Choose between WhatsApp Business and an online store around your products, customers and order workflow—with a practical checklist for using both.",
+    "category": "Selling channels",
+    "minutes": 9
+  },
+  {
+    "id": 2,
+    "route": "/blog/dm2buy-vs-obizee-comparison/",
+    "title": "DM2Buy vs oBizee: compare the work behind each order",
+    "description": "Compare DM2Buy and oBizee around your catalogue, checkout, delivery and costs—and use a practical checklist before moving your store.",
+    "category": "Platform comparison",
+    "minutes": 7
+  },
+  {
+    "id": 3,
+    "route": "/for/clothing-stores/",
+    "title": "An online clothing store starts with clear sizes, stock and order details",
+    "description": "Prepare your clothing catalogue with clear measurements, size-and-colour stock, useful photos and delivery information before taking online orders.",
+    "category": "Clothing businesses",
+    "minutes": 6
+  },
+  {
+    "id": 4,
+    "route": "/blog/product-page-checklist/",
+    "title": "Product catalogue checklist: prepare your products before building a store",
+    "description": "Prepare product names, photos, prices, variants, stock and delivery facts with this practical checklist for sellers moving a catalogue online.",
+    "category": "Product catalogue",
+    "minutes": 6
+  },
+  {
+    "id": 5,
+    "route": "/blog/instagram-to-online-store/",
+    "title": "Turn Instagram enquiries into store orders without abandoning your audience",
+    "description": "Introduce a store alongside Instagram with a manageable catalogue, clear product links and a plan for existing orders, customer questions and stock.",
+    "category": "Instagram selling",
+    "minutes": 7
+  },
+  {
+    "id": 6,
+    "route": "/blog/price-handmade-products/",
+    "title": "How to price handmade products without forgetting your time",
+    "description": "Build a handmade-product price from materials, labour, packaging, overhead and selling costs. Includes a worked example and a margin-versus-markup check.",
+    "category": "Pricing & margins",
+    "minutes": 6
+  },
+  {
+    "id": 7,
+    "route": "/blog/inventory-for-instagram-sellers/",
+    "title": "Manage stock across Instagram, WhatsApp and your store without promising the same item twice",
+    "description": "Create one stock record for social and store orders, distinguish held items from available stock, and reconcile changes without assuming automatic sync.",
+    "category": "Stock & orders",
+    "minutes": 6
+  },
+  {
+    "id": 8,
+    "route": "/blog/discounts-without-losing-margin/",
+    "title": "Check a discount before it turns more orders into less money",
+    "description": "Compare a discount with your normal order economics using a worked example, bundle check and promotion worksheet before announcing an offer.",
+    "category": "Discount decisions",
+    "minutes": 5
+  },
+  {
+    "id": 9,
+    "route": "/blog/product-photography-checklist/",
+    "title": "Product photography checklist: show what a buyer needs to know",
+    "description": "Plan a useful product photo set with clear main, detail, scale and variant views, then check crops, colour, rights and filenames before uploading.",
+    "category": "Product photography",
+    "minutes": 6
+  },
+  {
+    "id": 10,
+    "route": "/blog/a-sellers-profile-that-answers-the-questions-buyers-ask-first/",
+    "title": "A seller’s profile that answers the questions buyers ask first",
+    "description": "Prepare a trustworthy seller profile with clear product information, response expectations and a tested buying link—without promising features your store does not have.",
+    "category": "Instagram",
+    "minutes": 4
+  },
+  {
+    "id": 12,
+    "route": "/blog/turn-interested-followers-into-product-page-visitors/",
+    "title": "Turn interested followers into product-page visitors",
+    "description": "Connect a specific Instagram post to the product information a buyer needs, then measure the handoff without confusing followers or clicks with orders.",
+    "category": "Instagram",
+    "minutes": 4
+  },
+  {
+    "id": 13,
+    "route": "/blog/build-a-weekly-instagram-plan-around-buying-questions/",
+    "title": "Build a weekly Instagram plan around buying questions",
+    "description": "Create a manageable content week from real customer questions, product evidence and operational capacity rather than filling every day with a sales post.",
+    "category": "Instagram",
+    "minutes": 4
+  },
+  {
+    "id": 14,
+    "route": "/blog/use-stories-to-explain-a-product-before-asking-for-the-sale/",
+    "title": "Use Stories to explain a product before asking for the sale",
+    "description": "Plan a short product Story sequence that explains use, choice and the next step, with truthful availability and no reliance on unsupported shopping features.",
+    "category": "Instagram",
+    "minutes": 4
+  },
+  {
+    "id": 17,
+    "route": "/blog/diagnose-an-instagram-campaign-that-attracts-clicks-but-no-orders/",
+    "title": "Diagnose an Instagram campaign that attracts clicks but no orders",
+    "description": "Investigate message-to-page mismatch, product uncertainty and checkout friction before spending more on an Instagram campaign that is not producing orders.",
+    "category": "Instagram",
+    "minutes": 4
+  },
+  {
+    "id": 30,
+    "route": "/blog/build-an-order-summary-a-whatsapp-customer-can-confirm/",
+    "title": "Build an order summary a WhatsApp customer can confirm",
+    "description": "Use one written order summary to confirm product choices, delivery details and the next action before a WhatsApp enquiry becomes an order.",
+    "category": "WhatsApp",
+    "minutes": 4
+  },
+  {
+    "id": 32,
+    "route": "/blog/make-quick-replies-useful-without-sending-the-wrong-answer/",
+    "title": "Make quick replies useful without sending the wrong answer",
+    "description": "Build a small library of accurate saved replies with clear editing fields, review dates and safeguards against sending outdated prices or promises.",
+    "category": "WhatsApp",
+    "minutes": 4
+  },
+  {
+    "id": 36,
+    "route": "/blog/write-order-status-messages-that-match-what-actually-happened/",
+    "title": "Write order-status messages that match what actually happened",
+    "description": "Write order updates from verified events—request received, accepted, packed and handed over—so customers know what has happened and what remains pending.",
+    "category": "WhatsApp",
+    "minutes": 4
+  },
+  {
+    "id": 50,
+    "route": "/blog/give-product-variants-names-customers-and-packers-both-understand/",
+    "title": "Give product variants names customers and packers both understand",
+    "description": "Separate customer-friendly variant labels from internal references so sizes, colours and product combinations remain clear from browsing through packing.",
+    "category": "Catalogue",
+    "minutes": 4
+  },
+  {
+    "id": 51,
+    "route": "/blog/write-a-product-description-from-evidence-not-adjectives/",
+    "title": "Write a product description from evidence, not adjectives",
+    "description": "Turn verified product details into a readable description that helps customers judge fit, use and fulfilment without exaggerated promises.",
+    "category": "Catalogue",
+    "minutes": 4
+  },
+  {
+    "id": 52,
+    "route": "/blog/build-a-size-guide-that-explains-measurements-rather-than-guarantees/",
+    "title": "Build a size guide that explains measurements rather than guarantees",
+    "description": "Explain what a size measurement means, how it was taken and how buyers can compare it with something they already own.",
+    "category": "Catalogue",
+    "minutes": 4
+  },
+  {
+    "id": 55,
+    "route": "/blog/prepare-product-data-before-moving-it-into-a-new-store/",
+    "title": "Prepare product data before moving it into a new store",
+    "description": "Clean and map product records before a catalogue move, preserving identifiers, units, media rights and the distinction between product data and customer data.",
+    "category": "Catalogue",
+    "minutes": 4
+  },
+  {
+    "id": 56,
+    "route": "/blog/check-an-imported-catalogue-without-sampling-away-the-mistakes/",
+    "title": "Check an imported catalogue without sampling away the mistakes",
+    "description": "Verify an imported catalogue with full field checks and representative buying-path tests instead of relying on a successful upload message.",
+    "category": "Catalogue",
+    "minutes": 4
+  },
+  {
+    "id": 70,
+    "route": "/blog/create-stock-codes-that-survive-a-growing-product-range/",
+    "title": "Create stock codes that survive a growing product range",
+    "description": "Design a simple internal stock-code system with unique variant references, clear units and a lookup that remains useful when product names change.",
+    "category": "Stock",
+    "minutes": 4
+  },
+  {
+    "id": 71,
+    "route": "/blog/count-physical-stock-without-pausing-your-entire-business/",
+    "title": "Count physical stock without pausing your entire business",
+    "description": "Run a controlled physical count with clear locations, units and movement handling, then investigate differences before adjusting stock.",
+    "category": "Stock",
+    "minutes": 4
+  },
+  {
+    "id": 72,
+    "route": "/blog/investigate-a-stock-mismatch-before-changing-the-total/",
+    "title": "Investigate a stock mismatch before changing the total",
+    "description": "Trace count differences through receipts, commitments, returns and unit mistakes before making a documented stock correction.",
+    "category": "Stock",
+    "minutes": 4
+  },
+  {
+    "id": 78,
+    "route": "/blog/set-a-reorder-alert-from-demand-and-lead-time/",
+    "title": "Set a reorder alert from demand and lead time",
+    "description": "Use observed demand, supplier lead time and a deliberate buffer to create a reorder trigger you can revise as your shop changes.",
+    "category": "Stock",
+    "minutes": 4
+  },
+  {
+    "id": 79,
+    "route": "/blog/keep-bundle-availability-tied-to-its-component-items/",
+    "title": "Keep bundle availability tied to its component items",
+    "description": "Calculate bundle availability from the components it consumes, then record reservations, substitutions and returns without creating extra stock.",
+    "category": "Stock",
+    "minutes": 4
+  },
+  {
+    "id": 90,
+    "route": "/blog/build-a-home-dispatch-station-that-reduces-packing-mistakes/",
+    "title": "Build a home dispatch station that reduces packing mistakes",
+    "description": "Organise picking, checking, packing and dispatch records in a small home workspace without mixing orders or exposing customer information.",
+    "category": "Shipping",
+    "minutes": 4
+  },
+  {
+    "id": 91,
+    "route": "/blog/measure-a-packed-parcel-before-comparing-shipping-quotes/",
+    "title": "Measure a packed parcel before comparing shipping quotes",
+    "description": "Record a parcel’s finished dimensions and weight, check the carrier’s charging rules and compare quotes on the same shipment information.",
+    "category": "Shipping",
+    "minutes": 4
+  },
+  {
+    "id": 110,
+    "route": "/blog/build-a-small-store-support-queue-you-can-actually-finish/",
+    "title": "Build a small-store support queue you can actually finish",
+    "description": "Set up a support queue with clear ownership, useful priorities and realistic follow-up times so unresolved customer cases do not disappear into messages.",
+    "category": "Customer service",
+    "minutes": 4
+  },
+  {
+    "id": 115,
+    "route": "/blog/respond-to-a-negative-review-with-facts-and-a-next-step/",
+    "title": "Respond to a negative review with facts and a next step",
+    "description": "Respond to a critical review with a specific acknowledgement, a private resolution route and no disclosure of the customer’s personal information.",
+    "category": "Customer service",
+    "minutes": 4
+  },
+  {
+    "id": 130,
+    "route": "/blog/find-the-first-place-customers-leave-your-buying-journey/",
+    "title": "Find the first place customers leave your buying journey",
+    "description": "Map discovery, product understanding, checkout and fulfilment separately so you can investigate a weak sales journey without blaming every problem on traffic.",
+    "category": "Growth",
+    "minutes": 4
+  },
+  {
+    "id": 133,
+    "route": "/blog/measure-a-campaign-with-a-consistent-source-label/",
+    "title": "Measure a campaign with a consistent source label",
+    "description": "Use a small, consistent campaign-link naming system to distinguish traffic sources while keeping personal information out of URLs and attribution claims modest.",
+    "category": "Growth",
+    "minutes": 4
+  },
+  {
+    "id": 134,
+    "route": "/blog/read-conversion-rates-without-overreacting-to-tiny-samples/",
+    "title": "Read conversion rates without overreacting to tiny samples",
+    "description": "Use consistent conversion definitions, counts and observation windows to make better decisions when a small shop has only a limited amount of traffic.",
+    "category": "Growth",
+    "minutes": 4
+  }
+,{
+  "id": 11,
+  "route": "/blog/write-an-instagram-bio-that-leads-to-the-right-product/",
+  "title": "Write an Instagram bio that leads to the right product",
+  "description": "Write a short Instagram bio that identifies your range, explains the next step and stays accurate when collections or ordering arrangements change.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 15,
+  "route": "/blog/find-a-posting-schedule-your-small-shop-can-sustain/",
+  "title": "Find a posting schedule your small shop can sustain",
+  "description": "Choose posting windows from your own working capacity and audience evidence instead of treating a universal best-time chart as a guarantee.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 16,
+  "route": "/blog/choose-hashtags-by-product-relevance-not-headline-reach/",
+  "title": "Choose hashtags by product relevance, not headline reach",
+  "description": "Build relevant hashtag groups from your actual products and customer language, without relying on reach promises or unrelated trending terms.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 18,
+  "route": "/blog/give-your-first-instagram-customers-a-clear-buying-process/",
+  "title": "Give your first Instagram customers a clear buying process",
+  "description": "Prepare a first-order workflow that verifies the product, total, fulfilment and communication before promoting your shop to new Instagram customers.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 19,
+  "route": "/blog/show-handmade-work-without-making-delivery-promises-you-cannot-keep/",
+  "title": "Show handmade work without making delivery promises you cannot keep",
+  "description": "Show handmade products with clear distinctions between ready-made pieces, custom examples and the production capacity behind your delivery estimates.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 31,
+  "route": "/blog/give-every-whatsapp-enquiry-one-owner-and-one-next-action/",
+  "title": "Give every WhatsApp enquiry one owner and one next action",
+  "description": "Assign WhatsApp enquiries without duplicate replies by recording the owner, current question and next action separately from the order state.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 33,
+  "route": "/blog/organise-a-whatsapp-catalogue-around-customer-choices/",
+  "title": "Organise a WhatsApp catalogue around customer choices",
+  "description": "Arrange catalogue items and collections around buyer choices, with clear units, representative images and a routine for outdated listings.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 39,
+  "route": "/blog/handle-two-people-replying-to-the-same-buyer/",
+  "title": "Handle two people replying to the same buyer",
+  "description": "Coordinate replies from two helpers with a handover rule, a single source of order facts and a correction process for conflicting messages.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 40,
+  "route": "/blog/prepare-a-handover-note-for-a-whatsapp-order/",
+  "title": "Prepare a handover note for a WhatsApp order",
+  "description": "Write a concise private handover that preserves the customer’s agreed choices, unresolved checks and next promised update without duplicating sensitive data.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 92,
+  "route": "/blog/separate-production-time-dispatch-time-and-transit-estimates/",
+  "title": "Separate production time, dispatch time and transit estimates",
+  "description": "Explain production, dispatch and transit as separate stages so customers can understand an estimate without mistaking it for a guaranteed arrival date.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 93,
+  "route": "/blog/choose-packaging-around-the-items-damage-risks/",
+  "title": "Choose packaging around the item’s damage risks",
+  "description": "Choose packaging by examining movement, impact, moisture and presentation risks, then test the finished parcel against your carrier’s requirements.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 94,
+  "route": "/blog/check-an-address-before-the-parcel-reaches-the-courier/",
+  "title": "Check an address before the parcel reaches the courier",
+  "description": "Check delivery details privately and consistently before booking a parcel, with a clear process for incomplete addresses and last-minute changes.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 95,
+  "route": "/blog/keep-shipping-labels-readable-without-exposing-customer-details/",
+  "title": "Keep shipping labels readable without exposing customer details",
+  "description": "Prepare legible shipping labels, match them to the right parcel and handle discarded copies as customer information rather than ordinary scrap.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 97,
+  "route": "/blog/record-proof-of-courier-handover-for-each-parcel/",
+  "title": "Record proof of courier handover for each parcel",
+  "description": "Connect every dispatched parcel to the available courier handover evidence, keeping label creation, collection and tracking updates distinct.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 98,
+  "route": "/blog/explain-a-tracking-number-that-has-not-moved-yet/",
+  "title": "Explain a tracking number that has not moved yet",
+  "description": "Explain early tracking gaps using verified preparation and handover facts, with a clear investigation and follow-up plan instead of invented reassurance.",
+  "category": "Shipping",
+  "minutes": 4
+}
+,{
+  "id": 112,
+  "route": "/blog/resolve-a-missing-item-using-the-packing-record/",
+  "title": "Resolve a missing item using the packing record",
+  "description": "Investigate a reported missing item by comparing the agreed contents, packing record and parcel evidence before deciding the next action.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 113,
+  "route": "/blog/handle-a-wrong-variant-without-blaming-the-customer-first/",
+  "title": "Handle a wrong variant without blaming the customer first",
+  "description": "Compare the ordered, approved and delivered variant, then coordinate a remedy and stock correction without silently rewriting the order history.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 114,
+  "route": "/blog/write-a-delayed-order-update-before-the-buyer-has-to-chase/",
+  "title": "Write a delayed-order update before the buyer has to chase",
+  "description": "Send a delayed-order update that acknowledges the earlier expectation, states the verified position and gives a realistic next contact time.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 117,
+  "route": "/blog/turn-repeated-enquiries-into-clearer-product-information/",
+  "title": "Turn repeated enquiries into clearer product information",
+  "description": "Convert recurring support questions into precise catalogue or ordering improvements while keeping customer conversations private.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 119,
+  "route": "/blog/handle-a-cancellation-request-while-an-order-is-being-packed/",
+  "title": "Handle a cancellation request while an order is being packed",
+  "description": "Handle a cancellation request against the order’s actual fulfilment stage, coordinating support, packing and payment actions without promising an instant reversal.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 53,
+  "route": "/blog/choose-a-cover-photo-that-represents-the-item-actually-sold/",
+  "title": "Choose a cover photo that represents the item actually sold",
+  "description": "Select a product cover image that makes the offer identifiable, shows the relevant option and does not confuse props with included items.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 54,
+  "route": "/blog/make-category-names-useful-to-someone-new-to-your-range/",
+  "title": "Make category names useful to someone new to your range",
+  "description": "Create category labels and groupings that help first-time visitors find products without learning your internal collection names.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 57,
+  "route": "/blog/keep-product-references-stable-when-public-names-change/",
+  "title": "Keep product references stable when public names change",
+  "description": "Preserve a product’s internal identity while improving its public name, and check the effect on links, variants, records and active campaigns.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 58,
+  "route": "/blog/show-what-is-included-in-a-set-pair-or-bundle/",
+  "title": "Show what is included in a set, pair or bundle",
+  "description": "Make the quantity, contents, options and exclusions of a set visible before purchase so customers and packers understand the same offer.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 59,
+  "route": "/blog/explain-made-to-order-products-before-customers-reach-checkout/",
+  "title": "Explain made-to-order products before customers reach checkout",
+  "description": "Explain the approval, production and fulfilment steps for made-to-order items before a customer commits, without treating unfinished capacity as ready stock.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 73,
+  "route": "/blog/record-damaged-items-so-they-cannot-be-sold-again/",
+  "title": "Record damaged items so they cannot be sold again",
+  "description": "Separate damaged goods from sellable stock, record the reason and prevent an adjustment from silently making an unsuitable item available again.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 74,
+  "route": "/blog/define-when-an-enquiry-becomes-a-stock-commitment/",
+  "title": "Define when an enquiry becomes a stock commitment",
+  "description": "Define the event that reserves an item, communicate any hold conditions and keep enquiries separate from accepted customer commitments.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 75,
+  "route": "/blog/release-cancelled-reservations-without-adding-phantom-stock/",
+  "title": "Release cancelled reservations without adding phantom stock",
+  "description": "Release only the stock actually held by a cancelled order, with checks that prevent duplicate releases or confusion with physical returns.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 77,
+  "route": "/blog/receive-a-supplier-delivery-against-the-quantity-you-ordered/",
+  "title": "Receive a supplier delivery against the quantity you ordered",
+  "description": "Receive stock against the supplier agreement, separating counted arrivals, inspected sellable goods and unresolved shortages or damage.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 83,
+  "route": "/blog/inspect-returned-stock-before-offering-it-again/",
+  "title": "Inspect returned stock before offering it again",
+  "description": "Keep returned items separate until receipt and inspection establish their condition, contents and appropriate stock disposition.",
+  "category": "Stock",
+  "minutes": 4
+}
+,{
+  "id": 20,
+  "route": "/blog/plan-a-creator-collaboration-with-usable-deliverables/",
+  "title": "Plan a creator collaboration with usable deliverables",
+  "description": "Write a creator brief with a clear purpose, accurate product facts, agreed usage rights and measurable deliverables before sending stock or paying for promotion.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 21,
+  "route": "/blog/build-customer-conversations-without-constant-promotional-messages/",
+  "title": "Build customer conversations without constant promotional messages",
+  "description": "Build useful conversations around product questions, feedback and real interests without treating every interaction as permission for a sales message.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 22,
+  "route": "/blog/decide-which-instagram-products-deserve-a-launch-test/",
+  "title": "Decide which Instagram products deserve a launch test",
+  "description": "Select a small product test using customer problems, fulfilment feasibility and a clear learning question rather than treating likes as proven demand.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 24,
+  "route": "/blog/audit-the-broken-links-between-your-profile-post-and-store/",
+  "title": "Audit the broken links between your profile, post and store",
+  "description": "Inspect the route from an Instagram post or profile to the intended public product page, including redirects, availability and the return path to browsing.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 25,
+  "route": "/blog/remove-the-buying-friction-hidden-in-your-instagram-captions/",
+  "title": "Remove the buying friction hidden in your Instagram captions",
+  "description": "Edit product captions so customers can identify the item, understand the relevant choice and follow a next step that matches the actual order process.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 34,
+  "route": "/blog/move-a-product-question-into-a-complete-order-request/",
+  "title": "Move a product question into a complete order request",
+  "description": "Collect the missing product, quantity and fulfilment details in stages, then confirm the request without confusing an enquiry with an accepted order.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 35,
+  "route": "/blog/stop-payment-screenshots-from-becoming-your-payment-record/",
+  "title": "Stop payment screenshots from becoming your payment record",
+  "description": "Verify payment through your authorised bank or provider record, keeping screenshots, pending states and order fulfilment decisions separate.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 37,
+  "route": "/blog/separate-service-messages-from-promotional-whatsapp-contact/",
+  "title": "Separate service messages from promotional WhatsApp contact",
+  "description": "Keep necessary order communication distinct from promotional contact, with clear purposes, appropriate permission and a reliable way to honour contact preferences.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 38,
+  "route": "/blog/keep-whatsapp-follow-ups-helpful-after-a-customer-goes-quiet/",
+  "title": "Keep WhatsApp follow-ups helpful after a customer goes quiet",
+  "description": "Follow up on an unfinished product enquiry only when appropriate, with a relevant question, no invented urgency and a clear stopping point.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 41,
+  "route": "/blog/correct-an-order-detail-without-losing-the-original-agreement/",
+  "title": "Correct an order detail without losing the original agreement",
+  "description": "Revise an agreed order with a clear change record, customer confirmation and coordinated updates to production, packing and charges.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 131,
+  "route": "/blog/plan-the-first-ten-orders-without-inventing-a-growth-guarantee/",
+  "title": "Plan the first ten orders without inventing a growth guarantee",
+  "description": "Plan a small first-customer campaign around a clear offer, relevant outreach and fulfilment capacity, without treating ten orders as a guaranteed deadline.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 132,
+  "route": "/blog/choose-one-growth-experiment-instead-of-changing-the-whole-store/",
+  "title": "Choose one growth experiment instead of changing the whole store",
+  "description": "Choose a single testable growth question, define its limits and observe the result without changing every part of the shop at once.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 136,
+  "route": "/blog/build-a-launch-calendar-backwards-from-dispatch-capacity/",
+  "title": "Build a launch calendar backwards from dispatch capacity",
+  "description": "Build a product launch schedule from production, catalogue, fulfilment and support readiness, then place promotion around those real dependencies.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 137,
+  "route": "/blog/choose-a-festival-promotion-your-operations-can-support/",
+  "title": "Choose a festival promotion your operations can support",
+  "description": "Choose a festival offer by checking product relevance, contribution, stock and dispatch capacity before announcing a deadline or discount.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 138,
+  "route": "/blog/find-useful-partnerships-close-to-your-existing-customer-base/",
+  "title": "Find useful partnerships close to your existing customer base",
+  "description": "Identify complementary local businesses, propose a small mutual experiment and agree responsibilities without exchanging customer lists or promising sales.",
+  "category": "Growth",
+  "minutes": 4
+}
+,{
+  "id": 60,
+  "route": "/blog/distinguish-unavailable-discontinued-and-coming-soon-products/",
+  "title": "Distinguish unavailable, discontinued and coming-soon products",
+  "description": "Use different product states for temporary stock gaps, retired items and future launches so customers are not invited into an unclear buying process.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 61,
+  "route": "/blog/describe-materials-and-care-without-unsupported-claims/",
+  "title": "Describe materials and care without unsupported claims",
+  "description": "Write material and care information from reliable product evidence, separating observable details from claims that require testing or specialist substantiation.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 62,
+  "route": "/blog/choose-a-small-launch-range-from-a-large-catalogue/",
+  "title": "Choose a small launch range from a large catalogue",
+  "description": "Select a launch assortment that is complete, understandable and fulfilment-ready instead of publishing every product record at once.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 63,
+  "route": "/blog/find-and-repair-duplicate-product-listings/",
+  "title": "Find and repair duplicate product listings",
+  "description": "Identify duplicate product records by their physical identity and references, then repair them without losing order history, stock links or useful public URLs.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 64,
+  "route": "/blog/prepare-seasonal-products-without-confusing-your-permanent-range/",
+  "title": "Prepare seasonal products without confusing your permanent range",
+  "description": "Add seasonal collections and time-limited information without duplicating permanent products or leaving expired promises in the catalogue.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 23,
+  "route": "/blog/run-a-small-instagram-promotion-with-a-written-stop-rule/",
+  "title": "Run a small Instagram promotion with a written stop rule",
+  "description": "Plan a limited Instagram promotion with a defined budget, useful measurement and clear reasons to pause before spending more.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 26,
+  "route": "/blog/prepare-product-proof-for-a-small-brand-buyers-have-never-met/",
+  "title": "Prepare product proof for a small brand buyers have never met",
+  "description": "Build trustworthy product evidence for an unfamiliar shop using accurate photos, clear identity, realistic promises and genuine customer context.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 27,
+  "route": "/blog/replace-repetitive-instagram-replies-with-a-controlled-workflow/",
+  "title": "Replace repetitive Instagram replies with a controlled workflow",
+  "description": "Reduce repetitive Instagram enquiries with maintained answers, clear handoffs and human checks instead of uncontrolled automation.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 28,
+  "route": "/blog/separate-instagram-attention-from-profitable-orders/",
+  "title": "Separate Instagram attention from profitable orders",
+  "description": "Evaluate Instagram activity through completed orders and contribution, keeping reach, revenue, costs and cash separate.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 29,
+  "route": "/blog/keep-selling-when-instagram-is-not-your-main-source-of-customers/",
+  "title": "Keep selling when Instagram is not your main source of customers",
+  "description": "Build a sales routine beyond Instagram using a dependable catalogue, relevant channels and measured experiments.",
+  "category": "Instagram",
+  "minutes": 4
+},
+{
+  "id": 42,
+  "route": "/blog/explain-dispatch-estimates-clearly-in-a-whatsapp-conversation/",
+  "title": "Explain dispatch estimates clearly in a WhatsApp conversation",
+  "description": "Explain preparation, dispatch and delivery separately so a WhatsApp customer understands what is estimated and what has actually happened.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 43,
+  "route": "/blog/close-cancelled-whatsapp-orders-without-leaving-stock-on-hold/",
+  "title": "Close cancelled WhatsApp orders without leaving stock on hold",
+  "description": "Cancel a chat-led order cleanly by reconciling the order state, stock reservation, payment status and customer acknowledgement.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 44,
+  "route": "/blog/choose-between-chat-led-checkout-and-a-structured-order-form/",
+  "title": "Choose between chat-led checkout and a structured order form",
+  "description": "Compare chat-led ordering with a structured form using product complexity, error risk, customer needs and operational capacity.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 45,
+  "route": "/blog/keep-customer-addresses-out-of-shared-promotional-spreadsheets/",
+  "title": "Keep customer addresses out of shared promotional spreadsheets",
+  "description": "Separate promotional planning from fulfilment data so customer addresses are accessible only where the work genuinely requires them.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 46,
+  "route": "/blog/set-response-hours-without-sounding-unavailable/",
+  "title": "Set response hours without sounding unavailable",
+  "description": "Set clear response hours, useful acknowledgements and escalation routes while avoiding promises of constant availability.",
+  "category": "WhatsApp",
+  "minutes": 4
+}
+,{
+  "id": 47,
+  "route": "/blog/use-a-product-link-instead-of-rebuilding-your-catalogue-in-every-chat/",
+  "title": "Use a product link instead of rebuilding your catalogue in every chat",
+  "description": "Use maintained product links to answer WhatsApp enquiries while preserving helpful context and a clear order-confirmation process.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 48,
+  "route": "/blog/plan-a-whatsapp-product-announcement-around-permission-and-relevance/",
+  "title": "Plan a WhatsApp product announcement around permission and relevance",
+  "description": "Prepare a WhatsApp product announcement using relevant permission, accurate availability and a clear way to stop future promotions.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 49,
+  "route": "/blog/recognise-when-manual-whatsapp-order-handling-needs-a-better-system/",
+  "title": "Recognise when manual WhatsApp order handling needs a better system",
+  "description": "Recognise operational warning signs in manual WhatsApp orders and choose a focused system improvement without disrupting active customers.",
+  "category": "WhatsApp",
+  "minutes": 4
+},
+{
+  "id": 65,
+  "route": "/blog/write-a-product-page-question-section-from-genuine-enquiries/",
+  "title": "Write a product-page question section from genuine enquiries",
+  "description": "Turn genuine product enquiries into a useful question section with specific answers, clear limits and regular maintenance.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 66,
+  "route": "/blog/display-customer-reviews-without-hiding-their-context/",
+  "title": "Display customer reviews without hiding their context",
+  "description": "Display genuine customer reviews with product, timing and incentive context so feedback informs rather than misleads buyers.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 67,
+  "route": "/blog/photograph-product-scale-when-customers-cannot-hold-the-item/",
+  "title": "Photograph product scale when customers cannot hold the item",
+  "description": "Show product size with measured dimensions, honest reference objects and consistent photographs that reduce scale confusion.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 68,
+  "route": "/blog/present-colour-choices-without-promising-identical-screens/",
+  "title": "Present colour choices without promising identical screens",
+  "description": "Present product colours with consistent photographs, clear labels and honest limitations without using screen variation as an excuse for inaccurate images.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 69,
+  "route": "/blog/maintain-catalogue-accuracy-after-the-launch-checklist-is-finished/",
+  "title": "Maintain catalogue accuracy after the launch checklist is finished",
+  "description": "Keep a launched catalogue accurate through ownership, change triggers, scheduled checks and safe correction of product information.",
+  "category": "Catalogue",
+  "minutes": 4
+},
+{
+  "id": 76,
+  "route": "/blog/allocate-limited-stock-between-online-and-in-person-sales/",
+  "title": "Allocate limited stock between online and in-person sales",
+  "description": "Allocate scarce units across a website, market stall and other channels without counting the same item as available more than once.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 80,
+  "route": "/blog/plan-made-to-order-capacity-separately-from-finished-stock/",
+  "title": "Plan made-to-order capacity separately from finished stock",
+  "description": "Plan handmade and made-to-order work using materials, labour capacity and committed slots rather than treating every possible item as finished stock.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 81,
+  "route": "/blog/use-a-waiting-list-without-treating-interest-as-paid-demand/",
+  "title": "Use a waiting list without treating interest as paid demand",
+  "description": "Use a waiting list to record interest, communicate availability and invite a later purchase without implying that stock or payment is secured.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 82,
+  "route": "/blog/handle-a-sold-out-item-after-a-customer-has-ordered-it/",
+  "title": "Handle a sold-out item after a customer has ordered it",
+  "description": "Respond to a stock shortage after an order by checking the commitment, explaining the facts and agreeing a resolution without silent substitution.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 84,
+  "route": "/blog/track-sample-pieces-gifts-and-photoshoot-stock/",
+  "title": "Track sample pieces, gifts and photoshoot stock",
+  "description": "Record samples, gifts and photoshoot pieces as explicit inventory movements so non-sale use does not create unexplained stock shortages.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 85,
+  "route": "/blog/prepare-a-stock-handover-when-another-person-helps-pack/",
+  "title": "Prepare a stock handover when another person helps pack",
+  "description": "Hand over stock and packing responsibilities with clear references, movement rules and exception handling rather than relying on verbal instructions.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 86,
+  "route": "/blog/spot-slow-moving-stock-before-reaching-for-a-discount/",
+  "title": "Spot slow-moving stock before reaching for a discount",
+  "description": "Diagnose slow-moving inventory using age, demand, presentation and contribution before choosing a discount or another action.",
+  "category": "Stock",
+  "minutes": 4
+}
+,{
+  "id": 87,
+  "route": "/blog/run-a-safe-stock-sync-test-before-trusting-an-integration/",
+  "title": "Run a safe stock-sync test before trusting an integration",
+  "description": "Test stock synchronisation with controlled sales, cancellations and failures before relying on it across channels.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 88,
+  "route": "/blog/prevent-duplicate-order-entry-across-messages-and-your-store/",
+  "title": "Prevent duplicate order entry across messages and your store",
+  "description": "Prevent one customer request from becoming multiple orders by using a stable reference, one creation point and a reconciliation process.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 89,
+  "route": "/blog/build-a-stock-review-that-takes-decisions-not-just-counts/",
+  "title": "Build a stock review that takes decisions, not just counts",
+  "description": "Turn a stock review into decisions about availability, replenishment, discrepancies and ageing inventory with clear owners and follow-up.",
+  "category": "Stock",
+  "minutes": 4
+},
+{
+  "id": 96,
+  "route": "/blog/compare-delivery-partners-using-your-actual-shipment-mix/",
+  "title": "Compare delivery partners using your actual shipment mix",
+  "description": "Compare couriers using representative parcels, destinations, service limits, support and settled costs rather than one headline rate.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 99,
+  "route": "/blog/handle-an-unsuccessful-delivery-before-it-becomes-a-return/",
+  "title": "Handle an unsuccessful delivery before it becomes a return",
+  "description": "Investigate unsuccessful delivery events quickly, confirm details privately and coordinate the next attempt without guaranteeing an outcome.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 100,
+  "route": "/blog/investigate-a-parcel-marked-delivered-but-not-received/",
+  "title": "Investigate a parcel marked delivered but not received",
+  "description": "Handle a delivered-but-not-received report with respectful verification, carrier evidence and a documented resolution process.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 101,
+  "route": "/blog/set-a-shipping-charge-without-hiding-the-total-until-checkout/",
+  "title": "Set a shipping charge without hiding the total until checkout",
+  "description": "Set and explain delivery charges using actual fulfilment costs, clear conditions and a visible final total before the customer commits.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 102,
+  "route": "/blog/evaluate-free-shipping-against-your-order-contribution/",
+  "title": "Evaluate free shipping against your order contribution",
+  "description": "Evaluate a free-shipping offer through order contribution, eligibility and measured customer behaviour rather than assuming it increases profit.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 103,
+  "route": "/blog/make-cash-on-delivery-promises-match-courier-support/",
+  "title": "Make cash-on-delivery promises match courier support",
+  "description": "Offer cash on delivery only where the selected courier and operating process support it, with clear customer expectations and reconciliation.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 104,
+  "route": "/blog/reconcile-cod-collections-without-confusing-sales-with-settled-cash/",
+  "title": "Reconcile COD collections without confusing sales with settled cash",
+  "description": "Reconcile cash-on-delivery settlements by shipment, collection amount, deductions and bank receipt without counting unsettled orders as available cash.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 105,
+  "route": "/blog/build-a-return-to-origin-log-that-identifies-fixable-causes/",
+  "title": "Build a return-to-origin log that identifies fixable causes",
+  "description": "Record return-to-origin cases with evidence-supported causes, costs and follow-up actions instead of treating every return as customer refusal.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 106,
+  "route": "/blog/arrange-a-return-pickup-without-promising-an-instant-refund/",
+  "title": "Arrange a return pickup without promising an instant refund",
+  "description": "Coordinate return pickup, inspection and refund communication as separate stages with realistic expectations and clear ownership.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 107,
+  "route": "/blog/plan-dispatch-capacity-for-a-festival-order-spike/",
+  "title": "Plan dispatch capacity for a festival order spike",
+  "description": "Plan festival dispatch capacity from packing time, stock, materials and carrier cutoffs before promising a large promotional order window.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 108,
+  "route": "/blog/prepare-an-international-enquiry-before-quoting-a-delivery-date/",
+  "title": "Prepare an international enquiry before quoting a delivery date",
+  "description": "Prepare an international shipping enquiry by verifying the item, destination, service, documentation and cost before promising delivery.",
+  "category": "Shipping",
+  "minutes": 4
+},
+{
+  "id": 109,
+  "route": "/blog/tell-a-customer-about-shipping-damage-with-a-resolution-plan/",
+  "title": "Tell a customer about shipping damage with a resolution plan",
+  "description": "Respond to shipping damage with a proportionate evidence request, a clear customer-resolution process and a separate carrier investigation.",
+  "category": "Shipping",
+  "minutes": 4
+}
+,{
+  "id": 111,
+  "route": "/blog/ask-for-an-order-reference-without-collecting-unnecessary-data/",
+  "title": "Ask for an order reference without collecting unnecessary data",
+  "description": "Identify the right order with a minimal, private support check instead of collecting unnecessary customer information.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 116,
+  "route": "/blog/ask-for-product-feedback-without-buying-a-positive-rating/",
+  "title": "Ask for product feedback without buying a positive rating",
+  "description": "Ask for honest product feedback with a neutral invitation, clear context and no reward tied to a positive rating.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 118,
+  "route": "/blog/keep-refund-approval-separate-from-refund-completion/",
+  "title": "Keep refund approval separate from refund completion",
+  "description": "Communicate refunds accurately by tracking approval, initiation, processing and confirmed receipt as distinct stages.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 120,
+  "route": "/blog/set-a-custom-order-approval-checkpoint-before-production/",
+  "title": "Set a custom-order approval checkpoint before production",
+  "description": "Create a clear custom-order approval checkpoint that records specifications, price, timing and change handling before production begins.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 121,
+  "route": "/blog/explain-normal-handmade-variation-without-dismissing-a-defect/",
+  "title": "Explain normal handmade variation without dismissing a defect",
+  "description": "Explain expected handmade variation with concrete product information while treating defects and incorrect specifications as separate issues.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 122,
+  "route": "/blog/protect-support-conversations-when-a-screenshot-is-requested/",
+  "title": "Protect support conversations when a screenshot is requested",
+  "description": "Request and share support screenshots safely by limiting the image to the relevant issue and removing unrelated personal or payment information.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 123,
+  "route": "/blog/escalate-an-unresolved-complaint-with-a-usable-case-summary/",
+  "title": "Escalate an unresolved complaint with a usable case summary",
+  "description": "Escalate a support case with a concise factual summary, clear ownership and the decision needed instead of forwarding an entire chat.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 124,
+  "route": "/blog/write-a-service-apology-that-does-not-make-another-false-promise/",
+  "title": "Write a service apology that does not make another false promise",
+  "description": "Write a practical service apology that acknowledges the issue, explains the next verified action and avoids another unsupported promise.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 125,
+  "route": "/blog/create-a-support-handover-for-weekends-and-holidays/",
+  "title": "Create a support handover for weekends and holidays",
+  "description": "Prepare weekend and holiday support coverage with a clear case handover, limited access and realistic customer expectations.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 126,
+  "route": "/blog/use-saved-responses-without-making-every-customer-repeat-themselves/",
+  "title": "Use saved responses without making every customer repeat themselves",
+  "description": "Use saved support replies as maintained prompts with checked details, not as substitutes for reading the customer's case.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 127,
+  "route": "/blog/measure-support-workload-without-rewarding-rushed-closures/",
+  "title": "Measure support workload without rewarding rushed closures",
+  "description": "Measure support demand, unresolved work and response quality without encouraging staff to close cases before customers receive a useful outcome.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 128,
+  "route": "/blog/spot-a-payment-or-account-security-scam-in-a-customer-conversation/",
+  "title": "Spot a payment or account-security scam in a customer conversation",
+  "description": "Recognise suspicious payment and account messages, verify through official channels and protect authentication details during customer conversations.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 129,
+  "route": "/blog/close-a-resolved-case-and-capture-the-lesson-for-your-shop/",
+  "title": "Close a resolved case and capture the lesson for your shop",
+  "description": "Close customer cases only after the agreed action is complete, then capture a concise operational lesson without retaining unnecessary personal details.",
+  "category": "Customer service",
+  "minutes": 4
+},
+{
+  "id": 135,
+  "route": "/blog/improve-a-product-page-before-buying-more-traffic/",
+  "title": "Improve a product page before buying more traffic",
+  "description": "Repair product-page buying friction before increasing paid traffic, using a focused audit and measured changes.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 139,
+  "route": "/blog/pitch-a-local-stockist-with-a-clear-wholesale-enquiry/",
+  "title": "Pitch a local stockist with a clear wholesale enquiry",
+  "description": "Approach a suitable local retailer with a concise wholesale proposal covering product fit, supply capacity and commercial questions.",
+  "category": "Growth",
+  "minutes": 4
+}
+,{
+  "id": 140,
+  "route": "/blog/decide-whether-your-next-hire-should-handle-orders-or-marketing/",
+  "title": "Decide whether your next hire should handle orders or marketing",
+  "description": "Choose an operations or marketing hire by measuring the business bottleneck, defining useful work and checking sustainable capacity.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 141,
+  "route": "/blog/hand-over-a-repeatable-shop-task-to-a-virtual-assistant/",
+  "title": "Hand over a repeatable shop task to a virtual assistant",
+  "description": "Delegate a repeatable shop task to a virtual assistant with clear inputs, access limits, examples and exception handling.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 142,
+  "route": "/blog/use-ai-to-draft-marketing-without-inventing-product-facts/",
+  "title": "Use AI to draft marketing without inventing product facts",
+  "description": "Use AI for marketing drafts while keeping product claims, prices, testimonials and operational promises tied to verified business facts.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 143,
+  "route": "/blog/audit-ai-generated-product-photos-before-customers-see-them/",
+  "title": "Audit AI-generated product photos before customers see them",
+  "description": "Check AI-assisted product images for factual accuracy, scale, materials and included items before using them in a customer-facing catalogue.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 144,
+  "route": "/blog/build-an-honest-abandoned-checkout-follow-up-experiment/",
+  "title": "Build an honest abandoned-checkout follow-up experiment",
+  "description": "Test abandoned-checkout follow-up with valid contact permission, accurate basket information and a controlled measurement plan.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 145,
+  "route": "/blog/use-customer-questions-to-choose-the-next-useful-article/",
+  "title": "Use customer questions to choose the next useful article",
+  "description": "Turn genuine customer questions into useful article topics, with a clear reader problem, verified answer and relevant product connection.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 146,
+  "route": "/blog/write-a-customer-story-request-that-leaves-room-for-refusal/",
+  "title": "Write a customer-story request that leaves room for refusal",
+  "description": "Request a customer story with clear purpose, optional participation, limited information and separate permission for publication.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 147,
+  "route": "/blog/bring-repeat-buyers-back-with-relevance-rather-than-constant-discounts/",
+  "title": "Bring repeat buyers back with relevance rather than constant discounts",
+  "description": "Encourage repeat purchases with relevant products, dependable service and permission-based communication instead of constant discounts.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 148,
+  "route": "/blog/review-a-month-of-orders-before-expanding-the-catalogue/",
+  "title": "Review a month of orders before expanding the catalogue",
+  "description": "Review fulfilled orders, contribution, customer questions and operational strain before deciding which products to add next.",
+  "category": "Growth",
+  "minutes": 4
+},
+{
+  "id": 149,
+  "route": "/blog/choose-the-next-sales-channel-without-abandoning-the-one-that-works/",
+  "title": "Choose the next sales channel without abandoning the one that works",
+  "description": "Evaluate a new sales channel with a bounded experiment while preserving existing orders, stock control and customer support.",
+  "category": "Growth",
+  "minutes": 4
+}
+,{"id":150,"title":"Build a crochet launch range around repeatable pieces","route":"/blog/build-a-crochet-launch-range-around-repeatable-pieces/","category":"Crochet","description":"Choose a first crochet range using repeatable patterns, material availability, finishing time and clear product specifications.","minutes":4},
+{"id":151,"title":"Price a crochet bouquet from stems, assembly and finishing time","route":"/blog/price-a-crochet-bouquet-from-stems-assembly-and-finishing-time/","category":"Crochet","description":"Cost a crochet bouquet using stem-level materials, active labour, assembly, wrapping and the actual packed order.","minutes":4},
+{"id":152,"title":"Turn a custom crochet request into a makeable specification","route":"/blog/turn-a-custom-crochet-request-into-a-makeable-specification/","category":"Crochet","description":"Capture flower, colour, size and construction choices in a crochet custom-order brief that can be approved and made consistently.","minutes":4},
+{"id":153,"title":"Keep yarn lots and colour approvals attached to crochet orders","route":"/blog/keep-yarn-lots-and-colour-approvals-attached-to-crochet-orders/","category":"Crochet","description":"Keep crochet yarn identity, dye lots and customer colour approval connected so substitutions and repeat orders are handled honestly.","minutes":4},
+{"id":154,"title":"Show the scale and structure of crochet bags online","route":"/blog/show-the-scale-and-structure-of-crochet-bags-online/","category":"Crochet","description":"Photograph crochet bags to explain usable dimensions, openings, lining, straps and construction without implying an untested carrying capacity.","minutes":4},
+{"id":155,"title":"Write care instructions for the finished crochet item","route":"/blog/write-care-instructions-for-the-finished-crochet-item/","category":"Crochet","description":"Prepare crochet care instructions from the actual yarn, construction and attached components rather than copying one universal washing recipe.","minutes":4},
+{"id":156,"title":"Schedule crochet festival orders without overbooking the maker","route":"/blog/schedule-crochet-festival-orders-without-overbooking-the-maker/","category":"Crochet","description":"Schedule crochet festival orders using stem or piece counts, active labour, finishing and material readiness before accepting event-date commitments.","minutes":4},
+{"id":157,"title":"Pack crochet flowers so the arrangement survives dispatch","route":"/blog/pack-crochet-flowers-so-the-arrangement-survives-dispatch/","category":"Crochet","description":"Pack crochet flower arrangements using their actual structure, included parts and parcel movement rather than treating soft yarn as unbreakable.","minutes":4},
+{"id":158,"title":"Explain crochet garment measurements without treating stretch as one size","route":"/blog/explain-crochet-garment-measurements-without-treating-stretch-as-one-size/","category":"Crochet","description":"Explain crochet garment fit using finished measurements, intended ease and construction-specific information rather than a universal stretch claim.","minutes":4},
+{"id":159,"title":"Prepare a crochet collection page that separates ready pieces from custom work","route":"/blog/prepare-a-crochet-collection-page-that-separates-ready-pieces-from-custom-work/","category":"Crochet","description":"Organise a crochet collection so customers can distinguish ready-to-dispatch pieces, repeatable made-to-order designs and genuinely custom enquiries.","minutes":4}
+,{"id":160,"title":"Describe jewellery metals and finishes without blurring the difference","route":"/blog/describe-jewellery-metals-and-finishes-without-blurring-the-difference/","category":"Jewellery","description":"A jewellery description framework that separates base material, surface finish, colour and evidence before customers buy.","minutes":4},
+{"id":161,"title":"Help customers compare necklace length and pendant scale","route":"/blog/help-customers-compare-necklace-length-and-pendant-scale/","category":"Jewellery","description":"Show chain length, pendant size and extension range so customers can compare necklaces without relying on one model photograph.","minutes":4},
+{"id":162,"title":"Build a ring-size enquiry that records the measurement method","route":"/blog/build-a-ring-size-enquiry-that-records-the-measurement-method/","category":"Jewellery","description":"Structure ring-size enquiries around an identified sizing system, measurement method and the limits of remote advice.","minutes":4},
+{"id":163,"title":"Photograph earrings as pairs with useful weight and closure details","route":"/blog/photograph-earrings-as-pairs-with-useful-weight-and-closure-details/","category":"Jewellery","description":"Photograph earrings with pair quantities, individual weight, fastening and rear views that help customers understand the actual item.","minutes":4},
+{"id":164,"title":"Keep gemstone descriptions tied to supplier evidence","route":"/blog/keep-gemstone-descriptions-tied-to-supplier-evidence/","category":"Jewellery","description":"Keep gemstone identity, treatment, origin and report references separate so jewellery descriptions do not outrun the available evidence.","minutes":4},
+{"id":165,"title":"Prepare an artificial-jewellery catalogue for everyday buying questions","route":"/blog/prepare-an-artificial-jewellery-catalogue-for-everyday-buying-questions/","category":"Jewellery","description":"Organise an artificial-jewellery catalogue around materials, dimensions, included pieces and practical buying questions.","minutes":4},
+{"id":166,"title":"Record jewellery sets and their individual components accurately","route":"/blog/record-jewellery-sets-and-their-individual-components-accurately/","category":"Jewellery","description":"Use a component record to sell and pack jewellery sets accurately, including mixed pairs, detachable parts and replacement requests.","minutes":4},
+{"id":167,"title":"Handle a jewellery repair enquiry without promising the wrong service","route":"/blog/handle-a-jewellery-repair-enquiry-without-promising-the-wrong-service/","category":"Jewellery","description":"Collect the right information for a jewellery repair enquiry while keeping inspection, quotation and approval separate.","minutes":4},
+{"id":168,"title":"Present precious-metal verification information without inventing certification","route":"/blog/present-precious-metal-verification-information-without-inventing-certification/","category":"Jewellery","description":"Present verified precious-metal information clearly, with official checking routes and no borrowed certification claims.","minutes":4},
+{"id":169,"title":"Pack delicate jewellery with a final component check","route":"/blog/pack-delicate-jewellery-with-a-final-component-check/","category":"Jewellery","description":"Build a jewellery packing check around components, movement, surface protection and the exact order contents.","minutes":4}
+,{"id":170,"title":"Build gift-hamper options from a controlled contents list","route":"/blog/build-gift-hamper-options-from-a-controlled-contents-list/","category":"Gifts","description":"Define hamper contents, quantities, packaging and substitution rules before offering several gift options.","minutes":4},
+{"id":171,"title":"Approve personalised gift wording before making the item","route":"/blog/approve-personalised-gift-wording-before-making-the-item/","category":"Gifts","description":"Create a clear text-proof and approval process for names, dates and messages on personalised gifts.","minutes":4},
+{"id":172,"title":"Plan a corporate gifting enquiry around quantities and delivery groups","route":"/blog/plan-a-corporate-gifting-enquiry-around-quantities-and-delivery-groups/","category":"Gifts","description":"Plan a corporate gift enquiry with product quantities, personalisation, approvals and delivery groups kept separate.","minutes":4},
+{"id":173,"title":"Design a gift guide around recipient needs rather than stereotypes","route":"/blog/design-a-gift-guide-around-recipient-needs-rather-than-stereotypes/","category":"Gifts","description":"Build gift-guide categories around interests, practical constraints and the information a buyer needs to choose.","minutes":4},
+{"id":174,"title":"Separate a gift deadline from a dispatch promise","route":"/blog/separate-a-gift-deadline-from-a-dispatch-promise/","category":"Gifts","description":"Separate making, approval, dispatch and delivery estimates when customers need a gift for a particular date.","minutes":4},
+{"id":175,"title":"Manage surprise-gift addresses and recipient communication","route":"/blog/manage-surprise-gift-addresses-and-recipient-communication/","category":"Gifts","description":"Keep surprise-gift delivery practical by separating purchaser instructions, recipient contact and the limits of secrecy.","minutes":4},
+{"id":176,"title":"Price gift wrapping as a defined service rather than a vague add-on","route":"/blog/price-gift-wrapping-as-a-defined-service-rather-than-a-vague-add-on/","category":"Gifts","description":"Define gift wrapping by materials, item coverage, message handling and packing time before setting an add-on price.","minutes":4},
+{"id":177,"title":"Create a custom photo-gift proof that customers can inspect","route":"/blog/create-a-custom-photo-gift-proof-that-customers-can-inspect/","category":"Gifts","description":"Prepare photo-gift proofs that reveal cropping, placement and resolution concerns before production begins.","minutes":4},
+{"id":178,"title":"Handle unavailable hamper components without silent substitutions","route":"/blog/handle-unavailable-hamper-components-without-silent-substitutions/","category":"Gifts","description":"Offer explicit hamper substitutions with updated contents and pricing instead of quietly replacing unavailable items.","minutes":4},
+{"id":179,"title":"Prepare a small gift collection for an occasion-based launch","route":"/blog/prepare-a-small-gift-collection-for-an-occasion-based-launch/","category":"Gifts","description":"Launch an occasion-based gift range with a small coherent selection, complete specifications and realistic fulfilment capacity.","minutes":4}
+,{"id":180,"title":"Build garment measurement tables from the actual clothing","route":"/blog/build-garment-measurement-tables-from-the-actual-clothing/","category":"Clothing","description":"Create product-specific clothing measurements with clear units, measurement points and a distinction between body and garment size.","minutes":4},
+{"id":181,"title":"Show clothing fit with model and garment context","route":"/blog/show-clothing-fit-with-model-and-garment-context/","category":"Clothing","description":"Give clothing photographs enough context to show the selected size, garment shape and styling changes honestly.","minutes":4},
+{"id":182,"title":"Keep a boutique size-and-colour matrix understandable","route":"/blog/keep-a-boutique-size-and-colour-matrix-understandable/","category":"Clothing","description":"Keep boutique stock organised by the exact size-and-colour combination customers can order.","minutes":4},
+{"id":183,"title":"Describe fabric opacity, lining and finish with useful evidence","route":"/blog/describe-fabric-opacity-lining-and-finish-with-useful-evidence/","category":"Clothing","description":"Describe clothing fabric, lining and opacity through observable details and confirmed specifications rather than vague quality claims.","minutes":4},
+{"id":184,"title":"Prepare made-to-measure clothing enquiries for a fitting discussion","route":"/blog/prepare-made-to-measure-clothing-enquiries-for-a-fitting-discussion/","category":"Clothing","description":"Prepare made-to-measure clothing enquiries with a clear design brief, measurement process and fitting responsibilities.","minutes":4},
+{"id":185,"title":"Show the contents and sizing of a coordinated clothing set","route":"/blog/show-the-contents-and-sizing-of-a-coordinated-clothing-set/","category":"Clothing","description":"Describe every piece in a clothing set, including separate measurements and whether mixed sizes are available.","minutes":4},
+{"id":186,"title":"Check clothing photos against the exact variant being sold","route":"/blog/check-clothing-photos-against-the-exact-variant-being-sold/","category":"Clothing","description":"Audit clothing photographs against the real colour, size, print and construction variant attached to each listing.","minutes":4},
+{"id":187,"title":"Prepare a clothing size-exchange enquiry without assuming eligibility","route":"/blog/prepare-a-clothing-size-exchange-enquiry-without-assuming-eligibility/","category":"Clothing","description":"Collect clothing size-exchange information clearly while keeping assessment, availability and policy decisions separate.","minutes":4},
+{"id":188,"title":"Launch a small clothing drop with complete product information","route":"/blog/launch-a-small-clothing-drop-with-complete-product-information/","category":"Clothing","description":"Launch a small clothing collection only after variants, measurements, photographs and fulfilment information are ready.","minutes":4},
+{"id":189,"title":"Keep alteration requests separate from standard clothing orders","route":"/blog/keep-alteration-requests-separate-from-standard-clothing-orders/","category":"Clothing","description":"Keep clothing alterations as a reviewed specification with clear feasibility, approval and production status.","minutes":4}
+,{"id":190,"title":"Sell cushion covers without leaving insert and closure details unclear","route":"/blog/sell-cushion-covers-without-leaving-insert-and-closure-details-unclear/","category":"Home décor","description":"Make cushion-cover listings clear about covers, inserts, dimensions, closures and pattern placement.","minutes":4},
+{"id":191,"title":"Show wall décor dimensions without inventing installation advice","route":"/blog/show-wall-decor-dimensions-without-inventing-installation-advice/","category":"Home décor","description":"Present wall décor with accurate size, weight and supplied hardware information while leaving installation decisions to appropriate guidance.","minutes":4},
+{"id":192,"title":"Prepare a ceramic décor listing around shape, finish and fragility","route":"/blog/prepare-a-ceramic-decor-listing-around-shape-finish-and-fragility/","category":"Home décor","description":"Describe decorative ceramics through measured shape, visible finish, intended use and careful packing information.","minutes":4},
+{"id":193,"title":"Photograph rugs with dimensions and room-scale context","route":"/blog/photograph-rugs-with-dimensions-and-room-scale-context/","category":"Home décor","description":"Show rug dimensions, edge details and room-scale context without making a small rug look larger than it is.","minutes":4},
+{"id":194,"title":"Create a home-décor set without confusing the individual pieces","route":"/blog/create-a-home-decor-set-without-confusing-the-individual-pieces/","category":"Home décor","description":"Define decorative sets with clear quantities, component dimensions and a packing record that matches the styled arrangement.","minutes":4},
+{"id":195,"title":"Describe a handmade bag through usable internal measurements","route":"/blog/describe-a-handmade-bag-through-usable-internal-measurements/","category":"Bags","description":"Describe a handmade bag with opening, internal space and handle measurements rather than relying only on its outer size.","minutes":4},
+{"id":196,"title":"Show bag pockets, closures and lining before the customer asks","route":"/blog/show-bag-pockets-closures-and-lining-before-the-customer-asks/","category":"Bags","description":"Show the inside of a bag with pocket dimensions, closures and lining details that match the selected product.","minutes":4},
+{"id":197,"title":"Record custom bag strap requests as an exact specification","route":"/blog/record-custom-bag-strap-requests-as-an-exact-specification/","category":"Bags","description":"Record custom bag straps by length, width, attachment and compatibility before agreeing to make or replace one.","minutes":4},
+{"id":198,"title":"Prepare a pouch range around what each size actually holds","route":"/blog/prepare-a-pouch-range-around-what-each-size-actually-holds/","category":"Bags","description":"Build pouch sizes around measured openings and realistic contents demonstrations rather than small, medium and large labels alone.","minutes":4},
+{"id":199,"title":"Inspect bag hardware and seams before packing","route":"/blog/inspect-bag-hardware-and-seams-before-packing/","category":"Bags","description":"Inspect a finished handmade bag by its construction, hardware and order specification before it is packed.","minutes":4}
+,{"id":200,"title":"Build a physical art-print listing with clear format and frame details","route":"/blog/build-a-physical-art-print-listing-with-clear-format-and-frame-details/","category":"Art and prints","description":"Make physical art-print listings clear about paper size, image area, borders, frames and what arrives in the parcel.","minutes":4},
+{"id":201,"title":"Explain open and limited print editions without manufactured scarcity","route":"/blog/explain-open-and-limited-print-editions-without-manufactured-scarcity/","category":"Art and prints","description":"Explain open and limited print editions with a consistent edition record and no invented scarcity.","minutes":4},
+{"id":202,"title":"Prepare a commissioned artwork brief with staged approvals","route":"/blog/prepare-a-commissioned-artwork-brief-with-staged-approvals/","category":"Art and prints","description":"Structure an artwork commission around a clear brief, staged approvals and defined changes rather than an open-ended promise.","minutes":4},
+{"id":203,"title":"Pack paper prints with a clear condition and contents record","route":"/blog/pack-paper-prints-with-a-clear-condition-and-contents-record/","category":"Art and prints","description":"Check paper-print condition, edition details and packaging contents before dispatch without claiming damage-proof delivery.","minutes":4},
+{"id":204,"title":"Separate original artwork from reproductions in the catalogue","route":"/blog/separate-original-artwork-from-reproductions-in-the-catalogue/","category":"Art and prints","description":"Keep original artworks, physical reproductions and format options distinct in titles, prices and product records.","minutes":4},
+{"id":205,"title":"List scrunchies with dimensions, materials and pack quantities","route":"/blog/list-scrunchies-with-dimensions-materials-and-pack-quantities/","category":"Handmade accessories","description":"Describe scrunchies with measured size, confirmed materials, colour options and an unambiguous pack quantity.","minutes":4},
+{"id":206,"title":"Describe handmade hair clips without unsupported hold claims","route":"/blog/describe-handmade-hair-clips-without-unsupported-hold-claims/","category":"Handmade accessories","description":"Describe handmade hair clips through dimensions, fastening and evidence without promising universal grip or safety.","minutes":4},
+{"id":207,"title":"Build a keychain listing around attachment and personalisation details","route":"/blog/build-a-keychain-listing-around-attachment-and-personalisation-details/","category":"Handmade accessories","description":"Make keychain listings clear about attachment, dimensions, personalisation and the difference between decorative and functional parts.","minutes":4},
+{"id":208,"title":"Offer embroidered patches with clear backing and application limits","route":"/blog/offer-embroidered-patches-with-clear-backing-and-application-limits/","category":"Handmade accessories","description":"Describe embroidered patches by size, backing and application limits without assuming every fabric or surface is suitable.","minutes":4},
+{"id":209,"title":"Track matching accessory sets without losing component identity","route":"/blog/track-matching-accessory-sets-without-losing-component-identity/","category":"Handmade accessories","description":"Manage accessory sets through named components, exact quantities and a shared packing record rather than a collection name alone.","minutes":4}
+,
+{"id":210,"route":"/blog/shopify-or-woocommerce-decide-who-will-maintain-your-store/","title":"Shopify or WooCommerce: decide who will maintain your store","description":"Compare Shopify and WooCommerce through updates, extensions, recovery and daily ownership—not a generic feature score or headline subscription.","category":"Platform comparisons","minutes":5},
+{"id":211,"route":"/blog/compare-hosted-and-self-managed-stores-by-the-work-you-can-own/","title":"Compare hosted and self-managed stores by the work you can own","description":"Map hosted and self-managed storefront responsibilities before deciding how much infrastructure, maintenance and recovery work your business can own.","category":"Platform comparisons","minutes":5},
+{"id":212,"route":"/blog/wix-or-squarespace-compare-a-small-product-range-before-choosing/","title":"Wix or Squarespace: compare a small product range before choosing","description":"Compare Wix and Squarespace for a small catalogue with real product data, mobile tasks, support boundaries and applicable commerce costs.","category":"Platform comparisons","minutes":4},
+{"id":213,"route":"/blog/compare-shopify-wix-and-squarespace-with-one-representative-order/","title":"Compare Shopify, Wix and Squarespace with one representative order","description":"Use one representative order to compare Shopify, Wix and Squarespace fairly, including options, delivery, corrections and the merchant handover.","category":"Platform comparisons","minutes":4},
+{"id":214,"route":"/blog/shortlist-shopify-alternatives-around-the-feature-you-actually-need/","title":"Shortlist Shopify alternatives around the feature you actually need","description":"Build a Shopify-alternative shortlist around one unmet requirement, then verify the workflow, migration cost and reasons to keep your current store.","category":"Platform comparisons","minutes":4},
+{"id":215,"route":"/blog/choose-a-shopify-alternative-for-a-small-made-to-order-catalogue/","title":"Choose a Shopify alternative for a small made-to-order catalogue","description":"Evaluate a Shopify alternative for made-to-order products through specifications, lead times, production capacity and the difference between enquiries and orders.","category":"Platform comparisons","minutes":4},
+{"id":216,"route":"/blog/evaluate-a-wix-replacement-without-discarding-a-working-website/","title":"Evaluate a Wix replacement without discarding a working website","description":"Decide whether to replace a Wix store by separating platform constraints from repairable content, configuration and maintenance issues.","category":"Platform comparisons","minutes":4},
+{"id":217,"route":"/blog/assess-squarespace-alternatives-when-product-operations-become-complex/","title":"Assess Squarespace alternatives when product operations become complex","description":"Evaluate Squarespace alternatives when catalogue options, order handling or integrations become harder to manage, without assuming a platform switch is the only remedy.","category":"Platform comparisons","minutes":4},
+{"id":218,"route":"/blog/marketplace-or-independent-store-separate-reach-from-control/","title":"Marketplace or independent store: separate reach from control","description":"Compare marketplace reach with independent-store control through discovery, customer expectations, operating costs and the responsibilities each route leaves with you.","category":"Platform comparisons","minutes":4},
+{"id":219,"route":"/blog/compare-marketplace-first-and-website-first-launches-for-a-new-range/","title":"Compare marketplace-first and website-first launches for a new range","description":"Choose a marketplace-first or website-first launch around audience access, catalogue readiness and the work needed to test demand safely.","category":"Platform comparisons","minutes":4}
+,
+{"id":220,"route":"/blog/choose-where-repeat-customers-should-place-their-next-order/","title":"Choose where repeat customers should place their next order","description":"Choose a repeat-order route that preserves current options, prices and order clarity without forcing familiar customers through unnecessary steps.","category":"Platform comparisons","minutes":4},
+{"id":221,"route":"/blog/link-hub-or-product-storefront-match-the-page-to-the-buying-task/","title":"Link hub or product storefront: match the page to the buying task","description":"Decide whether a link hub or a product storefront better serves your audience's next task, and avoid unnecessary detours between discovery and purchase.","category":"Platform comparisons","minutes":4},
+{"id":222,"route":"/blog/compare-a-single-checkout-link-with-a-browsable-catalogue/","title":"Compare a single checkout link with a browsable catalogue","description":"Compare a single checkout link with a browsable catalogue by checking selection, availability, order details and how clearly the buyer understands the purchase.","category":"Platform comparisons","minutes":4},
+{"id":223,"route":"/blog/free-store-plan-or-paid-subscription-identify-the-first-real-constraint/","title":"Free store plan or paid subscription: identify the first real constraint","description":"Compare free and paid store plans using the first limit your business will actually encounter, rather than assuming either tier is automatically better value.","category":"Platform comparisons","minutes":4},
+{"id":224,"route":"/blog/compare-two-store-plans-without-counting-irrelevant-features/","title":"Compare two store plans without counting irrelevant features","description":"Compare store plans around essential tasks, total recurring costs and downgrade conditions without being distracted by unused feature counts.","category":"Platform comparisons","minutes":4},
+{"id":225,"route":"/blog/build-a-fair-shortlist-of-indian-storefront-providers/","title":"Build a fair shortlist of Indian storefront providers","description":"Shortlist Indian storefront providers with consistent product tests, documented plan conditions and a fair comparison of operating responsibilities.","category":"Platform comparisons","minutes":4},
+{"id":226,"route":"/blog/compare-store-builders-for-variant-heavy-catalogues/","title":"Compare store builders for variant-heavy catalogues","description":"Test store builders with option combinations, variant stock, imports and order records before moving a variant-heavy catalogue.","category":"Platform comparisons","minutes":4},
+{"id":227,"route":"/blog/evaluate-storefront-providers-for-personalised-orders/","title":"Evaluate storefront providers for personalised orders","description":"Compare personalisation workflows by checking field limits, specification persistence, correction handling and the final production record.","category":"Platform comparisons","minutes":4},
+{"id":228,"route":"/blog/compare-store-platforms-for-a-team-that-shares-order-handling/","title":"Compare store platforms for a team that shares order handling","description":"Compare platforms for shared order handling through handoffs, status meaning, access and the prevention of duplicate work.","category":"Platform comparisons","minutes":4},
+{"id":229,"route":"/blog/choose-a-store-platform-when-delivery-is-partly-local/","title":"Choose a store platform when delivery is partly local","description":"Compare storefronts for local and shipped orders using service areas, pickup rules, timing language and the merchant's dispatch record.","category":"Platform comparisons","minutes":4},
+{"id":230,"route":"/blog/compare-mobile-merchant-workflows-before-choosing-a-builder/","title":"Compare mobile merchant workflows before choosing a builder","description":"Compare mobile store administration using real merchant tasks, from stock changes to order investigation, rather than judging only the customer-facing theme.","category":"Platform comparisons","minutes":4},
+{"id":231,"route":"/blog/lifetime-store-deal-or-subscription-compare-the-service-obligation/","title":"Lifetime store deal or subscription: compare the service obligation","description":"Evaluate lifetime storefront offers against subscriptions by examining service scope, limits, ongoing responsibilities and exit arrangements.","category":"Platform comparisons","minutes":4},
+{"id":232,"route":"/blog/freelancer-or-agency-choose-an-owner-for-your-store-build/","title":"Freelancer or agency: choose an owner for your store build","description":"Choose between a freelancer and an agency by comparing delivery ownership, communication, maintenance and handover for the same store-building scope.","category":"Platform comparisons","minutes":4},
+{"id":233,"route":"/blog/diy-builder-or-commissioned-store-compare-scope-and-handover/","title":"DIY builder or commissioned store: compare scope and handover","description":"Compare a DIY store builder with a commissioned build through your skills, content readiness, implementation scope and handover needs.","category":"Platform comparisons","minutes":4},
+{"id":234,"route":"/blog/compare-a-shopify-theme-purchase-with-an-included-store-template/","title":"Compare a Shopify theme purchase with an included store template","description":"Compare a paid Shopify theme with an included template using your content, required sections, maintenance and the problems the purchase actually solves.","category":"Platform comparisons","minutes":4}
+,
+{"id":235,"route":"/blog/built-in-reviews-or-a-separate-review-tool-compare-the-moderation-work/","title":"Built-in reviews or a separate review tool: compare the moderation work","description":"Compare built-in reviews with a separate tool through moderation, provenance, customer privacy, portability and the work needed to keep reviews trustworthy.","category":"Platform comparisons","minutes":4},
+{"id":236,"route":"/blog/compare-payment-providers-without-confusing-checkout-with-settlement/","title":"Compare payment providers without confusing checkout with settlement","description":"Compare payment providers by separating checkout, authorisation, settlement, reconciliation and support instead of choosing only by a displayed fee.","category":"Platform comparisons","minutes":4},
+{"id":237,"route":"/blog/hosted-payment-page-or-integrated-checkout-compare-the-customer-handoff/","title":"Hosted payment page or integrated checkout: compare the customer handoff","description":"Compare hosted payment pages and integrated checkout by testing the handoff, order connection, failure states and responsibility for payment confirmation.","category":"Platform comparisons","minutes":4},
+{"id":238,"route":"/blog/all-in-one-store-or-an-app-stack-compare-responsibility-as-well-as-features/","title":"All-in-one store or an app stack: compare responsibility as well as features","description":"Compare an all-in-one storefront with a collection of apps through responsibility, duplicated data, ongoing costs and the failure points between tools.","category":"Platform comparisons","minutes":4},
+{"id":239,"route":"/blog/compare-native-integrations-with-manual-exports-for-a-small-store/","title":"Compare native integrations with manual exports for a small store","description":"Compare native integrations and manual exports by examining required freshness, field accuracy, exception handling and the cost of maintaining the connection.","category":"Platform comparisons","minutes":4},
+{"id":240,"route":"/blog/template-builder-or-custom-development-test-the-exception-first/","title":"Template builder or custom development: test the exception first","description":"Decide between a template builder and custom development by testing the requirement the standard setup cannot represent before commissioning a full build.","category":"Platform comparisons","minutes":4},
+{"id":241,"route":"/blog/compare-store-platforms-by-what-you-can-export/","title":"Compare store platforms by what you can export","description":"Compare storefront portability by inspecting sample exports, field completeness, images and the records needed to operate or migrate the business.","category":"Platform comparisons","minutes":4},
+{"id":242,"route":"/blog/compare-store-support-before-a-payment-or-delivery-problem-occurs/","title":"Compare store support before a payment or delivery problem occurs","description":"Evaluate store support with realistic payment and delivery scenarios, clear responsibility boundaries and written escalation routes.","category":"Platform comparisons","minutes":4},
+{"id":243,"route":"/blog/evaluate-store-analytics-without-mistaking-reports-for-attribution/","title":"Evaluate store analytics without mistaking reports for attribution","description":"Compare store analytics by checking event definitions, attribution limits, exports and the business decisions the reports can actually support.","category":"Platform comparisons","minutes":4},
+{"id":244,"route":"/blog/compare-platform-permissions-before-adding-staff/","title":"Compare platform permissions before adding staff","description":"Compare staff permissions by testing who can view, change and export store information, including access removal and business-owned recovery.","category":"Platform comparisons","minutes":4},
+{"id":245,"route":"/blog/compare-catalogue-imports-using-a-difficult-sample/","title":"Compare catalogue imports using a difficult sample","description":"Evaluate catalogue imports with variants, images, corrections and duplicate handling instead of treating a successful upload as proof of a successful migration.","category":"Platform comparisons","minutes":4},
+{"id":246,"route":"/blog/evaluate-a-platform-trial-without-moving-your-live-domain/","title":"Evaluate a platform trial without moving your live domain","description":"Run a storefront trial without moving your live domain, exposing customer records or confusing test activity with real orders.","category":"Platform comparisons","minutes":4},
+{"id":247,"route":"/blog/compare-store-recovery-plans-before-committing-to-a-provider/","title":"Compare store recovery plans before committing to a provider","description":"Compare store recovery arrangements by distinguishing exports, backups, restore tests and the handling of orders created after a saved copy.","category":"Platform comparisons","minutes":4},
+{"id":248,"route":"/blog/product-tags-or-a-direct-store-link-compare-the-route-to-purchase/","title":"Product tags or a direct store link: compare the route to purchase","description":"Compare product tags and direct store links by testing eligibility, product accuracy, the customer handoff and the route that remains available when a feature changes.","category":"Platform comparisons","minutes":4},
+{"id":249,"route":"/blog/compare-social-discovery-with-etsy-marketplace-demand/","title":"Compare social discovery with Etsy marketplace demand","description":"Compare social-led discovery with Etsy for an Indian handmade business, including current eligibility, international selling fit and the work each channel requires.","category":"Platform comparisons","minutes":4},
+{"id":250,"route":"/blog/compare-free-storefront-limits-using-your-next-catalogue-expansion/","title":"Compare free storefront limits using your next catalogue expansion","description":"Evaluate a free storefront against your next catalogue expansion by checking how products, variants, media and archived items count towards its limits.","category":"Platform comparisons","minutes":4},
+{"id":251,"route":"/blog/evaluate-a-builder-demo-with-unavailable-and-failed-states/","title":"Evaluate a builder demo with unavailable and failed states","description":"Evaluate storefront demos with empty, unavailable, invalid and interrupted states so a polished happy path does not hide operational weaknesses.","category":"Platform comparisons","minutes":4},
+{"id":252,"route":"/blog/choose-a-store-builder-for-a-one-person-fulfilment-workflow/","title":"Choose a store builder for a one-person fulfilment workflow","description":"Choose a storefront for a one-person business by testing the daily queue, interruptions, packing information and a manageable support routine.","category":"Platform comparisons","minutes":4},
+{"id":253,"route":"/blog/compare-store-platforms-when-your-range-includes-sets-and-bundles/","title":"Compare store platforms when your range includes sets and bundles","description":"Compare store platforms for sets and bundles by testing component stock, customer choices, packing identity and changes to the bundle.","category":"Platform comparisons","minutes":4},
+{"id":254,"route":"/blog/decide-whether-to-switch-platforms-or-repair-your-current-workflow/","title":"Decide whether to switch platforms or repair your current workflow","description":"Decide whether to change store platforms or repair the current workflow by tracing the problem, testing a bounded fix and comparing migration costs.","category":"Platform comparisons","minutes":4}
+,
+{"id":255,"route":"/blog/separate-markup-from-margin-before-setting-a-selling-price/","title":"Separate markup from margin before setting a selling price","description":"Understand markup and margin with checked examples, a consistent cost boundary and a clear distinction between product spread and business profit.","category":"Pricing decisions","minutes":4},
+{"id":256,"route":"/blog/find-the-break-even-order-count-for-a-small-store/","title":"Find the break-even order count for a small store","description":"Calculate a break-even order count with fixed costs, contribution per order and explicit limits for mixed baskets and changing capacity.","category":"Pricing decisions","minutes":4},
+{"id":257,"route":"/blog/build-a-contribution-margin-sheet-for-each-product/","title":"Build a contribution-margin sheet for each product","description":"Build a contribution-margin worksheet that separates order revenue, variable costs and overhead, with a worked example and checks against double counting.","category":"Pricing decisions","minutes":4},
+{"id":258,"route":"/blog/include-material-waste-without-charging-for-it-twice/","title":"Include material waste without charging for it twice","description":"Include material waste in product costing through measured batch yield, reusable remnants and a check that the same loss is not added twice.","category":"Pricing decisions","minutes":4},
+{"id":259,"route":"/blog/price-a-batch-when-preparation-time-is-shared/","title":"Price a batch when preparation time is shared","description":"Price batch-made products by separating shared preparation from per-item work, using realistic output and checking the cost of smaller batches.","category":"Pricing decisions","minutes":4}
+,
+{"id":260,"route":"/blog/compare-wholesale-and-retail-prices-with-separate-cost-assumptions/","title":"Compare wholesale and retail prices with separate cost assumptions","description":"Compare wholesale and retail prices with different order costs, quantities and payment terms rather than applying an automatic percentage discount.","category":"Pricing decisions","minutes":4},
+{"id":261,"route":"/blog/price-a-product-bundle-without-hiding-its-weakest-margin/","title":"Price a product bundle without hiding its weakest margin","description":"Calculate bundle contribution from the combined items and shared costs before advertising a saving or assuming the set improves margins.","category":"Pricing decisions","minutes":4},
+{"id":262,"route":"/blog/set-a-minimum-order-value-from-actual-handling-costs/","title":"Set a minimum order value from actual handling costs","description":"Estimate a minimum order value from contribution and per-order handling costs, then test whether the threshold makes sense for customers.","category":"Pricing decisions","minutes":4},
+{"id":263,"route":"/blog/review-a-price-increase-without-inventing-customer-tolerance/","title":"Review a price increase without inventing customer tolerance","description":"Review a proposed price increase with cost and contribution scenarios, capacity and customer evidence—without assuming demand will stay unchanged.","category":"Pricing decisions","minutes":4},
+{"id":264,"route":"/blog/use-a-price-range-when-a-custom-specification-is-not-final/","title":"Use a price range when a custom specification is not final","description":"Use a transparent price range for custom work when specifications are incomplete, then replace it with an agreed quote before commitment.","category":"Pricing decisions","minutes":4},
+{"id":265,"route":"/blog/calculate-the-effect-of-a-supplier-cost-increase/","title":"Calculate the effect of a supplier cost increase","description":"Calculate how a supplier cost increase changes unit contribution, batch cash needs and the price required to preserve a stated contribution.","category":"Pricing decisions","minutes":4},
+{"id":266,"route":"/blog/separate-owner-labour-from-business-profit/","title":"Separate owner labour from business profit","description":"Separate payment for the owner's production work from the business's remaining profit so handmade prices do not depend on invisible unpaid labour.","category":"Pricing decisions","minutes":4},
+{"id":267,"route":"/blog/compare-product-margins-using-the-same-cost-boundary/","title":"Compare product margins using the same cost boundary","description":"Compare product margins on the same revenue and cost basis, separating rupee contribution, percentage contribution and scarce production time.","category":"Pricing decisions","minutes":4},
+{"id":268,"route":"/blog/set-a-discount-ceiling-from-the-contribution-you-need/","title":"Set a discount ceiling from the contribution you need","description":"Calculate a discount ceiling from required contribution, including percentage-based fees and the limits of a purely numerical price floor.","category":"Pricing decisions","minutes":4},
+{"id":269,"route":"/blog/compare-percentage-and-fixed-amount-discounts/","title":"Compare percentage and fixed-amount discounts","description":"Compare fixed-amount and percentage discounts with the same basket values, contribution assumptions and eligibility rules.","category":"Pricing decisions","minutes":4},
+{"id":270,"route":"/blog/calculate-a-multi-buy-offer-before-announcing-it/","title":"Calculate a multi-buy offer before announcing it","description":"Calculate a multi-buy promotion using combined revenue, shared costs and product mix before assuming more units create more profit.","category":"Pricing decisions","minutes":4},
+{"id":271,"route":"/blog/check-whether-free-shipping-costs-less-than-a-price-discount/","title":"Check whether free shipping costs less than a price discount","description":"Compare free delivery with a product discount using customer savings, actual shipping subsidy and the contribution left on representative orders.","category":"Pricing decisions","minutes":4},
+{"id":272,"route":"/blog/price-a-customisation-add-on-from-its-incremental-work/","title":"Price a customisation add-on from its incremental work","description":"Price personalisation and other add-ons from incremental materials, work and risk without charging the base setup twice or overlooking extra effort.","category":"Pricing decisions","minutes":4},
+{"id":273,"route":"/blog/account-for-returned-orders-in-a-planning-scenario/","title":"Account for returned orders in a planning scenario","description":"Model return-related costs with explicit scenarios and recoverable stock assumptions rather than copying an unsupported industry return rate.","category":"Pricing decisions","minutes":4},
+{"id":274,"route":"/blog/plan-a-clearance-price-without-assuming-sunk-stock-is-free/","title":"Plan a clearance price without assuming sunk stock is free","description":"Evaluate a clearance price using incremental selling costs, recoverable value and remaining stock commitments without treating sunk inventory as free.","category":"Pricing decisions","minutes":4}
+,
+{"id":275,"route":"/blog/build-a-twelve-month-store-cost-sheet-beyond-the-headline-plan/","title":"Build a twelve-month store cost sheet beyond the headline plan","description":"Build a twelve-month storefront budget that separates setup, recurring charges, renewals and variable costs instead of comparing only the headline plan.","category":"Pricing decisions","minutes":4},
+{"id":276,"route":"/blog/separate-payment-fees-from-platform-transaction-charges/","title":"Separate payment fees from platform transaction charges","description":"Separate payment-processing fees from storefront transaction charges, check which methods incur each charge and model the applicable base correctly.","category":"Pricing decisions","minutes":4},
+{"id":277,"route":"/blog/compare-annual-billing-savings-with-the-cash-commitment/","title":"Compare annual billing savings with the cash commitment","description":"Compare annual and monthly billing with the same service scope, upfront cash commitment and realistic period of use.","category":"Pricing decisions","minutes":4},
+{"id":278,"route":"/blog/budget-domain-renewals-separately-from-introductory-offers/","title":"Budget domain renewals separately from introductory offers","description":"Budget domain costs by separating registration offers, renewals, optional services and business-controlled ownership.","category":"Pricing decisions","minutes":4},
+{"id":279,"route":"/blog/audit-recurring-app-costs-before-adding-another-subscription/","title":"Audit recurring app costs before adding another subscription","description":"Audit recurring store apps by their actual task, usage, dependencies and cancellation consequences before adding another subscription.","category":"Pricing decisions","minutes":4},
+{"id":280,"route":"/blog/budget-a-store-launch-without-spending-everything-on-the-homepage/","title":"Budget a store launch without spending everything on the homepage","description":"Plan a store-launch budget around a complete buying route, accurate content and operating readiness rather than spending the whole amount on visual polish.","category":"Pricing decisions","minutes":4},
+{"id":281,"route":"/blog/allocate-photography-costs-across-a-usable-product-range/","title":"Allocate photography costs across a usable product range","description":"Allocate photography spending across the products and image uses it actually supports, while separating reusable assets from one-off campaign work.","category":"Pricing decisions","minutes":4},
+{"id":282,"route":"/blog/compare-developer-quotes-with-the-same-deliverables/","title":"Compare developer quotes with the same deliverables","description":"Compare developer quotes by matching deliverables, exclusions, acceptance tests and ongoing ownership before judging the price difference.","category":"Pricing decisions","minutes":4},
+{"id":283,"route":"/blog/budget-website-maintenance-after-the-build-is-handed-over/","title":"Budget website maintenance after the build is handed over","description":"Budget post-launch website maintenance by separating routine updates, incidents, new features and the ownership of ongoing services.","category":"Pricing decisions","minutes":4},
+{"id":284,"route":"/blog/calculate-acquisition-cost-without-treating-revenue-as-profit/","title":"Calculate acquisition cost without treating revenue as profit","description":"Calculate customer acquisition cost with a defined customer group and compare it with contribution rather than gross revenue.","category":"Pricing decisions","minutes":4},
+{"id":285,"route":"/blog/set-a-campaign-spending-limit-from-contribution-rather-than-hope/","title":"Set a campaign spending limit from contribution rather than hope","description":"Set a campaign spending boundary using contribution, observed results and explicit stopping rules rather than a hopeful revenue target.","category":"Pricing decisions","minutes":4},
+{"id":286,"route":"/blog/model-failed-cod-deliveries-as-scenarios-rather-than-a-fixed-industry-rate/","title":"Model failed COD deliveries as scenarios rather than a fixed industry rate","description":"Model failed COD deliveries with explicit delivery and recovery scenarios instead of using an unsupported universal failure rate.","category":"Pricing decisions","minutes":4},
+{"id":287,"route":"/blog/separate-prepaid-incentives-from-payment-verification-costs/","title":"Separate prepaid incentives from payment-verification costs","description":"Evaluate a prepaid incentive by separating the customer discount from verified payment, applicable fees and operational costs.","category":"Pricing decisions","minutes":4},
+{"id":288,"route":"/blog/compare-a-one-time-website-payment-with-recurring-operating-costs/","title":"Compare a one-time website payment with recurring operating costs","description":"Compare one-time website payments with recurring operating costs by separating build ownership, subscriptions, maintenance and future changes.","category":"Pricing decisions","minutes":4},
+{"id":289,"route":"/blog/calculate-when-a-paid-plan-could-offset-its-extra-fee/","title":"Calculate when a paid plan could offset its extra fee","description":"Calculate the eligible transaction volume at which a higher plan's lower rate could offset its extra fixed fee, without ignoring other differences.","category":"Pricing decisions","minutes":4}
+,
+{
+  "id": 290,
+  "route": "/blog/choose-a-store-template-with-your-real-product-photographs/",
+  "title": "Choose a store template with your real product photographs",
+  "description": "Choose a storefront template by testing your actual photographs, crops, product details and mobile layouts instead of relying on polished demo imagery.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 291,
+  "route": "/blog/test-a-template-with-long-names-and-unavailable-products/",
+  "title": "Test a template with long names and unavailable products",
+  "description": "Stress-test a storefront template with long product names, missing images and unavailable options before approving its catalogue layout.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 292,
+  "route": "/blog/compare-mobile-navigation-before-choosing-a-storefront-layout/",
+  "title": "Compare mobile navigation before choosing a storefront layout",
+  "description": "Compare mobile navigation through specific shopping tasks, readable labels, menu behaviour and the ability to return without losing context.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 293,
+  "route": "/blog/choose-a-product-grid-around-the-details-buyers-compare/",
+  "title": "Choose a product grid around the details buyers compare",
+  "description": "Choose product-grid density around the details customers compare, including image crops, names, prices and availability on mobile.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 294,
+  "route": "/blog/evaluate-a-template-without-assuming-its-demo-content-is-included/",
+  "title": "Evaluate a template without assuming its demo content is included",
+  "description": "Evaluate a template's real deliverables by separating layout, demo imagery, copy, integrations and the content your business must supply.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 295,
+  "route": "/blog/check-a-template-with-a-small-catalogue-and-room-to-grow/",
+  "title": "Check a template with a small catalogue and room to grow",
+  "description": "Choose a template that works with a small current catalogue and can expand without empty sections, invented variety or unnecessary redesign.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 296,
+  "route": "/blog/separate-a-visual-refresh-from-a-conversion-experiment/",
+  "title": "Separate a visual refresh from a conversion experiment",
+  "description": "Separate a storefront visual refresh from a conversion experiment so design preferences do not become unsupported performance claims.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 297,
+  "route": "/blog/review-a-storefront-using-tasks-instead-of-personal-taste/",
+  "title": "Review a storefront using tasks instead of personal taste",
+  "description": "Review a storefront with concrete shopping tasks, clear observations and prioritised findings instead of treating personal taste as the acceptance standard.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 298,
+  "route": "/blog/keep-decorative-motion-from-interrupting-product-selection/",
+  "title": "Keep decorative motion from interrupting product selection",
+  "description": "Use storefront animation selectively so decorative motion does not obscure product information, interrupt selection or create an unusable reduced-motion experience.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 299,
+  "route": "/blog/design-a-homepage-route-from-discovery-to-a-specific-product/",
+  "title": "Design a homepage route from discovery to a specific product",
+  "description": "Arrange a storefront homepage so a visitor can understand the range and reach a relevant product without repetitive sections or unclear calls to action.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 300,
+  "route": "/blog/make-delivery-information-visible-without-crowding-the-header/",
+  "title": "Make delivery information visible without crowding the header",
+  "description": "Place delivery information where customers need it without turning the storefront header into a crowded list of promises.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 301,
+  "route": "/blog/give-product-options-enough-space-on-a-small-screen/",
+  "title": "Give product options enough space on a small screen",
+  "description": "Design product-option controls for small screens so choices, availability, errors and the final selected item remain clear.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 302,
+  "route": "/blog/keep-cart-and-checkout-visually-connected-to-the-store/",
+  "title": "Keep cart and checkout visually connected to the store",
+  "description": "Keep cart and checkout visually consistent with the storefront while preserving clear totals, correction controls and functional trust cues.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 303,
+  "route": "/blog/design-honest-empty-loading-and-unavailable-states/",
+  "title": "Design honest empty, loading and unavailable states",
+  "description": "Design clear empty, loading and unavailable storefront states without confusing missing content, slow data and genuine stock limitations.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 304,
+  "route": "/blog/decide-whether-a-paid-theme-solves-a-demonstrated-layout-problem/",
+  "title": "Decide whether a paid theme solves a demonstrated layout problem",
+  "description": "Decide whether a paid theme solves a demonstrated layout problem by comparing real-content results, extra work and long-term maintenance.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 305,
+  "route": "/blog/check-theme-support-and-update-responsibilities-before-buying/",
+  "title": "Check theme support and update responsibilities before buying",
+  "description": "Check theme support, update scope and customisation responsibilities before buying a storefront design that the business must maintain.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 306,
+  "route": "/blog/arrange-a-clothing-product-page-around-fit-evidence/",
+  "title": "Arrange a clothing product page around fit evidence",
+  "description": "Arrange clothing product pages around measurements, garment views and option clarity so shoppers can assess fit without relying on styling alone.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 307,
+  "route": "/blog/balance-jewellery-detail-photography-with-readable-buying-information/",
+  "title": "Balance jewellery detail photography with readable buying information",
+  "description": "Balance jewellery close-ups with scale, material and fastening information so a visually rich page still supports a clear buying decision.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 308,
+  "route": "/blog/design-a-gift-catalogue-around-occasions-without-duplicating-every-product/",
+  "title": "Design a gift catalogue around occasions without duplicating every product",
+  "description": "Organise a gift catalogue around useful occasions while preserving one accurate product record and clear set contents.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 309,
+  "route": "/blog/show-home-decor-scale-without-making-the-page-feel-crowded/",
+  "title": "Show home-decor scale without making the page feel crowded",
+  "description": "Show home-decor products with reliable scale, dimensions and setting images without overwhelming the page or implying accessories are included.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 310,
+  "route": "/blog/create-a-coherent-store-palette-without-sacrificing-text-contrast/",
+  "title": "Create a coherent store palette without sacrificing text contrast",
+  "description": "Build a storefront colour palette around consistent roles and readable text rather than applying brand colours indiscriminately to every surface.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 311,
+  "route": "/blog/choose-storefront-typography-for-prices-options-and-long-descriptions/",
+  "title": "Choose storefront typography for prices, options and long descriptions",
+  "description": "Choose storefront typography by testing prices, option labels and long descriptions across devices, not only the hero headline.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 312,
+  "route": "/blog/keep-category-tiles-useful-when-category-photographs-are-missing/",
+  "title": "Keep category tiles useful when category photographs are missing",
+  "description": "Use an appropriate product photograph as a category-image fallback while preserving accurate category labels, counts and destinations.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 313,
+  "route": "/blog/build-a-footer-that-answers-practical-shopping-questions/",
+  "title": "Build a footer that answers practical shopping questions",
+  "description": "Build a storefront footer around useful shopping, policy and contact routes rather than a dense collection of decorative or outdated links.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 314,
+  "route": "/blog/use-real-trust-information-instead-of-decorative-assurance-badges/",
+  "title": "Use real trust information instead of decorative assurance badges",
+  "description": "Use verifiable business, delivery and payment information as trust cues instead of adding unsupported badges to a storefront.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 315,
+  "route": "/blog/create-an-inspiration-board-without-copying-another-store/",
+  "title": "Create an inspiration board without copying another store",
+  "description": "Build a useful storefront inspiration board by recording design principles, content needs and constraints without copying another brand's work.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 316,
+  "route": "/blog/turn-a-visual-reference-into-a-testable-design-brief/",
+  "title": "Turn a visual reference into a testable design brief",
+  "description": "Turn storefront visual references into a practical brief with real content, required states, mobile checks and clear acceptance criteria.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 317,
+  "route": "/blog/prepare-the-content-a-store-designer-needs-before-layout-work/",
+  "title": "Prepare the content a store designer needs before layout work",
+  "description": "Prepare merchant facts, product examples, photographs and page content before store design so layouts do not depend on invented copy.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 318,
+  "route": "/blog/review-design-handover-files-before-the-project-ends/",
+  "title": "Review design handover files before the project ends",
+  "description": "Check storefront handover files, access, asset permissions and editing instructions before a design project ends.",
+  "category": "Store design",
+  "minutes": 4
+},
+{
+  "id": 319,
+  "route": "/blog/design-a-campaign-landing-page-that-keeps-the-advertised-promise/",
+  "title": "Design a campaign landing page that keeps the advertised promise",
+  "description": "Design a campaign landing page that matches the offer, shows relevant products and explains conditions without misleading shoppers.",
+  "category": "Store design",
+  "minutes": 4
+}
+]

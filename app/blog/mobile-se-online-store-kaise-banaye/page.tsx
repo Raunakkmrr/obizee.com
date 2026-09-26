@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HinglishPost3 from "@/pages/blog/HinglishPost3";
+import HinglishPost3 from "@/legacy-views/blog/HinglishPost3";
 
 export const metadata: Metadata = {
   title: "Mobile Se Online Store Kaise Banaye — Sirf Phone Se [2026]",

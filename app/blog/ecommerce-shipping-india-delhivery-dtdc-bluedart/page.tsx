@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TopFunnelPost3 from "@/pages/blog/TopFunnelPost3";
+import TopFunnelPost3 from "@/legacy-views/blog/TopFunnelPost3";
 
 export const metadata: Metadata = {
   title: "Ecommerce Shipping in India: Delhivery vs DTDC vs BlueDart [2026 Guide]",

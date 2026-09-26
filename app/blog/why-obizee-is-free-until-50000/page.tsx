@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BlogPost2 from "@/pages/blog/BlogPost2";
+import BlogPost2 from "@/legacy-views/blog/BlogPost2";
 
 export const metadata: Metadata = {
   title: "Why oBizee Charges Nothing Until ₹50,000 — And Only 1% After That",

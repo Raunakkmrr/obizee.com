@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SuccessStoriesPage from "@/pages/SuccessStories";
+import SuccessStoriesPage from "@/legacy-views/SuccessStories";
 
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TopFunnelPost4 from "@/pages/blog/TopFunnelPost4";
+import TopFunnelPost4 from "@/legacy-views/blog/TopFunnelPost4";
 
 export const metadata: Metadata = {
   title: "GST for Online Sellers in India: Everything You Need to Know [2026]",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PrivacyPolicyPage from "@/pages/PrivacyPolicy";
+import PrivacyPolicyPage from "@/legacy-views/PrivacyPolicy";
 
 
 export const metadata: Metadata = {

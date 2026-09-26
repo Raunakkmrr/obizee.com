@@ -1,0 +1,1095 @@
+[
+  {
+    "key": "product-catalogue",
+    "title": "A product catalogue customers can understand before they message",
+    "description": "Bring product names, descriptions, photographs and category choices into a structured selling workflow.",
+    "sections": [
+      [
+        "Replace repeated explanations with a usable product record",
+        "If every enquiry begins with the same questions about price, size or what is included, the catalogue is not yet carrying enough of the conversation. oBizee's current product screen brings a title, description, price, images and category into one record. That gives you a place to explain a repeatable product without treating every buyer as a new custom brief."
+      ],
+      [
+        "Prepare the information before opening the form",
+        "Use a real product name, photographs of the item being sold and a description that explains the buying decision. A crochet flower listing might state the finished dimensions, materials and what the buyer receives. The form's minimum-length checks prevent empty entries; they do not establish that the information is useful or accurate. You still own that judgement."
+      ],
+      [
+        "Keep simple products and options distinct",
+        "A product with one selling price is different from a product with selectable combinations. The current screen validates those paths differently. Do not bury an option-specific price in prose while offering an unrelated base amount. Prepare the actual combinations first and check the customer-facing choice after saving."
+      ],
+      [
+        "Use a representative product to evaluate fit",
+        "Before committing a whole catalogue, prepare one straightforward item and one with the most demanding options you sell. Check the saved category, image order and buyer-facing information. This is a better suitability test than counting form fields. Bulk import, automatic classification and universal marketplace synchronisation are not promised by this page."
+      ]
+    ],
+    "checks": [
+      "One clear product identity",
+      "A description that answers the buying questions",
+      "Accurate images and category",
+      "A saved record checked before promotion"
+    ],
+    "help": "first-product",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "id": 1,
+    "route": "/features/product-catalogue/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "product-options",
+    "title": "Product options that preserve the choice behind an order",
+    "description": "Organise size, colour and other combinations without making customers explain their selection again.",
+    "sections": [
+      [
+        "A choice should remain identifiable after checkout",
+        "An order for a medium blue item is not the same as an order for a product called T-shirt. The current product editor supports option names, values and combination-level information. Use it to make the customer's selection explicit rather than relying on a later chat to recover what they meant."
+      ],
+      [
+        "Define combinations you actually sell",
+        "Begin with the real axes of choice. Size and colour can form combinations; a custom design consultation may need a different workflow. Give each option a meaningful label and remove combinations you cannot supply. The editor requires named values and valid combination prices. That structure helps prevent a half-created option table, but it does not decide your range for you."
+      ],
+      [
+        "Check price and stock at the combination level",
+        "The inspected product flow carries variant prices directly. Do not assume that a visible base figure is automatically added to every variant price. Similarly, an omitted stock field and an explicit zero are not the same input. Review the intended combination on the storefront and compare it with the saved record."
+      ],
+      [
+        "Evaluate with your hardest ordinary product",
+        "Test the most common option and a scarce option, including how the title and selection appear to a buyer. Keep unusual personalised work separate until its requirements are understood. This page does not promise unlimited combinations, automatic sizing advice or stock synchronisation with every external sales channel."
+      ]
+    ],
+    "checks": [
+      "Named option axes",
+      "Only valid sellable combinations",
+      "Confirmed combination price",
+      "Separate quantities where needed"
+    ],
+    "help": "variant-prices",
+    "sources": [
+      "AddProductScreen"
+    ],
+    "id": 2,
+    "route": "/features/product-options/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "category-navigation",
+    "title": "Categories that help buyers find a relevant product",
+    "description": "Build a catalogue structure around customer intent rather than an internal filing system.",
+    "sections": [
+      [
+        "Give the catalogue a readable shape",
+        "Categories are useful when they reduce a buyer's uncertainty. A gift shopper may understand occasion-led groups, while a repeat buyer may prefer a stable product type. The current oBizee category workflow lets a merchant create and edit category names and descriptions, then assign a category while preparing a product."
+      ],
+      [
+        "Start small enough to maintain",
+        "Choose labels that mean something without a long explanation. A category with one unrelated item and a broad name can be less useful than a smaller, coherent group. Write the description to clarify what belongs there. The form checks that a name and description exist; it cannot determine whether your taxonomy makes sense to a first-time customer."
+      ],
+      [
+        "Keep changes separate from product creation",
+        "After adding a category, the app can offer an Add Product action with that category selected. That is a convenience, not an instruction to create a duplicate item. When editing an existing category, check the identity carefully and review how its title appears in the catalogue."
+      ],
+      [
+        "Search is a view, not a deletion check",
+        "The category list searches loaded names and descriptions. Clear a search before assuming a category is missing. For a large range, evaluate how your actual categories appear on the chosen storefront template. This page does not promise nested category depth, automated tagging or a particular category-photo fallback on every deployed version."
+      ]
+    ],
+    "checks": [
+      "Customer-readable names",
+      "A coherent product grouping",
+      "Descriptions that define the range",
+      "No duplicate product created during reorganisation"
+    ],
+    "help": "create-category",
+    "sources": [
+      "CategoryListingScreen",
+      "AddProductCategoryScreen",
+      "AddProductScreen"
+    ],
+    "id": 3,
+    "route": "/features/category-navigation/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "stock-tracking",
+    "title": "Stock tracking with deliberate opening balances and adjustments",
+    "description": "Move from remembered quantities to a record you can reconcile with real items.",
+    "sections": [
+      [
+        "Count first, then enable tracking",
+        "A stock screen is only as useful as its opening balance. The current inventory workflow supports enabling tracking with an initial quantity and a minimum level. Use a physical count of sellable units, not the quantity you hope a supplier will deliver or the number of enquiries in your inbox."
+      ],
+      [
+        "Record the reason for each correction",
+        "The adjustment dialog separates adding from subtracting stock and requires a note. That turns an unexplained quantity change into something another operator can investigate. Record damage, a counted receipt or a specific correction in plain language. The form refuses a change that would produce a negative balance, but you still need to reconcile the underlying event."
+      ],
+      [
+        "Treat uncertain responses carefully",
+        "If an adjustment times out, refresh the product and inspect history before repeating it. A second accepted request is not automatically a retry of the first. When selling options, check whether the screen identifies the intended variant; a parent-product total cannot establish the availability of a particular size."
+      ],
+      [
+        "Know the boundary of this workflow",
+        "The inspected inventory screen initially loads up to 100 products, so local search is not proof that a larger catalogue contains no other item. Disabling tracking is also different from marking an item unavailable. This capability should be evaluated alongside your order and cancellation process, not presented as universal cross-channel stock automation."
+      ]
+    ],
+    "checks": [
+      "Counted opening quantity",
+      "A realistic minimum level",
+      "A reason for adjustments",
+      "A routine for reconciling uncertain changes"
+    ],
+    "help": "enable-stock",
+    "sources": [
+      "InventoryManagement",
+      "EnableTrackingModal",
+      "StockAdjustmentModal"
+    ],
+    "id": 4,
+    "route": "/features/stock-tracking/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "stock-history",
+    "title": "A stock history that makes quantity changes explainable",
+    "description": "Investigate purchases, sales, adjustments and returns before making another correction.",
+    "sections": [
+      [
+        "A final balance does not explain the journey",
+        "When the shelf and the screen disagree, changing the number again can hide the cause. oBizee's stock-history screen provides a product-specific view with purchase, sale, adjustment and return filters. Use those events to investigate the difference before deciding what to correct."
+      ],
+      [
+        "Work from an identified movement",
+        "Start with the product and the time the discrepancy became visible. Compare an event with the order, receipt or count note behind it. A purchase filter may help find a receipt; an adjustment filter may show a manual correction. Clear the filter before deciding that an event is absent. The filter changes what you see, not the stored quantity."
+      ],
+      [
+        "Give future you enough context",
+        "An adjustment note should identify a reason another authorised person can understand. A short receipt reference is usually more useful than a pasted customer conversation. Keep private customer details in their protected order record rather than duplicating them into inventory notes."
+      ],
+      [
+        "Use history as part of reconciliation",
+        "The screen is not an independent physical count or a guarantee that every external channel updates automatically. Combine it with the real stock and your selling workflow. If a timed-out action may have succeeded, look for its movement before resubmitting. A clear event trail helps you make a deliberate correction instead of an equal-and-opposite guess."
+      ]
+    ],
+    "checks": [
+      "Correct product reference",
+      "Relevant event filter",
+      "Evidence behind the movement",
+      "One correction for one verified discrepancy"
+    ],
+    "help": "stock-history",
+    "sources": [
+      "StockTransactionHistory",
+      "StockAdjustmentModal"
+    ],
+    "id": 5,
+    "route": "/features/stock-history/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "low-stock-attention",
+    "title": "Low-stock attention before a customer promise becomes a problem",
+    "description": "Use critical and warning views to decide what needs a count, replenishment or availability review.",
+    "sections": [
+      [
+        "An alert is a starting point for a decision",
+        "A low balance can mean a popular item needs replenishment, a count is wrong or the remaining stock is already committed. The current Low Stock Alerts screen distinguishes critical and warning entries and lets you open the affected product. It does not decide which explanation is true."
+      ],
+      [
+        "Set the threshold around your operation",
+        "Use a minimum quantity that reflects how you work. A maker who produces in small batches may need time rather than a large stored balance; a ready-made seller may need to consider supplier lead time. The app's threshold is not a demand forecast. Check incoming stock and existing commitments before placing a replenishment order."
+      ],
+      [
+        "Review the item behind the colour",
+        "Refresh the alerts, open the product and compare the recorded stock with a physical count. If it is an option-based item, confirm the relevant combination. Avoid changing stock simply to remove an alert from the list. Record a reason when a genuine count correction is needed."
+      ],
+      [
+        "Connect the alert to a customer-facing action",
+        "Your next step may be replenishment, reduced promotion or a more cautious delivery promise. None of those actions is automatically performed by reading an alert. For planning, use the reorder calculator with your own assumptions, then inspect actual demand rather than treating its output as an instruction to purchase."
+      ]
+    ],
+    "checks": [
+      "Reviewed minimum level",
+      "Counted available units",
+      "Known incoming stock",
+      "A chosen response rather than an automatic purchase"
+    ],
+    "help": "low-stock-alerts",
+    "sources": [
+      "LowStockAlerts",
+      "EnableTrackingModal"
+    ],
+    "id": 6,
+    "route": "/features/low-stock-attention/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "store-template-selection",
+    "title": "Choose a storefront template with your own products in mind",
+    "description": "Preview an available design, then deliberately apply the one that suits your catalogue.",
+    "sections": [
+      [
+        "A preview and a saved template are different",
+        "The current merchant app offers a template catalogue with preview and apply actions. That distinction matters: viewing a design should not be confused with changing what customers see. Use the preview to compare presentation, then apply intentionally and wait for the confirmation."
+      ],
+      [
+        "Judge more than the first screen",
+        "Bring representative product photographs, a long product name and your actual category structure into the decision. A layout that looks impressive with demonstration images can be difficult to maintain with the assets you have. Inspect product discovery and the buying journey, not only the hero section."
+      ],
+      [
+        "Confirm the store is ready for the change",
+        "Website-management controls depend on the store's live state in the inspected app. Complete genuine profile requirements rather than entering invented data to unlock a screen. After a confirmed template change, use Preview Website and verify that you are looking at your merchant address."
+      ],
+      [
+        "Keep capability claims specific",
+        "A template is not a promise that every visible demonstration section is editable in every version. The content editor is driven by the selected template's fields. This page does not promise arbitrary layout editing, custom font uploads or unlimited design variations. Evaluate the available design and editing controls together before making a commitment."
+      ]
+    ],
+    "checks": [
+      "Preview before applying",
+      "Representative product content",
+      "A confirmed saved change",
+      "A customer-facing check after application"
+    ],
+    "help": "apply-template",
+    "sources": [
+      "StoreTemplateScreen",
+      "WebsiteSettings",
+      "WebsitePreviewScreen"
+    ],
+    "id": 7,
+    "route": "/features/store-template-selection/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "store-brand-colours",
+    "title": "Bring your store colours into a consistent buying experience",
+    "description": "Set the supported primary, secondary and accent colours without treating colour choice as a full redesign.",
+    "sections": [
+      [
+        "Use a small palette deliberately",
+        "The current brand-colour screen exposes primary, secondary and accent values. That is a focused way to adapt the storefront's identity. It is not a free-form design editor. Choose colours that work with your product photographs and keep important information readable."
+      ],
+      [
+        "Prepare valid values before saving",
+        "The inspected form accepts three- or six-digit hexadecimal colour values. Record the existing palette before changing it so you can compare the result. A colour code passing validation only means its format is acceptable; it does not prove the resulting text and controls have enough contrast."
+      ],
+      [
+        "Inspect the states customers actually use",
+        "After saving, look at navigation, product choices, the cart and important buttons on a phone. Check both ordinary and muted text. Avoid judging a dark button on one screenshot while overlooking a disabled or selected state elsewhere. If the template uses colour differently from your expectation, evaluate the actual rendered result."
+      ],
+      [
+        "Keep the promise bounded",
+        "This workflow changes supported colour settings. Custom font uploads, arbitrary CSS and every possible layout adjustment are not established by the source checked for this page. If those are essential requirements, ask for a demonstration of the exact capability rather than assuming a brand-colour control includes them."
+      ]
+    ],
+    "checks": [
+      "Valid colour codes",
+      "A recorded previous palette",
+      "Readable text and controls",
+      "A mobile check after saving"
+    ],
+    "help": "brand-colours",
+    "sources": [
+      "WebsiteBrandColorsScreen"
+    ],
+    "id": 8,
+    "route": "/features/store-brand-colours/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "homepage-content-editing",
+    "title": "Put merchant information into the sections your template supports",
+    "description": "Edit the available homepage fields while keeping copy and product selection grounded in your real business.",
+    "sections": [
+      [
+        "A homepage should answer a buyer's next question",
+        "The current website-content editor loads fields defined by the selected template. Depending on that definition, the editing surface can include text, longer copy, arrays and images. Start with the information a customer needs, then use the supported fields to present it."
+      ],
+      [
+        "Prepare genuine content rather than filling every space",
+        "Use photographs you are entitled to publish and claims you can support. A short accurate business introduction is preferable to an invented brand story. When selecting products or categories, choose items that exist and match the section's purpose. Do not call a group new arrivals merely because the layout gives it a convenient position."
+      ],
+      [
+        "Respect the field's shape and limits",
+        "The inspected editor has bounded selection controls for categories, featured products and new products. Those limits help define the template's content, not the total size of your catalogue. Check which fields your current template exposes instead of expecting every design to offer the same section list."
+      ],
+      [
+        "Evaluate the saved storefront, not just the editor",
+        "Use the preview after saving and inspect long copy, missing photos and product links on mobile. A field being present in the editor does not establish that all content is automatically composed or refreshed. Keep ownership clear between material you edit and any supported automatic-copy setting."
+      ]
+    ],
+    "checks": [
+      "Template-supported fields",
+      "Authentic text and images",
+      "Relevant selected products",
+      "Saved output inspected on a phone"
+    ],
+    "help": "content-sections",
+    "sources": [
+      "WebsiteEditScreen",
+      "WebsitePreviewScreen"
+    ],
+    "id": 9,
+    "route": "/features/homepage-content-editing/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "homepage-copy-controls",
+    "title": "Automatic homepage copy with an explicit merchant control",
+    "description": "Inspect the supported homepage-copy status and pause future automatic writing when you need to.",
+    "sections": [
+      [
+        "Automation should have a visible boundary",
+        "The current merchant app includes a homepage-copy card for supported designs. Its status explains available automatic-copy activity and provides a control for enabling or pausing it. That gives the merchant a way to understand the setting rather than treating generated text as an invisible background process."
+      ],
+      [
+        "Keep merchant edits authoritative",
+        "The inspected service describes product-count milestones and avoids overwriting fields the merchant has edited. Use the card's current status instead of expecting a rewrite after every new item. A status fetch failing can hide the card, so an absent card alone is not proof that automatic writing is disabled."
+      ],
+      [
+        "Read generated copy as a draft about your business",
+        "Check names, claims and tone against what you actually sell. Automation does not establish image rights, product quality or delivery promises. If you want to take control of the wording, review the supported editor and the automatic-copy setting together so future expectations are clear."
+      ],
+      [
+        "Pause deliberately and confirm the saved state",
+        "The switch handles a failed update by reverting its displayed change. Wait for the service response and revisit the card when uncertain. This is not a promise of unlimited AI writing, guaranteed search rankings or an automatic blog programme. It is a bounded homepage capability whose availability depends on the supported store configuration."
+      ]
+    ],
+    "checks": [
+      "A supported template",
+      "Status read successfully",
+      "Merchant copy reviewed",
+      "Pause or enable change confirmed"
+    ],
+    "help": "automatic-copy",
+    "sources": [
+      "HomepageCopyCard",
+      "homepageCopyService"
+    ],
+    "id": 10,
+    "route": "/features/homepage-copy-controls/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "delivery-rules",
+    "title": "Delivery charges that follow a saved rule",
+    "description": "Configure the available flat-rate, free-shipping and pincode controls around a promise you can fulfil.",
+    "sections": [
+      [
+        "Make the charge explainable before checkout",
+        "A delivery policy should not depend on a seller remembering which amount was quoted in a chat. The current settings expose flat or free delivery, a standard rate and an optional free-shipping threshold. These are operational inputs: calculate the cost before deciding which rule to offer."
+      ],
+      [
+        "Use the same cost boundary throughout",
+        "A free-shipping threshold needs enough basket contribution to cover the delivery expense you intend to absorb. It is not automatically profitable because the basket value is larger. Include packing and any applicable collection costs in your decision. The resource calculator can help compare assumptions without changing the live rule."
+      ],
+      [
+        "Separate location eligibility from pricing",
+        "The screen supports allowed and blocked pincode lists. Review the saved entries carefully; the input handling filters for six-digit codes. A missing or malformed entry should not silently become a promise to serve a destination. Test an intended address and an excluded one before promoting the delivery offer."
+      ],
+      [
+        "Keep the limits visible",
+        "These controls are not evidence of live carrier rate shopping, universal coverage or automatic pickup. A delivery note explains a policy but does not configure it. After an uncertain save, reload the settings before making another change, and compare the storefront quote with the intended rule."
+      ]
+    ],
+    "checks": [
+      "A costed standard charge",
+      "A deliberate threshold",
+      "Reviewed pincode lists",
+      "Customer-facing quote checked"
+    ],
+    "help": "delivery-rate",
+    "sources": [
+      "DeliverySettingsScreen",
+      "deliveryConfigService"
+    ],
+    "id": 11,
+    "route": "/features/delivery-rules/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "requested-delivery-dates",
+    "title": "Collect a requested date without confusing it with a guarantee",
+    "description": "Use delivery windows and date controls to make the customer's timing visible.",
+    "sections": [
+      [
+        "A date can express a request or a commitment",
+        "An occasion-based purchase needs clarity about which one it is. The current delivery settings include minimum and maximum delivery windows and a requested-date setting. The storefront can present a date choice constrained by its delivery calculation. That records useful intent, but it does not make a courier guarantee."
+      ],
+      [
+        "Start with your real preparation time",
+        "A ready-made item and a made-to-order item may need different preparation assumptions. Review the rule against your normal process and the service you actually use. Avoid choosing an optimistic window simply because it makes checkout more attractive; the cost appears later as a disappointed customer."
+      ],
+      [
+        "Keep fast delivery a separate decision",
+        "Where a fast tier is enabled, inspect its charge and timing as a distinct offer. Explain what the customer is requesting and what requires merchant confirmation. A note alone does not change the saved dates or eligibility rule."
+      ],
+      [
+        "Check the handoff to fulfilment",
+        "After a legitimate order, the requested timing should be interpreted alongside the order and shipment state. A computed ship-by value is a planning aid. It is not proof of booked pickup or guaranteed arrival. Evaluate the date field with the product's actual production constraints before relying on it for event-critical sales."
+      ]
+    ],
+    "checks": [
+      "Realistic delivery window",
+      "Clearly labelled request",
+      "Costed fast option if offered",
+      "A merchant confirmation process"
+    ],
+    "help": "delivery-date",
+    "sources": [
+      "DeliverySettingsScreen",
+      "DeliveryAddressStep",
+      "OrderDerive"
+    ],
+    "id": 12,
+    "route": "/features/requested-delivery-dates/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "direct-pay-details",
+    "title": "Offer direct UPI or bank payment with clear receipt expectations",
+    "description": "Store supported payout details and explain that the merchant confirms the transfer after ordering.",
+    "sections": [
+      [
+        "Direct payment is a distinct buying path",
+        "The current Direct Pay settings support UPI and bank details for stores using that workflow. The storefront explains that the customer places an order, then pays from their own app. It does not tell the buyer that tapping an order button has collected money."
+      ],
+      [
+        "Keep the recipient data accurate",
+        "The merchant form saves a complete replacement of the submitted methods. That matters when updating one field: review the whole intended configuration so a partial edit does not unintentionally remove a method. Existing sensitive values are represented through masked on-file information rather than a full secret read-back."
+      ],
+      [
+        "Record receipt only after verifying it",
+        "The merchant must reconcile the transfer through the actual bank or payment record. An order status or customer screenshot is not independent proof of receipt. The Clear due action in order details records received money; it does not initiate a charge. Keep that distinction clear for anyone operating the account."
+      ],
+      [
+        "Check availability rather than assuming it",
+        "The settings can refuse changes when secure storage is unavailable. A connected gateway can also change which payment path customers see. Confirm the current account configuration and checkout before advertising a method. This page does not promise instant settlement, automatic bank reconciliation or recovery of an incorrectly addressed transfer."
+      ]
+    ],
+    "checks": [
+      "Verified recipient details",
+      "Complete method replacement reviewed",
+      "Enabled state confirmed",
+      "A genuine receipt-checking routine"
+    ],
+    "help": "direct-pay-upi",
+    "sources": [
+      "PayoutDetailsSettings",
+      "DirectPayMethodBlock",
+      "OrderDetails"
+    ],
+    "id": 13,
+    "route": "/features/direct-pay-details/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "order-workspace",
+    "title": "One order workspace for the details that must stay together",
+    "description": "Read items, recorded money and fulfilment information without losing the order reference.",
+    "sections": [
+      [
+        "An order is more than a total",
+        "A useful order record connects the customer's choice with the work required to fulfil it. The current details layout separates items, money and delivery or booking information into tabs. That makes it easier to inspect the relevant part without treating a chat thread as the only source of context."
+      ],
+      [
+        "Begin with identity before taking action",
+        "Confirm the reference and customer before editing a note, copying details or using a fulfilment control. Similar product names and repeat customers can make an apparently familiar order the wrong one. Copy only the information the receiving operator needs; an order ID is often enough for a support investigation."
+      ],
+      [
+        "Keep state changes distinct",
+        "A comment saying paid does not collect money. A tracking number does not prove delivery. Deleting an order is not a refund or a shipment cancellation. The workspace brings those records closer, but each action still has its own consequence and confirmation."
+      ],
+      [
+        "Evaluate the exceptions as well as the happy path",
+        "Open a representative physical order and, if relevant, a service order to inspect the different tabs. Check how missing information and outstanding balances appear. This page does not claim every external message, payment or courier event is automatically imported. Define who verifies and updates the parts that remain manual."
+      ]
+    ],
+    "checks": [
+      "Verified order identity",
+      "Items and options inspected",
+      "Money reconciled separately",
+      "Appropriate delivery or booking workflow"
+    ],
+    "help": "order-tabs",
+    "sources": [
+      "OrderTabBar",
+      "OrderDerive",
+      "OrderDetails",
+      "OverflowSheet"
+    ],
+    "id": 14,
+    "route": "/features/order-workspace/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "order-balance-records",
+    "title": "Keep the recorded balance separate from the act of collecting money",
+    "description": "Inspect totals and amounts due, then record receipt only after it has genuinely happened.",
+    "sections": [
+      [
+        "Make the outstanding amount visible",
+        "The current Money tab breaks down items, delivery, discount, total, paid and due. That helps an operator understand what the order record says instead of relying on a single number in a message. The figures remain records to reconcile, not a substitute for a bank or provider receipt."
+      ],
+      [
+        "Use Clear due for its actual purpose",
+        "The confirmation explicitly says the action marks the displayed amount as received and does not take a payment. Only use it after verifying the full amount for that order. If a customer has paid part of the balance, marking the full outstanding amount received would misstate the situation."
+      ],
+      [
+        "Handle older records with care",
+        "The inspected layout has compatibility behaviour for records without a partial-payment field. Such a record can appear settled. Do not turn that display into evidence that a historical transfer was confirmed. Compare the actual receipt and the order reference when investigating older balances."
+      ],
+      [
+        "Make reconciliation part of the routine",
+        "Check money before promising fulfilment where payment is required. If an update times out, reload the order instead of repeatedly applying the same action. A separate gateway summary can appear for gateway-paid orders, but universal automatic bank matching is not established by this workflow."
+      ]
+    ],
+    "checks": [
+      "Order total understood",
+      "Actual receipt checked",
+      "Correct amount recorded",
+      "Uncertain responses reconciled before retry"
+    ],
+    "help": "clear-order-due",
+    "sources": [
+      "MoneyTab",
+      "OrderDerive",
+      "OrderDetails"
+    ],
+    "id": 15,
+    "route": "/features/order-balance-records/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "customer-bill-documents",
+    "title": "Create a customer bill from the order you have checked",
+    "description": "Generate an order-linked document and download the existing bill when needed.",
+    "sections": [
+      [
+        "Use the order as the starting record",
+        "The current bill-generation action is in Order Details. Check the customer, items and amounts there before generating a document. This reduces the temptation to create a separate file whose numbers no longer match the business record."
+      ],
+      [
+        "Keep generation and downloading separate",
+        "Once a bill exists, the screen shows its document number and download action. A failed download does not necessarily mean generation failed. Reopen the existing document rather than creating a duplicate order to obtain another PDF. The service can report that a bill was already generated."
+      ],
+      [
+        "Review configuration before distribution",
+        "The interface describes document selection using the saved billing GST configuration. This page explains the available workflow, not the tax treatment your business should choose. Verify legal and classification details through appropriate professional advice, then inspect the resulting document before sending it."
+      ],
+      [
+        "Protect the customer's copy",
+        "A PDF can contain more personal information than a support request needs. Share it only with the intended recipient and keep an order or document reference for troubleshooting. The application workflow does not establish a guarantee of tax compliance, automatic corrections to issued documents or deletion of bills when an order is removed."
+      ]
+    ],
+    "checks": [
+      "Order checked before generation",
+      "Document number retained",
+      "PDF inspected before sharing",
+      "Billing configuration verified separately"
+    ],
+    "help": "generate-order-bill",
+    "sources": [
+      "MoneyTab",
+      "OrderDetails",
+      "GstSettings"
+    ],
+    "id": 16,
+    "route": "/features/customer-bill-documents/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "bill-library",
+    "title": "Separate customer bills from the platform's invoices to you",
+    "description": "Find and preview the document from the correct issuer before saving or forwarding it.",
+    "sections": [
+      [
+        "Two document relationships need separate views",
+        "A bill issued to your customer and an invoice issued to your business serve different purposes. The current Bills & Payments screen separates those lists rather than mixing every PDF into one stream. Begin by choosing the relationship you are investigating."
+      ],
+      [
+        "Inspect before forwarding",
+        "The list identifies document information and opens a preview. The preview loads the existing PDF and offers a deliberate Save / Share action. That gives you a chance to check the number, recipient and amount before it leaves the app. Opening a preview is not the same as issuing a new document."
+      ],
+      [
+        "Do not confuse a bounded list with complete history",
+        "The inspected screen requests the first 30 records of each list. A loading failure can also leave an empty result. If a known document is missing, refresh and inspect the related order before concluding that it was deleted. Keep the reference for a focused support report."
+      ],
+      [
+        "Make record handling explicit",
+        "Downloaded files can remain on the device after sign-out. Use an appropriate storage and sharing routine, especially on shared phones. This page does not promise an accounting-system integration, unlimited historical pagination or automatic filing. Evaluate those needs separately from the document list and preview capability."
+      ]
+    ],
+    "checks": [
+      "Correct issuer selected",
+      "Document number checked",
+      "Preview read before sharing",
+      "Private handling of downloaded PDFs"
+    ],
+    "help": "customer-bills-list",
+    "sources": [
+      "BillsAndPaymentsScreen",
+      "BillPreviewScreen"
+    ],
+    "id": 17,
+    "route": "/features/bill-library/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "customer-order-tracking",
+    "title": "Let customers look up a specific order with its checkout contact",
+    "description": "Provide a reference-based order lookup instead of making every progress enquiry start from scratch.",
+    "sections": [
+      [
+        "Give the customer a precise starting point",
+        "The current Track Order page asks for an order number and the email or phone associated with it. That connects an enquiry to a record more reliably than a product photo or a first name alone. Keep the order reference in your normal confirmation process."
+      ],
+      [
+        "Show the available record honestly",
+        "A successful lookup returns order details and the available timeline. The usefulness of that information still depends on the underlying order and shipment records being accurate. A tracking page is not proof that every carrier event appears instantly or that a parcel has been physically received."
+      ],
+      [
+        "Handle failed lookups without creating another order",
+        "An incorrect reference, contact or merchant address can prevent a match. Customers should check those details and contact the merchant privately, not place the order again to see whether it works. Support can usually begin with a reference and a redacted error rather than a full address screenshot."
+      ],
+      [
+        "Evaluate privacy and the operational handoff",
+        "Use your own authorised order when assessing the flow. Do not probe other customers' references. This feature does not replace the merchant's responsibility to explain a delay, correct a record or confirm a remedy. Keep status updates and customer communication aligned with what actually happened."
+      ]
+    ],
+    "checks": [
+      "Order reference available",
+      "Correct merchant address",
+      "Checkout contact used",
+      "Status maintained accurately"
+    ],
+    "help": "shopper-track-order",
+    "sources": [
+      "TrackOrderPage"
+    ],
+    "id": 18,
+    "route": "/features/customer-order-tracking/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "customer-order-history",
+    "title": "Customer order history accessed through the checkout email",
+    "description": "Offer an email-code entry point for customers returning to their orders with your store.",
+    "sections": [
+      [
+        "Keep customer access distinct from merchant login",
+        "The current My Orders page uses the email supplied at checkout and a six-digit OTP. It is not the merchant administration account. This distinction gives customers a relevant access route without asking them to understand your internal order-management tools."
+      ],
+      [
+        "Make the entry instructions clear",
+        "The page asks for the same checkout email and uses a non-specific message when a code is requested. That message is not a public confirmation that an email has orders. Customers should check their own inbox and use the code privately; support should never request that OTP."
+      ],
+      [
+        "Support a returning customer safely",
+        "An authorised session can load the order list, and an expired session returns the customer to the access step. Logout clears the customer session and visible orders. A remembered email suggestion is not itself an authenticated account. On shared devices, encourage customers to sign out after viewing private information."
+      ],
+      [
+        "Set realistic expectations",
+        "The value is a clearer route to existing orders, not a promise of a universal account across every merchant or a replacement for customer service. Evaluate the list and status meanings with an authorised example. If an order used the wrong email, resolve it through the merchant's legitimate process rather than trying unrelated addresses."
+      ]
+    ],
+    "checks": [
+      "Checkout email explained",
+      "OTP kept private",
+      "Correct store accessed",
+      "Shared-device sign-out understood"
+    ],
+    "help": "shopper-my-orders",
+    "sources": [
+      "MyOrdersPage"
+    ],
+    "id": 19,
+    "route": "/features/customer-order-history/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "service-request-details",
+    "title": "Collect a preferred service time as a request, not a silent booking promise",
+    "description": "Use the service-only checkout path to keep contact details and preferred timing together.",
+    "sections": [
+      [
+        "Service buying needs a different handoff",
+        "A service-only cart does not need to behave like a parcel checkout. The inspected storefront uses a booking-details step for service items, with the merchant's required contact fields and a preferred date and time for each service."
+      ],
+      [
+        "Make the timezone and confirmation boundary visible",
+        "The time input is labelled IST and refuses invalid or past times. The interface explains that the merchant confirms the slot when accepting the booking. Keep that language in your customer process: choosing a preferred time should not be represented as a guaranteed reservation before the relevant confirmation."
+      ],
+      [
+        "Prepare service information that answers real questions",
+        "Explain what the service includes, its duration where applicable and the genuine cancellation terms. Do not use a physical-product stock number as a substitute for staff availability. A request form collects intent; it does not by itself establish a resource calendar or eliminate scheduling conflicts."
+      ],
+      [
+        "Evaluate the whole service workflow",
+        "Use a representative service and inspect the request details, merchant handling and customer follow-up before advertising instant booking. This page does not promise calendar integration, automatic slot capacity, venue reservation or every mixed-cart combination. Confirm the specific workflow you need in the current deployed version."
+      ]
+    ],
+    "checks": [
+      "Service scope explained",
+      "Preferred time labelled correctly",
+      "Merchant confirmation process",
+      "No unsupported instant-booking promise"
+    ],
+    "help": "shopper-service-time",
+    "sources": [
+      "ServiceBookingStep",
+      "CheckoutView"
+    ],
+    "id": 20,
+    "route": "/features/service-request-details/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "crochet-selling-workflow",
+    "kind": "solution",
+    "title": "A clearer selling workflow for a crochet catalogue",
+    "description": "Present finished pieces and custom work without hiding the making time behind an attractive photograph.",
+    "sections": [
+      [
+        "Separate what is ready from what still needs making",
+        "A crochet buyer needs to know whether the photographed piece is available or an example of a future commission. Use the product description to state the materials, dimensions, included items and actual fulfilment expectation. A category can group a coherent range, but it cannot replace that distinction on each product."
+      ],
+      [
+        "Use options only for repeatable choices",
+        "Colour or size options are useful when you genuinely offer those combinations at a known price. A request that changes the pattern, scale or construction may need a conversation before a firm commitment. Do not squeeze an individually quoted project into an ordinary option just to make checkout look simpler."
+      ],
+      [
+        "Plan capacity as well as stock",
+        "Finished stock and available making hours are different constraints. The app's stock workflow can record counted units, while the capacity planner helps you estimate whole pieces from your own available hours. Neither predicts how long an unfamiliar design will take. Include finishing and packing in your operational decision."
+      ],
+      [
+        "Evaluate with one ordinary piece and one difficult request",
+        "Prepare an accurate listing, inspect the mobile product choice and check the order details. Decide how you will confirm bespoke requirements and communicate delays. oBizee's catalogue, options and order records can support that structure; automatic craft pricing, pattern estimation and guaranteed production scheduling are not promised."
+      ]
+    ],
+    "checks": [
+      "Ready-made versus commissioned stated",
+      "Dimensions and materials clear",
+      "Repeatable options priced",
+      "Making time reconciled with promises"
+    ],
+    "help": "first-product",
+    "sources": [
+      "AddProductScreen",
+      "OrderDetails"
+    ],
+    "id": 21,
+    "route": "/solutions/crochet-selling-workflow/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "jewellery-selling-workflow",
+    "kind": "solution",
+    "title": "A jewellery store built around material, scale and choice",
+    "description": "Help customers understand the piece before they commit to a size, finish or gift purchase.",
+    "sections": [
+      [
+        "Show what a close-up cannot explain",
+        "A detailed jewellery photograph can still leave scale and material unclear. Prepare images that show proportion and a description that accurately names the material, finish and included components. Do not imply a metal purity, stone origin or certification you cannot substantiate."
+      ],
+      [
+        "Keep repeatable options explicit",
+        "Where you offer sizes or finishes, define the actual combinations and their prices. A buyer should not have to send a second message to clarify which option was ordered. Check combination stock where relevant rather than relying on the total number of pieces in the range."
+      ],
+      [
+        "Protect the occasion promise",
+        "Jewellery is often bought for a date, but an occasion does not shorten production or courier time. Use delivery settings and requested dates honestly, and explain what needs confirmation for personalised work. A saved date is not a guarantee of arrival."
+      ],
+      [
+        "Test the information with a representative item",
+        "Choose a piece with the most important ordinary option and inspect its product page, cart and order detail. Verify the material wording and price again before promotion. The platform's catalogue and order workflow do not authenticate products, assess jewellery value or supply universal sizing advice. Those responsibilities remain with the merchant's evidence and process."
+      ]
+    ],
+    "checks": [
+      "Material claims substantiated",
+      "Scale shown clearly",
+      "Options tied to the order",
+      "Occasion timing explained"
+    ],
+    "help": "variant-names",
+    "sources": [
+      "AddProductScreen",
+      "DeliverySettingsScreen",
+      "OrderDetails"
+    ],
+    "id": 22,
+    "route": "/solutions/jewellery-selling-workflow/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "gift-selling-workflow",
+    "kind": "solution",
+    "title": "Keep the details of a gift order from getting lost",
+    "description": "Organise product choices, personalisation expectations and requested delivery timing.",
+    "sections": [
+      [
+        "A gift order often has more than one important person",
+        "The buyer and recipient may be different, and an occasion can make a small error unusually costly. Prepare the product information so the buyer understands what is included, what can be personalised and what needs a separate confirmation."
+      ],
+      [
+        "Do not hide bespoke approval inside a generic description",
+        "For names, messages or custom artwork, define how the final wording is approved before production. The catalogue can explain the process, but a product option is not proof that a personalised proof has been accepted. Keep the agreed wording in the appropriate protected business record rather than a public comment."
+      ],
+      [
+        "Make timing a deliberate choice",
+        "Configure delivery charges and requested dates according to the service you can provide. Explain when the merchant must confirm feasibility. An occasion-focused category can help discovery, but it should not imply every item in it can arrive tomorrow."
+      ],
+      [
+        "Evaluate a realistic exception",
+        "Test the ordinary product choice and inspect how you will handle a late request, unavailable item or changed personalisation. The current product, category and order features give the work a structure; they do not automatically approve artwork, verify a recipient address or guarantee a celebration deadline. Choose the workflow with those limits visible."
+      ]
+    ],
+    "checks": [
+      "Included items explained",
+      "Personalisation approval defined",
+      "Buyer and recipient context preserved",
+      "Realistic timing"
+    ],
+    "help": "order-comment",
+    "sources": [
+      "AddProductScreen",
+      "DeliverySettingsScreen",
+      "OrderDetails"
+    ],
+    "id": 23,
+    "route": "/solutions/gift-selling-workflow/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "home-decor-selling-workflow",
+    "kind": "solution",
+    "title": "Make a home-decor product understandable beyond its styled photograph",
+    "description": "Present dimensions, materials and delivery expectations for pieces buyers cannot inspect in person.",
+    "sections": [
+      [
+        "A room photograph needs practical companions",
+        "A styled image helps a buyer imagine the product, but it can obscure its size or what is included. Add accurate dimensions, material information and a photograph that makes scale clear. If props are not sold with the item, say so before the buyer reaches checkout."
+      ],
+      [
+        "Keep variants tied to genuine differences",
+        "A finish, size or set quantity can change both the price and the fulfilment work. Use explicit options for combinations you actually offer, and review their prices individually. Do not assume a parent-product price describes every selected variation."
+      ],
+      [
+        "Plan delivery around the actual parcel",
+        "Bulky or fragile items need an operational check beyond a standard delivery label. The available delivery settings can express a charge and eligibility rule, but they do not prove the parcel is accepted by every carrier or insured against every kind of damage. Verify packing, dimensions and provider terms separately."
+      ],
+      [
+        "Start with one demanding item",
+        "Use the largest or most delicate ordinary product to evaluate the catalogue, checkout and order information. Confirm how a customer will ask a question before committing. oBizee does not replace a physical packing test, product-safety evidence or a genuine damage-resolution policy."
+      ]
+    ],
+    "checks": [
+      "Dimensions and included pieces clear",
+      "Accurate variation prices",
+      "Packing and carrier suitability checked",
+      "Support route visible"
+    ],
+    "help": "delivery-rate",
+    "sources": [
+      "AddProductScreen",
+      "DeliverySettingsScreen",
+      "OrderDetails"
+    ],
+    "id": 24,
+    "route": "/solutions/home-decor-selling-workflow/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "bag-selling-workflow",
+    "kind": "solution",
+    "title": "Help a bag buyer choose the right size and construction",
+    "description": "Organise dimensions, capacity examples, materials and options in a practical catalogue.",
+    "sections": [
+      [
+        "Show how the bag is used",
+        "A front photograph rarely answers every buying question. Explain dimensions, closure, straps, lining and included accessories accurately. If you show objects for scale, make clear whether they are included. A useful capacity example should reflect the actual bag rather than a claim inferred from its appearance."
+      ],
+      [
+        "Distinguish colour from construction",
+        "A colour option may be a simple combination; a different size or material can change price and availability. Define those combinations deliberately in the product editor. Check a selected option from the customer's view so the ordered choice remains understandable later."
+      ],
+      [
+        "Count the sellable combination",
+        "Do not promise a colour because another colour is in stock. Where the workflow supports variant quantities, reconcile the selected combination with the physical pieces. Handmade or made-to-order bags also need a capacity decision that stock alone does not capture."
+      ],
+      [
+        "Evaluate the after-order work",
+        "Inspect how the selected bag, quantity and delivery information appear in the order workspace. Decide how to answer care, material and fit-for-purpose questions with real evidence. The catalogue does not independently verify load capacity, water resistance or material certification, and those claims should not be invented to make a listing sound complete."
+      ]
+    ],
+    "checks": [
+      "Dimensions and construction described",
+      "Options reflect real differences",
+      "Correct combination available",
+      "Performance claims evidenced"
+    ],
+    "help": "variant-stock",
+    "sources": [
+      "AddProductScreen",
+      "OrderDetails"
+    ],
+    "id": 25,
+    "route": "/solutions/bag-selling-workflow/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "art-print-selling-workflow",
+    "kind": "solution",
+    "title": "Keep artwork format, size and framing clear before purchase",
+    "description": "Build product information that distinguishes the artwork from the photograph used to present it.",
+    "sections": [
+      [
+        "The buyer needs to know what will arrive",
+        "An original, a print and a framed print are different products. State the format, dimensions, substrate and included framing accurately. A room mock-up can be useful presentation, but it should not leave the buyer guessing whether the frame or surrounding objects are included."
+      ],
+      [
+        "Use options for the actual editions you sell",
+        "Where sizes or finishes are repeatable, define the combinations and their prices. Do not imply that every artwork is available in every size. Keep rights and reproduction permissions under your own verified process; the platform cannot establish ownership from an uploaded image."
+      ],
+      [
+        "Make dispatch assumptions visible",
+        "A made-to-order print and a ready-to-ship original may need different preparation time. Explain the genuine process and configure the delivery offer accordingly. A requested date is not proof that printing, framing and transit can all be completed in that window."
+      ],
+      [
+        "Evaluate with a representative purchase",
+        "Choose a listing whose size or framing choice could easily be misunderstood. Inspect it on a phone, then check how the chosen option appears in the cart and order. The available catalogue tools organise information; they do not provide colour-proofing, edition authentication or automatic licensing verification."
+      ]
+    ],
+    "checks": [
+      "Original or print stated",
+      "Size and frame inclusion explicit",
+      "Rights checked",
+      "Preparation and delivery distinguished"
+    ],
+    "help": "product-description-error",
+    "sources": [
+      "AddProductScreen",
+      "DeliverySettingsScreen",
+      "OrderDetails"
+    ],
+    "id": 26,
+    "route": "/solutions/art-print-selling-workflow/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "handmade-accessory-workflow",
+    "kind": "solution",
+    "title": "Give small handmade accessories a precise product identity",
+    "description": "Present sets, materials, options and care information without relying on a photo to explain everything.",
+    "sections": [
+      [
+        "Small products still need exact descriptions",
+        "A scrunchie, keychain or accessory set can be misunderstood if the listing does not state the number of pieces or included attachments. Use a stable product name, clear images and a description of what the customer receives. Show size where the photograph alone is ambiguous."
+      ],
+      [
+        "Choose options that remain manageable",
+        "Colour and pack size should correspond to combinations you can actually supply. A mixed set needs an explanation of whether the buyer chooses every piece or receives an assortment. Do not let a decorative category title carry information that belongs on the product itself."
+      ],
+      [
+        "Price the unit you promise",
+        "A single item and a set are different selling units. Check the saved price and the selected combination before promoting a bundle. Include packaging and the time spent preparing a small order in your own margin decision; the size of the object does not establish the cost of fulfilling it."
+      ],
+      [
+        "Test the everyday order, not just the display",
+        "Inspect the product, selected option and quantity in the cart and order workspace. Decide how you will handle a substituted colour or unavailable component before it happens. Catalogue and stock tools support that routine, but automatic assortment planning and supplier synchronisation are not promised here."
+      ]
+    ],
+    "checks": [
+      "Piece count explicit",
+      "Assortment rule explained",
+      "Correct selling unit priced",
+      "Unavailable options handled honestly"
+    ],
+    "help": "first-product",
+    "sources": [
+      "AddProductScreen",
+      "OrderDetails",
+      "InventoryManagement"
+    ],
+    "id": 27,
+    "route": "/solutions/handmade-accessory-workflow/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "made-to-order-workflow",
+    "kind": "solution",
+    "title": "Separate a made-to-order request from a ready-stock promise",
+    "description": "Use structured product and order information while retaining the confirmation a custom job needs.",
+    "sections": [
+      [
+        "A request can need work before acceptance",
+        "Made-to-order selling often involves capacity, materials and approval. A conventional product page can introduce the offer, but it should say which details are fixed and which require a conversation. Do not present an uncertain custom quote as a guaranteed standard price."
+      ],
+      [
+        "Define the repeatable part first",
+        "Use ordinary options for combinations that have a known specification and price. Keep genuinely bespoke changes out of that table until you understand them. A clear description of the confirmation process can prevent a customer from assuming every request is automatically feasible."
+      ],
+      [
+        "Connect the order to the production decision",
+        "The order workspace can retain the product choice and operational note, while delivery settings express the available timing rules. Neither is a production scheduler. Check your actual making hours and material availability before confirming a date. The capacity planner is a scenario tool, not a live calendar."
+      ],
+      [
+        "Evaluate the point where money is requested",
+        "Explain whether the customer is submitting a request or making a confirmed purchase, and verify receipt through the appropriate payment process. This page does not promise escrow, milestone billing, automatic custom quotations or conflict-free scheduling. Decide whether the current deployed workflow matches your business before using it for complex commissions."
+      ]
+    ],
+    "checks": [
+      "Request versus acceptance clear",
+      "Known options separated from bespoke work",
+      "Capacity checked",
+      "Payment expectations explicit"
+    ],
+    "help": "order-comment",
+    "sources": [
+      "AddProductScreen",
+      "OrderDetails",
+      "DeliverySettingsScreen"
+    ],
+    "id": 28,
+    "route": "/solutions/made-to-order-workflow/",
+    "verification": "local-source-only"
+  },
+  {
+    "key": "social-seller-workflow",
+    "kind": "solution",
+    "title": "Give Instagram and WhatsApp enquiries a clearer destination",
+    "description": "Keep useful conversation while moving repeatable product choices into a structured storefront.",
+    "sections": [
+      [
+        "Conversation and a storefront can do different jobs",
+        "A buyer may need advice before choosing, but not every buyer needs you to retype the catalogue. Use the storefront for accurate product information and repeatable choices, then keep the conversation available for questions that genuinely need a person."
+      ],
+      [
+        "Link to the relevant choice",
+        "When sharing a store address or product link, check that it opens the intended merchant and item. A generic homepage can be appropriate for discovery, while a product-specific enquiry usually needs a more direct destination. The current preview screen helps you identify the merchant's storefront address."
+      ],
+      [
+        "Retain the order reference after the handoff",
+        "Once a purchase exists, use its reference to keep support and fulfilment organised. Copy only the details needed by an authorised recipient. A chat message saying paid should not replace actual receipt verification, and an order comment should not be mistaken for a courier or payment action."
+      ],
+      [
+        "Do not assume a native integration",
+        "This is a workflow using links, product information and order records. It is not a claim that oBizee imports every Instagram DM, synchronises every WhatsApp conversation or automates all follow-ups. Test the specific handoff you use with a representative product and define who records anything that remains outside the system."
+      ]
+    ],
+    "checks": [
+      "Relevant buying link",
+      "Accurate product information",
+      "Order reference retained",
+      "Manual communication responsibilities clear"
+    ],
+    "help": "preview-address",
+    "sources": [
+      "WebsitePreviewScreen",
+      "OrderDetails",
+      "OverflowSheet"
+    ],
+    "id": 29,
+    "route": "/solutions/social-seller-workflow/",
+    "verification": "local-source-only"
+  }
+]

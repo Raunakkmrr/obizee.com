@@ -1,0 +1,176 @@
+[
+  {
+    "key": "guides",
+    "route": "/guides/",
+    "title": "Build a clearer selling workflow",
+    "description": "A practical reading map for independent sellers: choose the next decision, not the longest reading list.",
+    "categories": [],
+    "intro": [
+      "A useful guide should change what you can do next. Start with the part of your business that is creating the most repeated work: unclear product information, conversations that never become orders, stock differences or delivery questions. You do not need to rebuild the whole shop before improving one of those tasks.",
+      "This library separates business decisions from app instructions. The selling guides explain how to evaluate a workflow; Help explains specific screens checked against the current local V1 source. Calculators let you test your own assumptions without connecting an account. None of these pages changes your live store.",
+      "Choose one reading path below, write down the decision you are trying to make and use a real product as your example. After reading, check the result against your own customers and operating costs. A generic example is a starting point, not evidence that every business should use the same policy."
+    ],
+    "path": [
+      "New seller: prepare the catalogue before promoting a buying link.",
+      "Existing seller: investigate the repeated failure before adding another tool.",
+      "Changing platforms: compare a complete order journey, including the work after checkout."
+    ],
+    "children": [
+      "selling-online",
+      "catalogue-and-stock",
+      "fulfilment-and-support",
+      "businesses",
+      "choosing-and-designing-store"
+    ],
+    "categoriesLabel": "Start with the foundations"
+  },
+  {
+    "key": "selling-online",
+    "route": "/guides/selling-online/",
+    "title": "Turn social interest into a workable order process",
+    "description": "Instagram, WhatsApp and growth guides organised around the buyer's next action.",
+    "categories": [
+      "Instagram",
+      "WhatsApp",
+      "Growth",
+      "Selling channels"
+    ],
+    "intro": [
+      "A social post can attract attention without giving a customer enough information to buy. These guides address the handoff: a buyer sees something, asks a question, chooses a product and reaches a clear next step. Keep the conversation where it adds value, but stop making every straightforward purchase depend on repeating the same explanation.",
+      "Read the Instagram and WhatsApp material as connected parts of one workflow. A link should lead to the relevant product or category, while the chat should retain the context a seller needs. Avoid measuring success only by message volume when the goal is a completed, correctly understood order.",
+      "For growth work, write down the denominator before comparing results. Clicks, enquiries, accepted orders and repeat purchases answer different questions. The supplied baseline of approximately 5,000 weekly impressions and 120 clicks implies roughly 2.4% clicks per impression for that reported dataset; it does not establish a store conversion rate or a target every channel should meet."
+    ],
+    "path": [
+      "Clarify the product and the action you want the reader to take.",
+      "Choose a channel guide for the actual handoff you need.",
+      "Record the result and the customer questions before changing the next variable."
+    ]
+  },
+  {
+    "key": "catalogue-and-stock",
+    "route": "/guides/catalogue-and-stock/",
+    "title": "Make products easier to choose and stock easier to trust",
+    "description": "Catalogue and inventory guidance for descriptions, options, photographs and quantity records.",
+    "categories": [
+      "Catalogue",
+      "Stock"
+    ],
+    "intro": [
+      "The catalogue is where a customer decides whether the product matches their need. The inventory record is where you decide whether you can fulfil that choice. Keep them connected without assuming that attractive photography or a visible quantity solves both problems.",
+      "Start with one representative product. Give it a stable name, the right options, a price you can explain and photographs that answer practical questions. Then trace how a sale, cancellation, damaged item or return changes its available quantity. A size-specific promise needs a size-specific record.",
+      "These guides cover the decisions and operating routines behind that work. For the app's current field validation or stock-adjustment controls, use the linked Help collection. In particular, treat a timeout as an unknown outcome until you inspect the saved state. Repeating a stock change can create a second movement rather than repair the first.",
+      "Use the photo planner for a finite shot list and the reorder calculator for a scenario. Neither tool reads your stock or predicts demand. Replace example inputs with counted quantities, actual lead times and evidence from your own shop."
+    ],
+    "path": [
+      "Prepare one complete product page before copying its structure.",
+      "Separate parent products, variants and stock units.",
+      "Keep a reason and reference for every manual quantity correction."
+    ]
+  },
+  {
+    "key": "fulfilment-and-support",
+    "route": "/guides/fulfilment-and-support/",
+    "title": "Handle the work after an order is placed",
+    "description": "Shipping and customer-service guides for realistic promises, useful updates and exception handling.",
+    "categories": [
+      "Shipping",
+      "Customer service"
+    ],
+    "intro": [
+      "A checkout is the beginning of a fulfilment obligation, not the end of the customer experience. These guides help you explain delivery choices, retain order context and respond when an item, payment or parcel does not follow the expected path.",
+      "Separate what you control from what you estimate. Packing readiness is different from pickup; pickup is different from delivery. A requested occasion date should not quietly become a guaranteed arrival claim. Give the buyer the information they need to choose, including the limits of the promise.",
+      "For customer service, start by identifying the actual state of the order. Do not ask the customer to pay or place it again until you understand the earlier attempt. Keep payment confirmation, order acceptance, shipment cancellation and refunds distinct. Clear language matters most when a customer is already worried.",
+      "Read a policy or message example as a structure to adapt to your genuine process. Do not copy a time limit, refund commitment or support availability that your business cannot honour. App-specific actions belong in Help, where their consequences are described separately."
+    ],
+    "path": [
+      "Define the delivery promise before promoting it.",
+      "Prepare updates for normal progress and for exceptions.",
+      "Reconcile the record before offering a remedy that changes money or stock."
+    ]
+  },
+  {
+    "key": "businesses",
+    "route": "/guides/businesses/",
+    "title": "Find guidance that fits what you make and sell",
+    "description": "Category-specific guides for crochet, jewellery, gifts, clothing and other independent merchant businesses.",
+    "categories": [
+      "Crochet",
+      "Jewellery",
+      "Gifts",
+      "Clothing",
+      "Home décor",
+      "Bags",
+      "Art and prints",
+      "Handmade accessories"
+    ],
+    "intro": [
+      "Different products create different buying questions. A crochet commission needs material, size and making-time clarity. Jewellery needs scale and material information. Clothing needs fit and option consistency. Gifts need a realistic occasion deadline and a clear personalisation process. Start with the category closest to your actual work.",
+      "These guides do not assume every maker is a factory or every shop keeps finished stock. Use the examples to distinguish ready-to-ship products, made-to-order items and individually quoted work. The customer should know which kind of commitment they are making before they pay.",
+      "Choose one guide for product presentation and one for the operating decision behind it. A useful listing and a realistic capacity limit support each other. Do not promise a large number of custom orders merely because the storefront accepts quantities.",
+      "Where a guide uses illustrative costs or timings, replace them with your own records. Material, labour, packaging and rejected work can vary substantially even within a category. The capacity and margin tools provide a place to compare scenarios, not a claim about typical earnings."
+    ],
+    "path": [
+      "Pick your closest merchant category.",
+      "Prepare one representative product and one difficult edge case.",
+      "Connect the product promise to stock, production time and delivery."
+    ]
+  },
+  {
+    "key": "choosing-and-designing-store",
+    "route": "/guides/choosing-and-designing-store/",
+    "title": "Choose a store around the work it must perform",
+    "description": "Comparisons, pricing decisions and design guides without a one-size-fits-all winner.",
+    "categories": [
+      "Platform comparisons",
+      "Pricing decisions",
+      "Store design"
+    ],
+    "intro": [
+      "A platform comparison is useful only when it reflects the work you need to complete. A low headline price can omit setup, additional tools or operating effort. A striking template can hide weak product information. Start with the order journey and the constraints that matter to your business.",
+      "The comparison guides use decision criteria rather than invented rankings. Confirm current provider terms before paying; features, plan limits and charges can change. The cost calculator accepts your own quoted figures instead of embedding a price list that may become stale.",
+      "For design, look beyond the first screen. Check category navigation, product options, the cart, delivery explanations and the order follow-up. A customer should not have to learn a new visual language at every step. The best choice is one you can maintain with your actual photographs and copy.",
+      "Read the pricing material alongside the design and platform choice. A discount, free-shipping threshold or bundle is an operating decision with costs, not simply a button colour or promotional heading. Keep the arithmetic and the customer-facing promise aligned."
+    ],
+    "path": [
+      "List the non-negotiable tasks and realistic budget.",
+      "Compare the whole journey using the same representative product.",
+      "Choose a maintainable design and verify the cost assumptions."
+    ]
+  },
+  {
+    "key": "help",
+    "route": "/help/",
+    "title": "Help for the task in front of you",
+    "description": "100 source-checked setup and troubleshooting drafts for the current V1 app and storefront.",
+    "categories": [],
+    "intro": [
+      "Find a specific action rather than scanning a feature list. The articles below explain what to do, what a successful result should look like and what to check when it does not happen. Merchant tasks and customer shopping tasks are labelled so you do not confuse an administration login with customer order access.",
+      "This collection was checked against local application source on 26 September 2026. It has not been independently executed against a live account, and a deployed app version may differ. That verification boundary is displayed on every article. Screenshots and live walkthroughs are not claimed.",
+      "Start with the exact screen or error wording. If a request may have changed an order, stock or payment record, inspect the saved state before repeating it. Use the support-report article to send a useful, redacted description. No article needs your password, OTP, payment PIN or secret key.",
+      "These drafts intentionally omit unsupported promises found in older help copy, such as universal integrations or a guaranteed support response time. A visible control without a working save action is not documented as a completed feature."
+    ],
+    "path": [
+      "Search the task or message, then select the relevant category.",
+      "Read the consequence before using a state-changing action.",
+      "Verify the saved result; report uncertainty rather than repeatedly submitting."
+    ]
+  },
+  {
+    "key": "resources",
+    "route": "/resources/",
+    "title": "Work out the numbers before making the promise",
+    "description": "12 working calculators and planners for prices, costs, capacity, shipping and catalogue preparation.",
+    "categories": [],
+    "intro": [
+      "Use these resources when a decision needs arithmetic rather than another general article. Each tool includes its formula, an illustrative example and the boundaries of the result. Replace the sample figures before using an output in your business.",
+      "The calculators run locally in the page. They do not connect to your store, save a history, submit orders or change prices. Reloading clears the entered scenario. If you print a result, review what is included and avoid entering customer or confidential financial information.",
+      "Keep cost definitions consistent. Gross margin is not the same as contribution after packaging and fees. A break-even order count depends on the contribution assumed. A shipping threshold is a scenario, not a guarantee that every basket will cover its delivery cost.",
+      "Run a conservative case as well as the expected case. Note where each input came from and compare the scenario with actual results later. These are planning aids, not tax, lending or investment advice, and no output is an automatic recommendation to spend money."
+    ],
+    "path": [
+      "Choose the decision you are calculating.",
+      "Replace every example value and read the limitations.",
+      "Keep the input assumptions with the result you use."
+    ]
+  }
+]

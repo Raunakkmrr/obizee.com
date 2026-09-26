@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ForHandicraftsPage from "@/pages/ForHandicrafts";
+import ForHandicraftsPage from "@/legacy-views/ForHandicrafts";
 
 
 export const metadata: Metadata = {

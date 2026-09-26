@@ -81,7 +81,7 @@ export const metadata: Metadata = {
       "Nothing to pay until ₹50,000 in orders. Then 0 subscription — just 1% per order, capped at ₹10. Online store, order management, stock, and Delhivery, DTDC & Blue Dart shipping.",
     images: ["/Obizee.png"],
   },
-  robots: { index: true, follow: true },
+  robots: process.env.SEO_EDITORIAL_PREVIEW === "1" ? { index: false, follow: false } : { index: true, follow: true },
   alternates: { canonical: "https://www.obizee.com" },
 };
 
@@ -93,8 +93,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <Providers>{children}</Providers>
-        <LeadCapturePrompt />
-        <Analytics />
+        {process.env.SEO_EDITORIAL_PREVIEW !== "1" && <LeadCapturePrompt />}
+        {process.env.SEO_EDITORIAL_PREVIEW !== "1" && <Analytics />}
       </body>
     </html>
   );

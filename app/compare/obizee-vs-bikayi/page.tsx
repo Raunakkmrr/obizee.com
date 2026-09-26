@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompareBikayiPage from "@/pages/CompareBikayi";
+import CompareBikayiPage from "@/legacy-views/CompareBikayi";
 
 
 export const metadata: Metadata = {

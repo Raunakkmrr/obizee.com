@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TopFunnelPost2 from "@/pages/blog/TopFunnelPost2";
+import TopFunnelPost2 from "@/legacy-views/blog/TopFunnelPost2";
 
 export const metadata: Metadata = {
   title: "50 Profitable Online Business Ideas for India in 2026",

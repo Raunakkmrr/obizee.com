@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BlogPost6 from "@/pages/blog/BlogPost6";
+import BlogPost6 from "@/legacy-views/blog/BlogPost6";
 
 export const metadata: Metadata = {
   title: "Dukaan App Review 2026: Pros, Cons, and Better Alternatives",

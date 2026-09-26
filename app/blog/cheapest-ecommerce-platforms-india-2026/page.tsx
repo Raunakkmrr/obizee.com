@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BlogPost4 from "@/pages/blog/BlogPost4";
+import BlogPost4 from "@/legacy-views/blog/BlogPost4";
 
 export const metadata: Metadata = {
   title: "10 Cheapest Ecommerce Platforms in India [2026 Comparison]",

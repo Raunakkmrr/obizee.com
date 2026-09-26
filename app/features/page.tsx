@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import FeaturesPage from "@/pages/FeaturesPage";
+import FeaturesPage from "@/legacy-views/FeaturesPage";
 
 
 export const metadata: Metadata = {
