@@ -1,0 +1,5 @@
+import hubs from '@/content/seo-drafts/hubs.json';
+import ContentDiscovery from './ContentDiscovery';
+import {HelpHeader,HelpFooter} from './HelpChrome';
+import HelpCenterSearch from './HelpCenterSearch';
+export default function HelpCenter(){const h=hubs.find(h=>h.key==='help')!;return <div className="hc-shell"><HelpHeader/><main id="main" className="hc-home"><div className="hc-home-breadcrumb"><ContentDiscovery route={h.route} title={h.title} description={h.description} kind="CollectionPage"/></div><section className="hc-hero"><p className="hc-eyebrow">Help Center</p><h1>{h.title}</h1><p>{h.description}</p></section><HelpCenterSearch/><aside className="hc-source-note"><h2>Clear steps, with a clear verification boundary</h2><p>These guides were checked against local V1 application source on 26 September 2026, not independently executed in a live account. Your deployed version may differ. Check saved orders, stock and payment records before repeating an action.</p><p>Never share passwords, OTPs, payment PINs or secret keys with support.</p></aside></main><HelpFooter/></div>}

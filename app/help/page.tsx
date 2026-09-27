@@ -1,3 +1,4 @@
-import KnowledgeHub,{hubMetadata} from '@/components/seo-drafts/KnowledgeHub';
+import {hubMetadata} from '@/components/seo-drafts/KnowledgeHub';
+import HelpCenter from '@/components/seo-drafts/HelpCenter';
 export const metadata=hubMetadata('help');
-export default function Page(){return <KnowledgeHub hubKey="help"/>;}
+export default function Page(){return <HelpCenter/>;}
