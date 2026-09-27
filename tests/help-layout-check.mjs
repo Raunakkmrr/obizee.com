@@ -10,6 +10,12 @@ assert.equal(help.length,100);
 const categories=[...new Set(help.map(a=>a.category))];
 assert.equal((home.match(/class="hc-category"/g)||[]).length,categories.length);
 assert.ok(home.includes('id="help-query"')&&home.includes('id="help-category"'));
+assert.ok(home.includes('class="hc-welcome"')&&home.includes('class="hc-start"'),'Own-brand split introduction');
+assert.ok(home.includes('class="hc-directory-heading"'),'Own-brand help directory');
+const css=fs.readFileSync('src/components/seo-drafts/help-center.css','utf8');
+assert.ok(css.includes('#fff6ee')&&css.includes('#ffd1b0'),'Mobile auth palette');
+function luminance(hex){const c=hex.match(/\w\w/g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722;}
+for(const ink of ['7c633a','995124'])for(const bg of ['fff6ee','fffdfa','f3e4d4'])assert.ok((luminance(bg)+.05)/(luminance(ink)+.05)>=4.5,'Warm text contrast');
 for(const c of categories)assert.equal(searchHelp(help,'',c).length,help.filter(a=>a.category===c).length);
 assert.equal(searchHelp(help,'unfindable_xyz').length,0);
 assert.ok(searchHelp(help,'stock').length>0);
