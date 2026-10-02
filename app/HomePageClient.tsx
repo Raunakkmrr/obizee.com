@@ -3,6 +3,7 @@
 import React, { lazy, Suspense } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import BusinessManagement from "@/components/BusinessManagement";
 import FeaturedOn from "@/components/FeaturedOn";
 import SocialProofBar from "@/components/SocialProofBar";
 import Features from "@/components/Features";
@@ -52,6 +53,7 @@ export default function HomePageClient() {
       <Testimonials />
       <ShopsWall />
       <MoveYourShop />
+      <BusinessManagement />
       <WhatItRuns />
       <Features />
       <HowItWorks />

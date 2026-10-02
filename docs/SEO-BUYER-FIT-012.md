@@ -28,3 +28,7 @@ The 500-page programme remains intact; the new guide is additional, not a claim 
 Use seven complete post-release days, then 14 and 28 days, for the same route/query cohort. Keep unknown volume declarations separate. Existing-seller handoffs are self-reported qualification, not verified revenue. Compare actual enquiries, activation and paid retention only with their real records; do not infer them from a click event. No guaranteed ranking, indexing, AI citation or sales lift is claimed.
 
 Rollback: forward-revert this release through normal CI/CD, preserving subsequent commits. Do not reset or force-push main. Full task evidence and current deployment status live in the workspace growth record of the same task ID.
+
+## Owner correction — 2026-10-03
+
+The owner did not authorise replacing the homepage hero. Restore `Hero.tsx` byte-for-byte from `168cb6054e5cba7b6d8ccf78cb5f5bbe3e7d0838`, including its original copy and both actions. Place the approved management message in a new, additive `BusinessManagement` section after `MoveYourShop`, without removing or reordering existing sections. Homepage replacements require explicit owner approval; general SEO authority is not permission to replace homepage content. This correction does not change other routes, pricing or backend behaviour.

@@ -3,7 +3,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import AppDownloadTrigger from "@/components/AppDownloadTrigger";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import HeroComposition from "@/components/HeroComposition";
 
@@ -43,16 +43,16 @@ const Hero = () => {
                 turning into a sentence. */}
             <div className="mb-8 inline-block rounded-xl bg-orange-100/70 px-4 py-2.5">
               <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-orange-700 sm:text-xs">
-                Business management for sellers already growing
+                0 subscription &middot; 0 setup &middot; 0 hidden charges &middot; ₹10 max per order
               </span>
             </div>
 
             {/* Two-tone: the brand colour lands on the words carrying the offer,
                 not on a whole line. */}
             <h1 className="mb-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-[3rem] lg:text-[3.2rem]">
-              <span className="text-orange-600">Manage your orders.</span>
+              <span className="text-orange-600">0 subscription charges.</span>
               <br />
-              <span className="text-gray-900">Stay on top of your business.</span>
+              <span className="text-gray-900">Pay us when you get an order.</span>
             </h1>
 
             {/* Every number here is checkable against the code that actually
@@ -62,43 +62,37 @@ const Hero = () => {
                 commission, which the billing code flatly contradicts — the cap
                 is the real story and it does not need overstating. */}
             <p className="mx-auto mb-9 max-w-xl text-lg leading-relaxed text-gray-700 sm:text-xl lg:mx-0">
-              Already selling through Instagram, WhatsApp or your own shop? oBizee helps
-              manage your customers, employees, catalogue, orders, stock and financial records.
-              Keep the daily work of your business moving in one place.
+              No subscription, no monthly fee, no setup fee. You pay nothing at all until your
+              shop has taken <strong className="font-semibold text-gray-900">₹50,000 in orders</strong> —
+              then 1%, capped at ₹10, so a ₹10,000 sale still costs you ₹10. Sell online, track
+              stock, ship with Delhivery and see your real profit.
             </p>
 
             <div className="mb-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+              <AppDownloadTrigger>
                 <Button
-                  asChild
                   size="lg"
                   className="w-full rounded-xl bg-orange-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-orange-600/20 transition-all duration-300 hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/25 sm:w-auto sm:text-lg"
-                  aria-label="Check oBizee for my business"
+                  aria-label="Start free — no card"
                 >
-                  <Link href="/signup/">Check it for my business</Link>
+                  Start free — no card
                 </Button>
+              </AppDownloadTrigger>
               <WhatsAppCTA
                 source="hero"
-                label="Discuss my order workflow"
+                label="Move my shop"
                 variant="outline"
                 icon={null}
                 trailingIcon={<ArrowRight className="ml-3 h-5 w-5" aria-hidden="true" />}
                 className="!rounded-xl !border-gray-300 !bg-white !px-8 !py-4 !text-base !text-gray-900 hover:!border-orange-400 hover:!bg-white hover:!text-orange-700 sm:!text-lg"
-                message="Hi oBizee, I already sell and want to check how your order-management workflow fits my business."
+                message="Hi oBizee, I found you on your website. I sell online and I'd like to understand how oBizee works."
               />
             </div>
 
             {/* Monospace, because it is a list of costs — it should read as a
                 figure you can check, not as more marketing copy. */}
-            <p className="text-sm leading-relaxed text-gray-700">
-              Built for the work behind every sale: the right items, accurate stock,
-              payment records and the next dispatch.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-gray-600">
-              No subscription or setup fee. Nothing until ₹50,000 in orders; then 1% per
-              order, capped at ₹10. <Link href="/pricing/" className="underline underline-offset-4">See pricing and separate gateway charges</Link>.
-            </p>
-            <p className="mt-4 text-sm">
-              <Link href="/guides/choose-order-management-software/" className="font-semibold text-orange-700 underline underline-offset-4">Not sure which software you need? Start with the practical checklist →</Link>
+            <p className="font-mono text-[12px] leading-relaxed text-gray-500 sm:text-[13px]">
+              A month with no orders costs you ₹0. You only ever pay on a sale you actually made.
             </p>
 
           </div>
