@@ -8,7 +8,8 @@ import Link from "next/link";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import StaggerChildren, { StaggerItem } from "@/components/motion/StaggerChildren";
 
-const Features = () => {
+const Features = ({headingLevel='h2'}:{headingLevel?:'h1'|'h2'}) => {
+  const Heading=headingLevel;
   const features = [
     { icon: Package, title: "Order Management", description: "Track orders from pending to delivered. Full lifecycle visibility with real-time status updates for you and your customers.", highlight: "Full Lifecycle" },
     { icon: Globe, title: "Auto-Generated Website", description: "Get your own store at yourname.obizee.com instantly. Choose templates, set brand colors — no coding needed.", highlight: "Instant Store" },
@@ -24,10 +25,10 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-12 sm:mb-20">
           <p className="text-orange-600 text-sm font-semibold tracking-widest uppercase mb-4">Platform Features</p>
-          <h2 id="features-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
+          <Heading id="features-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
             Everything You Need to
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600"> Sell Online</span>
-          </h2>
+          </Heading>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Orders, inventory, shipping, payments, analytics — all in one platform for Indian merchants.
           </p>

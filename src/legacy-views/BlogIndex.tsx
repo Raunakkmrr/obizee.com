@@ -2,6 +2,8 @@ import {EditorialHeader} from '@/components/seo-drafts/ArticlePage';
 import '@/components/seo-drafts/editorial.css';
 import editorialDrafts from '@/content/seo-drafts/summaries.json';
 import finalEditorialDrafts from '@/content/seo-drafts/acquisition-final-summaries.json';
+import ReaderQuestions from '@/components/seo-drafts/ReaderQuestions';
+import hubs from '@/content/seo-drafts/hubs.json';
 
 const existingBlogPosts = [
   {
@@ -149,7 +151,7 @@ export default function BlogIndex({page=1}:{page?:number}) {
  const posts=blogPosts.slice(start,start+BLOG_PAGE_SIZE);
  return <div className="ed-shell"><EditorialHeader/><main id="main">
  <section className="ed-hero"><p className="ed-eyebrow">THE INDEPENDENT SELLER’S READING LIST</p><h1>Guides for selling and growing online</h1><p className="ed-deck">Practical articles on selling, stock, shipping, pricing and store design.</p><p>Showing {start+1}–{start+posts.length} of {blogPosts.length} articles · Page {page} of {BLOG_PAGE_COUNT}</p><a href="/guides/">Browse topic hubs →</a><p><a href="/stories/crochetbypriya/">Merchant feedback: crochetByPriya — Priya Yadav →</a></p></section>
- <section className="ed-library" aria-label="Articles"><div className="ed-cards">{posts.map(post=><a key={post.slug} href={`/blog/${post.slug}/`}><span>{post.category} · {post.readTime}</span><h2>{post.title}</h2><p>{post.description}</p><strong>Read guide →</strong></a>)}</div>
+ <section className="ed-library" aria-label="Articles">{page===1&&<ReaderQuestions/>}<nav className="ed-topics" aria-label="Browse articles by topic">{hubs.filter(h=>h.categories.length).map(h=><a href={h.route} key={h.key}>{h.title}</a>)}</nav><div className="ed-cards">{posts.map(post=><a key={post.slug} href={`/blog/${post.slug}/`}><span>{post.category} · {post.readTime}</span><h2>{post.title}</h2><p>{post.description}</p><strong>Read guide →</strong></a>)}</div>
  <nav className="ed-pagination" aria-label="Blog pages">{page>1&&<a href={blogPageHref(page-1)} rel="prev">← Previous</a>}{Array.from({length:BLOG_PAGE_COUNT},(_,i)=>i+1).map(n=><a key={n} href={blogPageHref(n)} aria-label={`Page ${n}`} aria-current={n===page?'page':undefined}>{n}</a>)}{page<BLOG_PAGE_COUNT&&<a href={blogPageHref(page+1)} rel="next">Next →</a>}</nav></section></main>
  <footer className="ed-footer"><strong>oBizee / FIELDNOTES</strong><span>Clearer decisions. Better-prepared stores.</span></footer></div>;
 }

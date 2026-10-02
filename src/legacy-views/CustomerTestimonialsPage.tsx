@@ -58,7 +58,7 @@ const CustomerTestimonialsPage = () => {
       <div className="min-h-screen bg-white">
         <Navigation />
         <main role="main" id="main-content">
-          <Testimonials />
+          <Testimonials headingLevel="h1" />
           <BrandDirectory />
           <CTA />
         </main>

@@ -10,6 +10,7 @@ frontend:
       commands:
         - npm run build
         - npm run test:content-release
+        - npm run test:visibility
   artifacts:
     baseDirectory: out
     files:

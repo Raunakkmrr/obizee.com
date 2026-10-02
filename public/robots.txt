@@ -22,6 +22,10 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+# Search discovery; independent from the existing GPTBot training preference.
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 

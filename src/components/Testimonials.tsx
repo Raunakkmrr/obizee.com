@@ -16,7 +16,8 @@ import { sellerQuotes } from "@/data/sellerQuotes";
  * They render as plain testimonials, so each seller must sign off on their own
  * line before it can be considered accurate. Track that in sellerQuotes.ts.
  */
-const Testimonials = () => {
+const Testimonials = ({headingLevel='h2'}:{headingLevel?:'h1'|'h2'}) => {
+  const Heading=headingLevel;
   return (
     <section className="bg-orange-50 py-16 sm:py-24" aria-labelledby="testimonials-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -24,13 +25,13 @@ const Testimonials = () => {
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-orange-600">
             Sellers
           </p>
-          <h2
+          <Heading
             id="testimonials-heading"
             className="mb-5 text-3xl font-bold text-gray-900 sm:max-w-[440px] sm:text-5xl"
           >
             Don&rsquo;t take our word. Take{" "}
             <span className="text-orange-600">theirs</span>.
-          </h2>
+          </Heading>
           <p className="text-lg text-gray-600">Real shops you can open and buy from today.</p>
         </ScrollReveal>
 

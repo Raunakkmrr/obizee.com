@@ -23,6 +23,8 @@ const Footer = () => {
     ],
     resources: [
       { name: "Blog", href: "/blog" },
+      { name: "Seller guides by topic", href: "/guides/" },
+      { name: "Calculators & planners", href: "/resources/" },
       { name: "How to Create Your Store", href: "/how-to-create-online-store" },
       { name: "How to Ship Products", href: "/how-to-ship-products-online-india" },
       { name: "Success Stories", href: "/customer-testimonials" },
@@ -48,6 +50,11 @@ const Footer = () => {
       { name: "oBizee vs Dukaan", href: "/compare/obizee-vs-dukaan" },
       { name: "oBizee vs Bikayi", href: "/compare/obizee-vs-bikayi" },
       { name: "oBizee vs WooCommerce", href: "/compare/obizee-vs-woocommerce" },
+      { name: "Best Dukaan Alternatives", href: "/compare/best-dukaan-alternatives/" },
+      { name: "oBizee vs Instamojo", href: "/compare/obizee-vs-instamojo/" },
+      { name: "Best Instamojo Alternatives", href: "/compare/best-instamojo-alternatives/" },
+      { name: "oBizee Alternatives", href: "/compare/obizee-alternatives/" },
+      { name: "Best Bikayi Alternatives", href: "/compare/best-bikayi-alternatives/" },
     ],
     company: [
       { name: "About oBizee", href: "/about" },

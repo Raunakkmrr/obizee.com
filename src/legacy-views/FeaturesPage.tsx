@@ -70,7 +70,7 @@ const FeaturesPage = () => {
       <div className="min-h-screen bg-white">
         <Navigation />
         <main role="main" id="main-content">
-          <Features />
+          <Features headingLevel="h1" />
           <section id="payment-processing" className="py-14 sm:py-20 bg-white scroll-mt-24" aria-labelledby="payment-processing-heading">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="bg-gradient-to-br from-orange-50 to-white border border-orange-100 rounded-3xl p-5 sm:p-8">

@@ -38,7 +38,7 @@ const BusinessJourneyPage = () => {
       <div className="min-h-screen bg-white">
         <Navigation />
         <main role="main" id="main-content">
-          <Services />
+          <Services headingLevel="h1" />
           <JourneyStepDetails />
           <CTA />
         </main>

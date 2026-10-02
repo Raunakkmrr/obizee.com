@@ -201,7 +201,7 @@ const TopFunnelPost2 = () => {
         <Link href="/for/food-business" className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold border border-gray-200 hover:bg-gray-100 transition-colors">
           For Food Businesses <ArrowRight className="w-4 h-4" />
         </Link>
-        <Link href="/for/handmade-crafts" className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold border border-gray-200 hover:bg-gray-100 transition-colors">
+        <Link href="/for/handicrafts/" className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-700 px-4 py-2 rounded-full text-sm font-semibold border border-gray-200 hover:bg-gray-100 transition-colors">
           For Handmade Crafts <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

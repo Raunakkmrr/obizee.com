@@ -16,16 +16,17 @@ const journeySteps = [
   { icon: Users, step: "06", title: "Team & Vendor Management", description: "Assign responsibility across team members and vendors with accountability.", features: ["Role-wise team view", "Vendor coordination", "Task ownership"], href: "/business-journey#step-07", color: "from-slate-500 to-slate-700" },
 ];
 
-const Services = () => {
+const Services = ({headingLevel='h2'}:{headingLevel?:'h1'|'h2'}) => {
+  const Heading=headingLevel;
   return (
     <section className="py-16 sm:py-24 bg-white" aria-labelledby="services-heading">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14 sm:mb-20">
           <p className="text-orange-600 text-sm font-semibold tracking-widest uppercase mb-4">Platform Services</p>
-          <h2 id="services-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
+          <Heading id="services-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
             What You Get
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600"> Inside oBizee</span>
-          </h2>
+          </Heading>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Each service solves a real problem Indian merchants face every day.
           </p>
