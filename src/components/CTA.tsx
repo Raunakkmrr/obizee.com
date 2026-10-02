@@ -24,12 +24,13 @@ const CTA = () => {
         <ScrollReveal>
           <p className="text-orange-100 text-sm font-semibold tracking-widest uppercase mb-6">Start Today</p>
           <h2 id="cta-heading" className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Your Online Store is
+            Your next order needs
             <br />
-            <span className="text-yellow-200">2 Minutes Away</span>
+            <span className="text-yellow-200">a clearer workflow</span>
           </h2>
           <p className="text-lg sm:text-xl text-orange-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join 163 Indian sellers who already run their business on oBizee. Download the app, or message us on WhatsApp and we&apos;ll set you up.
+            Bring one typical order and one problem you keep facing. Check whether oBizee
+            fits the work, from the items a customer chooses to the details you need for dispatch.
           </p>
         </ScrollReveal>
 
@@ -47,8 +48,8 @@ const CTA = () => {
             <WhatsAppCTA
               source="footer_cta"
               variant="light"
-              label="Talk to us on WhatsApp"
-              message="Hi oBizee, I'd like to start selling online. Can you help me get set up?"
+              label="Discuss my existing orders"
+              message="Hi oBizee, I want to check how your order-management workflow fits my existing business."
             />
             <Link href="/pricing">
               <Button

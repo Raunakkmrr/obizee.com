@@ -9,14 +9,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, Check } from "lucide-react";
 import {
   whatsappLink,
   CONTACT_PHONE_DISPLAY,
   WHATSAPP_NUMBER,
 } from "@/lib/contact";
-import { trackEvent } from "@/lib/analytics";
+import { NON_REPORTING_HOSTS, trackEvent } from "@/lib/analytics";
+import { BUSINESS_NEEDS, fitReady, fitMessage, fitEvent } from "@/lib/buyerFit";
 import { submitLead } from "@/lib/leads";
 import {
   LEAD_CATEGORIES as CATEGORIES,
@@ -25,17 +25,15 @@ import {
 } from "@/lib/leadOptions";
 
 /**
- * Qualifying lead form — three taps, no required typing.
+ * Qualifying lead form — category, volume and need; no required typing.
  *
  * Design constraint from the owner: the visitor must not have to type unless they
  * want to. So every question is a tap (one dropdown for the long list, chips for
  * the short ones) and the only text input is an optional name.
  *
- * Transport is WhatsApp rather than a POST. That is deliberate for now: the site
- * has no API routes, and WhatsApp supplies the visitor's phone number and name
- * automatically — which is the contact detail a form would have had to ask them
- * to type. When the OM-backend lead endpoint lands, this component gains a POST
- * alongside the WhatsApp hand-off; the question set does not change.
+ * The existing lead POST stays unchanged. Additional priority is shown in the
+ * WhatsApp draft, not added to an unsupported backend field. A handoff is not
+ * proof of a sent message, signup or paid customer.
  */
 
 interface ChipGroupProps {
@@ -64,7 +62,7 @@ const ChipGroup = ({ legend, options, value, onChange }: ChipGroupProps) => (
             aria-pressed={selected}
             className={`min-h-[44px] px-4 rounded-xl border-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 ${
               selected
-                ? "border-orange-500 bg-orange-500 text-white shadow-md shadow-orange-500/25"
+                ? "border-orange-700 bg-orange-700 text-white shadow-md shadow-orange-500/25"
                 : "border-gray-200 bg-white text-gray-700 hover:border-orange-300 hover:bg-orange-50"
             }`}
           >
@@ -81,6 +79,7 @@ const LeadForm = () => {
   const [category, setCategory] = useState<string | null>(null);
   const [volume, setVolume] = useState<string | null>(null);
   const [channel, setChannel] = useState<string | null>(null);
+  const [need, setNeed] = useState<string | null>(null);
   const [name, setName] = useState("");
   /**
    * Honeypot. Positioned off-screen and hidden from assistive tech, so a real
@@ -89,27 +88,21 @@ const LeadForm = () => {
    */
   const [honeypot, setHoneypot] = useState("");
 
-  /** Only the category is required — the rest sharpens the conversation, not gates it. */
-  const ready = Boolean(category);
+  const ready = fitReady({category, volume, channel, need});
 
   const message = useMemo(() => {
-    const lines = ["Hi oBizee, I'd like to set up my online store."];
-    if (name.trim()) lines.push(`I'm ${name.trim()}.`);
-    if (category) lines.push(`I sell: ${category}`);
-    if (volume) lines.push(`Orders a month: ${volume}`);
-    if (channel) lines.push(`I sell on: ${channel}`);
-    return lines.join("\n");
-  }, [name, category, volume, channel]);
+    return fitMessage({name, category, volume, channel, need});
+  }, [name, category, volume, channel, need]);
 
   return (
     <div className="max-w-xl mx-auto text-left">
       <div className="rounded-3xl border border-orange-100 bg-white shadow-xl shadow-orange-500/5 overflow-hidden">
         <div className="bg-gradient-to-br from-orange-50 to-white px-6 sm:px-8 py-6 border-b border-orange-100">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-            Tell us what you sell
+            Start with the work you want to simplify
           </h2>
           <p className="text-sm text-gray-600 mt-1.5">
-            Three taps. No typing needed — we&apos;ll pick it up on WhatsApp.
+            Choose your category, order volume and main priority. No typing required.
           </p>
         </div>
 
@@ -139,14 +132,25 @@ const LeadForm = () => {
           </div>
 
           <ChipGroup
-            legend="How many orders a month?"
+            legend="How many orders do you receive a month?"
             options={VOLUMES}
             value={volume}
             onChange={setVolume}
           />
 
           <ChipGroup
-            legend="Where do you sell today?"
+            legend="What would you like to organise first?"
+            options={BUSINESS_NEEDS}
+            value={need}
+            onChange={setNeed}
+          />
+
+          {(volume === 'Just starting out' || need === 'Preparing to start selling') && <div className="rounded-xl bg-orange-50 p-4 text-sm text-gray-700" role="status">
+            Preparing your business? You can still talk to us. Our <a className="font-semibold text-orange-700 underline" href="/guides/selling-online/">practical selling guides</a> help you shape an offer while you explore your management workflow.
+          </div>}
+
+          <ChipGroup
+            legend="Where do you sell today? — optional"
             options={CHANNELS}
             value={channel}
             onChange={setChannel}
@@ -183,7 +187,7 @@ const LeadForm = () => {
           {ready && (
             <div className="rounded-2xl bg-[#E7FFDB] border border-[#25D366]/30 px-4 py-3.5">
               <p className="text-xs font-semibold text-[#0f7a54] uppercase tracking-wider mb-2">
-                We&apos;ll send this for you
+                Your WhatsApp draft — you choose when to send
               </p>
               <p className="text-sm text-gray-800 whitespace-pre-line leading-relaxed">
                 {message}
@@ -198,17 +202,21 @@ const LeadForm = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-disabled={!ready}
+            tabIndex={ready ? 0 : -1}
             onClick={(event) => {
               if (!ready) {
                 event.preventDefault();
                 return;
               }
-              trackEvent("lead_form_submit", {
+              if (!NON_REPORTING_HOSTS.includes(window.location.hostname)) {
+                trackEvent("business_fit_handoff", fitEvent({category, volume, channel, need}));
+                trackEvent("lead_form_submit", {
                 category: category ?? "",
                 volume: volume ?? "",
                 channel: channel ?? "",
                 named: Boolean(name.trim()),
               });
+              }
               // Not awaited: the WhatsApp hand-off must not wait on our API.
               submitLead({
                 category: category as string,
@@ -219,17 +227,12 @@ const LeadForm = () => {
                 whatsappOpened: true,
               });
             }}
-            className={`block ${ready ? "" : "pointer-events-none"}`}
+            className={`flex items-center justify-center w-full min-h-[56px] px-4 rounded-2xl text-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 ${ready ? "bg-[#16794c] hover:bg-[#11633e] text-white" : "pointer-events-none bg-gray-200 text-gray-600"}`}
           >
-            <Button
-              size="lg"
-              disabled={!ready}
-              className="w-full min-h-[56px] rounded-2xl text-lg font-semibold bg-[#25D366] hover:bg-[#1ea952] text-white shadow-lg shadow-[#25D366]/25 disabled:bg-gray-200 disabled:text-gray-400 disabled:shadow-none transition-all duration-300"
-            >
               <MessageCircle className="mr-3 h-5 w-5" aria-hidden="true" />
-              {ready ? "Continue on WhatsApp" : "Choose what you sell"}
-            </Button>
+              {ready ? "Discuss my workflow on WhatsApp" : "Choose category, volume and priority"}
           </a>
+          <p className="text-xs leading-relaxed text-gray-600">Opening WhatsApp prepares your draft; it does not send the message. The category, order volume, sales channel and optional name are also sent to oBizee as an enquiry when you continue. Your priority is included in the WhatsApp draft.</p>
 
           <a
             href={`tel:+${WHATSAPP_NUMBER}`}

@@ -111,12 +111,12 @@
   },
   {
     "key": "stock-tracking",
-    "title": "Stock tracking with deliberate opening balances and adjustments",
-    "description": "Move from remembered quantities to a record you can reconcile with real items.",
+    "title": "Stock tracking for small businesses already selling",
+    "description": "Keep opening stock, quantities and adjustments clear as orders come in. Evaluate oBizee's inventory workflow against the products you actually sell.",
     "sections": [
       [
         "Count first, then enable tracking",
-        "A stock screen is only as useful as its opening balance. The current inventory workflow supports enabling tracking with an initial quantity and a minimum level. Use a physical count of sellable units, not the quantity you hope a supplier will deliver or the number of enquiries in your inbox."
+        "When you already sell through a shop, chats or your own website, the useful question is how many pieces you can promise now. A stock screen is only as useful as its opening balance. The current inventory workflow supports enabling tracking with an initial quantity and a minimum level. Use a physical count of sellable units, not the quantity you hope a supplier will deliver or the number of enquiries in your inbox."
       ],
       [
         "Record the reason for each correction",
@@ -484,12 +484,12 @@
   },
   {
     "key": "order-workspace",
-    "title": "One order workspace for the details that must stay together",
-    "description": "Read items, recorded money and fulfilment information without losing the order reference.",
+    "title": "Order management for small businesses with orders to organise",
+    "description": "Keep customer choices, items, payment records and fulfilment information tied to one order reference. Evaluate the oBizee order workspace for your business.",
     "sections": [
       [
         "An order is more than a total",
-        "A useful order record connects the customer's choice with the work required to fulfil it. The current details layout separates items, money and delivery or booking information into tabs. That makes it easier to inspect the relevant part without treating a chat thread as the only source of context."
+        "If your business already receives orders but keeps chasing choices, balances or dispatch details through chat, begin with one complete order record. It connects the customer's choice with the work required to fulfil it. The current details layout separates items, money and delivery or booking information into tabs. That makes it easier to inspect the relevant part without treating a chat thread as the only source of context."
       ],
       [
         "Begin with identity before taking action",
@@ -1056,12 +1056,12 @@
   {
     "key": "social-seller-workflow",
     "kind": "solution",
-    "title": "Give Instagram and WhatsApp enquiries a clearer destination",
-    "description": "Keep useful conversation while moving repeatable product choices into a structured storefront.",
+    "title": "Manage the orders behind your Instagram and WhatsApp business",
+    "description": "Give customer conversations, product choices and order references a clearer workflow. Keep personal selling while organising what happens next.",
     "sections": [
       [
         "Conversation and a storefront can do different jobs",
-        "A buyer may need advice before choosing, but not every buyer needs you to retype the catalogue. Use the storefront for accurate product information and repeatable choices, then keep the conversation available for questions that genuinely need a person."
+        "You already have customer conversations; the next job is keeping the resulting work organised. A buyer may need advice before choosing, but not every buyer needs you to retype the catalogue. Use the storefront for accurate product information and repeatable choices, then keep the conversation available for questions that genuinely need a person."
       ],
       [
         "Link to the relevant choice",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import HomePageClient from "./HomePageClient";
+import { businessTitle, businessDescription } from '@/lib/businessPositioning';
 
 // The title and description are what a searcher actually reads in results, and
 // what an AI assistant quotes — so every figure here has to survive a merchant
@@ -13,17 +14,9 @@ import HomePageClient from "./HomePageClient";
 // charges by the month or on signup. Four true zeros and a ₹10 cap read
 // stronger than one claim that cannot be defended.
 export const metadata: Metadata = {
-  title: "oBizee — 0 Subscription Charges. Pay Only When You Get an Order.",
-  description:
-    "You pay oBizee nothing until your store has taken ₹50,000 in orders. After that, 0 " +
-    "subscription charges — just 1% per order capped at ₹10. A ₹10,000 sale still costs ₹10, " +
-    "and a month with no orders costs nothing. " +
-    "Online store, orders from Instagram and WhatsApp, stock and raw materials, vendors, " +
-    "Delhivery, DTDC and Blue Dart shipping, same-day hyperlocal delivery, COD and profit reporting.",
-  keywords:
-    "no subscription ecommerce India, pay per order ecommerce India, no monthly fee online store, " +
-    "online store builder India, Shopify alternative India, Dukaan alternative, " +
-    "dm2buy alternative, sell on Instagram India",
+  title: businessTitle,
+  description: businessDescription,
+  keywords: 'small business management, order management, customer management, product catalogue, stock tracking',
   alternates: { canonical: "https://www.obizee.com" },
 };
 
@@ -31,12 +24,8 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "oBizee — 0 subscription charges, pay only when you get an order",
-    description:
-      "oBizee lets Indian small businesses sell online with 0 subscription charges — they pay " +
-      "only when an order comes in. " +
-      "Orders, stock and raw materials, vendors and purchases, shipping, WhatsApp marketing " +
-      "and profit reporting in one platform.",
+    name: businessTitle,
+    description: businessDescription,
     url: "https://www.obizee.com",
     inLanguage: "en-IN",
   };
@@ -47,11 +36,7 @@ export default function HomePage() {
     name: "oBizee",
     url: "https://www.obizee.com",
     logo: "https://www.obizee.com/Obizee.png",
-    description:
-      "Indian commerce platform that charges a merchant nothing until their store has taken " +
-      "₹50,000 in orders. After that, 0 subscription charges — 1% per order capped at ₹10. " +
-      "Online store, order management, stock and raw " +
-      "materials, vendors, Delhivery shipping, WhatsApp marketing and profit reporting.",
+    description: businessDescription,
     // The identity graph Google resolves oBizee against. It previously held one
     // entry, and that entry 404'd — the app id was com.obizee, one "e" short of
     // the real com.obizeee — so the only external identity we published was a

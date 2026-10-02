@@ -1,0 +1,61 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import ts from 'typescript';
+
+const source=fs.readFileSync('src/lib/buyerFit.ts','utf8');
+const js=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
+const {BUSINESS_NEEDS,fitReady,fitMessage,fitEvent}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const input={category:'Crochet & handmade',volume:'25 – 100',channel:'WhatsApp',need:BUSINESS_NEEDS[0],name:'Test-only Person'};
+assert.equal(fitReady(input),true);
+for(const field of ['category','volume','need'])assert.equal(fitReady({...input,[field]:null}),false);
+assert.equal(fitReady({...input,channel:null,name:''}),true);
+assert.equal(fitReady({...input,need:'unrecognised'}),false);
+assert.ok(fitMessage(input).includes('Orders a month: 25 – 100'));
+assert.ok(fitMessage(input).includes("I'd like help with: Orders and customer follow-ups"));
+assert.ok(!fitMessage({...input,name:' '}).includes("I'm"));
+for(const need of BUSINESS_NEEDS){
+  const e=fitEvent({...input,need});
+  assert.notEqual(e.business_need,'unknown');
+  assert.deepEqual(Object.keys(e),['qualification_version','order_volume','business_need','fit_segment']);
+  assert.ok(!JSON.stringify(e).includes(input.name));
+  assert.ok(!JSON.stringify(e).includes(input.category));
+}
+assert.equal(fitEvent(input).fit_segment,'existing_seller');
+assert.equal(fitEvent({...input,volume:'Just starting out'}).fit_segment,'preparing');
+assert.equal(fitEvent({...input,need:'Preparing to start selling'}).fit_segment,'preparing');
+assert.equal(fitEvent({...input,volume:'secret value',need:'private text'}).fit_segment,'unknown');
+assert.ok(!JSON.stringify(fitEvent({...input,volume:'secret value',need:'private text'})).includes('private'));
+
+const form=fs.readFileSync('src/components/LeadForm.tsx','utf8');
+assert.ok(form.includes('NON_REPORTING_HOSTS.includes(window.location.hostname)'));
+assert.ok(form.includes('Your WhatsApp draft — you choose when to send'));
+assert.ok(form.includes('fitReady({category, volume, channel, need})'));
+assert.ok(!form.includes('<Button'),'No nested anchor/button handoff');
+assert.ok(form.includes('tabIndex={ready ? 0 : -1}'));
+const payload=form.match(/submitLead\(\{([\s\S]*?)\}\);/)?.[1]||'';
+assert.ok(payload.includes('monthlyOrders: volume'));
+assert.ok(!payload.includes('need:')&&!payload.includes('priority:'),'Backend contract unchanged');
+assert.ok(!form.includes('generate_lead')&&!form.includes('sign_up'),'Do not pretend a handoff is a signup');
+const prompt=fs.readFileSync('src/components/LeadCapturePrompt.tsx','utf8');
+assert.ok(prompt.includes('usePathname()')&&prompt.includes('[reveal, pathname]'),'Suppress the prompt after client navigation to signup');
+
+const out=process.env.EDITORIAL_OUT || 'out';
+const html=r=>fs.readFileSync(path.join(out,r,'index.html'),'utf8');
+const text=s=>s.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ');
+const home=html('/');
+for(const word of ['Manage your orders.','customers','employees','catalogue','financial records','Google','Meta'])assert.ok(text(home).includes(word),word);
+assert.ok(!text(home).includes('it does not bring customers'));
+for(const price of ['₹50,000','₹10','1%'])assert.ok(text(home).includes(price),'Preserve fee disclosure '+price);
+assert.ok(home.includes('Business Management'));
+const route='/guides/choose-order-management-software/';
+const guide=html(route);
+assert.equal((guide.match(/<h1\b/g)||[]).length,1);
+assert.ok(guide.includes('https://www.obizee.com'+route));
+for(const section of ['start','choose','example','test','cost','obizee'])assert.ok(guide.includes(`id="${section}"`));
+for(const sum of ['₹1,280','₹500','₹780'])assert.ok(text(guide).includes(sum));
+for(const parent of ['/','/guides/','/features/order-workspace/','/features/stock-tracking/','/solutions/social-seller-workflow/'])assert.ok(html(parent).includes(`href="${route}"`),parent);
+assert.ok(fs.readFileSync('public/sitemap-core.xml','utf8').includes('https://www.obizee.com'+route));
+assert.ok(html('/signup/').includes('aria-disabled="true"'));
+assert.ok(!text(html('/signup/')).includes('take your first order'));
+console.log(JSON.stringify({result:'pass',needs:BUSINESS_NEEDS.length,qualification:'fixed-choice, no private event values',parents:5,guide:'rendered and discoverable',backendContract:'unchanged'}));

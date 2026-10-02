@@ -46,15 +46,16 @@ export default function WhoItIsFor() {
             Who it is for
           </p>
           <h2 id="who-for-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
-            Whatever you sell,
+            Already getting orders?
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-              {" "}oBizee sells it
+              {" "}Keep the work behind them organised
             </span>
             .
           </h2>
           <p className="text-lg text-gray-600">
-            None of these is a special plan or an upgrade tier. It is the same product, at the
-            same price, for all of them.
+            The fit is your workflow, not just your product category. Start with the orders
+            you already receive, the stock you need to account for and the details your team
+            keeps chasing. Check your specific requirements before moving your shop.
           </p>
         </ScrollReveal>
 
@@ -72,7 +73,7 @@ export default function WhoItIsFor() {
               ),
             )}
             <span className="inline-flex items-center rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white">
-              Anything you can put a price on
+              Your customers. Your business. A clearer workflow.
             </span>
           </div>
         </ScrollReveal>

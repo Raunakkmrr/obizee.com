@@ -11,6 +11,7 @@ frontend:
         - npm run build
         - npm run test:content-release
         - npm run test:visibility
+        - npm run test:buyer-fit
   artifacts:
     baseDirectory: out
     files:

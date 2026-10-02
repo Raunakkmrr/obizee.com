@@ -16,6 +16,14 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
  */
 const faqs = [
   {
+    q: "Will oBizee bring me customers or orders?",
+    a: "oBizee helps manage the business behind your sales: customers, employees, catalogue, orders, stock and financial records. You continue building customer relationships through your selling channels. Product feeds can support Google and Meta catalogue setup, subject to account eligibility and platform approval. Software and listings support your work; sales results depend on your offer and how you reach customers.",
+  },
+  {
+    q: "Who should evaluate oBizee?",
+    a: "A business already receiving orders and ready for a clearer way to organise items, stock, payment records or dispatch details. Bring a typical order and a difficult exception to your evaluation. If you are preparing to start, our general selling guides can help you develop your offer while you explore the workflow.",
+  },
+  {
     q: "What does oBizee cost?",
     a: "Nothing at all until your shop has taken ₹50,000 in orders. Not a trial and not a cut-down tier — every feature is switched on the whole time. After ₹50,000 there is still 0 subscription, nothing monthly and nothing to set up: you pay 1% of each order, capped at ₹10, so a ₹500 order costs ₹5 and a ₹10,000 order still costs ₹10. It comes out of your oBizee wallet and appears on a daily invoice, so you can check every rupee. A month with no orders costs you nothing.",
   },

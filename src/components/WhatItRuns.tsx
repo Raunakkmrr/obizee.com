@@ -10,6 +10,8 @@ import {
   Megaphone,
   FileText,
   Truck,
+  Globe,
+  Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import StaggerChildren, { StaggerItem } from "@/components/motion/StaggerChildren";
@@ -25,9 +27,9 @@ import StaggerChildren, { StaggerItem } from "@/components/motion/StaggerChildre
 const capabilities = [
   {
     icon: Store,
-    tag: "Storefront",
-    title: "Your shop at yourname.obizee.com",
-    body: "Four templates, your own domain, live in minutes.",
+    tag: "Catalogue & storefront",
+    title: "Give each product a clear home",
+    body: "Product information, choices and photographs in your own online catalogue.",
     only: false,
   },
   {
@@ -53,16 +55,16 @@ const capabilities = [
   },
   {
     icon: IndianRupee,
-    tag: "Money",
-    title: "Profit, not just turnover",
-    body: "Expenses, revenue breakdown and price history.",
+    tag: "Finances",
+    title: "Keep business money in view",
+    body: "Expenses, payment records, outstanding balances and revenue breakdowns.",
     only: true,
   },
   {
     icon: Megaphone,
-    tag: "Marketing",
-    title: "Bring customers back",
-    body: "Customer segments, contact import and WhatsApp templates.",
+    tag: "Customers",
+    title: "Keep your customer follow-ups organised",
+    body: "Customer segments, contact import and WhatsApp templates for your next conversation.",
     only: true,
   },
   {
@@ -70,6 +72,20 @@ const capabilities = [
     tag: "Billing",
     title: "Invoices with proper numbering",
     body: "The paperwork a real business actually needs.",
+    only: true,
+  },
+  {
+    icon: Users,
+    tag: "Employees",
+    title: "Manage the people behind the work",
+    body: "Employee management alongside your daily business operations. Discuss your team's workflow when setting up your account.",
+    only: true,
+  },
+  {
+    icon: Globe,
+    tag: "Google & Meta catalogues",
+    title: "Prepare products for more channels",
+    body: "A product feed for Google Merchant Center and Meta catalogues. Account setup, eligible products and each platform's approval still apply.",
     only: true,
   },
   {
@@ -90,15 +106,16 @@ export default function WhatItRuns() {
             What it runs
           </p>
           <h2 id="what-it-runs-heading" className="text-3xl sm:text-5xl font-bold text-gray-900 mb-5">
-            Most platforms give you a website and
+            Manage the business
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-              {" "}stop
+              {" "}behind every order
             </span>
             .
           </h2>
           <p className="text-lg text-gray-600">
-            oBizee runs the parts nobody else builds for — from the raw material you buy to
-            the profit you keep.
+            Customers, employees, catalogue, stock and financial records belong in the same working
+            picture. Explore the parts that matter to your business and check the workflow
+            with your own products.
           </p>
         </ScrollReveal>
 

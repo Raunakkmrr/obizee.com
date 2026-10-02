@@ -21,6 +21,7 @@ export default function KnowledgeHub({hubKey}:{hubKey:string}){
   <ContentDiscovery route={h.route} title={h.title} description={h.description} kind="CollectionPage"/>
   <section className="ed-hero"><p className="ed-eyebrow">{editorialPreview?'LEARNING LIBRARY / UNPUBLISHED':'LEARNING LIBRARY'}</p><h1>{h.title}</h1><p className="ed-deck">{h.description}</p></section>
   <div className="kh-hub">
+   {hubKey==='guides'&&<section className="kh-path"><h2>Already selling and choosing business software?</h2><p>Start with one real workflow, not a feature-count comparison. Our <a data-content-next="true" href="/guides/choose-order-management-software/">business-software evaluation guide</a> covers orders, customers, stock, money, team responsibilities and channel catalogues.</p></section>}
    <ReaderQuestions hub={hubKey==='guides'?undefined:hubKey}/>
    {h.intro.map(p=><p key={p}>{p}</p>)}
    <section className="kh-path"><h2>Your reading path</h2><ol>{h.path.map(p=><li key={p}>{p}</li>)}</ol></section>

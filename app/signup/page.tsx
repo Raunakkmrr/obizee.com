@@ -8,16 +8,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Start Selling on oBizee | Create Your Online Store",
+  title: "Check oBizee for Your Business | Order Management",
   description:
-    "Start your online store on oBizee. Talk to us on WhatsApp and we'll set you up, or download the app and launch in 2 minutes.",
+    "Already receiving orders? Tell us your current workflow and explore oBizee for order management, stock, payment records and dispatch details.",
   alternates: { canonical: "https://www.obizee.com/signup" },
 };
 
 const benefits = [
+  "Customers, employees and your product catalogue",
+  "Orders, stock, payment records and dispatch details",
   "Your own store at yourname.obizee.com",
-  "Delhivery, DTDC & Blue Dart shipping built in",
-  "Take orders from Instagram and WhatsApp",
   "Nothing until ₹50,000 in orders, then 1% per order capped at ₹10",
 ];
 
@@ -36,15 +36,15 @@ export default function SignUpPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight mb-6">
-            Start selling in
+            Find a better way to
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
               {" "}
-              2 minutes
+              manage your orders
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Message us on WhatsApp and we&apos;ll help you set up your store, add your first
-            products and take your first order. No cost to get started.
+            Tell us how you sell today and what is getting difficult. We&apos;ll discuss whether
+            oBizee fits that work, so you can organise orders, stock and everyday follow-ups.
           </p>
 
           <div className="mb-10">

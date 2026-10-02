@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { usePathname } from 'next/navigation';
 import { Check, Loader2, MessageCircle, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -62,6 +63,7 @@ function remember(value: string) {
 }
 
 export default function LeadCapturePrompt() {
+  const pathname = usePathname();
   const [visible, setVisible] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [step, setStep] = useState<Step>("category");
@@ -81,11 +83,12 @@ export default function LeadCapturePrompt() {
   }, []);
 
   useEffect(() => {
-    // Pathname is read from window rather than usePathname() on purpose: this
-    // component mounts in the root layout, and next/navigation hooks are what
-    // de-opted the homepage out of prerendering in the first place. Reading it
-    // here keeps every page statically rendered.
-    if (SUPPRESSED_PATHS.some((p) => window.location.pathname.startsWith(p))) return;
+    // Recheck on client navigation: a prompt opened on home must not survive
+    // over the full signup form. No useSearchParams / prerender bailout.
+    if (SUPPRESSED_PATHS.some((p) => pathname?.startsWith(p))) {
+      setVisible(false);
+      return;
+    }
     if (isSnoozed()) return;
 
     const timer = window.setTimeout(reveal, TIME_TRIGGER_MS);
@@ -103,7 +106,7 @@ export default function LeadCapturePrompt() {
       window.clearTimeout(timer);
       window.removeEventListener("scroll", onScroll);
     };
-  }, [reveal]);
+  }, [reveal, pathname]);
 
   const dismiss = () => {
     setVisible(false);
@@ -157,7 +160,7 @@ export default function LeadCapturePrompt() {
   if (!visible) return null;
 
   const waHref = whatsappLink(
-    `Hi oBizee, I sell ${category ?? "online"} and I'd like to set up my store.`,
+    `Hi oBizee, I sell ${category ?? "online"} and I'd like to discuss managing my business workflow.`,
   );
 
   const panel = (
@@ -165,7 +168,7 @@ export default function LeadCapturePrompt() {
       <div className="flex items-start justify-between gap-3 bg-gradient-to-br from-orange-50 to-white px-5 py-4 border-b border-orange-100">
         <div>
           <p className="text-base font-bold text-gray-900">
-            {step === "done" ? "Thanks — we'll call you" : "Set up your online store"}
+            {step === "done" ? "Thanks — we'll call you" : "Organise your business with oBizee"}
           </p>
           <p className="mt-0.5 text-sm text-gray-600">
             {step === "category" && "What do you sell?"}
@@ -259,7 +262,7 @@ export default function LeadCapturePrompt() {
         {step === "done" && (
           <div className="space-y-3">
             <p className="text-sm text-gray-600">
-              We have your number and someone will call you about setting up your store.
+              We have your number and someone will call you about your business workflow.
             </p>
             <a
               href={waHref}
@@ -285,7 +288,7 @@ export default function LeadCapturePrompt() {
           <div className="flex items-center gap-2 border-t border-orange-100 bg-white px-3 py-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
             <Phone className="h-4 w-4 shrink-0 text-orange-500" />
             <p className="min-w-0 flex-1 truncate text-[13px] font-medium text-gray-700">
-              Selling online? Get set up free.
+              Already selling? Organise your business.
             </p>
             <Button
               onClick={() => {
