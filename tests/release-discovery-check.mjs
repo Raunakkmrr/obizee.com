@@ -14,7 +14,10 @@ const files=[`${out}/blog/index.html`,...fs.readdirSync(`${out}/blog/page`).sort
 const pages=files.map(file=>fs.readFileSync(file,'utf8'));
 pages.forEach((html,i)=>{
  assert.equal((html.match(/<main\b/g)||[]).length,1,'One main landmark per library page');
- const count=(html.match(/<h2\b/g)||[]).length;
+ // Count article cards, not the heading of the question directory above them.
+ const cards=html.match(/<div class="ed-cards">([\s\S]*?)<\/div>/)?.[1];
+ assert.ok(cards,'Article-card grid exists');
+ const count=(cards.match(/<h2\b/g)||[]).length;
  assert.ok(count>0&&count<=24,'At most 24 article cards per page');
  const route=i===0?'/blog/':`/blog/page/${i+1}/`;
  assert.ok(html.includes(`href="https://www.obizee.com${route}"`)||i===0&&html.includes('href="https://www.obizee.com/blog"'),'Self canonical');

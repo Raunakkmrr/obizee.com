@@ -9,7 +9,7 @@
     "build": "next build",
     "postbuild": "node scripts/prune-private-export.mjs",
     "test:content-release": "EDITORIAL_OUT=out node tests/publication-check.mjs && EDITORIAL_OUT=out node tests/discovery-500-check.mjs && EDITORIAL_OUT=out node tests/release-prep-check.mjs && EDITORIAL_OUT=out node tests/release-html-check.mjs && EDITORIAL_OUT=out node tests/help-layout-check.mjs",
-    "test:visibility": "node tests/visibility-regression.mjs",
+    "test:visibility": "node tests/visibility-regression.mjs && EDITORIAL_OUT=out node tests/release-discovery-check.mjs",
     "start": "next start",
     "lint": "next lint",
     "lint:eslint": "eslint ."
