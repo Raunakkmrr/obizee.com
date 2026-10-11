@@ -1,0 +1,27 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TTAQ2K2K8B.com.obizeee"],
+        "components": [
+          {
+            "/": "/merchant/login*",
+            "exclude": true,
+            "comment": "Sign-in stays in the browser. The portal reads a session cookie set there, and bouncing a half-finished login into the app loses it. FIRST because components are evaluated in order."
+          },
+          {
+            "/": "/merchant/*",
+            "comment": "The merchant portal, on whichever obizee.com subdomain the merchant lives at."
+          },
+          {
+            "/": "/merchant",
+            "comment": "The portal root."
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["TTAQ2K2K8B.com.obizeee"]
+  }
+}

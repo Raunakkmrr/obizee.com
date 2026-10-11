@@ -57,3 +57,14 @@ customHeaders:
     headers:
       - key: 'Cache-Control'
         value: 'public, max-age=3600, s-maxage=86400'
+  # The iOS app-association file. Its path must be exactly
+  # /.well-known/apple-app-site-association, so it has no extension and would
+  # otherwise be served as application/octet-stream -- Apple requires
+  # application/json and its CDN validates the file before any device asks, so
+  # a wrong type means universal links never work and nothing reports why.
+  - pattern: '/.well-known/apple-app-site-association'
+    headers:
+      - key: 'Content-Type'
+        value: 'application/json'
+      - key: 'Cache-Control'
+        value: 'public, max-age=3600'
