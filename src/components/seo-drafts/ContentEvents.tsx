@@ -12,6 +12,15 @@ export default function ContentEvents(){
    // No search text, query strings, customer data, or invented conversion event.
    trackEvent('content_next_step',{content_path:location.pathname,destination_path:target.pathname});
   }
-  document.addEventListener('click',next);return()=>document.removeEventListener('click',next);
+  function cta(event:MouseEvent){
+   const link=event.target instanceof Element?event.target.closest<HTMLAnchorElement>('a[data-content-cta]'):null;
+   if(!link)return;
+   // Conversion clicks reuse the site-wide funnel event names (see WhatsAppCTA)
+   // so the editorial library reports into the same GA4 taxonomy as the
+   // marketing pages. Paths only -- same privacy stance as content_next_step.
+   trackEvent(link.dataset.contentCta==='playstore'?'play_store_click':'whatsapp_click',{source:'editorial_article',content_path:location.pathname});
+  }
+  document.addEventListener('click',next);document.addEventListener('click',cta);
+  return()=>{document.removeEventListener('click',next);document.removeEventListener('click',cta);};
  },[]);return null;
 }
