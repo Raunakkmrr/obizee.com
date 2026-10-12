@@ -33,6 +33,25 @@ function lastModified(route) {
   const candidates = clean
     ? [`app/${clean}/page.tsx`, `app/${clean}/page.ts`]
     : ['app/page.tsx'];
+
+  // A dynamic segment has no literal directory, so /blog/page/7/ matched nothing
+  // and silently dropped its lastmod — 15 pagination URLs carried no crawl
+  // signal. Walk back to the nearest route that does exist; for pagination that
+  // is the [page] route itself.
+  if (!candidates.some(existsSync) && clean) {
+    const parts = clean.split('/');
+    for (let i = parts.length - 1; i > 0 && !candidates.some(existsSync); i--) {
+      const dir = `app/${parts.slice(0, i).join('/')}`;
+      if (!existsSync(dir)) continue;
+      for (const entry of readdirSync(dir)) {
+        if (entry.startsWith('[') && existsSync(`${dir}/${entry}/page.tsx`)) {
+          candidates.push(`${dir}/${entry}/page.tsx`);
+        }
+      }
+      if (existsSync(`${dir}/page.tsx`)) candidates.push(`${dir}/page.tsx`);
+    }
+  }
+
   for (const f of candidates) {
     if (!existsSync(f)) continue;
     try {
@@ -98,9 +117,17 @@ const indexPath = join(PUBLIC, 'sitemap.xml');
 let index = readFileSync(indexPath, 'utf8');
 const indexChanges = [];
 index = index.replace(/<sitemap>([\s\S]*?)<\/sitemap>/g, (block) => {
-  const name = block.match(/<loc>[^<]*\/(sitemap-[a-z]+\.xml)<\/loc>/)?.[1];
+  const name = block.match(/<loc>[^<]*\/(sitemap-[a-z-]+\.xml)<\/loc>/)?.[1];
   const newest = name && newestPerFile[name];
   if (!newest) return block;
+  // Insert when absent, not only replace. sitemap-content.xml was added with no
+  // <lastmod> at all and this pass silently skipped it, so 512 URLs — the whole
+  // editorial corpus — carried no crawl-scheduling signal. A replace-only branch
+  // fails open and says nothing, which is why it went unnoticed.
+  if (!/<lastmod>/.test(block)) {
+    indexChanges.push(`${name}: (none) -> ${newest}`);
+    return block.replace(/<\/loc>/, `</loc>\n    <lastmod>${newest}</lastmod>`);
+  }
   return block.replace(/<lastmod>([^<]+)<\/lastmod>/, (m, old) => {
     if (old !== newest) indexChanges.push(`${name}: ${old} -> ${newest}`);
     return `<lastmod>${newest}</lastmod>`;
