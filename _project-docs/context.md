@@ -146,6 +146,14 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [FACT] A local `npm run build` fails at `postbuild` with "Unexpected private export contents" because macOS writes `._index.html` / `._index.txt` AppleDouble companions into `out/editorial-preview/` on exFAT *during* the export, after `prebuild` has already swept them. Linux/ext4 on Amplify never creates these, so this is local-only. Sweep with `find out -name '._*' -delete` then re-run postbuild.
 - [FACT] `tests/release-sitemap-negative.mjs` needs an **absolute** `EDITORIAL_OUT` — it runs the audit with `cwd` set to a scratch dir where a relative `out` does not resolve. Pre-existing; the test is not in package.json.
 
+### Session — 2026-10-12 15:30–17:40 IST (blog growth: 65 -> 100 signups/mo)
+- [FACT] GSC 28d, fresh-measured: 94 clicks / 1.29K impressions, avg pos 10.5; 45 of 94 clicks are the brand query "obizee". Generative-AI features: 393 impressions, climbing since the Sep 27 content release; every top-10 AI page is DECISION content (alternatives / compare / for-verticals / shipping comparison) — the only article in the list is the Delhivery–DTDC–BlueDart comparison (40).
+- [FACT] "shopify alternatives india" sits at avg position **59.2** (0 clicks / 32 impr) — not striking distance; title surgery was evaluated and REJECTED on this measurement. The dm2buy query converts fine (6/101).
+- [FACT] Article pages had no conversion path in their HTML — no signup/WhatsApp/app link; strongest action was /contact. Correction to the first audit: the floating LeadCapturePrompt DOES exist on these pages but is client-rendered, so AI engines reading static HTML never saw any path.
+- [DONE] `b95dc90` ArticleCTA: end-of-article block on all ~350 articles — WhatsApp draft carrying the article title + Play Store link, tracked as whatsapp_click/play_store_click {source:editorial_article} via ContentEvents delegation. Styled in the ed-* system, print-hidden, 48px targets, verified desktop+375px, all release suites green.
+- [DONE] GSC live-test on an article: "URL is available to Google"; indexing requested; sitemap.xml + sitemap-content.xml resubmitted so Google re-reads them WITH the new lastmod (previous read Oct 4–6 predates it).
+- [DECISION] 2026-10-12 — Leg 2 (new decision pages) deferred to its own pass: adding pages touches the 500-page programme contract pinned by release-prep-check (pages==500, coverage==500), which must be amended deliberately, not rushed. Evidence-ranked shortlist: more /for/ verticals in the editorial shape (clothing pulls 51 AI impr; crochet/gifts/home-decor missing), 2–3 shipping/cost comparisons (the proven article shape), meesho/kyte-style alternative pages.
+
 ---
 
 ## OPEN ITEMS
@@ -160,3 +168,5 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [IN-PROGRESS] Nothing writes `?resume=1` yet. The gate short-circuit works but has no caller until the dashboard entry point ships (Part A of the brief).
 - [NEEDS-INPUT] **Amplify has not built since 2026-10-11 20:30 IST (last-modified Sun 11 Oct 15:00 GMT).** `be99dbb`, `891ed35` and `99ecb9e` are all on origin/main and undeployed, so the lastmod fix is not live. Needs the Amplify Console build history — account 940482448572, app `d18rnjzeli4yk6`, ap-south-1. Raunak's to check; the console asks for his AWS login.
 - [NEEDS-INPUT] Merchant-subdomain crawl waste, for the merchant-store agent not this repo: all 54 Soft 404s are `?category=<MongoObjectId>` storefront urls, an `&subdomain=` query param manufactures a duplicate of every category page, `/my-orders` is being crawled, and `_next/static/media/*.woff2` font files are indexed as pages.
+- [IN-PROGRESS] `b95dc90` (ArticleCTA) pushed 17:35 IST; Amplify deploy pending — watcher running, verify the block serves in production.
+- [NEEDS-INPUT] GA4 property (G-KEY8DDC44L) holds the real channel split behind the ~65 signups/mo — needs Raunak's Google login to read; first thing to check when measuring the CTA block's effect.
