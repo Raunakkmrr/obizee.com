@@ -57,6 +57,15 @@ customHeaders:
     headers:
       - key: 'Cache-Control'
         value: 'public, max-age=3600, s-maxage=86400'
+  # Sitemaps. Without this they fall to Amplify's default
+  # 'max-age=0, s-maxage=31536000' -- a one-year CloudFront cache that is only
+  # ever cleared by the deploy-time invalidation. If one invalidation is missed,
+  # Google re-reads a stale sitemap for a year and never sees a new lastmod.
+  # A one-day edge cache bounds that failure to a day.
+  - pattern: '**/*.xml'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=3600, s-maxage=86400'
   # The iOS app-association file. Its path must be exactly
   # /.well-known/apple-app-site-association, so it has no extension and would
   # otherwise be served as application/octet-stream -- Apple requires
