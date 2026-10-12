@@ -21,8 +21,17 @@ assert.ok(lowerSignup.includes('Choose category, volume and priority'));
 assert.ok(lowerSignup.includes('aria-disabled="true"'),'Incomplete qualification cannot hand off');
 assert.ok(!lowerSignup.includes('type="password"'));
 const expected=execFileSync(process.execPath,['tests/content-sitemap-plan.mjs'],{encoding:'utf8'}).trim();
-assert.equal(fs.readFileSync('public/sitemap-content.xml','utf8').trim(),expected);
+const actual=fs.readFileSync('public/sitemap-content.xml','utf8').trim();
+// content-sitemap-plan.mjs owns WHICH urls belong here; scripts/fix-sitemaps.mjs
+// owns each url's <lastmod>. Comparing raw bytes conflated the two and made a
+// correct lastmod look like a regression, so compare the <loc> sequence instead
+// -- same guarantee on set, order and duplicates -- then require the lastmod.
+const locs=x=>[...x.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
+assert.deepEqual(locs(actual),locs(expected),'Content sitemap url set or order drifted from the plan');
 assert.ok(fs.readFileSync('public/sitemap.xml','utf8').includes('https://www.obizee.com/sitemap-content.xml'));
 assert.ok(!expected.includes('editorial-preview'));
-assert.ok(!expected.includes('<lastmod>'));
+assert.ok(!actual.includes('editorial-preview'));
+const urls=[...actual.matchAll(/<url>[\s\S]*?<\/url>/g)].map(m=>m[0]);
+assert.equal(urls.length,locs(expected).length);
+assert.equal(urls.filter(u=>/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(u)).length,urls.length,'Every content sitemap url needs a dated lastmod');
 console.log(JSON.stringify({result:'pass',build:report.buildId,exactCaseContentRoutes:501,programmeSitemapCoverage:500,feedbackIncluded:true,caseMismatches:0,brokenLocalDestinations:0,accidentalCapitalisedAliases:0,productionPublished:false}));

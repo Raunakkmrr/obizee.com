@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 /**
- * Sole owner of the sitemap XML in public/.
+ * Owns <loc> trailing slashes and <lastmod> for every sitemap in public/.
+ *
+ * NOT the sole owner of public/sitemap-content.xml: tests/content-sitemap-plan.mjs
+ * owns WHICH urls belong in that file, and tests/release-prep-check.mjs asserts
+ * this script never changes that set or its order.
  *
  * Two bugs this fixes, both of which cost crawl budget on every URL:
  *

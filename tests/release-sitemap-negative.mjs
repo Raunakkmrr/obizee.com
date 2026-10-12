@@ -9,7 +9,8 @@ try{
  fs.cpSync(path.join(root,'public'),path.join(scratch,'public'),{recursive:true});
  const file=path.join(scratch,'public/sitemap-content.xml'),original=fs.readFileSync(file,'utf8');
  const audit=()=>JSON.parse(execFileSync(process.execPath,['tests/release-route-audit.mjs'],{cwd:scratch,env:process.env,encoding:'utf8'}));
- const first=original.match(/  <url>.*?<\/url>/)[0];
+ // <url> spans two lines since each carries a <lastmod>, so this cannot use `.`
+ const first=original.match(/  <url>[\s\S]*?<\/url>/)[0];
  fs.writeFileSync(file,original.replace('</urlset>',first+'\n</urlset>'));
  assert.equal(audit().sitemap.duplicateEntries.length,1,'Duplicate sitemap destination must be detected');
  fs.writeFileSync(file,original.replace(first,''));
