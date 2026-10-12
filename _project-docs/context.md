@@ -133,6 +133,19 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [FACT] A `started` ref plus a cleanup `cancelled` flag deadlocks under React 18's double-mount: the only in-flight request is cancelled and nothing retries
 - [NEEDS-INPUT] Brief written for the remaining two: `_project-docs/planning/product-brief-second-import.md`
 
+### Session — 2026-10-12 12:20–13:02 IST
+- [FACT] The 500-page library is NOT being rejected by Google. Measured in GSC: every blog url sits in "Discovered - currently not indexed" with **Last crawled = N/A**, and **zero** posts are in "Crawled - currently not indexed" (the only 4 www urls there are two .woff2 files, a malformed `?avicon.ico`, and `/pricing` without its trailing slash). Google has never fetched an article, so it has never judged one.
+- [FACT] The binding constraint is crawl rate: www.obizee.com received **2,376 Googlebot requests in 90 days (~26/day)** across 570 urls, and only 34% of requests are HTML (43% JavaScript, 9% CSS). 20 hosts share 19.9K requests; merchant subdomains are separate hosts and do not spend www's budget.
+- [FACT] Content and link graph are sound — measured, not assumed: 0 orphans, 4-6 sibling + 3 guide links per post, ~800 words each, cross-post 8-gram similarity **2.8% mean / 4.1% worst** over 14 random live posts, headings unique per post. robots.txt clean, all 4 submitted sitemaps read "Success" (570 discovered, last read Oct 4-6).
+- [DONE] The one real defect — `sitemap-content.xml` had 512 `<loc>` and 0 `<lastmod>` — fixed in `be99dbb`; 570/570 urls now dated.
+- [DONE] Requested indexing on all 6 `/guides/*` sub-hubs (they link all 348 posts, so 6 requests beat 348).
+- [DONE] `891ed35` — sitemaps had no `**/*.xml` customHeaders rule, so they took Amplify's default one-year `s-maxage`; bounded to a day.
+- [DONE] `99ecb9e` — `be99dbb` broke two tests that assumed a `<url>` is one line. Fixed both and corrected a false "sole owner" comment.
+- [FACT] `public/sitemap-content.xml` has **two owners**: `tests/content-sitemap-plan.mjs` owns which urls belong in it, `scripts/fix-sitemaps.mjs` owns each url's `<lastmod>`. `release-prep-check.mjs` compared them byte for byte, which conflated the two; it now compares the `<loc>` sequence and separately requires a dated lastmod.
+- [FACT] `npm run lint` is unusable — `next lint` is unconfigured and prompts interactively. The real linter is `npm run lint:eslint`, which reports **2158 pre-existing problems** (1579 errors), all in `src/legacy-views/` and `tailwind.config.ts`.
+- [FACT] A local `npm run build` fails at `postbuild` with "Unexpected private export contents" because macOS writes `._index.html` / `._index.txt` AppleDouble companions into `out/editorial-preview/` on exFAT *during* the export, after `prebuild` has already swept them. Linux/ext4 on Amplify never creates these, so this is local-only. Sweep with `find out -name '._*' -delete` then re-run postbuild.
+- [FACT] `tests/release-sitemap-negative.mjs` needs an **absolute** `EDITORIAL_OUT` — it runs the audit with `cwd` set to a scratch dir where a relative `out` does not resolve. Pre-existing; the test is not in package.json.
+
 ---
 
 ## OPEN ITEMS
@@ -145,3 +158,5 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [ASSUMED] No test anywhere covers `sourceType` or the website path at the HTTP layer, in this repo or OM-backend. Worth a ticket.
 - [NEEDS-INPUT] Three questions in `product-brief-second-import.md` block the re-group-after-publish work: whether it should exist at all versus "just import again", deactivate vs delete for dropped products, and whether import jobs ever expire.
 - [IN-PROGRESS] Nothing writes `?resume=1` yet. The gate short-circuit works but has no caller until the dashboard entry point ships (Part A of the brief).
+- [NEEDS-INPUT] **Amplify has not built since 2026-10-11 20:30 IST (last-modified Sun 11 Oct 15:00 GMT).** `be99dbb`, `891ed35` and `99ecb9e` are all on origin/main and undeployed, so the lastmod fix is not live. Needs the Amplify Console build history — account 940482448572, app `d18rnjzeli4yk6`, ap-south-1. Raunak's to check; the console asks for his AWS login.
+- [NEEDS-INPUT] Merchant-subdomain crawl waste, for the merchant-store agent not this repo: all 54 Soft 404s are `?category=<MongoObjectId>` storefront urls, an `&subdomain=` query param manufactures a duplicate of every category page, `/my-orders` is being crawled, and `_next/static/media/*.woff2` font files are indexed as pages.
