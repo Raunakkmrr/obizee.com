@@ -254,5 +254,69 @@
     "category": "Search, data and automation",
     "route": "/blog/check-data-portability-before-connecting-another-store-automation-tool/",
     "minutes": 3
+  },
+  {
+    "id": 352,
+    "route": "/for/crochet-sellers/",
+    "category": "Crochet",
+    "minutes": 6,
+    "title": "Sell crochet online around making time, yarn lots and honest sizing",
+    "description": "Set up a crochet store that states making time on every piece, keeps yarn and colour records attached to orders, and prices the hours as deliberately as the materials."
+  },
+  {
+    "id": 353,
+    "route": "/for/gift-sellers/",
+    "category": "Gifts",
+    "minutes": 6,
+    "title": "Run a gift store around occasions, deadlines and personalisation approvals",
+    "description": "Organise a gifting catalogue by occasion, separate the gift deadline from your dispatch promise, and approve personalised wording in writing before making anything."
+  },
+  {
+    "id": 354,
+    "route": "/for/home-decor/",
+    "category": "Home décor",
+    "minutes": 6,
+    "title": "Sell home décor online with honest scale, finish and fragility details",
+    "description": "List décor with dimensions a buyer can picture in a room, finish variation stated plainly, packaging matched to fragility, and sets that never confuse the single pieces."
+  },
+  {
+    "id": 355,
+    "route": "/for/art-prints/",
+    "category": "Art and prints",
+    "minutes": 5,
+    "title": "Sell art prints online with clear editions, formats and condition-safe packing",
+    "description": "Offer prints with stated sizes, paper and framing choices, edition terms that stay honest over time, and packaging that ships with a condition record."
+  },
+  {
+    "id": 356,
+    "route": "/blog/whatsapp-business-catalogue-vs-own-store/",
+    "category": "Platform comparisons",
+    "minutes": 6,
+    "title": "WhatsApp Business catalogue or your own store: decide by order handling",
+    "description": "A WhatsApp catalogue shows products well but keeps every order inside a chat. Compare the two on order records, stock states, payment confirmation and repeat purchases — not on reach."
+  },
+  {
+    "id": 357,
+    "route": "/blog/sell-on-meesho-vs-your-own-website/",
+    "category": "Platform comparisons",
+    "minutes": 6,
+    "title": "Selling on Meesho or your own website: what each model asks of you",
+    "description": "A marketplace brings demand and sets the rules; your own site brings control and asks you to create demand. Compare customer ownership, pricing pressure and returns exposure before choosing."
+  },
+  {
+    "id": 358,
+    "route": "/blog/courier-aggregator-vs-direct-courier-account/",
+    "category": "Shipping",
+    "minutes": 6,
+    "title": "Courier aggregator or direct courier account: decide by volume and failures",
+    "description": "Aggregators give one wallet, many couriers and instant onboarding; direct accounts reward volume with negotiated terms and a direct escalation line. Compare them where it hurts — COD cycles, RTO and support."
+  },
+  {
+    "id": 359,
+    "route": "/blog/india-post-vs-private-couriers-for-small-sellers/",
+    "category": "Shipping",
+    "minutes": 5,
+    "title": "India Post or a private courier: match the service to parcel and pincode",
+    "description": "Where Speed Post reach and pricing genuinely win, where private-courier pickups and tracking earn their cost, and how to split one shipment mix across both instead of choosing forever."
   }
 ]
