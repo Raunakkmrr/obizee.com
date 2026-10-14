@@ -126,5 +126,653 @@
   "answer": "For prepaid light parcels, price-sensitive orders and pincodes outside private serviceability, India Post and Speed Post are hard to beat. Private couriers earn their fee on COD, time-promised and fragile orders through doorstep pickup, granular tracking and standard cash handling. Route each parcel by destination and promise instead of picking one network forever, and let three months of your own delivery data settle the split.",
   "next": "/guides/fulfilment-and-support/",
   "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/a-sellers-profile-that-answers-the-questions-buyers-ask-first/",
+  "hub": "selling-online",
+  "question": "What should an Instagram seller's profile say to turn visitors into buyers?",
+  "answer": "Within five seconds a visitor should learn what you sell, roughly what it costs, and how to order. Name the category and city in the bio, keep prices, sizes and ordering steps in pinned highlights, and point the one profile link somewhere a person can actually place an order. A profile that answers those three questions converts quiet visitors who would never DM to ask.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/write-an-instagram-bio-that-leads-to-the-right-product/",
+  "hub": "selling-online",
+  "question": "How do I write an Instagram bio that brings the right customers?",
+  "answer": "Lead with the product and the buyer, not a slogan: say what you make, who it is for, and how ordering works. Add the city if you deliver locally and keep the link pointed at the product you are currently promoting, not a generic homepage. A bio that filters for the right customer saves you from DMs that were never going to become orders.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/build-a-weekly-instagram-plan-around-buying-questions/",
+  "hub": "selling-online",
+  "question": "How often should a small shop post on Instagram, and what?",
+  "answer": "Build the week around real buying questions — what does it cost, how does sizing work, when will it arrive — answered through product posts, process stories and one honest customer proof. Three sustainable posts a week beat a daily sprint that collapses. Plan from your capacity and your customers' questions, not from a content calendar built for brands with a team.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/choose-hashtags-by-product-relevance-not-headline-reach/",
+  "hub": "selling-online",
+  "question": "How should a small seller choose Instagram hashtags?",
+  "answer": "Choose tags a real buyer of your product would browse — the product type, the material, the occasion, the city — rather than giant headline tags where your post disappears in seconds. Relevance brings fewer eyes but closer wallets. Review which tags actually produced profile visits and enquiries each month, and drop the ones that only produced reach.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/diagnose-an-instagram-campaign-that-attracts-clicks-but-no-orders/",
+  "hub": "selling-online",
+  "question": "Why does my Instagram get clicks but no orders?",
+  "answer": "Clicks without orders usually mean the ad or post made a promise the landing experience did not keep: price shock, missing sizes, a confusing path to order, or a product page that answers none of the buyer's questions. Diagnose in order — audience, promise, landing page, price clarity — before spending more. More traffic into the same leak just costs more.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/find-a-posting-schedule-your-small-shop-can-sustain/",
+  "hub": "selling-online",
+  "question": "What posting schedule can a one-person shop actually sustain?",
+  "answer": "Pick the number of posts you can keep up in your busiest order week — for most solo sellers that is two or three, not seven. Consistency at a modest pace builds more trust than bursts followed by silence, and your energy is part of the business's stock. Batch content on quiet days so a festival rush never empties the feed.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/prepare-product-proof-for-a-small-brand-buyers-have-never-met/",
+  "hub": "selling-online",
+  "question": "How do I prove my products are good when nobody has heard of my brand?",
+  "answer": "Borrowed trust comes from evidence buyers can inspect: real photos in daylight, close-ups of material and stitching, honest dimensions, screenshots of genuine customer messages used with permission, and a clear returns answer. One imperfect real photograph beats a polished render, because new buyers are scanning for signs the product exists and the seller answers.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/separate-instagram-attention-from-profitable-orders/",
+  "hub": "selling-online",
+  "question": "Do Instagram followers actually mean sales?",
+  "answer": "No — attention and profitable orders are separate numbers, and conflating them is how sellers go viral and broke. Count enquiries that became orders and what each order contributed after product, packaging and delivery costs. If reach rises and orders do not, fix the profile, price visibility or ordering path before making more content. Ten orders from eight hundred followers beats three from twenty thousand.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/stop-payment-screenshots-from-becoming-your-payment-record/",
+  "hub": "selling-online",
+  "question": "Is a payment screenshot enough proof of payment on WhatsApp?",
+  "answer": "No. A screenshot is a claim; your bank or UPI statement is the record. Confirm the money actually arrived before dispatching, every time — fake and edited payment screenshots are a standard scam against small sellers. Keep one simple rule: no entry in your account, no parcel out the door, and note the transaction reference on the order.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/move-a-product-question-into-a-complete-order-request/",
+  "hub": "selling-online",
+  "question": "How do I turn a WhatsApp product question into a confirmed order?",
+  "answer": "Answer the question, then offer the complete next step in one message: item, variant, price, delivery charge, address request and payment method. Vague threads stay vague; a structured order request gives the customer one clear thing to confirm. Once they agree, restate everything as a final summary so the agreement exists in one findable message rather than across a conversation.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/choose-between-chat-led-checkout-and-a-structured-order-form/",
+  "hub": "selling-online",
+  "question": "Should customers order in chat or through an order form?",
+  "answer": "Chat suits conversational, low-volume selling — questions, customisation, reassurance. A structured form or store checkout wins once volume grows, because it collects variant, address and payment state without an evening of typing. Many sellers run both: chat for the conversation, a link to structured checkout for the order itself, so nothing lives only in scrollback.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/explain-dispatch-estimates-clearly-in-a-whatsapp-conversation/",
+  "hub": "selling-online",
+  "question": "How do I give delivery estimates on WhatsApp without overpromising?",
+  "answer": "Separate what you control from what the courier controls: promise your dispatch date, then state transit as the courier's estimate for that pincode. 'Dispatching Tuesday, courier usually takes 3–5 days to your city' survives a late courier; 'you'll have it by Friday' does not. Keep the estimate in the order summary so it is agreed, not remembered.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/keep-whatsapp-follow-ups-helpful-after-a-customer-goes-quiet/",
+  "hub": "selling-online",
+  "question": "How do I follow up on WhatsApp when a customer goes quiet?",
+  "answer": "Follow up once with something useful — a stock update, an answer to their last question, a gentle deadline if stock is limited — then stop. Repeated nudges convert almost nobody and train customers to dread your name. Park quiet enquiries with a date, and let your catalogue or next genuine update do the re-opening.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/set-response-hours-without-sounding-unavailable/",
+  "hub": "selling-online",
+  "question": "Can I set business hours on WhatsApp without losing customers?",
+  "answer": "Yes — customers accept hours; they do not accept silence. Set an away message that states when you reply and what to do meanwhile (browse the catalogue, leave the order details). Reply within the window you promised. Stated hours kept reliably build more trust than 2am replies that cannot last, and they protect the energy the business runs on.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/plan-a-whatsapp-product-announcement-around-permission-and-relevance/",
+  "hub": "selling-online",
+  "question": "How do I announce new products on WhatsApp without spamming?",
+  "answer": "Message only people who agreed to hear from you, keep announcements rare and relevant, and lead with the product's usefulness to that buyer rather than a broadcast blast. One well-timed, well-targeted message to fifty past customers outsells a hundred cold broadcasts — and keeps your number out of the blocked list that ends the channel for good.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/recognise-when-manual-whatsapp-order-handling-needs-a-better-system/",
+  "hub": "selling-online",
+  "question": "When has my WhatsApp order system become too manual?",
+  "answer": "The signs are consistent: an evening spent matching payment screenshots, the same piece promised to two buyers, a paid order forgotten, addresses lost in scroll. That is volume outgrowing memory, not a discipline failure. Fix the one breaking point first — usually the order record or stock note — rather than changing everything mid-season, and move records to a system that survives your busiest day.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/measure-a-packed-parcel-before-comparing-shipping-quotes/",
+  "hub": "fulfilment-and-support",
+  "question": "How do I weigh and measure a parcel before comparing courier rates?",
+  "answer": "Pack a real order completely — box, filler, product, label — then weigh it and measure all three dimensions. Couriers bill the higher of actual and volumetric weight, so a light but bulky parcel costs more than the scale suggests. Quotes compared on guessed weights produce surprise invoices; one packed-parcel measurement makes every comparison honest.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/separate-production-time-dispatch-time-and-transit-estimates/",
+  "hub": "fulfilment-and-support",
+  "question": "What is the difference between dispatch time and delivery time?",
+  "answer": "Three clocks run on every order: production time (making or preparing), dispatch time (when it leaves you), and transit time (the courier's journey). Customers hear one number unless you separate them. Promise the dispatch date you control, quote transit as the courier's estimate, and a made-to-order piece states its making time first. Mixing the clocks is how honest sellers end up looking late.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/compare-delivery-partners-using-your-actual-shipment-mix/",
+  "hub": "fulfilment-and-support",
+  "question": "Which courier is best for a small online seller in India?",
+  "answer": "The one your own parcels prove best — there is no universal answer. Compare partners on your actual shipment mix: your weights, your destination pincodes, your COD share, and each courier's delivered-on-time and return rates for those routes. A courier brilliant metro-to-metro can be the wrong choice for your small-town buyers. Three months of your own delivery data beats any ranking.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/investigate-a-parcel-marked-delivered-but-not-received/",
+  "hub": "fulfilment-and-support",
+  "question": "What do I do when a parcel is marked delivered but the customer says it never arrived?",
+  "answer": "Act on both sides quickly: ask the customer to check household members and neighbours while you raise an investigation with the courier citing the proof-of-delivery details. Keep the customer informed daily — your calm process is the difference between a resolved incident and a public accusation. Decide replacement or refund on the evidence, and log the route; repeated cases on one lane are a courier problem, not bad luck.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/set-a-shipping-charge-without-hiding-the-total-until-checkout/",
+  "hub": "fulfilment-and-support",
+  "question": "How much should I charge for shipping, and should I show it upfront?",
+  "answer": "Charge close to your real average courier cost and show the total before checkout — hidden shipping revealed at the last step is the classic abandonment trigger. A flat, honest rate is easier to trust than a precise one that appears late. If you absorb part of the cost into price for a 'free shipping' feel, do it knowingly, from your contribution numbers, not hopefully.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/evaluate-free-shipping-against-your-order-contribution/",
+  "hub": "fulfilment-and-support",
+  "question": "Is offering free shipping worth it for a small store?",
+  "answer": "Only if the order still pays you after the courier bill — free shipping is you buying the delivery, so check what each order contributes after product, packaging and freight. A minimum-order threshold for free delivery protects margins and nudges bigger baskets; blanket free shipping on low-value orders quietly turns bestsellers into losses. Run the numbers per product band, not on average.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/make-cash-on-delivery-promises-match-courier-support/",
+  "hub": "fulfilment-and-support",
+  "question": "Should a small online store offer cash on delivery?",
+  "answer": "COD raises orders and raises risk: refused parcels cost you both journeys. Offer it deliberately — confirm your courier actually supports COD at the destination, add the collection fee to your maths, and consider COD only above or below certain order values. Prepaid-first with COD as a fallback is a defensible start; blanket COD everywhere, priced as if free, is not.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/build-a-return-to-origin-log-that-identifies-fixable-causes/",
+  "hub": "fulfilment-and-support",
+  "question": "How do I reduce returned (RTO) parcels for my online store?",
+  "answer": "Log every return with its cause — wrong address, customer unreachable, refused at door, delivery delay — and fix the causes that repeat. Confirm addresses and phone numbers before booking, send dispatch and out-for-delivery messages so the buyer expects the knock, and review COD on the routes where refusals cluster. A return log turns RTO from fate into a fixable list.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/arrange-a-return-pickup-without-promising-an-instant-refund/",
+  "hub": "fulfilment-and-support",
+  "question": "How do I handle a return pickup without promising an instant refund?",
+  "answer": "Arrange the pickup and state the real sequence: pickup, transit back, condition check, then refund within a stated window. An instant-refund promise made at the angry moment becomes a second complaint when the parcel takes a week to travel. Customers accept a clear timeline; they punish a broken one. Put the sequence in writing in the same message that confirms the pickup.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/plan-dispatch-capacity-for-a-festival-order-spike/",
+  "hub": "fulfilment-and-support",
+  "question": "How do I prepare my dispatch for festival season orders?",
+  "answer": "Count backwards from the courier's festival cutoffs: how many parcels you can pack per day, how much stock and packaging you hold, and when ordering must close for guaranteed pre-festival delivery. Promise a large order window only after the maths works. Publishing a clear last-order date protects you from the apology season every unprepared seller runs in November.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/separate-markup-from-margin-before-setting-a-selling-price/",
+  "hub": "choosing-and-designing-store",
+  "question": "What is the difference between markup and margin when pricing a product?",
+  "answer": "Markup is what you add to cost; margin is what remains of the selling price. A 50% markup on ₹100 cost gives a ₹150 price — but the margin is 33%, not 50%. Sellers who mix the two underprice without noticing. Decide the margin you need first, then calculate the price from cost, and check every discount against margin, because discounts eat margin far faster than they shrink markup.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/find-the-break-even-order-count-for-a-small-store/",
+  "hub": "choosing-and-designing-store",
+  "question": "How many orders does my small store need to break even each month?",
+  "answer": "Add up your fixed monthly costs — subscriptions, tools, any rent or salary — and divide by the average contribution each order leaves after product, packaging, payment and delivery costs. That order count is your floor; below it the store is a funded hobby. Knowing the number changes decisions: it tells you what a quiet week really costs and what a discount campaign must produce to be worth running.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-percentage-and-fixed-amount-discounts/",
+  "hub": "choosing-and-designing-store",
+  "question": "Should I offer a percentage discount or a fixed amount off?",
+  "answer": "Calculate both against your margin before announcing either. Percentage discounts scale with price, so they cut deepest on your most expensive items; fixed amounts hit cheap items hardest and can wipe their margin entirely. A ₹100-off coupon on a ₹300 product is a 33% cut; on ₹1,500 it is under 7%. Pick the structure that protects the products you actually need to protect.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/review-a-price-increase-without-inventing-customer-tolerance/",
+  "hub": "choosing-and-designing-store",
+  "question": "How do I raise prices without losing my customers?",
+  "answer": "Raise with evidence, not apology: check your costs justify it, change the price plainly rather than shrinking the product quietly, and give regular buyers notice where it matters. Most feared exodus never happens — buyers of handmade and specialist goods tolerate honest increases far better than sellers assume. Watch actual repeat-order behaviour after the change instead of inventing customer reactions in advance.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/set-a-minimum-order-value-from-actual-handling-costs/",
+  "hub": "choosing-and-designing-store",
+  "question": "Should my store have a minimum order value?",
+  "answer": "Set it from your handling reality, not from a round number: if packing, payment charges and dispatch make orders under a certain value unprofitable, a minimum protects you — or a small-order fee does the same more flexibly. Calculate the order value below which contribution goes negative, then decide deliberately whether to refuse, surcharge or accept those orders as marketing.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/check-whether-free-shipping-costs-less-than-a-price-discount/",
+  "hub": "choosing-and-designing-store",
+  "question": "Is free shipping or a discount better for my store?",
+  "answer": "They cost different amounts even when they look equal. Free shipping costs you the courier fee — fixed per order; a discount scales with price. On low-value orders, free shipping often costs more than a 10% discount; on high-value orders it is usually cheaper. Compare both against contribution on your real order sizes, and pick per campaign rather than by instinct.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/calculate-acquisition-cost-without-treating-revenue-as-profit/",
+  "hub": "choosing-and-designing-store",
+  "question": "How do I calculate customer acquisition cost for a small store?",
+  "answer": "Divide what you spent attracting buyers in a period by the number of first-time orders it produced — then compare against contribution, not revenue. A ₹200 acquisition cost on a ₹500 order that contributes ₹150 after costs is a loss, however healthy the revenue looks. Treating revenue as profit is the classic small-store ad trap; contribution is the only honest yardstick.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-a-one-time-website-payment-with-recurring-operating-costs/",
+  "hub": "choosing-and-designing-store",
+  "question": "Is a one-time website payment better than monthly platform fees?",
+  "answer": "Compare total cost over two or three years, including what the one-time option omits: hosting, maintenance, updates, support and the developer you call when payments break. A subscription bundles those obligations; a one-time build hands them to you. The cheaper option is the one whose ongoing work you can actually afford — in money or in your own hours.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-annual-billing-savings-with-the-cash-commitment/",
+  "hub": "choosing-and-designing-store",
+  "question": "Should I pay annually for my store platform to get the discount?",
+  "answer": "Annual billing trades flexibility for a discount: you save money if the platform still fits in month nine, and you fund a tool you have left if it does not. Early on, monthly billing is cheap insurance while you learn whether the platform suits you; commit annually once the choice has survived a busy season. The percentage saved matters less than the cash locked.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/price-a-customisation-add-on-from-its-incremental-work/",
+  "hub": "choosing-and-designing-store",
+  "question": "How much should I charge for customisation on an order?",
+  "answer": "Price the add-on from its incremental work: the extra minutes, material and approval round it actually adds — not a token ₹50 because asking feels awkward. Personalisation also carries remake risk when details are wrong, so the charge should fund the occasional redo. Free customisation on a handmade product is usually the margin quietly leaving the business.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/shopify-or-woocommerce-decide-who-will-maintain-your-store/",
+  "hub": "choosing-and-designing-store",
+  "question": "Shopify or WooCommerce: which should a small Indian seller choose?",
+  "answer": "Decide by who will maintain the store, not by feature lists. A hosted platform carries updates, security and uptime for a subscription; WooCommerce hands you control and makes you — or someone you pay — the maintainer of hosting, plugins and breakages. If nobody on your side wants that ongoing job, hosted wins regardless of the comparison tables. The honest question is maintenance, not capability.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-hosted-and-self-managed-stores-by-the-work-you-can-own/",
+  "hub": "choosing-and-designing-store",
+  "question": "What is the difference between a hosted store and a self-managed one?",
+  "answer": "A hosted store rents you a maintained machine: the platform runs servers, security and updates, and you operate within its rules. Self-managed gives you the keys and the repair bills. Compare them by the work you can genuinely own — technical time, backups, fixing a broken checkout at 9pm. Control you cannot service is risk wearing a flattering name.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-shopify-wix-and-squarespace-with-one-representative-order/",
+  "hub": "choosing-and-designing-store",
+  "question": "How do I compare Shopify, Wix and Squarespace for my store?",
+  "answer": "Run one representative order through each trial: your real product with variants, your delivery charge, a test payment, the order record it produces. Feature pages will not reveal which builder fights your actual catalogue — a worked order will, in an hour per platform. Choose the one that needed the fewest workarounds for your product, not the one with the longest feature list.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/shortlist-shopify-alternatives-around-the-feature-you-actually-need/",
+  "hub": "choosing-and-designing-store",
+  "question": "How do I shortlist Shopify alternatives worth trying?",
+  "answer": "Start from the feature that is actually pushing you to look — pricing, payments, catalogue limits, India-specific workflows — and shortlist platforms strong on that one thing, rather than collecting every alternative a listicle names. Then test your shortlist with one real product and one test order each. An alternative chosen around your real constraint sticks; one chosen from a ranking usually repeats the same problem.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/marketplace-or-independent-store-separate-reach-from-control/",
+  "hub": "choosing-and-designing-store",
+  "question": "Should I sell on a marketplace or my own website?",
+  "answer": "Separate reach from control and buy them knowingly. A marketplace sells you demand at the cost of margin, pricing freedom and the customer relationship; your own store gives you all three but asks you to create the demand. Most small sellers run both deliberately: the marketplace as a demand experiment, their own store as the margin and repeat-customer home.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/free-store-plan-or-paid-subscription-identify-the-first-real-constraint/",
+  "hub": "choosing-and-designing-store",
+  "question": "Is a free store plan enough, or do I need a paid subscription?",
+  "answer": "A free plan is enough until you hit its first real constraint — product limits, feature gates, or per-order charges that outgrow a flat fee. Identify which constraint will bite YOUR store first and when; that date, not the price difference, is the decision. Upgrading on the day the constraint arrives beats paying months early or discovering the limit mid-festival.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-store-platforms-by-what-you-can-export/",
+  "hub": "choosing-and-designing-store",
+  "question": "What should I check before trusting a store platform with my data?",
+  "answer": "Check what you can export, in what format, before you need to: products, customers, orders and content. A platform you cannot leave with your records is a cage however good the features are. Run an actual export during the trial and open the file. Portability is the difference between choosing a platform and marrying it.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-payment-providers-without-confusing-checkout-with-settlement/",
+  "hub": "choosing-and-designing-store",
+  "question": "How do I compare payment providers for my online store?",
+  "answer": "Separate the checkout experience from settlement reality. Compare the charges per transaction, how long money takes to reach your bank, how disputes and failures are handled, and what the customer sees when paying. A provider with a slick checkout and slow, opaque settlement costs you cash-flow; test one real transaction end to end — including the refund — before committing.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-store-builders-for-variant-heavy-catalogues/",
+  "hub": "choosing-and-designing-store",
+  "question": "Which store builder handles products with many variants best?",
+  "answer": "The one that treats each variant as real stock — its own quantity, price adjustment and order line — rather than a dropdown painted on one product. Test with your most complicated product: every size-colour combination, one test order, then check what the stock records show. Builders that fake variants reveal themselves in the stock screen within minutes.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/decide-whether-to-switch-platforms-or-repair-your-current-workflow/",
+  "hub": "choosing-and-designing-store",
+  "question": "Should I switch store platforms or fix my current setup?",
+  "answer": "Diagnose before migrating: list what actually hurts, and check how much is the platform versus your own workflow, catalogue hygiene or missing configuration. Switching costs weeks and risks SEO, data and muscle memory — worth paying only when the platform itself is the ceiling. A repairable workflow problem follows you to the new platform and bills you twice.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-a-single-checkout-link-with-a-browsable-catalogue/",
+  "hub": "choosing-and-designing-store",
+  "question": "Is a checkout link enough, or does my store need a browsable catalogue?",
+  "answer": "A single checkout link suits one product or a conversation that already chose the item. A browsable catalogue earns its keep when buyers compare, return, or discover — it answers questions while you sleep. Match the tool to the buying task: links for closing a chat sale, a catalogue for letting strangers shop without you present.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/compare-social-discovery-with-etsy-marketplace-demand/",
+  "hub": "choosing-and-designing-store",
+  "question": "Should a handmade seller rely on Instagram discovery or Etsy-style marketplace demand?",
+  "answer": "They are different demand engines: social discovery rewards story and consistency and sends buyers who already like you; marketplace search rewards listings that match queries from strangers comparing prices. Social buyers convert warmer but arrive slower; marketplace demand is immediate and mercenary. Compare where YOUR category's buyers actually search, and feed whichever engine proves it with orders.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/build-a-crochet-launch-range-around-repeatable-pieces/",
+  "hub": "businesses",
+  "question": "What crochet items should I start selling first?",
+  "answer": "Start with three to six pieces you can remake to the same quality and price — repeatable pieces, not your most ambitious one-offs. A repeatable range lets you photograph once, price honestly, restock and quote making times you can keep. Showpieces earn likes; repeatable pieces earn a business. Add custom work after the core range is flowing.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/write-care-instructions-for-the-finished-crochet-item/",
+  "hub": "businesses",
+  "question": "What care instructions should I include with a crochet item?",
+  "answer": "Tell the buyer how to wash it, dry it and reshape it — specifically for the yarn you used, not generic advice. A small card stating hand-wash temperature, flat drying and how to ease the piece back into shape prevents the most common first-week complaint, which is damage the buyer caused innocently. Care instructions are cheap insurance for your reviews.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/schedule-crochet-festival-orders-without-overbooking-the-maker/",
+  "hub": "businesses",
+  "question": "How many crochet orders can I take for a festival without overbooking?",
+  "answer": "Count backwards from your real making speed: hours per piece, hours available per week, minus a buffer for life. That number — not enthusiasm — is your order book. Close orders when it is full and say so publicly; 'festival slots closed' builds more demand than a missed deadline ever will. Overbooking a solo maker is the most common handmade festival failure.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/prepare-a-crochet-collection-page-that-separates-ready-pieces-from-custom-work/",
+  "hub": "businesses",
+  "question": "How do I show ready stock and made-to-order crochet separately?",
+  "answer": "Split the collection page: ready pieces promise fast dispatch, made-to-order pieces state a making-time range. Mixing them teaches buyers the wrong expectation for both. Each made-to-order listing carries its timeline next to the price, so the wait is agreed at order time — not discovered in chat afterwards.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/describe-jewellery-metals-and-finishes-without-blurring-the-difference/",
+  "hub": "businesses",
+  "question": "How do I describe jewellery metals honestly in my listings?",
+  "answer": "Name the base metal and the finish separately and precisely: 'brass with gold plating' is a different promise from 'gold-toned alloy', and buyers remember which you made. State what the piece should avoid — water, perfume — and how long the finish typically lasts with care. Precision here prevents disputes and is the cheapest trust a jewellery seller can buy.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/help-customers-compare-necklace-length-and-pendant-scale/",
+  "hub": "businesses",
+  "question": "How do I help customers judge necklace length and pendant size online?",
+  "answer": "Show every necklace worn, state the chain length in centimetres, and give the pendant's dimensions next to a familiar reference. A length chart graphic mapping 40/45/50 cm on a neckline answers the question buyers actually have — where will it sit — which numbers alone do not. Scale ambiguity is the top cause of jewellery disappointment.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/prepare-an-artificial-jewellery-catalogue-for-everyday-buying-questions/",
+  "hub": "businesses",
+  "question": "What should an artificial jewellery listing answer before anyone asks?",
+  "answer": "The everyday questions: what is it made of, will it tarnish, is it safe for sensitive skin, how heavy is it, how do I keep it looking new. Answer them plainly on the listing with honest wear-and-care notes. Artificial jewellery buyers are not expecting gold — they are checking you are honest about what they are getting.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/pack-delicate-jewellery-with-a-final-component-check/",
+  "hub": "businesses",
+  "question": "How should I pack jewellery so it arrives perfect?",
+  "answer": "Do a final component check against the order — right piece, both earrings, the stated chain — then pack tangle-free: chains fastened to card, pieces separated, a crush-resistant box. The check matters as much as the padding: 'one earring arrived' is a packing-bench failure, not a courier one. A neat unboxing is also your only physical brand moment.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/build-gift-hamper-options-from-a-controlled-contents-list/",
+  "hub": "businesses",
+  "question": "How do I sell gift hampers without the packing chaos?",
+  "answer": "Build hampers from a controlled contents list: defined options with defined swaps, not 'customise anything'. Controlled contents keep stock truthful, pricing honest and packing accurate during the festival rush. When a component runs out, offer the stated alternative rather than substituting silently — a surprise swap in a gift is remembered longer than a sold-out notice.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/design-a-gift-guide-around-recipient-needs-rather-than-stereotypes/",
+  "hub": "businesses",
+  "question": "How do I make a gift guide that actually helps buyers choose?",
+  "answer": "Organise by the recipient's situation and interests — 'for the tea lover', 'for a new home' — rather than by gender stereotypes that date the store and miss the actual question. A guide built on recipient needs converts the buyer who arrived thinking 'I need something for…' and reflects a store that thought about its customers.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/create-a-custom-photo-gift-proof-that-customers-can-inspect/",
+  "hub": "businesses",
+  "question": "Should I send a proof before making a custom photo gift?",
+  "answer": "Always. A proof the customer inspects and approves — crop, colour, spelling, placement — before production turns a remake risk into a thirty-second approval. Treat approval as the start of production time, not order time, and keep the approved proof attached to the order so later doubts are settled by the record rather than memory.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/build-garment-measurement-tables-from-the-actual-clothing/",
+  "hub": "businesses",
+  "question": "How do I create a clothing size chart customers can trust?",
+  "answer": "Measure the actual garments flat — chest, length, shoulder, sleeve — and publish those numbers per size, rather than copying a generic chart. Say how to compare: 'measure a shirt that fits you well and match it'. Brand-label sizes differ wildly; centimetres from the real garment are the only chart that prevents size returns.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/describe-fabric-opacity-lining-and-finish-with-useful-evidence/",
+  "hub": "businesses",
+  "question": "How do I describe fabric honestly in an online clothing listing?",
+  "answer": "Name the fabric, state the weight or thickness in useful terms, and answer opacity directly — lined or not, sheer in sunlight or not. Add a close-up photo in daylight and, where it helps, a drape shot. Fabric surprise is the second biggest clothing return reason after size; one honest sentence prevents most of it.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/check-clothing-photos-against-the-exact-variant-being-sold/",
+  "hub": "businesses",
+  "question": "Why must listing photos match the exact variant being sold?",
+  "answer": "Because a buyer who ordered from a photo of the maroon kurti believes they ordered the maroon in the photo — even if the dropdown said something else. Check every variant's photos against what will actually ship: same colour lot, same print placement, same buttons. Variant-photo mismatch produces returns where everyone followed the process and the customer is still right.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/launch-a-small-clothing-drop-with-complete-product-information/",
+  "hub": "businesses",
+  "question": "What does a small clothing drop need before launch?",
+  "answer": "Complete product information ready before the announcement: every size measured and listed, every variant photographed, prices and delivery charges final, stock counts loaded. A drop that launches with 'DM for sizes' burns the attention it created. Small and complete beats big and half-listed — the drop format rewards preparation, not volume.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/sell-cushion-covers-without-leaving-insert-and-closure-details-unclear/",
+  "hub": "businesses",
+  "question": "What must a cushion cover listing state to avoid returns?",
+  "answer": "Whether the insert is included — the single most common décor surprise — plus exact dimensions, the closure type, fabric front and back, and wash care. Photograph the cover filled, and say what filled it. A buyer expecting a plump cushion who receives a flat cover was failed by the listing, not the product.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/photograph-rugs-with-dimensions-and-room-scale-context/",
+  "hub": "businesses",
+  "question": "How do I photograph rugs so buyers understand the size?",
+  "answer": "Always in a furnished room: a rug alone on a white floor has no scale. Show it under or beside furniture buyers recognise, state dimensions in centimetres in the first line, and add a top-down shot for the pattern. 'Smaller than expected' is the rug category's defining return reason, and room-context photography is its cure.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/create-a-home-decor-set-without-confusing-the-individual-pieces/",
+  "hub": "businesses",
+  "question": "Can I sell décor pieces as a set and individually at the same time?",
+  "answer": "Yes, if the records stay honest: the set is its own listing whose sale decrements each piece's stock, and each piece keeps its own listing and record. That way selling the set cannot oversell the singles, and a transit-damaged piece can be replaced alone. A 'set of 3' sharing stock loosely with its singles oversells in the first busy week.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/find-the-first-place-customers-leave-your-buying-journey/",
+  "hub": "selling-online",
+  "question": "Where do customers drop out of my store's buying journey?",
+  "answer": "Find the first leak before fixing anything downstream: do visitors leave at the product page, the delivery charge, the payment step, or before adding anything at all? Walk the journey yourself on a phone, then check where enquiries stall in chat. Fixing the first drop-off point compounds through every later step; optimising a later step while the first one leaks wastes the work.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/plan-the-first-ten-orders-without-inventing-a-growth-guarantee/",
+  "hub": "selling-online",
+  "question": "How do I get my first ten online orders?",
+  "answer": "Start with the people who already know you — announce with prices visible, make ordering one step, and ask every early buyer one question after delivery: what almost stopped you? Fix that. The first ten orders are a learning instrument, not a growth metric; they will rewrite your listings, your delivery answer and sometimes your prices before any ad spend deserves a rupee.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/improve-a-product-page-before-buying-more-traffic/",
+  "hub": "selling-online",
+  "question": "Should I improve my product page or buy more traffic first?",
+  "answer": "Page first, always. Traffic into a page that does not answer size, price, delivery and trust questions is money rented to watch people leave. Fix the page until the visitors you already get convert at a believable rate, then buy more of them. Doubling conversion costs an afternoon; doubling traffic costs money every month forever.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/bring-repeat-buyers-back-with-relevance-rather-than-constant-discounts/",
+  "hub": "selling-online",
+  "question": "How do I get customers to order again without constant discounts?",
+  "answer": "Bring them back with relevance: a restock of what they bought, a new piece in their category, a festival reminder matched to their last occasion. Discounts train buyers to wait for discounts; relevance trains them to watch your updates. The order history you hold is the targeting tool — one genuinely relevant message outperforms a blanket 10%-off blast.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/review-a-month-of-orders-before-expanding-the-catalogue/",
+  "hub": "selling-online",
+  "question": "How do I decide what to add to my catalogue next?",
+  "answer": "Review a month of real orders first: what sold, what was asked for and missing, what sold only on discount, what returned. Expand where demand already pulls — the enquiry you refused twice is a better brief than a trend reel. Catalogue growth chosen from your own order data compounds; growth chosen from inspiration adds photography debt.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/how-to-sell-crochet-online-india/",
+  "hub": "businesses",
+  "question": "How do I start selling crochet online in India?",
+  "answer": "Pick three to six repeatable pieces, price your hours honestly before the yarn, photograph texture in daylight, and open one reliable ordering channel — Instagram and WhatsApp to start, a store once made-to-order timelines multiply across chats. State making time on everything made to order, and plan the first ten orders through people who already know your work.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/how-to-start-selling-clothes-online-from-home-india/",
+  "hub": "businesses",
+  "question": "How do I start selling clothes online from home in India?",
+  "answer": "Start narrower than feels comfortable — one category, one buyer. Publish real flat measurements per size, photograph steamed garments in daylight, and choose where orders happen: chat with confirmed summaries at first, a store once volume grows. Test one courier parcel before launch, decide COD deliberately, and write the returns answer before anyone asks.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/how-to-sell-handmade-jewellery-online-india/",
+  "hub": "businesses",
+  "question": "How do I sell handmade jewellery online in India?",
+  "answer": "Launch a coherent six-to-ten piece collection, state materials precisely — base metal, plating, stones — and photograph size worn, not just sparkle. Take orders in chat with confirmed summaries while volume is small; move to a store when variants outgrow memory. Pack tangle-free with a component check, and price for your hours and remakes, not against factory lookalikes.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/how-to-start-online-gift-business-india/",
+  "hub": "businesses",
+  "question": "How do I start an online gift business in India?",
+  "answer": "Choose one gifting lane — personalised, hampers, or occasion boxes — and build the catalogue by occasion with one stock record per product. Treat deadlines as the real product: work back from the occasion to a dispatch promise you control. Put personalised wording behind written approval, price wrapping as a service, and handle surprise addresses deliberately.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/how-to-start-selling-on-instagram-india/",
+  "hub": "selling-online",
+  "question": "How do I start selling on Instagram in India?",
+  "answer": "Make the profile answer what you sell, what it costs and how to order; post products with visible prices in honest daylight; and run DMs to one rule — every enquiry ends ordered, declined or parked with a date. Confirm each order in a single summary message. When parallel chats start promising the same stock twice, give the catalogue a store and keep Instagram as the shop window.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/how-to-take-orders-on-whatsapp-india/",
+  "hub": "selling-online",
+  "question": "How do I take orders on WhatsApp professionally?",
+  "answer": "Use WhatsApp Business with a priced catalogue, send one confirmable summary per order — item, price, address, delivery estimate — and dispatch only after payment shows in your account, not in a screenshot. Keep one stock note across chats, release stock when orders cancel, and watch for the overflow signs: screenshot reconciliation evenings, double-promised pieces, forgotten paid orders.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Browse the selling guides"
+ },
+ {
+  "route": "/blog/how-to-price-handmade-products-india/",
+  "hub": "choosing-and-designing-store",
+  "question": "How do I price handmade products in India?",
+  "answer": "Time one piece honestly, multiply by an hourly rate you would accept, add materials with a waste allowance, packaging and a share of hidden costs like photography. That total is your floor; price above it with margin for growth. If the market will not pay above the floor, change the product or the make-time — never sell below it. Re-run the numbers every season.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/cost-to-start-online-store-india/",
+  "hub": "choosing-and-designing-store",
+  "question": "How much money do I need to start an online store in India?",
+  "answer": "Potentially near zero for the storefront itself: chat commerce is free and real store platforms have free tiers. The unavoidable costs arrive per order — delivery, payment collection, packaging and the occasional return. Budget first for product, packaging and one tested courier route; leave domains, paid themes and ads until orders prove what converts. Verify every platform's current fees on decision day.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/which-free-platform-to-sell-online-india/",
+  "hub": "choosing-and-designing-store",
+  "question": "Which free platform is best to sell online in India?",
+  "answer": "The one whose limits your next six months will not hit. Free options are really four shapes — chat commerce, marketplaces, free store tiers and dressed-up trials — each paid in commission, limits or your time. Shortlist two, load five real products, place a test order end to end on each, and choose the one needing fewer workarounds for your products. Then commit for six months.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/online-store-kaise-banaye-free-india/",
+  "hub": "choosing-and-designing-store",
+  "question": "Free mein online store kaise banaye?",
+  "answer": "Bilkul possible hai: WhatsApp Business ka free catalogue, Instagram ki reach, aur kuch platforms ke free store plan. Chhota range chuno, daylight photos, price saaf dikhao, aur har order ka ek confirmation message. Delivery aur payment ka kharcha har raaste mein lagta hai — woh business ka cost hai, platform ka nahi. Jab chats sambhalna mushkil ho jaaye, store par shift karo aur WhatsApp baat-cheet ke liye rakho.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
  }
 ]
