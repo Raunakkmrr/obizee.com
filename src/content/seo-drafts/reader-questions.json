@@ -1,10 +1,130 @@
 [
-  {"route":"/blog/inventory-for-instagram-sellers/","hub":"catalogue-and-stock","question":"How do I manage stock when I sell on Instagram, WhatsApp and my website?","answer":"Keep one stock record for each sellable product and variant. Separate physical quantity, confirmed reservations and available-to-sell quantity. Record every channel's accepted orders against that same record before promising the next unit. A spreadsheet can do this at low volume; do not assume tools synchronise just because they all display a quantity.","next":"/help/adjust-stock/","nextLabel":"Check how a stock adjustment works in oBizee"},
-  {"route":"/blog/organise-a-whatsapp-catalogue-around-customer-choices/","hub":"selling-online","question":"How should I organise a WhatsApp Business catalogue and take accurate orders?","answer":"Group products by what customers are looking for, give each item a recognisable name and explain the unit, price and available options. When a customer sends an item or cart message, confirm the variant, quantity, availability and delivery total before accepting the order. Treat a message as a request, not proof of payment or reserved stock.","next":"/blog/online-store-vs-whatsapp-business/","nextLabel":"Compare a messaging catalogue with an online store"},
-  {"route":"/blog/turn-a-custom-crochet-request-into-a-makeable-specification/","hub":"businesses","question":"What should I confirm before accepting a custom crochet order?","answer":"Agree on the item, measurements, yarn or material, colours, personalisation, quantity, price and making time in one written brief. Distinguish an inspiration photo from a promise to reproduce it. Check your production capacity and delivery estimate before the customer confirms; save the version they accepted so later changes can be quoted separately.","next":"/resources/capacity/","nextLabel":"Calculate a realistic making-capacity scenario"},
-  {"route":"/blog/price-handmade-products/","hub":"choosing-and-designing-store","question":"How do I price handmade products without leaving out my time?","answer":"Add the materials actually used, paid-for making time, packaging and other costs for one finished item. Then account for selling fees, delivery support and the contribution your business needs. For a target margin m on selling price, price = included cost ÷ (1 − m), before any costs excluded from that calculation. Adding 30% to cost is not the same as earning a 30% margin.","next":"/resources/margin/","nextLabel":"Try the margin calculator with your own costs"},
-  {"route":"/blog/product-page-checklist/","hub":"catalogue-and-stock","question":"What information does a product page need before customers can order?","answer":"Show what is included, the material or specification, dimensions, options, price, current availability and realistic preparation and delivery information. Use photos that answer scale and detail questions, not just a decorative image. Open the page on a phone and check that the selected option remains clear through the buying journey.","next":"/help/first-product/","nextLabel":"Prepare your first product in oBizee"},
-  {"route":"/blog/instagram-to-online-store/","hub":"selling-online","question":"How do I turn Instagram enquiries into orders without losing the conversation?","answer":"Send an interested buyer to the exact product or collection discussed, with the information needed to choose. Keep messages for personalisation and unresolved questions. Confirm the selected item, total and fulfilment promise in one order record; a profile visit, a link click and a completed order are different outcomes.","next":"/guides/selling-online/","nextLabel":"Follow the social-selling reading path"},
-  {"route":"/blog/discounts-without-losing-margin/","hub":"choosing-and-designing-store","question":"How much discount can I offer without losing money on an order?","answer":"Calculate the discounted selling price, then subtract the costs that order will actually incur, including packaging and fees within your chosen boundary. Compare the remaining contribution with what is needed for fixed costs and profit. Higher order volume does not make a loss on each order disappear. Test the lowest-margin eligible basket before advertising a promotion.","next":"/resources/discount-limit/","nextLabel":"Work through a discount scenario"},
-  {"route":"/blog/run-a-useful-ai-seo-audit-on-three-real-store-pages/","hub":"selling-online","question":"Why is my published page not showing in Google or AI search answers?","answer":"Publishing a page and submitting a sitemap do not mean the page has been crawled or indexed. Inspect the exact URL: an unknown URL, a discovered-but-not-crawled page, and an indexed page with no impressions need different investigations. Check crawl access, internal links and the answer's usefulness. Google AI search links require indexing; no markup or AI file guarantees selection.","next":"/blog/product-page-checklist/","nextLabel":"Check the product information search visitors need"}
+ {
+  "route": "/blog/inventory-for-instagram-sellers/",
+  "hub": "catalogue-and-stock",
+  "question": "How do I manage stock when I sell on Instagram, WhatsApp and my website?",
+  "answer": "Keep one stock record for each sellable product and variant. Separate physical quantity, confirmed reservations and available-to-sell quantity. Record every channel's accepted orders against that same record before promising the next unit. A spreadsheet can do this at low volume; do not assume tools synchronise just because they all display a quantity.",
+  "next": "/help/adjust-stock/",
+  "nextLabel": "Check how a stock adjustment works in oBizee"
+ },
+ {
+  "route": "/blog/organise-a-whatsapp-catalogue-around-customer-choices/",
+  "hub": "selling-online",
+  "question": "How should I organise a WhatsApp Business catalogue and take accurate orders?",
+  "answer": "Group products by what customers are looking for, give each item a recognisable name and explain the unit, price and available options. When a customer sends an item or cart message, confirm the variant, quantity, availability and delivery total before accepting the order. Treat a message as a request, not proof of payment or reserved stock.",
+  "next": "/blog/online-store-vs-whatsapp-business/",
+  "nextLabel": "Compare a messaging catalogue with an online store"
+ },
+ {
+  "route": "/blog/turn-a-custom-crochet-request-into-a-makeable-specification/",
+  "hub": "businesses",
+  "question": "What should I confirm before accepting a custom crochet order?",
+  "answer": "Agree on the item, measurements, yarn or material, colours, personalisation, quantity, price and making time in one written brief. Distinguish an inspiration photo from a promise to reproduce it. Check your production capacity and delivery estimate before the customer confirms; save the version they accepted so later changes can be quoted separately.",
+  "next": "/resources/capacity/",
+  "nextLabel": "Calculate a realistic making-capacity scenario"
+ },
+ {
+  "route": "/blog/price-handmade-products/",
+  "hub": "choosing-and-designing-store",
+  "question": "How do I price handmade products without leaving out my time?",
+  "answer": "Add the materials actually used, paid-for making time, packaging and other costs for one finished item. Then account for selling fees, delivery support and the contribution your business needs. For a target margin m on selling price, price = included cost ÷ (1 − m), before any costs excluded from that calculation. Adding 30% to cost is not the same as earning a 30% margin.",
+  "next": "/resources/margin/",
+  "nextLabel": "Try the margin calculator with your own costs"
+ },
+ {
+  "route": "/blog/product-page-checklist/",
+  "hub": "catalogue-and-stock",
+  "question": "What information does a product page need before customers can order?",
+  "answer": "Show what is included, the material or specification, dimensions, options, price, current availability and realistic preparation and delivery information. Use photos that answer scale and detail questions, not just a decorative image. Open the page on a phone and check that the selected option remains clear through the buying journey.",
+  "next": "/help/first-product/",
+  "nextLabel": "Prepare your first product in oBizee"
+ },
+ {
+  "route": "/blog/instagram-to-online-store/",
+  "hub": "selling-online",
+  "question": "How do I turn Instagram enquiries into orders without losing the conversation?",
+  "answer": "Send an interested buyer to the exact product or collection discussed, with the information needed to choose. Keep messages for personalisation and unresolved questions. Confirm the selected item, total and fulfilment promise in one order record; a profile visit, a link click and a completed order are different outcomes.",
+  "next": "/guides/selling-online/",
+  "nextLabel": "Follow the social-selling reading path"
+ },
+ {
+  "route": "/blog/discounts-without-losing-margin/",
+  "hub": "choosing-and-designing-store",
+  "question": "How much discount can I offer without losing money on an order?",
+  "answer": "Calculate the discounted selling price, then subtract the costs that order will actually incur, including packaging and fees within your chosen boundary. Compare the remaining contribution with what is needed for fixed costs and profit. Higher order volume does not make a loss on each order disappear. Test the lowest-margin eligible basket before advertising a promotion.",
+  "next": "/resources/discount-limit/",
+  "nextLabel": "Work through a discount scenario"
+ },
+ {
+  "route": "/blog/run-a-useful-ai-seo-audit-on-three-real-store-pages/",
+  "hub": "selling-online",
+  "question": "Why is my published page not showing in Google or AI search answers?",
+  "answer": "Publishing a page and submitting a sitemap do not mean the page has been crawled or indexed. Inspect the exact URL: an unknown URL, a discovered-but-not-crawled page, and an indexed page with no impressions need different investigations. Check crawl access, internal links and the answer's usefulness. Google AI search links require indexing; no markup or AI file guarantees selection.",
+  "next": "/blog/product-page-checklist/",
+  "nextLabel": "Check the product information search visitors need"
+ },
+ {
+  "route": "/for/crochet-sellers/",
+  "hub": "businesses",
+  "question": "How do I sell crochet online when every piece takes days to make?",
+  "answer": "Split the range into ready pieces and made-to-order pieces, and state a making-time range on every made-to-order listing that you can keep in a busy week. Keep the yarn lot and the approved colour attached to each order, price your hours as deliberately as the materials, and photograph stretch and size honestly. Buyers accept waiting; they do not accept discovering the wait after paying.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/for/gift-sellers/",
+  "hub": "businesses",
+  "question": "What does a gift store need that an ordinary product store does not?",
+  "answer": "Three things: occasion deadlines treated as delivery requirements and worked backwards into a dispatch promise, written approval of personalised wording before anything is made, and deliberate handling of surprise addresses where the recipient is not the buyer. Organise the catalogue by occasion, price wrapping as a defined service, and refuse an unreachable deadline before payment rather than apologising after it.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/for/home-decor/",
+  "hub": "businesses",
+  "question": "Why do home décor orders get returned even when the product is fine?",
+  "answer": "Usually because the listing let the buyer imagine a different object: scale read bigger on screen, a glaze varied from the photo, or a cushion cover arrived without the insert they assumed. State dimensions and prove them with one in-room photograph, declare finish variation in one plain sentence, keep sets and single pieces as separate honest listings, and match packaging and COD to fragility and weight.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/for/art-prints/",
+  "hub": "businesses",
+  "question": "What should an art print listing state before I sell a single print?",
+  "answer": "The full physical offer: print size and orientation, paper and weight, whether the size includes a border, and exactly what the framed option is. If you number editions, record edition size and formats and never quietly reopen a closed edition. Pack flat work rigid with corner protection and keep a condition record with a photo before sealing, so a damaged-arrival conversation starts from evidence.",
+  "next": "/guides/businesses/",
+  "nextLabel": "Browse guides for product businesses"
+ },
+ {
+  "route": "/blog/whatsapp-business-catalogue-vs-own-store/",
+  "hub": "choosing-and-designing-store",
+  "question": "Is a WhatsApp Business catalogue enough, or do I need my own store?",
+  "answer": "A catalogue is enough while orders are few and conversational: it shows products inside the chat where you sell anyway. It stops being enough when the chat becomes your bookkeeping — no order record, no stock decrement, payment screenshots to reconcile by hand. The day you promise one piece twice or forget a paid order, move the records into a store and keep WhatsApp for the conversation.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/sell-on-meesho-vs-your-own-website/",
+  "hub": "choosing-and-designing-store",
+  "question": "Should I sell on Meesho or build my own website first?",
+  "answer": "A marketplace sells you demand at the cost of margin and the customer relationship; your own site gives you both but asks you to create the demand. Most small sellers run a split: use the marketplace to test which products and prices pull orders, route Instagram and WhatsApp buyers to their own store, and judge each channel on contribution after fees, shipping and returns — not on revenue.",
+  "next": "/guides/choosing-and-designing-store/",
+  "nextLabel": "Compare store choices step by step"
+ },
+ {
+  "route": "/blog/courier-aggregator-vs-direct-courier-account/",
+  "hub": "fulfilment-and-support",
+  "question": "Should I ship through a courier aggregator or open a direct courier account?",
+  "answer": "Start aggregated: instant onboarding, many couriers behind one wallet, and no volume to defend while your shipment mix is unknown. Open a direct account once your own data shows one courier winning most of your parcels — volume buys negotiated rates, a direct escalation line and a shorter COD cycle. Decide on failure data: remittance delays, return-to-origin rates and who answers when a shipment goes wrong.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ },
+ {
+  "route": "/blog/india-post-vs-private-couriers-for-small-sellers/",
+  "hub": "fulfilment-and-support",
+  "question": "When is India Post better than a private courier for a small store?",
+  "answer": "For prepaid light parcels, price-sensitive orders and pincodes outside private serviceability, India Post and Speed Post are hard to beat. Private couriers earn their fee on COD, time-promised and fragile orders through doorstep pickup, granular tracking and standard cash handling. Route each parcel by destination and promise instead of picking one network forever, and let three months of your own delivery data settle the split.",
+  "next": "/guides/fulfilment-and-support/",
+  "nextLabel": "Plan delivery and support properly"
+ }
 ]
