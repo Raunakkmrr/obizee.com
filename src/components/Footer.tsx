@@ -24,6 +24,7 @@ const Footer = () => {
     resources: [
       { name: "Blog", href: "/blog" },
       { name: "Seller guides by topic", href: "/guides/" },
+    { name: "India Home Seller Report", href: "/india-home-seller-report/" },
       { name: "Calculators & planners", href: "/resources/" },
       { name: "How to Create Your Store", href: "/how-to-create-online-store" },
       { name: "How to Ship Products", href: "/how-to-ship-products-online-india" },
