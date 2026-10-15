@@ -17,7 +17,8 @@ already crawls heavily pass zero signal to www.
 - [x] 1.2 Keep visual style identical per template variant; respect poweredByText override
 - [x] 1.3 (build green on node 20+; anchor verified in chunk output) Lint + build star_by_obizee; verify anchor in output
 - [x] 1.4 (star 986c9b2 pushed) Commit, push (auto-deploys: Amplify wildcard + 6 Vercel custom-domain projects)
-- [x] 1.5 LIVE on mitraso.obizee.com (wildcard host); custom-domain check pending next Vercel build (active: cozoracreation.com, daresbold.com, snazzystore.co.in, blushboxg.in)
+- [x] 1.5 LIVE on the wildcard host (mitraso verified) and on snazzystore.co.in + blushboxg.in
+- [ ] 1.6 daresbold.com and cozoracreation.com still serve the OLD build (~5h after push, measured 20:50 IST) — their Vercel projects do not auto-build from main; needs a one-click Redeploy per project in Raunak's Vercel dashboard. Re-checked automatically by tomorrow's cron.
 
 ## Phase 2 — Merchant directory on www ("Real shops built on oBizee")
 78 merchants qualify today. Buyers searching categories find real shops; shops
@@ -37,8 +38,26 @@ link back; www links out to the network it owns. No competitor can copy this pag
       time-to-first-order, category mix (names, not ids), festival-window comparison
 - [x] 3.2 report page built: hero, 6 stat tiles, 2am section, 16-month table, economics/adoption, geography, Method-honestly box; Report JSON-LD; verified desktop+375 Draft report page with every number traceable to its query
 - [x] 3.3 GATE passed — Raunak 2026-10-15: "yes numbers are correct, 2am is real sellers working late. publish it": present numbers to Raunak — nothing publishes without his yes
-- [x] 3.4 published (1a84a44+d4e5a65): /india-home-seller-report/ + footer link + llms.txt both copies + dated sitemap entry; deploy watcher running; GSC request + distribution list = next session (rolling quota spent today)
+- [x] 3.4 published (1a84a44+d4e5a65) and live-verified 18:40 IST: /india-home-seller-report/ + footer link + llms.txt both copies + dated sitemap entry
 
 ## Explicitly out of scope this pass
 Google Shopping feed flip (waits on dev agent's slug work) · WhatsApp Channel (needs
 his account) · YouTube (needs his voice/face) · ONDC (product bet, separate decision).
+
+## STILL OPEN — 2026-10-15 21:00 IST
+- [ ] 1.6 (above) daresbold.com + cozoracreation.com Vercel redeploy — RAUNAK, one click each
+- [~] 3.5 GSC indexing request for the report — cron e49d5cf3 armed for 10:47 IST Oct 16 (session + GSC Chrome must stay open; fallback: ask in any session)
+- [ ] 3.6 Report distribution — RAUNAK: seller WhatsApp groups, founder post, press pitch ("a third of the home-seller workday happens after midnight")
+- [ ] customHttp.yml — cache headers in amplify.yml are proven inert; chip pending Raunak's click (task_826eb62e)
+- [ ] GA4 baseline read before the new funnels move the number — needs Raunak's Google login (whatsapp_click · editorial_article, and now · merchant-storefront referrals)
+- [ ] Oct 19–20 GSC checkpoint: hubs flipping from "Last crawled: N/A" = the 348-post library entering the index
+- [ ] Nudge velora + rrbvisioniq (dropped off the shop wall: <2 products or no image) — RAUNAK or the merchant funnel
+- [ ] Merchant-store agent's crawl fixes (54 soft-404 category urls, &subdomain= duplicate param, crawled fonts) — handed to that agent 2026-10-12, landing unverified
+
+## QUEUE (approved direction, not started)
+- Google Shopping free listings — gated on the dev agent's product-slug work
+- ₹50,000-club story pages (42 merchants, template exists at /stories/crochetbypriya/)
+- WhatsApp Channel: one tip daily from the 348 posts — needs Raunak's account
+- Hindi YouTube from the 10 guides — needs Raunak's voice/face
+- Play Store ASO pass on com.obizeee
+- Next Seller Report edition: re-run queries ~Jan 2027
