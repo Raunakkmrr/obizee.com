@@ -165,6 +165,13 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [DONE] `fc0ce4e`+`312dead` — ten query-titled start-here guides (ids 360–369): crochet/clothes/jewellery/gifts online India, Instagram start, WhatsApp orders, pricing handmade, cost to start, free-platform choice, Hinglish "online store kaise banaye". Each links into the operational library. reader-questions 16 → **97**: short-answer blocks now render on the 10 guides + 71 strongest existing posts (homepage first-6 contract untouched). Programme pin 508 → 518; sitemap 530/530 dated; all suites green; Hinglish guide and QA renders inspected.
 - [FACT] Devanagari can slip into Hinglish via IME artifacts ("dikhाo") — validate reader-questions for stray scripts before commit.
 
+### Session — 2026-10-15 15:30–18:45 IST (visibility network: all three phases shipped)
+- [DONE] Phase 1 — star_by_obizee `986c9b2`: the "Powered by oBizee" footer credit on all 218 live storefronts was PLAIN TEXT; now links to www with utm attribution, both footer variants, styling unchanged. Verified live on mitraso.obizee.com.
+- [DONE] Phase 2 — www `4908dc2`: shop wall regenerated from production truth, 43 → 77 shops (38 headless screenshot captures, 0 broken; `test` account + 2 no-longer-qualifying shops removed; TOTAL_MERCHANT_COUNT 165 → 238; compare pages' stateCount stops counting ""). Verified live.
+- [DONE] Phase 3 — www `1a84a44`: **The India Home Seller Report** published at /india-home-seller-report/ (stable canonical across editions). All numbers read-only production aggregates approved by Raunak; 2am peak confirmed by him as real seller behaviour. Footer link + llms.txt both copies + dated sitemap entry. Live-verified 18:40 IST.
+- [FACT] Ground truth 2026-10-15: 238 merchants, 218 websiteLive, 6 custom domains (4 active), 3,175 products, 4,092 orders, 80 stores with 2+ products, 65 ever-ordered. Query via OM-backend `.ground-truth-readonly.mjs` pattern (load .env manually, mongoose, aggregates only).
+- [FACT] On this drive, `npm run build` wrapped in a backgrounded subshell dies silently right after "Creating an optimized production build" (three consecutive times); the SAME build in foreground succeeds. Run www builds foreground.
+- [NEEDS-INPUT] Next session: GSC indexing request for /india-home-seller-report/ (quota spent today), and Raunak's distribution push for the report (Reddit/press/WhatsApp — his channels).
 ---
 
 ## OPEN ITEMS
