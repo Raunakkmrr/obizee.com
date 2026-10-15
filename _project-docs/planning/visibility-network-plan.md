@@ -35,9 +35,9 @@ link back; www links out to the network it owns. No competitor can copy this pag
 ## Phase 3 — India Home Seller Report (draft → Raunak approves numbers → publish)
 - [x] 3.1 aggregates queried 2026-10-15 (read-only) — see session log Read-only aggregates: orders/month trend, AOV, COD vs prepaid split if derivable,
       time-to-first-order, category mix (names, not ids), festival-window comparison
-- [~] 3.2 drafting after number sign-off Draft report page with every number traceable to its query
-- [~] 3.3 GATE: numbers presented to Raunak 2026-10-15 — AWAITING his yes: present numbers to Raunak — nothing publishes without his yes
-- [ ] 3.4 On approval: publish, sitemap, GSC request, distribution list (communities/press)
+- [x] 3.2 report page built: hero, 6 stat tiles, 2am section, 16-month table, economics/adoption, geography, Method-honestly box; Report JSON-LD; verified desktop+375 Draft report page with every number traceable to its query
+- [x] 3.3 GATE passed — Raunak 2026-10-15: "yes numbers are correct, 2am is real sellers working late. publish it": present numbers to Raunak — nothing publishes without his yes
+- [x] 3.4 published (1a84a44+d4e5a65): /india-home-seller-report/ + footer link + llms.txt both copies + dated sitemap entry; deploy watcher running; GSC request + distribution list = next session (rolling quota spent today)
 
 ## Explicitly out of scope this pass
 Google Shopping feed flip (waits on dev agent's slug work) · WhatsApp Channel (needs
