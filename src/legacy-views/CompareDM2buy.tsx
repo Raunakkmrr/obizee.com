@@ -39,7 +39,7 @@ import { GoalMark, Mark, type ComparisonGroup } from "@/components/compare/marks
 const CompareDM2buy = () => {
   // Queried from liveShops.ts on 2026-09-03, not typed from memory.
   const shopCount = liveShops.length;
-  const stateCount = new Set(liveShops.map((s) => s.state)).size;
+  const stateCount = new Set(liveShops.map((s) => s.state).filter(Boolean)).size; // two merchants have no recorded state
   const categoryCount = new Set(liveShops.map((s) => s.category)).size;
   const featuredShops = liveShops.slice(0, 12);
 
