@@ -171,7 +171,8 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [DONE] Phase 3 — www `1a84a44`: **The India Home Seller Report** published at /india-home-seller-report/ (stable canonical across editions). All numbers read-only production aggregates approved by Raunak; 2am peak confirmed by him as real seller behaviour. Footer link + llms.txt both copies + dated sitemap entry. Live-verified 18:40 IST.
 - [FACT] Ground truth 2026-10-15: 238 merchants, 218 websiteLive, 6 custom domains (4 active), 3,175 products, 4,092 orders, 80 stores with 2+ products, 65 ever-ordered. Query via OM-backend `.ground-truth-readonly.mjs` pattern (load .env manually, mongoose, aggregates only).
 - [FACT] On this drive, `npm run build` wrapped in a backgrounded subshell dies silently right after "Creating an optimized production build" (three consecutive times); the SAME build in foreground succeeds. Run www builds foreground.
-- [NEEDS-INPUT] Next session: GSC indexing request for /india-home-seller-report/ (quota spent today), and Raunak's distribution push for the report (Reddit/press/WhatsApp — his channels).
+- [DONE] 2026-10-16 10:49 IST — GSC indexing requested for /india-home-seller-report/ (green confirmation, first rolling-quota slot). Distribution push remains Raunak's.
+- [NEEDS-INPUT] daresbold.com and cozoracreation.com STILL serve the pre-footer-link build (re-checked 10:49 IST Oct 16, ~19h after star 986c9b2) — those two Vercel projects do not build from main pushes; Raunak: one-click Redeploy each in the Vercel dashboard. snazzystore.co.in and blushboxg.in picked it up on their own.
 ---
 
 ## OPEN ITEMS
