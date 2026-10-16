@@ -46,7 +46,7 @@ his account) · YouTube (needs his voice/face) · ONDC (product bet, separate de
 
 ## STILL OPEN — 2026-10-15 21:00 IST
 - [ ] 1.6 (above) daresbold.com + cozoracreation.com Vercel redeploy — RAUNAK, one click each
-- [~] 3.5 GSC indexing request for the report — cron e49d5cf3 armed for 10:47 IST Oct 16 (session + GSC Chrome must stay open; fallback: ask in any session)
+- [x] 3.5 GSC indexing request in — green confirmation 10:49 IST Oct 16
 - [ ] 3.6 Report distribution — RAUNAK: seller WhatsApp groups, founder post, press pitch ("a third of the home-seller workday happens after midnight")
 - [ ] customHttp.yml — cache headers in amplify.yml are proven inert; chip pending Raunak's click (task_826eb62e)
 - [ ] GA4 baseline read before the new funnels move the number — needs Raunak's Google login (whatsapp_click · editorial_article, and now · merchant-storefront referrals)
