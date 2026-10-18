@@ -45,7 +45,7 @@ Google Shopping feed flip (waits on dev agent's slug work) · WhatsApp Channel (
 his account) · YouTube (needs his voice/face) · ONDC (product bet, separate decision).
 
 ## STILL OPEN — 2026-10-15 21:00 IST
-- [~] 1.6 RESOLVED as two different root causes (2026-10-18 18:50 IST), neither a deploy problem:
+- [x] 1.6 CLOSED (daresbold.com live with the credit 2026-10-18 19:15 IST; cozora = merchant DNS on Shoopy, Raunak to call) — originally: RESOLVED as two different root causes (2026-10-18 18:50 IST), neither a deploy problem:
       · daresbold.com — deploys were always fine (Vercel API: 986c9b2 then 20f27a6 READY); the bold template renders its OWN footer (template-bold-v1/ui.tsx:408) which my Footer.tsx edit never touched, and daresbold's poweredByText is empty so NO credit rendered at all. Fixed: anchor + "Powered by oBizee" fallback in bold's footer; shipping now.
       · cozoracreation.com — our build is correct (storefront-cozoracreation.vercel.app serves the link) but the merchant's www DNS CNAMEs to serve.shoopy.in / edge.clevup.in — a COMPETITOR (Shoopy) serves their public domain; apex points to 34.131.166.98. Our customDomainStatus=active is stale. RAUNAK: call the merchant — churn/DNS-flip signal, not fixable by deploy.
 - [x] 3.5 GSC indexing request in — green confirmation 10:49 IST Oct 16
