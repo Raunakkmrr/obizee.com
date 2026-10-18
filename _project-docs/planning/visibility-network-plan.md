@@ -50,7 +50,7 @@ his account) · YouTube (needs his voice/face) · ONDC (product bet, separate de
 - [ ] 3.6 Report distribution — RAUNAK: seller WhatsApp groups, founder post, press pitch ("a third of the home-seller workday happens after midnight")
 - [ ] customHttp.yml — cache headers in amplify.yml are proven inert; chip pending Raunak's click (task_826eb62e)
 - [ ] GA4 baseline read before the new funnels move the number — needs Raunak's Google login (whatsapp_click · editorial_article, and now · merchant-storefront referrals)
-- [ ] Oct 19–20 GSC checkpoint: hubs flipping from "Last crawled: N/A" = the 348-post library entering the index
+- [x] Oct 19–20 GSC checkpoint — RUN EARLY 2026-10-18 14:20 IST, PASSED: 4 of 6 hubs INDEXED (choosing-and-designing-store 113 links, businesses 60, catalogue-and-stock 43, fulfilment-and-support 40 = 256 of 348 post links now behind indexed hubs). selling-online (94) + choose-order-management-software (2) still queued — both re-requested today. Report page also indexed (~27h from request). Domain indexed count 557 → 570 and climbing.
 - [ ] Nudge velora + rrbvisioniq (dropped off the shop wall: <2 products or no image) — RAUNAK or the merchant funnel
 - [ ] Merchant-store agent's crawl fixes (54 soft-404 category urls, &subdomain= duplicate param, crawled fonts) — handed to that agent 2026-10-12, landing unverified
 
