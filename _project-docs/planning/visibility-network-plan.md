@@ -63,3 +63,5 @@ his account) · YouTube (needs his voice/face) · ONDC (product bet, separate de
 - Hindi YouTube from the 10 guides — needs Raunak's voice/face
 - Play Store ASO pass on com.obizeee
 - Next Seller Report edition: re-run queries ~Jan 2027
+
+## CHECKPOINT 2026-10-23 (run early): indexed 570→835; AI impressions 393→947/28d; library posts landing unrequested; selling-online hub reads unknown (watch); guides not yet in query rows.

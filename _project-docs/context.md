@@ -173,6 +173,13 @@ tagged `[ASSUMED]` where they were not confirmed by Raunak.
 - [FACT] On this drive, `npm run build` wrapped in a backgrounded subshell dies silently right after "Creating an optimized production build" (three consecutive times); the SAME build in foreground succeeds. Run www builds foreground.
 - [DONE] 2026-10-16 10:49 IST — GSC indexing requested for /india-home-seller-report/ (green confirmation, first rolling-quota slot). Distribution push remains Raunak's.
 - [NEEDS-INPUT] daresbold.com and cozoracreation.com STILL serve the pre-footer-link build (re-checked 10:49 IST Oct 16, ~19h after star 986c9b2) — those two Vercel projects do not build from main pushes; Raunak: one-click Redeploy each in the Vercel dashboard. snazzystore.co.in and blushboxg.in picked it up on their own.
+### Session — 2026-10-23 09:30 IST (Oct 24-25 checkpoint, run a day early at Raunak's ask)
+- [FACT] **Indexed pages 570 → 835 (+265 in six days)**; the library itself is landing: a rank-and-file post (budget-a-store-launch, never manually requested) inspects as INDEXED.
+- [FACT] **Generative-AI impressions 393 → 947/28d (2.4×)**, last-week slope ~80–110/day. dm2buy-alternative 76→165, the Delhivery shipping comparison 40→103, shopify-alternatives-india 16→41 — and a MERCHANT product page (crochetbypriya /products/puff-flower, 118 impr) now appears in Google AI results; GSC's own recommendation card flagged it.
+- [FACT] Query rows 96 → 221/28d; merchant-product demand visible ("keychain under 50 rs for girl" 87 impr). No guide-query impressions in the top rows yet — guides indexed only days ago.
+- [FACT] Still queued: crochet guide (Discovered), and /guides/selling-online/ oddly inspects as "URL is unknown to Google" despite Oct-18 Discovered + request — re-inspect next pass; if still unknown, investigate (possible canonical/redirect oddity).
+- [FACT] GSC multi-account fix: the `/u/1/` URL prefix pins the oBizee account — use https://search.google.com/u/1/search-console/... for every GSC navigation and the wrong-profile dance disappears.
+- [DONE] Oct-24 cron retired (checkpoint executed early). Infra sweep same morning: report 200, 77 shops, mitraso + daresbold.com serving the credit link.
 ---
 
 ## OPEN ITEMS
