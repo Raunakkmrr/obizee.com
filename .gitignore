@@ -31,8 +31,14 @@ dist-ssr
 # exFAT/FUSE artifacts — this repo lives on an external drive, which leaves
 # these behind whenever an open file is replaced. They are not source.
 .fuse_hidden*
-# Local Claude Code session config
-.claude/
+# Local Claude Code session config stays out; the shared cloud kit (synced from
+# _project-docs/cloud/sync.sh) is committed so cloud sessions get the oBizee rules.
+.claude/*
+!.claude/obizee-cloud.md
+!.claude/settings.json
+!.claude/cloud-guard.mjs
+!.claude/cloud-setup.sh
+!.claude/skills/
 
 # TypeScript incremental build cache
 tsconfig.tsbuildinfo
