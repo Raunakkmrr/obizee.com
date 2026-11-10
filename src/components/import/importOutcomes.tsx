@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRightLeft, AtSign, Clock, Globe, Hourglass, MessageCircle, RotateCw, ShieldAlert } from "lucide-react";
+import { ArrowRightLeft, AtSign, Clock, Globe, Hourglass, MessageCircle, RotateCw, SearchX, ShieldAlert } from "lucide-react";
 
 import type { ImportOutcomeSpec } from "@/components/import/ImportOutcome";
 import { WHATSAPP_HREF } from "@/components/import/OutcomeBand";
@@ -24,6 +24,7 @@ import type { ImportSourceId } from "@/lib/import/source";
  *   not_a_business_account   D-1 AND D-2, merged  — see the note on that entry
  *   rate_limited             D-5
  *   source_not_enabled       D-6, and it is the state the public sees on day one
+ *   website_unreachable      nothing answered at a pasted website address (a typo)
  *
  * DELIBERATELY NOT HERE, and each for a stated reason:
  *   no_products_found / timed_out  UI-009. Their next step is "see what we got", which
@@ -248,6 +249,28 @@ export function outcomeFor(code: string | null, handlers: OutcomeHandlers): Impo
           : "Your shop can still move over in the meantime — a person does it by hand.",
         primary: askAPerson,
         secondary: tryAnotherHandle,
+      };
+
+    /**
+     * NOTHING ANSWERED AT THAT ADDRESS — no DNS record, or the connection was refused,
+     * on both the host she typed and its `www` twin (`WebsiteAdapter.resolveReachableOrigin`).
+     * Almost always a typo. Before this code existed it fell to the default panel below,
+     * which told her "starting it again usually works" — it never would — and the
+     * backend's own sentence called her platform unsupported. The repair is hers and it
+     * is the address, so that is the primary action, not a retry.
+     */
+    case "website_unreachable":
+      return {
+        id: "website_unreachable",
+        tone: "info",
+        // Website-only by construction: only `WebsiteAdapter` raises it.
+        sourceType: "website",
+        badge: SearchX,
+        badgeLabel: "Check the address",
+        heading: "We couldn't find a website at that address.",
+        body: "Nothing answered there. It's usually a small typo — check the spelling and the ending (.com, .in, .store).",
+        primary: { label: "Try another address", icon: Globe, onClick: onTryAnotherHandle },
+        secondary: askAPerson,
       };
 
     /**
